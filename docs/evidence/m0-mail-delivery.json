@@ -1,10 +1,13 @@
 {
   "test_id": "a27174ac-dead-4068-8ea8-9e56c82a54bd",
   "reserved_at": "2026-10-16T14:46:52.457040+00:00",
-  "status": "reserved",
-  "smtp_submitted": false,
-  "inbox_confirmed": false,
-  "submission_started": false,
+  "status": "inbox-confirmed",
+  "smtp_submitted": true,
+  "inbox_confirmed": true,
+  "submission_started": true,
   "retry_of": "314fc0b0-9e48-4265-be09-ac6ec05a71e9",
-  "retry_reason": "operator-confirmed credential correction; no prior submission acknowledged; exact test absent from INBOX"
+  "retry_reason": "operator-confirmed credential correction; no prior submission acknowledged; exact test absent from INBOX",
+  "attempted_at": "2026-10-16T14:46:53.888143+00:00",
+  "stage": "accepted",
+  "finished_at": "2026-10-16T14:46:56.847504+00:00"
 }
