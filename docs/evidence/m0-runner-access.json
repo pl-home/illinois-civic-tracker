@@ -1,0 +1,44 @@
+{
+  "observed_at": "2026-10-16T14:22:01.539279+00:00",
+  "environment": "GitHub-hosted runner",
+  "sources": [
+    {
+      "url": "https://ftp.ilga.gov/Members/104HouseMembers.xml",
+      "reachable": false,
+      "error": "URLError"
+    },
+    {
+      "url": "https://ilga.gov/robots.txt",
+      "reachable": false,
+      "error": "URLError"
+    },
+    {
+      "url": "https://capitolfax.com/?s=Bradley+Fritts&feed=rss2",
+      "status": 200,
+      "bytes": 12966,
+      "sha256": "5e258b38cd2baf9d9acf4fc2cc7a477d8018c139d88cdecb2295335935fef3e0",
+      "last_modified": "Fri, 16 Oct 2026 13:10:12 GMT",
+      "etag": "W/\"1477d0291dcc40f1528ad6888301a0ad\"",
+      "reachable": true
+    },
+    {
+      "url": "https://leecodemocrats.com/",
+      "status": 200,
+      "bytes": 175640,
+      "sha256": "6517f49a70217f308091be51955a32f1240ad330183ba16a4e8cb0e5ef775373",
+      "last_modified": null,
+      "etag": null,
+      "reachable": true
+    },
+    {
+      "url": "https://leecountyilgop.org/",
+      "status": 200,
+      "bytes": 271644,
+      "sha256": "d85f1916e1f902842f3b87c9a88756a158c8bc1d4b435af9cd3ddeea5e21ef4c",
+      "last_modified": null,
+      "etag": null,
+      "reachable": true
+    }
+  ],
+  "all_reachable": false
+}
