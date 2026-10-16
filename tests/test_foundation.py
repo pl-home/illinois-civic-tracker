@@ -86,6 +86,17 @@ class MailSafetyTests(unittest.TestCase):
    path=Path(temp)/'receipt.json'
    self.assertEqual(reserve(path),0);first=path.read_bytes()
    self.assertEqual(reserve(path),1);self.assertEqual(path.read_bytes(),first)
+ def test_credential_retry_requires_auth_and_retains_failed_attempt(self):
+  with tempfile.TemporaryDirectory() as temp:
+   path=Path(temp)/'receipt.json';reserve(path)
+   previous=json.loads(path.read_text());previous['status']='failed-or-uncertain';previous['finished_at']='2026-01-01T00:00:00+00:00';path.write_text(json.dumps(previous))
+   self.assertEqual(reserve(path,True),1)
+   check={'observed_at':'2026-01-02T00:00:00+00:00','connections':[{'smtp_authentication_code':235}],'exact_test_found_in_inbox':False}
+   path.with_name('m0-mail-diagnostics.json').write_text(json.dumps(check))
+   self.assertEqual(reserve(path,True),0)
+   self.assertEqual(json.loads(path.with_name('m0-mail-attempts.json').read_text())[0]['test_id'],previous['test_id'])
+   self.assertEqual(json.loads(path.read_text())['retry_of'],previous['test_id'])
+   self.assertEqual(reserve(path),1)
  def test_quit_disconnect_keeps_submission_record(self):
   with tempfile.TemporaryDirectory() as temp:
    path=Path(temp)/'receipt.json';reserve(path)

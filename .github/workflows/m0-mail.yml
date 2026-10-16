@@ -1,6 +1,12 @@
 name: M0 owner-only delivery test
 on:
   workflow_dispatch:
+    inputs:
+      retry_after_credentials_update:
+        description: Explicit owner-confirmed retry after corrected credentials and successful no-send verification
+        type: boolean
+        required: false
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -20,11 +26,18 @@ jobs:
       - run: python -m pip install -e .
       - run: python -m civic_tracker.privacy
       - name: Reserve before sending
+        env:
+          RETRY_MODE: ${{ inputs.retry_after_credentials_update }}
         run: |
-          python -m civic_tracker.mail_test reserve
+          if [[ "$RETRY_MODE" == 'true' ]]; then
+            python -m civic_tracker.mail_test reserve --after-credential-update
+          else
+            python -m civic_tracker.mail_test reserve
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add docs/evidence/m0-mail-delivery.json
+          if [ -f docs/evidence/m0-mail-attempts.json ]; then git add docs/evidence/m0-mail-attempts.json; fi
           git commit -m 'Reserve single M0 owner delivery test'
           git push
       - name: Send one self-addressed test and check INBOX read-only
