@@ -57,3 +57,16 @@ def fingerprint(result):
     return {'url':result['url'],'status':result['status'],'bytes':len(result['body']),
             'sha256':hashlib.sha256(result['body']).hexdigest(),
             'last_modified':headers.get('last-modified'),'etag':headers.get('etag')}
+
+
+def error_metadata(error):
+    """Bounded public diagnostics without exception text, URLs, headers or local paths."""
+    result={'error':type(error).__name__}
+    cause=getattr(error,'reason',None)
+    if cause is not None:
+        result['cause']=type(cause).__name__
+        for attribute in ('reason','verify_code','errno'):
+            value=getattr(cause,attribute,None)
+            if isinstance(value,(str,int)) and len(str(value))<120:result[attribute]=value
+    if isinstance(error,HTTPError):result['http_status']=error.code
+    return result

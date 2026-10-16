@@ -1,0 +1,602 @@
+{
+  "observed_at": "2026-10-16T14:24:34.943173+00:00",
+  "method": "First ten parseable bill rows on the first page of each sponsor report; XML retrieved from FTP. This is a layout sample, not subject-specific acceptance or exhaustive PDF validation.",
+  "reports": [
+    {
+      "url": "https://ilga.gov/documents/reports/static/Legislation%20in%20Committee-House.pdf",
+      "pages": 1,
+      "bytes": 64970,
+      "source_sha256": "c0f902abff00b05f1daec95951f67066d1039ec1a56df4193c3e5b8dcf751ee3",
+      "status": "blocked-nonempty-sample",
+      "no_data_found": true
+    },
+    {
+      "url": "https://ilga.gov/documents/reports/static/Legislation%20in%20Committee-Senate.pdf",
+      "pages": 1,
+      "bytes": 64292,
+      "source_sha256": "6fe10fc5f87963282a3b27f1ddf0d08bc693d4b7e0cc04e734655ecd72d4d14b",
+      "status": "blocked-nonempty-sample",
+      "no_data_found": true
+    },
+    {
+      "url": "https://ilga.gov/documents/reports/static/Sponsor%20Bill%20Listing%20By%20Name-House.pdf",
+      "pages": 937,
+      "bytes": 46330395,
+      "source_sha256": "05da95e089a6ac085046fcc7cc8bff58162d45a6c096297c5be4f0a1688d9c20",
+      "status": "parsed-bounded-sample",
+      "sample_size": 10
+    },
+    {
+      "url": "https://ilga.gov/documents/reports/static/Sponsor%20Bill%20Listing%20By%20Name-Senate.pdf",
+      "pages": 564,
+      "bytes": 27993824,
+      "source_sha256": "44dcec9543d321637f4e4f729b0ee1dbb10292d6c66f8ca3a01298a4fab2ccc8",
+      "status": "parsed-bounded-sample",
+      "sample_size": 10
+    }
+  ],
+  "comparisons": [
+    {
+      "pdf": {
+        "bill": "HB45",
+        "owner": "Carol Ammons",
+        "role": "Co-Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0476",
+        "date": "2026-06-26"
+      },
+      "xml": {
+        "date": "2026-06-26",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0476",
+        "role": "Co-Sponsor",
+        "sponsor_block": "Rep. Janet Yang Rohr-Norma Hernandez-Daniel Didech-Elizabeth \"Lisa\" Hernandez-Natalie A. Manley, Laura Faver Dias, Camille Y. Lilly, Michelle Mussman, Nicolle Grasse, Emanuel \"Chris\" Welch, Carol Ammons, Robyn Gabel, Michael Crawford, Matt Hanson, Dagmara Avelar, Maura Hirschauer, Joyce Mason, Mary Gill, Aarón M. Ortíz, Martha Deuter and Robert \"Bob\" Rita"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0045.xml",
+        "sha256": "5f9943e053d78587373b5e0f5833f43d5cc5370a2f688bdeb91e9f6a2d3a1805",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB228",
+        "owner": "Carol Ammons",
+        "role": "Co-Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0472",
+        "date": "2026-06-25"
+      },
+      "xml": {
+        "date": "2026-06-25",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0472",
+        "role": "Co-Sponsor",
+        "sponsor_block": "Rep. Bob Morgan-Emanuel \"Chris\" Welch-Jay Hoffman-Laura Faver Dias-Nabeela Syed, Rick Ryan, Nicolle Grasse, Michael Crawford, Martha Deuter, Carol Ammons, Stephanie A. Kifowit, Diane Blair-Sherlock, Robyn Gabel, Jennifer Gong-Gershowitz, Dagmara Avelar, Lilian Jiménez, Maurice A. West, II, Maura Hirschauer, Janet Yang Rohr, Suzanne M. Ness, Margaret A. DeLaRosa, Jaime M. Andrade, Jr., Aarón M. Ortíz, Mary Beth Canty, Camille Y. Lilly and Robert \"Bob\" Rita"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0228.xml",
+        "sha256": "e35a524454dac0ee49216e97bc0ef579e22e4eedcda95bf42c18f8bd0a046b96",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB473",
+        "owner": "Carol Ammons",
+        "role": "Co-Sponsor",
+        "chamber": "House",
+        "action": "Rule 19(a) / Re-referred to Rules Committee",
+        "date": "2025-04-11"
+      },
+      "xml": {
+        "date": "2025-04-11",
+        "chamber": "House",
+        "action": "Rule 19(a) / Re-referred to Rules Committee",
+        "role": "Co-Sponsor",
+        "sponsor_block": "Rep. Camille Y. Lilly-Janet Yang Rohr-Kam Buckner-Patrick Sheehan-Joe C. Sosnowski, Carol Ammons, Mary Beth Canty, Michael Crawford, William \"Will\" Davis, Kimberly Du Buclet, Marcus C. Evans, Jr., La Shawn K. Ford, Sonya M. Harper, Thaddeus Jones, Rita Mayfield, Debbie Meyers-Martin, Yolonda Morris, Justin Slaughter, Nicholas K. Smith, Curtis J. Tarver, II, Maurice A. West, II, Jawaharial Williams, Kelly M. Cassidy and Tony M. McCombie"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0473.xml",
+        "sha256": "83581fcb670e0b257c3099acfc209afbb5fb2f33242e61971ccc11591c1d176e",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB576",
+        "owner": "Carol Ammons",
+        "role": "Co-Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0443",
+        "date": "2025-12-12"
+      },
+      "xml": {
+        "date": "2025-12-12",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0443",
+        "role": "Co-Sponsor",
+        "sponsor_block": "Rep. Katie Stuart-Emanuel \"Chris\" Welch-Maurice A. West, II-Lisa Davis-Nicole La Ha, Robyn Gabel, Jaime M. Andrade, Jr., Nicolle Grasse, Tracy Katz Muhl, Gregg Johnson, Matt Hanson, Lilian Jiménez, Michael J. Kelly, Mary Gill, Natalie A. Manley, Joyce Mason, Dave Vella, Angelica Guerrero-Cuellar, Sue Scherer and Carol Ammons"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0576.xml",
+        "sha256": "010c678dfe017f1c345f522b531c04db4dd159ebf6f4e6840f9d645b0882b404",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB788",
+        "owner": "Carol Ammons",
+        "role": "Chief Sponsor",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "date": "2026-04-21"
+      },
+      "xml": {
+        "date": "2026-04-21",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "role": "Chief Sponsor",
+        "sponsor_block": "Rep. Carol Ammons-Justin Slaughter-Lisa Davis-Stephanie A. Kifowit-Sonya M. Harper, Nicolle Grasse and Mary Beth Canty"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0788.xml",
+        "sha256": "f0f560fd0da5a8807092b7130a9e7e335ef8d1b6d1e03cc5916cc26eabaf6aba",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB917",
+        "owner": "Carol Ammons",
+        "role": "Co-Sponsor",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "date": "2026-04-21"
+      },
+      "xml": {
+        "date": "2026-04-21",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "role": "Co-Sponsor",
+        "sponsor_block": "Rep. Curtis J. Tarver, II-Kimberly Du Buclet-Nicholas K. Smith-Yolonda Morris-Jawaharial Williams, Lisa Davis, Marcus C. Evans, Jr., Justin Slaughter, Rita Mayfield, Maurice A. West, II, Kam Buckner, William \"Will\" Davis, Michael Crawford, Sonya M. Harper, Camille Y. Lilly, Jehan Gordon-Booth, Debbie Meyers-Martin, Mary Beth Canty, Thaddeus Jones and Carol Ammons"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0917.xml",
+        "sha256": "3634868c4f104de5ddd30acd6dbfd2e5aecc6d44f2dd33fe005c93921ee81c7e",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1085",
+        "owner": "Carol Ammons",
+        "role": "Co-Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0446",
+        "date": "2025-12-12"
+      },
+      "xml": {
+        "date": "2025-12-12",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0446",
+        "role": "Co-Sponsor",
+        "sponsor_block": "Rep. Lindsey LaPointe-Maurice A. West, II-Bob Morgan-Tracy Katz Muhl, Dagmara Avelar, Maura Hirschauer, Michelle Mussman, Terra Costa Howard, Anna Moeller, Theresa Mah, Kevin John Olickal, Lilian Jiménez, Jay Hoffman, Kelly M. Cassidy, Lisa Davis, Stephanie A. Kifowit, Katie Stuart, Yolonda Morris, Norma Hernandez, Sharon Chung, Michael J. Kelly, Laura Faver Dias, Mary Gill, Will Guzzardi, Nicolle Grasse, Anne Stava, Janet Yang Rohr, Michael Crawford, Robyn Gabel, Nabeela Syed, Barbara Hernandez, Martha Deuter, Abdelnasser Rashid, Mary Beth Canty, Hoan Huynh, Ryan Spain, Harry Benton, Ann M. Williams, La Shawn K. Ford, Brad Stephens, Nicole La Ha, John M. Cabello, Kevin Schmidt, Angelica Guerrero-Cuellar, Matt Hanson, Sonya M. Harper, Gregg Johnson, Suzanne M. Ness, Anthony DeLuca, Rick Ryan, Lawrence \"Larry\" Walsh, Jr., Emanuel \"Chris\" Welch, Robert \"Bob\" Rita, Dave Vella, Jaime M. Andrade, Jr., Carol Ammons, Joyce Mason, Jehan Gordon-Booth, Sue Scherer, Debbie Meyers-Martin, Camille Y. Lilly and Margaret A. DeLaRosa"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1085.xml",
+        "sha256": "899cd3b2c0932acf24520d868e798947bb1baf500741e681579a333ec3acc1dd",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1146",
+        "owner": "Carol Ammons",
+        "role": "Co-Sponsor",
+        "chamber": "House",
+        "action": "Rule 19(a) / Re-referred to Rules Committee",
+        "date": "2026-03-27"
+      },
+      "xml": {
+        "date": "2026-03-27",
+        "chamber": "House",
+        "action": "Rule 19(a) / Re-referred to Rules Committee",
+        "role": "Co-Sponsor",
+        "sponsor_block": "Rep. Suzanne M. Ness, Robyn Gabel, Kelly M. Cassidy, Michelle Mussman, Debbie Meyers-Martin, Janet Yang Rohr, Maura Hirschauer, Camille Y. Lilly, Kam Buckner, Nicholas K. Smith, Abdelnasser Rashid, Laura Faver Dias, Kevin John Olickal, Carol Ammons, Barbara Hernandez, Ann M. Williams, Anne Stava, Marcus C. Evans, Jr., Tracy Katz Muhl and Hoan Huynh"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1146.xml",
+        "sha256": "9fb3fbc6dd301b48ac7cb4845304eb50a8024e1d2c81fa45c4bc0c8bce16310b",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1155",
+        "owner": "Carol Ammons",
+        "role": "Chief Co-Sponsor",
+        "chamber": "House",
+        "action": "Referred to Rules Committee",
+        "date": "2025-01-09"
+      },
+      "xml": {
+        "date": "2025-01-09",
+        "chamber": "House",
+        "action": "Referred to Rules Committee",
+        "role": "Chief Co-Sponsor",
+        "sponsor_block": "Rep. Will Guzzardi-Carol Ammons, Lindsey LaPointe, Joyce Mason, Abdelnasser Rashid, Barbara Hernandez, Laura Faver Dias, Anne Stava-Murray, Nabeela Syed, Diane Blair-Sherlock, Dagmara Avelar, Maura Hirschauer, Edgar González, Jr. and Ann M. Williams"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1155.xml",
+        "sha256": "06e2df0a6dbd66193c14fa1ecedad972e71be0407a9364239a2d579fcf026b65",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1175",
+        "owner": "Carol Ammons",
+        "role": "Co-Sponsor",
+        "chamber": "House",
+        "action": "Rule 19(a) / Re-referred to Rules Committee",
+        "date": "2026-04-17"
+      },
+      "xml": {
+        "date": "2026-04-17",
+        "chamber": "House",
+        "action": "Rule 19(a) / Re-referred to Rules Committee",
+        "role": "Co-Sponsor",
+        "sponsor_block": "Rep. Rita Mayfield, Anne Stava, Abdelnasser Rashid, Joyce Mason, Carol Ammons, Daniel Didech, Lilian Jiménez, Janet Yang Rohr, Nabeela Syed, Laura Faver Dias and Kevin John Olickal"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1175.xml",
+        "sha256": "fcf1f1b755a9665e3857e12f48b9e821dc192cbb27ae6b1230c2136535ebba2c",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB54",
+        "owner": "Neil Anderson",
+        "role": "Alt. Co-Sponsor",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "date": "2025-04-08"
+      },
+      "xml": {
+        "date": "2025-04-08",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "role": "Alt. Co-Sponsor",
+        "sponsor_block": "(Sen. John F. Curran, Neil Anderson, Mary Edly-Allen, Sally J. Turner, Cristina Castro, Jil Tracy, Laura Fine, Linda Holmes, Rachel Ventura, Graciela Guzmán, Chris Balkema and Mike Simmons)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0054.xml",
+        "sha256": "4853410fb9b6cade8e882edbeb0e8cc2d0dd95a806046282e92df43a2a4e0085",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB79",
+        "owner": "Neil Anderson",
+        "role": "Alt. Chief Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0163",
+        "date": "2025-08-15"
+      },
+      "xml": {
+        "date": "2025-08-15",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0163",
+        "role": "Alt. Chief Sponsor",
+        "sponsor_block": "(Sen. Neil Anderson, Li Arellano, Jr., Dale Fowler and Chris Balkema)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0079.xml",
+        "sha256": "92ce3890b484b5a9a9fc3b122f25c48a57258ddbc8d3bc5d534739e19fc48c7e",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1149",
+        "owner": "Neil Anderson",
+        "role": "Alt. Chief Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0043",
+        "date": "2025-08-01"
+      },
+      "xml": {
+        "date": "2025-08-01",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0043",
+        "role": "Alt. Chief Sponsor",
+        "sponsor_block": "(Sen. Neil Anderson, Dale Fowler and Jason Plummer)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1149.xml",
+        "sha256": "ba42a4d0f25eed707a02b4a61b6f184d8d1f3079ed53a4035f16787f549111c4",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1461",
+        "owner": "Neil Anderson",
+        "role": "Alt. Chief Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0183",
+        "date": "2025-08-15"
+      },
+      "xml": {
+        "date": "2025-08-15",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0183",
+        "role": "Alt. Chief Sponsor",
+        "sponsor_block": "(Sen. Neil Anderson)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1461.xml",
+        "sha256": "7c154aa12aac8906f88668f7af847310b39498d8df2f9fa37caa9a87b9e66694",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1754",
+        "owner": "Neil Anderson",
+        "role": "Alt. Co-Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0053",
+        "date": "2025-08-01"
+      },
+      "xml": {
+        "date": "2025-08-01",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0053",
+        "role": "Alt. Co-Sponsor",
+        "sponsor_block": "(Sen. Darby A. Hills-Paul Faraci-Chapin Rose, Laura M. Murphy, Neil Anderson, Michael W. Halpin, Mary Edly-Allen, Mike Simmons and Chris Balkema)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1754.xml",
+        "sha256": "1c30388d46ab4c32587732fd3695bf329d769541ee16c05cec64036d2c7ed29e",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1788",
+        "owner": "Neil Anderson",
+        "role": "Alt. Co-Sponsor",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "date": "2025-04-14"
+      },
+      "xml": {
+        "date": "2025-04-14",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "role": "Alt. Co-Sponsor",
+        "sponsor_block": "(Sen. Donald P. DeWitte, Neil Anderson, Jil Tracy, Sally J. Turner-Li Arellano, Jr. and Chris Balkema)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1788.xml",
+        "sha256": "eac51b792a271621389bd772dcaec7a37efc99f8f46eb5f66c69b5ea8cf62d2d",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB1938",
+        "owner": "Neil Anderson",
+        "role": "Alt. Co-Sponsor",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "date": "2025-04-08"
+      },
+      "xml": {
+        "date": "2025-04-08",
+        "chamber": "Senate",
+        "action": "Referred to Assignments",
+        "role": "Alt. Co-Sponsor",
+        "sponsor_block": "(Sen. Patrick J. Joyce and Neil Anderson)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1938.xml",
+        "sha256": "52435575edb4a66c6ab373ffb7984e5552660432db8d2a92abcf0828231027eb",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB2359",
+        "owner": "Neil Anderson",
+        "role": "Alt. Chief Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0213",
+        "date": "2025-08-15"
+      },
+      "xml": {
+        "date": "2025-08-15",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0213",
+        "role": "Alt. Chief Sponsor",
+        "sponsor_block": "(Sen. Neil Anderson)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB2359.xml",
+        "sha256": "7965ce735738079471a0b6f21ad129436d02b94c9550fcc8a48b2224c8e856f4",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB2409",
+        "owner": "Neil Anderson",
+        "role": "Alt. Chief Co-Sponsor",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0221",
+        "date": "2025-08-15"
+      },
+      "xml": {
+        "date": "2025-08-15",
+        "chamber": "House",
+        "action": "Public Act . . . . . . . . . 104-0221",
+        "role": "Alt. Chief Co-Sponsor",
+        "sponsor_block": "(Sen. Ram Villivalam-Neil Anderson, Christopher Belt, Javier L. Cervantes, Paul Faraci, Jil Tracy, Donald P. DeWitte, Dale Fowler, Li Arellano, Jr., Mike Porfirio, Julie A. Morrison, Andrew S. Chesney, Robert F. Martwick, Robert Peters, Celina Villanueva, Mike Simmons, Meg Loughran Cappel, Rachel Ventura and Doris Turner)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB2409.xml",
+        "sha256": "5124f064242a58561a9983d23b4081b0d6eaeab4da3fb25779027e4e593a5907",
+        "cached_from_initial_probe": true
+      }
+    },
+    {
+      "pdf": {
+        "bill": "HB2435",
+        "owner": "Neil Anderson",
+        "role": "Alt. Co-Sponsor",
+        "chamber": "Senate",
+        "action": "Rule 3-9(a) / Re-referred to Assignments",
+        "date": "2025-06-02"
+      },
+      "xml": {
+        "date": "2025-06-02",
+        "chamber": "Senate",
+        "action": "Rule 3-9(a) / Re-referred to Assignments",
+        "role": "Alt. Co-Sponsor",
+        "sponsor_block": "(Sen. Elgie R. Sims, Jr., Sally J. Turner, Andrew S. Chesney, Sue Rezin, Darby A. Hills, Neil Anderson, Chapin Rose, Chris Balkema, Dave Syverson, Terri Bryant, Seth Lewis, Christopher Belt, Linda Holmes, Mary Edly-Allen, Michael W. Halpin, Laura Ellman, Doris Turner and Meg Loughran Cappel)"
+      },
+      "checks": {
+        "date": true,
+        "chamber": true,
+        "action": true,
+        "role": true
+      },
+      "evidence": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB2435.xml",
+        "sha256": "acee2d73425250267e36339abdb15e4b049cbc4d03e22aef9b5649605648a1b4",
+        "cached_from_initial_probe": true
+      }
+    }
+  ],
+  "sample_size": 20,
+  "all_fields_match": 20
+}

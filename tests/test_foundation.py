@@ -5,6 +5,7 @@ from civic_tracker.rules import ceremonial,shell
 from civic_tracker.vote_csv import bill_id,motion,choice,read_csv
 from civic_tracker.http import validate_url,Client
 from civic_tracker.privacy import violations
+from civic_tracker.verify_pdf_sample import current_role,parse_sponsor_rows
 
 class RulesTests(unittest.TestCase):
  def test_reviewed_export_counts_and_ceremonial_ids(self):
@@ -24,6 +25,20 @@ class RulesTests(unittest.TestCase):
  def test_memorial_and_substantive_resolution(self):
   self.assertTrue(ceremonial("DEPUTY MEM'L HWY"))
   self.assertFalse(ceremonial('NO TAX ON RETIREMENT INCOME'))
+
+class PdfSampleTests(unittest.TestCase):
+ def test_parenthesized_alternate_keeps_chief_roles(self):
+  block='(Sen. Ram Villivalam-Neil Anderson, Other Member)'
+  self.assertEqual(current_role(block,'Ram Villivalam',True),'Alt. Chief Sponsor')
+  self.assertEqual(current_role(block,'Neil Anderson',True),'Alt. Chief Co-Sponsor')
+  self.assertEqual(current_role(block,'Other Member',True),'Alt. Co-Sponsor')
+  self.assertEqual(current_role('(Sen. Patrick J. Joyce and Neil Anderson)','Neil Anderson',True),'Alt. Co-Sponsor')
+ def test_pdf_role_and_date_are_separate_columns(self):
+  text='Sponsor Legislation Listing For Sample Legislator\nHB 00024 SHORT TITLE Alt. Chief Sponsor H Public Act . . . 104-0001 08/15/2025'
+  row=parse_sponsor_rows(text,limit=1)[0]
+  self.assertEqual((row['bill'],row['role'],row['date']),('HB24','Alt. Chief Sponsor','2025-08-15'))
+ def test_empty_pdf_is_not_a_successful_sample(self):
+  with self.assertRaises(ValueError):parse_sponsor_rows('Sponsor Legislation Listing For Sample Legislator\nNO DATA FOUND')
 
 class VoteTests(unittest.TestCase):
  def test_narrow_motion_aliases(self):

@@ -2,7 +2,7 @@
 from pathlib import Path
 from datetime import datetime,timezone
 import json,sys
-from .http import Client,fingerprint
+from .http import Client,fingerprint,error_metadata
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     results=[]
     for url in urls:
         try:results.append({**fingerprint(client.get(url)),'reachable':True})
-        except Exception as ex:results.append({'url':url,'reachable':False,'error':type(ex).__name__})
+        except Exception as ex:results.append({'url':url,'reachable':False,**error_metadata(ex)})
     report={'observed_at':datetime.now(timezone.utc).isoformat(),'environment':'GitHub-hosted runner','sources':results,'all_reachable':all(row['reachable'] for row in results)}
     destination=root/'docs/evidence/m0-runner-access.json';destination.parent.mkdir(parents=True,exist_ok=True);destination.write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'source_reachability':[{'url':row['url'],'reachable':row['reachable']} for row in results]}))
