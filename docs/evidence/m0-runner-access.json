@@ -1,16 +1,24 @@
 {
-  "observed_at": "2026-10-16T14:22:01.539279+00:00",
+  "observed_at": "2026-10-16T14:25:59.255867+00:00",
   "environment": "GitHub-hosted runner",
   "sources": [
     {
       "url": "https://ftp.ilga.gov/Members/104HouseMembers.xml",
       "reachable": false,
-      "error": "URLError"
+      "error": "URLError",
+      "cause": "SSLCertVerificationError",
+      "reason": "CERTIFICATE_VERIFY_FAILED",
+      "verify_code": 20,
+      "errno": 1
     },
     {
       "url": "https://ilga.gov/robots.txt",
       "reachable": false,
-      "error": "URLError"
+      "error": "URLError",
+      "cause": "SSLCertVerificationError",
+      "reason": "CERTIFICATE_VERIFY_FAILED",
+      "verify_code": 20,
+      "errno": 1
     },
     {
       "url": "https://capitolfax.com/?s=Bradley+Fritts&feed=rss2",
