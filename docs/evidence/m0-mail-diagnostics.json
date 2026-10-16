@@ -1,13 +1,14 @@
 {
-  "observed_at": "2026-10-16T14:42:21.225797+00:00",
+  "observed_at": "2026-10-16T14:45:16.078227+00:00",
   "smtp_messages_sent": 0,
-  "app_password_format_valid": false,
+  "app_password_format_valid": true,
   "connections": [
     {
       "host": "smtp.gmail.com",
       "port": 587,
       "ehlo_code": 250,
       "verified_tls": true,
+      "smtp_authentication_code": 235,
       "status": "connected-no-send"
     },
     {
@@ -17,5 +18,6 @@
       "verified_tls": true,
       "status": "connected-no-send"
     }
-  ]
+  ],
+  "exact_test_found_in_inbox": false
 }
