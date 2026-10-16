@@ -14,6 +14,7 @@ This is an M0 verification foundation, not the production tracker. Start with RE
 | verify_pdf_sample.py | Twenty-row PDF/XML layout verification | Sample helper, not a production name/role parser |
 | probe_runner.py | Hosted host access plus source request timing | Small bounded resources; CSV HEAD, not full import |
 | observe_m0.py | Six-hour listing and daily CSV-header observations | Hard end time in configuration |
+| mail_diagnostics.py | No-send connection/authentication diagnostics and exact-test inbox lookup | Does not submit another message |
 | mail_test.py | One reserved Gmail self-test and exact-message INBOX check | Same mailbox plus alias only; no digest schedule |
 | privacy.py | Reject private addresses, machine profile paths and credential-shaped text | Files and finding categories only; narrow reviewed public exceptions |
 
@@ -43,7 +44,7 @@ M1 needs explicit schemas, adapter interfaces, bounded history retention and det
 
 All state-writing M0 workflows share one concurrency group and check out current main after the job enters that group. This avoids processing an old dispatch revision after another job commits evidence. A rejected push is a failed job, not successful persistence.
 
-The mail test commits a reservation before secrets are exposed to its send step. If that push fails, the send is skipped. A later workflow sees the reservation and stops. It never automatically clears an uncertain reservation. The test checks only its exact Message-ID in INBOX with a read-only selection and does not read unrelated messages.
+The mail test commits a reservation before secrets are exposed to its send step. If that push fails, the send is skipped. A later workflow sees the reservation and stops. It never automatically clears an uncertain reservation. A separately requested credential-correction retry requires a successful no-send authentication check and an exact-test INBOX search; it preserves the failed receipt. Accepted submissions and attempts that entered the submission stage cannot use that retry route. The test checks only its exact Message-ID in INBOX with a read-only selection and does not read unrelated messages.
 
 Production SMTP still has an unavoidable uncertainty window between submission and durable acknowledgement. A normal sent-week ledger handles repeat triggers but cannot atomically commit an SMTP side effect. The M1 design must choose and test conservative uncertainty handling; it must not advertise unconditional exactly-once delivery.
 
@@ -57,4 +58,4 @@ The ILGA servers were reachable from the local platform but failed Ubuntu certif
 
 Read the complete M0/M1 table in M0_FINDINGS.md before implementation or deployment. Outstanding source timing, post-veto CSV cadence, motion/choice reconciliation and nonempty hearing evidence must be resolved or explicitly addressed in the release decision. M1 also needs import/replay, failure isolation, DST and delay behavior, complete digest rendering, duplicate suppression and size-growth tests.
 
-The old local schedules remain stopped. The bounded metadata observation is the only new schedule. No nightly product collection or Monday digest workflow is enabled.
+The old local schedules remain stopped. The bounded metadata observation is the only new schedule. Its first wake after the end date disables that workflow using the [GitHub workflow endpoint](https://docs.github.com/en/rest/actions/workflows#disable-a-workflow); only that observer has Actions-write permission. The source module independently refuses requests after the configured end time. No nightly product collection or Monday digest workflow is enabled.

@@ -1,0 +1,13 @@
+{
+  "historical_blobs_reviewed": 55,
+  "findings": [],
+  "legacy_encoding_objects": [
+    {
+      "path": "docs/M0_FINDINGS.md",
+      "encoding": "legacy-cp1252-corrected-in-current-tree",
+      "blob_sha256": "33dca05eb9f28518b7233e5e634abf1b53bad1798c23e7acf31d10ca3a709e6b"
+    }
+  ],
+  "all_commit_emails_noreply": true,
+  "current_data_bytes": 0
+}

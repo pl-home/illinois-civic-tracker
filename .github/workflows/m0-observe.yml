@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: m0-source-evidence
   cancel-in-progress: false
@@ -18,10 +19,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install -e .
-      - run: python -m civic_tracker.observe_m0
-      - run: python -m civic_tracker.privacy
+      - name: Check bounded observation window
+        id: window
+        run: |
+          python -c "import json; from datetime import datetime, timezone; p=json.load(open('config/m0-observation.json')); active=datetime.now(timezone.utc)<datetime.fromisoformat(p['end_exclusive']); print('active='+str(active).lower())" >> "$GITHUB_OUTPUT"
+      - name: Disable this workflow after the observation window
+        if: steps.window.outputs.active == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/m0-observe.yml/disable"
+      - if: steps.window.outputs.active == 'true'
+        run: python -m pip install -e .
+      - if: steps.window.outputs.active == 'true'
+        run: python -m civic_tracker.observe_m0
+      - if: steps.window.outputs.active == 'true'
+        run: python -m civic_tracker.privacy
       - name: Commit compact observations
+        if: steps.window.outputs.active == 'true'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

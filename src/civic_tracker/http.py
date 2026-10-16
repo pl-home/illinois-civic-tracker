@@ -40,7 +40,9 @@ class Client:
                 except FileExistsError:raise RuntimeError('Another main-site request owns the rate gate') from None
                 clock=self.state_dir/'main-request-clock.json'
                 previous=json.loads(clock.read_text()) if clock.exists() else {}
-                deadline=previous.get('started_epoch',0)+self.interval
+                # A fresh runner has no shared clock from the preceding job. Waiting
+                # one full interval also protects that serialized job boundary.
+                deadline=previous['started_epoch']+self.interval if previous else time.time()+self.interval
                 while time.time()<deadline:
                     time.sleep(max(0,deadline-time.time()))
             started=time.time()
