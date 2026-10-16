@@ -84,6 +84,14 @@ class MailSafetyTests(unittest.TestCase):
    path=Path(temp)/'receipt.json'
    self.assertEqual(reserve(path),0);first=path.read_bytes()
    self.assertEqual(reserve(path),1);self.assertEqual(path.read_bytes(),first)
+ def test_quit_disconnect_keeps_submission_record(self):
+  with tempfile.TemporaryDirectory() as temp:
+   path=Path(temp)/'receipt.json';reserve(path)
+   settings={'GMAIL_USER':'owner'+chr(64)+'gmail.com','GMAIL_APP_PASSWORD':'synthetic-test-password','DIGEST_TO':'owner+test'+chr(64)+'gmail.com'}
+   manager=MagicMock();manager.__exit__.side_effect=RuntimeError('synthetic quit disconnect')
+   with patch.dict('os.environ',settings),patch('civic_tracker.mail_test.smtplib.SMTP',return_value=manager):
+    self.assertEqual(send(path),1)
+   data=json.loads(path.read_text());self.assertTrue(data['smtp_submitted']);self.assertEqual(data['status'],'submitted-inbox-unconfirmed')
  def test_smtp_exception_is_not_written_to_receipt(self):
   with tempfile.TemporaryDirectory() as temp:
    path=Path(temp)/'receipt.json';reserve(path)
@@ -93,6 +101,15 @@ class MailSafetyTests(unittest.TestCase):
    data=path.read_text();self.assertNotIn('private exception contents',data);self.assertNotIn(settings['GMAIL_USER'],data)
 
 class AccessTests(unittest.TestCase):
+ def test_intermediate_keeps_hostname_and_system_root_verification(self):
+  with tempfile.TemporaryDirectory() as temp:
+   data=b'synthetic pinned issuer';digest=hashlib.sha256(data).hexdigest()
+   Path(temp,'issuer-'+digest+'.der').write_bytes(data)
+   config={'tls_intermediates':[{'hosts':['ilga.gov'],'url':'http://crt.sectigo.com/SectigoPublicServerAuthenticationCAOVR40.crt','der_sha256':digest}]}
+   with patch('ssl.SSLContext.load_verify_locations'):
+    context=source_tls_context(config,temp,'ilga.gov')
+   self.assertTrue(context.check_hostname);self.assertEqual(context.verify_mode,ssl.CERT_REQUIRED)
+   self.assertFalse(context.verify_flags & getattr(ssl,'VERIFY_X509_PARTIAL_CHAIN',0))
  def test_pinned_intermediate_rejects_changed_bytes(self):
   with tempfile.TemporaryDirectory() as temp:
    digest='a'*64;Path(temp,'issuer-'+digest+'.der').write_bytes(b'changed')

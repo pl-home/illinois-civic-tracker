@@ -67,7 +67,8 @@ def send(path):
         with smtplib.SMTP('smtp.gmail.com',587,timeout=30) as smtp:
             smtp.ehlo();smtp.starttls(context=ssl.create_default_context());smtp.ehlo()
             smtp.login(sender,password);smtp.send_message(message)
-        report['smtp_submitted']=True;report['status']='submitted';write(path,report)
+            # Record acceptance before QUIT: a disconnect during QUIT does not undo it.
+            report['smtp_submitted']=True;report['status']='submitted';write(path,report)
         report['inbox_confirmed']=inbox_contains(sender,password,message_id)
         report['status']='inbox-confirmed' if report['inbox_confirmed'] else 'submitted-inbox-unconfirmed'
     except Exception as error:

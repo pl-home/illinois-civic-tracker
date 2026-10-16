@@ -6,6 +6,8 @@ A small, factual Illinois legislative and county-party monitor. The intended pro
 
 **M0 verification is in progress. M1 is not deployed.** The former local schedules were stopped before this repository was started. Historical source material is read only. This is a fresh repository; it contains no private vault, raw archive, email addresses or credential values.
 
+For a focused code review, read [architecture and boundaries](docs/ARCHITECTURE.md), [M0 findings](docs/M0_FINDINGS.md), and one representative evidence file.
+
 Read [the product vision](docs/PRODUCT_VISION.md), [the build brief](docs/BUILD_BRIEF_M0_M1.md) and [M0 findings](docs/M0_FINDINGS.md). Findings distinguish direct observations, normalization gaps and tests that still need time or credentials.
 
 ## Intended M1 operation
@@ -47,6 +49,6 @@ Requests to the main ILGA site are sequential, with at least ten seconds between
 
 ## Credentials and delivery
 
-Future SMTP setup uses only repository secrets named GMAIL_USER, GMAIL_APP_PASSWORD and DIGEST_TO. OPENSTATES_API_KEY and LEGISCAN_API_KEY are optional. Values never belong in files, fixtures, logs or job summaries. No email has been sent by this repository until the M0 delivery test is explicitly recorded as passed.
+Future SMTP setup uses only repository secrets named GMAIL_USER, GMAIL_APP_PASSWORD and DIGEST_TO. OPENSTATES_API_KEY and LEGISCAN_API_KEY are optional. Values never belong in files, fixtures, logs or job summaries. Submission and INBOX confirmation are recorded separately in the M0 mail receipt; SMTP acceptance alone is not a delivery pass.
 
 A sent-week ledger suppresses ordinary repeated triggers. SMTP does not offer an atomic transaction with a Git commit: a crash between submission and ledger persistence can make delivery uncertain. The M1 delivery design must document that boundary rather than promise unconditional exactly-once delivery. GitHub scheduling can also be delayed; catch-up behavior is a release gate.
