@@ -9,6 +9,11 @@ import argparse,imaplib,json,os,smtplib,ssl,time,uuid
 def now():return datetime.now(timezone.utc).isoformat()
 
 
+def app_password(value):
+    # Google displays the app passcode in groups; whitespace is presentation only.
+    return ''.join(value.split())
+
+
 def self_address_pair(sender,recipient):
     # Accept only bare Gmail addresses for the same mailbox, with a recipient + tag.
     # Return booleans/errors without reflecting private values into output.
@@ -56,7 +61,7 @@ def send(path):
     try:
         values=[os.environ.get(key,'') for key in ['GMAIL_USER','GMAIL_APP_PASSWORD','DIGEST_TO']]
         if not all(values):raise ValueError('Missing required secrets')
-        sender,password,recipient=values;self_address_pair(sender,recipient)
+        sender,password,recipient=values;password=app_password(password);self_address_pair(sender,recipient)
         message=EmailMessage();message['From']=sender;message['To']=recipient
         message['Subject']='Illinois civic tracker: one-time M0 delivery test'
         message_id='<'+report['test_id']+chr(64)+'illinois-civic-tracker.invalid>'

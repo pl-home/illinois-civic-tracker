@@ -6,7 +6,7 @@ from civic_tracker.rules import ceremonial,shell
 from civic_tracker.vote_csv import bill_id,motion,choice,read_csv
 from civic_tracker.http import validate_url,Client,source_tls_context
 from civic_tracker.privacy import violations
-from civic_tracker.mail_test import self_address_pair,reserve,send
+from civic_tracker.mail_test import self_address_pair,reserve,send,app_password
 from civic_tracker.verify_pdf_sample import current_role,parse_sponsor_rows
 
 class RulesTests(unittest.TestCase):
@@ -74,6 +74,8 @@ class PrivacyTests(unittest.TestCase):
   self.assertIn('user-profile-path',violations(value))
 
 class MailSafetyTests(unittest.TestCase):
+ def test_app_password_display_spacing_is_removed(self):
+  self.assertEqual(app_password("abcd efgh ijkl mnop\n"),"abcdefghijklmnop")
  def test_only_same_mailbox_plus_alias_is_accepted(self):
   sender='civic.owner'+chr(64)+'gmail.com'
   self_address_pair(sender,'civicowner+tracker'+chr(64)+'gmail.com')

@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -e .
-      - name: Probe connections and search only the existing test message
+      - name: Check authentication without sending and search only the existing test message
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
