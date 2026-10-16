@@ -7,6 +7,8 @@ NOREPLY=re.compile(r'(?:\d+\+)?[A-Za-z0-9-]+(?:\[bot\])?@users\.noreply\.github\
 PROFILE=re.compile(r'(?i)\b[A-Z]:[\\/]+Users[\\/]')
 CREDENTIAL=re.compile(r'(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AIza[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9_-]{20,})')
 OPAQUE=re.compile(r'\b[A-Za-z0-9]{32,}\b')
+# Exact reviewed public CA certificate basename, not an exemption for URL contents.
+PUBLIC_IDENTIFIERS={'SectigoPublicServer'+'AuthenticationCAOVR40'}
 
 def violations(text):
     failures=[]
@@ -15,6 +17,7 @@ def violations(text):
     if CREDENTIAL.search(text):failures.append('credential-shape')
     for found in OPAQUE.finditer(text):
         value=found.group()
+        if value in PUBLIC_IDENTIFIERS:continue
         # Source SHA-256 fingerprints are public evidence; other mixed opaque values need review.
         if len(value)==64 and re.fullmatch('[a-f0-9]+',value):continue
         line=text[text.rfind('\n',0,found.start())+1:text.find('\n',found.end()) if '\n' in text[found.end():] else len(text)]

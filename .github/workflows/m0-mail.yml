@@ -1,0 +1,47 @@
+name: M0 owner-only delivery test
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: m0-source-evidence
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e .
+      - run: python -m civic_tracker.privacy
+      - name: Reserve before sending
+        run: |
+          python -m civic_tracker.mail_test reserve
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/evidence/m0-mail-delivery.json
+          git commit -m 'Reserve single M0 owner delivery test'
+          git push
+      - name: Send one self-addressed test and check INBOX read-only
+        id: delivery
+        continue-on-error: true
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_TO: ${{ secrets.DIGEST_TO }}
+        run: python -m civic_tracker.mail_test send
+      - name: Commit address-free receipt
+        if: steps.delivery.outcome != 'skipped'
+        run: |
+          python -m civic_tracker.privacy
+          git add docs/evidence/m0-mail-delivery.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record M0 owner delivery outcome'
+            git push
+          fi
+      - name: Enforce inbox delivery gate
+        if: steps.delivery.outcome == 'failure'
+        run: exit 1

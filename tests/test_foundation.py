@@ -1,10 +1,12 @@
-import unittest,sys,csv,json,tempfile
+import unittest,sys,csv,json,tempfile,ssl,hashlib
+from unittest.mock import patch,MagicMock
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from civic_tracker.rules import ceremonial,shell
 from civic_tracker.vote_csv import bill_id,motion,choice,read_csv
-from civic_tracker.http import validate_url,Client
+from civic_tracker.http import validate_url,Client,source_tls_context
 from civic_tracker.privacy import violations
+from civic_tracker.mail_test import self_address_pair,reserve,send
 from civic_tracker.verify_pdf_sample import current_role,parse_sponsor_rows
 
 class RulesTests(unittest.TestCase):
@@ -71,13 +73,55 @@ class PrivacyTests(unittest.TestCase):
   value='C:'+chr(92)+'Users'+chr(92)+'example'
   self.assertIn('user-profile-path',violations(value))
 
+class MailSafetyTests(unittest.TestCase):
+ def test_only_same_mailbox_plus_alias_is_accepted(self):
+  sender='civic.owner'+chr(64)+'gmail.com'
+  self_address_pair(sender,'civicowner+tracker'+chr(64)+'gmail.com')
+  for recipient in ['different+tracker'+chr(64)+'gmail.com',sender,'civicowner+tracker'+chr(64)+'other.example']:
+   with self.assertRaises(ValueError):self_address_pair(sender,recipient)
+ def test_existing_reservation_prevents_another_test(self):
+  with tempfile.TemporaryDirectory() as temp:
+   path=Path(temp)/'receipt.json'
+   self.assertEqual(reserve(path),0);first=path.read_bytes()
+   self.assertEqual(reserve(path),1);self.assertEqual(path.read_bytes(),first)
+ def test_smtp_exception_is_not_written_to_receipt(self):
+  with tempfile.TemporaryDirectory() as temp:
+   path=Path(temp)/'receipt.json';reserve(path)
+   settings={'GMAIL_USER':'owner'+chr(64)+'gmail.com','GMAIL_APP_PASSWORD':'synthetic-test-password','DIGEST_TO':'owner+test'+chr(64)+'gmail.com'}
+   with patch.dict('os.environ',settings),patch('civic_tracker.mail_test.smtplib.SMTP',side_effect=RuntimeError('private exception contents')):
+    self.assertEqual(send(path),1)
+   data=path.read_text();self.assertNotIn('private exception contents',data);self.assertNotIn(settings['GMAIL_USER'],data)
+
 class AccessTests(unittest.TestCase):
+ def test_pinned_intermediate_rejects_changed_bytes(self):
+  with tempfile.TemporaryDirectory() as temp:
+   digest='a'*64;Path(temp,'issuer-'+digest+'.der').write_bytes(b'changed')
+   config={'tls_intermediates':[{'hosts':['ilga.gov'],'url':'http://crt.sectigo.com/SectigoPublicServerAuthenticationCAOVR40.crt','der_sha256':digest}]}
+   with self.assertRaisesRegex(ValueError,'fingerprint'):source_tls_context(config,temp,'ilga.gov')
+ def test_certificate_issuer_must_be_explicitly_allowed(self):
+  with tempfile.TemporaryDirectory() as temp:
+   config={'tls_intermediates':[{'hosts':['ilga.gov'],'url':'http://unrelated.example/cert','der_sha256':'a'*64}]}
+   with self.assertRaisesRegex(ValueError,'Unapproved'):source_tls_context(config,temp,'ilga.gov')
+
  def test_logged_in_and_unapproved_hosts_are_rejected(self):
   for url in ['https://ilga.gov/MyLegislation','https://ilga.gov/account/settings','https://unrelated.example/resource','http://ftp.ilga.gov/']:
    with self.assertRaises(ValueError):validate_url(url)
  def test_rate_gate_cannot_be_configured_below_ten(self):
   with tempfile.TemporaryDirectory() as temp:
    with self.assertRaises(ValueError):Client({'main_site_min_interval_seconds':9},temp)
+ def test_rate_clock_uses_the_recorded_attempt_start(self):
+  with tempfile.TemporaryDirectory() as temp:
+   current=[100.0]
+   def sleep(seconds):current[0]+=seconds
+   response=MagicMock();response.status=200;response.headers={};response.read.return_value=b'ok'
+   opener=MagicMock();opener.open.return_value.__enter__.return_value=response
+   config={'main_site_min_interval_seconds':20,'user_agent':'public-project','max_source_bytes':1024}
+   with patch('civic_tracker.http.time.time',side_effect=lambda:current[0]),patch('civic_tracker.http.time.sleep',side_effect=sleep),patch('civic_tracker.http.build_opener',return_value=opener):
+    client=Client(config,temp);client.get('https://ilga.gov/robots.txt')
+    current[0]+=0.5;client.get('https://ilga.gov/robots.txt')
+   self.assertGreaterEqual(client.events[1]['started_epoch']-client.events[0]['started_epoch'],20)
+   clock=json.loads((Path(temp)/'main-request-clock.json').read_text())
+   self.assertEqual(clock['started_epoch'],client.events[-1]['started_epoch'])
  def test_ftp_primary_is_allowed(self):validate_url('https://ftp.ilga.gov/Legislation/104/BillStatus/XML/')
 
 if __name__=='__main__':unittest.main()

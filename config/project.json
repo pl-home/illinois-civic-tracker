@@ -25,5 +25,16 @@
       "service_start_ga": 104
     }
   ],
-  "committee_vote_csv_support": false
+  "committee_vote_csv_support": false,
+  "tls_intermediates": [
+    {
+      "hosts": [
+        "ilga.gov",
+        "ftp.ilga.gov"
+      ],
+      "url": "http://crt.sectigo.com/SectigoPublicServerAuthenticationCAOVR40.crt",
+      "der_sha256": "8eb2f17d668941c39a7fca0cee127ae0ebaf444610631cca3cd19eab46c5824a",
+      "provenance": "CA URL from the ILGA leaf certificate; fingerprint independently read from a platform-verified chain on 2026-10-16. Only the intermediate is added; system trusted roots remain authoritative."
+    }
+  ]
 }
