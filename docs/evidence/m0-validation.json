@@ -1,0 +1,82 @@
+{
+  "observed_at": "2026-10-16T14:51:27.064042+00:00",
+  "local_tests_passed": 27,
+  "current_privacy_findings": 0,
+  "expired_observer_no_source_requests": true,
+  "tracked_working_bytes": 759764,
+  "data_bytes": 0,
+  "runs": [
+    {
+      "name": "Verify",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38919015437"
+    },
+    {
+      "name": "M0 owner-only delivery test",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38918518590"
+    },
+    {
+      "name": "Verify",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38918517775"
+    },
+    {
+      "name": "M0 mail connection diagnostics - no send",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38918296430"
+    },
+    {
+      "name": "M0 mail connection diagnostics - no send",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38917901584"
+    },
+    {
+      "name": "Verify",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38917900713"
+    },
+    {
+      "name": "M0 mail connection diagnostics - no send",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38917540559"
+    },
+    {
+      "name": "Verify",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38917537994"
+    },
+    {
+      "name": "M0 owner-only delivery test",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38917105521"
+    },
+    {
+      "name": "M0 bounded timing observations",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38917102966"
+    },
+    {
+      "name": "Verify",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38916999047"
+    },
+    {
+      "name": "M0 owner-only delivery test",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38916933156"
+    }
+  ]
+}

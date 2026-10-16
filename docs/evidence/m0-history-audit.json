@@ -1,5 +1,7 @@
 {
-  "historical_blobs_reviewed": 55,
+  "observed_at": "2026-10-16T14:51:25.897793+00:00",
+  "reviewed_through_commit": "04fdb11",
+  "historical_blobs_reviewed": 102,
   "findings": [],
   "legacy_encoding_objects": [
     {
@@ -8,6 +10,5 @@
       "blob_sha256": "33dca05eb9f28518b7233e5e634abf1b53bad1798c23e7acf31d10ca3a709e6b"
     }
   ],
-  "all_commit_emails_noreply": true,
-  "current_data_bytes": 0
+  "all_author_and_committer_emails_noreply": true
 }

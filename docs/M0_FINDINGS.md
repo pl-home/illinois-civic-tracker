@@ -65,13 +65,13 @@ The [House schedule](https://ilga.gov/House/Schedules) and [Senate schedule](htt
 
 | 1.7 Request policy | PASS sampled corrected timing; M1 release review pending | Main-host lock, persistent timing gate and disallowed-path checks exist. Initial six live requests were sequential, with a minimum recorded spacing of **19.99913 seconds**: a sub-millisecond clock-ordering defect, now fixed. The timestamp persisted is now the actual recorded attempt start. A regression test passes; the corrected hosted run recorded **20.00011 seconds** between starts. |
 
-| 1.8 Privacy and identities | PASS current foundation; ongoing gate | Reviewed public files and fixtures pass the scanner. A one-time history audit reviewed 55 published blobs with zero private-data findings; a corrected legacy text-encoding blob was reviewed explicitly. All audited commit emails were noreply. Local commits use GitHub noreply; evidence commits use the Actions bot. GitHub reports secret scanning and push protection enabled. Production email logging still requires release review. |
+| 1.8 Privacy and identities | PASS current foundation; ongoing gate | Reviewed public files and fixtures pass the scanner. A one-time history audit reviewed 102 published blobs with zero private-data findings; a corrected legacy text-encoding blob was reviewed explicitly. All audited commit emails were noreply. Local commits use GitHub noreply; evidence commits use the Actions bot. GitHub reports secret scanning and push protection enabled. Production email logging still requires release review. |
 
 | 1.9 Digest and repeat suppression | BLOCKED, not built | The M0 self-test does not implement a weekly digest. Rendering, weekly ledger and repeat-trigger tests remain. |
 
 | 1.10 Size | PASS current foundation; growth simulation pending | Reviewed working files excluding Git and scratch are below 1 MB; data/ is empty. No raw PDF, HTML, ZIP or full CSV is committed. M1 size reporting and annual growth checks remain. |
 
-| 1.11 Clean-runner tests | PASS clean CI for current foundation | Clean Ubuntu CI passed for the foundation; the expanded local suite has **27 passing tests**, including TLS verification retention, rate timing, app-password whitespace handling and mail safeguards. Latest run evidence is in m0-validation.json. |
+| 1.11 Clean-runner tests | PASS clean CI for current foundation | Clean Ubuntu CI passed for the foundation; the expanded local suite has **27 passing tests**, including TLS verification retention, rate timing, app-password whitespace handling and mail safeguards. [The final clean-runner CI passed](https://github.com/pl-home/illinois-civic-tracker/actions/runs/38919015437); compact validation is in [m0-validation.json](evidence/m0-validation.json). |
 
 ## Evidence and reproduction
 
@@ -86,6 +86,8 @@ The [House schedule](https://ilga.gov/House/Schedules) and [Senate schedule](htt
 - [Timing observations](evidence/m0-observations.json), [confirmed mail receipt](evidence/m0-mail-delivery.json), [no-send mail diagnostics](evidence/m0-mail-diagnostics.json), and [history audit](evidence/m0-history-audit.json) distinguish source availability, credential setup and actual delivery. The [failed first attempt](evidence/m0-mail-attempts.json) is preserved separately; the corrected self-test has an inbox delivery pass.
 
 Run `python -m unittest discover -s tests -v` and `python -m civic_tracker.privacy` after installing the project. The verification CLI accepts explicit read-only input paths rather than storing machine-specific locations. `verify_sources` is a networked one-time probe; `verify_pdf_sample` reuses downloaded reports. Do not rerun the entire source probe just to recompute vote joins.
+
+The history audit traversed every reachable Git blob and applied the current privacy patterns, then checked both author and committer identities. One earlier Markdown encoding was decoded explicitly for review; current files use UTF-8/LF. CI scans the checked-out tree; the separate timestamped history audit is not a claim that CI continuously audits history.
 
 ## Deviations and open risks
 
