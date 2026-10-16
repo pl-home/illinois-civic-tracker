@@ -1,24 +1,33 @@
 {
-  "observed_at": "2026-10-16T14:25:59.255867+00:00",
+  "observed_at": "2026-10-16T14:32:37.404844+00:00",
   "environment": "GitHub-hosted runner",
   "sources": [
     {
       "url": "https://ftp.ilga.gov/Members/104HouseMembers.xml",
-      "reachable": false,
-      "error": "URLError",
-      "cause": "SSLCertVerificationError",
-      "reason": "CERTIFICATE_VERIFY_FAILED",
-      "verify_code": 20,
-      "errno": 1
+      "status": 200,
+      "bytes": 108278,
+      "sha256": "cccba3c5a6044402ec655044ef075bbe81f848a321e9ac585a21d7c6e925ae64",
+      "last_modified": "Fri, 16 Oct 2026 03:15:17 GMT",
+      "etag": "\"29b5d4911c5ddd1:0\"",
+      "reachable": true
     },
     {
       "url": "https://ilga.gov/robots.txt",
-      "reachable": false,
-      "error": "URLError",
-      "cause": "SSLCertVerificationError",
-      "reason": "CERTIFICATE_VERIFY_FAILED",
-      "verify_code": 20,
-      "errno": 1
+      "status": 200,
+      "bytes": 828,
+      "sha256": "67945944ed49bb66a7aaab9f6e15962424fdd27ed3d60bf0dcbd8dbbfd07e6f7",
+      "last_modified": "Fri, 25 Sep 2026 10:55:55 GMT",
+      "etag": "\"1dd4cdc7034acbc\"",
+      "reachable": true
+    },
+    {
+      "url": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
+      "status": 200,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "last_modified": "Fri, 16 Oct 2026 03:45:47 GMT",
+      "etag": "\"716499d4205ddd1:0\"",
+      "reachable": true
     },
     {
       "url": "https://capitolfax.com/?s=Bradley+Fritts&feed=rss2",
@@ -48,5 +57,37 @@
       "reachable": true
     }
   ],
-  "all_reachable": false
+  "all_reachable": true,
+  "requests": [
+    {
+      "host": "ftp.ilga.gov",
+      "started_epoch": 1792161135.339428,
+      "status": 200
+    },
+    {
+      "host": "ilga.gov",
+      "started_epoch": 1792161135.536503,
+      "status": 200
+    },
+    {
+      "host": "ilga.gov",
+      "started_epoch": 1792161155.5366125,
+      "status": 200
+    },
+    {
+      "host": "capitolfax.com",
+      "started_epoch": 1792161155.6505399,
+      "status": 200
+    },
+    {
+      "host": "leecodemocrats.com",
+      "started_epoch": 1792161156.716821,
+      "status": 200
+    },
+    {
+      "host": "leecountyilgop.org",
+      "started_epoch": 1792161156.9589963,
+      "status": 200
+    }
+  ]
 }
