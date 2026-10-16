@@ -1,0 +1,29 @@
+{
+  "project_url": "https://github.com/pl-home/illinois-civic-tracker",
+  "user_agent": "IllinoisCivicTracker/0.0.1 (+https://github.com/pl-home/illinois-civic-tracker)",
+  "ga": 104,
+  "main_site_min_interval_seconds": 10,
+  "backfill_main_site_min_interval_seconds": 20,
+  "max_source_bytes": 67108864,
+  "subjects": [
+    {
+      "id": "fritts",
+      "name": "Bradley Fritts",
+      "csv_name": "Fritts, Bradley",
+      "chamber": "House",
+      "district": 74,
+      "official_member_id": "3428",
+      "service_start_ga": 103
+    },
+    {
+      "id": "arellano",
+      "name": "Li Arellano, Jr.",
+      "csv_name": "Arellano, Li  Jr.",
+      "chamber": "Senate",
+      "district": 37,
+      "official_member_id": "3383",
+      "service_start_ga": 104
+    }
+  ],
+  "committee_vote_csv_support": false
+}

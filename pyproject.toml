@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "illinois-civic-tracker"
+version = "0.0.1"
+description = "Compact Illinois legislative and county-party monitoring"
+requires-python = ">=3.11"
+dependencies = ["beautifulsoup4>=4.12,<5"]
+
+[project.optional-dependencies]
+verification = ["pdfplumber>=0.11,<0.12"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
