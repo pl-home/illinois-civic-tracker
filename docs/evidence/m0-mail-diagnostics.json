@@ -1,21 +1,21 @@
 {
-  "observed_at": "2026-10-16T14:39:41.956076+00:00",
+  "observed_at": "2026-10-16T14:42:21.225797+00:00",
   "smtp_messages_sent": 0,
+  "app_password_format_valid": false,
   "connections": [
     {
       "host": "smtp.gmail.com",
       "port": 587,
       "ehlo_code": 250,
       "verified_tls": true,
-      "status": "connected-no-authentication-no-send"
+      "status": "connected-no-send"
     },
     {
       "host": "smtp.gmail.com",
       "port": 465,
       "ehlo_code": 250,
       "verified_tls": true,
-      "status": "connected-no-authentication-no-send"
+      "status": "connected-no-send"
     }
-  ],
-  "inbox_error_type": "error"
+  ]
 }
