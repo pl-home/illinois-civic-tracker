@@ -526,7 +526,7 @@
           "kind": "office",
           "url": "https://repfritts.com/latest-news/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-08",
           "note": ""
         },
@@ -536,7 +536,7 @@
           "kind": "campaign",
           "url": "https://fritts4rep.com/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2025-07-15",
           "note": ""
         },
@@ -546,7 +546,7 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-14",
           "note": ""
         },
@@ -556,7 +556,7 @@
           "kind": "party",
           "url": "https://www.ilhousegop.org/",
           "status": "link-only",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": null,
           "note": "Public homepage returned HTTP 403 during collector setup; link only."
         },
@@ -566,12 +566,12 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-01",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "communications_checked_at": "2026-10-17T16:20:12.910269+00:00",
       "media_search": {
         "query": "\"Bradley Fritts\" OR \"Brad Fritts\" when:90d",
         "search_url": "https://news.google.com/search?q=%22Bradley+Fritts%22+OR+%22Brad+Fritts%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -1101,7 +1101,7 @@
           "kind": "office",
           "url": "https://www.senatorli.com/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-09-24",
           "note": ""
         },
@@ -1111,7 +1111,7 @@
           "kind": "campaign",
           "url": "https://electarellano.com/",
           "status": "link-only",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": null,
           "note": "Older campaign site describes his previous House race; current dated release feed not verified."
         },
@@ -1121,7 +1121,7 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-14",
           "note": ""
         },
@@ -1131,12 +1131,12 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-01",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "communications_checked_at": "2026-10-17T16:20:12.910269+00:00",
       "media_search": {
         "query": "\"Li Arellano\" when:90d",
         "search_url": "https://news.google.com/search?q=%22Li+Arellano%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -1502,7 +1502,7 @@
           "kind": "office",
           "url": "https://lahood.house.gov/news",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-07",
           "note": "HTML listing dates are used; the advertised RSS contained malformed dates and is not used."
         },
@@ -1512,7 +1512,7 @@
           "kind": "campaign",
           "url": "https://lahoodforcongress.com/news/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2024-11-05",
           "note": ""
         },
@@ -1522,7 +1522,7 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-14",
           "note": ""
         },
@@ -1532,12 +1532,12 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-01",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "communications_checked_at": "2026-10-17T16:20:12.910269+00:00",
       "media_search": {
         "query": "\"Darin LaHood\" when:90d",
         "search_url": "https://news.google.com/search?q=%22Darin+LaHood%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -2189,7 +2189,7 @@
           "kind": "office",
           "url": "https://www.durbin.senate.gov/newsroom/press-releases",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-13",
           "note": ""
         },
@@ -2199,7 +2199,7 @@
           "kind": "campaign",
           "url": "https://www.durbinforsenate.com/",
           "status": "link-only",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": null,
           "note": "Campaign link verified previously; no dated public release feed verified for this collector."
         },
@@ -2209,7 +2209,7 @@
           "kind": "party",
           "url": "https://www.democrats.senate.gov/newsroom/press-releases",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-15",
           "note": ""
         },
@@ -2219,12 +2219,12 @@
           "kind": "party",
           "url": "https://leecodemocrats.com/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-08-18",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "communications_checked_at": "2026-10-17T16:20:12.910269+00:00",
       "media_search": {
         "query": "\"Dick Durbin\" when:90d",
         "search_url": "https://news.google.com/search?q=%22Dick+Durbin%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -2884,7 +2884,7 @@
           "kind": "office",
           "url": "https://www.duckworth.senate.gov/news/press-releases",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-16",
           "note": ""
         },
@@ -2894,7 +2894,7 @@
           "kind": "campaign",
           "url": "https://tammyduckworth.com/",
           "status": "link-only",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": null,
           "note": "No dated public release archive verified; campaign site link only."
         },
@@ -2904,7 +2904,7 @@
           "kind": "party",
           "url": "https://www.democrats.senate.gov/newsroom/press-releases",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-10-15",
           "note": ""
         },
@@ -2914,12 +2914,12 @@
           "kind": "party",
           "url": "https://leecodemocrats.com/",
           "status": "ok",
-          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "checked_at": "2026-10-17T16:20:12.910269+00:00",
           "latest_source_date": "2026-08-18",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "communications_checked_at": "2026-10-17T16:20:12.910269+00:00",
       "media_search": {
         "query": "\"Tammy Duckworth\" when:90d",
         "search_url": "https://news.google.com/search?q=%22Tammy+Duckworth%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
