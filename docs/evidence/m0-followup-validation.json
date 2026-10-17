@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-10-17T00:55:00.125960+00:00",
+  "verified_code_commit": "8d48c5f",
+  "tests_passed": 52,
+  "privacy_findings": 0,
+  "clean_runner_ci": {
+    "status": "success",
+    "url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/38988476454"
+  },
+  "public_working_bytes_before_this_receipt": 1163064,
+  "data_bytes": 0,
+  "vote_comparison_keys_reviewed": 215,
+  "additional_keys_resolved": 129,
+  "remaining_comparison_keys": 86,
+  "baseline_key_coverage_rate": 0.9659405940594059,
+  "nonempty_hearing_pages": 5,
+  "posted_items_parsed": 103,
+  "xml_bill_identity_matches": 20,
+  "history_time_matches": 5,
+  "inference_enabled": false,
+  "inference_calls_made": 0,
+  "limitations": [
+    "Remaining vote-source gaps retained; no forced equivalence for No Vote.",
+    "Historical hearing fallback only; active future witness-slip forms not validated.",
+    "Multi-day timing and post-veto CSV cadence remain pending.",
+    "Raw ignored verification scratch is excluded from the public-file footprint."
+  ]
+}
