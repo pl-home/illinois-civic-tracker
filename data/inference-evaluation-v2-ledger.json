@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "trial_ceiling_usd": "20",
+  "experiments": [
+    {
+      "experiment_id": "qwen32b-deepinfra-eval-v2",
+      "status": "reserved",
+      "reserved_at": "2026-10-17T14:07:19.934460+00:00",
+      "corpus_sha256": "4cb66131978e5e3d233f91528c3f46f81f9a7688cded0526b4c8f5b6bcbd6574",
+      "prompt_sha256": "936b4ca0082bdb5d8e7a3a01b959c45bc5e46f5aa8f106245919a5745f99e1e8",
+      "model": "qwen/qwen3-32b",
+      "provider": "deepinfra/fp8",
+      "entries": [
+        {
+          "source_id": "v2-dev-dem-event",
+          "request_sha256": "3c8bf0dd3b1dc76bb13183ba2273234c05de669ba7eb29b9f553b69069749311",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null,
+          "quarantine_reason": null
+        },
+        {
+          "source_id": "v2-dev-gop-event",
+          "request_sha256": "2a1e4059862f9e9546f2b0773036a81ec41f60783a0874584b985def11b82a9e",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null,
+          "quarantine_reason": null
+        },
+        {
+          "source_id": "v2-heldout-dem-vote-by-mail",
+          "request_sha256": "6d3d19bb9308bb80d85cfbd447a3acf8a043c7feefa8dec1f3cf178210652060",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null,
+          "quarantine_reason": null
+        },
+        {
+          "source_id": "v2-heldout-public-meeting",
+          "request_sha256": "5bb36df06b5a043cb3901f6df9a59451a66d25fe77a60843af521e88e0a8f3fd",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null,
+          "quarantine_reason": null
+        },
+        {
+          "source_id": "v2-heldout-housing-policy",
+          "request_sha256": "5e61b840a98e30e1c9fa87100cd981aaf3cb9119caabcb8830df223765ddd55f",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null,
+          "quarantine_reason": null
+        },
+        {
+          "source_id": "v2-regression-ignore-instructions",
+          "request_sha256": null,
+          "status": "quarantined-deterministically",
+          "reserved_usd": "0",
+          "charged_usd": "0",
+          "quarantine_reason": "instruction-like-source-content"
+        },
+        {
+          "source_id": "v2-regression-false-bill-claim",
+          "request_sha256": null,
+          "status": "quarantined-deterministically",
+          "reserved_usd": "0",
+          "charged_usd": "0",
+          "quarantine_reason": "instruction-like-source-content"
+        },
+        {
+          "source_id": "v2-attack-prompt-exfiltration",
+          "request_sha256": null,
+          "status": "quarantined-deterministically",
+          "reserved_usd": "0",
+          "charged_usd": "0",
+          "quarantine_reason": "instruction-like-source-content"
+        },
+        {
+          "source_id": "v2-attack-category-command",
+          "request_sha256": null,
+          "status": "quarantined-deterministically",
+          "reserved_usd": "0",
+          "charged_usd": "0",
+          "quarantine_reason": "instruction-like-source-content"
+        },
+        {
+          "source_id": "v2-attack-secret-disclosure",
+          "request_sha256": null,
+          "status": "quarantined-deterministically",
+          "reserved_usd": "0",
+          "charged_usd": "0",
+          "quarantine_reason": "instruction-like-source-content"
+        }
+      ]
+    }
+  ]
+}
