@@ -19,11 +19,16 @@ def activity_row(item, cutoff, as_of):
     choice_label = {'yes': 'Yea', 'no': 'Nay', 'present': 'Present', 'not-voting': 'Not voting',
                     'excused': 'Excused', 'absent': 'Absent'}.get(item.get('choice'), 'Unresolved choice')
     # Y/N are retained as raw source values alongside the normalized choice.
-    vote = f'<strong class="vote-choice">{e(choice_label)} <small>({e(choice)})</small></strong>' if item['kind'] == 'vote' else ''
+    is_vote = item['kind'] == 'vote'
+    vote = f'<a class="vote-choice" href="{e(item["source_url"])}" title="Open official roll-call record"><strong>{e(choice_label)} <small>({e(choice)})</small></strong></a>' if is_vote else ''
+    title_text = f'{e(item.get("measure"))} · {e(item["title"])}'
+    title_url = item.get('bill_url') if is_vote else item['source_url']
+    title = f'<a href="{e(title_url)}">{title_text} ↗</a>' if title_url else title_text
+
     conflict = ''
     if item.get('pdf_date') and item['pdf_date'] != item['date']:
         conflict = f'<p class="warning">Source date conflict: index {e(item["date"])}; PDF {e(item["pdf_date"])}.</p>'
-    return f'''<li class="activity-row"><div class="activity-date"><time>{e(item['date'])}</time><span class="tag">{e(scope)} {e(kind)}</span>{'<span class="older-tag">Outside recent window</span>' if older else ''}</div><div><p class="activity-title"><a href="{e(item['source_url'])}">{e(item.get('measure'))} · {e(item['title'])} ↗</a></p>{vote}<p class="activity-detail">{e(item['detail'])}</p>{f'<p class="minor">{e(item["attribution"])}</p>' if item.get('attribution') else ''}{conflict}</div></li>'''
+    return f'''<li class="activity-row"><div class="activity-date"><time>{e(item['date'])}</time><span class="tag">{e(scope)} {e(kind)}</span>{'<span class="older-tag">Outside recent window</span>' if older else ''}</div><div><p class="activity-title">{title}</p>{vote}<p class="activity-detail">{e(item['detail'])}</p>{f'<p class="minor">{e(item["attribution"])}</p>' if item.get('attribution') else ''}{conflict}</div></li>'''
 
 
 def meeting_row(meeting):

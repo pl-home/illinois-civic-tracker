@@ -42,6 +42,23 @@ def event(ident, kind, when, title, detail, source, retrieved_at, **extra):
             'source_url': public_url(source), 'source_retrieved_at': retrieved_at, **extra}
 
 
+def vote_bill_url(vote, bills):
+    """Keep the bill destination separate from the official roll-call source."""
+    ident = vote.get('measure_id')
+    source = bills.get(ident, {}).get('source_url')
+    if source:
+        return public_url(source)
+    # Federal vote XML can identify a bill absent from the member-sponsorship
+    # import. Build its canonical Congress.gov link from that exact identity.
+    match = re.fullmatch(r'US-(\d+)-(HR|S|HJRES|SJRES|HCONRES|SCONRES|HRES|SRES)(\d+)', ident or '')
+    if not match:
+        return None  # Do not invent a bill for a nomination or unidentified amendment.
+    types = {'HR': 'house-bill', 'S': 'senate-bill', 'HJRES': 'house-joint-resolution',
+             'SJRES': 'senate-joint-resolution', 'HCONRES': 'house-concurrent-resolution',
+             'SCONRES': 'senate-concurrent-resolution', 'HRES': 'house-resolution', 'SRES': 'senate-resolution'}
+    return f'https://www.congress.gov/bill/{int(match[1])}/{types[match[2]]}/{int(match[3])}'
+
+
 def state_events(archive, member, cutoff, as_of):
     who = member['official_id']; events = []; votes = {}; listings = []
     for bill in archive['bills'].values():
@@ -77,6 +94,7 @@ def state_events(archive, member, cutoff, as_of):
                 vote.get('motion_context') or vote.get('label', ''), vote['source_url'],
                 vote.get('evidence', {}).get('retrieved_at'), measure=vote['measure_id'].split('-')[-1],
                 choice=selected['choice'], raw_choice=selected.get('raw'), scope=vote['scope'],
+                bill_url=vote_bill_url(vote, archive['bills']),
                 totals=vote.get('totals'), pdf_date=vote.get('pdf_date'),
                 date_verification=vote.get('date_verification'), source_sha256=vote.get('evidence', {}).get('sha256'))
             if key in votes and (votes[key]['choice'], votes[key]['date'], votes[key]['detail']) != (value['choice'], value['date'], value['detail']):
@@ -110,6 +128,7 @@ def federal_events(archive, member, cutoff, as_of):
                     vote['motion'], vote['source_url'], vote.get('evidence', {}).get('retrieved_at'),
                     measure=vote.get('measure'), choice=selected['choice'], raw_choice=selected['raw'],
                     scope='floor', result=vote.get('result'), totals=vote.get('totals'),
+                    bill_url=vote_bill_url(vote, archive['bills']),
                     source_sha256=vote.get('evidence', {}).get('sha256')))
     listings.sort(key=lambda r: r.get('bill_introduced_date') or '', reverse=True)
     return bound_events(events, cutoff, as_of), listings[:6]

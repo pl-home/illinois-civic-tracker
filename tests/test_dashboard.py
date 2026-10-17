@@ -6,7 +6,7 @@ import unittest
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
-from civic_tracker.dashboard_collect import month_after, bound_events, public_url, federal_events
+from civic_tracker.dashboard_collect import month_after, bound_events, public_url, federal_events, vote_bill_url
 from civic_tracker.dashboard_sources import state_committees, state_committee_role, state_schedule, senate_schedule, house_schedule, open_slip_form
 from civic_tracker.dashboard import activity_row, meeting_row, render
 
@@ -82,6 +82,27 @@ class DashboardTests(unittest.TestCase):
         events, listings = federal_events(data, {'official_id': 'L000585'}, '2026-09-18', '2026-10-17')
         self.assertEqual(events['events'], [])
         self.assertIsNone(listings[0]['role_date'])
+
+    def test_vote_title_opens_bill_and_choice_opens_roll_call(self):
+        _, snapshot = render(ROOT)
+        member = next(m for m in snapshot['members'] if m['id'] == 'arellano')
+        vote = next(e for e in member['events'] if e.get('measure') == 'SB2427' and e['kind'] == 'vote')
+        bill_url = 'https://ilga.gov/Legislation/BillStatus?DocNum=2427&GAID=18&DocTypeID=SB&LegId=162470&SessionID=114'
+        for choice, raw in [('yes', 'Y'), ('no', 'N')]:
+            html = BeautifulSoup(activity_row({**vote, 'choice': choice, 'raw_choice': raw}, snapshot['recent_start'], snapshot['as_of']), 'html.parser')
+            self.assertEqual(html.select_one('.activity-title a')['href'], bill_url)
+            self.assertEqual(html.select_one('a.vote-choice')['href'], vote['source_url'])
+            self.assertIn('('+raw+')', html.select_one('a.vote-choice').get_text())
+
+    def test_federal_bill_identity_does_not_create_a_bill_for_nomination(self):
+        self.assertEqual(vote_bill_url({'measure_id': 'US-119-HR9340'}, {}), 'https://www.congress.gov/bill/119/house-bill/9340')
+        self.assertIsNone(vote_bill_url({'measure_id': None, 'measure': 'PN1129'}, {}))
+        item = {'kind': 'vote', 'date': '2026-09-30', 'measure': 'PN1129', 'title': 'Nomination',
+                'detail': 'On the Nomination', 'choice': 'no', 'raw_choice': 'Nay', 'bill_url': None,
+                'source_url': 'https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00256.htm'}
+        html = BeautifulSoup(activity_row(item, '2026-09-18', '2026-10-17'), 'html.parser')
+        self.assertIsNone(html.select_one('.activity-title a'))
+        self.assertEqual(html.select_one('a.vote-choice')['href'], item['source_url'])
 
     def test_future_events_excluded_older_votes_are_retained_with_labels(self):
         records = [{'id': 'old', 'kind': 'vote', 'date': '2026-05-31'}, {'id': 'future', 'kind': 'vote', 'date': '2026-11-01'}]
