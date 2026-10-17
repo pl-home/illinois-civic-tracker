@@ -37,3 +37,41 @@ Read `daily.py`, then `daily_state.py` / `daily_federal.py`, `dashboard_collect.
 Implementation `d808aa0`; persisted daily records `2ad84a3`. The first run processed 24 changed/recheck FTP entries, fetched the official floor CSV (latest vote still May 31), made 44 Congress.gov API requests and seven federal vote-source requests, and refreshed 37 committee/calendar source receipts. No matching upcoming meetings were posted. All five member cards retained source-specific dates. Working JSON state was 7,043,154 bytes, with no raw source dumps published. Both refresh and Pages deploy jobs succeeded. Two federal failures remain qualified; no second collection was launched just to replace that receipt. The next scheduled attempt will recheck them. Per-source timing/progress logs were added for later runs.
 
 The 105-test suite and privacy scan pass. Regression examples are frozen test inputs, so a later vote or changed committee role does not make CI depend on an old homepage row remaining in the rolling window. Compact validation is in `docs/evidence/daily-refresh-validation.json`.
+
+
+## Federal source recovery (October 17)
+
+The daily workflow and manual `federal.yml` prefer the repository secret
+`CONGRESSGOV_API`, with `CONGRESS_API_KEY` retained as a legacy fallback. Values
+are available only inside the official-source step; never include them in a
+report or authenticated source URL in a log.
+
+`python -m civic_tracker.daily federal` rechecks federal sources and rebuilds
+only the three federal members' activity. It preserves calendar/news/AI usage
+metadata and the once-per-day ledger. The prior Federal failure receipt and the
+new report are retained in `data/federal-recheck-report.json`; the detailed
+report also replaces only Federal in the current daily health report. The
+original whole-run timestamp remains unchanged, with `source_recheck_at`
+recording the later targeted check. Old failures remain in Git history.
+
+The Clerk's unpaged MemberVotes endpoint returned HTTP 503. Discovery now starts
+at explicit `Page=1` and reads every official ten-card page. Each page must match
+its stated range, stable total and year-specific vote links; the combined IDs
+must be unique and contiguous before any roll-call XML is selected. A changed
+page size or inconsistent index fails closed. The first, second and final page
+were checked against the live 314-result listing before hosted recovery.
+
+All network attempts, including at most three retries, count against the same
+500 Congress.gov / 100 vote-request bounds. Transient transport failures and
+HTTP 408/429/500/502/503/504 receive bounded backoff. Permanent errors are not
+retried. Retry-After integer delays above 60 seconds stop retries. Reports show
+safe error codes plus member-role/page context, without transport messages or
+API query strings. Recovered retries remain in `recovered_requests`.
+
+Congress.gov member lists have no documented Congress filter, so collection
+still reads the complete career list and filters Congress 119 locally. Stable
+integer pagination counts, matching total rows and unique legislation IDs are
+required before removing an absent prior sponsorship association. Incomplete
+responses retain prior links. The federal-only workflow shares the source lock,
+checks unchanged financial/collection ledgers, runs tests/privacy checks and
+publishes its own SHA-guarded Pages artifact. It has no model or email secret.

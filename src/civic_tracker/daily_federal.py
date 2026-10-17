@@ -11,6 +11,7 @@ import json
 import os
 import re
 import time
+from http.client import HTTPException
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from urllib.request import Request, build_opener, HTTPRedirectHandler
@@ -30,6 +31,7 @@ API_BASE = f'https://{API_HOST}/v3'
 MAX_API_ATTEMPTS = 500
 MAX_VOTE_REQUESTS = 100
 MAX_BYTES = 2_000_000
+MAX_REQUEST_ATTEMPTS = 3
 CHOICES = {'Yea': 'yes', 'Aye': 'yes', 'Nay': 'no', 'No': 'no',
            'Present': 'present', 'Not Voting': 'not-voting',
            'Guilty': 'guilty', 'Not Guilty': 'not-guilty'}
@@ -105,7 +107,10 @@ def _safe_error(exc):
         'totals_mismatch', 'tracked_member_missing_or_duplicate',
         'incomplete_index', 'duplicate_index_id', 'vote_request_limit',
         'api_attempt_limit', 'source_size_limit', 'missing_api_key',
-        'URLError', 'TimeoutError', 'OSError',
+        'URLError', 'TimeoutError', 'OSError', 'ConnectionResetError',
+        'RemoteDisconnected', 'SSLError', 'IncompleteRead', 'HTTPException',
+        'pagination_count_mismatch',
+        'duplicate_legislation_record',
     }
     if code in known:
         return code.replace(' ', '_')
@@ -117,6 +122,28 @@ def _safe_error(exc):
 def normalize_choice(raw):
     """Normalize only exact official labels; leave new values explicitly unknown."""
     return CHOICES.get(raw, 'unknown:' + raw.strip())
+
+
+def _house_page(body, page, expected_total=None):
+    """Validate a Clerk page's range and vote identities, never infer missing IDs."""
+    raw = body.decode('utf-8', 'replace')
+    text = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', raw)).split())
+    match = re.search(r'([\d,]+)\s*-\s*([\d,]+)\s+of\s+([\d,]+)\s+Results', text)
+    nums = [int(x) for x in re.findall(r'Roll Call Number:\s*(\d+)', text)]
+    if not match or not nums:
+        raise ValueError('incomplete_index')
+    start, end, total = (int(x.replace(',', '')) for x in match.groups())
+    # The official listing currently has ten cards per page. Fail closed on a
+    # layout/page-size change instead of claiming a complete roll-call index.
+    if (start != (page - 1) * 10 + 1 or end != min(page * 10, total)
+            or total < 1 or (expected_total is not None and total != expected_total)
+            or nums != list(range(total - start + 1, total - end, -1))):
+        raise ValueError('incomplete_index')
+    year = 1786 + 2 * CONGRESS + 2
+    linked = {int(n) for n in re.findall(r'/Votes/' + str(year) + r'(\d+)(?:[?"\'])', raw)}
+    if not set(nums).issubset(linked):
+        raise ValueError('identity_mismatch')
+    return nums, total
 
 
 def _parse_house(data, session, number, retrieved):
@@ -204,41 +231,65 @@ def refresh(root, previous, now):
     previous = previous or {}
     archive = _copy_archive(previous)
     report = {'status': 'ok', 'checked_at': _stamp(now), 'errors': [],
-              'legislation_sources': [], 'vote_sources': [], 'unknown_records': []}
+              'legislation_sources': [], 'vote_sources': [], 'unknown_records': [],
+              'recovered_requests': []}
     api_attempts = 0
     vote_attempts = 0
     last_request = [0.0]
     opener = build_opener(NoRedirect())
-    key = os.environ.get('CONGRESS_API_KEY', '').strip()
+    key = (os.environ.get('CONGRESSGOV_API', '').strip()
+           or os.environ.get('CONGRESS_API_KEY', '').strip())
 
     def request(url, *, api=False):
         nonlocal api_attempts, vote_attempts
-        host = urlsplit(url).netloc
-        if host not in (API_HOST, HOUSE_HOST, SENATE_HOST):
+        parsed = urlsplit(url)
+        host = parsed.netloc
+        if parsed.scheme != 'https' or host not in (API_HOST, HOUSE_HOST, SENATE_HOST):
             raise ValueError('unsafe_source')
-        if api:
-            if api_attempts >= MAX_API_ATTEMPTS:
-                raise ValueError('api_attempt_limit')
-            api_attempts += 1
-        else:
-            if vote_attempts >= MAX_VOTE_REQUESTS:
-                raise ValueError('vote_request_limit')
-            vote_attempts += 1
-        delay = 1.0 - (time.monotonic() - last_request[0])
-        if last_request[0] and delay > 0:
-            time.sleep(delay)
-        last_request[0] = time.monotonic()
-        try:
-            with opener.open(Request(url, headers={'User-Agent': 'Illinois Civic Tracker public data refresh'}), timeout=30) as response:
-                body = response.read(MAX_BYTES + 1)
-            if len(body) > MAX_BYTES:
-                raise ValueError('source_size_limit')
-            return body
-        except HTTPError as exc:
-            raise RuntimeError(f'HTTP_{exc.code}') from None
-        except (URLError, TimeoutError, OSError) as exc:
-            # Only the exception class is exposed; URL query and transport text stay private.
-            raise RuntimeError(type(exc).__name__) from None
+        last_error = None
+        for attempt in range(MAX_REQUEST_ATTEMPTS):
+            # Every retry consumes the same pre-network request budget.
+            if api:
+                if api_attempts >= MAX_API_ATTEMPTS:
+                    raise ValueError('api_attempt_limit')
+                api_attempts += 1
+            else:
+                if vote_attempts >= MAX_VOTE_REQUESTS:
+                    raise ValueError('vote_request_limit')
+                vote_attempts += 1
+            delay = 1.0 - (time.monotonic() - last_request[0])
+            if last_request[0] and delay > 0:
+                time.sleep(delay)
+            last_request[0] = time.monotonic()
+            retry_after = None
+            try:
+                with opener.open(Request(url, headers={'User-Agent': 'Illinois Civic Tracker public data refresh'}), timeout=30) as response:
+                    body = response.read(MAX_BYTES + 1)
+                if len(body) > MAX_BYTES:
+                    raise ValueError('source_size_limit')
+                if last_error:
+                    report['recovered_requests'].append({'source': _safe_source(url),
+                        'attempts': attempt + 1, 'error': last_error})
+                return body
+            except HTTPError as exc:
+                code = f'HTTP_{exc.code}'
+                transient = exc.code in (408, 429, 500, 502, 503, 504)
+                value = exc.headers.get('Retry-After', '') if exc.headers else ''
+                if value.isdigit():
+                    retry_after = int(value)
+                exc.close()
+            except (URLError, TimeoutError, OSError, HTTPException) as exc:
+                # Normalize subclasses too (for example SSLEOFError/gaierror),
+                # so wrapping never degrades an exhausted retry to RuntimeError.
+                code = ('URLError' if isinstance(exc, URLError) else
+                        'TimeoutError' if isinstance(exc, TimeoutError) else
+                        'HTTPException' if isinstance(exc, HTTPException) else 'OSError')
+                transient = True
+            if (not transient or attempt + 1 == MAX_REQUEST_ATTEMPTS
+                    or (retry_after is not None and retry_after > 60)):
+                raise RuntimeError(code) from None
+            last_error = code
+            time.sleep(max(2 ** (attempt + 1), retry_after or 0))
 
     if not key:
         report['errors'].append({'source': 'Congress.gov API', 'error': 'missing_api_key'})
@@ -255,6 +306,9 @@ def refresh(root, previous, now):
                 parse_incomplete = False
                 complete = False
                 pages = 0
+                rows_seen = 0
+                expected_count = None
+                seen_records = set()
                 while page_url:
                     try:
                         clean = _clean_next(page_url) if page_url != base else base
@@ -270,12 +324,16 @@ def refresh(root, previous, now):
                         if not isinstance(rows, list):
                             raise ValueError('malformed_page')
                         pages += 1
+                        rows_seen += len(rows)
+                        count = payload.get('pagination', {}).get('count')
+                        if (type(count) is not int or count < 0 or
+                                (expected_count is not None and count != expected_count)):
+                            raise ValueError('pagination_count_mismatch')
+                        expected_count = count
                         for row in rows:
                             if not isinstance(row, dict) or not isinstance(row.get('congress'), int):
                                 report['unknown_records'].append({'source': source_name, 'error': 'malformed_record'})
                                 parse_incomplete = True
-                                continue
-                            if row['congress'] != CONGRESS:
                                 continue
                             typ = str(row.get('type') or '').upper()
                             raw_number = row.get('number')
@@ -285,6 +343,12 @@ def refresh(root, previous, now):
                             if typ not in (*BILL_TYPES, 'HAMDT', 'SAMDT') or not str(raw_number or '').isdigit():
                                 report['unknown_records'].append({'source': source_name, 'error': 'unsupported_record'})
                                 parse_incomplete = True
+                                continue
+                            identity = (row['congress'], typ, int(raw_number))
+                            if identity in seen_records:
+                                raise ValueError('duplicate_legislation_record')
+                            seen_records.add(identity)
+                            if row['congress'] != CONGRESS:
                                 continue
                             introduced_date = _valid_bill_date(row)
                             if introduced_date is None:
@@ -302,13 +366,16 @@ def refresh(root, previous, now):
                                 record['relations'].append(relation)
                         nxt = payload.get('pagination', {}).get('next')
                         page_url = _clean_next(nxt) if nxt else None
+                        if not page_url and expected_count is not None and rows_seen != expected_count:
+                            raise ValueError('pagination_count_mismatch')
                     except Exception as exc:
                         source_error = _safe_error(exc)
                         page_url = None
                 if not source_error and parse_incomplete:
                     source_error = 'malformed_record'
                 if source_error:
-                    report['errors'].append({'source': 'Congress.gov API', 'error': source_error})
+                    report['errors'].append({'source': 'Congress.gov API', 'error': source_error,
+                                             'member_role': source_name, 'completed_pages': pages})
                 if complete or (pages and not source_error):
                     for ident, bill in fresh_relations.items():
                         existing = archive['bills'].get(ident, {})
@@ -336,7 +403,7 @@ def refresh(root, previous, now):
     session = 2
     year = 1786 + 2 * CONGRESS + session
     index_urls = {
-        'House': f'https://clerk.house.gov/Votes/MemberVotes?CongressNum={CONGRESS}&Session=2nd',
+        'House': f'https://clerk.house.gov/Votes/MemberVotes?CongressNum={CONGRESS}&Session=2nd&Page=1',
         'Senate': f'https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_{CONGRESS}_{session}.xml'}
     discovered = {}
     for chamber, url in index_urls.items():
@@ -348,11 +415,11 @@ def refresh(root, previous, now):
                     raise ValueError('identity_mismatch')
                 nums = [int(_scalar(v, 'vote_number')) for v in menu.findall('./votes/vote')]
             else:
-                text = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', body.decode('utf-8', 'replace'))).split())
-                nums = [int(x) for x in re.findall(r'Roll Call Number:\s*(\d+)', text)]
-                match = re.search(r'of\s+([\d,]+)\s+Results', text)
-                if not match or not nums or int(match[1].replace(',', '')) != max(nums) or sorted(nums) != list(range(1, max(nums) + 1)):
-                    raise ValueError('incomplete_index')
+                nums, total = _house_page(body, 1)
+                for page in range(2, (total + 9) // 10 + 1):
+                    next_body = request(url.rsplit('=', 1)[0] + '=' + str(page))
+                    page_nums, _ = _house_page(next_body, page, total)
+                    nums.extend(page_nums)
             if not nums or sorted(nums) != list(range(1, max(nums) + 1)):
                 raise ValueError('incomplete_index')
             if len(nums) != len(set(nums)):

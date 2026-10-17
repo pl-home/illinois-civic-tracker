@@ -5,12 +5,47 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
-from civic_tracker.daily import due, run, save
+from civic_tracker.daily import due, run, run_federal, save, load
 from civic_tracker.daily_state import refresh
 
 ROOT=Path(__file__).resolve().parents[1]
 
 class DailyTests(unittest.TestCase):
+    def test_federal_recheck_preserves_other_sources_calendars_and_budget(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); (root/'config').mkdir(); (root/'data').mkdir()
+            save(root/'config/daily.json', {'timezone':'America/Chicago','review_before':'2027-01-03','max_data_bytes':20000000})
+            old_health = {'checked_at':'old-full-run','status':'partial','sources':{
+                'Illinois':{'status':'ok','checked_at':'old-il'},
+                'Calendars':{'status':'ok','checked_at':'old-cal'},
+                'Federal':{'status':'partial','errors':[{'source':'Congress.gov API','error':'RuntimeError'}]}}}
+            il = {'id':'fritts','jurisdiction':'IL','events':['preserve']}
+            us = {'id':'lahood','official_id':'L000585','jurisdiction':'US','meetings':['old-calendar'],
+                  'media_reports':['old-news'],'communications':['old-comms'],'calendar_checked_at':'old-cal'}
+            snapshot = {'as_of':'2026-10-17','recent_start':'2026-09-17','members':[il,us],
+                        'daily_refresh':old_health,'inference_usage':{'actual_usd':0.001}}
+            save(root/'data/dashboard.json', snapshot)
+            save(root/'data/daily-report.json', old_health)
+            save(root/'data/federal-index.json', {'collected_at':'old','bills':{},'votes':{}})
+            save(root/'data/collection-state.json', {'last_completed_local_date':'2026-10-17'})
+            state_before = (root/'data/collection-state.json').read_bytes()
+            archive = {'collected_at':'fresh','bills':{},'votes':{}}
+            report = {'status':'ok','checked_at':'fresh','errors':[],'api_attempts':6,'vote_requests':2}
+            with patch('civic_tracker.daily.daily_federal.refresh', return_value=(archive, report)), \
+                 patch('civic_tracker.daily.collect') as calendars:
+                run_federal(root, datetime(2026,10,17,18,tzinfo=timezone.utc))
+            calendars.assert_not_called()
+            result = load(root/'data/dashboard.json')
+            self.assertEqual(result['members'][0], il)
+            for key in ('meetings','media_reports','communications','calendar_checked_at'):
+                self.assertEqual(result['members'][1][key], us[key])
+            self.assertEqual(result['inference_usage'], snapshot['inference_usage'])
+            self.assertEqual(result['daily_refresh']['checked_at'], 'old-full-run')
+            self.assertEqual(result['daily_refresh']['sources']['Calendars'], old_health['sources']['Calendars'])
+            self.assertEqual(result['daily_refresh']['status'], 'ok')
+            self.assertEqual((root/'data/collection-state.json').read_bytes(), state_before)
+            self.assertEqual(load(root/'data/federal-recheck-report.json')['previous_federal_report'], old_health['sources']['Federal'])
+
     def test_chicago_schedule_dst_repeat_and_catch_up(self):
         plan={'enabled':True,'timezone':'America/Chicago','start_hour':1,'catch_up_before_hour':6}
         for value in ['2026-07-01T06:00:00+00:00','2026-12-01T07:00:00+00:00','2026-11-01T06:00:00+00:00','2026-11-01T07:00:00+00:00']:

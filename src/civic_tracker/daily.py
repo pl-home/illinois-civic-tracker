@@ -6,7 +6,7 @@ import time
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from . import daily_state, daily_federal
-from .dashboard_collect import collect
+from .dashboard_collect import collect, federal_events
 
 
 def load(path):
@@ -95,11 +95,52 @@ def run(root, now):
     print(json.dumps({'status':state['last_status'],'data_bytes':size,'source_status':{k:v['status'] for k,v in reports.items()}}))
 
 
+def run_federal(root, now):
+    """Recheck only federal facts; preserve calendar, news and budget timestamps."""
+    plan = load(root/'config/daily.json')
+    day = now.astimezone(ZoneInfo(plan['timezone'])).date()
+    if day.isoformat() >= plan['review_before']:
+        raise RuntimeError('session-review-required')
+    snapshot = load(root/'data/dashboard.json')
+    old = load(root/'data/federal-index.json')
+    started = time.monotonic()
+    archive, report = daily_federal.refresh(root, old, now)
+    report['duration_seconds'] = round(time.monotonic() - started, 2)
+    for member in snapshot['members']:
+        if member['jurisdiction'] != 'US':
+            continue
+        data, listings = federal_events(archive, member, snapshot['recent_start'], snapshot['as_of'])
+        member.update(data)
+        member['sponsorship_listings'] = listings
+        member['activity_source_checked_at'] = archive['collected_at']
+        member['activity_coverage'] = ('Daily Congress.gov sponsorship lists and official floor roll calls; '
+            'unknown cosponsorship join dates remain undated.')
+        if report['status'] != 'ok':
+            member['activity_coverage'] += ' Source refresh is incomplete; prior verified records are retained.'
+    health = snapshot['daily_refresh']
+    health['sources']['Federal'] = report
+    health['status'] = 'ok' if all(r['status'] == 'ok' for r in health['sources'].values()) else 'partial'
+    health['source_recheck_at'] = now.isoformat()
+    # Retain the old failure receipt as compact evidence, without duplicating the
+    # historical source archive or changing the once-per-day collection ledger.
+    receipt = {'previous_federal_report': load(root/'data/daily-report.json')['sources']['Federal'],
+               'federal_report': report}
+    save(root/'data/federal-index.json', archive)
+    save(root/'data/dashboard.json', snapshot)
+    save(root/'data/daily-report.json', health)
+    save(root/'data/federal-recheck-report.json', receipt)
+    if sum(p.stat().st_size for p in (root/'data').glob('*.json')) > plan['max_data_bytes']:
+        raise RuntimeError('data-size-budget-exceeded')
+    print(json.dumps({'phase': 'Federal', 'status': report['status'],
+                      'api_attempts': report['api_attempts'], 'vote_requests': report['vote_requests']}))
+
+
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['gate','run']);parser.add_argument('--manual',action='store_true')
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['gate','run','federal']);parser.add_argument('--manual',action='store_true')
     args=parser.parse_args();root=Path.cwd();now=datetime.now(timezone.utc)
     if args.command=='gate':
         print('active='+str(due(load(root/'config/daily.json'),load(root/'data/collection-state.json'),now,args.manual)).lower())
+    elif args.command=='federal':run_federal(root,now)
     else:run(root,now)
 
 

@@ -44,7 +44,7 @@ jobs:
       - name: Refresh official sources without inference or email
         if: steps.gate.outputs.active == 'true'
         env:
-          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+          CONGRESS_API_KEY: ${{ secrets.CONGRESSGOV_API || secrets.CONGRESS_API_KEY }}
         run: python -m civic_tracker.daily run
       - name: Discover public news and reserve bounded inference budget
         if: steps.gate.outputs.active == 'true'
