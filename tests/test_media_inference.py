@@ -241,6 +241,87 @@ class MediaInferenceTests(unittest.TestCase):
         self.assertEqual(report['status'], 'blocked')
         self.assertEqual(len(mi._json(mi._paths(self.root)[1], {})['batches']), 1)
 
+    def test_v3_prompt_accepts_substantive_campaign_and_member_coverage_scope(self):
+        self.assertEqual(mi.PROMPT_VERSION, 'media-relevance-v3')
+        for phrase in ('campaign activity', 'debates', 'forum attendance or absence', 'interviews',
+                       'questionnaires', 'profiles', 'awards', 'staffing'):
+            self.assertIn(phrase, mi.PROMPT)
+        self.assertIn('Do not reject journalistic coverage', mi.PROMPT)
+        for phrase in ('opinion pieces', 'editorials', 'endorsements', 'routine greetings',
+                       'self-published promotional items'):
+            self.assertIn(phrase, mi.PROMPT)
+
+    def test_v2_true_is_carried_forward_with_prompt_provenance(self):
+        case = sample(1)
+        cache_path = mi._paths(self.root)[2]
+        ev.write(cache_path, {mi._case_hash_v2(case): {'status': 'valid', 'relevant': True}})
+        self.assertEqual(mi.cached_decisions(self.root, [case]), {case['id']: True})
+        self.assertEqual(mi.cached_statuses(self.root, [case]), {case['id']: 'valid'})
+        report = mi.prepare(self.root, [case], self.now)
+        self.assertEqual(report['costs']['reserved_usd'], '0')
+        work = mi._json(mi._paths(self.root)[0], {})
+        self.assertEqual(work['decisions'], {case['id']: True})
+        cached = mi._json(cache_path, {})[mi._case_hash(case)]
+        self.assertTrue(cached['relevant'])
+        self.assertEqual(cached['provenance']['prompt_version'], 'media-relevance-v3')
+        self.assertEqual(cached['carried_from']['prompt_version'], 'media-relevance-v2')
+
+    def test_public_positive_carry_forward_is_idempotent_and_never_overwrites_current_cache(self):
+        carry_case, protected_case = sample(1), sample(2)
+        cache_path = mi._paths(self.root)[2]
+        current_protected_hash = mi._case_hash(protected_case)
+        ev.write(cache_path, {
+            mi._case_hash_v2(carry_case): {'status': 'valid', 'relevant': True},
+            mi._case_hash_v2(protected_case): {'status': 'valid', 'relevant': True},
+            current_protected_hash: {'status': 'invalid', 'code': 'current-version-failure'},
+        })
+        self.assertEqual(mi.carry_forward_positives(self.root, [carry_case, protected_case]), 1)
+        carried_hash = mi._case_hash(carry_case)
+        cache = mi._json(cache_path, {})
+        self.assertTrue(cache[carried_hash]['relevant'])
+        self.assertEqual(cache[carried_hash]['carried_from']['prompt_version'], 'media-relevance-v2')
+        self.assertEqual(cache[current_protected_hash]['status'], 'invalid')
+        before = cache_path.read_bytes()
+        self.assertEqual(mi.carry_forward_positives(self.root, [carry_case, protected_case]), 0)
+        self.assertEqual(cache_path.read_bytes(), before)
+        self.assertFalse(mi._paths(self.root)[1].exists())
+        self.assertFalse(mi._paths(self.root)[4].exists())
+
+    def test_v2_false_is_reconsidered_but_v2_unknown_invalid_and_reserved_are_not_retried(self):
+        false_case, unknown_case, invalid_case, reserved_case = (sample(i) for i in range(1, 5))
+        v2_false = mi._case_hash_v2(false_case)
+        v2_unknown = mi._case_hash_v2(unknown_case)
+        v2_invalid = mi._case_hash_v2(invalid_case)
+        v2_reserved = mi._case_hash_v2(reserved_case)
+        ev.write(mi._paths(self.root)[2], {
+            v2_false: {'status': 'valid', 'relevant': False},
+            v2_unknown: {'status': 'unknown', 'code': 'request-outcome-unknown'},
+            v2_invalid: {'status': 'invalid', 'code': 'invalid-output-schema'},
+        })
+        ev.write(mi._paths(self.root)[1], {'schema_version': 1, 'batches': [
+            {'batch_hash': 'ab' * 32, 'case_hashes': [v2_false], 'status': 'valid', 'reserved_usd': '0.002', 'charged_usd': '0.0001'},
+            {'batch_hash': 'cd' * 32, 'case_hashes': [v2_reserved], 'status': 'reserved', 'reserved_usd': '0.002', 'charged_usd': None},
+        ]})
+        cases = [false_case, unknown_case, invalid_case, reserved_case]
+        self.assertEqual(mi.cached_statuses(self.root, cases), {
+            false_case['id']: 'reconsider', unknown_case['id']: 'unknown',
+            invalid_case['id']: 'invalid', reserved_case['id']: 'reserved'})
+        report = mi.prepare(self.root, cases, self.now)
+        self.assertEqual(report['costs']['reserved_usd'], '0.002')
+        work = mi._json(mi._paths(self.root)[0], {})
+        self.assertEqual([case['id'] for batch in work['batches'] for case in batch['cases']], [false_case['id']])
+        self.assertIn('previous-unknown-attempt', json.dumps(report['errors']))
+        self.assertIn('cached-invalid-output', json.dumps(report['errors']))
+        self.assertIn('previous-reservation-not-reusable', json.dumps(report['errors']))
+
+    def test_meaningfully_changed_source_can_be_retried_after_legacy_unknown(self):
+        original = sample(1)
+        ev.write(mi._paths(self.root)[2], {mi._case_hash_v2(original): {'status': 'unknown'}})
+        changed = {**original, 'snippet': 'A changed report with substantive member coverage.'}
+        report = mi.prepare(self.root, [changed], self.now)
+        self.assertEqual(report['costs']['reserved_usd'], '0.002')
+        self.assertEqual(mi.cached_statuses(self.root, [changed]), {changed['id']: 'reserved'})
+
     def test_committed_reservation_without_this_run_ownership_is_never_executed(self):
         mi.prepare(self.root, [sample(1)], self.now)
         mi._paths(self.root)[4].unlink()

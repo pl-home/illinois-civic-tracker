@@ -12,7 +12,7 @@
     "lifetime_cap_usd": "20",
     "per_request_reserved_usd": "0.002",
     "max_daily_calls": 4,
-    "prompt_version": "media-relevance-v2"
+    "prompt_version": "media-relevance-v3"
   },
   "queries": {
     "fritts": "\"Bradley Fritts\" OR \"Brad Fritts\" when:90d",

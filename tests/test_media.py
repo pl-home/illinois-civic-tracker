@@ -81,6 +81,7 @@ class MediaTests(unittest.TestCase):
         raw=feed(*(item(title=f'Fritts legislative report {i}') for i in range(7)))
         rows=media.parse_feed(raw,MEMBER,CONFIG,NOW)
         seen={row['id']:'invalid' if i==0 else 'valid' for i,row in enumerate(rows[:4])}
+        seen[rows[4]['id']]='reconsider'
         rejected={row['id']:False for row in rows[1:4]}
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)

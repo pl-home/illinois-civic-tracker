@@ -130,6 +130,7 @@ def prepare(root, now):
             receipt = {'status':'failed','checked_at':now.isoformat(),'error':'feed-unavailable-or-invalid','candidates':rows}
         state['members'][ident] = receipt
         all_cases = [case(row) for row in rows]
+        inference.carry_forward_positives(root, all_cases)
         statuses = inference.cached_statuses(root, all_cases)
         known = inference.cached_decisions(root, all_cases)
         accepted = 0; queued = 0
@@ -138,7 +139,7 @@ def prepare(root, now):
                 accepted += 1
                 if accepted >= config['max_items']:
                     break
-            elif candidate['id'] not in statuses and queued < config['candidates_per_member']:
+            elif statuses.get(candidate['id']) in (None, 'reconsider') and queued < config['candidates_per_member']:
                 cases.append(candidate); queued += 1
     save(root/'data/media-state.json', state)
     report = inference.prepare(root, cases, now)
