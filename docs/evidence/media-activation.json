@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-17T16:05:18.318794+00:00",
+  "live_url": "https://pl-home.github.io/illinois-civic-tracker/",
+  "model": "qwen/qwen3-32b",
+  "provider": "deepinfra/fp8",
+  "prompt_version": "media-relevance-v3",
+  "runs": [
+    "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39047205251",
+    "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39047671739"
+  ],
+  "media_calls_today": 4,
+  "media_actual_usd": "0.00048384",
+  "all_project_today_liability_usd": "0.00220856",
+  "daily_cap_usd": "0.009",
+  "lifetime_cap_usd": "20",
+  "unknown_media_charges": 0,
+  "latest_status": "complete",
+  "members": [
+    {
+      "id": "fritts",
+      "displayed_reports": 3,
+      "source_status": "ok",
+      "inference_status": "complete"
+    },
+    {
+      "id": "arellano",
+      "displayed_reports": 2,
+      "source_status": "ok",
+      "inference_status": "complete"
+    },
+    {
+      "id": "lahood",
+      "displayed_reports": 3,
+      "source_status": "ok",
+      "inference_status": "complete"
+    },
+    {
+      "id": "durbin",
+      "displayed_reports": 3,
+      "source_status": "ok",
+      "inference_status": "complete"
+    },
+    {
+      "id": "duckworth",
+      "displayed_reports": 3,
+      "source_status": "ok",
+      "inference_status": "complete"
+    }
+  ],
+  "validation": {
+    "offline_tests": 131,
+    "privacy_findings": 0,
+    "independent_budget_review": "completed; reported issues corrected",
+    "live_dom": "Five sections immediately follow witness-slip guidance; dated attributed HTTPS article links confirmed",
+    "live_visual": "Fritts section verified beneath witness-slip note"
+  },
+  "limitations": [
+    "90-day indexed-feed coverage is incomplete; Arellano has two eligible results.",
+    "Headline-only model genre decisions are not independently verified; commentary or release-derived reporting may remain.",
+    "Initial v2 filter omitted legitimate campaign reporting; v3 expanded eligibility and exact-case positives carry forward with provenance.",
+    "No full article text, model-written summaries or private material is published."
+  ]
+}
