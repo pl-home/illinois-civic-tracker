@@ -177,6 +177,8 @@ Tagging uses **official structure first**: the committee a bill is assigned to a
 
 ## 8. Shell bills (milestone 2)
 
+**October 17 clarification:** replacement boilerplate triggers a content comparison; it does not establish an unrelated rewrite. The future website synopsis must follow the adopted/operative version, distinguish meaningful same-subject revisions from subject changes, and support an insufficient-evidence result. SB2427 is the owner's continuity/false-positive example. Read [amendment inference requirements](AMENDMENT_INFERENCE_REQUIREMENTS.md). This deferred use of inference remains disabled.
+
 Leadership routinely files placeholder ("vehicle") bills, then rewrites them by amendment. The owner's own sponsorship export shows two that became law with their placeholder titles unchanged: HB0742 "REGULATION-TECH" (Public Act 104-0004) and HB2137 "LOCAL GOVERNMENT-TECH" (Public Act 104-0582).
 
 **Detection:**
