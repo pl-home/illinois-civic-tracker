@@ -43,6 +43,27 @@ def meeting_row(meeting):
     return f'''<li class="meeting-row"><time>{e(date_text)}</time>{retained}<strong><a href="{e(meeting['committee_url'])}">{e(meeting['committee_name'])} ↗</a></strong><p>{e(meeting.get('description') or meeting.get('location'))}</p><a href="{e(meeting['source_url'])}">Official meeting details ↗</a>{'<ul class="slip-links">'+''.join(slips)+'</ul>' if slips else '<p class="minor">No verified open witness-slip form in this collected docket.</p>'}</li>'''
 
 
+
+def media_section(member):
+    health = member.get('media_health', {})
+    reports = member.get('media_reports', [])
+    rows = []
+    for report in reports:
+        # Never expose a script/data URL even if a stored snapshot is malformed.
+        from urllib.parse import urlsplit
+        link = urlsplit(report.get('url', ''))
+        if link.scheme != 'https' or link.username or link.password:
+            continue
+        route = ' · via Google News' if report.get('link_route') == 'Google News' else ''
+        rows.append(f'<li class="media-row"><time datetime="{e(report["published_at"])}">{e(report["published_at"][:10])}</time><strong><a href="{e(report["url"])}">{e(report["title"])} ↗</a></strong><p class="minor">{e(report["publisher"])}{route}</p></li>')
+    body = ''.join(rows) or '<li class="empty-source">No eligible reports found in the last 90 days from the selected newsrooms. Coverage is incomplete.</li>'
+    warning = ''
+    if health.get('source_status') != 'ok' or health.get('inference_status') != 'complete':
+        warning = '<p class="warning">News refresh or relevance screening is incomplete; previously screened reports may be retained.</p>'
+    checked = health.get('checked_at') or 'not yet checked'
+    return f'<section class="member-media" aria-label="Recent media reports about {e(member["name"])}"><h3>Recent media reports</h3><p class="minor">Up to three latest reports found · last 90 days · selected major and Illinois newsrooms. AI screens headline relevance; article content is not independently verified.</p>{warning}<ul class="media-list">{body}</ul><p class="minor">News checked: {e(checked)}. Links may route through Google News; publisher access terms apply.</p></section>'
+
+
 def member_card(member, snapshot):
     cutoff = snapshot['recent_start']; as_of = snapshot['as_of']
     quiet = sum(ceremonial(item['title']) for item in member['events'])
@@ -88,7 +109,7 @@ def member_card(member, snapshot):
     link_note = member.get('public_links', {}).get('note', '')
     member_links = '<nav class="member-public-links" aria-label="' + e(member['name']) + ' websites">' + member_links + (f'<small>{e(link_note)}</small>' if link_note else '') + '</nav>'
     recent_votes = sum(item['kind'] == 'vote' and item['date'] >= cutoff for item in member['events'])
-    return f'''<article class="member-card" id="member-{e(member['id'])}" data-member="{e(member['id'])}"><header class="member-head"><div><p class="eyebrow">{e(member['office'])}</p><h2>{e(member['name'])}</h2></div>{member_links}</header><p class="source-line">Activity source snapshot: {e(member['activity_source_checked_at'][:10])} · Latest available vote: {e(member.get('latest_vote_date') or 'not loaded')} · {recent_votes} recorded votes in recent window</p><div class="member-columns"><section><h3>Recent sponsorship &amp; bill activity</h3><ul class="activity-list">{body}</ul>{listing_html}<h3>Latest recorded votes</h3><p class="minor">Choice applies to the motion shown. Floor and committee votes are distinct; older rows are labeled.</p><ul class="activity-list">{vote_body}</ul></section><section class="committee-column"><h3>Committee meetings · next month</h3><p class="minor">{e(snapshot['as_of'])} through {e(snapshot['calendar_end'])} · times shown in Central</p><ul class="meeting-list">{meetings}</ul><details class="committee-links" open><summary>Committee websites &amp; schedules ({len(member.get('committees', []))})</summary><ul>{committees}</ul></details><p class="minor">{e(snapshot['attendance_note'])}</p><p class="slip-note">{'Illinois witness slips appear only with a verified open submission form; historical results links are not submission forms.' if member['jurisdiction']=='IL' else 'Congress has no general Illinois-style witness-slip system. See each committee’s participation guidance.'}</p></section></div><footer class="member-foot">{e(member['activity_coverage'])}{f' {quiet} ceremonial entries remain in the public snapshot.' if quiet else ''}</footer></article>'''
+    return f'''<article class="member-card" id="member-{e(member['id'])}" data-member="{e(member['id'])}"><header class="member-head"><div><p class="eyebrow">{e(member['office'])}</p><h2>{e(member['name'])}</h2></div>{member_links}</header><p class="source-line">Activity source snapshot: {e(member['activity_source_checked_at'][:10])} · Latest available vote: {e(member.get('latest_vote_date') or 'not loaded')} · {recent_votes} recorded votes in recent window</p><div class="member-columns"><section><h3>Recent sponsorship &amp; bill activity</h3><ul class="activity-list">{body}</ul>{listing_html}<h3>Latest recorded votes</h3><p class="minor">Choice applies to the motion shown. Floor and committee votes are distinct; older rows are labeled.</p><ul class="activity-list">{vote_body}</ul></section><section class="committee-column"><h3>Committee meetings · next month</h3><p class="minor">{e(snapshot['as_of'])} through {e(snapshot['calendar_end'])} · times shown in Central</p><ul class="meeting-list">{meetings}</ul><details class="committee-links" open><summary>Committee websites &amp; schedules ({len(member.get('committees', []))})</summary><ul>{committees}</ul></details><p class="minor">{e(snapshot['attendance_note'])}</p><p class="slip-note">{'Illinois witness slips appear only with a verified open submission form; historical results links are not submission forms.' if member['jurisdiction']=='IL' else 'Congress has no general Illinois-style witness-slip system. See each committee’s participation guidance.'}</p>{media_section(member)}</section></div><footer class="member-foot">{e(member['activity_coverage'])}{f' {quiet} ceremonial entries remain in the public snapshot.' if quiet else ''}</footer></article>'''
 
 
 def render(root):

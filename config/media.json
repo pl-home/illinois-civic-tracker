@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "lookback_days": 90,
+  "max_items": 3,
+  "candidates_per_member": 4,
+  "inference": {
+    "enabled": true,
+    "model": "qwen/qwen3-32b",
+    "provider": "deepinfra/fp8",
+    "daily_cap_usd": "0.009",
+    "lifetime_cap_usd": "20",
+    "per_request_reserved_usd": "0.002",
+    "max_daily_calls": 4,
+    "prompt_version": "media-relevance-v2"
+  },
+  "queries": {
+    "fritts": "\"Bradley Fritts\" OR \"Brad Fritts\" when:90d",
+    "arellano": "\"Li Arellano\" when:90d",
+    "lahood": "\"Darin LaHood\" when:90d",
+    "durbin": "\"Dick Durbin\" when:90d",
+    "duckworth": "\"Tammy Duckworth\" when:90d"
+  },
+  "name_anchors": {
+    "fritts": [
+      "fritts"
+    ],
+    "arellano": [
+      "arellano"
+    ],
+    "lahood": [
+      "lahood"
+    ],
+    "durbin": [
+      "durbin"
+    ],
+    "duckworth": [
+      "duckworth"
+    ]
+  },
+  "publishers": {
+    "apnews.com": "apnews.com",
+    "reuters.com": "reuters.com",
+    "npr.org": "npr.org",
+    "nytimes.com": "nytimes.com",
+    "washingtonpost.com": "washingtonpost.com",
+    "wsj.com": "wsj.com",
+    "usatoday.com": "usatoday.com",
+    "cnn.com": "cnn.com",
+    "nbcnews.com": "nbcnews.com",
+    "abcnews.go.com": "abcnews.go.com",
+    "cbsnews.com": "cbsnews.com",
+    "pbs.org": "pbs.org",
+    "theguardian.com": "theguardian.com",
+    "politico.com": "politico.com",
+    "thehill.com": "thehill.com",
+    "punchbowl.news": "punchbowl.news",
+    "bloomberg.com": "bloomberg.com",
+    "axios.com": "axios.com",
+    "foxnews.com": "foxnews.com",
+    "bbc.com": "bbc.com",
+    "capitolnewsillinois.com": "capitolnewsillinois.com",
+    "wttw.com": "wttw.com",
+    "news.wttw.com": "news.wttw.com",
+    "chicago.suntimes.com": "chicago.suntimes.com",
+    "chicagotribune.com": "chicagotribune.com",
+    "dailyherald.com": "dailyherald.com",
+    "shawlocal.com": "shawlocal.com",
+    "bnd.com": "bnd.com",
+    "qctimes.com": "qctimes.com",
+    "herald-review.com": "herald-review.com",
+    "pantagraph.com": "pantagraph.com",
+    "sj-r.com": "sj-r.com",
+    "pjstar.com": "pjstar.com",
+    "wnij.org": "wnij.org",
+    "nprillinois.org": "nprillinois.org",
+    "wglt.org": "wglt.org",
+    "wcbu.org": "wcbu.org",
+    "ipmnewsroom.org": "ipmnewsroom.org",
+    "wbez.org": "wbez.org",
+    "wrex.com": "wrex.com",
+    "wifr.com": "wifr.com",
+    "mystateline.com": "mystateline.com",
+    "25newsnow.com": "25newsnow.com",
+    "wqad.com": "wqad.com",
+    "wandtv.com": "wandtv.com",
+    "wcia.com": "wcia.com",
+    "wgem.com": "wgem.com",
+    "wgntv.com": "wgntv.com",
+    "abc7chicago.com": "abc7chicago.com",
+    "fox32chicago.com": "fox32chicago.com",
+    "timestribunenews.com": "timestribunenews.com",
+    "riverbender.com": "riverbender.com",
+    "beverlyreview.net": "beverlyreview.net"
+  }
+}

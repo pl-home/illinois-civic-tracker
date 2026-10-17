@@ -27,5 +27,13 @@
   "runtime_implementation_present": true,
   "evaluation_enabled": true,
   "approval_scope": "User authorized a bounded evaluation on 2026-10-17; routine inference remains disabled",
-  "evaluation_result": "Failed mandatory instruction-injection gate; no routine activation"
+  "evaluation_result": "Failed mandatory instruction-injection gate; no routine activation",
+  "media_relevance": {
+    "enabled": true,
+    "policy_file": "config/media.json",
+    "scope": "Public headline relevance only; Boolean supplied IDs, no factual generation",
+    "daily_cap_usd": "0.009",
+    "lifetime_cap_usd": "20",
+    "authorization": "Owner explicitly enabled October 17, 2026"
+  }
 }

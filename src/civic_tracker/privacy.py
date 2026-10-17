@@ -7,6 +7,9 @@ NOREPLY=re.compile(r'(?:\d+\+)?[A-Za-z0-9-]+(?:\[bot\])?@users\.noreply\.github\
 PROFILE=re.compile(r'(?i)\b[A-Z]:[\\/]+Users[\\/]')
 CREDENTIAL=re.compile(r'(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AIza[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9_-]{20,})')
 OPAQUE=re.compile(r'\b[A-Za-z0-9]{32,}\b')
+# Public RSS article identifiers in this exact namespace are not credentials.
+# All address, path and credential-shape checks still inspect the entire value.
+PUBLIC_NEWS_URL=re.compile(r'https://news\.google\.com/(?:rss/)?articles/([A-Za-z0-9_-]{8,2000})(?=[?"<>\s]|$)')
 # Exact reviewed public CA certificate basename, not an exemption for URL contents.
 PUBLIC_IDENTIFIERS={'SectigoPublicServer'+'AuthenticationCAOVR40'}
 
@@ -15,8 +18,10 @@ def violations(text):
     if any(not NOREPLY.fullmatch(value) for value in EMAIL.findall(text)):failures.append('email-address')
     if PROFILE.search(text):failures.append('user-profile-path')
     if CREDENTIAL.search(text):failures.append('credential-shape')
+    public_spans=[match.span(1) for match in PUBLIC_NEWS_URL.finditer(text)]
     for found in OPAQUE.finditer(text):
         value=found.group()
+        if any(start<=found.start() and found.end()<=end for start,end in public_spans):continue
         if value in PUBLIC_IDENTIFIERS:continue
         # Source SHA-256 fingerprints are public evidence; other mixed opaque values need review.
         if len(value)==64 and re.fullmatch('[a-f0-9]+',value):continue

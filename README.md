@@ -2,7 +2,7 @@
 
 A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
 
-**Browse the tracker:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The homepage shows recent actions and recorded votes for Fritts, Arellano, LaHood, Durbin and Duckworth, plus committee links and a rolling month of posted meetings. Source dates and incomplete coverage are explicit. Daily website refresh is configured for 01:00 Central; collection health and source dates remain visible. Weekly digest delivery remains undeployed. See [daily source scope and operation](docs/DAILY_REFRESH.md). See [dashboard sources and limits](docs/DASHBOARD.md). The original 134-item Fritts export remains available in the historical archive. Public facts only; no private advocacy notes are published.
+**Browse the tracker:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The homepage shows recent actions and recorded votes for Fritts, Arellano, LaHood, Durbin and Duckworth, plus committee links, a rolling month of posted meetings and recent attributed media reports. Source dates and incomplete coverage are explicit. Daily website refresh is configured for 01:00 Central; collection health and source dates remain visible. Weekly digest delivery remains undeployed. See [daily source scope and operation](docs/DAILY_REFRESH.md). See [dashboard sources and limits](docs/DASHBOARD.md). The original 134-item Fritts export remains available in the historical archive. Public facts only; no private advocacy notes are published.
 
 ## Current status
 
@@ -12,17 +12,17 @@ For a focused code review, read [architecture and boundaries](docs/ARCHITECTURE.
 
 Read [the product vision](docs/PRODUCT_VISION.md), [the build brief](docs/BUILD_BRIEF_M0_M1.md) and [M0 findings](docs/M0_FINDINGS.md). Findings distinguish direct observations, normalization gaps and tests that still need time or corrected credentials. Hosted source access and Gmail self-delivery to INBOX pass. The follow-up audit reaches 96.59% comparison-key coverage and validates a five-page historical hearing fallback. Retained source gaps, upcoming hearing behavior and multi-day timing remain open.
 
-The [first Qwen3 32B / DeepInfra evaluation](docs/INFERENCE_EVALUATION_RESULTS.md) completed 30 calls for USD 0.00145256. It failed the mandatory instruction-injection gate despite 92.3% held-out category accuracy. The [v2 follow-up](docs/INFERENCE_EVALUATION_V2.md) quarantined five attacks before calls but accepted only one of three eligible held-out responses; its single actual website delta also leaves the real-change coverage gate unmet. Both trials together cost USD 0.00172472. Routine inference remains disabled. The credential stays in Actions secrets; this optional evaluation does not change the deterministic M1 pipeline.
+The [first Qwen3 32B / DeepInfra evaluation](docs/INFERENCE_EVALUATION_RESULTS.md) completed 30 calls for USD 0.00145256. It failed the mandatory instruction-injection gate despite 92.3% held-out category accuracy. The [v2 follow-up](docs/INFERENCE_EVALUATION_V2.md) quarantined five attacks before calls but accepted only one of three eligible held-out responses; its single actual website delta also leaves the real-change coverage gate unmet. Both trials together cost USD 0.00172472. The owner subsequently authorized narrow media-headline relevance screening below one cent per day. That separate ID-only task is enabled; party and legislative inference remain disabled. See [media evidence, spending controls and operation](docs/MEDIA_REPORTS.md). The credential stays in Actions secrets.
 
 ## Intended M1 operation
 
 - Public website source refresh daily at 01:00 America/Chicago (owner update October 17).
 - Factual digest Mondays at 06:00 America/Chicago, including a quiet-week health summary.
 - FTP XML first; one conditional floor-vote CSV retrieval, committee assignments, bounded party pages and Capitol Fax feed metadata.
-- No AI in routine operation. Federal sponsorship monitoring remains owner-managed through Congress.gov alerts; the browsing snapshot includes a bounded historical federal import.
+- Official facts and change collection remain deterministic. A separate, capped media-relevance task is enabled; federal daily collection supplements owner-managed Congress.gov alerts.
 - Compact public records; positions, correspondence and contact packets remain private.
 
-The daily website workflow is configured separately from the time-limited M0 observation. No digest or routine inference schedule is enabled. The [daily release notes](docs/DAILY_REFRESH.md) state its remaining coverage limits.
+The daily website workflow is configured separately from the time-limited M0 observation. No digest is enabled. Only the narrow media-relevance inference task is scheduled alongside daily website collection. The [daily release notes](docs/DAILY_REFRESH.md) state its remaining coverage limits.
 
 ## Repository map
 

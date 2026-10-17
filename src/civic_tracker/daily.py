@@ -59,6 +59,8 @@ def run(root, now):
         reports['Calendars']={'status':'partial' if snapshot['errors'] else 'ok','checked_at':now.isoformat(),'errors':list(snapshot['errors'])}
         old_members={m['id']:m for m in previous['members']}
         for member in snapshot['members']:
+            for key in ('media_reports', 'media_health'):
+                if key in old_members[member['id']]:member[key]=old_members[member['id']][key]
             source='Illinois' if member['jurisdiction']=='IL' else 'Federal'
             member['activity_coverage']=('Daily FTP listing changes and official floor-vote CSV; committee votes retain historical PDF coverage.' if source=='Illinois'
                 else 'Daily Congress.gov sponsorship lists and official floor roll calls; unknown cosponsorship join dates remain undated.')
