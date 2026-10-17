@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "trial_ceiling_usd": "20",
+  "experiments": [
+    {
+      "experiment_id": "qwen32b-deepinfra-eval-v1",
+      "status": "reserved",
+      "reserved_at": "2026-10-17T13:32:41.544479+00:00",
+      "corpus_sha256": "75b8da84c81a649a82c9a730d2eb9b693b94493e4424c67da7f3d8699424a94d",
+      "prompt_sha256": "588c5609650e8eeb1699eccf9ad81c31498c4123d20503b85038cd7623c4b397",
+      "model": "qwen/qwen3-32b",
+      "provider": "deepinfra/fp8",
+      "entries": [
+        {
+          "source_id": "dev-01",
+          "request_sha256": "340faea605f7f8e00d2b214167b896f9e6474492cc9353ed85f45724b161ad90",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "dev-02",
+          "request_sha256": "65a395d53ec1fcdab9ef78847c5b8d78f43cc4cebd649b40358bee03c9e86d64",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "dev-03",
+          "request_sha256": "8a5e722638e08c1bbeba8006a26d72663469f16ce11bccaecadee3d09e8fd0e5",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "dev-04",
+          "request_sha256": "e02d3ac0a860b8bafacdc53ec462dde40cc27c948284d1250e37c8d97ca0b786",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-01",
+          "request_sha256": "1822d6c03b6c4eec4bda97f3b63643ea1b0b84f11990307555fa2479c6e6f6d6",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-02",
+          "request_sha256": "6e3411a17c0fa8e2e853177a7ddf1314f0bf1fe0d61ff73e058b2462a16e0801",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-03",
+          "request_sha256": "12d129fc8dad53cfe087d3566c6e72cafd550eb56d5207131ebc22e89c6d12ec",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-04",
+          "request_sha256": "1359f0763e37b9885c2d05525e96e239f0b830d3fafd63b60efaa8250c0d7fdc",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-05",
+          "request_sha256": "93dbbabd070e0d5ab3fe73eb35ccd3f522ef7d7b5b6bdb1f68c92357a7976a5f",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-06",
+          "request_sha256": "18125af7596cbd90938dd974a66b4301c7a3bf1c27f025eedd2881fe01ed6981",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-07",
+          "request_sha256": "e8205fa249a3e5dfd20a36f444ca0c2ea08ae7f124706ce4b37c6288d192a9f7",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-08",
+          "request_sha256": "993162b7cfae67415f2698afb1359e15b325f9f4ea0f8c403a585e2697e20238",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-09",
+          "request_sha256": "4f56823c14271c78c4c6a28ee5263e7eee409f4a9b2631be6960c6724b4a85d6",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-10",
+          "request_sha256": "703d4d34d839d20f5676b9ffa1dccb686fce4660ba0c05f7b65e8aa871bf897b",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-11",
+          "request_sha256": "0847b32487350726590a167f436fe201986b07acee6c103bc8f693473ea335f1",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-12",
+          "request_sha256": "6762d6bfd6a20feaeb7628040669b19d94b09547895efc4bc2a2e2f7d00c81ae",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-13",
+          "request_sha256": "64995f4e34a715083ee3f69280fdf2f593b55a27fb9b5ce2a35473ae58e8cda9",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-14",
+          "request_sha256": "395336fff3530ff5db88cf44619b1a4a106d1311499b099b6ca15aa040cc7a74",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-15",
+          "request_sha256": "2966f70cf12d2d8b8c0449b6e069d6fd3fe810b7b62d4a4c5e58756b45203203",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-16",
+          "request_sha256": "81ebe320b951545ed5020961d7f7a34312c9cc1d72222de82c96e52810904f1e",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-17",
+          "request_sha256": "f14b0fc66c32858f2be4ce6d68fe20e7666a4f448f5f12df7b50b2ea4abca576",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-18",
+          "request_sha256": "f4d0a5b7b29aa82d45cd10f4b37c32f7296cd13bf64045d365e72448b75f93b5",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-19",
+          "request_sha256": "edc1a7891f325d753ed96b1a4d1cb602774e6b5839b2d292dda6e7ecad00280a",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-20",
+          "request_sha256": "eb2d10b0c0b2a5c568890cc1ce684c6d2f430b2f82a0f29c00425f720ab21f21",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-21",
+          "request_sha256": "ab4dd5b1b58c02ce63aad35722641b3975f0dd9ebb99f45fef2596ee79702714",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-22",
+          "request_sha256": "f4272bca98710eb7feb2809763c202d0cea7a175b389d83b96cce6776276770d",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-23",
+          "request_sha256": "103ef840ff09888de522a17f8576f8f5366c86fc08024eedcbf23124b4f9d828",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-24",
+          "request_sha256": "1387c4c884ee652020294ca7d3481682f29571a1c51948aae1dddd8c72e4025c",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-25",
+          "request_sha256": "40b64568658938d259f2d777f2170b3a2f8b41887d933a53ddaff5416dabcbb9",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        },
+        {
+          "source_id": "heldout-26",
+          "request_sha256": "8fd4126a32e9f275afd1e05a2c66f7a231a1ed75032d4c892724fc3cca7b85f5",
+          "status": "reserved",
+          "reserved_usd": "0.02",
+          "charged_usd": null
+        }
+      ]
+    }
+  ]
+}
