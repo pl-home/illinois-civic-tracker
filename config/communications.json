@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "lookback_days": 90,
+  "max_per_kind": 3,
+  "max_sources": 16,
+  "max_source_bytes": 1000000,
+  "sources": [
+    {
+      "id": "fritts-office",
+      "members": [
+        "fritts"
+      ],
+      "label": "Representative Bradley Fritts office",
+      "kind": "office",
+      "url": "https://repfritts.com/latest-news/",
+      "format": "fritts-html"
+    },
+    {
+      "id": "arellano-office",
+      "members": [
+        "arellano"
+      ],
+      "label": "Senator Li Arellano office",
+      "kind": "office",
+      "url": "https://www.senatorli.com/feed/",
+      "format": "rss",
+      "listing_url": "https://www.senatorli.com/"
+    },
+    {
+      "id": "lahood-office",
+      "members": [
+        "lahood"
+      ],
+      "label": "Representative Darin LaHood office",
+      "kind": "office",
+      "url": "https://lahood.house.gov/news",
+      "format": "lahood-html",
+      "note": "HTML listing dates are used; the advertised RSS contained malformed dates and is not used."
+    },
+    {
+      "id": "durbin-office",
+      "members": [
+        "durbin"
+      ],
+      "label": "Senator Dick Durbin office",
+      "kind": "office",
+      "url": "https://www.durbin.senate.gov/newsroom/press-releases",
+      "format": "senate-html"
+    },
+    {
+      "id": "duckworth-office",
+      "members": [
+        "duckworth"
+      ],
+      "label": "Senator Tammy Duckworth office",
+      "kind": "office",
+      "url": "https://www.duckworth.senate.gov/news/press-releases",
+      "format": "senate-html"
+    },
+    {
+      "id": "fritts-campaign",
+      "members": [
+        "fritts"
+      ],
+      "label": "Fritts campaign",
+      "kind": "campaign",
+      "url": "https://fritts4rep.com/feed/",
+      "format": "rss",
+      "listing_url": "https://fritts4rep.com/"
+    },
+    {
+      "id": "lahood-campaign",
+      "members": [
+        "lahood"
+      ],
+      "label": "LaHood campaign",
+      "kind": "campaign",
+      "url": "https://lahoodforcongress.com/feed/",
+      "format": "rss",
+      "listing_url": "https://lahoodforcongress.com/news/"
+    },
+    {
+      "id": "arellano-campaign",
+      "members": [
+        "arellano"
+      ],
+      "label": "Arellano campaign (older site)",
+      "kind": "campaign",
+      "url": "https://electarellano.com/",
+      "format": "link-only",
+      "note": "Older campaign site describes his previous House race; current dated release feed not verified."
+    },
+    {
+      "id": "durbin-campaign",
+      "members": [
+        "durbin"
+      ],
+      "label": "Durbin campaign",
+      "kind": "campaign",
+      "url": "https://www.durbinforsenate.com/",
+      "format": "link-only",
+      "note": "Campaign link verified previously; no dated public release feed verified for this collector."
+    },
+    {
+      "id": "duckworth-campaign",
+      "members": [
+        "duckworth"
+      ],
+      "label": "Duckworth campaign",
+      "kind": "campaign",
+      "url": "https://tammyduckworth.com/",
+      "format": "link-only",
+      "note": "No dated public release archive verified; campaign site link only."
+    },
+    {
+      "id": "il-senate-gop",
+      "members": [
+        "fritts",
+        "arellano",
+        "lahood"
+      ],
+      "label": "Illinois Senate Republican Caucus",
+      "kind": "party",
+      "url": "https://ilsenategop.org/feed/",
+      "format": "rss",
+      "listing_url": "https://ilsenategop.org/news/",
+      "require_name": true
+    },
+    {
+      "id": "il-house-gop",
+      "members": [
+        "fritts"
+      ],
+      "label": "Illinois House Republican Caucus",
+      "kind": "party",
+      "url": "https://www.ilhousegop.org/",
+      "format": "link-only",
+      "note": "Public homepage returned HTTP 403 during collector setup; link only."
+    },
+    {
+      "id": "senate-democrats",
+      "members": [
+        "durbin",
+        "duckworth"
+      ],
+      "label": "Senate Democratic Caucus",
+      "kind": "party",
+      "url": "https://www.democrats.senate.gov/newsroom/press-releases",
+      "format": "party-html",
+      "require_name": true
+    },
+    {
+      "id": "lee-democrats",
+      "members": [
+        "durbin",
+        "duckworth"
+      ],
+      "label": "Lee County Democrats",
+      "kind": "party",
+      "url": "https://leecodemocrats.com/feed/",
+      "format": "rss",
+      "listing_url": "https://leecodemocrats.com/",
+      "require_name": true
+    },
+    {
+      "id": "lee-gop",
+      "members": [
+        "fritts",
+        "arellano",
+        "lahood"
+      ],
+      "label": "Lee County Republican Central Committee",
+      "kind": "party",
+      "url": "https://leecountyilgop.org/feed/",
+      "format": "rss",
+      "listing_url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
+      "require_name": true
+    }
+  ]
+}

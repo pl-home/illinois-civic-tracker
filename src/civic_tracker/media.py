@@ -142,6 +142,8 @@ def prepare(root, now):
             elif statuses.get(candidate['id']) in (None, 'reconsider') and queued < config['candidates_per_member']:
                 cases.append(candidate); queued += 1
     save(root/'data/media-state.json', state)
+    from . import communications
+    if (root/'config/communications.json').exists():communications.collect(root,now)
     report = inference.prepare(root, cases, now)
     check_size(root)
     apply(root, now)
@@ -180,15 +182,28 @@ def apply(root, now):
         member['media_health'] = {'source_status':source.get('status','unavailable'),
             'checked_at':source.get('checked_at'), 'inference_status':'partial' if unresolved else 'complete',
             'lookback_days':config['lookback_days']}
+        query=config['queries'].get(member['id'],'')
+        member['media_search']={'query':query,
+            'search_url':'https://news.google.com/search?'+urlencode({'q':query,'hl':'en-US','gl':'US','ceid':'US:en'}),
+            'feed_url':'https://news.google.com/rss/search?'+urlencode({'q':query,'hl':'en-US','gl':'US','ceid':'US:en'}),
+            'candidate_count':len(rows),
+            'publisher_policy_url':'https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json'}
     save(root/'data/dashboard.json', snapshot)
+    from . import communications
+    communications.apply(root,now)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['prepare','execute'])
+    parser.add_argument('command', choices=['prepare','execute','refresh-communications'])
     args = parser.parse_args(); root = Path.cwd(); now = datetime.now(timezone.utc)
     if args.command == 'prepare':
         report = prepare(root, now)
+    elif args.command=='refresh-communications':
+        from . import communications
+        report=communications.collect(root,now)
+        apply(root,now)
+        check_size(root)
     else:
         check_size(root)
         report = inference.execute(root, now)

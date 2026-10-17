@@ -1,6 +1,12 @@
-name: Refresh media reports
+name: Refresh news and communications
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: Collection scope
+        type: choice
+        options: [media, communications]
+        default: media
 permissions:
   contents: read
 concurrency:
@@ -24,9 +30,17 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install -e .
       - run: python -m unittest discover -s tests -v
+      - name: Refresh first-party communications without model calls
+        if: inputs.mode == 'communications'
+        run: |
+          mkdir -p .local
+          sha256sum data/media-inference-*.json data/media-work.json > .local/inference-before-communications.sha256
+          python -m civic_tracker.media refresh-communications
+          sha256sum --check .local/inference-before-communications.sha256
       - name: Discover public news and reserve bounded inference budget
+        if: inputs.mode != 'communications'
         run: python -m civic_tracker.media prepare
-      - name: Persist budget reservations before any paid request
+      - name: Persist source metadata and any inference reservations
         id: reserve
         run: |
           python -m civic_tracker.privacy
@@ -34,21 +48,22 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data
           if ! git diff --cached --quiet; then
-            git commit -m 'Reserve bounded media screening and preserve source metadata'
+            git commit -m 'Preserve public source metadata and bounded inference reservations'
             git push origin main
           fi
       - name: Screen supplied article IDs using the capped media model
+        if: inputs.mode != 'communications'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python -m civic_tracker.media execute
       - run: python -m civic_tracker.privacy
       - run: python -m civic_tracker.browse --output .local/site
-      - name: Persist screened reports and billing receipts before publication
+      - name: Persist reports and source receipts before publication
         id: persist
         run: |
           git add data
           if ! git diff --cached --quiet; then
-            git commit -m 'Publish screened recent media reports and bounded cost receipt'
+            git commit -m 'Publish public reports and collection receipts'
             git push origin main
           fi
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"

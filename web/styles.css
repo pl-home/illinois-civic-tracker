@@ -12,3 +12,5 @@
 
 .member-media{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line,#d6dce2)}
 .media-list{list-style:none;padding:0}.media-row{padding:.8rem 0;border-bottom:1px solid var(--line,#d6dce2)}.media-row time{display:block;font-size:.78rem;color:var(--muted,#52616b);margin-bottom:.3rem}.media-row strong{display:block;font-size:.94rem;line-height:1.4}.media-row p{margin:.35rem 0 0}
+
+.member-communications{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line,#d6dce2)}.communication-list{list-style:none;padding:0}.communication-row{padding:.8rem 0;border-bottom:1px solid var(--line,#d6dce2)}.communication-row time{display:block;font-size:.78rem;color:var(--muted,#52616b);margin-bottom:.3rem}.communication-row strong{display:block;font-size:.94rem;line-height:1.4}.communication-row p{margin:.35rem 0 0}.communication-group h4{margin:1.2rem 0 .3rem}.communication-coverage li{margin:.7rem 0}.news-method{margin-top:1rem}.news-method code{white-space:normal;overflow-wrap:anywhere}

@@ -477,6 +477,107 @@
         "checked_at": "2026-10-17T16:02:36.360461+00:00",
         "inference_status": "complete",
         "lookback_days": 90
+      },
+      "communications": [
+        {
+          "id": "5f2e5bb60f44b940000d7eae",
+          "member_id": "fritts",
+          "title": "Fritts: House GOP Farmers Issue Joint Statement on Diesel Executive Orders",
+          "url": "https://repfritts.com/2026/10/08/fritts-house-gop-farmers-issue-joint-statement-on-diesel-executive-orders/",
+          "published_at": "2026-10-08",
+          "date_precision": "day",
+          "source_id": "fritts-office",
+          "publisher": "Representative Bradley Fritts office",
+          "kind": "office",
+          "publisher_host": "repfritts.com",
+          "source_url": "https://repfritts.com/latest-news/"
+        },
+        {
+          "id": "27d458aef44145f86ea91166",
+          "member_id": "fritts",
+          "title": "E-News Updates from Rep. Fritts – October 6, 2026",
+          "url": "https://repfritts.com/2026/10/06/e-news-updates-from-rep-fritts-october-6-2026/",
+          "published_at": "2026-10-06",
+          "date_precision": "day",
+          "source_id": "fritts-office",
+          "publisher": "Representative Bradley Fritts office",
+          "kind": "office",
+          "publisher_host": "repfritts.com",
+          "source_url": "https://repfritts.com/latest-news/"
+        },
+        {
+          "id": "80ccc571b8f35ae125076cbd",
+          "member_id": "fritts",
+          "title": "House Republicans Fight to Repeal Endless Taxes",
+          "url": "https://repfritts.com/2026/10/04/house-republicans-fight-to-repeal-endless-taxes/",
+          "published_at": "2026-10-04",
+          "date_precision": "day",
+          "source_id": "fritts-office",
+          "publisher": "Representative Bradley Fritts office",
+          "kind": "office",
+          "publisher_host": "repfritts.com",
+          "source_url": "https://repfritts.com/latest-news/"
+        }
+      ],
+      "communication_sources": [
+        {
+          "id": "fritts-office",
+          "publisher": "Representative Bradley Fritts office",
+          "kind": "office",
+          "url": "https://repfritts.com/latest-news/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-08",
+          "note": ""
+        },
+        {
+          "id": "fritts-campaign",
+          "publisher": "Fritts campaign",
+          "kind": "campaign",
+          "url": "https://fritts4rep.com/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2025-07-15",
+          "note": ""
+        },
+        {
+          "id": "il-senate-gop",
+          "publisher": "Illinois Senate Republican Caucus",
+          "kind": "party",
+          "url": "https://ilsenategop.org/news/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-14",
+          "note": ""
+        },
+        {
+          "id": "il-house-gop",
+          "publisher": "Illinois House Republican Caucus",
+          "kind": "party",
+          "url": "https://www.ilhousegop.org/",
+          "status": "link-only",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": null,
+          "note": "Public homepage returned HTTP 403 during collector setup; link only."
+        },
+        {
+          "id": "lee-gop",
+          "publisher": "Lee County Republican Central Committee",
+          "kind": "party",
+          "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-01",
+          "note": ""
+        }
+      ],
+      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "media_search": {
+        "query": "\"Bradley Fritts\" OR \"Brad Fritts\" when:90d",
+        "search_url": "https://news.google.com/search?q=%22Bradley+Fritts%22+OR+%22Brad+Fritts%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "feed_url": "https://news.google.com/rss/search?q=%22Bradley+Fritts%22+OR+%22Brad+Fritts%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "candidate_count": 4,
+        "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       }
     },
     {
@@ -951,6 +1052,97 @@
         "checked_at": "2026-10-17T16:02:36.360461+00:00",
         "inference_status": "complete",
         "lookback_days": 90
+      },
+      "communications": [
+        {
+          "id": "f280dfa909a19d87195ad5a5",
+          "member_id": "arellano",
+          "title": "See Tracks? Think Train! Week Highlights Importance of Rail Safety",
+          "url": "https://www.senatorli.com/2026/09/24/see-tracks-think-train-week-highlights-importance-of-rail-safety/",
+          "published_at": "2026-09-24T18:13:58+00:00",
+          "date_precision": "timestamp",
+          "source_id": "arellano-office",
+          "publisher": "Senator Li Arellano office",
+          "kind": "office",
+          "publisher_host": "senatorli.com",
+          "source_url": "https://www.senatorli.com/"
+        },
+        {
+          "id": "aac60bf749ea6080b89b6e48",
+          "member_id": "arellano",
+          "title": "Calling for an Investigation into Alleged FOIA Abuse",
+          "url": "https://www.senatorli.com/2026/09/24/calling-for-an-investigation-into-alleged-foia-abuse/",
+          "published_at": "2026-09-24T18:13:23+00:00",
+          "date_precision": "timestamp",
+          "source_id": "arellano-office",
+          "publisher": "Senator Li Arellano office",
+          "kind": "office",
+          "publisher_host": "senatorli.com",
+          "source_url": "https://www.senatorli.com/"
+        },
+        {
+          "id": "7ad531472b17ab38218e7f96",
+          "member_id": "arellano",
+          "title": "Join Me for the Stark County Town Hall October 6",
+          "url": "https://www.senatorli.com/2026/09/24/join-me-for-the-stark-county-town-hall-october-6/",
+          "published_at": "2026-09-24T18:11:39+00:00",
+          "date_precision": "timestamp",
+          "source_id": "arellano-office",
+          "publisher": "Senator Li Arellano office",
+          "kind": "office",
+          "publisher_host": "senatorli.com",
+          "source_url": "https://www.senatorli.com/"
+        }
+      ],
+      "communication_sources": [
+        {
+          "id": "arellano-office",
+          "publisher": "Senator Li Arellano office",
+          "kind": "office",
+          "url": "https://www.senatorli.com/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-09-24",
+          "note": ""
+        },
+        {
+          "id": "arellano-campaign",
+          "publisher": "Arellano campaign (older site)",
+          "kind": "campaign",
+          "url": "https://electarellano.com/",
+          "status": "link-only",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": null,
+          "note": "Older campaign site describes his previous House race; current dated release feed not verified."
+        },
+        {
+          "id": "il-senate-gop",
+          "publisher": "Illinois Senate Republican Caucus",
+          "kind": "party",
+          "url": "https://ilsenategop.org/news/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-14",
+          "note": ""
+        },
+        {
+          "id": "lee-gop",
+          "publisher": "Lee County Republican Central Committee",
+          "kind": "party",
+          "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-01",
+          "note": ""
+        }
+      ],
+      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "media_search": {
+        "query": "\"Li Arellano\" when:90d",
+        "search_url": "https://news.google.com/search?q=%22Li+Arellano%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "feed_url": "https://news.google.com/rss/search?q=%22Li+Arellano%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "candidate_count": 2,
+        "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       }
     },
     {
@@ -1261,6 +1453,97 @@
         "checked_at": "2026-10-17T16:02:36.360461+00:00",
         "inference_status": "complete",
         "lookback_days": 90
+      },
+      "communications": [
+        {
+          "id": "347d0e7f7f9e3d8920cba94d",
+          "member_id": "lahood",
+          "title": "LaHood Urges President Trump to Issue Presidential Major Disaster Declaration for Continued Recovery Efforts from August Storms",
+          "url": "https://lahood.house.gov/2026/10/lahood-urges-president-trump-to-issue-presidential-major-disaster-declaration-for-continued-recovery-efforts-from-august-storms",
+          "published_at": "2026-10-07",
+          "date_precision": "day",
+          "source_id": "lahood-office",
+          "publisher": "Representative Darin LaHood office",
+          "kind": "office",
+          "publisher_host": "lahood.house.gov",
+          "source_url": "https://lahood.house.gov/news"
+        },
+        {
+          "id": "5e4cc40b25abde4cf733f12e",
+          "member_id": "lahood",
+          "title": "ICYMI: LaHood, DelBene introduce Bipartisan Meals for Communities Tax Credit Act to Encourage Charitable Prepared Meal Donations",
+          "url": "https://lahood.house.gov/2026/9/icymi-lahood-delbene-introduce-bipartisan-meals-for-communities-tax-credit-act-to-encourage-charitable-prepared-meal-donations",
+          "published_at": "2026-09-21",
+          "date_precision": "day",
+          "source_id": "lahood-office",
+          "publisher": "Representative Darin LaHood office",
+          "kind": "office",
+          "publisher_host": "lahood.house.gov",
+          "source_url": "https://lahood.house.gov/news"
+        },
+        {
+          "id": "d281df0473b609ba172657cf",
+          "member_id": "lahood",
+          "title": "LaHood's CHANGE Act Passes out of the Ways and Means Committee",
+          "url": "https://lahood.house.gov/2026/9/lahood-s-change-act-passes-out-of-the-ways-and-means-committee",
+          "published_at": "2026-09-17",
+          "date_precision": "day",
+          "source_id": "lahood-office",
+          "publisher": "Representative Darin LaHood office",
+          "kind": "office",
+          "publisher_host": "lahood.house.gov",
+          "source_url": "https://lahood.house.gov/news"
+        }
+      ],
+      "communication_sources": [
+        {
+          "id": "lahood-office",
+          "publisher": "Representative Darin LaHood office",
+          "kind": "office",
+          "url": "https://lahood.house.gov/news",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-07",
+          "note": "HTML listing dates are used; the advertised RSS contained malformed dates and is not used."
+        },
+        {
+          "id": "lahood-campaign",
+          "publisher": "LaHood campaign",
+          "kind": "campaign",
+          "url": "https://lahoodforcongress.com/news/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2024-11-05",
+          "note": ""
+        },
+        {
+          "id": "il-senate-gop",
+          "publisher": "Illinois Senate Republican Caucus",
+          "kind": "party",
+          "url": "https://ilsenategop.org/news/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-14",
+          "note": ""
+        },
+        {
+          "id": "lee-gop",
+          "publisher": "Lee County Republican Central Committee",
+          "kind": "party",
+          "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-01",
+          "note": ""
+        }
+      ],
+      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "media_search": {
+        "query": "\"Darin LaHood\" when:90d",
+        "search_url": "https://news.google.com/search?q=%22Darin+LaHood%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "feed_url": "https://news.google.com/rss/search?q=%22Darin+LaHood%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "candidate_count": 18,
+        "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       }
     },
     {
@@ -1857,6 +2140,97 @@
         "checked_at": "2026-10-17T16:02:36.360461+00:00",
         "inference_status": "complete",
         "lookback_days": 90
+      },
+      "communications": [
+        {
+          "id": "d4e23c18dc9962f0d2f5171a",
+          "member_id": "durbin",
+          "title": "Durbin, Bipartisan Senators Call On Trump To Rescind Russian Diesel Deal & Implement Sanctions Authorized By Congress Last Month On Enablers Of Putin’s War Against Ukraine",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-bipartisan-senators-call-on-trump-to-rescind-russian-diesel-deal-and-implement-sanctions-authorized-by-congress-last-month-on-enablers-of-putins-war-against-ukraine",
+          "published_at": "2026-10-13",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "7004bcb66a43f8a6fe71592f",
+          "member_id": "durbin",
+          "title": "Durbin Releases Insights From Congressional Oversight Visit Of Immigration Detention At Guantánamo Bay",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-releases-insights-from-congressional-oversight-visit-of-immigration-detention-at-guantanamo-bay",
+          "published_at": "2026-10-09",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "ed412e9b0972c1de5630c328",
+          "member_id": "durbin",
+          "title": "Durbin Asks DOJ IG To Investigate FBI’s Decision To Modify Hiring Standards",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-asks-doj-ig-to-investigate-fbis-decision-to-modify-hiring-standards",
+          "published_at": "2026-10-09",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        }
+      ],
+      "communication_sources": [
+        {
+          "id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-13",
+          "note": ""
+        },
+        {
+          "id": "durbin-campaign",
+          "publisher": "Durbin campaign",
+          "kind": "campaign",
+          "url": "https://www.durbinforsenate.com/",
+          "status": "link-only",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": null,
+          "note": "Campaign link verified previously; no dated public release feed verified for this collector."
+        },
+        {
+          "id": "senate-democrats",
+          "publisher": "Senate Democratic Caucus",
+          "kind": "party",
+          "url": "https://www.democrats.senate.gov/newsroom/press-releases",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-15",
+          "note": ""
+        },
+        {
+          "id": "lee-democrats",
+          "publisher": "Lee County Democrats",
+          "kind": "party",
+          "url": "https://leecodemocrats.com/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-08-18",
+          "note": ""
+        }
+      ],
+      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "media_search": {
+        "query": "\"Dick Durbin\" when:90d",
+        "search_url": "https://news.google.com/search?q=%22Dick+Durbin%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "feed_url": "https://news.google.com/rss/search?q=%22Dick+Durbin%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "candidate_count": 19,
+        "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       }
     },
     {
@@ -2461,6 +2835,97 @@
         "checked_at": "2026-10-17T16:02:36.360461+00:00",
         "inference_status": "complete",
         "lookback_days": 90
+      },
+      "communications": [
+        {
+          "id": "cb1163fbaa55e144cb9b84b9",
+          "member_id": "duckworth",
+          "title": "Duckworth, Durbin Join Bicameral Coalition in Pressing Trump Administration on Illegal Reallocation of Funding for Minority Serving Institutions",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-join-bicameral-coalition-in-pressing-trump-administration-on-illegal-reallocation-of-funding-for-minority-serving-institutions",
+          "published_at": "2026-10-16",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "d550fc669043f205551a1af9",
+          "member_id": "duckworth",
+          "title": "Duckworth Joins Colleagues to Demand Answers on Childhood Vaccines EO, Measles Deaths and Delayed Vaccine Access",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-joins-colleagues-to-demand-answers-on-childhood-vaccines-eo-measles-deaths-and-delayed-vaccine-access",
+          "published_at": "2026-10-16",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "dde34db32bcf79b095d7f13b",
+          "member_id": "duckworth",
+          "title": "Duckworth Statement on Attempted Mass Shooting on Hindu Place of Worship in Aurora",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-statement-on-attempted-mass-shooting-on-hindu-place-of-worship-in-aurora",
+          "published_at": "2026-10-16",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        }
+      ],
+      "communication_sources": [
+        {
+          "id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "url": "https://www.duckworth.senate.gov/news/press-releases",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-16",
+          "note": ""
+        },
+        {
+          "id": "duckworth-campaign",
+          "publisher": "Duckworth campaign",
+          "kind": "campaign",
+          "url": "https://tammyduckworth.com/",
+          "status": "link-only",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": null,
+          "note": "No dated public release archive verified; campaign site link only."
+        },
+        {
+          "id": "senate-democrats",
+          "publisher": "Senate Democratic Caucus",
+          "kind": "party",
+          "url": "https://www.democrats.senate.gov/newsroom/press-releases",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-10-15",
+          "note": ""
+        },
+        {
+          "id": "lee-democrats",
+          "publisher": "Lee County Democrats",
+          "kind": "party",
+          "url": "https://leecodemocrats.com/",
+          "status": "ok",
+          "checked_at": "2026-10-17T16:14:27.919473+00:00",
+          "latest_source_date": "2026-08-18",
+          "note": ""
+        }
+      ],
+      "communications_checked_at": "2026-10-17T16:14:27.919473+00:00",
+      "media_search": {
+        "query": "\"Tammy Duckworth\" when:90d",
+        "search_url": "https://news.google.com/search?q=%22Tammy+Duckworth%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "feed_url": "https://news.google.com/rss/search?q=%22Tammy+Duckworth%22+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
+        "candidate_count": 30,
+        "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       }
     }
   ],

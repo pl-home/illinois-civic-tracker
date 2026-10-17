@@ -43,7 +43,7 @@ class BrowseTests(unittest.TestCase):
             self.assertEqual(build(ROOT, output), report)
             self.assertEqual({p.name: p.read_bytes() for p in output.iterdir()}, first)
             self.assertEqual(set(first), {'index.html', 'archive.html', 'dashboard.json', 'styles.css', 'app.js', 'dashboard.js', 'records.json', '.nojekyll'})
-            self.assertLess(report['artifact_bytes'], 500_000)
+            self.assertLess(report['artifact_bytes'], 650_000)
             for name in first:
                 self.assertEqual(violations(first[name].decode()), [], name)
             homepage = BeautifulSoup(first['index.html'].decode(), 'html.parser')
