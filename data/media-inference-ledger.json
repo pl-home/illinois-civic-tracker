@@ -110,9 +110,14 @@
         "905461ad047972aff57afdb8"
       ],
       "reserved_usd": "0.002",
-      "charged_usd": null,
-      "status": "reserved",
-      "prepared_at": "2026-10-17T16:02:36.360461+00:00"
+      "charged_usd": "0.00015444",
+      "status": "valid",
+      "prepared_at": "2026-10-17T16:02:36.360461+00:00",
+      "attempted_at": "2026-10-17T16:02:40.694084+00:00",
+      "usage": {
+        "prompt_tokens": 849,
+        "completion_tokens": 309
+      }
     }
   ]
 }

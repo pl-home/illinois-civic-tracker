@@ -461,12 +461,21 @@
           "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOeDczeTlqZUZlY29aenJxNU84Z1d2Vmp2TEU2bS15SmhGaHh2YU4xWkYyLVRYUEZuWFA3MDNhdnRBUzRpZWNiWlZjOXU1dHJTdjFqb1BkUTNocGtPOEpVN3lSck1RdG4zWFEwSDdDSnYwNmplS0JzWDJqZHVYa0ZjYk5tS2dPaUk5eHVLU1JXMzFRQTZ5azJETHo5VERTZGRKZWJ3QjdjNWJzUEhhTnp6QlJDb0ZfdUFRQ3N2TTd3YTBVbXRZUVpuVXFoMHNVeUk4QXZ4QVJ3",
           "published_at": "2026-10-07T23:27:35+00:00",
           "link_route": "Google News"
+        },
+        {
+          "id": "c39bff9650deeec5ef3b4785",
+          "title": "2026 Election Questionnaire: Brad Fritts, Illinois State Representative, 74th District",
+          "publisher": "Shaw Local",
+          "publisher_host": "shawlocal.com",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVF9DZ0FDSUUwVUxjVm5QYTZLZnBmLUVTWjk2ZGRpVnRsTHh6a3hOVEpKSGQ5QmcwX2dfSTVpWFJqSXUxZ1dRcWJnMksyRTRQQVQ3ZlBRM3dUMUdKV19BZnVPZGRRWHJ1Vzlzd2pTNkdlUkRDdFhxcjZFUXJNcU1nS0NMZFB0Ri1Dc1VpVzJoOGF2OEpqWUNMajF3eTcwTjJNQnMtcGFJbFJWa0hmU3B0aE5UWUw2eHRDU0prVmJYbnpsSlA0Q3hRd2tpV09UZDB4",
+          "published_at": "2026-09-25T07:00:00+00:00",
+          "link_route": "Google News"
         }
       ],
       "media_health": {
         "source_status": "ok",
         "checked_at": "2026-10-17T16:02:36.360461+00:00",
-        "inference_status": "partial",
+        "inference_status": "complete",
         "lookback_days": 90
       }
     },
@@ -1220,6 +1229,15 @@
       "calendar_health": "published_weeks_checked",
       "media_reports": [
         {
+          "id": "94bc0c2c64fe6d14e087a6a7",
+          "title": "LaHood missed Dixon candidate forum for Peoria event, campaign says",
+          "publisher": "Shaw Local",
+          "publisher_host": "shawlocal.com",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcW9sS2hjVXVwNWxiMTlGYi04T01DYkdNczhyTXhsZ2VXX19GcF9VeGtzN1VseFFBenRQeHNQcXM0SFBoMTZKWFI3aEU3bXVhX1ZSVTVzZElVQVBqVXR6RkozMTZWSWZwbDJMQmk0R1pwQzJKR09CS2ttMmtVVFZjT0ZzcDRJaVE4dnV5cG4tMWxqZEtLS2tPd3U5VXpFcGphYmZPRGQweUhfRnNMcEc1R1JCUnVqN1U",
+          "published_at": "2026-10-12T23:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
           "id": "0ae885c4bbe1d0dbea3046ec",
           "title": "LaHood, Nolley discuss key issues during 16th Congressional District debate",
           "publisher": "WEEK | 25 News Now",
@@ -1241,7 +1259,7 @@
       "media_health": {
         "source_status": "ok",
         "checked_at": "2026-10-17T16:02:36.360461+00:00",
-        "inference_status": "partial",
+        "inference_status": "complete",
         "lookback_days": 90
       }
     },
@@ -2411,6 +2429,24 @@
       "calendar_health": "published_feed_checked",
       "media_reports": [
         {
+          "id": "c24a608140e345a67ce66b1f",
+          "title": "Duckworth needs introduction to economist",
+          "publisher": "The Beverly Review",
+          "publisher_host": "beverlyreview.net",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeWhlSUgzc1lnSF8tRG9UUGUzQzMyOE5va3kzWnBZOXRUazZhVnhOZXZrUmZPTzgybkc1QnJXZkc5djBwS3J0OHFMVGVycFBQbmozQXZsVDJHcndoZThjRmtyQlRaR0tCTHJUWERnS1M2enRpYWRsWml6VVdudnlwOHpoMkZOU0FhUHJ0eUpiTUkxMTVvTHVXZ2JXTXhRcmxsbUNDWnhuUWs",
+          "published_at": "2026-10-13T15:29:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "905461ad047972aff57afdb8",
+          "title": "Duckworth Urges FAA And DOD To Act On Safety Findings After DCA Crash Report",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSG5EekhrMXkxaE1Cb0ZqZHI3RVdhaFpyVS1XcGhJYUpXdm5XQmpNcWRObVpHbzhYaXQ4bndUT3p5T05SYXVqeVNUZDdqRFl4TG95SkctV2cycVVGMWZPUVRoUG5uY1hreVBkT1c5TDlCZm1ZQ1ZNVW5OWGx0WGJxZlh2VEJyVzdPZi1Db0c0bEhqQUFwb3BjYmxFWTI4SV9mQUE5d3B2RnpTS29GYThIeU9UdzllUTYyMno3UTVZdGVPUzlBUWc",
+          "published_at": "2026-10-10T13:30:00+00:00",
+          "link_route": "Google News"
+        },
+        {
           "id": "6af4c7398e9fb93361450f9e",
           "title": "Duckworth announces longtime advisor Kelsey Becker named Chief of Staff",
           "publisher": "WAND",
@@ -2418,30 +2454,12 @@
           "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPS0hwdTJJREMzV3Jic2ZzNnFSWjZqM2oyQkZCY25Zc3htRk5welhCX2YyUDBCekZSSFljSFdkb1M3ZW1aeVZteGtScGJuN2JSUW91YkFIMG1WSXN0UGYxU2lHczlRRXR1RldQc3RpLXRzS1Z5QldvbVZFTFlPYXBaSGM5b0Z2dGtxdjZKemZJZVR0SS1nOEJHeTZNUlN0MG1qQWxQQm5R0gG6AUFVX3lxTE9GMVZwbHhWR3padl9EY3ZkMzhmclRjdktSWGY2SWVlQnUxN2Q3c2p5UDA1eWVhVDdtVjBwRVY0WkNaZnhKQkdnUzY0ME1jLUt2dGo5MEZIU1JFSl9KbXhnd1NPSzlYVW11YXk0VW54ZDd5b1diVWdCNUE2bndUQnhRemtyZjNfcEtmX3ZVZFNpb3AxU3dleEJoX205dEw3a1RBR3NjOTExbUs0VjlBVEdSVlJ6NFBVUi1kQQ",
           "published_at": "2026-10-05T07:00:00+00:00",
           "link_route": "Google News"
-        },
-        {
-          "id": "d53fc6db5cae9f7c4a850ce5",
-          "title": "Duckworth Announces Illinois Native and Longtime Advisor Kelsey Becker as Chief of Staff",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQazNrRWM4UVVZNi1jREd0QjZKeXZ2TVRxNzF6N1poLUI1QWthU3BnTFhxRVJUWXpwcldLSVU5SzcxM2lPXzk3MHBCeTRjUDcwQUFsUmw4LXY4ZkpnOU1neWRwdzFpQ2h6Z2NqS2pmeXNDdFdhU1BUaFFlU2x1ei01WVVPNWRBbWVqSFMtRlFwN2hHb2NhMGZ4eDJleE5WbmFncjdZZUl6cmJzc1hGTmJaaEU1M3doUmhUTTU2dGU0VUllX042MGlwNndXOW5qV2l3N296NUd3",
-          "published_at": "2026-10-05T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "785efc424eeb361fa4072762",
-          "title": "Duckworth Calls for a Decisive U.S. Response to the PRC’s Weaponization of Air Travel to Help Protect Safety of Global Flying Public",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOTzBFQTJRbnBpMnJacXhOVEdDR2RnQVZBTjFqNWRtZnByYWg5Y3ExbHc4RkdGT0NWVkJ6dDZrMFVhdlBWcmhpLUhHbkhTSGs0cUw5ZHJ0a2VNT3lkbTN4UDNqS1dGS0ViTjZMbFR3THBFTTh5NGh5WHlnNU02VC1jazJhcEx0N242S2JaV1ByS0Rvc1BlNll6SzdTc09ieklhSVp6SHkwejVSMzdlNGJwV193NmRCMVU3R1BncnV4VUxHYV9BcDBNZEhyZElEQ0FqRkJFTXJvUFczVVNSUlRGYzdsbkRTb1lkYkZXaGNaTFFIT1kxdTcxUzU3S0pWQ29ISjFLTTJnZjJGWmhk",
-          "published_at": "2026-10-04T07:00:00+00:00",
-          "link_route": "Google News"
         }
       ],
       "media_health": {
         "source_status": "ok",
         "checked_at": "2026-10-17T16:02:36.360461+00:00",
-        "inference_status": "partial",
+        "inference_status": "complete",
         "lookback_days": 90
       }
     }

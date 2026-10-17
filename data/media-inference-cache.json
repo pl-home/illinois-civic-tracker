@@ -222,5 +222,69 @@
       "prompt_version": "media-relevance-v3",
       "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
     }
+  },
+  "4deddaa8c108ec802b1085272f9f199493225a6a19f51654d0f5f08d00ad183c": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "f43d2f9a5122df1a0f8e0638c7c4da7a0b6eefd3120a385916cd6073cb236787": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "c4314a8d98afba323fe4034d3f8f69d19ac84ed90530f263c99cda7d3c3621fc": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "4176334fbe015fba0a1ed4be989a8bcd974cbe1b4b9a0215efc6e90d5cb619fa": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "66e2f3510abe9ae9a689182bb1aa0d6705c2f88d9a285fcb98abbf1fac0c3830": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "d8f046c7a43a47870dacc30052f407feae856f4088a4e27436272b5f516727b8": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "7872db77bd9b091aac058cab878777ffc184d113f4be6fffa79bc08e31717a44": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "d0faddda8e71408a90ddca09b42b503cba62ee1da56811fce6b59f97709eaff0": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
   }
 }
