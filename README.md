@@ -12,7 +12,7 @@ For a focused code review, read [architecture and boundaries](docs/ARCHITECTURE.
 
 Read [the product vision](docs/PRODUCT_VISION.md), [the build brief](docs/BUILD_BRIEF_M0_M1.md) and [M0 findings](docs/M0_FINDINGS.md). Findings distinguish direct observations, normalization gaps and tests that still need time or corrected credentials. Hosted source access and Gmail self-delivery to INBOX pass. The follow-up audit reaches 96.59% comparison-key coverage and validates a five-page historical hearing fallback. Retained source gaps, upcoming hearing behavior and multi-day timing remain open.
 
-The owner authorized a [small manual Qwen3 32B / DeepInfra evaluation](docs/INFERENCE_EVALUATION.md) within a USD 20 trial ceiling. The credential stays in Actions secrets; routine inference remains disabled. This optional evaluation does not change the deterministic M1 pipeline.
+The [first Qwen3 32B / DeepInfra evaluation](docs/INFERENCE_EVALUATION_RESULTS.md) completed 30 calls for USD 0.00145256. It failed the mandatory instruction-injection gate despite 92.3% held-out category accuracy. Routine inference remains disabled. The credential stays in Actions secrets; this optional evaluation does not change the deterministic M1 pipeline.
 
 ## Intended M1 operation
 

@@ -1,6 +1,6 @@
 # OpenRouter setup and future inference plan
 
-Status: **manual evaluation authorized, October 17, 2026**. The owner approved Qwen3 32B through DeepInfra and a small evaluation within USD 20. The manual evaluation client/workflow is implemented; no paid result has been claimed yet. Routine inference remains disabled and M1 remains deterministic. The later approval supersedes earlier planning-only statements below; see [INFERENCE_EVALUATION.md](INFERENCE_EVALUATION.md).
+Status: **manual evaluation authorized, October 17, 2026**. The owner approved Qwen3 32B through DeepInfra and a small evaluation within USD 20. The first 30-call evaluation completed for USD 0.00145256 and failed the mandatory adversarial gate; see [results](INFERENCE_EVALUATION_RESULTS.md). Routine inference remains disabled and M1 remains deterministic. The later approval supersedes earlier planning-only statements below; see [INFERENCE_EVALUATION.md](INFERENCE_EVALUATION.md).
 
 October 17 setup clarification: the owner may create the ordinary inference key and save OPENROUTER_API_KEY as a repository Actions secret now. Secret presence does not enable model calls. The public browsing page never receives or uses this secret. Tell the implementer only that setup is complete and the chosen trial cap, never the key value. Model/provider selection and explicit activation remain separate.
 

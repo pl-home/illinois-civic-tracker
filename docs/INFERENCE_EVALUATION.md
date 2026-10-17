@@ -2,6 +2,8 @@
 
 The owner authorized this evaluation on October 17, 2026: Qwen3 32B through DeepInfra, within the USD 20 trial cap. **Routine inference remains disabled.** This is separate from the deterministic M1 collection/digest and the public browsing page.
 
+The [first run and review](INFERENCE_EVALUATION_RESULTS.md) are complete: 30 calls, USD 0.00145256, failed mandatory adversarial gate. The unchanged protocol and frozen inputs below describe that original experiment.
+
 ## What is tested
 
 The corpus has 4 development cases and 26 held-out cases. Six held-out excerpts are short descriptions from the reviewed public Fritts export. The other cases are clearly labeled synthetic; their party notices do not describe actual Lee County activity. All six priority topics appear, alongside substantive resolutions, ceremonial items, a technical placeholder, irrelevant/insufficient material, party categories, repeats and two instruction-injection attempts.

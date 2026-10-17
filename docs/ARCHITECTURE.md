@@ -26,7 +26,7 @@ Tests use synthetic data or reviewed public sponsorship facts. Optional PDF tool
 
 ## Future hosted inference
 
-The owner chose planning now and activation later. [OPENROUTER_SETUP.md](OPENROUTER_SETUP.md) records the setup steps, open-weight evaluation candidate, privacy controls and proposed integration contract. config/inference-plan.json is a planning record with enabled=false; no runtime consumes it. M1 remains deterministic.
+The owner approved one bounded Qwen3 32B / DeepInfra evaluation. [Its results](INFERENCE_EVALUATION_RESULTS.md) failed the mandatory instruction-injection gate. config/inference-plan.json keeps enabled=false for routine operation; only the manual evaluator consumes its evaluation authorization. [OPENROUTER_SETUP.md](OPENROUTER_SETUP.md) and [the protocol](INFERENCE_EVALUATION.md) record privacy and spending controls. M1 remains deterministic.
 
 ## Proposed M1 flow
 

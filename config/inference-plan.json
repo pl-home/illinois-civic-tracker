@@ -1,5 +1,5 @@
 {
-  "status": "manual-evaluation-authorized",
+  "status": "evaluation-completed-routine-blocked",
   "enabled": false,
   "model_candidate": "qwen/qwen3-32b",
   "approved_model": "qwen/qwen3-32b",
@@ -26,5 +26,6 @@
   "private_notes_allowed": false,
   "runtime_implementation_present": true,
   "evaluation_enabled": true,
-  "approval_scope": "User authorized a bounded evaluation on 2026-10-17; routine inference remains disabled"
+  "approval_scope": "User authorized a bounded evaluation on 2026-10-17; routine inference remains disabled",
+  "evaluation_result": "Failed mandatory instruction-injection gate; no routine activation"
 }
