@@ -2,6 +2,7 @@
 import argparse
 from datetime import datetime, timezone
 import json
+import time
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from . import daily_state, daily_federal
@@ -32,6 +33,8 @@ def run(root, now):
     previous=load(root/'data/dashboard.json'); archives={}; reports={}
     for name, filename in [('Illinois','illinois-index.json'),('Federal','federal-index.json')]:
         old=load(root/'data'/filename)
+        started=time.monotonic()
+        print(json.dumps({'phase':name,'status':'started'}),flush=True)
         try:
             if day.isoformat()>=plan['review_before']:
                 raise RuntimeError('session-review-required')
@@ -43,8 +46,12 @@ def run(root, now):
             data=old
             report={'status':'failed','checked_at':now.isoformat(),'errors':[{'source':name,'error':'session-review-required' if day.isoformat()>=plan['review_before'] else type(ex).__name__}],
                     'limitations':['Previous verified records retained; this source was not refreshed.']}
+        report['duration_seconds']=round(time.monotonic()-started,2)
+        print(json.dumps({'phase':name,'status':report['status'],'duration_seconds':report['duration_seconds']}),flush=True)
         archives[name]=data; reports[name]=report
         save(root/'data'/filename,data)
+    print(json.dumps({'phase':'Calendars','status':'started'}),flush=True)
+    calendar_started=time.monotonic()
     try:
         if day.isoformat()>=plan['review_before']:raise RuntimeError('session-review-required')
         collect(root,root/'data/illinois-index.json',root/'data/federal-index.json',day)
@@ -69,6 +76,8 @@ def run(root, now):
     except Exception as ex:
         snapshot=previous
         reports['Calendars']={'status':'failed','checked_at':now.isoformat(),'errors':[{'source':'Dashboard compilation','error':'session-review-required' if day.isoformat()>=plan['review_before'] else type(ex).__name__}]}
+    reports['Calendars']['duration_seconds']=round(time.monotonic()-calendar_started,2)
+    print(json.dumps({'phase':'Calendars','status':reports['Calendars']['status'],'duration_seconds':reports['Calendars']['duration_seconds']}),flush=True)
     snapshot['automatic_refresh_enabled']=True
     snapshot['daily_refresh']={'target_time':'01:00 America/Chicago','checked_at':now.isoformat(),
         'status':'ok' if all(r['status']=='ok' for r in reports.values()) else 'partial','sources':reports}

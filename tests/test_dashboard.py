@@ -49,8 +49,9 @@ class DashboardTests(unittest.TestCase):
             self.assertEqual(links[0]['href'], member['url'])
             self.assertEqual(links[1]['href'], member['public_links']['facebook']['url'])
             self.assertEqual(links[2]['href'], member['public_links']['campaign']['url'])
-        self.assertIn('Minority Spokesperson', page.select_one('#member-arellano .committee-links').get_text())
-        self.assertIn('Ranking Member', page.select_one('#member-durbin .committee-links').get_text())
+        for member in data['members']:
+            for committee in member['committees']:
+                self.assertIn(committee.get('role') or 'Role not verified', page.select_one('#member-'+member['id']+' .committee-links').get_text())
         self.assertIn('not a collection feed', page.get_text())
 
     def test_empty_calendar_requires_explicit_recognized_empty_state(self):
@@ -84,12 +85,12 @@ class DashboardTests(unittest.TestCase):
         self.assertIsNone(listings[0]['role_date'])
 
     def test_vote_title_opens_bill_and_choice_opens_roll_call(self):
-        _, snapshot = render(ROOT)
-        member = next(m for m in snapshot['members'] if m['id'] == 'arellano')
-        vote = next(e for e in member['events'] if e.get('measure') == 'SB2427' and e['kind'] == 'vote')
         bill_url = 'https://ilga.gov/Legislation/BillStatus?DocNum=2427&GAID=18&DocTypeID=SB&LegId=162470&SessionID=114'
+        vote = {'kind':'vote','date':'2026-05-31','measure':'SB2427','title':'SCH CD-WIRELESS COMM DEVICE',
+                'bill_url':bill_url,'scope':'floor','detail':'CONCUR IN HOUSE AMENDMENT / CONCURRENCE',
+                'source_url':'https://ilga.gov/Documents/legislation/votehistory/104/senate/10400SB2427ham004_05312026_007001C.pdf'}
         for choice, raw in [('yes', 'Y'), ('no', 'N')]:
-            html = BeautifulSoup(activity_row({**vote, 'choice': choice, 'raw_choice': raw}, snapshot['recent_start'], snapshot['as_of']), 'html.parser')
+            html = BeautifulSoup(activity_row({**vote, 'choice': choice, 'raw_choice': raw}, '2026-09-18', '2026-10-17'), 'html.parser')
             self.assertEqual(html.select_one('.activity-title a')['href'], bill_url)
             self.assertEqual(html.select_one('a.vote-choice')['href'], vote['source_url'])
             self.assertIn('('+raw+')', html.select_one('a.vote-choice').get_text())

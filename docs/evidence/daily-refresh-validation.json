@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-17",
+  "implementation_commit": "d808aa0",
+  "records_commit": "2ad84a3",
+  "first_run": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39043392873",
+  "workflow_status": "success",
+  "refresh_job": "success",
+  "pages_deployment": "success",
+  "source_status": {
+    "Illinois": "ok",
+    "Federal": "partial",
+    "Calendars": "ok"
+  },
+  "initial_source_failures": [
+    {
+      "source": "House Clerk vote index",
+      "error": "HTTP_503"
+    },
+    {
+      "source": "Congress.gov Durbin cosponsored pagination",
+      "error": "RuntimeError",
+      "pages_before_failure": 11
+    }
+  ],
+  "ftp_entries_processed": 24,
+  "calendar_committee_receipts": 37,
+  "congress_api_attempts": 44,
+  "federal_vote_requests": 7,
+  "tests_passed": 105,
+  "privacy_findings": 0,
+  "json_state_bytes": 7043154,
+  "target_time": "01:00 America/Chicago",
+  "cron_utc": "0 6,7 * * *",
+  "daily_local_date_ledger": true,
+  "catch_up_before_local_hour": 6,
+  "source_state_persisted_before_deploy": true,
+  "ai_runtime_enabled": false,
+  "digest_enabled": false,
+  "daily_committee_vote_discovery_enabled": false,
+  "live_future_slip_validation_pending": true,
+  "review_boundary": "2027-01-03"
+}

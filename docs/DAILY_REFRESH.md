@@ -1,6 +1,6 @@
 # Daily website refresh
 
-The owner authorized daily website updates at **01:00 America/Chicago** on October 17, 2026. This supersedes the earlier 23:00 collection target for the public website. It is a staged daily dashboard release, separate from the still-gated complete M1 digest and later inference activation. Initial hosted verification is pending; see the latest workflow run and `data/daily-report.json` after it completes.
+The owner authorized daily website updates at **01:00 America/Chicago** on October 17, 2026. This supersedes the earlier 23:00 collection target for the public website. It is a staged daily dashboard release, separate from the still-gated complete M1 digest and later inference activation. The [first hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39043392873) completed and deployed on October 17. Illinois and calendars passed; federal coverage was partial (House Clerk HTTP 503 and one incomplete Congress.gov pagination sequence). Prior facts were retained and failures were published. This is an operational deployment with visible source gaps, not a claim that every source passed. `data/daily-report.json` is the current receipt.
 
 ## Operation
 
@@ -28,3 +28,9 @@ All ILGA/main slip-host requests share the ten-second sequential gate. FTP is pr
 ## Review and next work
 
 Read `daily.py`, then `daily_state.py` / `daily_federal.py`, `dashboard_collect.py` and one `daily-report.json`. Tests cover DST/catch-up/date deduplication, pagination failure isolation, identity/tally reconciliation, corrected CSV evidence/retired identities, malformed CSV watermark protection and partial calendar retention. The full suite currently has 105 tests. Production M1 acceptance is still qualified: daily committee votes, live upcoming/slip evidence, exact role/index review, post-veto cadence, deterministic topic reasons, digest rendering/delivery idempotency and growth simulation remain open.
+
+## Initial deployment evidence
+
+Implementation `d808aa0`; persisted daily records `2ad84a3`. The first run processed 24 changed/recheck FTP entries, fetched the official floor CSV (latest vote still May 31), made 44 Congress.gov API requests and seven federal vote-source requests, and refreshed 37 committee/calendar source receipts. No matching upcoming meetings were posted. All five member cards retained source-specific dates. Working JSON state was 7,043,154 bytes, with no raw source dumps published. Both refresh and Pages deploy jobs succeeded. Two federal failures remain qualified; no second collection was launched just to replace that receipt. The next scheduled attempt will recheck them. Per-source timing/progress logs were added for later runs.
+
+The 105-test suite and privacy scan pass. Regression examples are frozen test inputs, so a later vote or changed committee role does not make CI depend on an old homepage row remaining in the rolling window. Compact validation is in `docs/evidence/daily-refresh-validation.json`.

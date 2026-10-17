@@ -105,6 +105,7 @@ def _safe_error(exc):
         'totals_mismatch', 'tracked_member_missing_or_duplicate',
         'incomplete_index', 'duplicate_index_id', 'vote_request_limit',
         'api_attempt_limit', 'source_size_limit', 'missing_api_key',
+        'URLError', 'TimeoutError', 'OSError',
     }
     if code in known:
         return code.replace(' ', '_')
