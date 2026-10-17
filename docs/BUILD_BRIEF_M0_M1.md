@@ -1,5 +1,8 @@
 # Build Brief — Milestones 0 and 1
 
+**October 17 daily website scope update:** the owner explicitly authorized daily public website refresh at **01:00 America/Chicago**, superseding its previous 23:00 target and manual-only status. This staged source-refresh release does not declare unresolved M0/M1 checks passed or enable the weekly digest/inference. Read [DAILY_REFRESH.md](DAILY_REFRESH.md) for source coverage, retained failures, initial hosted verification and remaining gates. Earlier status statements below are dated evidence.
+
+
 For: Codex (implementer). Read with `PRODUCT_VISION.md` rev. 3; section references below (§) point there.
 Date: October 16, 2026.
 

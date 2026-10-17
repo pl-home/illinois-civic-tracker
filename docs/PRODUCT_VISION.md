@@ -1,5 +1,8 @@
 # Legislator & County Party Tracker — Product Vision
 
+**October 17 daily website scope update:** the owner explicitly authorized daily public website refresh at **01:00 America/Chicago**, superseding its previous 23:00 target and manual-only status. This staged source-refresh release does not declare unresolved M0/M1 checks passed or enable the weekly digest/inference. Read [DAILY_REFRESH.md](DAILY_REFRESH.md) for source coverage, retained failures, initial hosted verification and remaining gates. Earlier status statements below are dated evidence.
+
+
 Rev. 3, October 16, 2026. This consolidates rev. 1–2 and the decisions made on October 16. It replaces the outcome sections of `docs/PRODUCT_SPEC.md`; that spec's evidence rules still apply. **Open** marks items that still need a decision. The companion `BUILD_BRIEF_M0_M1.md` says what to build first.
 
 This document is written to live in a **public** repository. It names no personal email addresses, credentials or local paths, and it must stay that way (§13).

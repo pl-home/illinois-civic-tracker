@@ -1,5 +1,8 @@
 # Current checkpoint
 
+**October 17 daily website scope update:** the owner explicitly authorized daily public website refresh at **01:00 America/Chicago**, superseding its previous 23:00 target and manual-only status. This staged source-refresh release does not declare unresolved M0/M1 checks passed or enable the weekly digest/inference. Read [DAILY_REFRESH.md](DAILY_REFRESH.md) for source coverage, retained failures, initial hosted verification and remaining gates. Earlier status statements below are dated evidence.
+
+
 October 17 homepage revision is published at the existing Pages URL (implementation `380611e`). The five-member dashboard passed 92 tests, privacy checks, clean-runner CI, Pages deployment and live browser review. Read DASHBOARD.md and evidence/dashboard-validation.json for the 97-event snapshot, 23 schedule receipts, source dates and future live witness-slip gates. Automatic source refresh remains off; archive.html preserves the original export.
 
 The separate v2 evaluation completed five calls, charged USD 0.00027216, with five attack samples quarantined before requests. Only 1/3 eligible held-out responses passed evidence validation; the actual website delta was rejected. There is only one genuine delta against a minimum five. The quality gate failed and routine inference remains disabled. Combined v1/v2 recorded cost: USD 0.00172472, no uncertain liability. Read INFERENCE_EVALUATION_V2.md and its frozen receipt/ledger. Do not rerun or change this corpus to improve its score.

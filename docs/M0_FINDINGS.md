@@ -1,5 +1,8 @@
 # M0 findings and M1 release gates
 
+**October 17 daily website scope update:** the owner explicitly authorized daily public website refresh at **01:00 America/Chicago**, superseding its previous 23:00 target and manual-only status. This staged source-refresh release does not declare unresolved M0/M1 checks passed or enable the weekly digest/inference. Read [DAILY_REFRESH.md](DAILY_REFRESH.md) for source coverage, retained failures, initial hosted verification and remaining gates. Earlier status statements below are dated evidence.
+
+
 Updated 2026-10-16. **M0 is incomplete; M1 is not deployed.** This file is the review entry point. The product direction is in [PRODUCT_VISION.md](PRODUCT_VISION.md), and the required checks are in [BUILD_BRIEF_M0_M1.md](BUILD_BRIEF_M0_M1.md).
 
 The former Codex refresh and Windows website task were stopped before this repository was created. Historical evidence was read without modifying the archive. Only reviewed public facts and compact findings were ported. No routine AI operation, nightly collection, or weekly delivery schedule is enabled here.

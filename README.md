@@ -2,11 +2,11 @@
 
 A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
 
-**Browse the tracker:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The homepage shows recent actions and recorded votes for Fritts, Arellano, LaHood, Durbin and Duckworth, plus committee links and a rolling month of posted meetings. Source dates and incomplete coverage are explicit. This is a manually collected public snapshot; automatic updates and digest delivery remain undeployed. See [dashboard sources and limits](docs/DASHBOARD.md). The original 134-item Fritts export remains available in the historical archive. Public facts only; no private advocacy notes are published.
+**Browse the tracker:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The homepage shows recent actions and recorded votes for Fritts, Arellano, LaHood, Durbin and Duckworth, plus committee links and a rolling month of posted meetings. Source dates and incomplete coverage are explicit. Daily website refresh is configured for 01:00 Central; collection health and source dates remain visible. Weekly digest delivery remains undeployed. See [daily source scope and operation](docs/DAILY_REFRESH.md). See [dashboard sources and limits](docs/DASHBOARD.md). The original 134-item Fritts export remains available in the historical archive. Public facts only; no private advocacy notes are published.
 
 ## Current status
 
-**M0 verification is in progress. M1 is not deployed.** The former local schedules were stopped before this repository was started. Historical source material is read only. This is a fresh repository; it contains no private vault, raw archive, email addresses or credential values.
+**Staged daily website refresh is configured; complete M1 verification and digest deployment remain open.** The former local schedules were stopped before this repository was started. Historical source material is read only. This is a fresh repository; it contains no private vault, raw archive, email addresses or credential values.
 
 For a focused code review, read [architecture and boundaries](docs/ARCHITECTURE.md), [M0 findings](docs/M0_FINDINGS.md), and one representative evidence file.
 
@@ -16,13 +16,13 @@ The [first Qwen3 32B / DeepInfra evaluation](docs/INFERENCE_EVALUATION_RESULTS.m
 
 ## Intended M1 operation
 
-- Illinois collection nightly at 23:00 America/Chicago.
+- Public website source refresh daily at 01:00 America/Chicago (owner update October 17).
 - Factual digest Mondays at 06:00 America/Chicago, including a quiet-week health summary.
 - FTP XML first; one conditional floor-vote CSV retrieval, committee assignments, bounded party pages and Capitol Fax feed metadata.
 - No AI in routine operation. Federal sponsorship monitoring remains owner-managed through Congress.gov alerts; the browsing snapshot includes a bounded historical federal import.
 - Compact public records; positions, correspondence and contact packets remain private.
 
-No nightly collection or digest workflow is enabled yet. The only schedule in this repository is a time-limited M0 metadata observation, ending automatically after the verification window.
+The daily website workflow is configured separately from the time-limited M0 observation. No digest or routine inference schedule is enabled. The [daily release notes](docs/DAILY_REFRESH.md) state its remaining coverage limits.
 
 ## Repository map
 

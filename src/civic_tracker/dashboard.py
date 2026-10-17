@@ -39,7 +39,8 @@ def meeting_row(meeting):
     for bill in meeting.get('items', []):
         if bill.get('witness_slip_url') and bill.get('submission_verified'):
             slips.append(f'<li><a href="{e(bill["witness_slip_url"])}">{e(bill["bill"])} — open witness-slip form ↗</a></li>')
-    return f'''<li class="meeting-row"><time>{e(date_text)}</time><strong><a href="{e(meeting['committee_url'])}">{e(meeting['committee_name'])} ↗</a></strong><p>{e(meeting.get('description') or meeting.get('location'))}</p><a href="{e(meeting['source_url'])}">Official meeting details ↗</a>{'<ul class="slip-links">'+''.join(slips)+'</ul>' if slips else '<p class="minor">No verified open witness-slip form in this collected docket.</p>'}</li>'''
+    retained = '<p class="warning">Retained from an earlier check; this schedule could not be fully refreshed.</p>' if meeting.get("retained_after_failure") else ''
+    return f'''<li class="meeting-row"><time>{e(date_text)}</time>{retained}<strong><a href="{e(meeting['committee_url'])}">{e(meeting['committee_name'])} ↗</a></strong><p>{e(meeting.get('description') or meeting.get('location'))}</p><a href="{e(meeting['source_url'])}">Official meeting details ↗</a>{'<ul class="slip-links">'+''.join(slips)+'</ul>' if slips else '<p class="minor">No verified open witness-slip form in this collected docket.</p>'}</li>'''
 
 
 def member_card(member, snapshot):
@@ -95,7 +96,15 @@ def render(root):
     if snapshot['schema_version'] != 1 or len(snapshot['members']) != 5:
         raise ValueError('Incomplete member dashboard schema')
     links = ''.join(f'<a href="#member-{e(m["id"])}">{e(m["name"])}</a>' for m in snapshot['members'])
-    substitutions = {'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
+    daily=snapshot.get('daily_refresh')
+    health=''
+    if daily:
+        lines=''.join(f'<li><strong>{e(name)}</strong>: {e(report["status"])} · checked {e(report.get("checked_at"))}</li>' for name,report in daily['sources'].items())
+        failures=''.join(f'<li>{e(err.get("source"))}: {e(err.get("error"))}</li>' for report in daily['sources'].values() for err in report.get('errors',[]))
+        health=f'<details class="refresh-health" open><summary>Daily refresh · {e(daily["status"])} · starts 01:00 Central</summary><ul>{lines}</ul>'+('<p>Source failures; prior verified records retained:</p><ul>'+failures+'</ul>' if failures else '')+'<p>Illinois committee votes retain historical PDF coverage; daily committee-vote discovery is pending. GitHub may start jobs late; publication follows collection.</p></details>'
+    automatic=snapshot.get('automatic_refresh_enabled',False)
+    coverage=('Daily source refresh is enabled for 01:00 Central. Source dates and collection health below identify remaining gaps.' if automatic else 'Automatic refresh is not enabled.')
+    substitutions = {'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
         'CALENDAR_END': e(snapshot['calendar_end']), 'MEMBER_LINKS': links,
         'MEMBERS': ''.join(member_card(m, snapshot) for m in snapshot['members']),
         'SOURCE_COUNT': str(len(snapshot['calendar_sources'])), 'ERROR_COUNT': str(len(snapshot['errors']))}

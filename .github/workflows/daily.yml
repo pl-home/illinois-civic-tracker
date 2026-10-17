@@ -1,0 +1,95 @@
+name: Daily website refresh
+on:
+  schedule:
+    # 01:00 Chicago is 06:00 UTC in daylight time, 07:00 UTC in standard time.
+    # The second wake is also a delayed/missed-run catch-up; the date ledger
+    # suppresses the duplicate, including the repeated hour at the DST fall-back.
+    - cron: '0 6,7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: m0-source-evidence
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    outputs:
+      active: ${{ steps.gate.outputs.active }}
+      source_sha: ${{ steps.persist.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e .
+      - name: Local-time and once-per-day gate
+        id: gate
+        env:
+          MANUAL: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          if [ "$MANUAL" = 'true' ]; then
+            python -m civic_tracker.daily gate --manual >> "$GITHUB_OUTPUT"
+          else
+            python -m civic_tracker.daily gate >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.gate.outputs.active == 'true'
+        run: python -m unittest discover -s tests -v
+      - name: Refresh official sources without inference or email
+        if: steps.gate.outputs.active == 'true'
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+        run: python -m civic_tracker.daily run
+      - if: steps.gate.outputs.active == 'true'
+        run: python -m civic_tracker.privacy
+      - if: steps.gate.outputs.active == 'true'
+        run: python -m civic_tracker.browse --output .local/site
+      - name: Persist public data before publication
+        id: persist
+        if: steps.gate.outputs.active == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/illinois-index.json data/federal-index.json data/collection-state.json data/dashboard.json data/daily-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh daily public source records and collection health'
+            git push origin main
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - if: steps.gate.outputs.active == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .local/site
+  deploy:
+    needs: refresh
+    if: needs.refresh.outputs.active == 'true'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Reject publication of an outdated artifact
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_SHA: ${{ needs.refresh.outputs.source_sha }}
+        run: |
+          latest=$(gh api "repos/${GITHUB_REPOSITORY}/commits/main" --jq .sha)
+          echo "active=$([ "$latest" = "$ARTIFACT_SHA" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Publish daily website artifact
+        if: steps.current.outputs.active == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4

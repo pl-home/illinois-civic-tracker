@@ -132,7 +132,7 @@ class DashboardTests(unittest.TestCase):
         page = BeautifulSoup(html, 'html.parser')
         self.assertEqual(len(page.select('.member-card')), 5)
         self.assertEqual({m['id'] for m in data['members']}, {'fritts', 'arellano', 'lahood', 'durbin', 'duckworth'})
-        self.assertIn('Automatic refresh is not enabled', page.get_text())
+        self.assertIn('Daily source refresh is enabled' if data.get('automatic_refresh_enabled') else 'Automatic refresh is not enabled', page.get_text())
         self.assertNotIn('{{', html)
         for member in data['members']:
             for item in member['events']:

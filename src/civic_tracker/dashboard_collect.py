@@ -83,7 +83,7 @@ def state_events(archive, member, cutoff, as_of):
                     action['action'], source, retrieved, measure=ident.split('-')[-1],
                     attribution='Action on an associated bill; not necessarily an action by this member.', source_sha256=evidence.get('sha256')))
     for vote in archive['votes'].values():
-        if vote.get('verification') != 'reconciled-official-pdf':
+        if vote.get('verification') not in ('reconciled-official-pdf', 'official-csv'):
             continue
         for selected in vote['choices']:
             if str(selected.get('member_id')) != who:
@@ -96,7 +96,8 @@ def state_events(archive, member, cutoff, as_of):
                 choice=selected['choice'], raw_choice=selected.get('raw'), scope=vote['scope'],
                 bill_url=vote_bill_url(vote, archive['bills']),
                 totals=vote.get('totals'), pdf_date=vote.get('pdf_date'),
-                date_verification=vote.get('date_verification'), source_sha256=vote.get('evidence', {}).get('sha256'))
+                date_verification=vote.get('date_verification'), source_sha256=vote.get('evidence', {}).get('sha256'),
+                attribution='Official floor-vote CSV; individual roll-call PDF not linked for this record.' if vote.get('verification') == 'official-csv' else None)
             if key in votes and (votes[key]['choice'], votes[key]['date'], votes[key]['detail']) != (value['choice'], value['date'], value['detail']):
                 # Related PDFs with different contexts are not silently merged.
                 key = vote['record_id']

@@ -1,4 +1,4 @@
-name: Publish historical browsing page
+name: Publish browsing page
 on:
   push:
     branches: [main]
@@ -30,12 +30,22 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Reject publication of an outdated artifact
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_SHA: ${{ github.sha }}
+        run: |
+          latest=$(gh api "repos/${GITHUB_REPOSITORY}/commits/main" --jq .sha)
+          echo "active=$([ "$latest" = "$ARTIFACT_SHA" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
       - name: Deploy public browsing artifact
+        if: steps.current.outputs.active == 'true'
         id: deployment
         uses: actions/deploy-pages@v4

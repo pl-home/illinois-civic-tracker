@@ -13,7 +13,10 @@
       "chamber": "House",
       "district": 74,
       "official_member_id": "3428",
-      "service_start_ga": 103
+      "service_start_ga": 103,
+      "aliases": [
+        "Bradley Fritts"
+      ]
     },
     {
       "id": "arellano",
@@ -22,7 +25,12 @@
       "chamber": "Senate",
       "district": 37,
       "official_member_id": "3383",
-      "service_start_ga": 104
+      "service_start_ga": 104,
+      "aliases": [
+        "Li Arellano, Jr.",
+        "Li Arellano Jr.",
+        "Li Arellano Jr"
+      ]
     }
   ],
   "committee_vote_csv_support": false,
@@ -36,5 +44,7 @@
       "der_sha256": "8eb2f17d668941c39a7fca0cee127ae0ebaf444610631cca3cd19eab46c5824a",
       "provenance": "CA URL from the ILGA leaf certificate; fingerprint independently read from a platform-verified chain on 2026-10-16. Only the intermediate is added; system trusted roots remain authoritative."
     }
-  ]
+  ],
+  "ga_id": 18,
+  "session_id": 114
 }

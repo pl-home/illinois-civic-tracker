@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "timezone": "America/Chicago",
+  "start_hour": 1,
+  "catch_up_before_hour": 6,
+  "review_before": "2027-01-03",
+  "max_data_bytes": 20000000,
+  "floor_csv_baseline_through": "2026-05-31",
+  "source_scope": "Daily official legislative sources and committee calendars; historical committee-vote PDF coverage remains qualified."
+}
