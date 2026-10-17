@@ -1,6 +1,6 @@
-# Hosted inference recommendation
+# Hosted inference selection and original recommendation
 
-Reviewed October 17, 2026. This is a proposed first evaluation, not activated inference. The owner reports OPENROUTER_API_KEY saved as an Actions secret and approves a **USD 20 trial ceiling**. No monthly reset, automatic replenishment, or production spending is assumed. No secret value was read and no authenticated model call was made.
+Reviewed October 17, 2026. The owner subsequently approved this model/provider for one bounded manual evaluation. Routine inference remains disabled. The original selection rationale follows; current execution controls are in [INFERENCE_EVALUATION.md](INFERENCE_EVALUATION.md). The owner reports OPENROUTER_API_KEY saved as an Actions secret and approves a **USD 20 trial ceiling**. No monthly reset, automatic replenishment, or production spending is assumed. No secret value was read and no authenticated model call was made.
 
 ## Proposed model and host
 
@@ -39,7 +39,7 @@ For the future single-request implementation, propose:
 
 These fields follow the [provider-routing guide](https://openrouter.ai/docs/guides/routing/provider-selection) and [zero-retention filter](https://openrouter.ai/docs/guides/features/zdr). Also require a strict [JSON schema](https://openrouter.ai/docs/guides/features/structured-outputs), bounded completion tokens, no tools, and a versioned prompt. An unavailable/ineligible endpoint is a skipped inference health result; do not relax the provider or privacy policy. Enforce the trial ceiling with a durable ledger and remote key cap before enabling any requests; do not use a resettable monthly budget as the trial ledger.
 
-## Remaining work
+## Original activation checklist (superseded by the later approval)
 
 1. Owner reviews this proposed model/provider. The planning config keeps approved_model null, approved_providers empty and enabled false.
 2. Implement the separate optional evaluation client, held-out public examples, schema/evidence validation and budget/failure controls described in OPENROUTER_SETUP.md. No inference client or workflow exists yet.

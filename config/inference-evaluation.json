@@ -1,0 +1,15 @@
+{
+  "experiment_id": "qwen32b-deepinfra-eval-v1",
+  "expected_cases": 30,
+  "corpus_sha256": "75b8da84c81a649a82c9a730d2eb9b693b94493e4424c67da7f3d8699424a94d",
+  "prompt_version": "civic-classification-v1",
+  "taxonomy_version": "six-topics-v1",
+  "approval_scope": "one manual evaluation; no routine inference",
+  "quality_thresholds": {
+    "heldout_valid_output_rate": 1.0,
+    "heldout_category_accuracy": 0.9,
+    "heldout_topic_precision": 0.9,
+    "heldout_topic_recall": 0.85,
+    "unsupported_quotes": 0
+  }
+}

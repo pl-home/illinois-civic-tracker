@@ -1,0 +1,52 @@
+name: One bounded hosted inference evaluation
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+# Share the existing state-writer gate, including the bounded observer. Checkout
+# current main only after acquiring it, and push a reservation before any calls.
+concurrency:
+  group: m0-source-evidence
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e .
+      - run: python -m civic_tracker.privacy
+      - run: python -m unittest discover -s tests -v
+      - name: Reserve the complete evaluation budget
+        id: reserve
+        run: python -m civic_tracker.inference_eval reserve
+      - name: Persist reservation before exposing the inference credential
+        id: persist
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/inference-evaluation-ledger.json
+          git commit -m 'Reserve one bounded hosted inference evaluation'
+          git push origin main
+      - name: Execute once with the approved provider
+        if: steps.persist.outcome == 'success'
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m civic_tracker.inference_eval execute
+      - name: Preserve success or failure receipts
+        if: always() && steps.persist.outcome == 'success'
+        run: |
+          python -m civic_tracker.privacy
+          git add data/inference-evaluation-ledger.json docs/evidence/inference-evaluation.json
+          if git diff --cached --quiet; then
+            echo 'No additional receipt changes; original reservation remains authoritative.'
+          else
+            git commit -m 'Record bounded inference evaluation outcomes and retained liability'
+            git push origin main
+          fi

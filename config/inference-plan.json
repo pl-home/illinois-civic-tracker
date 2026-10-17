@@ -1,9 +1,11 @@
 {
-  "status": "planning-only",
+  "status": "manual-evaluation-authorized",
   "enabled": false,
   "model_candidate": "qwen/qwen3-32b",
-  "approved_model": null,
-  "approved_providers": [],
+  "approved_model": "qwen/qwen3-32b",
+  "approved_providers": [
+    "deepinfra/fp8"
+  ],
   "provider_candidate": "deepinfra/fp8",
   "trial_budget_usd": 20,
   "budget_scope": "Owner-approved trial ceiling; no monthly reset assumed",
@@ -16,8 +18,13 @@
     "require_parameters": true,
     "allow_fallbacks": false
   },
-  "scope": ["optional topic suggestions", "optional party-content categories"],
+  "scope": [
+    "optional topic suggestions",
+    "optional party-content categories"
+  ],
   "authoritative_fact_updates_allowed": false,
   "private_notes_allowed": false,
-  "runtime_implementation_present": false
+  "runtime_implementation_present": true,
+  "evaluation_enabled": true,
+  "approval_scope": "User authorized a bounded evaluation on 2026-10-17; routine inference remains disabled"
 }

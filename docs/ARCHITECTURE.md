@@ -13,6 +13,7 @@ This is an M0 verification foundation, not the production tracker. Start with RE
 | vote_csv.py | Full-file nay counts, subject rows, narrow motion aliases and explicit unknown choices | Floor only; no committee-vote inference |
 | rules.py | Exact ceremonial rule and shell flag | No stance, rewrite detection or model calls |
 | browse.py / web / config/browse.json | Deterministic historical browser from the reviewed 134-item export | No current-activity claim, exact subject role inference, network access or credentials |
+| inference_eval.py / manual evaluation workflow | One authorized Qwen3 32B / DeepInfra evaluation | Precommitted bounded liability, public/synthetic inputs only, no retries or routine integration |
 | verify_sources.py | One-time source comparisons against explicitly supplied read-only evidence | M0 only; raw downloads stay ignored |
 | verify_pdf_sample.py | Twenty-row PDF/XML layout verification | Sample helper, not a production name/role parser |
 | probe_runner.py | Hosted host access plus source request timing | Small bounded resources; CSV HEAD, not full import |
@@ -21,7 +22,7 @@ This is an M0 verification foundation, not the production tracker. Start with RE
 | mail_test.py | One reserved Gmail self-test and exact-message INBOX check | Same mailbox plus alias only; no digest schedule |
 | privacy.py | Reject private addresses, machine profile paths and credential-shaped text | Files and finding categories only; narrow reviewed public exceptions |
 
-Tests use synthetic data or reviewed public sponsorship facts. Optional PDF tooling is for verification, not a required nightly dependency. A [basic historical browser](BROWSING_PAGE.md) is implemented separately from the still-gated production pipeline. No AI service, local model, inference credential client or production collector is implemented yet.
+Tests use synthetic data or reviewed public sponsorship facts. Optional PDF tooling is for verification, not a required nightly dependency. A [basic historical browser](BROWSING_PAGE.md) and a [manual hosted evaluation](INFERENCE_EVALUATION.md) are separate from the still-gated production pipeline. No routine inference or production collector is enabled.
 
 ## Future hosted inference
 
