@@ -1,6 +1,10 @@
 # Current checkpoint
 
-October 17 homepage revision: the five-member dashboard is implemented and locally validated (92 tests, privacy scan, mobile/browser review). Read DASHBOARD.md for source dates, the 97-event snapshot, 23 schedule receipts and remaining live witness-slip gates. Automatic source refresh remains off. The original export is preserved at archive.html. A separate v2 inference experiment strengthens quarantine and evidence checks; its single actual website delta cannot meet the five-delta activation gate. Publication and bounded v2 results will be recorded below.
+October 17 homepage revision is published at the existing Pages URL (implementation `380611e`). The five-member dashboard passed 92 tests, privacy checks, clean-runner CI, Pages deployment and live browser review. Read DASHBOARD.md and evidence/dashboard-validation.json for the 97-event snapshot, 23 schedule receipts, source dates and future live witness-slip gates. Automatic source refresh remains off; archive.html preserves the original export.
+
+The separate v2 evaluation completed five calls, charged USD 0.00027216, with five attack samples quarantined before requests. Only 1/3 eligible held-out responses passed evidence validation; the actual website delta was rejected. There is only one genuine delta against a minimum five. The quality gate failed and routine inference remains disabled. Combined v1/v2 recorded cost: USD 0.00172472, no uncertain liability. Read INFERENCE_EVALUATION_V2.md and its frozen receipt/ledger. Do not rerun or change this corpus to improve its score.
+
+Next: close production collection/delivery gates while retaining manual-snapshot labeling. For inference, gather further genuine paired website deltas, review the voter-information category, and design deterministic evidence-span selection before a separately versioned future trial. Old local schedules remain stopped; no new routine model, collection or digest schedule was enabled.
 
 ## Earlier checkpoint (preserved context)
 

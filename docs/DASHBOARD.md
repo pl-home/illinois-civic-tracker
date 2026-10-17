@@ -31,6 +31,8 @@ The Pages artifact contains exactly eight allowlisted files: `index.html`, `arch
 
 ## Verification and limits
 
-The 92-test suite and privacy scan pass. Coverage includes date windows, empty-versus-failed schedules, committee scoping, source URLs, raw vote choices, unknown cosponsor dates, same-day hearing cache isolation, conservative slip controls, escaping, artifact isolation and archive invariants. Browser checks confirmed all five members, expandable votes, the archive and mobile layout without horizontal overflow.
+The 92-test suite and privacy scan pass. Coverage includes date windows, empty-versus-failed schedules, committee scoping, source URLs, raw vote choices, unknown cosponsor dates, conservative slip controls, escaping, artifact isolation and archive invariants. Browser checks confirmed all five members, expandable votes, the archive and mobile layout without horizontal overflow.
 
 This is a manually collected snapshot. The Pages workflow publishes committed data; it does not refresh legislative sources, run inference or send a digest. Automatic refresh stays off until production gates pass. Party-site inference remains a separately versioned manual evaluation and cannot supply official legislative facts.
+
+The published implementation is `380611e`. Clean-runner [CI](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39039374030) and [Pages deployment](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39039374009) passed; the live homepage was checked after deployment. See [compact dashboard validation](evidence/dashboard-validation.json).

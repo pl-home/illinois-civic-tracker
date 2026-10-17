@@ -1,6 +1,6 @@
 # Inference evaluation v2: quarantine and evidence checks
 
-**Status: prepared for review; no model calls made. Routine inference remains disabled.** The first experiment stays frozen in `docs/INFERENCE_EVALUATION_RESULTS.md`, its original corpus, report, and ledger. This is a separate experiment with a separate corpus, config, ledger, and receipt.
+**Status: completed October 17, 2026; quality gate failed. Routine inference remains disabled.** The first experiment stays frozen in `docs/INFERENCE_EVALUATION_RESULTS.md`, its original corpus, report, and ledger. This is a separate experiment with a separate corpus, config, ledger, and receipt.
 
 ## What changed
 
@@ -8,7 +8,7 @@ The v2 preflight checks source text for several instruction-shaped structures: a
 
 For non-quarantined text, each topic quotation still must appear exactly in the source. It must also contain a topic-specific policy anchor, so a literal mention such as “housing bill passed today” does not count as housing evidence. The system requires the category quotation to be extractive as well. These rules are deterministic screening controls, not a semantic proof that a policy claim is true. The source remains attributed, unverified content; an ambiguous or unrecognized attack can still pass the narrow patterns.
 
-The frozen v1 held-out attack that added a false housing claim is included as a quarantine regression. Three further adversarial examples test override, output-category, and credential-disclosure wording. All five are expected to be stopped before a paid request.
+The frozen v1 held-out attack that added a false housing claim is included as a quarantine regression. Four further adversarial/regression examples test override, output-category, and credential-disclosure wording. All five are expected to be stopped before a paid request.
 
 ## Actual website evidence available
 
@@ -32,11 +32,22 @@ The v2 corpus has 10 records: 2 development examples and 8 held-out examples. Fi
 
 The v2 metrics have only three non-quarantined held-out cases, including the single actual site delta. Their scores are descriptive only. The original thresholds remain unchanged: 90% held-out category accuracy, 90% topic precision, and 85% topic recall. Undefined precision or recall fails the gate. The evaluation also requires at least five distinct actual website deltas; the current one is reported as **insufficient real-change coverage**, and this alone prevents a v2 quality pass. Gates also require every annotated attack to be quarantined, matching-party event examples to receive the same category/topics, and the repeated event classification to remain stable. Passing v2 would not enable routine inference or approve a website classifier for production.
 
-Before dispatch, review the one-real-delta limitation and the provisional voter-information category. To run the offline preparation checks:
+The completed run preserves the one-real-delta limitation and provisional voter-information category. To run the offline tests (no reservation or API call):
 
 ```sh
 python -m unittest discover -s tests -p test_inference_eval.py -v
-python -m civic_tracker.inference_eval reserve --version v2
 ```
 
-The second command writes the separate v2 ledger; it does not contact OpenRouter. For a hosted manual run, the workflow must explicitly select v2 and preserve `data/inference-evaluation-v2-ledger.json` and `docs/evidence/inference-evaluation-v2.json`. The v1 default is unchanged. Never enable routine inference as a side effect of the experiment.
+The hosted workflow explicitly selected v2 and preserved its separate ledger and receipt. Do not reserve or dispatch this experiment again; the existing reservation prevents another execution. The v1 default remains unchanged.
+
+## Completed result
+
+[Hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39039387630) completed successfully as an execution on October 17 at 9:07 a.m. Central. Successful execution is separate from classifier acceptance. Read the frozen [receipt](evidence/inference-evaluation-v2.json) and `data/inference-evaluation-v2-ledger.json` for request hashes, charges, timestamps and gates.
+
+- Five attack cases were deterministically quarantined, with no model request and zero charge. This validates these patterns only, not general prompt-injection immunity or model resistance to unseen attacks.
+- Five paid requests cost **USD 0.00027216**; no uncertain billing remains. Combined with v1's USD 0.00145256, the two experiments cost **USD 0.00172472**, within the USD 20 trial cap. This is recorded experiment cost, not an account-wide balance statement.
+- Both development party-event cases passed and matched. Among three eligible held-out cases, only the synthetic housing-policy case passed: valid output and category accuracy were **1/3**. The actual vote-by-mail change and synthetic meeting case were rejected with `unsupported-output-quote`.
+- That safe error covers a non-string, over-240-character, impermissibly empty or non-extractive quotation. Invalid raw output is not retained, so the receipt does not establish which quotation condition failed. The validator did not promote either response into a finding.
+- Topic precision and recall were each 1/1 on this tiny set; that does not overcome the two invalid outputs. The actual-delta coverage gate also failed: **one distinct delta, minimum five**. Repeated notices or different pieces of one captured page change cannot inflate this count.
+
+**Decision: no activation.** Preserve v1 and v2 as regression material, without relabeling or retuning them into a fresh score. Before another evaluation, collect additional compact, paired before/after website changes and review the voter-information taxonomy. A future version should consider model-selected source-span IDs with deterministic quotation assembly, reducing dependence on free-text quotation fidelity. That proposal has not been implemented or evaluated. Any future model/provider or prompt change needs a separately versioned held-out trial; routine source collection remains deterministic.

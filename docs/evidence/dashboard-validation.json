@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "validated_on": "2026-10-17",
+  "implementation_commit": "380611e",
+  "public_url": "https://pl-home.github.io/illinois-civic-tracker/",
+  "mode": "manual-source-specific-snapshot",
+  "member_count": 5,
+  "selected_events": 97,
+  "calendar_source_receipts": 23,
+  "matching_posted_meetings": 0,
+  "collection_errors": 0,
+  "recent_start": "2026-09-18",
+  "as_of": "2026-10-17",
+  "calendar_end": "2026-11-17",
+  "tests_passed": 92,
+  "privacy_findings": 0,
+  "artifact_bytes_local": 407351,
+  "artifact_file_count": 8,
+  "clean_runner_ci": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39039374030",
+  "pages_deployment": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39039374009",
+  "browser_checks": {
+    "live_five_member_homepage": "pass",
+    "source_dates_and_older_vote_labels": "pass",
+    "committee_links": "pass",
+    "expanded_senate_votes": "pass",
+    "original_archive": "pass",
+    "mobile_horizontal_overflow": false,
+    "mobile_content_width": 375,
+    "mobile_client_width": 375
+  },
+  "automatic_refresh_enabled": false,
+  "routine_inference_enabled": false,
+  "limits": [
+    "Bounded import, not complete current activity coverage",
+    "State votes through May 31; House federal votes through September 16; Senate votes through September 30",
+    "No matching upcoming meeting posted at check; not proof none will occur",
+    "Live future hearing and open witness-slip form not available to validate",
+    "Party-site inference quality gate failed; only one actual delta evaluated"
+  ]
+}
