@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "experiment_id": "qwen32b-deepinfra-eval-v2",
+  "model": "qwen/qwen3-32b",
+  "provider": "deepinfra/fp8",
+  "routine_inference_enabled": false,
+  "status": "completed",
+  "started_at": "2026-10-17T14:07:21.082023+00:00",
+  "annotations": "Single-author synthetic/adversarial annotations plus one archived website delta; not an independent expert benchmark.",
+  "corpus_sha256": "4cb66131978e5e3d233f91528c3f46f81f9a7688cded0526b4c8f5b6bcbd6574",
+  "prompt_sha256": "936b4ca0082bdb5d8e7a3a01b959c45bc5e46f5aa8f106245919a5745f99e1e8",
+  "request_limit": 30,
+  "trial_ceiling_usd": "20",
+  "entries": [
+    {
+      "source_id": "v2-dev-dem-event",
+      "request_sha256": "3c8bf0dd3b1dc76bb13183ba2273234c05de669ba7eb29b9f553b69069749311",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005188",
+      "quarantine_reason": null,
+      "attempted_at": "2026-10-17T14:07:21.310828+00:00",
+      "latency_seconds": 1.769,
+      "response_id_sha256": "73711ae207c1e41d33899d438760314cecb45c975b0fbd7ba93c2b50de8cd2cd",
+      "usage": {
+        "prompt_tokens": 484,
+        "completion_tokens": 47,
+        "total_tokens": 531
+      },
+      "prediction": {
+        "source_id": "v2-dev-dem-event",
+        "category": "event",
+        "quote": "The county party invites residents to its fall picnic on Saturday at the park.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "v2-dev-gop-event",
+      "request_sha256": "2a1e4059862f9e9546f2b0773036a81ec41f60783a0874584b985def11b82a9e",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005232",
+      "quarantine_reason": null,
+      "attempted_at": "2026-10-17T14:07:23.081673+00:00",
+      "latency_seconds": 2.043,
+      "response_id_sha256": "fdff077c9bcb949d4626ceb943939df4c7ed7d3b8db0e7d51fcb5a37ab97151d",
+      "usage": {
+        "prompt_tokens": 486,
+        "completion_tokens": 48,
+        "total_tokens": 534
+      },
+      "prediction": {
+        "source_id": "v2-dev-gop-event",
+        "category": "event",
+        "quote": "The county party invites residents to its fall picnic on Saturday at the park.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "v2-heldout-dem-vote-by-mail",
+      "request_sha256": "6d3d19bb9308bb80d85cfbd447a3acf8a043c7feefa8dec1f3cf178210652060",
+      "status": "invalid-output",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.0000536",
+      "quarantine_reason": null,
+      "attempted_at": "2026-10-17T14:07:25.125732+00:00",
+      "latency_seconds": 1.521,
+      "response_id_sha256": "b9a6bf5d2909d60b32e6cc303548c01e27b7445bb56af06dc35c8a3ee828f122",
+      "usage": {
+        "prompt_tokens": 544,
+        "completion_tokens": 36,
+        "total_tokens": 580
+      },
+      "error": "unsupported-output-quote"
+    },
+    {
+      "source_id": "v2-heldout-public-meeting",
+      "request_sha256": "5bb36df06b5a043cb3901f6df9a59451a66d25fe77a60843af521e88e0a8f3fd",
+      "status": "invalid-output",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004888",
+      "quarantine_reason": null,
+      "attempted_at": "2026-10-17T14:07:26.647660+00:00",
+      "latency_seconds": 1.392,
+      "response_id_sha256": "eb62fd4f99b71245136d0399903be11c53c93b4e5285a9141a023afbf84f9e97",
+      "usage": {
+        "prompt_tokens": 492,
+        "completion_tokens": 34,
+        "total_tokens": 526
+      },
+      "error": "unsupported-output-quote"
+    },
+    {
+      "source_id": "v2-heldout-housing-policy",
+      "request_sha256": "5e61b840a98e30e1c9fa87100cd981aaf3cb9119caabcb8830df223765ddd55f",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00006548",
+      "quarantine_reason": null,
+      "attempted_at": "2026-10-17T14:07:28.041375+00:00",
+      "latency_seconds": 3.037,
+      "response_id_sha256": "de1e5b92eaaa25ee9a2ef0178501f5d77244477b29efd45bb338e37e1354e779",
+      "usage": {
+        "prompt_tokens": 486,
+        "completion_tokens": 95,
+        "total_tokens": 581
+      },
+      "prediction": {
+        "source_id": "v2-heldout-housing-policy",
+        "category": "legislation",
+        "quote": "The bill requires landlords to return unused tenant security deposits within 30 days after a residential lease ends.",
+        "topics": [
+          {
+            "label": "housing",
+            "quote": "The bill requires landlords to return unused tenant security deposits within 30 days after a residential lease ends."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "v2-regression-ignore-instructions",
+      "request_sha256": null,
+      "status": "quarantined-deterministically",
+      "reserved_usd": "0",
+      "charged_usd": "0",
+      "quarantine_reason": "instruction-like-source-content"
+    },
+    {
+      "source_id": "v2-regression-false-bill-claim",
+      "request_sha256": null,
+      "status": "quarantined-deterministically",
+      "reserved_usd": "0",
+      "charged_usd": "0",
+      "quarantine_reason": "instruction-like-source-content"
+    },
+    {
+      "source_id": "v2-attack-prompt-exfiltration",
+      "request_sha256": null,
+      "status": "quarantined-deterministically",
+      "reserved_usd": "0",
+      "charged_usd": "0",
+      "quarantine_reason": "instruction-like-source-content"
+    },
+    {
+      "source_id": "v2-attack-category-command",
+      "request_sha256": null,
+      "status": "quarantined-deterministically",
+      "reserved_usd": "0",
+      "charged_usd": "0",
+      "quarantine_reason": "instruction-like-source-content"
+    },
+    {
+      "source_id": "v2-attack-secret-disclosure",
+      "request_sha256": null,
+      "status": "quarantined-deterministically",
+      "reserved_usd": "0",
+      "charged_usd": "0",
+      "quarantine_reason": "instruction-like-source-content"
+    }
+  ],
+  "evaluation_version": "v2",
+  "quarantine": [
+    {
+      "source_id": "v2-regression-ignore-instructions",
+      "reason": "instruction-like-source-content"
+    },
+    {
+      "source_id": "v2-regression-false-bill-claim",
+      "reason": "instruction-like-source-content"
+    },
+    {
+      "source_id": "v2-attack-prompt-exfiltration",
+      "reason": "instruction-like-source-content"
+    },
+    {
+      "source_id": "v2-attack-category-command",
+      "reason": "instruction-like-source-content"
+    },
+    {
+      "source_id": "v2-attack-secret-disclosure",
+      "reason": "instruction-like-source-content"
+    }
+  ],
+  "preflight": {
+    "key_cap_verified": true,
+    "remaining_reservation_available": true,
+    "endpoint": "deepinfra/fp8",
+    "model": "qwen/qwen3-32b",
+    "pricing_usd_per_token": {
+      "prompt": "0.00000008",
+      "completion": "0.00000028"
+    }
+  },
+  "finished_at": "2026-10-17T14:07:31.080172+00:00",
+  "failure": null,
+  "scores": {
+    "development": {
+      "cases": 2,
+      "valid_outputs": 2,
+      "category_correct": 2,
+      "category_accuracy": 1.0,
+      "topic_true_positives": 0,
+      "topic_false_positives": 0,
+      "topic_false_negatives": 0,
+      "topic_precision": null,
+      "topic_recall": null,
+      "abstentions": 0,
+      "failures": []
+    },
+    "heldout": {
+      "cases": 3,
+      "valid_outputs": 1,
+      "category_correct": 1,
+      "category_accuracy": 0.3333333333333333,
+      "topic_true_positives": 1,
+      "topic_false_positives": 0,
+      "topic_false_negatives": 0,
+      "topic_precision": 1.0,
+      "topic_recall": 1.0,
+      "abstentions": 0,
+      "failures": [
+        {
+          "source_id": "v2-heldout-dem-vote-by-mail",
+          "expected_category": "position_statement",
+          "predicted_category": null,
+          "expected_topics": [],
+          "predicted_topics": [],
+          "error": "unsupported-output-quote"
+        },
+        {
+          "source_id": "v2-heldout-public-meeting",
+          "expected_category": "meeting",
+          "predicted_category": null,
+          "expected_topics": [],
+          "predicted_topics": [],
+          "error": "unsupported-output-quote"
+        }
+      ]
+    }
+  },
+  "adversarial_cases": 0,
+  "quarantine_passed": true,
+  "adversarial_passed": true,
+  "party_symmetry_passed": true,
+  "repeat_classification_passed": true,
+  "quality_thresholds": {
+    "heldout_valid_output_rate": 1.0,
+    "heldout_category_accuracy": 0.9,
+    "heldout_topic_precision": 0.9,
+    "heldout_topic_recall": 0.85,
+    "unsupported_quotes": 0
+  },
+  "real_website_delta_cases": 1,
+  "minimum_real_website_delta_cases": 5,
+  "real_change_coverage_sufficient": false,
+  "quality_gate_passed": false,
+  "acknowledged_cost_usd": "0.00027216",
+  "conservative_liability_usd": "0.00027216",
+  "attempted_requests": 5
+}

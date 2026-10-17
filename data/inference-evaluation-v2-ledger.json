@@ -4,7 +4,7 @@
   "experiments": [
     {
       "experiment_id": "qwen32b-deepinfra-eval-v2",
-      "status": "reserved",
+      "status": "completed",
       "reserved_at": "2026-10-17T14:07:19.934460+00:00",
       "corpus_sha256": "4cb66131978e5e3d233f91528c3f46f81f9a7688cded0526b4c8f5b6bcbd6574",
       "prompt_sha256": "936b4ca0082bdb5d8e7a3a01b959c45bc5e46f5aa8f106245919a5745f99e1e8",
@@ -14,42 +14,107 @@
         {
           "source_id": "v2-dev-dem-event",
           "request_sha256": "3c8bf0dd3b1dc76bb13183ba2273234c05de669ba7eb29b9f553b69069749311",
-          "status": "reserved",
+          "status": "valid-unverified-classification",
           "reserved_usd": "0.02",
-          "charged_usd": null,
-          "quarantine_reason": null
+          "charged_usd": "0.00005188",
+          "quarantine_reason": null,
+          "attempted_at": "2026-10-17T14:07:21.310828+00:00",
+          "latency_seconds": 1.769,
+          "response_id_sha256": "73711ae207c1e41d33899d438760314cecb45c975b0fbd7ba93c2b50de8cd2cd",
+          "usage": {
+            "prompt_tokens": 484,
+            "completion_tokens": 47,
+            "total_tokens": 531
+          },
+          "prediction": {
+            "source_id": "v2-dev-dem-event",
+            "category": "event",
+            "quote": "The county party invites residents to its fall picnic on Saturday at the park.",
+            "topics": []
+          }
         },
         {
           "source_id": "v2-dev-gop-event",
           "request_sha256": "2a1e4059862f9e9546f2b0773036a81ec41f60783a0874584b985def11b82a9e",
-          "status": "reserved",
+          "status": "valid-unverified-classification",
           "reserved_usd": "0.02",
-          "charged_usd": null,
-          "quarantine_reason": null
+          "charged_usd": "0.00005232",
+          "quarantine_reason": null,
+          "attempted_at": "2026-10-17T14:07:23.081673+00:00",
+          "latency_seconds": 2.043,
+          "response_id_sha256": "fdff077c9bcb949d4626ceb943939df4c7ed7d3b8db0e7d51fcb5a37ab97151d",
+          "usage": {
+            "prompt_tokens": 486,
+            "completion_tokens": 48,
+            "total_tokens": 534
+          },
+          "prediction": {
+            "source_id": "v2-dev-gop-event",
+            "category": "event",
+            "quote": "The county party invites residents to its fall picnic on Saturday at the park.",
+            "topics": []
+          }
         },
         {
           "source_id": "v2-heldout-dem-vote-by-mail",
           "request_sha256": "6d3d19bb9308bb80d85cfbd447a3acf8a043c7feefa8dec1f3cf178210652060",
-          "status": "reserved",
+          "status": "invalid-output",
           "reserved_usd": "0.02",
-          "charged_usd": null,
-          "quarantine_reason": null
+          "charged_usd": "0.0000536",
+          "quarantine_reason": null,
+          "attempted_at": "2026-10-17T14:07:25.125732+00:00",
+          "latency_seconds": 1.521,
+          "response_id_sha256": "b9a6bf5d2909d60b32e6cc303548c01e27b7445bb56af06dc35c8a3ee828f122",
+          "usage": {
+            "prompt_tokens": 544,
+            "completion_tokens": 36,
+            "total_tokens": 580
+          },
+          "error": "unsupported-output-quote"
         },
         {
           "source_id": "v2-heldout-public-meeting",
           "request_sha256": "5bb36df06b5a043cb3901f6df9a59451a66d25fe77a60843af521e88e0a8f3fd",
-          "status": "reserved",
+          "status": "invalid-output",
           "reserved_usd": "0.02",
-          "charged_usd": null,
-          "quarantine_reason": null
+          "charged_usd": "0.00004888",
+          "quarantine_reason": null,
+          "attempted_at": "2026-10-17T14:07:26.647660+00:00",
+          "latency_seconds": 1.392,
+          "response_id_sha256": "eb62fd4f99b71245136d0399903be11c53c93b4e5285a9141a023afbf84f9e97",
+          "usage": {
+            "prompt_tokens": 492,
+            "completion_tokens": 34,
+            "total_tokens": 526
+          },
+          "error": "unsupported-output-quote"
         },
         {
           "source_id": "v2-heldout-housing-policy",
           "request_sha256": "5e61b840a98e30e1c9fa87100cd981aaf3cb9119caabcb8830df223765ddd55f",
-          "status": "reserved",
+          "status": "valid-unverified-classification",
           "reserved_usd": "0.02",
-          "charged_usd": null,
-          "quarantine_reason": null
+          "charged_usd": "0.00006548",
+          "quarantine_reason": null,
+          "attempted_at": "2026-10-17T14:07:28.041375+00:00",
+          "latency_seconds": 3.037,
+          "response_id_sha256": "de1e5b92eaaa25ee9a2ef0178501f5d77244477b29efd45bb338e37e1354e779",
+          "usage": {
+            "prompt_tokens": 486,
+            "completion_tokens": 95,
+            "total_tokens": 581
+          },
+          "prediction": {
+            "source_id": "v2-heldout-housing-policy",
+            "category": "legislation",
+            "quote": "The bill requires landlords to return unused tenant security deposits within 30 days after a residential lease ends.",
+            "topics": [
+              {
+                "label": "housing",
+                "quote": "The bill requires landlords to return unused tenant security deposits within 30 days after a residential lease ends."
+              }
+            ]
+          }
         },
         {
           "source_id": "v2-regression-ignore-instructions",
@@ -91,7 +156,9 @@
           "charged_usd": "0",
           "quarantine_reason": "instruction-like-source-content"
         }
-      ]
+      ],
+      "started_at": "2026-10-17T14:07:21.081787+00:00",
+      "finished_at": "2026-10-17T14:07:31.080172+00:00"
     }
   ]
 }
