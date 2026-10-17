@@ -2,6 +2,8 @@
 
 A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
 
+**Browse the initial historical collection:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The basic browser was brought forward on October 17, 2026. It contains the reviewed 134-item Fritts export, search, measure-type filters, expandable source fields and a show-ceremonial option. It is a historical preview with explicit coverage limits; automatic updates and digest delivery remain undeployed. See [browsing-page design and operation](docs/BROWSING_PAGE.md).
+
 ## Current status
 
 **M0 verification is in progress. M1 is not deployed.** The former local schedules were stopped before this repository was started. Historical source material is read only. This is a fresh repository; it contains no private vault, raw archive, email addresses or credential values.
@@ -31,7 +33,8 @@ No nightly collection or digest workflow is enabled yet. The only schedule in th
 | tests | Synthetic tests and a reviewed 134-item public sponsorship export |
 | docs/evidence | Compact public verification outcomes, not raw source copies |
 | data | Reserved for M1 compact records and ledgers |
-| .github/workflows | Clean-runner tests, M0 source access and bounded observations |
+| web | Accessible static browser template, styling and filter enhancement |
+| .github/workflows | Tests, historical Pages publication, M0 source access and bounded observations |
 
 Raw downloads and temporary inspection stay in ignored scratch storage. No full vote CSV, PDF, ZIP or HTML snapshot is committed. The eventual data budget is below 100 MB; broader history growth must be measured before deployment.
 

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "title": "Illinois civic tracker",
+  "ga": 104,
+  "export_reviewed_on": "2026-10-16",
+  "export_subject_id": "fritts",
+  "export_subject_name": "Bradley Fritts",
+  "export_path": "tests/fixtures/fritts-sponsorship-104.csv",
+  "export_source_url": "https://ilga.gov/House/Members/Details/3428",
+  "expected_records": 134,
+  "coverage": [
+    {"name": "Bradley Fritts", "status": "Historical sponsorship export: 134 measures. Exact role history and votes are not loaded."},
+    {"name": "Li Arellano, Jr.", "status": "Planned Illinois coverage; records are not loaded."},
+    {"name": "Darin LaHood, Dick Durbin & Tammy Duckworth", "status": "Use your Congress.gov alerts for sponsorship. Tracker vote coverage comes later."},
+    {"name": "Lee County Democrats & Republicans", "status": "Website monitoring is being ported. No current party activity is displayed."},
+    {"name": "Hearings & Capitol Fax", "status": "Not loaded. This page cannot establish whether a hearing or new mention exists."}
+  ]
+}

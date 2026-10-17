@@ -55,6 +55,10 @@ The [House schedule](https://ilga.gov/House/Schedules) and [Senate schedule](htt
 | 1.10 Size | PASS current foundation; growth simulation pending | The prior foundation was below 1 MB; the follow-up public working files total approximately **1.16 MB**, excluding Git and ignored raw scratch; see [follow-up validation](evidence/m0-followup-validation.json). data/ remains empty. No raw PDF, HTML, ZIP or full CSV is committed. M1 size reporting and annual growth checks remain. |
 | 1.11 Clean-runner tests | PASS clean CI for current foundation | Clean Ubuntu CI passed for the foundation; the expanded local suite has **52 passing tests**, including TLS verification retention, rate timing, app-password whitespace handling and mail safeguards. [The updated 52-test clean-runner CI passed](https://github.com/pl-home/illinois-civic-tracker/actions/runs/38988476454); current validation is in [m0-followup-validation.json](evidence/m0-followup-validation.json). The original foundation receipt remains preserved. |
 
+### October 17 basic browser scope
+
+The owner moved basic browsing into the first release and authorized a separately labeled historical preview. It renders all 134 reviewed export entries and exactly 24 ceremonial flags, with explicit unknown role/filing fields. It does not satisfy acceptance 1.1's complete role history or the production index gate. Production collection/digest schedules remain disabled. See [BROWSING_PAGE.md](BROWSING_PAGE.md) for the artifact, source limits and validation.
+
 ## Evidence and reproduction
 
 - [Initial findings](evidence/m0-initial.json): source fingerprints, all 50 comparisons, amendment references, initial comparison differences, roster checks, PDF sizes and feed samples.

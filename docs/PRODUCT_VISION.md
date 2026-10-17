@@ -4,6 +4,8 @@ Rev. 3, October 16, 2026. This consolidates rev. 1–2 and the decisions made on
 
 This document is written to live in a **public** repository. It names no personal email addresses, credentials or local paths, and it must stay that way (§13).
 
+**October 17 scope update:** the owner brought a basic read-only browsing page forward into the first release. The initial historical preview may publish separately from the gated M1 collector/digest. Search, measure-type filters, explicit coverage and a show-ceremonial view are included; full-tenure and topic pages remain M5. See [BROWSING_PAGE.md](BROWSING_PAGE.md). OpenRouter setup may be prepared, with inference still disabled pending later activation.
+
 ---
 
 ## 1. Purpose
@@ -264,7 +266,7 @@ Draft and sent are separate states. Packets live privately in Obsidian, never in
 - **Inactivity:** GitHub disables scheduled workflows in a public repo after 60 days with no repository activity. Nightly data commits likely count, but GitHub doesn't define "activity," so the owner should notice if a Monday digest fails to arrive; the digest's absence is the heartbeat.
 - **State:** the compact index (JSON or CSV) and the seen-items and sent-digest ledgers are committed to the repo, on a `data` branch if that keeps history cleaner. No PDFs, ZIPs, raw HTML or the full vote CSV are committed; only the subjects' rows and the computed nay counts.
 - **Repository size:** target ≤ 100 MB; hard limit 400 MB. Report growth in the health footer.
-- **Site:** static pages generated from the index, published to GitHub Pages (later milestone).
+- **Site:** a basic static browser on GitHub Pages is brought forward into the first release; full-tenure and topic pages remain a later milestone.
 - **Email:** Gmail SMTP (`smtp.gmail.com`, STARTTLS, port 587) with an app password, which requires 2-Step Verification on the account. Verify in M0 that self-sent mail to a "+" address lands in the inbox, not only in Sent.
 - **AI:** none in milestone 1. Later, an optional open-weight model via API tags otherwise untagged items, with its output labeled as machine-generated. Frontier models are used for building and for owner-initiated analysis only.
 
@@ -289,7 +291,7 @@ The existing GA104 archive is **not deleted** until the new index is built and v
 | # | Deliverable | Timing |
 |---|---|---|
 | **M0** | Verification of sources, email and runner access; findings file | First |
-| **M1** | Illinois nightly collection plus the Monday digest (subjects' activity, split votes, hearings list, county parties, Capitol Fax mentions, health footer). No AI. | Before Jan 2027 |
+| **M1** | Illinois nightly collection plus the Monday digest (subjects' activity, split votes, hearings list, county parties, Capitol Fax mentions, health footer), plus basic browsing. No AI. | Before Jan 2027 |
 | **M2** | Shell-bill detection and immediate in-session alerts; amendment re-tagging | Before the spring 2027 session |
 | **M3** | Session rollover: 105th GA, 120th Congress, new committee assignments | January 2027 |
 | **M4** | Federal votes; Duckworth committee watch | After M3 |

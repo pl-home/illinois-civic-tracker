@@ -4,10 +4,15 @@
   "model_candidate": "qwen/qwen3-32b",
   "approved_model": null,
   "approved_providers": [],
+  "provider_candidate": "deepinfra/fp8",
+  "trial_budget_usd": 20,
+  "budget_scope": "Owner-approved trial ceiling; no monthly reset assumed",
+  "secret_configuration": "Owner reports repository Actions secret saved on 2026-10-17; value not read",
   "monthly_budget_usd": null,
   "secret_name_for_later_activation": "OPENROUTER_API_KEY",
   "proposed_provider_policy": {
     "data_collection": "deny",
+    "zdr": true,
     "require_parameters": true,
     "allow_fallbacks": false
   },

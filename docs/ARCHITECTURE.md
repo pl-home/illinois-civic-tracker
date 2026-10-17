@@ -12,6 +12,7 @@ This is an M0 verification foundation, not the production tracker. Start with RE
 | hearings.py / verify_hearings.py | Public detail-table parsing and bounded historical validation | No range API; historical results do not establish active submission forms |
 | vote_csv.py | Full-file nay counts, subject rows, narrow motion aliases and explicit unknown choices | Floor only; no committee-vote inference |
 | rules.py | Exact ceremonial rule and shell flag | No stance, rewrite detection or model calls |
+| browse.py / web / config/browse.json | Deterministic historical browser from the reviewed 134-item export | No current-activity claim, exact subject role inference, network access or credentials |
 | verify_sources.py | One-time source comparisons against explicitly supplied read-only evidence | M0 only; raw downloads stay ignored |
 | verify_pdf_sample.py | Twenty-row PDF/XML layout verification | Sample helper, not a production name/role parser |
 | probe_runner.py | Hosted host access plus source request timing | Small bounded resources; CSV HEAD, not full import |
@@ -20,7 +21,7 @@ This is an M0 verification foundation, not the production tracker. Start with RE
 | mail_test.py | One reserved Gmail self-test and exact-message INBOX check | Same mailbox plus alias only; no digest schedule |
 | privacy.py | Reject private addresses, machine profile paths and credential-shaped text | Files and finding categories only; narrow reviewed public exceptions |
 
-Tests use synthetic data or reviewed public sponsorship facts. Optional PDF tooling is for verification, not a required nightly dependency. No AI service, local model, API credential client, dashboard or production collector is implemented in this repository yet.
+Tests use synthetic data or reviewed public sponsorship facts. Optional PDF tooling is for verification, not a required nightly dependency. A [basic historical browser](BROWSING_PAGE.md) is implemented separately from the still-gated production pipeline. No AI service, local model, inference credential client or production collector is implemented yet.
 
 ## Future hosted inference
 

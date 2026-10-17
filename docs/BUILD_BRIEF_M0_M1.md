@@ -3,6 +3,8 @@
 For: Codex (implementer). Read with `PRODUCT_VISION.md` rev. 3; section references below (§) point there.
 Date: October 16, 2026.
 
+**October 17 owner-approved scope update:** basic read-only browsing moves into the first release. A separately labeled historical preview may publish before production M1 collection/delivery gates pass. Full-tenure/topic pages and GA103 backfill remain M5. The implementation and limits are in [BROWSING_PAGE.md](BROWSING_PAGE.md). This supersedes only the exclusion of the basic public browser below.
+
 ## Goal
 
 A **new public GitHub repository** whose scheduled workflows:
@@ -87,7 +89,7 @@ Write the results to `docs/M0_FINDINGS.md`. For each item give the answer, the e
 
 ### Out of scope for M1
 
-Shell-bill rewrite detection and alerts (M2), federal anything (M4), the public site (M5), contact packets (M6), any AI model, and deleting or restructuring the old tracker.
+Shell-bill rewrite detection and alerts (M2), federal anything (M4), full-tenure/topic pages (M5), contact packets (M6), any AI model, and deleting or restructuring the old tracker. Basic read-only browsing is included by the October 17 scope update.
 
 ### Acceptance checks for M1
 

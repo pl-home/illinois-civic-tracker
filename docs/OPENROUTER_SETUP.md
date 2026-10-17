@@ -2,6 +2,8 @@
 
 Status: **planning only, October 16, 2026**. The owner chose to plan inference now and enable it later. No API client, inference workflow or model call is enabled. M1 remains deterministic and uses no AI.
 
+October 17 setup clarification: the owner may create the ordinary inference key and save OPENROUTER_API_KEY as a repository Actions secret now. Secret presence does not enable model calls. The public browsing page never receives or uses this secret. Tell the implementer only that setup is complete and the chosen trial cap, never the key value. Model/provider selection and explicit activation remain separate.
+
 ## What the hosted model would do
 
 A later optional stage could suggest topic tags for otherwise untagged public material and classify meaningful county-party content changes. It would run after deterministic collection and comparison. It would not establish votes, sponsorship, filing dates, hearing times, source changes, or the owner's positions. Those remain source-backed facts.
@@ -41,3 +43,7 @@ If inference is unavailable or invalid, collection, indexing and source health s
 Build a reviewed sample that includes all priority topics, substantive resolutions, ceremonial material, shell bills, irrelevant posts, both county parties, repeated events and embedded instruction attempts. Separate examples used to develop the prompt from held-out evaluation examples. Measure topic/category precision and recall, unsupported statements, abstentions, cost and latency; inspect errors rather than trusting the model's confidence score.
 
 The owner still needs to select an acceptable spending ceiling and approve the model/provider combination. Activation requires a bounded test, a reviewed result, failure-path checks and a separate enablement decision. No credential or billing test has been run for OpenRouter.
+
+## October 17 credential and trial update
+
+The owner reports the repository secret is configured and sets a USD 20 trial cap. This supersedes the earlier example-only USD 1 amount. It does not approve monthly replenishment or activate calls. The [model/provider recommendation](OPENROUTER_PROVIDER_RECOMMENDATION.md) proposes Qwen3 32B via DeepInfra, with current endpoint metadata and a reviewable request policy. Model/provider approval and the evaluation implementation remain pending.
