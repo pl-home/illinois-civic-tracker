@@ -1,0 +1,50 @@
+{
+  "validated_at": "2026-10-17T13:21:08.132581+00:00",
+  "implementation_commit": "6f17fa1",
+  "public_url": "https://pl-home.github.io/illinois-civic-tracker/",
+  "mode": "historical-baseline",
+  "records": 134,
+  "ceremonial": 24,
+  "default_visible": 110,
+  "artifact_bytes_local": 276732,
+  "tests": {
+    "local_full_suite_passed": 57,
+    "final_browse_tests_passed": 5,
+    "privacy_findings": 0,
+    "javascript_syntax": "pass"
+  },
+  "clean_runner_ci": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39036089393",
+  "pages_deployment": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39036089311",
+  "pages_build_and_deploy_jobs": "success",
+  "browser_checks": {
+    "search_padded_and_unpadded_bill_id": "pass",
+    "expand_source_fields": "pass",
+    "show_ceremonial": "pass",
+    "measure_type_filter": "pass",
+    "empty_state": "pass",
+    "hidden_item_permalink": "pass",
+    "keyboard_details_toggle": "pass",
+    "mobile_horizontal_overflow": false,
+    "mobile_client_width": 375,
+    "mobile_content_width": 375,
+    "live_site_default_and_all_counts": "pass"
+  },
+  "source_requests_during_build": 0,
+  "model_calls": 0,
+  "collection_schedule_enabled": false,
+  "digest_schedule_enabled": false,
+  "openrouter": {
+    "credential_setup": "owner reported Actions secret saved; value not read",
+    "trial_ceiling_usd": 20,
+    "candidate_model": "qwen/qwen3-32b",
+    "candidate_provider": "deepinfra/fp8",
+    "inference_enabled": false
+  },
+  "remaining_limits": [
+    "Fritts historical export only",
+    "Exact sponsorship role and original filing unknown in this export",
+    "No loaded votes, current hearings, party updates, topic tags or federal activity",
+    "M0 and production M1 gates remain open",
+    "Inference client, model/provider approval and evaluation remain pending"
+  ]
+}
