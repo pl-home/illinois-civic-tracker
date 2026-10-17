@@ -225,7 +225,7 @@ def _copy_archive(previous):
             'votes': dict(previous.get('votes') or {})}
 
 
-def refresh(root, previous, now):
+def refresh(root, previous, now, *, member_roles=None, include_votes=True):
     """Fetch daily sources and return ``(archive, report)`` without disk writes."""
     del root  # Reserved for interface symmetry; no source data is read from disk.
     previous = previous or {}
@@ -298,6 +298,8 @@ def refresh(root, previous, now):
         for member, (name, _, _) in MEMBERS.items():
             for role in ('sponsored', 'cosponsored'):
                 source_name = f'{member}:{role}'
+                if member_roles is not None and source_name not in member_roles:
+                    continue
                 base = f'{API_BASE}/member/{member}/{role}-legislation?format=json&limit=250'
                 page_url = base
                 seen_urls = set()
@@ -308,7 +310,7 @@ def refresh(root, previous, now):
                 pages = 0
                 rows_seen = 0
                 expected_count = None
-                seen_records = set()
+                seen_records = {}
                 while page_url:
                     try:
                         clean = _clean_next(page_url) if page_url != base else base
@@ -345,9 +347,14 @@ def refresh(root, previous, now):
                                 parse_incomplete = True
                                 continue
                             identity = (row['congress'], typ, int(raw_number))
+                            digest = hashlib.sha256(json.dumps(row, sort_keys=True).encode()).hexdigest()
                             if identity in seen_records:
+                                prior_page, prior_digest = seen_records[identity]
+                                report['unknown_records'].append({'source': source_name,
+                                    'error': 'duplicate_legislation_record', 'identity': list(identity),
+                                    'same_page': prior_page == pages, 'same_payload': prior_digest == digest})
                                 raise ValueError('duplicate_legislation_record')
-                            seen_records.add(identity)
+                            seen_records[identity] = (pages, digest)
                             if row['congress'] != CONGRESS:
                                 continue
                             introduced_date = _valid_bill_date(row)
@@ -398,6 +405,14 @@ def refresh(root, previous, now):
                             rels.append(rel)
                         archive['bills'][ident] = {**bill, **old_bill, 'relations': rels}
                 report['legislation_sources'].append({'source': source_name, 'pages': pages, 'complete': complete})
+
+    if not include_votes:
+        # Diagnostic mode returns only the selected API source report. Its
+        # caller must not persist the partial archive as a full refresh.
+        report['status'] = 'partial' if report['errors'] else 'ok'
+        report['api_attempts'] = api_attempts
+        report['vote_requests'] = vote_attempts
+        return archive, report
 
     # Session two is the currently published 119th Congress session.
     session = 2
@@ -499,3 +514,14 @@ def refresh(root, previous, now):
     report['api_attempts'] = api_attempts
     report['vote_requests'] = vote_attempts
     return archive, report
+
+
+if __name__ == '__main__':
+    import argparse
+    from pathlib import Path
+    parser = argparse.ArgumentParser(description='Read-only duplicate diagnostic; no archive writes.')
+    parser.add_argument('command', choices=['diagnose'])
+    parser.parse_args()
+    _, diagnostic = refresh(Path.cwd(), {}, datetime.now(timezone.utc),
+                            member_roles={'D000622:sponsored'}, include_votes=False)
+    print(json.dumps(diagnostic))

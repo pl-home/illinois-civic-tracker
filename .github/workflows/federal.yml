@@ -1,14 +1,35 @@
 name: Recheck federal sources
 on:
   workflow_dispatch:
+    inputs:
+      diagnostics:
+        description: Read-only Duckworth source duplicate diagnostic
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
   group: m0-source-evidence
   cancel-in-progress: false
 jobs:
+  diagnose:
+    if: github.ref == 'refs/heads/main' && inputs.diagnostics
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e .
+      - name: Inspect duplicate identities without source bodies or credentials
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESSGOV_API || secrets.CONGRESS_API_KEY }}
+        run: python -m civic_tracker.daily_federal diagnose
   refresh:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && !inputs.diagnostics
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
