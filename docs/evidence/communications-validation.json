@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-17T16:22:35.024651+00:00",
+  "live_url": "https://pl-home.github.io/illinois-civic-tracker/",
+  "run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39048939298",
+  "workflow_mode": "communications",
+  "source_status": {
+    "ok": 11,
+    "link-only": 4
+  },
+  "model_calls": 0,
+  "inference_ledger_cache_report_and_work_checksums_unchanged": true,
+  "offline_tests": 137,
+  "privacy_findings": 0,
+  "artifact_budget_bytes": 650000,
+  "live_validation": {
+    "member_search_panels": 5,
+    "separate_communications_sections": 5,
+    "groups_per_member": [
+      "Member office",
+      "Campaign releases",
+      "Party / caucus"
+    ],
+    "query_rss_and_publisher_policy_links_verified": true
+  },
+  "members": [
+    {
+      "id": "fritts",
+      "query": "\"Bradley Fritts\" OR \"Brad Fritts\" when:90d",
+      "displayed_communications_by_kind": {
+        "office": 3
+      },
+      "source_count": 5
+    },
+    {
+      "id": "arellano",
+      "query": "\"Li Arellano\" when:90d",
+      "displayed_communications_by_kind": {
+        "office": 3
+      },
+      "source_count": 4
+    },
+    {
+      "id": "lahood",
+      "query": "\"Darin LaHood\" when:90d",
+      "displayed_communications_by_kind": {
+        "office": 3
+      },
+      "source_count": 4
+    },
+    {
+      "id": "durbin",
+      "query": "\"Dick Durbin\" when:90d",
+      "displayed_communications_by_kind": {
+        "office": 3
+      },
+      "source_count": 4
+    },
+    {
+      "id": "duckworth",
+      "query": "\"Tammy Duckworth\" when:90d",
+      "displayed_communications_by_kind": {
+        "office": 3
+      },
+      "source_count": 4
+    }
+  ],
+  "limitations": [
+    "First source page/feed only, 90 days; no full article, pagination, Facebook or private email collection.",
+    "Campaign feeds checked successfully but no recent dated entries found; unsupported campaigns are explicitly link-only.",
+    "No name-matched party items found in checked first-page feeds/listing; general party announcements are not assigned to members.",
+    "Newsroom reprints are not certified as independently reported by the metadata-only news collector."
+  ]
+}

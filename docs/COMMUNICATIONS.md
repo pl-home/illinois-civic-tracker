@@ -54,4 +54,10 @@ The existing daily `media prepare` phase collects first-party metadata; `media e
 
 For review start with this file, `config/communications.json`, `src/civic_tracker/communications.py`, `tests/test_communications.py`, then a member's `communications` and `communication_sources` arrays in `data/dashboard.json`. Coverage receipts expose source type, last check, latest listing date and unsupported feeds. Missing results are not proof of inactivity.
 
-Hosted acceptance results will be recorded after deployment.
+## Hosted acceptance
+
+The [communications-only hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39048939298) completed and deployed October 17. All 11 automated sources were healthy; four sources were explicitly link-only. Each member displayed three office posts. Campaign and party groups had no eligible recent items in this bounded check and remain visibly empty with source coverage explanations. No publication date or release was invented to fill them.
+
+Both local and hosted checksum checks confirmed unchanged inference records; the model step was skipped and this refresh made zero model calls. All 137 offline tests and the privacy scan passed. Independent review identified missing-link and partial-date handling issues; targeted regressions now reject source/listing links as article substitutes, count missing HTML metadata, and retain earlier dated items under incomplete health.
+
+The live browser confirmed five exact-query panels with working search/RSS/publisher-policy links and five separate communications sections. Fritts' expanded methodology and office releases were visually checked. Compact results: [communications-validation.json](evidence/communications-validation.json).
