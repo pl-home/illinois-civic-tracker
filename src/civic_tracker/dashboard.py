@@ -142,6 +142,26 @@ def member_card(member, snapshot):
     return f'''<article class="member-card" id="member-{e(member['id'])}" data-member="{e(member['id'])}"><header class="member-head"><div><p class="eyebrow">{e(member['office'])}</p><h2>{e(member['name'])}</h2></div>{member_links}</header><p class="source-line">Activity source snapshot: {e(member['activity_source_checked_at'][:10])} · Latest available vote: {e(member.get('latest_vote_date') or 'not loaded')} · {recent_votes} recorded votes in recent window</p><div class="member-columns"><section><h3>Recent sponsorship &amp; bill activity</h3><ul class="activity-list">{body}</ul>{listing_html}<h3>Latest recorded votes</h3><p class="minor">Choice applies to the motion shown. Floor and committee votes are distinct; older rows are labeled.</p><ul class="activity-list">{vote_body}</ul></section><section class="committee-column"><h3>Committee meetings · next month</h3><p class="minor">{e(snapshot['as_of'])} through {e(snapshot['calendar_end'])} · times shown in Central</p><ul class="meeting-list">{meetings}</ul><details class="committee-links" open><summary>Committee websites &amp; schedules ({len(member.get('committees', []))})</summary><ul>{committees}</ul></details><p class="minor">{e(snapshot['attendance_note'])}</p><p class="slip-note">{'Illinois witness slips appear only with a verified open submission form; historical results links are not submission forms.' if member['jurisdiction']=='IL' else 'Congress has no general Illinois-style witness-slip system. See each committee’s participation guidance.'}</p>{media_section(member)}{communications_section(member)}</section></div><footer class="member-foot">{e(member['activity_coverage'])}{f' {quiet} ceremonial entries remain in the public snapshot.' if quiet else ''}</footer></article>'''
 
 
+
+def usage_panel(snapshot):
+    from decimal import Decimal
+    report=snapshot.get('inference_usage')
+    if not report:
+        return '<section class="usage-panel"><h2>AI usage &amp; budget</h2><p>Usage has not been calculated for this snapshot.</p></section>'
+    cards=[]
+    for key,label in (('week','This week'),('day','Today')):
+        record=report[key]
+        charged=Decimal(record['charged_usd']); held=Decimal(record['reserved_usd'])
+        limit=Decimal(record['limit_usd']); used=Decimal(record['liability_usd'])
+        amount=f'${charged:.5f}'; percent=f'{Decimal(record["used_percent"]):.1f}'
+        pending=f' + ${held:.5f} held for unsettled requests' if held else ''
+        cards.append(f'<div class="usage-period"><h3>{e(label)}</h3><p><strong>{e(amount)}</strong> / ${limit:.2f}{e(pending)}</p><meter min="0" max="{e(limit)}" value="{e(min(used,limit))}" aria-label="{e(label)} budget used">{e(percent)}%</meter><p class="minor">{e(percent)}% used including holds · ${Decimal(record["remaining_usd"]):.5f} available</p></div>')
+    stamp=datetime.fromisoformat(report['as_of']).astimezone(ZoneInfo(report['timezone']))
+    updated=stamp.strftime('%b %d, %Y · %I:%M %p %Z')
+    warning='<p class="warning">Some entry dates are unknown; those amounts count conservatively in both current periods.</p>' if report['lifetime']['undated_entries'] else ''
+    return f'<section class="usage-panel" aria-label="AI usage and budget"><div class="usage-heading"><h2>AI usage &amp; budget</h2><span>{e(report["week_start"])}–{e(report["week_end"])} · Monday–Sunday · Central</span></div><p class="minor">Recorded tracker inference, including earlier evaluations · calculated {e(updated)} · updated with the daily 01:00 Central refresh.</p><div class="usage-grid">{"".join(cards)}</div>{warning}<details><summary>Usage details</summary><p>Weekly charges: ${e(report["week"]["charged_usd"])}. Unsettled reservations: ${e(report["week"]["reserved_usd"])} across {e(report["week"]["unsettled_requests"])} request(s). Reservations count against the limits until charges are known.</p><p>{e(report["scope"])}</p><p>Lifetime recorded charges: ${e(report["lifetime"]["charged_usd"])} · lifetime ceiling ${Decimal(report["lifetime"]["limit_usd"]):.2f}. Earlier evaluation costs are included. Free source collection and cached decisions add no inference charge.</p><p>Calculated {e(updated)}. Recalculated with the daily 01:00 Central site refresh; this is a dated project ledger report, not live account billing.</p></details></section>'
+
+
 def render(root):
     snapshot = json.loads((root / 'data/dashboard.json').read_text(encoding='utf-8'))
     if snapshot['schema_version'] != 1 or len(snapshot['members']) != 5:
@@ -155,7 +175,7 @@ def render(root):
         health=f'<details class="refresh-health" open><summary>Daily refresh · {e(daily["status"])} · starts 01:00 Central</summary><ul>{lines}</ul>'+('<p>Source failures; prior verified records retained:</p><ul>'+failures+'</ul>' if failures else '')+'<p>Illinois committee votes retain historical PDF coverage; daily committee-vote discovery is pending. GitHub may start jobs late; publication follows collection.</p></details>'
     automatic=snapshot.get('automatic_refresh_enabled',False)
     coverage=('Daily source refresh is enabled for 01:00 Central. Source dates and collection health below identify remaining gaps.' if automatic else 'Automatic refresh is not enabled.')
-    substitutions = {'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
+    substitutions = {'INFERENCE_USAGE': usage_panel(snapshot), 'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
         'CALENDAR_END': e(snapshot['calendar_end']), 'MEMBER_LINKS': links,
         'MEMBERS': ''.join(member_card(m, snapshot) for m in snapshot['members']),
         'SOURCE_COUNT': str(len(snapshot['calendar_sources'])), 'ERROR_COUNT': str(len(snapshot['errors']))}

@@ -55,7 +55,7 @@ class MediaInferenceTests(unittest.TestCase):
         (self.root / 'config').mkdir()
         (self.root / 'config/media.json').write_text(json.dumps({'inference': {
             'enabled': True, 'model': mi.MODEL, 'provider': mi.PROVIDER,
-            'daily_cap_usd': '0.009', 'lifetime_cap_usd': '20',
+            'daily_cap_usd': '0.02', 'weekly_cap_usd': '0.20', 'lifetime_cap_usd': '20',
             'per_request_reserved_usd': '0.002', 'max_daily_calls': 4,
             'prompt_version': mi.PROMPT_VERSION}}))
 
@@ -89,7 +89,7 @@ class MediaInferenceTests(unittest.TestCase):
         self.assertEqual(payload['reasoning'], {'enabled': False})
 
     def test_daily_budget_counts_prior_evaluation_charges_and_reservations(self):
-        self._prior_eval(count=3, charge=None)
+        self._prior_eval(count=9, charge=None)
         cases = [sample(i) for i in range(1, 17)]
         report = mi.prepare(self.root, cases, self.now)
         self.assertEqual(report['costs']['reserved_usd'], '0.002')
@@ -97,7 +97,7 @@ class MediaInferenceTests(unittest.TestCase):
         self.assertEqual(len(report['deferred_ids']), 8)
 
     def test_next_day_retries_only_deferred_content_and_keeps_unknown_blocked(self):
-        self._prior_eval(count=3, charge=None)
+        self._prior_eval(count=9, charge=None)
         cases = [sample(i) for i in range(1, 17)]
         first = mi.prepare(self.root, cases, self.now)
         self.assertEqual(first['costs']['reserved_usd'], '0.002')
@@ -175,7 +175,7 @@ class MediaInferenceTests(unittest.TestCase):
         self.assertEqual([b['status'] for b in batches], ['valid', 'reserved'])
 
     def test_no_batch_with_budget_deferred_cases_is_never_reported_complete(self):
-        self._prior_eval(count=5, charge=None, reserved='0.002')
+        self._prior_eval(count=11, charge=None, reserved='0.002')
         cases = [sample(i) for i in range(1, 9)]
         prepared = mi.prepare(self.root, cases, self.now)
         self.assertEqual(prepared['costs']['reserved_usd'], '0')

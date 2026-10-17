@@ -9,10 +9,12 @@ import os
 import re
 
 from . import inference_eval as ev
+from . import usage
 
 MODEL = ev.MODEL
 PROVIDER = ev.PROVIDER
-DAILY_CAP = Decimal('0.009')
+DAILY_CAP = Decimal('0.02')
+WEEKLY_CAP = Decimal('0.20')
 LIFETIME_CAP = Decimal('20')
 RESERVATION = Decimal('0.002')
 MAX_DAILY_CALLS = 4
@@ -144,7 +146,7 @@ def _check_config(root):
     except Exception:
         raise MediaError('media-config-invalid') from None
     expected = {'enabled': True, 'model': MODEL, 'provider': PROVIDER,
-                'daily_cap_usd': str(DAILY_CAP), 'lifetime_cap_usd': str(LIFETIME_CAP),
+                'daily_cap_usd': str(DAILY_CAP), 'weekly_cap_usd': str(WEEKLY_CAP), 'lifetime_cap_usd': str(LIFETIME_CAP),
                 'per_request_reserved_usd': str(RESERVATION), 'max_daily_calls': MAX_DAILY_CALLS,
                 'prompt_version': PROMPT_VERSION}
     if settings != expected:
@@ -259,34 +261,16 @@ def _entry_liability(entry):
 
 
 def _lifetime_liability(root, ledger):
-    total = Decimal(0)
-    for prior in _evaluation_ledgers(root):
-        for run in prior.get('experiments', []):
-            for entry in run.get('entries', []):
-                total += _entry_liability(entry)
-    for batch in ledger.get('batches', []):
-        total += ev.money(batch['charged_usd']) if batch.get('charged_usd') is not None else ev.money(batch['reserved_usd'])
-    return total
+    return ev.money(usage.total(list(usage.entries(root,ledger)))['liability_usd'])
 
 
 def _todays_usage(root, ledger, today):
-    calls, liability = 0, Decimal(0)
-    for prior in _evaluation_ledgers(root):
-        for run in prior.get('experiments', []):
-            at = run.get('reserved_at') or run.get('started_at')
-            try:
-                matches = datetime.fromisoformat(at).astimezone(CHICAGO).date().isoformat() == today
-            except (TypeError, ValueError):
-                matches = False
-            if matches:
-                for entry in run.get('entries', []):
-                    if entry.get('status') != 'quarantined-deterministically':
-                        liability += _entry_liability(entry)
-    for batch in ledger.get('batches', []):
-        if batch.get('day') == today:
-            calls += 1
-            liability += ev.money(batch['charged_usd']) if batch.get('charged_usd') is not None else ev.money(batch['reserved_usd'])
-    return calls, liability
+    day=usage.periods(root,today,ledger)['day']
+    return day['media_reservations'],ev.money(day['liability_usd'])
+
+
+def _weekly_liability(root, ledger, today):
+    return ev.money(usage.periods(root,today,ledger)['week']['liability_usd'])
 
 
 def prepare(root, cases, now):
@@ -354,6 +338,7 @@ def prepare(root, cases, now):
     new_ownership = []
     calls, daily_liability = _todays_usage(root, ledger, today)
     lifetime = _lifetime_liability(root, ledger)
+    weekly_liability = _weekly_liability(root, ledger, today)
     defer = []
     for offset in range(0, len(pending), MAX_BATCH):
         group = pending[offset:offset + MAX_BATCH]
@@ -368,7 +353,7 @@ def prepare(root, cases, now):
             quarantine.extend({'id': c['id'], 'code': error.code} for c, _ in group)
             continue
         if (calls + 1 > MAX_DAILY_CALLS or daily_liability + RESERVATION > DAILY_CAP or
-                lifetime + RESERVATION > LIFETIME_CAP):
+                weekly_liability + RESERVATION > WEEKLY_CAP or lifetime + RESERVATION > LIFETIME_CAP):
             defer.extend(c['id'] for c, _ in group)
             continue
         batch = {'batch_hash': batch_hash, 'day': today, 'case_hashes': [ch for _, ch in group],
@@ -377,7 +362,7 @@ def prepare(root, cases, now):
         ledger['batches'].append(batch)
         batches.append({'batch_hash': batch_hash, 'cases': [c for c, _ in group], 'payload': payload})
         new_ownership.append(batch_hash)
-        calls += 1; daily_liability += RESERVATION; lifetime += RESERVATION
+        calls += 1; daily_liability += RESERVATION; weekly_liability += RESERVATION; lifetime += RESERVATION
     work = {'work_hash': content_hash, 'day': today, 'created_at': _stamp(now), 'batches': batches,
             'decisions': decisions, 'case_hashes': {c['id']: _case_hash(c) for c in cases},
             'deferred_ids': sorted(set(defer)), 'errors': quarantine}

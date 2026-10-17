@@ -32,8 +32,9 @@
     "enabled": true,
     "policy_file": "config/media.json",
     "scope": "Public headline relevance only; Boolean supplied IDs, no factual generation",
-    "daily_cap_usd": "0.009",
+    "daily_cap_usd": "0.02",
     "lifetime_cap_usd": "20",
-    "authorization": "Owner explicitly enabled October 17, 2026"
+    "authorization": "Owner explicitly enabled October 17, 2026",
+    "weekly_cap_usd": "0.20"
   }
 }

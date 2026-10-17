@@ -3386,5 +3386,48 @@
         "errors": []
       }
     }
+  },
+  "inference_usage": {
+    "day": {
+      "charged_usd": "0.00220856",
+      "reserved_usd": "0",
+      "liability_usd": "0.00220856",
+      "unsettled_requests": 0,
+      "media_reservations": 4,
+      "undated_entries": 0,
+      "limit_usd": "0.02",
+      "remaining_usd": "0.01779144",
+      "used_percent": "11.042800"
+    },
+    "week": {
+      "charged_usd": "0.00220856",
+      "reserved_usd": "0",
+      "liability_usd": "0.00220856",
+      "unsettled_requests": 0,
+      "media_reservations": 4,
+      "undated_entries": 0,
+      "limit_usd": "0.20",
+      "remaining_usd": "0.19779144",
+      "used_percent": "1.104280"
+    },
+    "lifetime": {
+      "charged_usd": "0.00220856",
+      "reserved_usd": "0",
+      "liability_usd": "0.00220856",
+      "unsettled_requests": 0,
+      "media_reservations": 4,
+      "undated_entries": 0,
+      "limit_usd": "20",
+      "remaining_usd": "19.99779144",
+      "used_percent": "0.01104280"
+    },
+    "week_start": "2026-10-12",
+    "week_end": "2026-10-18",
+    "schema_version": 1,
+    "as_of": "2026-10-17T16:31:34.845286+00:00",
+    "local_date": "2026-10-17",
+    "timezone": "America/Chicago",
+    "week_definition": "Monday through Sunday",
+    "scope": "Tracker inference only, including earlier evaluations; excludes unrelated OpenRouter account use."
   }
 }

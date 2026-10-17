@@ -191,14 +191,20 @@ def apply(root, now):
     save(root/'data/dashboard.json', snapshot)
     from . import communications
     communications.apply(root,now)
+    from . import usage
+    usage.apply(root,now)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['prepare','execute','refresh-communications'])
+    parser.add_argument('command', choices=['prepare','execute','refresh-communications','refresh-usage'])
     args = parser.parse_args(); root = Path.cwd(); now = datetime.now(timezone.utc)
     if args.command == 'prepare':
         report = prepare(root, now)
+    elif args.command=='refresh-usage':
+        from . import usage
+        report=usage.apply(root,now)
+        check_size(root)
     elif args.command=='refresh-communications':
         from . import communications
         report=communications.collect(root,now)

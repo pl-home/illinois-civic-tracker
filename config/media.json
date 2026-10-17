@@ -8,11 +8,12 @@
     "enabled": true,
     "model": "qwen/qwen3-32b",
     "provider": "deepinfra/fp8",
-    "daily_cap_usd": "0.009",
+    "daily_cap_usd": "0.02",
     "lifetime_cap_usd": "20",
     "per_request_reserved_usd": "0.002",
     "max_daily_calls": 4,
-    "prompt_version": "media-relevance-v3"
+    "prompt_version": "media-relevance-v3",
+    "weekly_cap_usd": "0.20"
   },
   "queries": {
     "fritts": "\"Bradley Fritts\" OR \"Brad Fritts\" when:90d",
