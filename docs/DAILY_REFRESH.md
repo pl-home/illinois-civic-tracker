@@ -98,3 +98,13 @@ prior report is preserved in the recheck receipt. The daily schedule always
 runs a full federal collection. The workflow's optional diagnostics input calls
 `python -m civic_tracker.daily_federal diagnose` with read-only repository access
 and does not publish or write source records.
+
+
+Recovery completed and deployed in [run 39051718651](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39051718651).
+All six member-role sources and both vote indexes are complete; overall source
+health is `ok`. The targeted retry used three free API requests and reused the
+seven successful sibling checks with their original timestamps. Financial and
+once-per-day collection files are byte-identical to before recovery. The live
+homepage displays Illinois/Federal/Calendars `ok` and neither original error.
+The full 153-test suite and privacy guard passed. See
+[evidence/federal-recovery-validation.json](evidence/federal-recovery-validation.json).

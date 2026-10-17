@@ -1,0 +1,114 @@
+{
+  "verified_on": "2026-10-17",
+  "implementation_commit": "98b6b6b",
+  "records_commit": "dadba9f",
+  "hosted_full_run": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39050646833",
+  "read_only_duplicate_diagnostic": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39051429275",
+  "successful_scoped_retry_and_deploy": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39051718651",
+  "secret_names_supported": [
+    "CONGRESSGOV_API",
+    "CONGRESS_API_KEY"
+  ],
+  "tests": {
+    "passed": 153,
+    "privacy_findings": 0
+  },
+  "source_status": {
+    "Illinois": "ok",
+    "Federal": "ok",
+    "Calendars": "ok"
+  },
+  "legislation_sources": [
+    {
+      "source": "L000585:sponsored",
+      "pages": 1,
+      "complete": true,
+      "checked_at": "2026-10-17T16:43:37.216659+00:00"
+    },
+    {
+      "source": "L000585:cosponsored",
+      "pages": 5,
+      "complete": true,
+      "checked_at": "2026-10-17T16:43:37.216659+00:00"
+    },
+    {
+      "source": "D000563:sponsored",
+      "pages": 9,
+      "complete": true,
+      "checked_at": "2026-10-17T16:43:37.216659+00:00"
+    },
+    {
+      "source": "D000563:cosponsored",
+      "pages": 43,
+      "complete": true,
+      "checked_at": "2026-10-17T16:43:37.216659+00:00"
+    },
+    {
+      "source": "D000622:sponsored",
+      "pages": 3,
+      "complete": true,
+      "checked_at": "2026-10-17T16:58:43.320064+00:00"
+    },
+    {
+      "source": "D000622:cosponsored",
+      "pages": 14,
+      "complete": true,
+      "checked_at": "2026-10-17T16:43:37.216659+00:00"
+    }
+  ],
+  "vote_sources": [
+    {
+      "source": "https://clerk.house.gov/Votes/MemberVotes",
+      "complete": true,
+      "discovered": 314,
+      "selected": 5,
+      "pending": 0,
+      "processed": 5,
+      "checked_at": "2026-10-17T16:43:37.216659+00:00"
+    },
+    {
+      "source": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.xml",
+      "complete": true,
+      "discovered": 256,
+      "selected": 5,
+      "pending": 0,
+      "processed": 5,
+      "checked_at": "2026-10-17T16:43:37.216659+00:00"
+    }
+  ],
+  "duplicate_source_rows": [
+    {
+      "source": "D000622:sponsored",
+      "identity": [
+        118,
+        "S",
+        38
+      ],
+      "page": 1
+    }
+  ],
+  "scope": {
+    "full_api_attempts": 73,
+    "read_only_diagnostic_api_attempts": 1,
+    "targeted_retry_api_attempts": 3,
+    "full_vote_requests": 43,
+    "targeted_retry_vote_requests": 0,
+    "paid_inference_calls": 0
+  },
+  "preservation": {
+    "financial_and_once_per_day_files_byte_identical": true,
+    "inference_usage_unchanged": true,
+    "illinois_and_calendar_health_unchanged": true
+  },
+  "archive_counts": {
+    "bills": 1476,
+    "votes": 1591
+  },
+  "live_verification": {
+    "url": "https://pl-home.github.io/illinois-civic-tracker/",
+    "daily_refresh": "ok",
+    "federal": "ok",
+    "reported_errors_absent": true
+  },
+  "failure_history": "Original failed report retained in the full-run records commit 5467f32 and Git history; recheck receipt preserves the immediately previous report."
+}
