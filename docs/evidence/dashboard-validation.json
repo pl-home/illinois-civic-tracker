@@ -36,5 +36,19 @@
     "No matching upcoming meeting posted at check; not proof none will occur",
     "Live future hearing and open witness-slip form not available to validate",
     "Party-site inference quality gate failed; only one actual delta evaluated"
-  ]
+  ],
+  "member_metadata_followup": {
+    "reviewed_on": "2026-10-17",
+    "illinois_rosters_checked": 14,
+    "tests_passed": 95,
+    "privacy_findings": 0,
+    "artifact_bytes_local": 420895,
+    "banner_links_per_member": 3,
+    "facebook_account_type_labeled": true,
+    "arellano_older_campaign_site_labeled": true,
+    "committee_roles_source_linked": true,
+    "historical_export_purpose_explained": true,
+    "mobile_client_width": 375,
+    "mobile_content_width": 375
+  }
 }

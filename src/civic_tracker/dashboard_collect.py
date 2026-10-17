@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ET
 from urllib.parse import urlsplit
 from urllib.request import Request, build_opener
 
-from .dashboard_sources import state_committees, state_schedule, senate_schedule, house_schedule, open_slip_form
+from .dashboard_sources import state_committees, state_committee_role, state_schedule, senate_schedule, house_schedule, open_slip_form
 from .hearings import parse_hearing_details
 from .http import Client, fingerprint, NoRedirect
 
@@ -249,6 +249,14 @@ def collect(root, state_path, federal_path, as_of):
                     body, _ = fetch(member['url'], cached.name)
                 item['committees'] = state_committees(body, member['url'])
                 for committee in item['committees']:
+                    try:
+                        roster_key = hashlib.sha256(committee['url'].encode()).hexdigest()
+                        roster, role_metadata = fetch(committee['url'], f'dashboard-roster-{roster_key}.html')
+                        committee.update(state_committee_role(roster, committee['url'], member['official_id']))
+                        committee['role_checked_at'] = role_metadata['checked_at']
+                    except Exception as error:
+                        committee['role'] = None
+                        result['errors'].append({'source': committee['url'], 'purpose': 'Committee role', 'error': type(error).__name__})
                     try:
                         body, metadata = fetch(committee['schedule_url'], f'dashboard-committee-{committee["id"]}.html')
                         committee['checked_at'] = metadata['checked_at']; committee['health'] = 'checked'

@@ -3,22 +3,208 @@
   "recent_days": 30,
   "calendar_months": 1,
   "members": [
-    {"id":"fritts","name":"Bradley Fritts","office":"Illinois House · District 74","jurisdiction":"IL","chamber":"House","official_id":"3428","url":"https://ilga.gov/House/Members/Details/3428"},
-    {"id":"arellano","name":"Li Arellano, Jr.","office":"Illinois Senate · District 37","jurisdiction":"IL","chamber":"Senate","official_id":"3383","url":"https://ilga.gov/Senate/Members/Details/3383"},
-    {"id":"lahood","name":"Darin LaHood","office":"U.S. House · Illinois 16","jurisdiction":"US","chamber":"House","official_id":"L000585","url":"https://www.congress.gov/member/darin-lahood/L000585","committees":[
-      {"name":"Ways and Means","url":"https://waysandmeans.house.gov","match":"Ways and Means"},
-      {"name":"Intelligence","url":"https://intelligence.house.gov","match":"Intelligence"},
-      {"name":"Select Committee on the CCP","url":"https://chinaselectcommittee.house.gov","match":"Chinese Communist Party"}]},
-    {"id":"durbin","name":"Dick Durbin","office":"U.S. Senate · Illinois","jurisdiction":"US","chamber":"Senate","official_id":"D000563","url":"https://www.congress.gov/member/richard-durbin/D000563","committees":[
-      {"name":"Agriculture, Nutrition, and Forestry","url":"https://www.agriculture.senate.gov","match":"Agriculture"},
-      {"name":"Appropriations","url":"https://www.appropriations.senate.gov","match":"Appropriations"},
-      {"name":"Judiciary","url":"https://www.judiciary.senate.gov","match":"Judiciary"}]},
-    {"id":"duckworth","name":"Tammy Duckworth","office":"U.S. Senate · Illinois","jurisdiction":"US","chamber":"Senate","official_id":"D000622","url":"https://www.congress.gov/member/tammy-duckworth/D000622","committees":[
-      {"name":"Armed Services","url":"https://www.armed-services.senate.gov","match":"Armed Services"},
-      {"name":"Commerce, Science, and Transportation","url":"https://www.commerce.senate.gov","match":"Commerce"},
-      {"name":"Foreign Relations","url":"https://www.foreign.senate.gov","match":"Foreign Relations"},
-      {"name":"Veterans’ Affairs","url":"https://www.veterans.senate.gov","match":"Veterans"}]}
+    {
+      "id": "fritts",
+      "name": "Bradley Fritts",
+      "office": "Illinois House · District 74",
+      "jurisdiction": "IL",
+      "chamber": "House",
+      "official_id": "3428",
+      "url": "https://ilga.gov/House/Members/Details/3428",
+      "public_links": {
+        "facebook": {
+          "url": "https://www.facebook.com/fritts4rep/",
+          "label": "Facebook (campaign)",
+          "source_url": "https://fritts4rep.com/"
+        },
+        "campaign": {
+          "url": "https://fritts4rep.com/",
+          "label": "Campaign website",
+          "source_url": "https://fritts4rep.com/"
+        },
+        "reviewed_on": "2026-10-17"
+      }
+    },
+    {
+      "id": "arellano",
+      "name": "Li Arellano, Jr.",
+      "office": "Illinois Senate · District 37",
+      "jurisdiction": "IL",
+      "chamber": "Senate",
+      "official_id": "3383",
+      "url": "https://ilga.gov/Senate/Members/Details/3383",
+      "public_links": {
+        "facebook": {
+          "url": "https://www.facebook.com/SenatorLi/",
+          "label": "Facebook (office)",
+          "source_url": "https://www.senatorli.com/"
+        },
+        "campaign": {
+          "url": "https://electarellano.com/",
+          "label": "Campaign website (older site)",
+          "source_url": "https://electarellano.com/"
+        },
+        "note": "Campaign site still describes his earlier House race.",
+        "reviewed_on": "2026-10-17"
+      }
+    },
+    {
+      "id": "lahood",
+      "name": "Darin LaHood",
+      "office": "U.S. House · Illinois 16",
+      "jurisdiction": "US",
+      "chamber": "House",
+      "official_id": "L000585",
+      "url": "https://www.congress.gov/member/darin-lahood/L000585",
+      "committees": [
+        {
+          "name": "Ways and Means",
+          "url": "https://waysandmeans.house.gov",
+          "match": "Ways and Means",
+          "role": "Member",
+          "role_source_url": "https://waysandmeans.house.gov/members/",
+          "role_reviewed_on": "2026-10-17"
+        },
+        {
+          "name": "Intelligence",
+          "url": "https://intelligence.house.gov",
+          "match": "Intelligence",
+          "role": "Member",
+          "role_source_url": "https://intelligence.house.gov/hpsci-members/",
+          "role_reviewed_on": "2026-10-17"
+        },
+        {
+          "name": "Select Committee on the CCP",
+          "url": "https://chinaselectcommittee.house.gov",
+          "match": "Chinese Communist Party",
+          "role": "Member",
+          "role_source_url": "https://selectcommitteeontheccp.house.gov/sites/evo-subsites/selectcommitteeontheccp.house.gov/files/evo-media-document/11.13.2025-final-signed-letter-to-morgan-stanley-re-zijin-gold.pdf",
+          "role_reviewed_on": "2026-10-17"
+        }
+      ],
+      "public_links": {
+        "facebook": {
+          "url": "https://www.facebook.com/replahood/",
+          "label": "Facebook (office)",
+          "source_url": "https://lahood.house.gov/"
+        },
+        "campaign": {
+          "url": "https://lahoodforcongress.com/",
+          "label": "Campaign website",
+          "source_url": "https://lahoodforcongress.com/"
+        },
+        "reviewed_on": "2026-10-17"
+      }
+    },
+    {
+      "id": "durbin",
+      "name": "Dick Durbin",
+      "office": "U.S. Senate · Illinois",
+      "jurisdiction": "US",
+      "chamber": "Senate",
+      "official_id": "D000563",
+      "url": "https://www.congress.gov/member/richard-durbin/D000563",
+      "committees": [
+        {
+          "name": "Agriculture, Nutrition, and Forestry",
+          "url": "https://www.agriculture.senate.gov",
+          "match": "Agriculture",
+          "role": "Member",
+          "role_source_url": "https://www.agriculture.senate.gov/newsroom/rep/press/release/boozman-klobuchar-announce-subcommittee-assignments-for-119th-congress",
+          "role_reviewed_on": "2026-10-17"
+        },
+        {
+          "name": "Appropriations",
+          "url": "https://www.appropriations.senate.gov",
+          "match": "Appropriations",
+          "role": "Member",
+          "role_source_url": "https://www.appropriations.senate.gov/about/members",
+          "role_reviewed_on": "2026-10-17"
+        },
+        {
+          "name": "Judiciary",
+          "url": "https://www.judiciary.senate.gov",
+          "match": "Judiciary",
+          "role": "Ranking Member",
+          "role_source_url": "https://www.judiciary.senate.gov/about/ranking",
+          "role_reviewed_on": "2026-10-17"
+        }
+      ],
+      "public_links": {
+        "facebook": {
+          "url": "https://www.facebook.com/SenatorDurbin",
+          "label": "Facebook (office)",
+          "source_url": "https://www.democrats.senate.gov/about-senate-dems/our-caucus"
+        },
+        "campaign": {
+          "url": "https://www.durbinforsenate.com/",
+          "label": "Campaign website",
+          "source_url": "https://www.durbinforsenate.com/"
+        },
+        "reviewed_on": "2026-10-17"
+      }
+    },
+    {
+      "id": "duckworth",
+      "name": "Tammy Duckworth",
+      "office": "U.S. Senate · Illinois",
+      "jurisdiction": "US",
+      "chamber": "Senate",
+      "official_id": "D000622",
+      "url": "https://www.congress.gov/member/tammy-duckworth/D000622",
+      "committees": [
+        {
+          "name": "Armed Services",
+          "url": "https://www.armed-services.senate.gov",
+          "match": "Armed Services",
+          "role": "Member",
+          "role_source_url": "https://www.armed-services.senate.gov/about/membership",
+          "role_reviewed_on": "2026-10-17"
+        },
+        {
+          "name": "Commerce, Science, and Transportation",
+          "url": "https://www.commerce.senate.gov",
+          "match": "Commerce",
+          "role": "Member",
+          "role_source_url": "https://www.commerce.senate.gov/about/members/",
+          "role_reviewed_on": "2026-10-17"
+        },
+        {
+          "name": "Foreign Relations",
+          "url": "https://www.foreign.senate.gov",
+          "match": "Foreign Relations",
+          "role": "Member",
+          "role_source_url": "https://www.foreign.senate.gov/about/membership",
+          "role_reviewed_on": "2026-10-17"
+        },
+        {
+          "name": "Veterans’ Affairs",
+          "url": "https://www.veterans.senate.gov",
+          "match": "Veterans",
+          "role": "Member",
+          "role_source_url": "https://www.veterans.senate.gov/members",
+          "role_reviewed_on": "2026-10-17"
+        }
+      ],
+      "public_links": {
+        "facebook": {
+          "url": "https://www.facebook.com/SenDuckworth/",
+          "label": "Facebook (office)",
+          "source_url": "https://www.democrats.senate.gov/about-senate-dems/our-caucus"
+        },
+        "campaign": {
+          "url": "https://tammyduckworth.com/",
+          "label": "Campaign website",
+          "source_url": "https://tammyduckworth.com/"
+        },
+        "reviewed_on": "2026-10-17"
+      }
+    }
   ],
-  "federal_committee_assignment_sources": ["https://www.senate.gov/general/committee_assignments/assignments.htm","https://clerk.house.gov/members/L000585","https://www.house.gov/committees"],
+  "federal_committee_assignment_sources": [
+    "https://www.senate.gov/general/committee_assignments/assignments.htm",
+    "https://clerk.house.gov/members/L000585",
+    "https://www.house.gov/committees"
+  ],
   "federal_committee_assignments_reviewed_on": "2026-10-17"
 }

@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from civic_tracker.dashboard_collect import month_after, bound_events, public_url, federal_events
-from civic_tracker.dashboard_sources import state_committees, state_schedule, senate_schedule, house_schedule, open_slip_form
+from civic_tracker.dashboard_sources import state_committees, state_committee_role, state_schedule, senate_schedule, house_schedule, open_slip_form
 from civic_tracker.dashboard import activity_row, meeting_row, render
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +24,34 @@ class DashboardTests(unittest.TestCase):
         parsed = state_committees(body, 'https://ilga.gov/House/Members/Details/3428')
         self.assertEqual([r['id'] for r in parsed], ['3133'])
         self.assertTrue(parsed[0]['schedule_url'].endswith('/House/Committees/Hearings/3133'))
+
+    def test_committee_role_belongs_to_exact_member_not_the_chair(self):
+        body = '<div class="member-overlay"><h2><a href="/Senate/Members/Details/9999">Another Member</a></h2><p class="card-text">Chairperson<br>1st District</p></div>'
+        body += '<div class="member-overlay"><h2><a href="/Senate/Members/Details/3383">Li Arellano, Jr.</a></h2><p class="card-text">Minority Spokesperson<br>37th District</p></div>'
+        body += '<table><tr><td><span>Role:</span> Minority Spokesperson<br><a href="/Senate/Members/Details/3383">Li</a></td></tr></table>'
+        self.assertEqual(state_committee_role(body, 'https://ilga.gov/Senate/Committees/Members/3119', '3383')['role'], 'Minority Spokesperson')
+
+    def test_absent_or_conflicting_committee_role_is_unknown_not_member(self):
+        url = 'https://ilga.gov/House/Committees/Members/3133'
+        def row(role):
+            return '<tr><td><span>Role:</span> '+role+'<br><a href="/House/Members/Details/3428">Bradley Fritts</a></td></tr>'
+        for body in ['<p>Chairperson: Someone Else</p>', '<table>'+row('Member')+row('Chairperson')+'</table>']:
+            with self.assertRaises(ValueError):
+                state_committee_role(body, url, '3428')
+
+    def test_banner_links_and_leadership_are_in_published_snapshot(self):
+        html, data = render(ROOT)
+        page = BeautifulSoup(html, 'html.parser')
+        for member in data['members']:
+            card = page.select_one('#member-'+member['id'])
+            links = card.select('.member-public-links a')
+            self.assertEqual(len(links), 3)
+            self.assertEqual(links[0]['href'], member['url'])
+            self.assertEqual(links[1]['href'], member['public_links']['facebook']['url'])
+            self.assertEqual(links[2]['href'], member['public_links']['campaign']['url'])
+        self.assertIn('Minority Spokesperson', page.select_one('#member-arellano .committee-links').get_text())
+        self.assertIn('Ranking Member', page.select_one('#member-durbin .committee-links').get_text())
+        self.assertIn('not a collection feed', page.get_text())
 
     def test_empty_calendar_requires_explicit_recognized_empty_state(self):
         self.assertEqual(state_schedule('<div id="scheduled">No Hearings Scheduled at this time.</div>', 'https://ilga.gov/House/Committees/Hearings/3133'), [])

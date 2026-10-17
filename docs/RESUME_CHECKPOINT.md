@@ -6,6 +6,8 @@ The separate v2 evaluation completed five calls, charged USD 0.00027216, with fi
 
 Next: close production collection/delivery gates while retaining manual-snapshot labeling. For inference, gather further genuine paired website deltas, review the voter-information category, and design deterministic evidence-span selection before a separately versioned future trial. Old local schedules remain stopped; no new routine model, collection or digest schedule was enabled.
 
+Homepage metadata follow-up: all five banners include source-reviewed Facebook and campaign links, with account type and Arellano's older campaign-site limitation visible. Fourteen official Illinois rosters now supply exact-ID committee roles; federal full-committee roles are dated configuration. Arellano Public Health: Minority Spokesperson; Durbin Judiciary: Ranking Member. The collector now rechecks Illinois roles without treating a missing role as ordinary membership. The historical export is explicitly an archive/test fixture, not the monitoring universe; no equivalent manual Arellano export is required. Follow-up suite: 95 passing tests, privacy clear. See DASHBOARD.md for the production collection gates that remain open.
+
 ## Earlier checkpoint (preserved context)
 
 Updated October 17, 2026 after the owner brought basic browsing into the first release.

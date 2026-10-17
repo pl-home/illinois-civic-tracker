@@ -27,6 +27,41 @@ def state_committees(body, source_url):
     return list(result.values())
 
 
+def state_committee_role(body, source_url, member_id):
+    """Read only this member's explicit roster role, never another member's title."""
+    soup = BeautifulSoup(body, 'html.parser')
+    roles = set()
+    expected = f'/Members/Details/{member_id}'
+    for anchor in soup.find_all('a', href=True):
+        if not urlsplit(urljoin(source_url, anchor['href'])).path.endswith(expected):
+            continue
+        overlay = anchor.find_parent(class_='member-overlay')
+        if overlay is not None:
+            paragraph = overlay.find('p', class_='card-text')
+            if paragraph is not None:
+                lines = list(paragraph.stripped_strings)
+                if lines:
+                    roles.add(lines[0])
+        row = anchor.find_parent('tr')
+        if row is not None:
+            label = next((span for span in row.find_all('span') if span.get_text(strip=True) == 'Role:'), None)
+            if label is not None:
+                parts = []
+                for sibling in label.next_siblings:
+                    if getattr(sibling, 'name', None) == 'br':
+                        break
+                    parts.append(sibling.get_text(' ', strip=True) if hasattr(sibling, 'get_text') else str(sibling))
+                raw = ' '.join(' '.join(parts).split())
+                if raw:
+                    roles.add(raw)
+    if len(roles) != 1:
+        raise ValueError('Missing or conflicting member committee role')
+    role = roles.pop()
+    if len(role) > 80 or not re.fullmatch(r"[A-Za-z /&().,-]+", role):
+        raise ValueError('Unrecognized member committee role')
+    return {'role': role, 'role_source_url': source_url}
+
+
 def state_schedule(body, source_url):
     soup = BeautifulSoup(body, 'html.parser')
     scheduled = soup.find(id='scheduled')
