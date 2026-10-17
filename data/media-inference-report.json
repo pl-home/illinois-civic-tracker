@@ -1,0 +1,11 @@
+{
+  "status": "prepared",
+  "work_hash": "1390bf72d5d866f46986f8bd720fc552de7dd420222b34f0371e7791acd26126",
+  "model_calls": 0,
+  "costs": {
+    "reserved_usd": "0.006"
+  },
+  "decisions": {},
+  "deferred_ids": [],
+  "errors": []
+}
