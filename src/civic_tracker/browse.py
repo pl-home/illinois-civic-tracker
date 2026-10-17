@@ -111,25 +111,29 @@ def build(root, output):
         'RECORDS': '\n'.join(card(record) for record in records),
         'COVERAGE': ''.join(f'<li><strong>{escape(item["name"])}</strong><span>{escape(item["status"])}</span></li>' for item in config['coverage']),
     }
-    template = (root / 'web/index.html').read_text(encoding='utf-8')
+    template = (root / 'web/archive.html').read_text(encoding='utf-8')
     for key, value in substitutions.items():
         template = template.replace('{{' + key + '}}', value)
     if re.search(r'\{\{[A-Z_]+\}\}', template):
         raise ValueError('Unresolved page template')
     # Write an allowlisted artifact only. Never recursively copy the repository.
-    artifact_names = {'index.html', 'records.json', 'styles.css', 'app.js', '.nojekyll'}
+    artifact_names = {'index.html', 'archive.html', 'dashboard.json', 'records.json', 'styles.css', 'app.js', 'dashboard.js', '.nojekyll'}
     if output.is_symlink() or (output.exists() and any(
             item.name not in artifact_names or not item.is_file() or item.is_symlink()
             for item in output.iterdir())):
         raise ValueError('Output must contain only the allowlisted public artifact files')
     output.mkdir(parents=True, exist_ok=True)
-    (output / 'index.html').write_text(template, encoding='utf-8', newline='\n')
+    from .dashboard import render
+    homepage, snapshot = render(root)
+    (output / 'index.html').write_text(homepage, encoding='utf-8', newline='\n')
+    (output / 'archive.html').write_text(template, encoding='utf-8', newline='\n')
+    (output / 'dashboard.json').write_text(json.dumps(snapshot, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
     (output / 'records.json').write_text(json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
-    for name in ('styles.css', 'app.js'):
+    for name in ('styles.css', 'app.js', 'dashboard.js'):
         shutil.copyfile(root / 'web' / name, output / name)
     (output / '.nojekyll').write_text('', encoding='utf-8')
     return {'records': len(records), 'ceremonial': sum(r['ceremonial'] for r in records),
-            'artifact_bytes': sum((output / name).stat().st_size for name in ('index.html', 'records.json', 'styles.css', 'app.js', '.nojekyll'))}
+            'artifact_bytes': sum((output / name).stat().st_size for name in artifact_names)}
 
 
 def main():

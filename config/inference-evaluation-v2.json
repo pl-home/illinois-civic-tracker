@@ -1,0 +1,18 @@
+{
+  "experiment_id": "qwen32b-deepinfra-eval-v2",
+  "expected_cases": 10,
+  "corpus_sha256": "4cb66131978e5e3d233f91528c3f46f81f9a7688cded0526b4c8f5b6bcbd6574",
+  "prompt_version": "civic-classification-v2-quarantine-evidence",
+  "taxonomy_version": "six-topics-v1",
+  "approval_scope": "separate manual security/evidence evaluation; no routine inference",
+  "split_counts": {"development": 2, "heldout": 8},
+  "quality_thresholds": {
+    "heldout_valid_output_rate": 1.0,
+    "heldout_category_accuracy": 0.9,
+    "heldout_topic_precision": 0.9,
+    "heldout_topic_recall": 0.85,
+    "unsupported_quotes": 0
+  },
+  "minimum_real_website_deltas": 5,
+  "limits": {"max_model_calls": 30, "max_reserved_usd": "0.60", "routine_inference_enabled": false}
+}

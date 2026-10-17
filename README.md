@@ -2,7 +2,7 @@
 
 A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
 
-**Browse the initial historical collection:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The basic browser was brought forward on October 17, 2026. It contains the reviewed 134-item Fritts export, search, measure-type filters, expandable source fields and a show-ceremonial option. It is a historical preview with explicit coverage limits; automatic updates and digest delivery remain undeployed. See [browsing-page design and operation](docs/BROWSING_PAGE.md).
+**Browse the tracker:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The homepage shows recent actions and recorded votes for Fritts, Arellano, LaHood, Durbin and Duckworth, plus committee links and a rolling month of posted meetings. Source dates and incomplete coverage are explicit. This is a manually collected public snapshot; automatic updates and digest delivery remain undeployed. See [dashboard sources and limits](docs/DASHBOARD.md). The original 134-item Fritts export remains available in the historical archive. Public facts only; no private advocacy notes are published.
 
 ## Current status
 
@@ -19,7 +19,7 @@ The [first Qwen3 32B / DeepInfra evaluation](docs/INFERENCE_EVALUATION_RESULTS.m
 - Illinois collection nightly at 23:00 America/Chicago.
 - Factual digest Mondays at 06:00 America/Chicago, including a quiet-week health summary.
 - FTP XML first; one conditional floor-vote CSV retrieval, committee assignments, bounded party pages and Capitol Fax feed metadata.
-- No AI in routine operation. Federal sponsorship is handled by owner-managed Congress.gov alerts.
+- No AI in routine operation. Federal sponsorship monitoring remains owner-managed through Congress.gov alerts; the browsing snapshot includes a bounded historical federal import.
 - Compact public records; positions, correspondence and contact packets remain private.
 
 No nightly collection or digest workflow is enabled yet. The only schedule in this repository is a time-limited M0 metadata observation, ending automatically after the verification window.
@@ -34,7 +34,7 @@ No nightly collection or digest workflow is enabled yet. The only schedule in th
 | docs/evidence | Compact public verification outcomes, not raw source copies |
 | data | Reserved for M1 compact records and ledgers |
 | web | Accessible static browser template, styling and filter enhancement |
-| .github/workflows | Tests, historical Pages publication, M0 source access and bounded observations |
+| .github/workflows | Tests, Pages publication, M0 source access and bounded observations |
 
 Raw downloads and temporary inspection stay in ignored scratch storage. No full vote CSV, PDF, ZIP or HTML snapshot is committed. The eventual data budget is below 100 MB; broader history growth must be measured before deployment.
 

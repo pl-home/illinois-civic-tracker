@@ -24,6 +24,7 @@ class FakeClient:
     def __init__(self, cases, mode=None):
         self.cases = iter(cases)
         self.calls = []
+        self.payloads = []
         self.mode = mode
 
     def call(self, route, payload=None):
@@ -35,9 +36,12 @@ class FakeClient:
                 'context_length': 40960, 'supported_parameters': ['structured_outputs', 'response_format', 'max_tokens', 'reasoning', 'seed', 'temperature'],
                 'pricing': {'prompt': '0.00000008', 'completion': '0.00000028'}}]}}
         case = next(self.cases)
+        self.payloads.append(payload)
         if self.mode == 'timeout':
             raise TimeoutError('sensitive exception text must not appear in a public receipt')
         value = prediction(case)
+        if self.mode == 'omit-topics':
+            value['topics'] = []
         if self.mode == 'bad-quote':
             value['quote'] = 'This sentence was never in the source.'
         if self.mode == 'wrong-label':
@@ -62,7 +66,9 @@ class EvaluationTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
-        for relative in ['config/inference-plan.json', 'config/inference-evaluation.json', 'tests/fixtures/inference-evaluation.json']:
+        for relative in ['config/inference-plan.json', 'config/inference-evaluation.json',
+                         'config/inference-evaluation-v2.json', 'tests/fixtures/inference-evaluation.json',
+                         'tests/fixtures/inference-evaluation-v2.json']:
             target = self.root / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / relative, target)
@@ -215,6 +221,129 @@ class EvaluationTests(unittest.TestCase):
             with self.assertRaises(ev.EvaluationError) as caught:
                 client.call('/key')
         self.assertNotIn('synthetic-secret', str(caught.exception))
+
+    def test_v2_quarantines_instruction_attacks_and_regression_before_any_request(self):
+        settings, corpus = ev.load(self.root, 'v2')
+        quarantined = [case for case in corpus['cases'] if ev.quarantine_reason(case)]
+        self.assertEqual(len(quarantined), 5)
+        self.assertTrue(all(case.get('expected_quarantine') for case in quarantined))
+        v1_case = next(c for c in self.corpus['cases'] if c['source_id'] == 'heldout-25')
+        self.assertEqual(ev.quarantine_reason(v1_case), 'instruction-like-source-content')
+        with self.assertRaisesRegex(ev.EvaluationError, 'case-quarantined'):
+            ev.request_for(quarantined[0], 'v2')
+        self.assertIsNone(ev.quarantine_reason({'text': 'Read the instructions for how to vote by mail.'}))
+
+    def test_v2_topic_evidence_requires_domain_anchor_not_just_label_or_exact_quote(self):
+        _, corpus = ev.load(self.root, 'v2')
+        case = next(c for c in corpus['cases'] if c['source_id'] == 'v2-heldout-housing-policy')
+        good = {'source_id': case['source_id'], 'category': 'legislation',
+                'quote': 'The bill requires landlords to return unused tenant security deposits',
+                'topics': [{'label': 'housing', 'quote': 'landlords to return unused tenant security deposits'}]}
+        self.assertEqual(ev.validate_prediction(good, case, 'v2'), good)
+        for quote in ('The bill requires', 'housing bill passed today'):
+            bad = {**good, 'topics': [{'label': 'housing', 'quote': quote}]}
+            with self.assertRaises(ev.EvaluationError):
+                ev.validate_prediction(bad, case, 'v2')
+
+    def test_v2_has_one_proven_site_delta_and_marks_snapshotless_claims_as_synthetic(self):
+        settings, corpus = ev.load(self.root, 'v2')
+        real = [c for c in corpus['cases'] if c.get('origin') == 'archived-website-delta']
+        self.assertEqual(len(real), 1)
+        evidence = real[0]['evidence']
+        self.assertEqual(evidence['evidence_kind'], 'archived-diff')
+        self.assertNotEqual(evidence['before_content_sha256'], evidence['after_content_sha256'])
+        self.assertTrue(all(c.get('origin') != 'archived-website-delta' for c in corpus['cases'] if c not in real))
+        self.assertEqual(settings['limits']['max_model_calls'], 30)
+        self.assertEqual(settings['limits']['max_reserved_usd'], '0.60')
+
+    def test_v2_rejects_site_delta_without_paired_source_evidence(self):
+        _, corpus = ev.load(self.root, 'v2')
+        mutated = copy.deepcopy(corpus)
+        real = next(c for c in mutated['cases'] if c.get('origin') == 'archived-website-delta')
+        real.pop('evidence')
+        ev.write(self.root / 'tests/fixtures/inference-evaluation-v2.json', mutated)
+        config_path = self.root / 'config/inference-evaluation-v2.json'
+        settings = json.loads(config_path.read_text(encoding='utf-8'))
+        settings['corpus_sha256'] = ev.digest(mutated)
+        ev.write(config_path, settings)
+        with self.assertRaisesRegex(ev.EvaluationError, 'website-delta-evidence-required'):
+            ev.load(self.root, 'v2')
+
+    def test_v2_execution_never_sends_quarantined_text_and_stays_disabled(self):
+        settings, corpus = ev.load(self.root, 'v2')
+        reserved = ev.reserve(self.root, 'v2')
+        self.assertEqual(reserved['requests'], len(ev.model_cases(corpus)))
+        self.assertEqual(reserved['maximum_reserved_usd'], '0.10')
+        client = FakeClient(ev.model_cases(corpus))
+        result = ev.execute(self.root, client, 'v2')
+        self.assertEqual(client.calls.count('/chat/completions'), len(ev.model_cases(corpus)))
+        sent = json.dumps(client.payloads, ensure_ascii=False)
+        for case in corpus['cases']:
+            if case.get('expected_quarantine'):
+                self.assertNotIn(case['text'], sent)
+        self.assertEqual(result['attempted_requests'], len(ev.model_cases(corpus)))
+        self.assertTrue(result['quarantine_passed'])
+        self.assertFalse(result['routine_inference_enabled'])
+        self.assertEqual(result['scores']['heldout']['cases'], 3)
+        self.assertEqual(result['real_website_delta_cases'], 1)
+        self.assertFalse(result['real_change_coverage_sufficient'])
+        self.assertFalse(result['quality_gate_passed'])
+        self.assertEqual(settings['quality_thresholds']['heldout_category_accuracy'], 0.9)
+        self.assertEqual(settings['quality_thresholds']['heldout_topic_precision'], 0.9)
+        self.assertEqual(settings['quality_thresholds']['heldout_topic_recall'], 0.85)
+
+    def test_v2_input_hash_and_quarantine_annotation_are_fail_closed(self):
+        _, corpus = ev.load(self.root, 'v2')
+        mutated = copy.deepcopy(corpus)
+        attack = next(c for c in mutated['cases'] if c.get('expected_quarantine'))
+        attack['expected_quarantine'] = False
+        ev.write(self.root / 'tests/fixtures/inference-evaluation-v2.json', mutated)
+        config_path = self.root / 'config/inference-evaluation-v2.json'
+        settings = json.loads(config_path.read_text())
+        settings['corpus_sha256'] = ev.digest(mutated)
+        ev.write(config_path, settings)
+        with self.assertRaisesRegex(ev.EvaluationError, 'quarantine-annotation-mismatch'):
+            ev.load(self.root, 'v2')
+
+    def test_v2_call_and_reservation_caps_are_enforced_before_ledger_write(self):
+        config = self.root / 'config/inference-evaluation-v2.json'
+        settings = json.loads(config.read_text(encoding='utf-8'))
+        settings['limits']['max_model_calls'] = 4
+        ev.write(config, settings)
+        ledger_path, _ = ev.paths(self.root, 'v2')
+        with self.assertRaisesRegex(ev.EvaluationError, 'trial-budget-exhausted'):
+            ev.reserve(self.root, 'v2')
+        self.assertFalse(ledger_path.exists())
+        settings['limits']['max_model_calls'] = 30
+        settings['limits']['max_reserved_usd'] = '0.61'
+        ev.write(config, settings)
+        with self.assertRaisesRegex(ev.EvaluationError, 'v2-limits-invalid'):
+            ev.load(self.root, 'v2')
+
+    def test_v2_reservation_counts_unknown_v1_liability_toward_shared_trial_cap(self):
+        v1_ledger, _ = ev.paths(self.root, 'v1')
+        ev.write(v1_ledger, {'schema_version': 1, 'trial_ceiling_usd': '20', 'experiments': [
+            {'experiment_id': 'prior-v1', 'entries': [
+                {'reserved_usd': '19.95', 'charged_usd': None}]}]})
+        v2_ledger, _ = ev.paths(self.root, 'v2')
+        with self.assertRaisesRegex(ev.EvaluationError, 'trial-budget-exhausted'):
+            ev.reserve(self.root, 'v2')
+        self.assertFalse(v2_ledger.exists())
+
+    def test_v2_undefined_topic_precision_cannot_pass_quality_gate(self):
+        _, corpus = ev.load(self.root, 'v2')
+        ev.reserve(self.root, 'v2')
+        result = ev.execute(self.root, FakeClient(ev.model_cases(corpus), 'omit-topics'), 'v2')
+        heldout = result['scores']['heldout']
+        self.assertIsNone(heldout['topic_precision'])
+        self.assertEqual(heldout['topic_recall'], 0)
+        self.assertFalse(result['quality_gate_passed'])
+
+    def test_repeating_a_real_delta_does_not_inflate_real_change_coverage(self):
+        _, corpus = ev.load(self.root, 'v2')
+        real = next(c for c in corpus['cases'] if c.get('origin') == 'archived-website-delta')
+        repeated = {'cases': [{**copy.deepcopy(real), 'source_id': 'copy-' + str(i)} for i in range(5)]}
+        self.assertEqual(ev.distinct_real_deltas(repeated), 1)
 
 
 if __name__ == '__main__':

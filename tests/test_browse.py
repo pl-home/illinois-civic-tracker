@@ -42,11 +42,14 @@ class BrowseTests(unittest.TestCase):
             first = {p.name: p.read_bytes() for p in output.iterdir()}
             self.assertEqual(build(ROOT, output), report)
             self.assertEqual({p.name: p.read_bytes() for p in output.iterdir()}, first)
-            self.assertEqual(set(first), {'index.html', 'styles.css', 'app.js', 'records.json', '.nojekyll'})
+            self.assertEqual(set(first), {'index.html', 'archive.html', 'dashboard.json', 'styles.css', 'app.js', 'dashboard.js', 'records.json', '.nojekyll'})
             self.assertLess(report['artifact_bytes'], 500_000)
             for name in first:
                 self.assertEqual(violations(first[name].decode()), [], name)
-            html = BeautifulSoup(first['index.html'].decode(), 'html.parser')
+            homepage = BeautifulSoup(first['index.html'].decode(), 'html.parser')
+            self.assertEqual(len(homepage.select('.member-card')), 5)
+            self.assertIn('witness', homepage.get_text().lower())
+            html = BeautifulSoup(first['archive.html'].decode(), 'html.parser')
             cards = html.select('.record')
             payload = json.loads(first['records.json'])
             self.assertEqual(len(cards), 134)
@@ -61,6 +64,7 @@ class BrowseTests(unittest.TestCase):
                 self.assertEqual(item.select_one('.record-links a')['href'], record['official_url'])
                 self.assertIn(record['last_action_date'], item.get_text())
             self.assertNotIn('{{', first['index.html'].decode())
+            self.assertNotIn('{{', first['archive.html'].decode())
 
     def test_untrusted_source_text_is_rendered_as_text(self):
         record = records_from_export(FIXTURE, 104, 'fritts')[0]

@@ -100,8 +100,12 @@ def parse_hearing_details(body, source_url):
             for link in cells[5].find_all('a', href=True):
                 if link.get('title') == 'View Witness Slips':
                     item['witness_results_url'] = official_link(source_url, link['href'])
-                if 'createwitnessslip' in link['href'].casefold():
-                    item['witness_slip_url'] = official_link(source_url, link['href'])
+                if any(part in link['href'].casefold() for part in ('createwitnessslip', '/witnessslip/create')):
+                    submission = urljoin(source_url, link['href'])
+                    parsed = urlsplit(submission)
+                    if parsed.scheme != 'https' or parsed.netloc not in {'ilga.gov', 'my.ilga.gov'}:
+                        raise ValueError('Unexpected witness submission host')
+                    item['witness_slip_url'] = submission
             # A historical results link is not an available witness-slip submission form.
             key = (item['bill'], item['amendment'], item['motion'])
             if key in by_key and by_key[key] != item:

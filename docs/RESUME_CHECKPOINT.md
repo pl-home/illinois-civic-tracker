@@ -1,5 +1,9 @@
 # Current checkpoint
 
+October 17 homepage revision: the five-member dashboard is implemented and locally validated (92 tests, privacy scan, mobile/browser review). Read DASHBOARD.md for source dates, the 97-event snapshot, 23 schedule receipts and remaining live witness-slip gates. Automatic source refresh remains off. The original export is preserved at archive.html. A separate v2 inference experiment strengthens quarantine and evidence checks; its single actual website delta cannot meet the five-delta activation gate. Publication and bounded v2 results will be recorded below.
+
+## Earlier checkpoint (preserved context)
+
 Updated October 17, 2026 after the owner brought basic browsing into the first release.
 
 - The [public browsing page](https://pl-home.github.io/illinois-civic-tracker/) is live. It renders the reviewed 134-item Fritts sponsorship export, with 24 ceremonial entries hidden by default. Search, measure-type filtering, expandable source fields, item permalinks and a compact public JSON download work. It is a historical preview, not a current-activity feed.

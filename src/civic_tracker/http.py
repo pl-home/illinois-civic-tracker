@@ -5,13 +5,13 @@ from urllib.parse import urlsplit
 from urllib.error import HTTPError
 import hashlib,json,os,time,ssl
 
-ALLOWED={'ftp.ilga.gov','ilga.gov','capitolfax.com','leecodemocrats.com','leecountyilgop.org'}
+ALLOWED={'ftp.ilga.gov','ilga.gov','my.ilga.gov','capitolfax.com','leecodemocrats.com','leecountyilgop.org'}
 
 
 def validate_url(url):
     p=urlsplit(url)
     if p.scheme!='https' or p.netloc not in ALLOWED:raise ValueError('Unapproved source host')
-    if p.netloc=='ilga.gov' and any(p.path.casefold().startswith(prefix) for prefix in ['/account','/admin','/search','/api','/mylegislation']):
+    if p.netloc in {'ilga.gov','my.ilga.gov'} and any(p.path.casefold().startswith(prefix) for prefix in ['/account','/admin','/search','/api','/mylegislation']):
         raise ValueError('Logged-in or disallowed main-site path')
 
 
@@ -35,7 +35,7 @@ class Client:
         opener=build_opener(*handlers)
         request=Request(url,method=method,headers={'User-Agent':self.config['user_agent'],**(headers or {})})
         try:
-            if host=='ilga.gov':
+            if host in {'ilga.gov','my.ilga.gov'}:
                 try:fd=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
                 except FileExistsError:raise RuntimeError('Another main-site request owns the rate gate') from None
                 clock=self.state_dir/'main-request-clock.json'

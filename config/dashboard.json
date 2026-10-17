@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "recent_days": 30,
+  "calendar_months": 1,
+  "members": [
+    {"id":"fritts","name":"Bradley Fritts","office":"Illinois House · District 74","jurisdiction":"IL","chamber":"House","official_id":"3428","url":"https://ilga.gov/House/Members/Details/3428"},
+    {"id":"arellano","name":"Li Arellano, Jr.","office":"Illinois Senate · District 37","jurisdiction":"IL","chamber":"Senate","official_id":"3383","url":"https://ilga.gov/Senate/Members/Details/3383"},
+    {"id":"lahood","name":"Darin LaHood","office":"U.S. House · Illinois 16","jurisdiction":"US","chamber":"House","official_id":"L000585","url":"https://www.congress.gov/member/darin-lahood/L000585","committees":[
+      {"name":"Ways and Means","url":"https://waysandmeans.house.gov","match":"Ways and Means"},
+      {"name":"Intelligence","url":"https://intelligence.house.gov","match":"Intelligence"},
+      {"name":"Select Committee on the CCP","url":"https://chinaselectcommittee.house.gov","match":"Chinese Communist Party"}]},
+    {"id":"durbin","name":"Dick Durbin","office":"U.S. Senate · Illinois","jurisdiction":"US","chamber":"Senate","official_id":"D000563","url":"https://www.congress.gov/member/richard-durbin/D000563","committees":[
+      {"name":"Agriculture, Nutrition, and Forestry","url":"https://www.agriculture.senate.gov","match":"Agriculture"},
+      {"name":"Appropriations","url":"https://www.appropriations.senate.gov","match":"Appropriations"},
+      {"name":"Judiciary","url":"https://www.judiciary.senate.gov","match":"Judiciary"}]},
+    {"id":"duckworth","name":"Tammy Duckworth","office":"U.S. Senate · Illinois","jurisdiction":"US","chamber":"Senate","official_id":"D000622","url":"https://www.congress.gov/member/tammy-duckworth/D000622","committees":[
+      {"name":"Armed Services","url":"https://www.armed-services.senate.gov","match":"Armed Services"},
+      {"name":"Commerce, Science, and Transportation","url":"https://www.commerce.senate.gov","match":"Commerce"},
+      {"name":"Foreign Relations","url":"https://www.foreign.senate.gov","match":"Foreign Relations"},
+      {"name":"Veterans’ Affairs","url":"https://www.veterans.senate.gov","match":"Veterans"}]}
+  ],
+  "federal_committee_assignment_sources": ["https://www.senate.gov/general/committee_assignments/assignments.htm","https://clerk.house.gov/members/L000585","https://www.house.gov/committees"],
+  "federal_committee_assignments_reviewed_on": "2026-10-17"
+}

@@ -1,6 +1,13 @@
 name: One bounded hosted inference evaluation
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: Frozen evaluation version
+        type: choice
+        required: true
+        default: v2
+        options: [v1, v2]
 permissions:
   contents: write
 # Share the existing state-writer gate, including the bounded observer. Checkout
@@ -13,6 +20,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      EVAL_VERSION: ${{ inputs.version || 'v1' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -25,25 +34,33 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - name: Reserve the complete evaluation budget
         id: reserve
-        run: python -m civic_tracker.inference_eval reserve
+        run: python -m civic_tracker.inference_eval reserve --version "$EVAL_VERSION"
       - name: Persist reservation before exposing the inference credential
         id: persist
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/inference-evaluation-ledger.json
+          if [ "$EVAL_VERSION" = 'v2' ]; then
+            git add data/inference-evaluation-v2-ledger.json
+          else
+            git add data/inference-evaluation-ledger.json
+          fi
           git commit -m 'Reserve one bounded hosted inference evaluation'
           git push origin main
       - name: Execute once with the approved provider
         if: steps.persist.outcome == 'success'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python -m civic_tracker.inference_eval execute
+        run: python -m civic_tracker.inference_eval execute --version "$EVAL_VERSION"
       - name: Preserve success or failure receipts
         if: always() && steps.persist.outcome == 'success'
         run: |
           python -m civic_tracker.privacy
-          git add data/inference-evaluation-ledger.json docs/evidence/inference-evaluation.json
+          if [ "$EVAL_VERSION" = 'v2' ]; then
+            git add data/inference-evaluation-v2-ledger.json docs/evidence/inference-evaluation-v2.json
+          else
+            git add data/inference-evaluation-ledger.json docs/evidence/inference-evaluation.json
+          fi
           if git diff --cached --quiet; then
             echo 'No additional receipt changes; original reservation remains authoritative.'
           else
