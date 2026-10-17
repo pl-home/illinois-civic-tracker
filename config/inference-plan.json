@@ -1,0 +1,18 @@
+{
+  "status": "planning-only",
+  "enabled": false,
+  "model_candidate": "qwen/qwen3-32b",
+  "approved_model": null,
+  "approved_providers": [],
+  "monthly_budget_usd": null,
+  "secret_name_for_later_activation": "OPENROUTER_API_KEY",
+  "proposed_provider_policy": {
+    "data_collection": "deny",
+    "require_parameters": true,
+    "allow_fallbacks": false
+  },
+  "scope": ["optional topic suggestions", "optional party-content categories"],
+  "authoritative_fact_updates_allowed": false,
+  "private_notes_allowed": false,
+  "runtime_implementation_present": false
+}

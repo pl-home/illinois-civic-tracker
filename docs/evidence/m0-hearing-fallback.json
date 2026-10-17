@@ -1,0 +1,907 @@
+{
+  "observed_at": "2026-10-17T00:49:52.917020+00:00",
+  "method": "Public hearing details parsed without the disallowed range API. Five nonempty page samples, twenty distinct bill identities cross-checked with FTP XML; hearing times cross-checked against public committee history rows. XML does not establish hearing time.",
+  "static_committee_pdf_nonempty_validation": "pending",
+  "history_sources": [
+    {
+      "url": "https://ilga.gov/House/Committees/Hearings/3062",
+      "sha256": "5a731f72519a145231c6866afbaf7a2264c77bf01110ef2af02a0cfceac528cb"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Hearings/3130",
+      "sha256": "04e126a74c4fc42d24b33531abc2411266093628379b51ab61ec0de29d67c800"
+    }
+  ],
+  "range_api_used": false,
+  "historical_only": true,
+  "active_witness_form_verified": false,
+  "sources": [
+    {
+      "url": "https://ilga.gov/Senate/hearings/details/3130/23193",
+      "status": 200,
+      "bytes": 66597,
+      "sha256": "1d08e9c7e8e3af9ab36c4078c4dfefaf6c857151a87e6e4f90ea031ad1e7e527",
+      "observed_at": "2026-10-17T00:44:51.934581+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/hearings/details/3062/23132",
+      "status": 200,
+      "bytes": 71948,
+      "sha256": "fd14d164bf66319ba7a3b2be7f031c171edfe1f2ed57544b012cd0e011caa37d",
+      "observed_at": "2026-10-17T00:42:55.249669+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/hearings/details/3062/23084",
+      "status": 200,
+      "bytes": 66015,
+      "sha256": "8519909a4995b77241bb768909ca963d07e7a25ba4a24292ce123567568417cc",
+      "observed_at": "2026-10-17T00:43:15.264799+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/hearings/details/3062/22989",
+      "status": 200,
+      "bytes": 81719,
+      "sha256": "f5716196a826b398d8dc04841f9bd8628c76229d5327af041608ad51ea358d82",
+      "observed_at": "2026-10-17T00:45:11.957410+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "status": 200,
+      "bytes": 230986,
+      "sha256": "41f8c0bb4076b45110cbe85efc362df7c606edf3d4793f89144271d29874bb5a",
+      "observed_at": "2026-10-17T00:45:32.371093+00:00"
+    }
+  ],
+  "hearings": [
+    {
+      "source_url": "https://ilga.gov/Senate/hearings/details/3130/23193",
+      "chamber": "Senate",
+      "committee_id": "3130",
+      "hearing_id": "23193",
+      "title": "Senate Pensions Hearing Details - 104th General Assembly (2025-2026)",
+      "raw_date": "5/30/2026 12:00 PM",
+      "date_local": "2026-05-30T12:00",
+      "timezone_assumption": "America/Chicago",
+      "source_timezone_explicit": false,
+      "location": "409 Capitol  Springfield, IL",
+      "raw_posting_date": "5/29/2026 8:23 PM",
+      "posting_date_local": "2026-05-29T20:23",
+      "history_time_matches": true,
+      "posted_item_count": 1
+    },
+    {
+      "source_url": "https://ilga.gov/House/hearings/details/3062/23132",
+      "chamber": "House",
+      "committee_id": "3062",
+      "hearing_id": "23132",
+      "title": "House Judiciary - Civil Committee Hearing Details - 104th General Assembly (2025-2026)",
+      "raw_date": "5/27/2026 8:00 AM",
+      "date_local": "2026-05-27T08:00",
+      "timezone_assumption": "America/Chicago",
+      "source_timezone_explicit": false,
+      "location": "Room 114 Capitol Building  Springfield, IL",
+      "raw_posting_date": "5/21/2026 11:12 PM",
+      "posting_date_local": "2026-05-21T23:12",
+      "history_time_matches": true,
+      "posted_item_count": 4
+    },
+    {
+      "source_url": "https://ilga.gov/House/hearings/details/3062/23084",
+      "chamber": "House",
+      "committee_id": "3062",
+      "hearing_id": "23084",
+      "title": "House Judiciary - Civil Committee Hearing Details - 104th General Assembly (2025-2026)",
+      "raw_date": "5/20/2026 8:00 AM",
+      "date_local": "2026-05-20T08:00",
+      "timezone_assumption": "America/Chicago",
+      "source_timezone_explicit": false,
+      "location": "Room 114 Capitol Building  Springfield, IL",
+      "raw_posting_date": "5/19/2026 12:33 PM",
+      "posting_date_local": "2026-05-19T12:33",
+      "history_time_matches": true,
+      "posted_item_count": 1
+    },
+    {
+      "source_url": "https://ilga.gov/House/hearings/details/3062/22989",
+      "chamber": "House",
+      "committee_id": "3062",
+      "hearing_id": "22989",
+      "title": "House Judiciary - Civil Committee Hearing Details - 104th General Assembly (2025-2026)",
+      "raw_date": "5/13/2026 8:00 AM",
+      "date_local": "2026-05-13T08:00",
+      "timezone_assumption": "America/Chicago",
+      "source_timezone_explicit": false,
+      "location": "114 and Virtual Room 1 Capitol Building  Springfield, IL",
+      "raw_posting_date": "5/07/2026 2:38 PM",
+      "posting_date_local": "2026-05-07T14:38",
+      "history_time_matches": true,
+      "posted_item_count": 9
+    },
+    {
+      "source_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "chamber": "House",
+      "committee_id": "3062",
+      "hearing_id": "22570",
+      "title": "House Judiciary - Civil Committee Hearing Details - 104th General Assembly (2025-2026)",
+      "raw_date": "3/19/2026 8:00 AM",
+      "date_local": "2026-03-19T08:00",
+      "timezone_assumption": "America/Chicago",
+      "source_timezone_explicit": false,
+      "location": "114 and Virtual Room 1 Capitol Building  Springfield, IL",
+      "raw_posting_date": "3/13/2026 3:09 PM",
+      "posting_date_local": "2026-03-13T15:09",
+      "history_time_matches": true,
+      "posted_item_count": 88
+    }
+  ],
+  "parsed_posted_items": 103,
+  "distinct_bills_compared": 20,
+  "identity_matches": 20,
+  "history_time_matches": 5,
+  "comparisons": [
+    {
+      "bill": "SB3403",
+      "hearing_url": "https://ilga.gov/Senate/hearings/details/3130/23193",
+      "hearing_date_local": "2026-05-30T12:00",
+      "posted_item": {
+        "bill": "SB3403",
+        "amendment": "HFA1",
+        "raw_label": "SB3403 (HFA1)",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=SB&DocNum=3403&GAID=18&SessionID=114&LegID=166331",
+        "motion": "Concur",
+        "vote_motion": "Recommend Do Adopt",
+        "vote_total_raw": "9 - 0 - 0",
+        "vote_result": "Passed",
+        "witness_results_url": "https://ilga.gov/Senate/hearings/Results?CommitteeId=3130&HearingId=23193&CClerkVoteId=47407&LegislationDocumentId=211264&LegislationId=166331&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400SB3403.xml",
+        "sha256": "c2c44b149a7764eb5cdc6e6f4a43fa92098caa96a2432974559eec2e04db949b",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for SB 3403",
+      "short_description": "PEN CD-BD OF INVESTMENT AUDIT",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "2/17/2026",
+          "action": "Assigned to Pensions"
+        },
+        {
+          "date": "3/4/2026",
+          "action": "Do Pass Pensions;  007-000-000"
+        },
+        {
+          "date": "5/29/2026",
+          "action": "House Floor Amendment No. 1 Motion to Concur Assignments Referred to Pensions"
+        },
+        {
+          "date": "5/30/2026",
+          "action": "House Floor Amendment No. 1 Motion To Concur Recommended Do Adopt Pensions;  009-000-000"
+        }
+      ]
+    },
+    {
+      "bill": "HB5000",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/23132",
+      "hearing_date_local": "2026-05-27T08:00",
+      "posted_item": {
+        "bill": "HB5000",
+        "amendment": "SFA2",
+        "raw_label": "HB5000 (SFA2)",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=5000&GAID=18&SessionID=114&LegID=166420",
+        "motion": "Concur",
+        "vote_motion": "Recommends Be Adopted",
+        "vote_total_raw": "19 - 0 - 0",
+        "vote_result": "Recommends Be Adopted",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=23132&CClerkVoteId=47248&LegislationDocumentId=210820&LegislationId=166420&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5000.xml",
+        "sha256": "08fa1e8c53aa99a99842b2bf2c85359c2791d58f6887bbd7e7798a2904545dc7",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 5000",
+      "short_description": "HEALTH FACILITIES PLANNING",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "3/4/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/19/2026",
+          "action": "Do Pass / Short Debate Judiciary - Civil Committee;  020-000-000"
+        },
+        {
+          "date": "5/26/2026",
+          "action": "Senate Floor Amendment No. 2 Motion to Concur Rules Referred to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/27/2026",
+          "action": "Senate Floor Amendment No. 2 Motion to Concur Recommends Be Adopted Judiciary - Civil Committee;  019-000-000"
+        }
+      ]
+    },
+    {
+      "bill": "HB5281",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/23132",
+      "hearing_date_local": "2026-05-27T08:00",
+      "posted_item": {
+        "bill": "HB5281",
+        "amendment": "SFA2",
+        "raw_label": "HB5281 (SFA2)",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=5281&GAID=18&SessionID=114&LegID=166999",
+        "motion": "Concur",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=23132&CClerkVoteId=0&LegislationDocumentId=210985&LegislationId=166999&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5281.xml",
+        "sha256": "85e6ebdbe6da0dd1b09e36a6c4fd5d4816b1235c2fe1b7bd61b370e062f7f890",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 5281",
+      "short_description": "VEH CD-RECORDS",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "5/26/2026",
+          "action": "Senate Floor Amendment No. 2 Motion to Concur Rules Referred to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "HB5284",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/23132",
+      "hearing_date_local": "2026-05-27T08:00",
+      "posted_item": {
+        "bill": "HB5284",
+        "amendment": "SFA4",
+        "raw_label": "HB5284 (SFA4)",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=5284&GAID=18&SessionID=114&LegID=167006",
+        "motion": "Concur",
+        "vote_motion": "Recommends Be Adopted",
+        "vote_total_raw": "15 - 4 - 0",
+        "vote_result": "Recommends Be Adopted",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=23132&CClerkVoteId=47247&LegislationDocumentId=211151&LegislationId=167006&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5284.xml",
+        "sha256": "d2a1a25fab0d621ef6dcbf8b1796ef74c8a180dc973040c4db0feb07d16317be",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 5284",
+      "short_description": "HUMAN RIGHTS-MENOPAUSE CARE",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "3/25/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/25/2026",
+          "action": "Motion Filed to Suspend Rule 21 Judiciary - Civil Committee;  Rep. Robyn Gabel"
+        },
+        {
+          "date": "3/26/2026",
+          "action": "Do Pass / Short Debate Judiciary - Civil Committee;  013-007-000"
+        },
+        {
+          "date": "4/14/2026",
+          "action": "House Floor Amendment No. 1 Rules Refers to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "SB3561",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/23132",
+      "hearing_date_local": "2026-05-27T08:00",
+      "posted_item": {
+        "bill": "SB3561",
+        "amendment": null,
+        "raw_label": "SB3561",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=SB&DocNum=3561&GAID=18&SessionID=114&LegID=166611",
+        "motion": "",
+        "vote_motion": "Do Pass",
+        "vote_total_raw": "19 - 0 - 0",
+        "vote_result": "Do Pass - Short Debate",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=23132&CClerkVoteId=47246&LegislationDocumentId=207957&LegislationId=166611&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400SB3561.xml",
+        "sha256": "523ad8d5a035d5ca0d837ebbce05c2286603babb13f93178015b8799ffd12c7b",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for SB 3561",
+      "short_description": "BUY-NOW-PAY-LATER ACT",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "5/21/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/27/2026",
+          "action": "Do Pass / Short Debate Judiciary - Civil Committee;  019-000-000"
+        }
+      ]
+    },
+    {
+      "bill": "SB3020",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/23084",
+      "hearing_date_local": "2026-05-20T08:00",
+      "posted_item": {
+        "bill": "SB3020",
+        "amendment": "HFA3",
+        "raw_label": "SB3020 (HFA3)",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=SB&DocNum=3020&GAID=18&SessionID=114&LegID=165558",
+        "motion": "",
+        "vote_motion": "Recommends Be Adopted",
+        "vote_total_raw": "12 - 6 - 0",
+        "vote_result": "Recommends Be Adopted",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=23084&CClerkVoteId=47114&LegislationDocumentId=211100&LegislationId=165558&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400SB3020.xml",
+        "sha256": "7a17a6a4148113615afac3b2d8171dadee7f6c289086e10f3a13728c00bf7b5b",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for SB 3020",
+      "short_description": "DOMESTIC VIOLENCE-HARASSMENT",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "4/27/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/5/2026",
+          "action": "House Committee Amendment No. 1 Rules Refers to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/13/2026",
+          "action": "House Committee Amendment No. 1 Adopted in Judiciary - Civil Committee;  by Voice Vote"
+        },
+        {
+          "date": "5/13/2026",
+          "action": "Do Pass as Amended / Short Debate Judiciary - Civil Committee;  013-007-000"
+        }
+      ]
+    },
+    {
+      "bill": "SB1573",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22989",
+      "hearing_date_local": "2026-05-13T08:00",
+      "posted_item": {
+        "bill": "SB1573",
+        "amendment": null,
+        "raw_label": "SB1573",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=SB&DocNum=1573&GAID=18&SessionID=114&LegID=160318",
+        "motion": "",
+        "vote_motion": "Do Pass",
+        "vote_total_raw": "20 - 0 - 0",
+        "vote_result": "Do Pass - Short Debate",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22989&CClerkVoteId=46961&LegislationDocumentId=200105&LegislationId=160318&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400SB1573.xml",
+        "sha256": "c59cff1a688cfe9f7fa96b728e46873c595ad3737e1e0da63ff4475d5ff16975",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for SB 1573",
+      "short_description": "ELECTRONIC NOTARY FEE WAIVER",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "4/27/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/13/2026",
+          "action": "Do Pass / Short Debate Judiciary - Civil Committee;  020-000-000"
+        }
+      ]
+    },
+    {
+      "bill": "SB2822",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22989",
+      "hearing_date_local": "2026-05-13T08:00",
+      "posted_item": {
+        "bill": "SB2822",
+        "amendment": null,
+        "raw_label": "SB2822",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=SB&DocNum=2822&GAID=18&SessionID=114&LegID=165018",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22989&CClerkVoteId=0&LegislationDocumentId=206366&LegislationId=165018&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400SB2822.xml",
+        "sha256": "035748ffa6ce3e6dea5ce7878c9dcb024a6b379e613315a0d049cc667a185d6c",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for SB 2822",
+      "short_description": "DIGITAL PURCHASE DISCLOSURES",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "5/12/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/12/2026",
+          "action": "Motion Filed to Suspend Rule 21 Judiciary - Civil Committee;  Rep. Robyn Gabel"
+        }
+      ]
+    },
+    {
+      "bill": "SB2951",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22989",
+      "hearing_date_local": "2026-05-13T08:00",
+      "posted_item": {
+        "bill": "SB2951",
+        "amendment": null,
+        "raw_label": "SB2951",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=SB&DocNum=2951&GAID=18&SessionID=114&LegID=165348",
+        "motion": "",
+        "vote_motion": "Do Pass As Amended",
+        "vote_total_raw": "20 - 0 - 0",
+        "vote_result": "Do Pass As Amended - Short Debate",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22989&CClerkVoteId=46963&LegislationDocumentId=206695&LegislationId=165348&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400SB2951.xml",
+        "sha256": "1bdfea28bc7ee01e779608e1a309131ebdd113c2aea89895703b663fa7b6c4b9",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for SB 2951",
+      "short_description": "MORTGAGE FORECLOSURE TIME",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "4/27/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/12/2026",
+          "action": "House Committee Amendment No. 1 Rules Refers to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/13/2026",
+          "action": "House Committee Amendment No. 1 Adopted in Judiciary - Civil Committee;  by Voice Vote"
+        },
+        {
+          "date": "5/13/2026",
+          "action": "Do Pass as Amended / Short Debate Judiciary - Civil Committee;  020-000-000"
+        }
+      ]
+    },
+    {
+      "bill": "SB3401",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22989",
+      "hearing_date_local": "2026-05-13T08:00",
+      "posted_item": {
+        "bill": "SB3401",
+        "amendment": null,
+        "raw_label": "SB3401",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=SB&DocNum=3401&GAID=18&SessionID=114&LegID=166328",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22989&CClerkVoteId=0&LegislationDocumentId=207674&LegislationId=166328&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400SB3401.xml",
+        "sha256": "222049288e22cc4849189e32a6f8e652f41728b56cd3f48c618efdc4613381de",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for SB 3401",
+      "short_description": "CONDO-RESERVE STUDY",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "4/27/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/12/2026",
+          "action": "House Committee Amendment No. 1 Rules Refers to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "SB3524",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22989",
+      "hearing_date_local": "2026-05-13T08:00",
+      "posted_item": {
+        "bill": "SB3524",
+        "amendment": null,
+        "raw_label": "SB3524",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=SB&DocNum=3524&GAID=18&SessionID=114&LegID=166555",
+        "motion": "",
+        "vote_motion": "Do Pass",
+        "vote_total_raw": "20 - 0 - 0",
+        "vote_result": "Do Pass - Short Debate",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22989&CClerkVoteId=46966&LegislationDocumentId=207901&LegislationId=166555&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400SB3524.xml",
+        "sha256": "e3a4075bbdb01d8032560910a99b18546355e79d6765c8ca4feaa12ddfb8a4be",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for SB 3524",
+      "short_description": "CHILD SUPPORT CHANGES",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "4/27/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "5/13/2026",
+          "action": "Do Pass / Short Debate Judiciary - Civil Committee;  020-000-000"
+        }
+      ]
+    },
+    {
+      "bill": "HB67",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB67",
+        "amendment": "HFA2",
+        "raw_label": "HB67 (HFA2)",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=67&GAID=18&SessionID=114&LegID=155742",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=0&LegislationDocumentId=209630&LegislationId=155742&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0067.xml",
+        "sha256": "6a171d77f67277a58b0e7231c82dc45b9154baaf0a7782ae127435bf8ac64a44",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 67",
+      "short_description": "COMMON INTEREST COMMUNITY-VEH",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "2/4/2025",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/4/2025",
+          "action": "House Committee Amendment No. 1 Rules Refers to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/5/2025",
+          "action": "House Committee Amendment No. 1 Adopted in Judiciary - Civil Committee;  by Voice Vote"
+        },
+        {
+          "date": "3/5/2025",
+          "action": "Do Pass as Amended / Short Debate Judiciary - Civil Committee;  016-001-000"
+        }
+      ]
+    },
+    {
+      "bill": "HB1198",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB1198",
+        "amendment": null,
+        "raw_label": "HB1198",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=1198&GAID=18&SessionID=114&LegID=156982",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=0&LegislationDocumentId=196773&LegislationId=156982&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1198.xml",
+        "sha256": "10d3d518c1590ffccd11d5e91a9742f9a446898aed9fec7d0775a66ab649762e",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 1198",
+      "short_description": "GUARDIAN-ADULT W/ DISABILITIES",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "2/11/2025",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/12/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "HB1280",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB1280",
+        "amendment": null,
+        "raw_label": "HB1280",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=1280&GAID=18&SessionID=114&LegID=157073",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=0&LegislationDocumentId=196864&LegislationId=157073&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1280.xml",
+        "sha256": "b1ac2cac6827878928a605fd194f4f77da62b600bb6502642aafb904af0c0149",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 1280",
+      "short_description": "DEPLOYED PARENT CUSTODY/VISIT",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "2/11/2025",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "2/11/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "HB1590",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB1590",
+        "amendment": null,
+        "raw_label": "HB1590",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=1590&GAID=18&SessionID=114&LegID=157719",
+        "motion": "",
+        "vote_motion": "Do Pass",
+        "vote_total_raw": "20 - 0 - 0",
+        "vote_result": "Do Pass - Short Debate",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=45576&LegislationDocumentId=197509&LegislationId=157719&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1590.xml",
+        "sha256": "7d2e8046fade997c2b4a0c7ff1200706ff76c63a00f67f0d65574881e904d2d1",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 1590",
+      "short_description": "LIABILITY-UNSOLICITED IMAGES",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "2/18/2025",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/12/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/19/2026",
+          "action": "Do Pass / Short Debate Judiciary - Civil Committee;  020-000-000"
+        }
+      ]
+    },
+    {
+      "bill": "HB1839",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB1839",
+        "amendment": null,
+        "raw_label": "HB1839",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=1839&GAID=18&SessionID=114&LegID=159329",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=0&LegislationDocumentId=199118&LegislationId=159329&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1839.xml",
+        "sha256": "926ee607bacbdf2e532888bc542c1c5975327c47aea7193aad21de53e340a26e",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 1839",
+      "short_description": "SAFE AUTONOMOUS VEHICLE ACT",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "2/11/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "HB1889",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB1889",
+        "amendment": null,
+        "raw_label": "HB1889",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=1889&GAID=18&SessionID=114&LegID=159471",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=0&LegislationDocumentId=199260&LegislationId=159471&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB1889.xml",
+        "sha256": "dfde883cd931a4ff68c4ffb01eba244c8f2bf6f56ed6b39e57e269c14b7883a1",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 1889",
+      "short_description": "CHILD SUPPORT-GIFTS",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "2/25/2025",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/12/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "HB2453",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB2453",
+        "amendment": null,
+        "raw_label": "HB2453",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=2453&GAID=18&SessionID=114&LegID=160216",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=0&LegislationDocumentId=200002&LegislationId=160216&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB2453.xml",
+        "sha256": "fc46bfa06e614ee3fef8ff7d0d5c0882d05415cd56aca39f2dbb935d2691a9da",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 2453",
+      "short_description": "GENDER-RELATED VIOLENCE",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "3/4/2025",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "2/11/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "HB2454",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB2454",
+        "amendment": null,
+        "raw_label": "HB2454",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=2454&GAID=18&SessionID=114&LegID=160217",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=0&LegislationDocumentId=200003&LegislationId=160217&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB2454.xml",
+        "sha256": "c6dcc24ce04b6c035518342aa9a220cbb95d624217aa0cdc29990d884bb7b655",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 2454",
+      "short_description": "TORT IMMUNITY-LOC GOVT-BIKES",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "3/4/2025",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "2/11/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        }
+      ]
+    },
+    {
+      "bill": "HB2492",
+      "hearing_url": "https://ilga.gov/House/hearings/details/3062/22570",
+      "hearing_date_local": "2026-03-19T08:00",
+      "posted_item": {
+        "bill": "HB2492",
+        "amendment": null,
+        "raw_label": "HB2492",
+        "official_url": "https://ilga.gov/legislation/BillStatus?DocTypeID=HB&DocNum=2492&GAID=18&SessionID=114&LegID=160295",
+        "motion": "",
+        "vote_motion": "",
+        "vote_total_raw": "",
+        "vote_result": "",
+        "witness_results_url": "https://ilga.gov/House/hearings/Results?CommitteeId=3062&HearingId=22570&CClerkVoteId=0&LegislationDocumentId=200082&LegislationId=160295&View=Bill",
+        "witness_slip_url": null
+      },
+      "xml": {
+        "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB2492.xml",
+        "sha256": "8e31933f2611e380b4ee500badc778ee1fa34ba4eae6398a103fb41319077b76",
+        "cached": true
+      },
+      "xml_title": "Illinois General Assembly - Bill Status for HB 2492",
+      "short_description": "NEWBORN SAFETY DEVICE",
+      "identity_matches": true,
+      "same_committee_action_history_found": true,
+      "committee_action_samples": [
+        {
+          "date": "3/4/2025",
+          "action": "Assigned to Judiciary - Civil Committee"
+        },
+        {
+          "date": "3/12/2026",
+          "action": "Assigned to Judiciary - Civil Committee"
+        }
+      ]
+    }
+  ]
+}

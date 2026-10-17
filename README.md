@@ -8,7 +8,9 @@ A small, factual Illinois legislative and county-party monitor. The intended pro
 
 For a focused code review, read [architecture and boundaries](docs/ARCHITECTURE.md), [M0 findings](docs/M0_FINDINGS.md), and one representative evidence file.
 
-Read [the product vision](docs/PRODUCT_VISION.md), [the build brief](docs/BUILD_BRIEF_M0_M1.md) and [M0 findings](docs/M0_FINDINGS.md). Findings distinguish direct observations, normalization gaps and tests that still need time or corrected credentials. Hosted source access and Gmail self-delivery to INBOX pass. Vote reconciliation, nonempty hearing evidence and multi-day timing remain open.
+Read [the product vision](docs/PRODUCT_VISION.md), [the build brief](docs/BUILD_BRIEF_M0_M1.md) and [M0 findings](docs/M0_FINDINGS.md). Findings distinguish direct observations, normalization gaps and tests that still need time or corrected credentials. Hosted source access and Gmail self-delivery to INBOX pass. The follow-up audit reaches 96.59% comparison-key coverage and validates a five-page historical hearing fallback. Retained source gaps, upcoming hearing behavior and multi-day timing remain open.
+
+The owner chose to [plan OpenRouter-hosted open-weight inference](docs/OPENROUTER_SETUP.md) for later activation. No inference runtime or model calls are enabled.
 
 ## Intended M1 operation
 

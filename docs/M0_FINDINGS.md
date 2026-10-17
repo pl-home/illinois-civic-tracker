@@ -9,33 +9,27 @@ The former Codex refresh and Windows website task were stopped before this repos
 Initial source observations ran **2026-10-16 14:10:50–14:12:38 UTC**. Later evidence files carry their own observation timestamps. PASS is limited to the stated sample; it does not mean the entire product is implemented.
 
 | Check | Result | Evidence and implication |
-
 | --- | --- | --- |
-
 | 0.1 FTP equivalence and discovery | PASS sampled equivalence; bundle search limited | **50/50** files matched, covering 20 HB, 14 SB, 10 HR, 4 HJR and 2 SJR. Current FTP bytes were compared with hash-verified archived main-site mirror bytes, with their original retrieval dates retained. This was not a simultaneous fetch from both hosts. The [FTP listing](https://ftp.ilga.gov/Legislation/104/BillStatus/XML/) exposed **12,855** entries with dates, times and sizes. No ZIP link appeared in that directory or its BillStatus parent; no claim is made about other directories. Use per-file listing changes, then hashes. |
-
-| 0.2 FTP sync timing | BLOCKED pending elapsed observations | The first successful hosted listing/header observation was recorded at **14:36:23 UTC**, alongside the initial local sample. Same-day observations cannot establish daily sync time. The bounded six-hourly workflow remains active through 2026-10-20 UTC. Listing timestamps have no established timezone and are not a sync-completion guarantee. Need 2–3 days of successful observations. |
-
+| 0.2 FTP sync timing | BLOCKED pending elapsed observations | The first successful hosted listing/header observation was recorded at **14:36:23 UTC**, alongside the initial local sample. Two successful hosted observations (14:36 and 21:15 UTC on October 16) had the same listing hash. Same-day observations cannot establish daily sync time, and a quiet listing may remain inconclusive even over several days. Actual timestamps, not scheduled start times, establish coverage. The bounded six-hourly workflow remains active through 2026-10-20 UTC. Listing timestamps have no established timezone and are not a sync-completion guarantee. Need 2–3 days of successful observations. |
 | 0.3 Amendment statute references | PASS for two bills | [HB0742 XML](https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB0742.xml) and [HB2137 XML](https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB2137.xml) retain original references and carry amendment-section additions/deletions. A flat union would misrepresent current text. Preserve section and operation; rewrite detection remains M2. |
-
-| 0.4 Floor CSV versus verified votes | BLOCKED reconciliation gate | [Official CSV](https://ilga.gov/documents/reports/static/104MemberVotes.csv): **261,928 rows / 2,843 roll calls**; fresh bytes exactly matched the supplied file. From 3,544 verified source documents, exclude 957 committee documents. The remaining 2,587 floor documents collapse to **2,525 unique subject/bill/chamber/date/motion keys**. Explicit motion aliases yield **2,310 exact choice matches (91.485%)**, **209 keys without an exact CSV key**, and **6 choice-label differences**. Every residual difference and all 618 CSV-only keys are retained in the reconciliation evidence. Do not retire PDF audit evidence or silently loosen joins. |
-
+| 0.4 Floor CSV versus verified votes | PARTIAL: all baseline gaps classified | Baseline comparison: 2,310/2,525 legacy comparison keys matched (91.485%). The tested offline audit resolves **129 additional keys**, giving **2,439/2,525 (96.594%)** exact-choice or explicit-evidence coverage. The remaining **86 keys** retain 55 incomplete PDF amendment captions, 22 No Vote/NV label differences, 2 missing CSV motion fields, 1 CSV amendment caption, and 6 date-candidate discrepancies (one also lacks amendment detail). These are comparison keys, not distinct physical votes. All 215 original cases remain in the [audit](evidence/m0-vote-audit.json); no unknown value or date was silently repaired. |
 | 0.5 CSV regeneration cadence | BLOCKED pending time | Initial Last-Modified: **2026-10-16 03:45:47 GMT**. Latest vote date: **2026-05-31**. A regenerated export is not necessarily new legislative activity. Record daily headers and recheck after the November veto session; this cannot be completed in October. |
-
-| 0.6 PDF parsing | PASS bounded sponsor sample; BLOCKED hearings | First ten parseable rows on the first page of each sponsor report: **20/20** match XML role, last action, chamber and date. Sample owners are Carol Ammons and Neil Anderson; this is layout verification, not Fritts/Arellano index acceptance. Sponsor PDFs are approximately **46.3 MB / 937 pages** and **28.0 MB / 564 pages**, unsuitable as the default nightly source. Both committee PDFs returned one page with **NO DATA FOUND**. Obtain a nonempty hearing sample or validate the public schedule fallback before enabling hearing coverage. |
-
+| 0.6 PDF parsing and hearing fallback | PASS bounded sponsor and historical fallback samples; upcoming forms pending | Sponsor PDF sample remains 20/20. Static committee PDFs are still empty and not validated on live rows. Public committee hearing history provides a compliant alternative: **5 nonempty detail pages / 103 posted items** parsed; **20/20 distinct bill identities** and **20/20 committee histories** cross-check with FTP XML, and **5/5 hearing times** match public history rows. XML does not establish hearing time. The range control calls a disallowed API, which was not used. Historical witness-results links are kept separate from active submission forms; an upcoming form has not been validated. See [fallback evidence](evidence/m0-hearing-fallback.json). |
 | 0.7 Capitol Fax feeds | PASS RSS access; matching coverage qualified | Eight search feeds each returned 12 items. After excluding Protected titles, public counts were Fritts 9, Arellano 10, LaHood 10, Durbin 12, Duckworth 9, Lee County 12, county Democrats 12, county Republicans 11. Newest public dates span July 10–October 14. Search results are candidates, not proof that every post names the subject. Store only title/link/date; independently establish a match before describing a mention. |
-
 | 0.8 Hosted source access | PASS corrected runner check | At **14:32:37 UTC**, Ubuntu reached both ILGA hosts, Capitol Fax and both party sites. Initial certificate-verification failures (code 20) were resolved by supplying a fingerprint-pinned, CA-published intermediate. Hostname and system-root verification stay enabled. CSV access was a header-only HEAD, not a zero-byte source file. [Successful hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/38916531335). |
-
 | 0.9 Gmail self-delivery | PASS | After an owner-confirmed credential correction, SMTP accepted the self-test and its exact Message-ID was found in **INBOX**, using a read-only search, at **14:46:56 UTC**. The first failed receipt remains in m0-mail-attempts.json; no credentials or addresses are recorded. The successful receipt and no-send authentication diagnostic are separate. Ordinary repeated triggers remain blocked. This verifies the transport, not the unbuilt weekly digest. |
 | 0.10 GA103 service | PASS roster sample | [GA103 House roster](https://ftp.ilga.gov/Members/103HouseMembers.xml) contains Bradley Fritts, district 74. [GA103 Senate roster](https://ftp.ilga.gov/Members/103SenateMembers.xml) contains neither target; Arellano is absent from both rosters. Configure Fritts from GA103 and Arellano from GA104. Historical backfill is deferred to its milestone. |
 
 ### Vote comparison details
 
-The first comparison matched 2,177 keys (86.218%). Removing source prefixes such as HOUSE BILL and standardizing explicit amendment number spellings raised that to 2,310. The initial evidence is retained; the later reconciliation supersedes its comparison totals without re-downloading sources.
+The frozen first comparison matched 2,177 keys (86.218%). Removing source prefixes such as HOUSE BILL and standardizing explicit amendment number spellings raised that to 2,310. The initial evidence is retained; the later reconciliation supersedes its comparison totals without re-downloading sources.
 
 Of the 209 missing exact keys, **203 have a same-bill/chamber/date candidate**. Many archived motions are fallback document labels or lack amendment numbers. This is evidence of a join limitation, not permission to match without a motion. The six choice differences all compare CSV **No Vote** with archived PDF **not-voting**: Fritts HB2771 (two motions, 2025-06-01), HB5090 (2026-05-31), HB5486 (2026-05-06), SB2351 (2025-05-22), SB2914 (2026-05-21). No Vote remains an explicit unknown value; it is not silently reclassified as absence, excusal or a nay. No yes-versus-no contradiction was established by these exact matches.
+
+The follow-up audit classifies every original gap without changing the archived records. Explicit header/index motion text resolves 127 keys; two more use a same-roll companion with an identical complete named-vote body. Matching a tally alone cannot fill in amendment numbers. Competing companion motions are rejected as ambiguous. Resolution outcome captions and empty report columns are handled explicitly, and 3/5 fractions are not split as column separators.
+
+The 96.594% figure measures coverage of the original comparison-key denominator. It does not assert that every source date or every physical roll call is consistent. Known index/PDF date conflicts remain visible even on otherwise resolved keys. No Vote remains unknown in the shared CSV normalizer; the deeper audit exposes 22 such label cases within the original 215, rather than inventing a global equivalence with NV.
 
 The CSV's larger coverage also includes executive appointments that the prior bill-type discovery omitted. CSV-only rows are preserved for review, not called errors or newly occurring activity. Committee votes remain a separate source; the floor CSV cannot replace them.
 
@@ -43,41 +37,33 @@ The CSV's larger coverage also includes executive appointments that the prior bi
 
 The bounded sponsorship parser checks complete fields rather than just recognizing bill numbers. Tests cover parenthesized alternate sponsors and the two-name `and` form. It is intentionally an M0 sample helper: punctuation-based name splitting is not a production solution for suffixes or hyphenated names. M1 role normalization must replay dated source actions, preserve removals and chief changes, and validate against the subject-specific export.
 
-The [House schedule](https://ilga.gov/House/Schedules) and [Senate schedule](https://ilga.gov/Senate/Schedules) are fallback candidates discovered through official search results. They have not yet been validated as working hearing collectors. An empty report cannot establish reliability with live hearing rows.
+The [House schedule](https://ilga.gov/House/Schedules) and [Senate schedule](https://ilga.gov/Senate/Schedules) are fallback candidates discovered through official search results. Their current views were empty. Inspection showed that the range control calls /API/Hearings/GetHearingsListByRange, disallowed by the project access policy, so it was not called. Public committee history/detail pages were instead tested on nonempty historical samples. They are a validated parsing fallback, not a deployed nightly collector. Active witness-slip forms and future date-change handling still need acceptance checks.
 
 ## M1 acceptance status
 
 | Check | Status | Current evidence / missing work |
-
 | --- | --- | --- |
-
 | 1.1 134-item Fritts index | BLOCKED, not built | Reviewed fixture contains exactly 90 HB, 14 SB, 24 HR, 4 HJR, 2 SJR. No production index or complete role/action comparison exists yet. |
-
 | 1.2 Ceremonial rule | PASS fixture rule only | Exactly 24 IDs flagged; all seven named negative examples remain unflagged. Expected IDs were derived from the reviewed export and specified rule. An independent historical 24-ID file was not separately supplied. |
-
 | 1.3 Five shell examples | BLOCKED full acceptance | Generic flag tests pass; a five-bill source fixture has not been checked. No rewrite detection is implemented or claimed. |
-
 | 1.4 Floor-vote counts | PASS source verification; M1 storage pending | Fritts **1,469** rows, **644** with at least one nay; Arellano **1,502**, **371** split. HB0024: Fritts yea House 2025-04-08; Arellano yea Senate 2025-05-22, both zero nays. Counts computed from the full CSV before selecting members. Reconciliation gate remains open. |
-
 | 1.5 Idempotent collection | BLOCKED, not built | No M1 collector, seen-items ledger or unchanged-source replay yet. |
-
 | 1.6 Failure isolation | BLOCKED M1 acceptance | M0 runner probe continues across host failures. Production collector orchestration and digest footer are not built. |
-
 | 1.7 Request policy | PASS sampled corrected timing; M1 release review pending | Main-host lock, persistent timing gate and disallowed-path checks exist. Initial six live requests were sequential, with a minimum recorded spacing of **19.99913 seconds**: a sub-millisecond clock-ordering defect, now fixed. The timestamp persisted is now the actual recorded attempt start. A regression test passes; the corrected hosted run recorded **20.00011 seconds** between starts. |
-
-| 1.8 Privacy and identities | PASS current foundation; ongoing gate | Reviewed public files and fixtures pass the scanner. A one-time history audit reviewed 102 published blobs with zero private-data findings; a corrected legacy text-encoding blob was reviewed explicitly. All audited commit emails were noreply. Local commits use GitHub noreply; evidence commits use the Actions bot. GitHub reports secret scanning and push protection enabled. Production email logging still requires release review. |
-
+| 1.8 Privacy and identities | PASS current foundation; ongoing gate | Reviewed public files and fixtures pass the scanner. A one-time history audit reviewed 102 previously published blobs with zero private-data findings; a corrected legacy text-encoding blob was reviewed explicitly. All audited commit emails were noreply. Local commits use GitHub noreply; evidence commits use the Actions bot. GitHub reports secret scanning and push protection enabled. Production email logging still requires release review. |
 | 1.9 Digest and repeat suppression | BLOCKED, not built | The M0 self-test does not implement a weekly digest. Rendering, weekly ledger and repeat-trigger tests remain. |
-
-| 1.10 Size | PASS current foundation; growth simulation pending | Reviewed working files excluding Git and scratch are below 1 MB; data/ is empty. No raw PDF, HTML, ZIP or full CSV is committed. M1 size reporting and annual growth checks remain. |
-
-| 1.11 Clean-runner tests | PASS clean CI for current foundation | Clean Ubuntu CI passed for the foundation; the expanded local suite has **27 passing tests**, including TLS verification retention, rate timing, app-password whitespace handling and mail safeguards. [The final clean-runner CI passed](https://github.com/pl-home/illinois-civic-tracker/actions/runs/38919015437); compact validation is in [m0-validation.json](evidence/m0-validation.json). |
+| 1.10 Size | PASS current foundation; growth simulation pending | The prior foundation was below 1 MB; the current footprint is measured in the latest follow-up validation. data/ remains empty. No raw PDF, HTML, ZIP or full CSV is committed. M1 size reporting and annual growth checks remain. |
+| 1.11 Clean-runner tests | PASS clean CI for current foundation | Clean Ubuntu CI passed for the foundation; the expanded local suite has **52 passing tests**, including TLS verification retention, rate timing, app-password whitespace handling and mail safeguards. [The prior foundation clean-runner CI passed](https://github.com/pl-home/illinois-civic-tracker/actions/runs/38919015437); compact validation is in [m0-validation.json](evidence/m0-validation.json). |
 
 ## Evidence and reproduction
 
 - [Initial findings](evidence/m0-initial.json): source fingerprints, all 50 comparisons, amendment references, initial comparison differences, roster checks, PDF sizes and feed samples.
 
 - [Vote reconciliation](evidence/m0-vote-reconciliation.json): every unresolved key and CSV-only key under the current narrow normalization.
+
+- [Follow-up vote audit](evidence/m0-vote-audit.json): every original unresolved key with explicit classifications, raw choices and source links.
+
+- [Historical hearing fallback](evidence/m0-hearing-fallback.json): five nonempty pages, twenty XML identity checks and history-time checks.
 
 - [PDF sample](evidence/m0-pdf-sample.json): each of the twenty compared rows, raw sponsor block and field-by-field results.
 
@@ -106,4 +92,8 @@ The history audit traversed every reachable Git blob and applied the current pri
 
 ## Next step
 
-Hosted access now passes. The owner-only self-delivery test also passes. Resolve the CSV motion/choice gaps and validate nonempty hearing data. Continue the bounded timing observations for 2–3 days; the post-veto cadence check remains a dated follow-up. **Do not enable M1 collection or digest schedules while these release gates remain unresolved.**
+Hosted access and owner-only self-delivery pass. Historical nonempty hearing parsing now passes its bounded sample. Review the 86 retained vote-source gaps and verify upcoming hearing forms before deployment. Continue the bounded timing observations for 2–3 days; the post-veto cadence check remains a dated follow-up. **Do not enable M1 collection or digest schedules while these release gates remain unresolved.**
+
+## Hosted inference decision
+
+The owner requested an OpenRouter-hosted open-weight model, then explicitly chose **plan inference now; enable later**. [Setup and design guidance](OPENROUTER_SETUP.md) and config/inference-plan.json record this decision. No inference client, key access, paid call or inference workflow has been added. M1 remains deterministic and uses no AI.

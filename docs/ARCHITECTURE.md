@@ -8,6 +8,8 @@ This is an M0 verification foundation, not the production tracker. Start with RE
 | --- | --- | --- |
 | config/project.json | Session, subjects, service periods, source intervals and pinned issuer metadata | No secrets or owner settings |
 | http.py | Host restrictions, sequential main-host access, persistent timing, bounded reads and verified TLS | No automatic redirects; source failures remain failures |
+| vote_audit.py | Follow-up classification of the 215 original comparison gaps | Raw choices and unresolved source detail stay retained |
+| hearings.py / verify_hearings.py | Public detail-table parsing and bounded historical validation | No range API; historical results do not establish active submission forms |
 | vote_csv.py | Full-file nay counts, subject rows, narrow motion aliases and explicit unknown choices | Floor only; no committee-vote inference |
 | rules.py | Exact ceremonial rule and shell flag | No stance, rewrite detection or model calls |
 | verify_sources.py | One-time source comparisons against explicitly supplied read-only evidence | M0 only; raw downloads stay ignored |
@@ -19,6 +21,10 @@ This is an M0 verification foundation, not the production tracker. Start with RE
 | privacy.py | Reject private addresses, machine profile paths and credential-shaped text | Files and finding categories only; narrow reviewed public exceptions |
 
 Tests use synthetic data or reviewed public sponsorship facts. Optional PDF tooling is for verification, not a required nightly dependency. No AI service, local model, API credential client, dashboard or production collector is implemented in this repository yet.
+
+## Future hosted inference
+
+The owner chose planning now and activation later. [OPENROUTER_SETUP.md](OPENROUTER_SETUP.md) records the setup steps, open-weight evaluation candidate, privacy controls and proposed integration contract. config/inference-plan.json is a planning record with enabled=false; no runtime consumes it. M1 remains deterministic.
 
 ## Proposed M1 flow
 
