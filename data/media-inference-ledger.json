@@ -85,6 +85,34 @@
         "prompt_tokens": 292,
         "completion_tokens": 37
       }
+    },
+    {
+      "batch_hash": "98d3a8bae2a9dd231f0ba8273bfa0dc15e96abbe05c7e663fedd5ca071074ab3",
+      "day": "2026-10-17",
+      "case_hashes": [
+        "4deddaa8c108ec802b1085272f9f199493225a6a19f51654d0f5f08d00ad183c",
+        "f43d2f9a5122df1a0f8e0638c7c4da7a0b6eefd3120a385916cd6073cb236787",
+        "c4314a8d98afba323fe4034d3f8f69d19ac84ed90530f263c99cda7d3c3621fc",
+        "4176334fbe015fba0a1ed4be989a8bcd974cbe1b4b9a0215efc6e90d5cb619fa",
+        "66e2f3510abe9ae9a689182bb1aa0d6705c2f88d9a285fcb98abbf1fac0c3830",
+        "d8f046c7a43a47870dacc30052f407feae856f4088a4e27436272b5f516727b8",
+        "7872db77bd9b091aac058cab878777ffc184d113f4be6fffa79bc08e31717a44",
+        "d0faddda8e71408a90ddca09b42b503cba62ee1da56811fce6b59f97709eaff0"
+      ],
+      "ids": [
+        "c39bff9650deeec5ef3b4785",
+        "08e786a62693ee4a57fbbd8d",
+        "94bc0c2c64fe6d14e087a6a7",
+        "b403e5864680647be78ca7b2",
+        "b2ca851a9823b9141cb5d8cd",
+        "64b934e14387470219d476ad",
+        "c24a608140e345a67ce66b1f",
+        "905461ad047972aff57afdb8"
+      ],
+      "reserved_usd": "0.002",
+      "charged_usd": null,
+      "status": "reserved",
+      "prepared_at": "2026-10-17T16:02:36.360461+00:00"
     }
   ]
 }

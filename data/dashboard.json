@@ -465,8 +465,8 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-17T15:56:09.921981+00:00",
-        "inference_status": "complete",
+        "checked_at": "2026-10-17T16:02:36.360461+00:00",
+        "inference_status": "partial",
         "lookback_days": 90
       }
     },
@@ -939,7 +939,7 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-17T15:56:09.921981+00:00",
+        "checked_at": "2026-10-17T16:02:36.360461+00:00",
         "inference_status": "complete",
         "lookback_days": 90
       }
@@ -1240,7 +1240,7 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-17T15:56:09.921981+00:00",
+        "checked_at": "2026-10-17T16:02:36.360461+00:00",
         "inference_status": "partial",
         "lookback_days": 90
       }
@@ -1836,7 +1836,7 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-17T15:56:09.921981+00:00",
+        "checked_at": "2026-10-17T16:02:36.360461+00:00",
         "inference_status": "complete",
         "lookback_days": 90
       }
@@ -2440,8 +2440,8 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-17T15:56:09.921981+00:00",
-        "inference_status": "complete",
+        "checked_at": "2026-10-17T16:02:36.360461+00:00",
+        "inference_status": "partial",
         "lookback_days": 90
       }
     }

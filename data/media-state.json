@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-17T15:56:09.921981+00:00",
+  "checked_at": "2026-10-17T16:02:36.360461+00:00",
   "members": {
     "fritts": {
       "status": "ok",
-      "checked_at": "2026-10-17T15:56:09.921981+00:00",
+      "checked_at": "2026-10-17T16:02:36.360461+00:00",
       "candidates": [
         {
           "id": "6200806ad5f0d349d1657570",
@@ -41,12 +41,24 @@
           "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVF9DZ0FDSUUwVUxjVm5QYTZLZnBmLUVTWjk2ZGRpVnRsTHh6a3hOVEpKSGQ5QmcwX2dfSTVpWFJqSXUxZ1dRcWJnMksyRTRQQVQ3ZlBRM3dUMUdKV19BZnVPZGRRWHJ1Vzlzd2pTNkdlUkRDdFhxcjZFUXJNcU1nS0NMZFB0Ri1Dc1VpVzJoOGF2OEpqWUNMajF3eTcwTjJNQnMtcGFJbFJWa0hmU3B0aE5UWUw2eHRDU0prVmJYbnpsSlA0Q3hRd2tpV09UZDB4",
           "published_at": "2026-09-25T07:00:00+00:00",
           "link_route": "Google News"
+        },
+        {
+          "id": "08e786a62693ee4a57fbbd8d",
+          "member_id": "fritts",
+          "member_name": "Bradley Fritts",
+          "title": "McCombie, Fritts, Keicher receive ‘Friend of Agriculture’ awards",
+          "snippet": "McCombie, Fritts, Keicher receive ‘Friend of Agriculture’ awards Shaw Local",
+          "publisher": "Shaw Local",
+          "publisher_host": "shawlocal.com",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPME9MTnFGNVRELWhmczRnc0l5bjZYSHU0czI5a3kxTDFyYnQxczNHNGNBLXN5OGkxenlVblZaclhxcEtjZEliOUNTR0FsQS1MWlVyTVF2bHVWWGl4ak1pWEVnR1YzNm53RWdmUTFpRjhYVVdsWm96clVzNXpaTGZCVzYzNWhyM2ItbHFnOEszZVNYWDcyZl9WNUN5ckZqLWxuSTg3T29Ld2JRYWVEV2REOW5mWGZydw",
+          "published_at": "2026-07-22T07:00:00+00:00",
+          "link_route": "Google News"
         }
       ]
     },
     "arellano": {
       "status": "ok",
-      "checked_at": "2026-10-17T15:56:09.921981+00:00",
+      "checked_at": "2026-10-17T16:02:36.360461+00:00",
       "candidates": [
         {
           "id": "9fce761a8c3ebc5dde0c9d71",
@@ -76,7 +88,7 @@
     },
     "lahood": {
       "status": "ok",
-      "checked_at": "2026-10-17T15:56:09.921981+00:00",
+      "checked_at": "2026-10-17T16:02:36.360461+00:00",
       "candidates": [
         {
           "id": "94bc0c2c64fe6d14e087a6a7",
@@ -298,7 +310,7 @@
     },
     "durbin": {
       "status": "ok",
-      "checked_at": "2026-10-17T15:56:09.921981+00:00",
+      "checked_at": "2026-10-17T16:02:36.360461+00:00",
       "candidates": [
         {
           "id": "1d8051e3ba1d75118136cb59",
@@ -532,7 +544,7 @@
     },
     "duckworth": {
       "status": "ok",
-      "checked_at": "2026-10-17T15:56:09.921981+00:00",
+      "checked_at": "2026-10-17T16:02:36.360461+00:00",
       "candidates": [
         {
           "id": "c24a608140e345a67ce66b1f",
@@ -544,6 +556,18 @@
           "publisher_host": "beverlyreview.net",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeWhlSUgzc1lnSF8tRG9UUGUzQzMyOE5va3kzWnBZOXRUazZhVnhOZXZrUmZPTzgybkc1QnJXZkc5djBwS3J0OHFMVGVycFBQbmozQXZsVDJHcndoZThjRmtyQlRaR0tCTHJUWERnS1M2enRpYWRsWml6VVdudnlwOHpoMkZOU0FhUHJ0eUpiTUkxMTVvTHVXZ2JXTXhRcmxsbUNDWnhuUWs",
           "published_at": "2026-10-13T15:29:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "905461ad047972aff57afdb8",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth Urges FAA And DOD To Act On Safety Findings After DCA Crash Report",
+          "snippet": "Duckworth Urges FAA And DOD To Act On Safety Findings After DCA Crash Report RiverBender.com",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSG5EekhrMXkxaE1Cb0ZqZHI3RVdhaFpyVS1XcGhJYUpXdm5XQmpNcWRObVpHbzhYaXQ4bndUT3p5T05SYXVqeVNUZDdqRFl4TG95SkctV2cycVVGMWZPUVRoUG5uY1hreVBkT1c5TDlCZm1ZQ1ZNVW5OWGx0WGJxZlh2VEJyVzdPZi1Db0c0bEhqQUFwb3BjYmxFWTI4SV9mQUE5d3B2RnpTS29GYThIeU9UdzllUTYyMno3UTVZdGVPUzlBUWc",
+          "published_at": "2026-10-10T13:30:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -592,6 +616,18 @@
           "publisher_host": "beverlyreview.net",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWlBmOFNJWFZ0MUxkQ0QtZUprU2RET0JMRVdpNFgxU3hSaFhqbXJsaFJDVGthNUNzOUFwN1NJZUVuMFgydGJ0OWpZZ0pybWF5MG5ia2ozTVpHMjk2YXVtaXUxalhCMFZBdkVhQzFIbG9tdU5KY1BNbjI3RkNxR0FHbW5SWDF4dEFCZkhqMDRQQnQzNlJRaGlSeVJxT0prZFBfZ3dVaXZYanc",
           "published_at": "2026-09-29T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "d06f27ab006e64074339ec14",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth-Hoeven Bipartisan Bills to Support the Health of Our Aviation Workforce and Strengthen Aviation Safety Pass the Senate",
+          "snippet": "Duckworth-Hoeven Bipartisan Bills to Support the Health of Our Aviation Workforce and Strengthen Aviation Safety Pass the Senate RiverBender.com",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOcDRxWkI1bFc4Z3J1NzZYbnR6VlAzT3RwUmVNb2NpVG40aGFJeUVtdmd1SHdjaDhIS3ZnQ1JSWlE5dWtQNlE0NUZOZl84TmJUZ2VOQVdETnZ3czFTQ1pXOVdlbzZ4MWozWjcta05KUHVtbFBPRTBCQkEzN3BLaFpaTTgxcFgzSUF2ZkZHN2ZiNDVab0k0MG1LWHpPRXVHQV90RDZPVVJDc2JEOGF5WHpzS3p0aHRnak85TWk3ZWxpd0VheUEtQjltTHlBa0pPLUVmeU9NcVo2Mm1kYy1PNUZPc3RFQjNoajJlbXJGUkdoczNOZVVfX21uLTItRU1DTkY4R1huXzF3TkFNQQ",
+          "published_at": "2026-09-28T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -664,18 +700,6 @@
           "publisher_host": "riverbender.com",
           "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPWDJ4YUc1Q0JTYy1pbU91aEEwYXhBVjFFbGk5VTJ1bjQwOEQ1ZUVkOXpZX0VvNGEzUURXTkdfdEtTekdnMk9JdmU5Z2hfN0wtblFfYmJscFEzUTZrVS0xcEJrQkw3OHNLbVpLRW4xbUQ4N2RsZElhUXNlZngwX3ljVXdiSTdMTnJZaHBIT3Q3S3lXdzctVmJlYzhhTjV2TUZkNzhScFNDVFQwMW9yMzRwRi1JN01CVkxocks5WmE2dkZSMzlaZ3pVSTVMOUw5MnNqM0JxZDBvd1lBVVQ5aVRCVjZEM0NJdjdZU3V5Z3NVNTFjLThJYV9MYnhXNWNOWG5BYVlVTFpod3NsZw",
           "published_at": "2026-09-23T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "5859c16af07710f190f095cb",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War",
-          "snippet": "Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNjRac1lZclhWdU95bUxlbUxYNVRWS0UxejZBeFRWRzBqMWgxVGtrWUxQTHhHSkdybW1ZdDd3V3JYQXZtelItc2RwaWVDOFl4eHVTT1cwVWJqdUhGc0xHamRWaVNHdXVLd0lMYllIU2k1ZEc5QU9aN1MtNEF1Y2o3b3EtcXRQdnhMNDBnYkg1ajQzbWxVSklNRUpIOGM5elZSNzFoNDJGOUIyaENlaUlValNTU3RBYjZmMVAzR2VNc042QUFpSHhaTU1wZXpNMFU",
-          "published_at": "2026-09-18T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -775,6 +799,18 @@
           "link_route": "Google News"
         },
         {
+          "id": "38f6b91e79ee4e7dc39b4169",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth Discusses Rising Costs And The Impact On Agriculture Industry With Illinois Corn Growers",
+          "snippet": "Duckworth Discusses Rising Costs And The Impact On Agriculture Industry With Illinois Corn Growers RiverBender.com",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNYlpScWdYT2RSbWxpbnkzeFZucWZXekg5VXpsZzY4VXNZMG1PR1VKTDNBbUZHQkFNMWFQUHNETjNQaHNSa24wcjRpN1NiMUxRNTNILVoxeFFVRW5hSEJiWUVZRjZvTmQxRGFvMlFVU0VWUGJqUTJKc0JRWjZNQlljTmI0LXo2OHlLMXhqekVJNUhlclFfaEdzckNHVE9IOXJEMFBMNWVkOTRMOUo3UHFhZVFvUUlETTJWUU9KejBPeDhBam85aldCWG13dFA5cXdidjJUNzZFM0l5Z1JEMGhuamh0bw",
+          "published_at": "2026-08-19T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
           "id": "640fd14da6729f9922f3f6aa",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
@@ -867,30 +903,6 @@
           "publisher": "Chicago Tribune",
           "publisher_host": "chicagotribune.com",
           "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5UZXluMFJBVXBES3BoWkZyM0REb1YxQjBBSlFRTGtiTTAxY1JiSDJYdWtZZ3V4azNVOVRQVVNacml3SU1ZRlRhUDI0TWQyWHJOOVhYb1BDOS01Zi1WaEhLX2IzRXR4RUgyV0ZoaA",
-          "published_at": "2026-07-31T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "7765a5c67d6bcaa843d798fb",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Durbin and Duckworth challenge FAA decision to extend O’Hare flight caps",
-          "snippet": "Durbin and Duckworth challenge FAA decision to extend O’Hare flight caps MyStateline",
-          "publisher": "MyStateline",
-          "publisher_host": "mystateline.com",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPLVdHY0JmdnRiTWVqVkl5Z1hfdGdKUmhiVU9mLTRpUmt2ZXltMU4tVW1ySkJFUjM0eUdmbDJUdVFLd2VERExRNUlnX2NldHJtYl95WG5zVno4QXN6NW9mTkxIQW9TdkNJd0pWZHFOSWE3UlRpSmU3V1JZZzlzSGVWYzQ2TTRXVGhvZWpXbVAtMEFoZ1hIYWE3dW9pSGVhQlhLR2lGbFJXclfSAa4BQVVfeXFMUFRFRUk4R3ZtWGEza1VfVzNyUWtiRUpqdW5KNG40MDJIWFcyQmt4V3gwdldpdXZUOXhPOXgtanRhWlBjN1pXSzBCU1daNG0tbGdjWGZYcUJTbzJPTkxIc2ptdkctVmNIQ0MwdnJuMUpzaXZPVVRmNFVuWmw3RU5hRnpBdlBpM1MwSXNmTVFVdEEtWU9KcnRwZHdfN2xjUTZtdVhGcWFaSC1PMGRIUkpB",
-          "published_at": "2026-07-31T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "d4864b516f0f8ba897619cea",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat",
-          "snippet": "Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOeTZyWklJM1J6a3VBbUJPN2dfTmhfVUxsSktKZi1ScnNpSEJRMW5vLTFKMzVSNTc0Vk1icnBlV0hJc0Y0UTJMZTZlVm1rYUZBbjdNT2paZnV6YkhOTThfdTN6RzN6bmprczBwVlJSVVFnVm9jOFNNS1Y2aGlSei1hQ2NJYkZnZzFrVVZoOTM2N3JjNjE0VkxvMEpnNV80cnFKYV92TTk4WUExWW9WcVphcjl3RG9oTTEzU09Yc0NSVmNfWDJ0NW96d1pmSQ",
           "published_at": "2026-07-31T07:00:00+00:00",
           "link_route": "Google News"
         }
