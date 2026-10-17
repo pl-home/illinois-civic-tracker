@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-17T16:35:07.766147+00:00",
+  "deployment_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39049908111",
+  "verification_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39049908094",
+  "week_start": "2026-10-12",
+  "week_end": "2026-10-18",
+  "timezone": "America/Chicago",
+  "daily_limit_usd": "0.02",
+  "weekly_limit_usd": "0.20",
+  "lifetime_limit_usd": "20",
+  "weekly_charged_usd": "0.00220856",
+  "weekly_reserved_usd": "0",
+  "weekly_used_percent": "1.104280",
+  "financial_ledgers_unchanged": true,
+  "new_model_calls": 0,
+  "offline_tests": 143,
+  "privacy_findings": 0,
+  "live_checks": [
+    "Usage panel visible near page top, before member activity.",
+    "Weekly and daily meters show exact charged amounts and the new limits.",
+    "Central-time calculation timestamp and Monday-Sunday week are visible.",
+    "Usage details uses native details/summary disclosure."
+  ],
+  "independent_review": "Missing unsettled-reservation amount must fail closed; corrected and covered by malformed-cost regressions."
+}

@@ -25,4 +25,8 @@ The usage report is recalculated after normal media preparation/settlement and c
 
 Review `tests/test_usage.py` for Chicago Monday/Sunday and DST boundaries, exact weekly reservation limits, known-versus-held costs, malformed costs and read-only reporting. The existing inference tests continue to verify daily/lifetime caps and crash replay behavior. Previous evidence files retain the older limits that applied when those runs occurred.
 
-Hosted acceptance and current measured totals will be recorded after publication.
+## Hosted acceptance
+
+The [Pages deployment](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39049908111) and [verification run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39049908094) succeeded October 17. The live panel was checked near the top of the page, before member activity, with weekly and daily limits of USD 0.20 and USD 0.02 and a visible Central-time calculation timestamp.
+
+The initial October 12–18 report records **USD 0.00220856 charged**, no unsettled reservations, and **1.10428%** of the weekly limit used. Financial ledgers remained byte-identical, and publishing this report made no model calls. All 143 tests and the privacy check passed. Independent review found a missing-reservation default that could understate liability; it now fails closed and has a regression test. Compact evidence: [budget-usage-validation.json](evidence/budget-usage-validation.json).
