@@ -1,0 +1,797 @@
+{
+  "schema_version": 1,
+  "experiment_id": "qwen32b-deepinfra-eval-v1",
+  "model": "qwen/qwen3-32b",
+  "provider": "deepinfra/fp8",
+  "routine_inference_enabled": false,
+  "status": "completed",
+  "started_at": "2026-10-17T13:32:42.829598+00:00",
+  "annotations": "Single-author curated synthetic and reviewed-export labels; not an independent expert benchmark.",
+  "corpus_sha256": "75b8da84c81a649a82c9a730d2eb9b693b94493e4424c67da7f3d8699424a94d",
+  "prompt_sha256": "588c5609650e8eeb1699eccf9ad81c31498c4123d20503b85038cd7623c4b397",
+  "request_limit": 30,
+  "trial_ceiling_usd": "20",
+  "entries": [
+    {
+      "source_id": "dev-01",
+      "request_sha256": "340faea605f7f8e00d2b214167b896f9e6474492cc9353ed85f45724b161ad90",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005324",
+      "attempted_at": "2026-10-17T13:32:43.046561+00:00",
+      "latency_seconds": 3.499,
+      "response_id_sha256": "af960c6cffa6910e0227618f0fa0af9b4812e356fba5094f2a9b5e16d5699a9f",
+      "usage": {
+        "prompt_tokens": 396,
+        "completion_tokens": 77,
+        "total_tokens": 473
+      },
+      "prediction": {
+        "source_id": "dev-01",
+        "category": "legislation",
+        "quote": "The bill creates a legal assistance program for immigrants applying for citizenship.",
+        "topics": [
+          {
+            "label": "immigration",
+            "quote": "The bill creates a legal assistance program for immigrants applying for citizenship."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "dev-02",
+      "request_sha256": "65a395d53ec1fcdab9ef78847c5b8d78f43cc4cebd649b40358bee03c9e86d64",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004404",
+      "attempted_at": "2026-10-17T13:32:46.547794+00:00",
+      "latency_seconds": 2.054,
+      "response_id_sha256": "0ab93f3cc9ce615054aa67cf29b8a1ad156e8dc4103b3b1c13d143ccb55e4103",
+      "usage": {
+        "prompt_tokens": 400,
+        "completion_tokens": 43,
+        "total_tokens": 443
+      },
+      "prediction": {
+        "source_id": "dev-02",
+        "category": "event",
+        "quote": "Join the county party picnic on Saturday at the public park.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "dev-03",
+      "request_sha256": "8a5e722638e08c1bbeba8006a26d72663469f16ce11bccaecadee3d09e8fd0e5",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004448",
+      "attempted_at": "2026-10-17T13:32:48.603786+00:00",
+      "latency_seconds": 3.016,
+      "response_id_sha256": "1fcba8eb36c135d7eadb802a5fa3e225ba94d8abd362350731fc88c11761fe94",
+      "usage": {
+        "prompt_tokens": 395,
+        "completion_tokens": 46,
+        "total_tokens": 441
+      },
+      "prediction": {
+        "source_id": "dev-03",
+        "category": "ceremonial",
+        "quote": "CONGRATS-LOCAL RETIREMENT HONOREE",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "dev-04",
+      "request_sha256": "e02d3ac0a860b8bafacdc53ec462dde40cc27c948284d1250e37c8d97ca0b786",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004372",
+      "attempted_at": "2026-10-17T13:32:51.621856+00:00",
+      "latency_seconds": 1.627,
+      "response_id_sha256": "a43150f88bc3284f51348342d83491211d199098e8c03afd23e87734b871a2df",
+      "usage": {
+        "prompt_tokens": 403,
+        "completion_tokens": 41,
+        "total_tokens": 444
+      },
+      "prediction": {
+        "source_id": "dev-04",
+        "category": "meeting",
+        "quote": "The county party will hold a meeting on Tuesday.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-01",
+      "request_sha256": "1822d6c03b6c4eec4bda97f3b63643ea1b0b84f11990307555fa2479c6e6f6d6",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.0000536",
+      "attempted_at": "2026-10-17T13:32:53.251205+00:00",
+      "latency_seconds": 2.557,
+      "response_id_sha256": "50d6ab82e9a6b90c1e5d9fca2f00716faae66e54c14fd860ff4f272a798f7fee",
+      "usage": {
+        "prompt_tokens": 397,
+        "completion_tokens": 78,
+        "total_tokens": 475
+      },
+      "prediction": {
+        "source_id": "heldout-01",
+        "category": "legislation",
+        "quote": "The bill expands state-funded legal representation for immigrants facing removal proceedings.",
+        "topics": [
+          {
+            "label": "immigration",
+            "quote": "The bill expands state-funded legal representation for immigrants facing removal proceedings."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-02",
+      "request_sha256": "6e3411a17c0fa8e2e853177a7ddf1314f0bf1fe0d61ff73e058b2462a16e0801",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005524",
+      "attempted_at": "2026-10-17T13:32:55.810006+00:00",
+      "latency_seconds": 2.747,
+      "response_id_sha256": "01a79c4779e344d63d08ae6d8787bc7cf1e207ed664f00cfd2fd28fb06f9c1f3",
+      "usage": {
+        "prompt_tokens": 400,
+        "completion_tokens": 83,
+        "total_tokens": 483
+      },
+      "prediction": {
+        "source_id": "heldout-02",
+        "category": "legislation",
+        "quote": "The bill requires electric utilities to publish a breakdown of generation charges and delivery rates.",
+        "topics": [
+          {
+            "label": "energy",
+            "quote": "The bill requires electric utilities to publish a breakdown of generation charges and delivery rates."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-03",
+      "request_sha256": "12d129fc8dad53cfe087d3566c6e72cafd550eb56d5207131ebc22e89c6d12ec",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005488",
+      "attempted_at": "2026-10-17T13:32:58.558796+00:00",
+      "latency_seconds": 3.721,
+      "response_id_sha256": "d59a919f447fbb58f9c694b78e950c83fe5cf898693e473b72bfe945d4661a11",
+      "usage": {
+        "prompt_tokens": 399,
+        "completion_tokens": 82,
+        "total_tokens": 481
+      },
+      "prediction": {
+        "source_id": "heldout-03",
+        "category": "legislation",
+        "quote": "The bill changes employer contributions to the Illinois Municipal Retirement Fund public pension system.",
+        "topics": [
+          {
+            "label": "pensions",
+            "quote": "The bill changes employer contributions to the Illinois Municipal Retirement Fund public pension system."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-04",
+      "request_sha256": "1359f0763e37b9885c2d05525e96e239f0b830d3fafd63b60efaa8250c0d7fdc",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005708",
+      "attempted_at": "2026-10-17T13:33:02.281782+00:00",
+      "latency_seconds": 3.518,
+      "response_id_sha256": "b21faa88cbc457e794c245fc03847e2461f6362bee0722014b101cc747414e5a",
+      "usage": {
+        "prompt_tokens": 402,
+        "completion_tokens": 89,
+        "total_tokens": 491
+      },
+      "prediction": {
+        "source_id": "heldout-04",
+        "category": "legislation",
+        "quote": "The bill requires police departments to provide annual de-escalation training to law enforcement officers.",
+        "topics": [
+          {
+            "label": "law_enforcement",
+            "quote": "The bill requires police departments to provide annual de-escalation training to law enforcement officers."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-05",
+      "request_sha256": "93dbbabd070e0d5ab3fe73eb35ccd3f522ef7d7b5b6bdb1f68c92357a7976a5f",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005524",
+      "attempted_at": "2026-10-17T13:33:05.802264+00:00",
+      "latency_seconds": 2.84,
+      "response_id_sha256": "1067f65573c6989980c5cd6874833f43f090df2331eb7d3b6b6d65711a7d1baa",
+      "usage": {
+        "prompt_tokens": 400,
+        "completion_tokens": 83,
+        "total_tokens": 483
+      },
+      "prediction": {
+        "source_id": "heldout-05",
+        "category": "legislation",
+        "quote": "The bill limits rental application fees and requires landlords to return unused tenant security deposits.",
+        "topics": [
+          {
+            "label": "housing",
+            "quote": "The bill limits rental application fees and requires landlords to return unused tenant security deposits."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-06",
+      "request_sha256": "18125af7596cbd90938dd974a66b4301c7a3bf1c27f025eedd2881fe01ed6981",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005836",
+      "attempted_at": "2026-10-17T13:33:08.644038+00:00",
+      "latency_seconds": 4.602,
+      "response_id_sha256": "4d9d942433ed483e153f512ea8480f3b8414577bd91ae0c5c73a7cc0feba0a52",
+      "usage": {
+        "prompt_tokens": 404,
+        "completion_tokens": 93,
+        "total_tokens": 497
+      },
+      "prediction": {
+        "source_id": "heldout-06",
+        "category": "legislation",
+        "quote": "The bill requires public bodies to release requested records under the Freedom of Information Act within a shorter deadline.",
+        "topics": [
+          {
+            "label": "civil_liberties",
+            "quote": "The bill requires public bodies to release requested records under the Freedom of Information Act within a shorter deadline."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-07",
+      "request_sha256": "e8205fa249a3e5dfd20a36f444ca0c2ea08ae7f124706ce4b37c6288d192a9f7",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.0000602",
+      "attempted_at": "2026-10-17T13:33:13.247853+00:00",
+      "latency_seconds": 4.724,
+      "response_id_sha256": "025c8fc2fd86e85efa7131e6cd28e5176277c942d962c8cf19c258757c73dc32",
+      "usage": {
+        "prompt_tokens": 399,
+        "completion_tokens": 101,
+        "total_tokens": 500
+      },
+      "prediction": {
+        "source_id": "heldout-07",
+        "category": "legislation",
+        "quote": "The bill prohibits local police from detaining people solely on civil immigration requests.",
+        "topics": [
+          {
+            "label": "law_enforcement",
+            "quote": "local police from detaining people solely on civil immigration requests"
+          },
+          {
+            "label": "immigration",
+            "quote": "civil immigration requests"
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-08",
+      "request_sha256": "993162b7cfae67415f2698afb1359e15b325f9f4ea0f8c403a585e2697e20238",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005132",
+      "attempted_at": "2026-10-17T13:33:17.974511+00:00",
+      "latency_seconds": 2.539,
+      "response_id_sha256": "ac7731b140893d3a0c4142b398de3239ad651ab61ab0956a9149bcc1256221a4",
+      "usage": {
+        "prompt_tokens": 393,
+        "completion_tokens": 71,
+        "total_tokens": 464
+      },
+      "prediction": {
+        "source_id": "heldout-08",
+        "category": "legislation",
+        "quote": "COMPETITIVELY NEUTRAL ENERGY",
+        "topics": [
+          {
+            "label": "energy",
+            "quote": "COMPETITIVELY NEUTRAL ENERGY"
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-09",
+      "request_sha256": "4f56823c14271c78c4c6a28ee5263e7eee409f4a9b2631be6960c6724b4a85d6",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004384",
+      "attempted_at": "2026-10-17T13:33:20.515923+00:00",
+      "latency_seconds": 2.842,
+      "response_id_sha256": "f452e47dae887d5176416809601c4026a70471782c45e161450649ad8652626d",
+      "usage": {
+        "prompt_tokens": 394,
+        "completion_tokens": 44,
+        "total_tokens": 438
+      },
+      "prediction": {
+        "source_id": "heldout-09",
+        "category": "legislation",
+        "quote": "REPEAL ILLINOIS TRUST ACT",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-10",
+      "request_sha256": "703d4d34d839d20f5676b9ffa1dccb686fce4660ba0c05f7b65e8aa871bf897b",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004348",
+      "attempted_at": "2026-10-17T13:33:23.360178+00:00",
+      "latency_seconds": 1.811,
+      "response_id_sha256": "4445fe9a6cf3d99295c268ad4b6471615be2b30151d8372546da7b4ae9693175",
+      "usage": {
+        "prompt_tokens": 393,
+        "completion_tokens": 43,
+        "total_tokens": 436
+      },
+      "prediction": {
+        "source_id": "heldout-10",
+        "category": "legislation",
+        "quote": "NO TAXES ON RETIREMENT INCOME",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-11",
+      "request_sha256": "0847b32487350726590a167f436fe201986b07acee6c103bc8f693473ea335f1",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004204",
+      "attempted_at": "2026-10-17T13:33:25.173834+00:00",
+      "latency_seconds": 2.484,
+      "response_id_sha256": "75ee2151113eb8ac9b88951001dd0710f7b39d29e8055af53c57bb86f4c44a49",
+      "usage": {
+        "prompt_tokens": 389,
+        "completion_tokens": 39,
+        "total_tokens": 428
+      },
+      "prediction": {
+        "source_id": "heldout-11",
+        "category": "legislation",
+        "quote": "REGULATION-TECH",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-12",
+      "request_sha256": "6762d6bfd6a20feaeb7628040669b19d94b09547895efc4bc2a2e2f7d00c81ae",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.000042",
+      "attempted_at": "2026-10-17T13:33:27.660190+00:00",
+      "latency_seconds": 2.618,
+      "response_id_sha256": "3370c75af59803254dc45f904fcbf6517e6fa8dac6175f538e280de4e0c5c6f5",
+      "usage": {
+        "prompt_tokens": 392,
+        "completion_tokens": 38,
+        "total_tokens": 430
+      },
+      "prediction": {
+        "source_id": "heldout-12",
+        "category": "ceremonial",
+        "quote": "JIM EDGAR READING ROOM",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-13",
+      "request_sha256": "64995f4e34a715083ee3f69280fdf2f593b55a27fb9b5ce2a35473ae58e8cda9",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004416",
+      "attempted_at": "2026-10-17T13:33:30.280784+00:00",
+      "latency_seconds": 2.16,
+      "response_id_sha256": "caa2b598f1bf243d6b6200f036ef8bf3cd9140373ae364cf823bb248daf63323",
+      "usage": {
+        "prompt_tokens": 398,
+        "completion_tokens": 44,
+        "total_tokens": 442
+      },
+      "prediction": {
+        "source_id": "heldout-13",
+        "category": "ceremonial",
+        "quote": "MICHAEL FULTZ/DAVID MANN HGWY",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-14",
+      "request_sha256": "395336fff3530ff5db88cf44619b1a4a106d1311499b099b6ca15aa040cc7a74",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004692",
+      "attempted_at": "2026-10-17T13:33:32.443516+00:00",
+      "latency_seconds": 1.6,
+      "response_id_sha256": "2fbc711b8bc581a099ce9fd74bd6b68df5fa15ad1dff36bbd9be3ba72917bd69",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 49,
+        "total_tokens": 464
+      },
+      "prediction": {
+        "source_id": "heldout-14",
+        "category": "event",
+        "quote": "The county party announces a community picnic on June 12 at the public park.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-15",
+      "request_sha256": "2966f70cf12d2d8b8c0449b6e069d6fd3fe810b7b62d4a4c5e58756b45203203",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.000047",
+      "attempted_at": "2026-10-17T13:33:34.045729+00:00",
+      "latency_seconds": 1.832,
+      "response_id_sha256": "4baf10cbd9e8b862d04f6ae3265d246524742c412360593a794bdb37f3531d18",
+      "usage": {
+        "prompt_tokens": 416,
+        "completion_tokens": 49,
+        "total_tokens": 465
+      },
+      "prediction": {
+        "source_id": "heldout-15",
+        "category": "event",
+        "quote": "The county party announces a community picnic on June 12 at the public park.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-16",
+      "request_sha256": "81ebe320b951545ed5020961d7f7a34312c9cc1d72222de82c96e52810904f1e",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.0000466",
+      "attempted_at": "2026-10-17T13:33:35.880365+00:00",
+      "latency_seconds": 1.643,
+      "response_id_sha256": "1422c5acff9ce0dcb8e422517a0ff09c130157df1858b30ca633e372f02e6d10",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 49,
+        "total_tokens": 460
+      },
+      "prediction": {
+        "source_id": "heldout-16",
+        "category": "meeting",
+        "quote": "The county central committee meets on the first Thursday of each month at the community hall.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-17",
+      "request_sha256": "f14b0fc66c32858f2be4ce6d68fe20e7666a4f448f5f12df7b50b2ea4abca576",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004668",
+      "attempted_at": "2026-10-17T13:33:37.526229+00:00",
+      "latency_seconds": 2.118,
+      "response_id_sha256": "03547145d77cf036882193fc5aa20b4d7ad64cfbc01110156b7829e76d7493ee",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 49,
+        "total_tokens": 461
+      },
+      "prediction": {
+        "source_id": "heldout-17",
+        "category": "meeting",
+        "quote": "The county central committee meets on the first Thursday of each month at the community hall.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-18",
+      "request_sha256": "f4d0a5b7b29aa82d45cd10f4b37c32f7296cd13bf64045d365e72448b75f93b5",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004588",
+      "attempted_at": "2026-10-17T13:33:39.646745+00:00",
+      "latency_seconds": 1.708,
+      "response_id_sha256": "409ba8b2b7f5ec6efe18bb68cc49b8e0d14b9f47d9522f1b0277e0c2572585c0",
+      "usage": {
+        "prompt_tokens": 409,
+        "completion_tokens": 47,
+        "total_tokens": 456
+      },
+      "prediction": {
+        "source_id": "heldout-18",
+        "category": "meeting",
+        "quote": "The county party elected a new chair and secretary at its annual organizational meeting.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-19",
+      "request_sha256": "edc1a7891f325d753ed96b1a4d1cb602774e6b5839b2d292dda6e7ecad00280a",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.0000478",
+      "attempted_at": "2026-10-17T13:33:41.357492+00:00",
+      "latency_seconds": 2.338,
+      "response_id_sha256": "afaba5f86ed9daa5212ff1934e9301ff21008424760f27c814ee4cca5a20d5d9",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 53,
+        "total_tokens": 465
+      },
+      "prediction": {
+        "source_id": "heldout-19",
+        "category": "candidate_or_endorsement",
+        "quote": "The county party formally endorses Candidate A for the county board in the general election.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-20",
+      "request_sha256": "eb2d10b0c0b2a5c568890cc1ce684c6d2f430b2f82a0f29c00425f720ab21f21",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004812",
+      "attempted_at": "2026-10-17T13:33:43.698615+00:00",
+      "latency_seconds": 2.177,
+      "response_id_sha256": "897f888889c1104b8513a30805bec5108064fee1226ac86f68f899799c88368f",
+      "usage": {
+        "prompt_tokens": 416,
+        "completion_tokens": 53,
+        "total_tokens": 469
+      },
+      "prediction": {
+        "source_id": "heldout-20",
+        "category": "contact",
+        "quote": "The county party has replaced its old contact form. All inquiries should now use the new Contact Us page.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-21",
+      "request_sha256": "ab4dd5b1b58c02ce63aad35722641b3975f0dd9ebb99f45fef2596ee79702714",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00005732",
+      "attempted_at": "2026-10-17T13:33:45.878815+00:00",
+      "latency_seconds": 3.179,
+      "response_id_sha256": "930ffc405de43ce6cf178f3d23b1910b0223c6951f60a440e540a1ad712a978b",
+      "usage": {
+        "prompt_tokens": 412,
+        "completion_tokens": 87,
+        "total_tokens": 499
+      },
+      "prediction": {
+        "source_id": "heldout-21",
+        "category": "position_statement",
+        "quote": "The county party calls for electric utilities to lower residential electricity rates and publish their rate calculations.",
+        "topics": [
+          {
+            "label": "energy",
+            "quote": "The county party calls for electric utilities to lower residential electricity rates and publish their rate calculations."
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-22",
+      "request_sha256": "f4272bca98710eb7feb2809763c202d0cea7a175b389d83b96cce6776276770d",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.000044",
+      "attempted_at": "2026-10-17T13:33:49.060751+00:00",
+      "latency_seconds": 2.288,
+      "response_id_sha256": "10d76513894063767d6ac74765ebea3dd986adafbb5a9d85707e7d139355d80c",
+      "usage": {
+        "prompt_tokens": 403,
+        "completion_tokens": 42,
+        "total_tokens": 445
+      },
+      "prediction": {
+        "source_id": "heldout-22",
+        "category": "cosmetic",
+        "quote": "The only page change is the stylesheet: the header background color changed.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-23",
+      "request_sha256": "103ef840ff09888de522a17f8576f8f5366c86fc08024eedcbf23124b4f9d828",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004",
+      "attempted_at": "2026-10-17T13:33:51.351238+00:00",
+      "latency_seconds": 0.986,
+      "response_id_sha256": "9e457898f2693ca14d1165ae8234e683e090817ba3faf8de92b28db9cd2841fe",
+      "usage": {
+        "prompt_tokens": 402,
+        "completion_tokens": 28,
+        "total_tokens": 430
+      },
+      "prediction": {
+        "source_id": "heldout-23",
+        "category": "insufficient",
+        "quote": "",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-24",
+      "request_sha256": "1387c4c884ee652020294ca7d3481682f29571a1c51948aae1dddd8c72e4025c",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.00004692",
+      "attempted_at": "2026-10-17T13:33:52.340358+00:00",
+      "latency_seconds": 1.739,
+      "response_id_sha256": "c98b3817b6644ed7c584030e18baccc29310d8f2f603e8d1e66d8d9861f5ca2b",
+      "usage": {
+        "prompt_tokens": 415,
+        "completion_tokens": 49,
+        "total_tokens": 464
+      },
+      "prediction": {
+        "source_id": "heldout-24",
+        "category": "event",
+        "quote": "The county party announces a community picnic on June 12 at the public park.",
+        "topics": []
+      }
+    },
+    {
+      "source_id": "heldout-25",
+      "request_sha256": "40b64568658938d259f2d777f2170b3a2f8b41887d933a53ddaff5416dabcbb9",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.0000492",
+      "attempted_at": "2026-10-17T13:33:54.082500+00:00",
+      "latency_seconds": 1.724,
+      "response_id_sha256": "ad2d545280d75f76d34914f60fb6a4f3fb5de041f7fe154a45a9d82b43287cfe",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 56,
+        "total_tokens": 475
+      },
+      "prediction": {
+        "source_id": "heldout-25",
+        "category": "event",
+        "quote": "the county party picnic is scheduled for Saturday at the park",
+        "topics": [
+          {
+            "label": "housing",
+            "quote": "claim that a housing bill passed today"
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "heldout-26",
+      "request_sha256": "8fd4126a32e9f275afd1e05a2c66f7a231a1ed75032d4c892724fc3cca7b85f5",
+      "status": "valid-unverified-classification",
+      "reserved_usd": "0.02",
+      "charged_usd": "0.0000392",
+      "attempted_at": "2026-10-17T13:33:55.809934+00:00",
+      "latency_seconds": 0.938,
+      "response_id_sha256": "d4e8de602834a7d6a790ab61b2cdc93b754d0b2e145333a6f7aa85330e1bd895",
+      "usage": {
+        "prompt_tokens": 392,
+        "completion_tokens": 28,
+        "total_tokens": 420
+      },
+      "prediction": {
+        "source_id": "heldout-26",
+        "category": "insufficient",
+        "quote": "",
+        "topics": []
+      }
+    }
+  ],
+  "preflight": {
+    "key_cap_verified": true,
+    "remaining_reservation_available": true,
+    "endpoint": "deepinfra/fp8",
+    "model": "qwen/qwen3-32b",
+    "pricing_usd_per_token": {
+      "prompt": "0.00000008",
+      "completion": "0.00000028"
+    }
+  },
+  "finished_at": "2026-10-17T13:33:56.751067+00:00",
+  "failure": null,
+  "scores": {
+    "development": {
+      "cases": 4,
+      "valid_outputs": 4,
+      "category_correct": 4,
+      "category_accuracy": 1.0,
+      "topic_true_positives": 1,
+      "topic_false_positives": 0,
+      "topic_false_negatives": 0,
+      "topic_precision": 1.0,
+      "topic_recall": 1.0,
+      "abstentions": 0,
+      "failures": []
+    },
+    "heldout": {
+      "cases": 26,
+      "valid_outputs": 26,
+      "category_correct": 24,
+      "category_accuracy": 0.9230769230769231,
+      "topic_true_positives": 10,
+      "topic_false_positives": 1,
+      "topic_false_negatives": 1,
+      "topic_precision": 0.9090909090909091,
+      "topic_recall": 0.9090909090909091,
+      "abstentions": 2,
+      "failures": [
+        {
+          "source_id": "heldout-09",
+          "expected_category": "legislation",
+          "predicted_category": "legislation",
+          "expected_topics": [
+            "immigration"
+          ],
+          "predicted_topics": [],
+          "error": null
+        },
+        {
+          "source_id": "heldout-18",
+          "expected_category": "leadership",
+          "predicted_category": "meeting",
+          "expected_topics": [],
+          "predicted_topics": [],
+          "error": null
+        },
+        {
+          "source_id": "heldout-23",
+          "expected_category": "irrelevant",
+          "predicted_category": "insufficient",
+          "expected_topics": [],
+          "predicted_topics": [],
+          "error": null
+        },
+        {
+          "source_id": "heldout-25",
+          "expected_category": "event",
+          "predicted_category": "event",
+          "expected_topics": [],
+          "predicted_topics": [
+            "housing"
+          ],
+          "error": null
+        }
+      ]
+    }
+  },
+  "adversarial_cases": 2,
+  "adversarial_passed": false,
+  "party_symmetry_passed": true,
+  "repeat_classification_passed": true,
+  "quality_thresholds": {
+    "heldout_valid_output_rate": 1.0,
+    "heldout_category_accuracy": 0.9,
+    "heldout_topic_precision": 0.9,
+    "heldout_topic_recall": 0.85,
+    "unsupported_quotes": 0
+  },
+  "quality_gate_passed": false,
+  "acknowledged_cost_usd": "0.00145256",
+  "conservative_liability_usd": "0.00145256",
+  "attempted_requests": 30
+}
