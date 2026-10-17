@@ -5,12 +5,48 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
-from civic_tracker.daily import due, run, run_federal, save, load
+from civic_tracker.daily import due, run, run_federal, retry_failed_federal, save, load
 from civic_tracker.daily_state import refresh
 
 ROOT=Path(__file__).resolve().parents[1]
 
 class DailyTests(unittest.TestCase):
+    def test_scoped_retry_reuses_only_recent_complete_sibling_sources(self):
+        old_stamp = '2026-10-17T16:43:00+00:00'; new_stamp = '2026-10-17T17:00:00+00:00'
+        now = datetime.fromisoformat(new_stamp)
+        sources = [{'source':f'{m}:{r}', 'complete':not (m=='D000622' and r=='sponsored')}
+                   for m in ('L000585','D000563','D000622') for r in ('sponsored','cosponsored')]
+        prior = {'checked_at':old_stamp, 'status':'partial','legislation_sources':sources,
+                 'vote_sources':[{'source':'https://clerk.house.gov/Votes/MemberVotes','complete':True},
+                                 {'source':'https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.xml','complete':True}],
+                 'errors':[{'source':'Congress.gov API','member_role':'D000622:sponsored','error':'duplicate_legislation_record'}]}
+        fresh = {'status':'ok','legislation_sources':[{'source':'D000622:sponsored','complete':True}],
+                 'errors':[],'api_attempts':3,'vote_requests':0}
+        with patch('civic_tracker.daily.daily_federal.refresh',return_value=({'collected_at':'old'},fresh)) as refresh:
+            archive, merged = retry_failed_federal(Path('.'), {}, prior, now)
+        self.assertEqual(refresh.call_args.kwargs, {'member_roles':{'D000622:sponsored'},'include_votes':False})
+        self.assertEqual(merged['status'], 'ok')
+        self.assertEqual(archive['collected_at'], old_stamp)
+        self.assertEqual(merged['checked_at'], old_stamp)
+        self.assertEqual(merged['latest_attempt_at'], new_stamp)
+        self.assertEqual(merged['legislation_sources'][0]['checked_at'], old_stamp)
+        self.assertEqual(merged['legislation_sources'][4]['checked_at'], new_stamp)
+        self.assertEqual(len(merged['reused_sources']), 7)
+        for bad in ({**prior,'checked_at':'2026-10-16T16:43:00+00:00'},
+                    {**prior,'vote_sources':[{'source':'house','complete':False},{'source':'senate','complete':True}]},
+                    {**prior,'vote_sources':[prior['vote_sources'][0],prior['vote_sources'][0]]},
+                    {**prior,'errors':[{'source':'Congress.gov API','error':'missing_api_key'}]}):
+            with patch('civic_tracker.daily.daily_federal.refresh',return_value=({},fresh)) as refresh:
+                retry_failed_federal(Path('.'), {}, bad, now)
+            self.assertEqual(refresh.call_args.kwargs, {})
+        missing = {**fresh, 'status':'partial', 'errors':[{'source':'Congress.gov API','error':'missing_api_key'}],
+                   'legislation_sources':[{'source':'D000622:sponsored','complete':False,'reason':'missing_api_key'}]}
+        with patch('civic_tracker.daily.daily_federal.refresh',return_value=({'collected_at':'old'},missing)):
+            archive, merged = retry_failed_federal(Path('.'), {}, prior, now)
+        self.assertEqual(merged['status'], 'partial')
+        self.assertEqual(archive['collected_at'], 'old')
+        self.assertEqual(merged['errors'][0]['error'], 'missing_api_key')
+
     def test_federal_recheck_preserves_other_sources_calendars_and_budget(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp); (root/'config').mkdir(); (root/'data').mkdir()

@@ -70,8 +70,31 @@ API query strings. Recovered retries remain in `recovered_requests`.
 
 Congress.gov member lists have no documented Congress filter, so collection
 still reads the complete career list and filters Congress 119 locally. Stable
-integer pagination counts, matching total rows and unique legislation IDs are
-required before removing an absent prior sponsorship association. Incomplete
+integer pagination counts, matching total rows and validated legislation IDs are
+required before removing an absent prior sponsorship association. An exact-payload
+duplicate within one page is deduplicated and recorded in `duplicate_source_rows`;
+conflicting records or records repeated across pages fail closed. Incomplete
 responses retain prior links. The federal-only workflow shares the source lock,
 checks unchanged financial/collection ledgers, runs tests/privacy checks and
 publishes its own SHA-guarded Pages artifact. It has no model or email secret.
+
+
+The first hosted recovery (run 39050646833) completed all 32 House index pages
+(314 rolls), revalidated five House and five Senate XML records, and completed
+Durbin's 43-page career cosponsorship list. It retained Duckworth's roles after
+the stronger guard found a duplicate. A separate read-only diagnostic (run
+39051429275) verified Congress.gov repeated the identical Congress 118 S38 row
+inside page 1 of Duckworth's sponsored list. No source body or credential was
+stored in that diagnostic; only identity and equality checks were reported.
+
+Manual recovery can use `python -m civic_tracker.daily federal --failed-only`.
+It reuses sibling checks only if the six named role lists and two complete vote
+indexes are present, the report is at most six hours old, and every error belongs
+to an incomplete API role. Otherwise it performs a full federal refresh. Reused
+sources retain their check times; whole-report/archive freshness stays at the
+oldest source check. `latest_attempt_at`, `attempt_scope` and `reused_sources`
+describe the targeted attempt. Request counts describe this attempt, while the
+prior report is preserved in the recheck receipt. The daily schedule always
+runs a full federal collection. The workflow's optional diagnostics input calls
+`python -m civic_tracker.daily_federal diagnose` with read-only repository access
+and does not publish or write source records.

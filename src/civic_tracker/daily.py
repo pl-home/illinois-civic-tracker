@@ -95,7 +95,51 @@ def run(root, now):
     print(json.dumps({'status':state['last_status'],'data_bytes':size,'source_status':{k:v['status'] for k,v in reports.items()}}))
 
 
-def run_federal(root, now):
+def retry_failed_federal(root, old, prior, now):
+    """Retry incomplete API roles only when recent, complete sibling proof exists."""
+    rows = prior.get('legislation_sources', [])
+    expected = {f'{m}:{role}' for m in daily_federal.MEMBERS for role in ('sponsored','cosponsored')}
+    failed = {r.get('source') for r in rows if r.get('complete') is False}
+    expected_votes = {'https://clerk.house.gov/Votes/MemberVotes',
+        f'https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_{daily_federal.CONGRESS}_2.xml'}
+    try:
+        age = (now - datetime.fromisoformat(prior['checked_at'])).total_seconds()
+    except (KeyError, TypeError, ValueError):
+        age = -1
+    valid = (0 <= age <= 6 * 3600 and failed and len(rows) == len(expected)
+             and {r.get('source') for r in rows} == expected
+             and all(type(r.get('complete')) is bool for r in rows)
+             and len(prior.get('vote_sources', [])) == 2
+             and {r.get('source') for r in prior['vote_sources']} == expected_votes
+             and all(r.get('complete') is True for r in prior['vote_sources'])
+             and all(e.get('member_role') in failed for e in prior.get('errors', [])))
+    if not valid:
+        return daily_federal.refresh(root, old, now)
+    archive, fresh = daily_federal.refresh(root, old, now, member_roles=failed, include_votes=False)
+    stamp = now.isoformat()
+    by_source = {r['source']: {**r, 'checked_at': stamp} for r in fresh['legislation_sources']}
+    merged = {**prior, **{k: fresh[k] for k in ('errors','status','api_attempts','vote_requests')},
+              'latest_attempt_at': stamp,
+              'attempt_scope': {'member_roles': sorted(failed), 'votes': False},
+              'legislation_sources': [by_source.get(r['source'], {**r,
+                  'checked_at': r.get('checked_at', prior['checked_at'])}) for r in rows],
+              'vote_sources': [{**r, 'checked_at': r.get('checked_at', prior['checked_at'])}
+                               for r in prior['vote_sources']],
+              'reused_sources': [r['source'] for r in rows if r['source'] not in failed]
+                               + [r['source'] for r in prior['vote_sources']]}
+    for field in ('unknown_records','recovered_requests','duplicate_source_rows'):
+        # Unknown rows are member-role scoped; request recovery notes are safe
+        # history and do not affect completeness.
+        merged[field] = [r for r in prior.get(field, []) if r.get('source') not in failed] + fresh.get(field, [])
+    merged['status'] = ('ok' if not merged['errors'] and all(r['complete'] for r in merged['legislation_sources']) else 'partial')
+    # The whole archive is only as fresh as its oldest successful source check.
+    merged['checked_at'] = min(r['checked_at'] for r in merged['legislation_sources'] + merged['vote_sources'])
+    if merged['status'] == 'ok':
+        archive['collected_at'] = merged['checked_at']
+    return archive, merged
+
+
+def run_federal(root, now, failed_only=False):
     """Recheck only federal facts; preserve calendar, news and budget timestamps."""
     plan = load(root/'config/daily.json')
     day = now.astimezone(ZoneInfo(plan['timezone'])).date()
@@ -104,7 +148,10 @@ def run_federal(root, now):
     snapshot = load(root/'data/dashboard.json')
     old = load(root/'data/federal-index.json')
     started = time.monotonic()
-    archive, report = daily_federal.refresh(root, old, now)
+    if failed_only:
+        archive, report = retry_failed_federal(root, old, snapshot['daily_refresh']['sources']['Federal'], now)
+    else:
+        archive, report = daily_federal.refresh(root, old, now)
     report['duration_seconds'] = round(time.monotonic() - started, 2)
     for member in snapshot['members']:
         if member['jurisdiction'] != 'US':
@@ -136,11 +183,11 @@ def run_federal(root, now):
 
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['gate','run','federal']);parser.add_argument('--manual',action='store_true')
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['gate','run','federal']);parser.add_argument('--manual',action='store_true');parser.add_argument('--failed-only',action='store_true')
     args=parser.parse_args();root=Path.cwd();now=datetime.now(timezone.utc)
     if args.command=='gate':
         print('active='+str(due(load(root/'config/daily.json'),load(root/'data/collection-state.json'),now,args.manual)).lower())
-    elif args.command=='federal':run_federal(root,now)
+    elif args.command=='federal':run_federal(root,now,args.failed_only)
     else:run(root,now)
 
 

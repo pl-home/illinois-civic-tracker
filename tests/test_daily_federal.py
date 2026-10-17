@@ -122,6 +122,35 @@ class DailyFederalTests(unittest.TestCase):
                          ['duplicate_legislation_record','pagination_count_mismatch'])
         self.assertTrue(all(not s['complete'] for s in report['legislation_sources'][:2]))
 
+    def test_identical_within_page_source_duplicate_is_deduplicated_but_conflict_is_not(self):
+        row = {'congress':119,'type':'S','number':'38','title':'Original','introducedDate':'2025-01-09'}
+        prior = {'bills':{'US-119-HR5':{'relations':[{'member':'D000622','role':'sponsored'}]}}, 'votes':{}}
+        for conflict in (False, True):
+            def api(url):
+                return {'sponsoredLegislation':[row,{**row, **({'title':'Conflicting'} if conflict else {})}],
+                        'pagination':{'count':2}}
+            with patch.dict('os.environ', {'CONGRESS_API_KEY':'test'}), \
+                 patch.object(federal, 'build_opener', return_value=_Opener(api)), \
+                 patch.object(federal.time, 'sleep'):
+                archive, report = federal.refresh(Path('.'), prior, datetime(2026,10,17,tzinfo=timezone.utc),
+                    member_roles={'D000622:sponsored'}, include_votes=False)
+            self.assertEqual(report['legislation_sources'][0]['complete'], not conflict)
+            if conflict:
+                self.assertEqual(report['errors'][0]['error'], 'duplicate_legislation_record')
+                self.assertEqual(archive['bills']['US-119-HR5']['relations'], prior['bills']['US-119-HR5']['relations'])
+            else:
+                self.assertEqual(report['duplicate_source_rows'][0]['identity'], [119,'S',38])
+                self.assertEqual(archive['bills']['US-119-HR5']['relations'], [])
+                self.assertEqual(len(archive['bills']['US-119-S38']['relations']), 1)
+
+    def test_scoped_diagnostic_missing_key_has_named_incomplete_source(self):
+        with patch.dict('os.environ', {'CONGRESS_API_KEY':'','CONGRESSGOV_API':''}):
+            _, report = federal.refresh(Path('.'), {}, datetime(2026,10,17,tzinfo=timezone.utc),
+                member_roles={'D000622:sponsored'}, include_votes=False)
+        self.assertEqual(report['legislation_sources'][0]['source'], 'D000622:sponsored')
+        self.assertFalse(report['legislation_sources'][0]['complete'])
+        self.assertEqual(report['api_attempts'], 0)
+
     def test_house_pagination_collects_all_pages_before_selecting_votes(self):
         seen_pages = []
         def api(url):

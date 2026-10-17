@@ -6,6 +6,10 @@ on:
         description: Read-only Duckworth source duplicate diagnostic
         type: boolean
         default: false
+      failed_only:
+        description: Retry only incomplete API roles if other checks are recent and complete
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -48,10 +52,15 @@ jobs:
       - name: Recheck official federal sources only
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESSGOV_API || secrets.CONGRESS_API_KEY }}
+          FAILED_ONLY: ${{ inputs.failed_only }}
         run: |
           mkdir -p .local
           sha256sum data/media-inference-*.json data/media-work.json data/collection-state.json > .local/federal-unrelated-before.sha256
-          python -m civic_tracker.daily federal
+          if [ "$FAILED_ONLY" = 'true' ]; then
+            python -m civic_tracker.daily federal --failed-only
+          else
+            python -m civic_tracker.daily federal
+          fi
           sha256sum --check .local/federal-unrelated-before.sha256
       - run: python -m civic_tracker.privacy
       - run: python -m civic_tracker.browse --output .local/site

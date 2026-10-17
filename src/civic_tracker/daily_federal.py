@@ -232,7 +232,7 @@ def refresh(root, previous, now, *, member_roles=None, include_votes=True):
     archive = _copy_archive(previous)
     report = {'status': 'ok', 'checked_at': _stamp(now), 'errors': [],
               'legislation_sources': [], 'vote_sources': [], 'unknown_records': [],
-              'recovered_requests': []}
+              'recovered_requests': [], 'duplicate_source_rows': []}
     api_attempts = 0
     vote_attempts = 0
     last_request = [0.0]
@@ -293,7 +293,10 @@ def refresh(root, previous, now, *, member_roles=None, include_votes=True):
 
     if not key:
         report['errors'].append({'source': 'Congress.gov API', 'error': 'missing_api_key'})
-        report['legislation_sources'].append({'complete': False, 'reason': 'missing_api_key'})
+        report['legislation_sources'].extend({'source': f'{member}:{role}', 'complete': False,
+            'reason': 'missing_api_key', 'checked_at': _stamp(now)}
+            for member in MEMBERS for role in ('sponsored', 'cosponsored')
+            if member_roles is None or f'{member}:{role}' in member_roles)
     else:
         for member, (name, _, _) in MEMBERS.items():
             for role in ('sponsored', 'cosponsored'):
@@ -350,6 +353,10 @@ def refresh(root, previous, now, *, member_roles=None, include_votes=True):
                             digest = hashlib.sha256(json.dumps(row, sort_keys=True).encode()).hexdigest()
                             if identity in seen_records:
                                 prior_page, prior_digest = seen_records[identity]
+                                if prior_page == pages and prior_digest == digest:
+                                    report['duplicate_source_rows'].append({'source': source_name,
+                                        'identity': list(identity), 'page': pages})
+                                    continue
                                 report['unknown_records'].append({'source': source_name,
                                     'error': 'duplicate_legislation_record', 'identity': list(identity),
                                     'same_page': prior_page == pages, 'same_payload': prior_digest == digest})
@@ -404,7 +411,8 @@ def refresh(root, previous, now, *, member_roles=None, include_votes=True):
                         if rel not in rels:
                             rels.append(rel)
                         archive['bills'][ident] = {**bill, **old_bill, 'relations': rels}
-                report['legislation_sources'].append({'source': source_name, 'pages': pages, 'complete': complete})
+                report['legislation_sources'].append({'source': source_name, 'pages': pages,
+                    'complete': complete, 'checked_at': _stamp(now)})
 
     if not include_votes:
         # Diagnostic mode returns only the selected API source report. Its
@@ -440,7 +448,8 @@ def refresh(root, previous, now, *, member_roles=None, include_votes=True):
             if len(nums) != len(set(nums)):
                 raise ValueError('duplicate_index_id')
             discovered[chamber] = set(nums)
-            report['vote_sources'].append({'source': _safe_source(url), 'complete': True, 'discovered': len(nums), 'selected': 0})
+            report['vote_sources'].append({'source': _safe_source(url), 'complete': True,
+                'discovered': len(nums), 'selected': 0, 'checked_at': _stamp(now)})
         except Exception as exc:
             code = _safe_error(exc)
             report['errors'].append({'source': _safe_source(url), 'error': code})
