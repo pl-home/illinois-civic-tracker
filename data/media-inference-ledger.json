@@ -25,9 +25,14 @@
         "6bba157e1055e5cf8e4ee820"
       ],
       "reserved_usd": "0.002",
-      "charged_usd": null,
-      "status": "reserved",
-      "prepared_at": "2026-10-17T15:56:09.921981+00:00"
+      "charged_usd": "0.00015504",
+      "status": "valid",
+      "prepared_at": "2026-10-17T15:56:09.921981+00:00",
+      "attempted_at": "2026-10-17T15:56:13.852930+00:00",
+      "usage": {
+        "prompt_tokens": 874,
+        "completion_tokens": 304
+      }
     },
     {
       "batch_hash": "f3a54c29929a7ab4faff8f45032412db5e3397bea3133f8863add575e5a8076e",
@@ -53,9 +58,14 @@
         "d53fc6db5cae9f7c4a850ce5"
       ],
       "reserved_usd": "0.002",
-      "charged_usd": null,
-      "status": "reserved",
-      "prepared_at": "2026-10-17T15:56:09.921981+00:00"
+      "charged_usd": "0.00014064",
+      "status": "valid",
+      "prepared_at": "2026-10-17T15:56:09.921981+00:00",
+      "attempted_at": "2026-10-17T15:56:23.256476+00:00",
+      "usage": {
+        "prompt_tokens": 799,
+        "completion_tokens": 274
+      }
     },
     {
       "batch_hash": "248cedb35b40f0bc9a0cd54dc3e22c022bcbff05c8bdb69103b2310372f74a3f",
@@ -67,9 +77,14 @@
         "785efc424eeb361fa4072762"
       ],
       "reserved_usd": "0.002",
-      "charged_usd": null,
-      "status": "reserved",
-      "prepared_at": "2026-10-17T15:56:09.921981+00:00"
+      "charged_usd": "0.00003372",
+      "status": "valid",
+      "prepared_at": "2026-10-17T15:56:09.921981+00:00",
+      "attempted_at": "2026-10-17T15:56:33.744806+00:00",
+      "usage": {
+        "prompt_tokens": 292,
+        "completion_tokens": 37
+      }
     }
   ]
 }
