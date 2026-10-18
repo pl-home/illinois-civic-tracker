@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-17T16:20:12.910269+00:00",
+  "checked_at": "2026-10-18T10:53:35.092845+00:00",
   "sources": {
     "fritts-office": {
       "items": [
@@ -139,7 +139,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-08",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Representative Bradley Fritts office",
       "kind": "office",
       "members": [
@@ -285,7 +285,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-09-24",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Senator Li Arellano office",
       "kind": "office",
       "members": [
@@ -379,7 +379,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-07",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Representative Darin LaHood office",
       "kind": "office",
       "members": [
@@ -655,7 +655,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-13",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Senator Dick Durbin office",
       "kind": "office",
       "members": [
@@ -931,7 +931,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-16",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Senator Tammy Duckworth office",
       "kind": "office",
       "members": [
@@ -946,7 +946,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2025-07-15",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Fritts campaign",
       "kind": "campaign",
       "members": [
@@ -961,7 +961,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2024-11-05",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "LaHood campaign",
       "kind": "campaign",
       "members": [
@@ -974,7 +974,7 @@
       "status": "link-only",
       "items": [],
       "note": "Older campaign site describes his previous House race; current dated release feed not verified.",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Arellano campaign (older site)",
       "kind": "campaign",
       "members": [
@@ -986,7 +986,7 @@
       "status": "link-only",
       "items": [],
       "note": "Campaign link verified previously; no dated public release feed verified for this collector.",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Durbin campaign",
       "kind": "campaign",
       "members": [
@@ -998,7 +998,7 @@
       "status": "link-only",
       "items": [],
       "note": "No dated public release archive verified; campaign site link only.",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Duckworth campaign",
       "kind": "campaign",
       "members": [
@@ -1012,7 +1012,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-14",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Illinois Senate Republican Caucus",
       "kind": "party",
       "members": [
@@ -1027,7 +1027,7 @@
       "status": "link-only",
       "items": [],
       "note": "Public homepage returned HTTP 403 during collector setup; link only.",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Illinois House Republican Caucus",
       "kind": "party",
       "members": [
@@ -1039,9 +1039,9 @@
       "items": [],
       "entries_checked": 20,
       "rejected_entries": 0,
-      "latest_source_date": "2026-10-15",
+      "latest_source_date": "2026-10-17",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Senate Democratic Caucus",
       "kind": "party",
       "members": [
@@ -1057,7 +1057,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-08-18",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Lee County Democrats",
       "kind": "party",
       "members": [
@@ -1073,7 +1073,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-01",
       "status": "ok",
-      "checked_at": "2026-10-17T16:20:12.910269+00:00",
+      "checked_at": "2026-10-18T10:53:35.092845+00:00",
       "label": "Lee County Republican Central Committee",
       "kind": "party",
       "members": [
