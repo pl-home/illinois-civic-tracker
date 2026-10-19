@@ -20,7 +20,7 @@ jobs:
     permissions:
       contents: write
     outputs:
-      source_sha: ${{ steps.persist.outputs.sha }}
+      source_sha: ${{ steps.journal.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,8 +29,11 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -e .
+        id: dependencies
       - run: python -m unittest discover -s tests -v
+        id: tests
       - name: Refresh first-party communications without model calls
+        id: communications
         if: inputs.mode == 'communications'
         run: |
           mkdir -p .local
@@ -38,6 +41,7 @@ jobs:
           python -m civic_tracker.media refresh-communications
           sha256sum --check .local/inference-before-communications.sha256
       - name: Discover public news and reserve bounded inference budget
+        id: collector
         if: inputs.mode != 'communications'
         run: python -m civic_tracker.media prepare
       - name: Persist source metadata and any inference reservations
@@ -52,12 +56,15 @@ jobs:
             git push origin main
           fi
       - name: Screen supplied article IDs using the capped media model
+        id: model
         if: inputs.mode != 'communications'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python -m civic_tracker.media execute
       - run: python -m civic_tracker.privacy
+        id: privacy
       - run: python -m civic_tracker.browse --output .local/site
+        id: build
       - name: Persist reports and source receipts before publication
         id: persist
         run: |
@@ -70,6 +77,21 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .local/site
+      - name: Preserve troubleshooting journal even after a failed step
+        if: always()
+        id: journal
+        uses: ./.github/actions/error-journal
+        with:
+          scope: media
+          status: ${{ job.status }}
+          dependencies: ${{ steps.dependencies.outcome }}
+          tests: ${{ steps.tests.outcome == 'failure' && 'failure' || steps.offline.outcome }}
+          collector: ${{ steps.collector.outcome == 'failure' && 'failure' || steps.communications.outcome == 'failure' && 'failure' || steps.collector.outcome }}
+          reserve: ${{ steps.reserve.outcome }}
+          model: ${{ steps.model.outcome }}
+          privacy: ${{ steps.privacy.outcome }}
+          build: ${{ steps.build.outcome }}
+          persist: ${{ steps.persist.outcome }}
   deploy:
     needs: refresh
     runs-on: ubuntu-latest

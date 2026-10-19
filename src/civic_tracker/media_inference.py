@@ -10,6 +10,7 @@ import re
 
 from . import inference_eval as ev
 from . import usage
+from . import model_diagnostics as md
 
 MODEL = ev.MODEL
 PROVIDER = ev.PROVIDER
@@ -511,6 +512,7 @@ def execute(root, now=None, clock=None):
         calls += 1
         try:
             response = client.call('/chat/completions', item['payload'])
+            batch['diagnostics']=md.completion(response,{'decisions'})
             raw, usage, cost, response_error = _parse_completion(response)
             # Billing is known as soon as the response envelope is validated,
             # even when its decision body later fails schema validation.

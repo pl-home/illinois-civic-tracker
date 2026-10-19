@@ -137,3 +137,9 @@ member pages and committee calendars completed successfully. The previous
 October 18 receipt remains in `data/illinois-recovery-report.json`.
 Federal source timestamps remain unchanged. Historical committee PDF coverage
 is retained; daily committee roll-call collection is still pending.
+## Troubleshooting history
+
+The [bounded structured error journal](ERROR_JOURNAL.md) records source failures,
+recurrences, recoveries and workflow step failures without raw responses or
+credentials. Its finalizer has a seven-day artifact backup and independent Git
+persistence. Runner loss can still prevent finalization.

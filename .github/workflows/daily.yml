@@ -20,7 +20,7 @@ jobs:
       contents: write
     outputs:
       active: ${{ steps.gate.outputs.active }}
-      source_sha: ${{ steps.persist.outputs.sha }}
+      source_sha: ${{ steps.journal.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,6 +29,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -e .
+        id: dependencies
       - name: Local-time and once-per-day gate
         id: gate
         env:
@@ -41,7 +42,9 @@ jobs:
           fi
       - if: steps.gate.outputs.active == 'true'
         run: python -m unittest discover -s tests -v
+        id: tests
       - name: Refresh official sources without inference or email
+        id: collector
         if: steps.gate.outputs.active == 'true'
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESSGOV_API || secrets.CONGRESS_API_KEY }}
@@ -62,14 +65,17 @@ jobs:
             git push origin main
           fi
       - name: Screen supplied article IDs using the capped media model
+        id: model
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         if: steps.gate.outputs.active == 'true'
         run: python -m civic_tracker.media execute
       - if: steps.gate.outputs.active == 'true'
         run: python -m civic_tracker.privacy
+        id: privacy
       - if: steps.gate.outputs.active == 'true'
         run: python -m civic_tracker.browse --output .local/site
+        id: build
       - name: Persist public data before publication
         id: persist
         if: steps.gate.outputs.active == 'true'
@@ -86,6 +92,21 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .local/site
+      - name: Preserve troubleshooting journal even after a failed step
+        if: always() && (steps.gate.outputs.active == 'true' || failure())
+        id: journal
+        uses: ./.github/actions/error-journal
+        with:
+          scope: daily
+          status: ${{ job.status }}
+          dependencies: ${{ steps.dependencies.outcome }}
+          tests: ${{ steps.tests.outcome == 'failure' && 'failure' || steps.offline.outcome }}
+          collector: ${{ steps.collector.outcome == 'failure' && 'failure' || steps.communications.outcome == 'failure' && 'failure' || steps.collector.outcome }}
+          reserve: ${{ steps.reserve.outcome }}
+          model: ${{ steps.model.outcome }}
+          privacy: ${{ steps.privacy.outcome }}
+          build: ${{ steps.build.outcome }}
+          persist: ${{ steps.persist.outcome }}
   deploy:
     needs: refresh
     if: needs.refresh.outputs.active == 'true'

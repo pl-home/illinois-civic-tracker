@@ -1,0 +1,43 @@
+name: Verify troubleshooting journal without paid services
+on:
+  workflow_dispatch:
+    inputs:
+      failure_probe:
+        description: Exercise failure finalization with a controlled exit (no source/model calls)
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: m0-source-evidence
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Controlled failure probe
+        id: collector
+        env:
+          FAILURE_PROBE: ${{ inputs.failure_probe }}
+        run: |
+          if [ "$FAILURE_PROBE" = 'true' ]; then
+            python -c 'raise SystemExit(23)'
+          fi
+      - name: Preserve troubleshooting journal even after a failed step
+        if: always()
+        id: journal
+        uses: ./.github/actions/error-journal
+        with:
+          scope: journal
+          status: ${{ job.status }}
+          collector: ${{ steps.collector.outcome }}

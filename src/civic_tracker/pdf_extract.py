@@ -15,6 +15,7 @@ from urllib.request import Request, build_opener
 from .daily import load, save
 from .http import Client, NoRedirect, fingerprint
 from . import inference_eval as ev, usage
+from . import model_diagnostics as md
 
 FIELDS=('document_title','measure','motion')
 PROMPT=('Extract only the printed document title, bill/measure caption, and motion. '
@@ -154,7 +155,7 @@ def execute(root, now):
             data=json.dumps(payload(config,data,pages)).encode())
         with build_opener(NoRedirect()).open(request,timeout=120) as response:raw=response.read(4_000_001)
         if len(raw)>4_000_000:raise ValueError('response-bound')
-        result=json.loads(raw);cost=ev.money(result['usage']['cost'])
+        result=json.loads(raw);report['diagnostics']=md.completion(result,set(FIELDS));cost=ev.money(result['usage']['cost'])
         entry['charged_usd']=str(cost);entry['status']='attempted-invalid'
         report.update(charged_usd=str(cost),response_id=result.get('id'),
             prompt_tokens=result['usage'].get('prompt_tokens'),completion_tokens=result['usage'].get('completion_tokens'))
@@ -166,9 +167,10 @@ def execute(root, now):
         report.update(fields=fields,fields_verified=True,parser_annotations_provided=bool(message.get('annotations')),
             status='valid-extraction',validation='Schema and page quotations checked against native PDF text; human review remains required.')
     except HTTPError as ex:
-        report.update(status=entry['status'],error='HTTP_'+str(ex.code))
+        report.update(status=entry['status'],error='HTTP_'+str(ex.code),diagnostics=md.http_error(ex))
     except Exception as ex:
         report.update(status=entry['status'],error=type(ex).__name__)
+    report.setdefault('diagnostics',{})['validation_stage']='model-http' if str(report.get('error','')).startswith('HTTP_') else 'model-validation'
     save(path,ledger);save(root/'data/pdf-extraction-report.json',report);usage.apply(root,now)
     print(json.dumps({'status':report['status'],'charged_usd':entry['charged_usd'],'fields_verified':report['fields_verified']}))
 

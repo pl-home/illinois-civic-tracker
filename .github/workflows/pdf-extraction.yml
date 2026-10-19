@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: write
     outputs:
-      source_sha: ${{ steps.persist.outputs.sha }}
+      source_sha: ${{ steps.journal.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,10 +23,14 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -e ".[verification]"
+        id: dependencies
       - run: python -m unittest discover -s tests -v
+        id: tests
       - name: Fetch and preflight one official PDF; reserve shared budget
+        id: collector
         run: python -m civic_tracker.pdf_extract prepare
       - name: Preserve reservation before exposing the inference key
+        id: reserve
         run: |
           python -m civic_tracker.privacy
           git config user.name 'github-actions[bot]'
@@ -35,11 +39,14 @@ jobs:
           git commit -m 'Reserve bounded manual PDF extraction liability'
           git push origin main
       - name: One native PDF text request with capped DeepInfra inference
+        id: model
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python -m civic_tracker.pdf_extract execute
       - run: python -m civic_tracker.privacy
+        id: privacy
       - run: python -m civic_tracker.browse --output .local/site
+        id: build
       - uses: actions/upload-artifact@v4
         with:
           name: pdf-source-preview
@@ -57,6 +64,21 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .local/site
+      - name: Preserve troubleshooting journal even after a failed step
+        if: always()
+        id: journal
+        uses: ./.github/actions/error-journal
+        with:
+          scope: pdf
+          status: ${{ job.status }}
+          dependencies: ${{ steps.dependencies.outcome }}
+          tests: ${{ steps.tests.outcome == 'failure' && 'failure' || steps.offline.outcome }}
+          collector: ${{ steps.collector.outcome == 'failure' && 'failure' || steps.communications.outcome == 'failure' && 'failure' || steps.collector.outcome }}
+          reserve: ${{ steps.reserve.outcome }}
+          model: ${{ steps.model.outcome }}
+          privacy: ${{ steps.privacy.outcome }}
+          build: ${{ steps.build.outcome }}
+          persist: ${{ steps.persist.outcome }}
   deploy:
     needs: refresh
     runs-on: ubuntu-latest

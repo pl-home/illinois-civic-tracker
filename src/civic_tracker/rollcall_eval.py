@@ -16,6 +16,8 @@ from urllib.request import Request, build_opener
 from .media import load, save
 from .http import Client, NoRedirect, fingerprint, source_error
 from . import inference_eval as ev, usage
+from . import model_diagnostics as md
+from .error_journal import safe_code
 
 BATCH='committee-rollcalls-v1'
 HOLD=Decimal('0.0015')
@@ -247,7 +249,8 @@ def execute(root,now,clock=None):
                 headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},data=json.dumps(body,ensure_ascii=False).encode())
             with build_opener(NoRedirect()).open(request,timeout=90) as response:raw=response.read(100001)
             if len(raw)>100000:raise ValueError('response-bound')
-            result=json.loads(raw);cost=ev.money(result['usage']['cost'])
+            result=json.loads(raw);row['diagnostics']=md.completion(result,{'status','committee','measure','motion','member_vote','tally'})
+            cost=ev.money(result['usage']['cost'])
             entry.update(charged_usd=str(cost),status='attempted-invalid')
             row.update(charged_usd=str(cost),response_id=result.get('id'),prompt_tokens=result['usage'].get('prompt_tokens'),
                        completion_tokens=result['usage'].get('completion_tokens'))
@@ -257,12 +260,22 @@ def execute(root,now,clock=None):
             value=json.loads(result['choices'][0]['message']['content'])
             status=value.get('status') if isinstance(value,dict) else None
             row['model_status']=status if status in ('extracted','unverified') else 'unexpected'
+            if isinstance(value,dict) and status!='extracted':
+                # Diagnostic only: never change the actual status or acceptance gate.
+                try:
+                    validate({**value,'status':'extracted'},case,native)
+                    row['diagnostics']['evidence_assessment']='matched-reference'
+                except Exception as error:
+                    row['diagnostics'].update(evidence_assessment='rejected',evidence_failure_code=safe_code(str(error)))
             checks=validate(value,case,native)
             row.update(output=value,checks=checks);entry['status']='validated'
-        except HTTPError as error:row['error']=source_error(error);row['transport_failed']=True
+        except HTTPError as error:
+            row['error']=source_error(error);row['transport_failed']=True;row['diagnostics']=md.http_error(error)
         except ValueError as error:row['error']=str(error) if re.fullmatch(r'[a-z-]{3,50}',str(error)) else 'invalid-response'
         except Exception as error:row['error']=type(error).__name__;row['transport_failed']=True
         row['status']=entry['status'];report['cases'].append(row);save(path,ledger)
+        row.setdefault('diagnostics',{})['validation_stage']=('model-status' if row.get('error')=='model-abstained' else
+            'model-http' if row.get('transport_failed') else 'model-json' if row.get('diagnostics',{}).get('json_parse')=='invalid' else 'model-validation')
         save(root/'data/rollcall-evaluation-report.json',report)
         if entry['charged_usd'] is None or row.get('error') in ('cost-over-reservation','routing-mismatch') or row.get('transport_failed'):break
     completed={r['case_id'] for r in report['cases']}

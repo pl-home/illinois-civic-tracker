@@ -134,6 +134,8 @@ class RollcallTests(unittest.TestCase):
             report=load(root/'data/rollcall-evaluation-report.json')
             self.assertEqual(report['validated'],0)
             self.assertTrue(all(row['model_status']=='unverified' and row['error']=='model-abstained' and 'output' not in row for row in report['cases']))
+            self.assertTrue(all(row['diagnostics']['evidence_assessment']=='matched-reference' for row in report['cases']))
+            self.assertTrue(all(row['diagnostics']['model_status']=='unverified' and not row['diagnostics']['status_exact'] for row in report['cases']))
 
     def test_routing_deviation_stops_batch_and_invalid_output_is_not_published(self):
         for wrong_provider in (True,False):

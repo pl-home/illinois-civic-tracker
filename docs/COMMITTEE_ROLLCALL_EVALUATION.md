@@ -57,3 +57,10 @@ Actual total charge: **USD 0.00061384** (about 0.0614 cents). Every call has a m
 All pre-existing source records and financial ledgers remained unchanged; only usage totals and the new evaluation evidence were added. A post-run stop-condition regression also covers malformed responses without a charge receipt, and status diagnostics preserve rejection rather than treating abstention as success. The complete updated local suite has 181 passing tests.
 
 **Decision:** daily committee PDF inference stays disabled. Deterministic native parsing is the candidate primary path because it reproduced both members' choices and full committee tallies for all six references. This is still a limited native-text sample: production discovery, more layouts and pages, explicit unsupported-source handling and collector integration remain unaccepted. Any further model trial needs a separately versioned, bounded evaluation; the current batch and earlier uncertain hold must remain intact.
+## Model troubleshooting
+
+The [bounded error journal](ERROR_JOURNAL.md) preserves the available historical
+receipt diagnostics and adds status/JSON/finish-reason and evidence-assessment
+metadata to future manual trials. Original rejected status values were not saved
+and remain explicitly unavailable. Adding diagnostics does not enable daily
+collection or rerun the paid evaluation.

@@ -1,0 +1,79 @@
+name: Preserve bounded troubleshooting journal
+description: Allowlisted diagnostics, artifact backup, then journal-only Git persistence
+inputs:
+  scope:
+    required: true
+    description: Fixed workflow identifier
+  status:
+    required: true
+    description: Job status before finalization
+  dependencies:
+    default: ''
+    description: Dependency step outcome
+  tests:
+    default: ''
+    description: Test step outcome
+  collector:
+    default: ''
+    description: Collector step outcome
+  reserve:
+    default: ''
+    description: Reservation step outcome
+  model:
+    default: ''
+    description: Model step outcome
+  privacy:
+    default: ''
+    description: Privacy step outcome
+  build:
+    default: ''
+    description: Build step outcome
+  persist:
+    default: ''
+    description: Persistence step outcome
+outputs:
+  sha:
+    description: Commit containing the final source state and journal
+    value: ${{ steps.persist.outputs.sha }}
+runs:
+  using: composite
+  steps:
+    - name: Collect sanitized report metadata without model or network calls
+      id: capture
+      if: always()
+      shell: bash
+      env:
+        JOURNAL_SCOPE: ${{ inputs.scope }}
+        JOURNAL_STATUS: ${{ inputs.status }}
+        JOURNAL_DEPENDENCIES: ${{ inputs.dependencies }}
+        JOURNAL_TESTS: ${{ inputs.tests }}
+        JOURNAL_COLLECTOR: ${{ inputs.collector }}
+        JOURNAL_RESERVE: ${{ inputs.reserve }}
+        JOURNAL_MODEL: ${{ inputs.model }}
+        JOURNAL_PRIVACY: ${{ inputs.privacy }}
+        JOURNAL_BUILD: ${{ inputs.build }}
+        JOURNAL_PERSIST: ${{ inputs.persist }}
+      run: python src/civic_tracker/error_journal.py --workflow "$JOURNAL_SCOPE" --job-status "$JOURNAL_STATUS"
+    - name: Back up only the sanitized bounded journal before pushing
+      id: backup
+      if: always() && steps.capture.outcome == 'success'
+      continue-on-error: true
+      uses: actions/upload-artifact@v4
+      with:
+        name: error-journal-${{ github.run_id }}-${{ github.run_attempt }}
+        path: data/error-journal.json
+        retention-days: 7
+        if-no-files-found: error
+    - name: Commit only the journal; do not stage unrelated data
+      id: persist
+      if: always() && steps.capture.outcome == 'success'
+      shell: bash
+      run: |
+        git config user.name 'github-actions[bot]'
+        git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+        git add -- data/error-journal.json
+        if ! git diff --cached --quiet -- data/error-journal.json; then
+          git commit --only -m 'Preserve bounded troubleshooting journal' -- data/error-journal.json
+          git push origin HEAD:main
+        fi
+        echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"

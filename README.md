@@ -13,6 +13,10 @@ The [six-case committee evaluation](docs/COMMITTEE_ROLLCALL_EVALUATION.md) passe
 the native choice/tally checks but failed the model output-status gate; daily
 committee PDF inference remains disabled.
 
+[Troubleshooting journal](docs/ERROR_JOURNAL.md): compact recurring errors,
+recoveries and allowlisted model diagnostics, capped at 96 KiB. Existing model
+receipts and cost ledgers remain authoritative.
+
 ## Current status
 
 **Staged daily website refresh is configured; complete M1 verification and digest deployment remain open.** The former local schedules were stopped before this repository was started. Historical source material is read only. This is a fresh repository; it contains no private vault, raw archive, email addresses or credential values.
