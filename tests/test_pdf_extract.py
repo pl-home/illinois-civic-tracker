@@ -7,6 +7,7 @@ import unittest
 from concurrent.futures import ThreadPoolExecutor
 from threading import Barrier
 from unittest.mock import MagicMock,patch
+from urllib.error import HTTPError
 from civic_tracker import pdf_extract as pdf, usage
 from civic_tracker.daily import save,load
 
@@ -71,6 +72,17 @@ class PDFTests(unittest.TestCase):
             self.assertEqual(usage.periods(root,NOW.date())['day']['reserved_usd'],'0.005')
             report=load(root/'data/pdf-extraction-report.json')
             self.assertNotIn('private',json.dumps(report));self.assertNotIn('not-a-real-key',json.dumps(report))
+
+    def test_http_error_keeps_safe_code_and_unknown_hold(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.setup_trial(root)
+            opener=MagicMock();opener.open.side_effect=HTTPError('https://example.invalid/private',400,'private',{},None)
+            with patch.dict('os.environ',{'OPENROUTER_API_KEY':'not-a-real-key'}),patch.object(pdf,'build_opener',return_value=opener):
+                pdf.execute(root,NOW)
+            report=load(root/'data/pdf-extraction-report.json')
+            self.assertEqual(report['error'],'HTTP_400')
+            self.assertNotIn('private',json.dumps(report))
+            self.assertEqual(usage.periods(root,NOW.date())['day']['reserved_usd'],'0.005')
 
     def test_changed_source_and_next_day_cannot_execute(self):
         for changed in (True,False):

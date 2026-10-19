@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 import re
 from urllib.parse import urlsplit
+from urllib.error import HTTPError
 from urllib.request import Request, build_opener
 from .daily import load, save
 from .http import Client, NoRedirect, fingerprint
@@ -137,6 +138,8 @@ def execute(root, now):
         entry['status']='valid-extraction'
         report.update(fields=fields,fields_verified=True,parser_annotations_provided=bool(message.get('annotations')),
             status='valid-extraction',validation='Schema and page quotations checked against native PDF text; human review remains required.')
+    except HTTPError as ex:
+        report.update(status=entry['status'],error='HTTP_'+str(ex.code))
     except Exception as ex:
         report.update(status=entry['status'],error=type(ex).__name__)
     save(path,ledger);save(root/'data/pdf-extraction-report.json',report);usage.apply(root,now)
