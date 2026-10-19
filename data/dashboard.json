@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-18",
-  "recent_start": "2026-09-19",
-  "calendar_end": "2026-11-18",
-  "generated_at": "2026-10-18T10:53:16.883520+00:00",
+  "as_of": "2026-10-19",
+  "recent_start": "2026-09-20",
+  "calendar_end": "2026-11-19",
+  "generated_at": "2026-10-19T22:26:55.604377+00:00",
   "automatic_refresh_enabled": true,
   "attendance_note": "A committee meeting is not evidence that a member will attend.",
   "members": [
@@ -36,7 +36,7 @@
           "title": "SPORTS WAGERING-FANTASY MKT",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5814&GAID=18&DocTypeID=HB&LegId=168901&SessionID=114",
-          "source_retrieved_at": "2026-10-18T10:53:34.338436+00:00",
+          "source_retrieved_at": "2026-10-19T22:31:54.276315+00:00",
           "measure": "HB5814",
           "role": "co-sponsor",
           "operation": "added-or-changed",
@@ -51,7 +51,7 @@
           "title": "SPORTS WAGERING-EXCHANGE TAX",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5811&GAID=18&DocTypeID=HB&LegId=168884&SessionID=114",
-          "source_retrieved_at": "2026-10-18T10:53:34.506846+00:00",
+          "source_retrieved_at": "2026-10-19T22:31:54.429522+00:00",
           "measure": "HB5811",
           "role": "co-sponsor",
           "operation": "added-or-changed",
@@ -66,7 +66,7 @@
           "title": "TARGETED AD TAX-REPEAL",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5807&GAID=18&DocTypeID=HB&LegId=168835&SessionID=114",
-          "source_retrieved_at": "2026-10-18T10:53:34.664886+00:00",
+          "source_retrieved_at": "2026-10-19T22:31:54.582023+00:00",
           "measure": "HB5807",
           "role": "co-sponsor",
           "operation": "added-or-changed",
@@ -81,7 +81,7 @@
           "title": "SOCIAL MEDIA TAX-REPEAL",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5806&GAID=18&DocTypeID=HB&LegId=168834&SessionID=114",
-          "source_retrieved_at": "2026-10-18T10:53:34.813416+00:00",
+          "source_retrieved_at": "2026-10-19T22:31:54.735547+00:00",
           "measure": "HB5806",
           "role": "co-sponsor",
           "operation": "added-or-changed",
@@ -96,7 +96,7 @@
           "title": "DIGITAL ASSET TAX ACT-REPEAL",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5798&GAID=18&DocTypeID=HB&LegId=168767&SessionID=114",
-          "source_retrieved_at": "2026-10-18T10:53:34.960637+00:00",
+          "source_retrieved_at": "2026-10-19T22:31:54.893171+00:00",
           "measure": "HB5798",
           "role": "co-sponsor",
           "operation": "added-or-changed",
@@ -346,9 +346,9 @@
       "latest_vote_date": "2026-05-31",
       "sponsorship_listings": [],
       "meetings": [],
-      "activity_source_checked_at": "2026-10-17T15:03:50.042099+00:00",
+      "activity_source_checked_at": "2026-10-19T22:26:42.995673+00:00",
       "activity_coverage": "Daily FTP listing changes and official floor-vote CSV; committee votes retain historical PDF coverage. Source refresh is incomplete; prior verified records are retained.",
-      "calendar_checked_at": "2026-10-18T10:53:16.883520+00:00",
+      "calendar_checked_at": "2026-10-19T22:26:55.604377+00:00",
       "committees": [
         {
           "id": "3133",
@@ -359,8 +359,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3133",
-          "role_checked_at": "2026-10-17T15:08:41.435414+00:00",
-          "checked_at": "2026-10-17T15:08:51.397538+00:00",
+          "role_checked_at": "2026-10-19T22:27:14.011597+00:00",
+          "checked_at": "2026-10-19T22:27:23.991181+00:00",
           "health": "checked"
         },
         {
@@ -372,8 +372,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3096",
-          "role_checked_at": "2026-10-17T15:09:01.402242+00:00",
-          "checked_at": "2026-10-17T15:09:11.449486+00:00",
+          "role_checked_at": "2026-10-19T22:27:34.001428+00:00",
+          "checked_at": "2026-10-19T22:27:44.029449+00:00",
           "health": "checked"
         },
         {
@@ -385,8 +385,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3062",
-          "role_checked_at": "2026-10-17T15:09:21.375800+00:00",
-          "checked_at": "2026-10-17T15:09:31.426618+00:00",
+          "role_checked_at": "2026-10-19T22:27:54.004143+00:00",
+          "checked_at": "2026-10-19T22:28:04.030616+00:00",
           "health": "checked"
         },
         {
@@ -398,8 +398,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3063",
-          "role_checked_at": "2026-10-17T15:09:41.429193+00:00",
-          "checked_at": "2026-10-17T15:09:51.437201+00:00",
+          "role_checked_at": "2026-10-19T22:28:14.004396+00:00",
+          "checked_at": "2026-10-19T22:28:24.039517+00:00",
           "health": "checked"
         },
         {
@@ -411,8 +411,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3160",
-          "role_checked_at": "2026-10-17T15:10:01.374476+00:00",
-          "checked_at": "2026-10-17T15:10:11.380325+00:00",
+          "role_checked_at": "2026-10-19T22:28:33.973091+00:00",
+          "checked_at": "2026-10-19T22:28:43.979423+00:00",
           "health": "checked"
         },
         {
@@ -424,8 +424,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3093",
-          "role_checked_at": "2026-10-17T15:10:21.388937+00:00",
-          "checked_at": "2026-10-17T15:10:31.488007+00:00",
+          "role_checked_at": "2026-10-19T22:28:53.978488+00:00",
+          "checked_at": "2026-10-19T22:29:04.004169+00:00",
           "health": "checked"
         },
         {
@@ -437,12 +437,12 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3094",
-          "role_checked_at": "2026-10-17T15:10:41.410052+00:00",
-          "checked_at": "2026-10-17T15:10:51.428205+00:00",
+          "role_checked_at": "2026-10-19T22:29:13.977092+00:00",
+          "checked_at": "2026-10-19T22:29:24.004122+00:00",
           "health": "checked"
         }
       ],
-      "calendar_health": "failed",
+      "calendar_health": "checked",
       "media_reports": [
         {
           "id": "6200806ad5f0d349d1657570",
@@ -930,9 +930,9 @@
       "latest_vote_date": "2026-05-31",
       "sponsorship_listings": [],
       "meetings": [],
-      "activity_source_checked_at": "2026-10-17T15:03:50.042099+00:00",
+      "activity_source_checked_at": "2026-10-19T22:26:42.995673+00:00",
       "activity_coverage": "Daily FTP listing changes and official floor-vote CSV; committee votes retain historical PDF coverage. Source refresh is incomplete; prior verified records are retained.",
-      "calendar_checked_at": "2026-10-18T10:53:16.883520+00:00",
+      "calendar_checked_at": "2026-10-19T22:26:55.604377+00:00",
       "committees": [
         {
           "id": "3121",
@@ -943,8 +943,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3121",
-          "role_checked_at": "2026-10-17T15:11:11.388377+00:00",
-          "checked_at": "2026-10-17T15:11:21.396776+00:00",
+          "role_checked_at": "2026-10-19T22:29:44.009634+00:00",
+          "checked_at": "2026-10-19T22:29:53.991881+00:00",
           "health": "checked"
         },
         {
@@ -956,8 +956,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3118",
-          "role_checked_at": "2026-10-17T15:11:31.413710+00:00",
-          "checked_at": "2026-10-17T15:11:41.414441+00:00",
+          "role_checked_at": "2026-10-19T22:30:03.976154+00:00",
+          "checked_at": "2026-10-19T22:30:14.007418+00:00",
           "health": "checked"
         },
         {
@@ -969,8 +969,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3076",
-          "role_checked_at": "2026-10-17T15:11:51.394222+00:00",
-          "checked_at": "2026-10-17T15:12:01.413316+00:00",
+          "role_checked_at": "2026-10-19T22:30:23.996244+00:00",
+          "checked_at": "2026-10-19T22:30:33.982636+00:00",
           "health": "checked"
         },
         {
@@ -982,8 +982,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3130",
-          "role_checked_at": "2026-10-17T15:12:11.414762+00:00",
-          "checked_at": "2026-10-17T15:12:21.655865+00:00",
+          "role_checked_at": "2026-10-19T22:30:43.996271+00:00",
+          "checked_at": "2026-10-19T22:30:54.002154+00:00",
           "health": "checked"
         },
         {
@@ -995,8 +995,8 @@
           "chamber": "Senate",
           "role": "Minority Spokesperson",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3119",
-          "role_checked_at": "2026-10-17T15:12:31.406691+00:00",
-          "checked_at": "2026-10-17T15:12:41.504211+00:00",
+          "role_checked_at": "2026-10-19T22:31:03.999393+00:00",
+          "checked_at": "2026-10-19T22:31:13.982716+00:00",
           "health": "checked"
         },
         {
@@ -1008,8 +1008,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3074",
-          "role_checked_at": "2026-10-17T15:12:51.400271+00:00",
-          "checked_at": "2026-10-17T15:13:01.411974+00:00",
+          "role_checked_at": "2026-10-19T22:31:23.999304+00:00",
+          "checked_at": "2026-10-19T22:31:34.035969+00:00",
           "health": "checked"
         },
         {
@@ -1021,12 +1021,12 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3099",
-          "role_checked_at": "2026-10-17T15:13:11.382498+00:00",
-          "checked_at": "2026-10-17T15:13:21.399992+00:00",
+          "role_checked_at": "2026-10-19T22:31:43.988030+00:00",
+          "checked_at": "2026-10-19T22:31:54.014249+00:00",
           "health": "checked"
         }
       ],
-      "calendar_health": "failed",
+      "calendar_health": "checked",
       "media_reports": [
         {
           "id": "9fce761a8c3ebc5dde0c9d71",
@@ -1417,7 +1417,7 @@
       "meetings": [],
       "activity_source_checked_at": "2026-10-18T10:44:37.457073+00:00",
       "activity_coverage": "Daily Congress.gov sponsorship lists and official floor roll calls; unknown cosponsorship join dates remain undated.",
-      "calendar_checked_at": "2026-10-18T10:53:16.883520+00:00",
+      "calendar_checked_at": "2026-10-19T22:26:55.604377+00:00",
       "calendar_health": "published_weeks_checked",
       "media_reports": [
         {
@@ -2104,7 +2104,7 @@
       "meetings": [],
       "activity_source_checked_at": "2026-10-18T10:44:37.457073+00:00",
       "activity_coverage": "Daily Congress.gov sponsorship lists and official floor roll calls; unknown cosponsorship join dates remain undated.",
-      "calendar_checked_at": "2026-10-18T10:53:16.883520+00:00",
+      "calendar_checked_at": "2026-10-19T22:26:55.604377+00:00",
       "calendar_health": "published_feed_checked",
       "media_reports": [
         {
@@ -2799,7 +2799,7 @@
       "meetings": [],
       "activity_source_checked_at": "2026-10-18T10:44:37.457073+00:00",
       "activity_coverage": "Daily Congress.gov sponsorship lists and official floor roll calls; unknown cosponsorship join dates remain undated.",
-      "calendar_checked_at": "2026-10-18T10:53:16.883520+00:00",
+      "calendar_checked_at": "2026-10-19T22:26:55.604377+00:00",
       "calendar_health": "published_feed_checked",
       "media_reports": [
         {
@@ -2932,45 +2932,336 @@
   "calendar_sources": [
     {
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-      "sha256": "858c2dd9fcd4cd1d91e31913a83e9f05db8c798e4b13dfe68d4611c0068ff249",
-      "checked_at": "2026-10-18T10:53:18.066395+00:00"
+      "sha256": "50ef85a70232454cf7aab8f7480b2ffc375abe5ffbc435a672d86da675235e33",
+      "checked_at": "2026-10-19T22:26:56.750875+00:00"
     },
     {
       "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=10182026_10242026",
-      "sha256": "220e74b7878bb89dd6b9e353e95f894e6328ec5033496830d45f9994f3f68cdf",
-      "checked_at": "2026-10-18T10:53:19.342633+00:00"
+      "sha256": "01c8849593d9737c21384325c0517a86669698ced574328ca1047db5809e4d58",
+      "checked_at": "2026-10-19T22:26:58.154713+00:00"
     },
     {
       "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=10252026_10312026",
-      "sha256": "31f41788eb3f2e54b3e3f9b585ff688048c0a842f8a56b54b19ea98821b1c0cb",
-      "checked_at": "2026-10-18T10:53:20.549241+00:00"
+      "sha256": "bd7c332f5f6f1064df534dbad26ffae22a3f33b4a7d69cab9c598fb41169bb1d",
+      "checked_at": "2026-10-19T22:26:59.399826+00:00"
     },
     {
       "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=11012026_11072026",
-      "sha256": "06cbc95a81ce33aa923aafa12b20e0f50e6b228a9610eaaa41a2672f0a090a1d",
-      "checked_at": "2026-10-18T10:53:21.759577+00:00"
+      "sha256": "0f9ad5f596047e8520b73d4af15c148311b8f90d2dcbe0d5e594225d0cca9b72",
+      "checked_at": "2026-10-19T22:27:00.648397+00:00"
     },
     {
       "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=11082026_11142026",
-      "sha256": "f948e76f1faf51b197187a64f6b270e083ff2437a568a8b46d2422df3d19176f",
-      "checked_at": "2026-10-18T10:53:22.876256+00:00"
+      "sha256": "2e36a07ba94a7f9ef23f3990f0a6a7eb24e9bdd45495970536e4e0c3f03d91d0",
+      "checked_at": "2026-10-19T22:27:01.835922+00:00"
     },
     {
       "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=11152026_11212026",
-      "sha256": "21a7e61c572d9c36e09c84354cdda2d19fcb3e5cef3ebfa744cb2f3aa472c4c8",
-      "checked_at": "2026-10-18T10:53:23.996163+00:00"
-    }
-  ],
-  "errors": [
-    {
-      "source": "https://ilga.gov/House/Members/Details/3428",
-      "error": "HTTPError"
+      "sha256": "bc679b578a0eb7382ca5d58ab0e8de13bee2130a50c8ac0972fb349e38b59976",
+      "checked_at": "2026-10-19T22:27:03.000663+00:00"
     },
     {
-      "source": "https://ilga.gov/Senate/Members/Details/3383",
-      "error": "HTTPError"
+      "url": "https://ilga.gov/House/Members/Details/3428",
+      "status": 200,
+      "bytes": 418800,
+      "sha256": "503743d6345e21498b5cfc495576be64268005b11dc437a03a490e950179f110",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:27:04.183971+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Members/3133",
+      "status": 200,
+      "bytes": 77101,
+      "sha256": "12e78843224a9c81cf1309c88b76c15b94162f7a18f0e728aada57331e8ebf58",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:27:14.011597+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Hearings/3133",
+      "status": 200,
+      "bytes": 100884,
+      "sha256": "71856277c8e05a8d15975db935b8e12f846fea2f0a2c44a6c602f049065ab5cd",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:27:23.991181+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Members/3096",
+      "status": 200,
+      "bytes": 106408,
+      "sha256": "a8464ebb08436deec1ed87cd53975b854090149ae0486f3ba76d495d6a224b00",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:27:34.001428+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Hearings/3096",
+      "status": 200,
+      "bytes": 107677,
+      "sha256": "ce3f315585c62c3b1d0b5c73215f5ab0bb97b3965d7981ca1e00fca35ba064cf",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:27:44.029449+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Members/3062",
+      "status": 200,
+      "bytes": 92582,
+      "sha256": "b3a6f968aa762f20c12906ff287f39208ae6796b6a81d10d8ee45d2277428a8b",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:27:54.004143+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Hearings/3062",
+      "status": 200,
+      "bytes": 113520,
+      "sha256": "5a731f72519a145231c6866afbaf7a2264c77bf01110ef2af02a0cfceac528cb",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:28:04.030616+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Members/3063",
+      "status": 200,
+      "bytes": 106411,
+      "sha256": "4cdae48544859a8189ffedfb7fbef18e60d5766531883d094ca7bacfc6c73bbc",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:28:14.004396+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Hearings/3063",
+      "status": 200,
+      "bytes": 113423,
+      "sha256": "063f196ea323998cedbfccd85c2b37a621118f22ccae403b462548445a9bfc46",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:28:24.039517+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Members/3160",
+      "status": 200,
+      "bytes": 66736,
+      "sha256": "8ee6bcfba55db8555b568089e17e6a8e73ff038027d96ce0f3406d191e9ddc32",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:28:33.973091+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Hearings/3160",
+      "status": 200,
+      "bytes": 62125,
+      "sha256": "f8d28da1d2075b1f2b6d8229b0ff873a9fd68585f1fb509da3d26b074f77c775",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:28:43.979423+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Members/3093",
+      "status": 200,
+      "bytes": 92620,
+      "sha256": "8d765d366f54c1478aa33e76c11ce5a69d49d848b9fd9da3b4d4e3e006c08250",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:28:53.978488+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Hearings/3093",
+      "status": 200,
+      "bytes": 100899,
+      "sha256": "7c79329e69828c9d64f9f2769b76ca683c71142058b972d731b24a893e4e6358",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:29:04.004169+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Members/3094",
+      "status": 200,
+      "bytes": 77137,
+      "sha256": "932895a21c64b7ee1f64ebc9181e0f5ace626d763854cb36113e2b82051dab3d",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:29:13.977092+00:00"
+    },
+    {
+      "url": "https://ilga.gov/House/Committees/Hearings/3094",
+      "status": 200,
+      "bytes": 105935,
+      "sha256": "0a2a077bcd09944cbed295c101ec2ad088542aeca0ffa159fe1b842de6648156",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:29:24.004122+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Members/Details/3383",
+      "status": 200,
+      "bytes": 601769,
+      "sha256": "4fc478e6a2e35bcc610a6e01e960c18c8b63fade07fd959e0ac7923302f721fb",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:29:34.257376+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Members/3121",
+      "status": 200,
+      "bytes": 82162,
+      "sha256": "8fb7b83f521c4edb9e5c5192bf8e29b36431022a37ef93334a2820b79856f7bf",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:29:44.009634+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Hearings/3121",
+      "status": 200,
+      "bytes": 76752,
+      "sha256": "1a1e5d808f3dd01bacc02b94bcf339bfb6cefd14f042aeed4eef8bb6e0b6391f",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:29:53.991881+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Members/3118",
+      "status": 200,
+      "bytes": 78725,
+      "sha256": "59a836dec49f382d66be9cd140bab3215c9b8ec55dfde2ef47085b5e3c9a6118",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:30:03.976154+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Hearings/3118",
+      "status": 200,
+      "bytes": 90304,
+      "sha256": "2b7a26222e900662d93f7213622c82bed34e0058a52f3eac08b0e092ba9921f5",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:30:14.007418+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Members/3076",
+      "status": 200,
+      "bytes": 77002,
+      "sha256": "5a4dba4e5b579fe3a741e209afd0c91a7853286df6e1120cf8575f67ffc983bc",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:30:23.996244+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Hearings/3076",
+      "status": 200,
+      "bytes": 88774,
+      "sha256": "29e68bfb92984cea6dc390dfe0d50a4ae66fcab5246980bf836b040ca9f415a7",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:30:33.982636+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Members/3130",
+      "status": 200,
+      "bytes": 75287,
+      "sha256": "58eacd2addfaced98d829451f2f1c58143ec2f463d62edf432c79cef4e37239e",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:30:43.996271+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Hearings/3130",
+      "status": 200,
+      "bytes": 89210,
+      "sha256": "04e126a74c4fc42d24b33531abc2411266093628379b51ab61ec0de29d67c800",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:30:54.002154+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Members/3119",
+      "status": 200,
+      "bytes": 75265,
+      "sha256": "c2bececf4ab9e3867ab945b107df363f75fc9b378d131fbece40a41652fd0c12",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:03.999393+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Hearings/3119",
+      "status": 200,
+      "bytes": 90068,
+      "sha256": "0d14ebd5b7e8d7239ea8d182af8879f0c62e4726d3c20420424f217d72b0aaca",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:13.982716+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Members/3074",
+      "status": 200,
+      "bytes": 75310,
+      "sha256": "c02a8fe6972a3f5fb80e14dcee36b4935bc95a027c53034cc8f9b9a57b9c4295",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:23.999304+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Hearings/3074",
+      "status": 200,
+      "bytes": 96338,
+      "sha256": "8d0e5503233c63cfb4bef10958713871a90945e719c299861ac2e6bb511ea939",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:34.035969+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Members/3099",
+      "status": 200,
+      "bytes": 71844,
+      "sha256": "8a85ae03268832ea2674e00bedb541d7e9259e43e7ce90119dc9f46b625dbcfc",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:43.988030+00:00"
+    },
+    {
+      "url": "https://ilga.gov/Senate/Committees/Hearings/3099",
+      "status": 200,
+      "bytes": 72566,
+      "sha256": "35b08faf47abd11fff7203deeb8753d658f4457c045d44158b9437c751374985",
+      "last_modified": null,
+      "etag": null,
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:54.014249+00:00"
     }
   ],
+  "errors": [],
   "activity_verifications": [
     {
       "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5814.xml",
@@ -2979,7 +3270,8 @@
       "sha256": "6b36ac4d200e5f3be5b7e15b95bd7c81f4dcc82dcfdb85883bac7e0218393eb7",
       "last_modified": "Sat, 03 Oct 2026 04:20:36 GMT",
       "etag": "\"42a188aee52dd1:0\"",
-      "checked_at": "2026-10-18T10:53:34.338436+00:00"
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:54.276315+00:00"
     },
     {
       "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5811.xml",
@@ -2988,7 +3280,8 @@
       "sha256": "ced20a203bd1014a7a11d82132784911331a7ccaed27778a5b8a5148c5da6154",
       "last_modified": "Sat, 03 Oct 2026 04:20:36 GMT",
       "etag": "\"45f0fd89ee52dd1:0\"",
-      "checked_at": "2026-10-18T10:53:34.506846+00:00"
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:54.429522+00:00"
     },
     {
       "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5807.xml",
@@ -2997,7 +3290,8 @@
       "sha256": "fd67ec2841c4d7ee2d2f8b5125e8644cad4fe39a8f3875c64528cebc624bc957",
       "last_modified": "Sat, 03 Oct 2026 04:20:36 GMT",
       "etag": "\"64b6e389ee52dd1:0\"",
-      "checked_at": "2026-10-18T10:53:34.664886+00:00"
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:54.582023+00:00"
     },
     {
       "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5806.xml",
@@ -3006,7 +3300,8 @@
       "sha256": "6017c9c0b962f22eb000d4ad15908ff036ebf9df14cab96c839578a1a1b77811",
       "last_modified": "Sat, 03 Oct 2026 04:20:35 GMT",
       "etag": "\"7d7cc989ee52dd1:0\"",
-      "checked_at": "2026-10-18T10:53:34.813416+00:00"
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:54.735547+00:00"
     },
     {
       "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5798.xml",
@@ -3015,23 +3310,19 @@
       "sha256": "1390f87ed962824497b76148a62f32523d4c8f83a10ab368e4af0c452f54bd61",
       "last_modified": "Fri, 16 Oct 2026 04:20:38 GMT",
       "etag": "\"1e42b0b2255ddd1:0\"",
-      "checked_at": "2026-10-18T10:53:34.960637+00:00"
+      "request_attempts": 1,
+      "checked_at": "2026-10-19T22:31:54.893171+00:00"
     }
   ],
   "daily_refresh": {
     "target_time": "01:00 America/Chicago",
     "checked_at": "2026-10-18T10:44:37.457073+00:00",
-    "status": "partial",
+    "status": "ok",
     "sources": {
       "Illinois": {
-        "checked_at": "2026-10-18T10:44:37.457073+00:00",
-        "status": "partial",
-        "errors": [
-          {
-            "source": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
-            "error": "HTTPError"
-          }
-        ],
+        "checked_at": "2026-10-19T22:26:42.995673+00:00",
+        "status": "ok",
+        "errors": [],
         "limitations": [
           "Committee votes retain historical PDF coverage; daily committee-vote discovery is pending."
         ],
@@ -3041,11 +3332,21 @@
           "bytes": 1469970,
           "sha256": "2a606c1e8756147361101c535e6809ca672b96f85f6e394c1fbdb44a900ae4ca",
           "last_modified": null,
-          "etag": null
+          "etag": null,
+          "request_attempts": 1
         },
         "changed_files": 0,
         "processed_files": 0,
-        "duration_seconds": 10.66
+        "floor_csv": {
+          "url": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
+          "status": 200,
+          "bytes": 26288962,
+          "sha256": "1764368f4274762073c7184455abcad2853292731c0d26a2ff3550d5d744d4f3",
+          "last_modified": "Mon, 19 Oct 2026 03:45:47 GMT",
+          "etag": "\"9befde537c5fdd1:0\"",
+          "request_attempts": 1
+        },
+        "floor_latest_vote_date": "2026-05-31"
       },
       "Federal": {
         "status": "ok",
@@ -3127,21 +3428,12 @@
         "duration_seconds": 508.59
       },
       "Calendars": {
-        "status": "partial",
-        "checked_at": "2026-10-18T10:44:37.457073+00:00",
-        "errors": [
-          {
-            "source": "https://ilga.gov/House/Members/Details/3428",
-            "error": "HTTPError"
-          },
-          {
-            "source": "https://ilga.gov/Senate/Members/Details/3383",
-            "error": "HTTPError"
-          }
-        ],
-        "duration_seconds": 18.13
+        "status": "ok",
+        "checked_at": "2026-10-19T22:26:42.995673+00:00",
+        "errors": []
       }
-    }
+    },
+    "source_recheck_at": "2026-10-19T22:26:42.995673+00:00"
   },
   "inference_usage": {
     "day": {
@@ -3156,15 +3448,15 @@
       "used_percent": "0E+2"
     },
     "week": {
-      "charged_usd": "0.00220856",
+      "charged_usd": "0",
       "reserved_usd": "0",
-      "liability_usd": "0.00220856",
+      "liability_usd": "0",
       "unsettled_requests": 0,
-      "media_reservations": 4,
+      "media_reservations": 0,
       "undated_entries": 0,
       "limit_usd": "0.20",
-      "remaining_usd": "0.19779144",
-      "used_percent": "1.104280"
+      "remaining_usd": "0.20",
+      "used_percent": "0E+2"
     },
     "lifetime": {
       "charged_usd": "0.00220856",
@@ -3177,11 +3469,11 @@
       "remaining_usd": "19.99779144",
       "used_percent": "0.01104280"
     },
-    "week_start": "2026-10-12",
-    "week_end": "2026-10-18",
+    "week_start": "2026-10-19",
+    "week_end": "2026-10-25",
     "schema_version": 1,
-    "as_of": "2026-10-18T10:53:46.261834+00:00",
-    "local_date": "2026-10-18",
+    "as_of": "2026-10-19T22:26:42.995673+00:00",
+    "local_date": "2026-10-19",
     "timezone": "America/Chicago",
     "week_definition": "Monday through Sunday",
     "scope": "Tracker inference only, including earlier evaluations; excludes unrelated OpenRouter account use."

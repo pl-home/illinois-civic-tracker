@@ -11,15 +11,15 @@
     "used_percent": "0E+2"
   },
   "week": {
-    "charged_usd": "0.00220856",
+    "charged_usd": "0",
     "reserved_usd": "0",
-    "liability_usd": "0.00220856",
+    "liability_usd": "0",
     "unsettled_requests": 0,
-    "media_reservations": 4,
+    "media_reservations": 0,
     "undated_entries": 0,
     "limit_usd": "0.20",
-    "remaining_usd": "0.19779144",
-    "used_percent": "1.104280"
+    "remaining_usd": "0.20",
+    "used_percent": "0E+2"
   },
   "lifetime": {
     "charged_usd": "0.00220856",
@@ -32,11 +32,11 @@
     "remaining_usd": "19.99779144",
     "used_percent": "0.01104280"
   },
-  "week_start": "2026-10-12",
-  "week_end": "2026-10-18",
+  "week_start": "2026-10-19",
+  "week_end": "2026-10-25",
   "schema_version": 1,
-  "as_of": "2026-10-18T10:53:46.261834+00:00",
-  "local_date": "2026-10-18",
+  "as_of": "2026-10-19T22:26:42.995673+00:00",
+  "local_date": "2026-10-19",
   "timezone": "America/Chicago",
   "week_definition": "Monday through Sunday",
   "scope": "Tracker inference only, including earlier evaluations; excludes unrelated OpenRouter account use."
