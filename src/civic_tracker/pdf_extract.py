@@ -41,10 +41,10 @@ def validate_fields(value, pages):
     return value
 
 
-def payload(config, data):
+def payload(config, data, pages=None):
     properties={name:{'type':'object','properties':{'value':{'type':'string'},'quote':{'type':'string'},'page':{'type':'integer'}},
         'required':['value','quote','page'],'additionalProperties':False} for name in FIELDS}
-    return {'model':'qwen/qwen3-32b','provider':{'only':['deepinfra/fp8'],'allow_fallbacks':False,
+    body={'model':'qwen/qwen3-32b','provider':{'only':['deepinfra/fp8'],'allow_fallbacks':False,
         'require_parameters':True,'data_collection':'deny','zdr':True,'max_price':{'prompt':0.10,'completion':0.40}},
         'plugins':[{'id':'file-parser','pdf':{'engine':'cloudflare-ai'}}],
         'messages':[{'role':'system','content':PROMPT},{'role':'user','content':[
@@ -53,6 +53,12 @@ def payload(config, data):
         'max_tokens':600,'reasoning':{'enabled':False},'temperature':0,'stream':False,
         'response_format':{'type':'json_schema','json_schema':{'name':'pdf_fields','strict':True,
             'schema':{'type':'object','properties':properties,'required':list(FIELDS),'additionalProperties':False}}}}
+    if config.get('input_mode')=='native-text':
+        if not pages:raise ValueError('native-pages-required')
+        body.pop('plugins')
+        body['messages'][1]['content']='Untrusted native PDF text, with one-based page boundaries:\n'+ '\n'.join(
+            'PAGE '+str(i+1)+'\n'+text for i,text in enumerate(pages))
+    return body
 
 
 def prepare(root, now):
@@ -60,7 +66,14 @@ def prepare(root, now):
     config=load(root/'config/pdf-extraction.json')
     ledger_path=root/'data/pdf-extraction-ledger.json'
     ledger=load(ledger_path) if ledger_path.exists() else {'entries':[]}
-    if ledger['entries']:raise ValueError('trial-already-reserved')
+    trial=config.get('trial_id','pdf-text-v1')
+    if trial not in ('pdf-text-v1','pdf-native-v2'):raise ValueError('trial-not-allowed')
+    prior=ledger['entries']
+    if trial=='pdf-text-v1' and prior:raise ValueError('trial-already-reserved')
+    if trial=='pdf-native-v2':
+        if len(prior)!=1 or prior[0].get('trial_id')!='pdf-text-v1' or prior[0].get('status')!='attempted-unknown':
+            raise ValueError('native-trial-gate')
+        if config.get('input_mode')!='native-text':raise ValueError('native-trial-gate')
     url=config['source_url'];p=urlsplit(url)
     if p.scheme!='https' or p.netloc!='ilga.gov' or not re.fullmatch(r'/Documents/legislation/votehistory/104/(house|senate)/committeevotes/[A-Za-z0-9_]+\.pdf',p.path) or p.query or p.fragment:
         raise ValueError('source-not-allowed')
@@ -82,14 +95,20 @@ def prepare(root, now):
     for period,cap in [('day',Decimal('0.02')),('week',Decimal('0.20')),('lifetime',Decimal('20'))]:
         if Decimal(budget[period]['liability_usd'])+hold>cap:raise ValueError('shared-budget-exhausted')
     digest=hashlib.sha256(data).hexdigest()
-    entry={'trial_id':'pdf-text-v1','attempted_at':now.isoformat(),'status':'reserved','reserved_usd':str(hold),
-        'charged_usd':None,'source_url':url,'sha256':digest,'pages':len(pages),'parser':'cloudflare-ai',
+    if prior and digest!=prior[0]['sha256']:raise ValueError('comparison-source-changed')
+    if prior:
+        (root/'data/pdf-extraction-reports').mkdir(parents=True,exist_ok=True)
+        save(root/'data/pdf-extraction-reports/pdf-text-v1.json',load(root/'data/pdf-extraction-report.json'))
+    entry={'trial_id':trial,'input_mode':config.get('input_mode','hosted-pdf'),
+        'attempted_at':now.isoformat(),'status':'reserved','reserved_usd':str(hold),
+        'charged_usd':None,'source_url':url,'sha256':digest,'pages':len(pages),
+        'parser':'pdfplumber' if config.get('input_mode')=='native-text' else 'cloudflare-ai',
         'native_text_sha256':hashlib.sha256(json.dumps(pages,ensure_ascii=False).encode()).hexdigest(),
         'model':'qwen/qwen3-32b','provider':'deepinfra/fp8','prompt_sha256':hashlib.sha256(PROMPT.encode()).hexdigest()}
     ledger['entries'].append(entry)
     (root/'.local/pdf-source.pdf').write_bytes(data)
     save(root/'.local/pdf-local-pages.json',pages)
-    save(root/'.local/pdf-owned.json',{'trial_id':'pdf-text-v1','sha256':digest,'owned':True})
+    save(root/'.local/pdf-owned.json',{'trial_id':trial,'sha256':digest,'owned':True})
     save(ledger_path,ledger)
     save(root/'data/pdf-extraction-report.json',{**entry,'status':'reserved','routine_enabled':False,
         'limitation':'Trial extraction only; no legislative records are changed.'})
@@ -99,8 +118,15 @@ def prepare(root, now):
 
 def execute(root, now):
     config=load(root/'config/pdf-extraction.json');path=root/'data/pdf-extraction-ledger.json';ledger=load(path)
-    if len(ledger['entries'])!=1:raise ValueError('trial-ledger-shape')
-    entry=ledger['entries'][0];owner_path=root/'.local/pdf-owned.json';owner=load(owner_path)
+    if not 1<=len(ledger['entries'])<=2:raise ValueError('trial-ledger-shape')
+    entry=ledger['entries'][-1];owner_path=root/'.local/pdf-owned.json';owner=load(owner_path)
+    trial=config.get('trial_id','pdf-text-v1')
+    if entry.get('trial_id','pdf-text-v1')!=trial or owner.get('trial_id','pdf-text-v1')!=trial:
+        raise ValueError('trial-ledger-shape')
+    if entry.get('input_mode','hosted-pdf')!=config.get('input_mode','hosted-pdf'):
+        raise ValueError('input-mode-changed')
+    if trial=='pdf-native-v2' and config.get('input_mode')!='native-text':
+        raise ValueError('input-mode-changed')
     data=(root/'.local/pdf-source.pdf').read_bytes()
     pages=load(root/'.local/pdf-local-pages.json')
     if hashlib.sha256(json.dumps(pages,ensure_ascii=False).encode()).hexdigest()!=entry.get('native_text_sha256'):
@@ -114,7 +140,8 @@ def execute(root, now):
     key=os.environ.get('OPENROUTER_API_KEY','').strip()
     if not key:raise ValueError('missing-openrouter-key')
     try:
-        claim=os.open(root/'.local/pdf-attempt.claim',os.O_CREAT|os.O_EXCL|os.O_WRONLY)
+        claim_name='pdf-attempt.claim' if trial=='pdf-text-v1' else 'pdf-native-v2-attempt.claim'
+        claim=os.open(root/'.local'/claim_name,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
     except FileExistsError:
         raise ValueError('request-not-owned') from None
     os.close(claim)  # Never removed: only one process can claim this paid attempt.
@@ -124,7 +151,7 @@ def execute(root, now):
     try:
         request=Request('https://openrouter.ai/api/v1/chat/completions',method='POST',
             headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},
-            data=json.dumps(payload(config,data)).encode())
+            data=json.dumps(payload(config,data,pages)).encode())
         with build_opener(NoRedirect()).open(request,timeout=120) as response:raw=response.read(4_000_001)
         if len(raw)>4_000_000:raise ValueError('response-bound')
         result=json.loads(raw);cost=ev.money(result['usage']['cost'])

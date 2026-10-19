@@ -1,8 +1,10 @@
 {
   "mode": "manual-trial-only",
+  "trial_id": "pdf-native-v2",
+  "input_mode": "native-text",
   "routine_enabled": false,
   "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB2769_45118.pdf",
-  "parser": "cloudflare-ai",
+  "parser": "pdfplumber",
   "paid_ocr_fallback": false,
   "max_pages": 2,
   "max_source_bytes": 2000000,

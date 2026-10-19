@@ -34,7 +34,7 @@ jobs:
           git add data
           git commit -m 'Reserve bounded manual PDF extraction liability'
           git push origin main
-      - name: One free-parser PDF request with capped DeepInfra inference
+      - name: One native PDF text request with capped DeepInfra inference
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python -m civic_tracker.pdf_extract execute

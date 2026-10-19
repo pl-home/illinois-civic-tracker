@@ -34,6 +34,12 @@ class PDFTests(unittest.TestCase):
                         dict(FIELDS,measure={'value':' ','quote':'','page':1})]:
             with self.assertRaises(ValueError):pdf.validate_fields(changed,PAGES)
 
+    def test_native_payload_sends_hash_bound_text_without_pdf_plugin(self):
+        body=pdf.payload({'input_mode':'native-text'},b'%PDF-example',PAGES)
+        self.assertNotIn('plugins',body)
+        self.assertIn('PAGE 1\n'+PAGES[0],body['messages'][1]['content'])
+        self.assertNotIn('base64',json.dumps(body))
+
     def setup_trial(self,root):
         (root/'config').mkdir();(root/'data').mkdir();(root/'.local').mkdir()
         save(root/'config/pdf-extraction.json',{'routine_enabled':False})
@@ -83,6 +89,62 @@ class PDFTests(unittest.TestCase):
             self.assertEqual(report['error'],'HTTP_400')
             self.assertNotIn('private',json.dumps(report))
             self.assertEqual(usage.periods(root,NOW.date())['day']['reserved_usd'],'0.005')
+
+    def test_native_trial_retains_first_hold_and_cannot_replay(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.setup_trial(root)
+            ledger=load(root/'data/pdf-extraction-ledger.json')
+            prior=dict(ledger['entries'][0],trial_id='pdf-text-v1',status='attempted-unknown')
+            current=dict(ledger['entries'][0],trial_id='pdf-native-v2',input_mode='native-text')
+            save(root/'data/pdf-extraction-ledger.json',{'entries':[prior,current]})
+            save(root/'config/pdf-extraction.json',{'trial_id':'pdf-native-v2','input_mode':'native-text'})
+            owner=load(root/'.local/pdf-owned.json');owner['trial_id']='pdf-native-v2';save(root/'.local/pdf-owned.json',owner)
+            response=MagicMock();response.read.return_value=json.dumps({'provider':'DeepInfra','model':'qwen/qwen3-32b',
+                'usage':{'cost':0.00014},'choices':[{'message':{'content':json.dumps(FIELDS)}}]}).encode()
+            opener=MagicMock();opener.open.return_value.__enter__.return_value=response
+            with patch.dict('os.environ',{'OPENROUTER_API_KEY':'not-a-real-key'}),patch.object(pdf,'build_opener',return_value=opener):
+                pdf.execute(root,NOW)
+                with self.assertRaisesRegex(ValueError,'request-not-owned'):pdf.execute(root,NOW)
+            self.assertEqual(opener.open.call_count,1)
+            self.assertEqual(load(root/'data/pdf-extraction-ledger.json')['entries'][0],prior)
+            budget=usage.periods(root,NOW.date())['day']
+            self.assertEqual(budget['charged_usd'],'0.00014')
+            self.assertEqual(budget['reserved_usd'],'0.005')
+
+    def test_prepare_native_trial_archives_failure_and_reserves_only_once(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.setup_trial(root)
+            first=load(root/'data/pdf-extraction-ledger.json')['entries'][0]
+            first.update(trial_id='pdf-text-v1',status='attempted-unknown')
+            save(root/'data/pdf-extraction-ledger.json',{'entries':[first]})
+            original={'status':'attempted-unknown','error':'HTTPError'}
+            save(root/'data/pdf-extraction-report.json',original)
+            save(root/'config/project.json',{})
+            save(root/'config/pdf-extraction.json',{'trial_id':'pdf-native-v2','input_mode':'native-text',
+                'source_url':'https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB2769_45118.pdf'})
+            page=MagicMock();page.extract_text.return_value=PAGES[0]
+            document=MagicMock();document.pages=[page]
+            library=MagicMock();library.open.return_value.__enter__.return_value=document
+            client=MagicMock();client.get.return_value={'body':b'%PDF-example'}
+            with patch.dict('sys.modules',{'pdfplumber':library}),patch.object(pdf,'Client',return_value=client):
+                pdf.prepare(root,NOW)
+                with self.assertRaisesRegex(ValueError,'native-trial-gate'):pdf.prepare(root,NOW)
+            self.assertEqual(load(root/'data/pdf-extraction-reports/pdf-text-v1.json'),original)
+            self.assertEqual(load(root/'data/pdf-extraction-ledger.json')['entries'][0],first)
+            self.assertEqual(usage.periods(root,NOW.date())['day']['reserved_usd'],'0.010')
+            self.assertEqual(client.get.call_count,1)
+
+    def test_reserved_input_mode_change_cannot_send(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);self.setup_trial(root)
+            ledger=load(root/'data/pdf-extraction-ledger.json')
+            ledger['entries'][0].update(trial_id='pdf-native-v2',input_mode='native-text')
+            save(root/'data/pdf-extraction-ledger.json',ledger)
+            owner=load(root/'.local/pdf-owned.json');owner['trial_id']='pdf-native-v2';save(root/'.local/pdf-owned.json',owner)
+            save(root/'config/pdf-extraction.json',{'trial_id':'pdf-native-v2'})
+            with patch.object(pdf,'build_opener') as opening,self.assertRaisesRegex(ValueError,'input-mode-changed'):
+                pdf.execute(root,NOW)
+            opening.assert_not_called()
 
     def test_changed_source_and_next_day_cannot_execute(self):
         for changed in (True,False):
