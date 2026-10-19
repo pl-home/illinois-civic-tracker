@@ -96,3 +96,26 @@ OpenRouter documents provider ZDR as applying to model inference, not enabled
 plugins. Native text avoids the extra hosted PDF parser hop; it still sends the
 public document text to OpenRouter and the pinned inference provider.
 See [ZDR scope](https://openrouter.ai/blog/insights/zero-data-retention/).
+
+## Native-text trial result
+
+[Hosted native v2 run 39336798833](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39336798833)
+completed and deployed successfully on October 19. Qwen returned the title
+`Senate Committee Vote`, measure `Senate Bill No. 2769`, and motion
+`Do Pass As Amended`, each with a literal page-1 quotation. Automated matching
+and visual inspection of the rendered source agree on these three fields.
+The API reported USD 0.00005392 for 268 prompt tokens and 116 completion tokens.
+The original unknown USD 0.005 hold is still retained, so current PDF liability
+is USD 0.00505392. This distinction is reflected in the public budget panel.
+
+All 169 tests and the privacy guard passed on the runner. Dashboard facts,
+Illinois/federal indexes, collection state, source-health report and media
+spending ledger are unchanged by both PDF trials. The v1 ledger entry remains
+unchanged and its failure receipt is archived.
+See [compact validation evidence](evidence/pdf-native-trial-validation.json).
+
+This establishes a functioning native PDF text-to-structured-fields path. It
+does not establish reliable roll-call table interpretation: member choices,
+committee tallies, multi-column tables, amendments, scanned pages and failure
+examples still require targeted evaluation before routine integration. The
+configuration remains manual-only.

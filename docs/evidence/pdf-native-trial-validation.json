@@ -1,0 +1,26 @@
+{
+  "validation_date": "2026-10-19",
+  "workflow_run": 39336798833,
+  "tests": 169,
+  "status": "native-text-extraction-validated",
+  "charged_usd": "0.00005392",
+  "earlier_unknown_hold_usd": "0.005",
+  "source_sha256": "cd3652d078122cbc048f05fed26bffc52fb0f9871d6a17c278811f7dec24e509",
+  "source_pages": 1,
+  "source_preview_visually_checked": true,
+  "fields_visually_checked": [
+    "document_title",
+    "measure",
+    "motion"
+  ],
+  "legislative_records_unchanged": true,
+  "first_ledger_entry_unchanged": true,
+  "original_failure_report_archived": true,
+  "routine_enabled": false,
+  "limitations": [
+    "One historical native-text PDF only.",
+    "No member vote or tally extraction tested.",
+    "No OCR or scanned PDF support.",
+    "Original HTTP rejection cause remains unknown; its hold was not released."
+  ]
+}

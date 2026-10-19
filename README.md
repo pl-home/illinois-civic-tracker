@@ -6,6 +6,10 @@ A small, factual Illinois legislative and county-party monitor. The intended pro
 
 The homepage reports recorded AI usage against **USD 0.02/day and USD 0.20/week**, using Monday–Sunday in America/Chicago. Actual charges and unsettled reservations are separate; earlier evaluations count. Details: [usage and budget policy](docs/BUDGET_USAGE.md).
 
+[PDF extraction setup and trial receipts](docs/PDF_EXTRACTION.md) document the
+manual native-text/OpenRouter pilot, source-grounding checks and outstanding
+liabilities. It is not a scheduled collector and does not change verified votes.
+
 ## Current status
 
 **Staged daily website refresh is configured; complete M1 verification and digest deployment remain open.** The former local schedules were stopped before this repository was started. Historical source material is read only. This is a fresh repository; it contains no private vault, raw archive, email addresses or credential values.
