@@ -255,6 +255,8 @@ def execute(root,now,clock=None):
             if result.get('provider')!='DeepInfra' or result.get('model') not in ('qwen/qwen3-32b','qwen/qwen3-32b-04-28'):
                 raise ValueError('routing-mismatch')
             value=json.loads(result['choices'][0]['message']['content'])
+            status=value.get('status') if isinstance(value,dict) else None
+            row['model_status']=status if status in ('extracted','unverified') else 'unexpected'
             checks=validate(value,case,native)
             row.update(output=value,checks=checks);entry['status']='validated'
         except HTTPError as error:row['error']=source_error(error);row['transport_failed']=True
@@ -262,7 +264,7 @@ def execute(root,now,clock=None):
         except Exception as error:row['error']=type(error).__name__;row['transport_failed']=True
         row['status']=entry['status'];report['cases'].append(row);save(path,ledger)
         save(root/'data/rollcall-evaluation-report.json',report)
-        if row.get('error') in ('cost-over-reservation','routing-mismatch') or row.get('transport_failed'):break
+        if entry['charged_usd'] is None or row.get('error') in ('cost-over-reservation','routing-mismatch') or row.get('transport_failed'):break
     completed={r['case_id'] for r in report['cases']}
     for entry in entries:
         if entry['case_id'] not in completed:

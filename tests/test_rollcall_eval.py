@@ -111,6 +111,30 @@ class RollcallTests(unittest.TestCase):
             entries=load(r.ledger_path(root))['entries']
             self.assertTrue(all(e['status']=='not-attempted' and e['charged_usd']=='0' for e in entries[1:]))
 
+    def test_unparseable_usage_stops_before_further_paid_calls(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);setup(root)
+            response=MagicMock();response.read.return_value=b'not-json-private-details'
+            opener=MagicMock();opener.open.return_value.__enter__.return_value=response
+            with patch.dict('os.environ',{'OPENROUTER_API_KEY':'not-a-real-key'}),patch.object(r,'build_opener',return_value=opener):
+                r.execute(root,NOW,clock=lambda:NOW)
+            self.assertEqual(opener.open.call_count,1)
+            self.assertEqual(usage.periods(root,NOW.date())['day']['reserved_usd'],'0.0015')
+            self.assertNotIn('private',json.dumps(load(root/'data/rollcall-evaluation-report.json')))
+
+    def test_abstention_remains_rejected_with_safe_status_diagnostic(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);case,native=setup(root)
+            answer=r.reference(case,native);answer['status']='unverified'
+            response=MagicMock();response.read.return_value=json.dumps({'provider':'DeepInfra','model':'qwen/qwen3-32b',
+                'usage':{'cost':0.0001},'choices':[{'message':{'content':json.dumps(answer)}}]}).encode()
+            opener=MagicMock();opener.open.return_value.__enter__.return_value=response
+            with patch.dict('os.environ',{'OPENROUTER_API_KEY':'not-a-real-key'}),patch.object(r,'build_opener',return_value=opener):
+                r.execute(root,NOW,clock=lambda:NOW)
+            report=load(root/'data/rollcall-evaluation-report.json')
+            self.assertEqual(report['validated'],0)
+            self.assertTrue(all(row['model_status']=='unverified' and row['error']=='model-abstained' and 'output' not in row for row in report['cases']))
+
     def test_routing_deviation_stops_batch_and_invalid_output_is_not_published(self):
         for wrong_provider in (True,False):
             with tempfile.TemporaryDirectory() as tmp:

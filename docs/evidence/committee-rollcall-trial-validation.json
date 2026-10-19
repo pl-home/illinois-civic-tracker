@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-19",
+  "workflow_run": 39340300886,
+  "source_pdfs_visually_reviewed": 6,
+  "deterministic_reference_checks_passed": 6,
+  "negative_controls_rejected": 38,
+  "model_responses": 6,
+  "model_responses_accepted": 0,
+  "failure_gate": "model-abstained",
+  "interpretation": "No response cleared the extracted-status gate; this is not evidence of six incorrect member votes.",
+  "diagnostic_limit": "Original model status value and rejected output were not retained; abstention versus unexpected status cannot be reconstructed.",
+  "charged_usd": "0.00061384",
+  "prior_unknown_hold_usd": "0.005",
+  "source_records_unchanged": true,
+  "existing_financial_ledgers_unchanged": true,
+  "routine_enabled": false,
+  "source_preview_review": "Member cells, all four tally counts, committee, amendment caption and motion reviewed on rendered official pages.",
+  "next_steps": [
+    "Use deterministic PDF parsing as the candidate primary path.",
+    "Keep model extraction gated; retain a safe status diagnostic for future separately authorized evaluation.",
+    "Broaden layout and production-integration checks before enabling daily committee collection."
+  ]
+}

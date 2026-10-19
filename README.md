@@ -9,6 +9,9 @@ The homepage reports recorded AI usage against **USD 0.02/day and USD 0.20/week*
 [PDF extraction setup and trial receipts](docs/PDF_EXTRACTION.md) document the
 manual native-text/OpenRouter pilot, source-grounding checks and outstanding
 liabilities. It is not a scheduled collector and does not change verified votes.
+The [six-case committee evaluation](docs/COMMITTEE_ROLLCALL_EVALUATION.md) passed
+the native choice/tally checks but failed the model output-status gate; daily
+committee PDF inference remains disabled.
 
 ## Current status
 
