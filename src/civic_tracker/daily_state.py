@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 from urllib.parse import urlencode, urlsplit
 import xml.etree.ElementTree as ET
-from .http import Client, fingerprint
+from .http import Client, fingerprint, source_error
 from .vote_csv import read_csv, bill_id, choice
 
 CODES = {'HB':'HB','SB':'SB','HR':'HR','SR':'SR','HJ':'HJR','SJ':'SJR','HC':'HJRCA','SC':'SJRCA','JS':'JSR'}
@@ -81,7 +81,7 @@ def refresh(root, previous, state, now):
     ga = config['ga']; checked = now.isoformat(); client = Client(config,root/'.local')
     report = {'checked_at':checked,'status':'ok','errors':[],'limitations':['Committee votes retain historical PDF coverage; daily committee-vote discovery is pending.']}
     def error(source, ex):
-        report['errors'].append({'source':source,'error':type(ex).__name__})
+        report['errors'].append({'source':source,'error':source_error(ex)})
     base = f'https://ftp.ilga.gov/Legislation/{ga}/BillStatus/XML/'
     try:
         response = client.get(base); current = listing(response['body'],ga)

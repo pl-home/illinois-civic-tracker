@@ -2,7 +2,8 @@
 from pathlib import Path
 from urllib.request import Request, build_opener, HTTPRedirectHandler, HTTPSHandler
 from urllib.parse import urlsplit
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
+from email.utils import parsedate_to_datetime
 import hashlib,json,os,time,ssl
 
 ALLOWED={'ftp.ilga.gov','ilga.gov','my.ilga.gov','capitolfax.com','leecodemocrats.com','leecountyilgop.org'}
@@ -28,6 +29,29 @@ class Client:
         if self.interval<10:raise ValueError('Main-site interval must be at least ten seconds')
         self.events=[]
     def get(self,url,headers=None,method="GET"):
+        """Retry transient failures without bypassing the shared rate gate."""
+        for attempt in range(3):
+            try:
+                result=self._get_once(url,headers,method)
+                result['request_attempts']=attempt+1
+                return result
+            except HTTPError as ex:
+                if ex.code not in (408,429,500,502,503,504) or attempt==2:raise
+                raw=ex.headers.get('Retry-After','') if ex.headers else ''
+                delay=2**(attempt+1)
+                if raw:
+                    try:
+                        requested=float(raw) if raw.isdigit() else parsedate_to_datetime(raw).timestamp()-time.time()
+                    except (ValueError,TypeError,OverflowError):raise ex from None
+                    if requested>60:raise
+                    delay=max(delay,requested)
+                ex.close()
+            except (URLError,TimeoutError,OSError):
+                if attempt==2:raise
+                delay=2**(attempt+1)
+            time.sleep(delay)
+
+    def _get_once(self,url,headers=None,method="GET"):
         validate_url(url);host=urlsplit(url).netloc;lock=self.state_dir/'main-request.lock';fd=None;started=None
         handlers=[NoRedirect()]
         context=source_tls_context(self.config,self.state_dir,host)
@@ -52,7 +76,9 @@ class Client:
                     if len(data)>self.config['max_source_bytes']:raise ValueError('Source exceeds configured byte bound')
                     result={'url':url,'status':r.status,'body':data,'headers':dict(r.headers)}
             except HTTPError as ex:
-                if ex.code!=304:raise
+                if ex.code!=304:
+                    self.events.append({'host':host,'started_epoch':started,'status':ex.code})
+                    raise
                 result={'url':url,'status':304,'body':b'','headers':dict(ex.headers)}
             self.events.append({'host':host,'started_epoch':started,'status':result['status']})
             return result
@@ -71,7 +97,13 @@ def fingerprint(result):
     headers={key.casefold():value for key,value in result['headers'].items()}
     return {'url':result['url'],'status':result['status'],'bytes':len(result['body']),
             'sha256':hashlib.sha256(result['body']).hexdigest(),
-            'last_modified':headers.get('last-modified'),'etag':headers.get('etag')}
+            'last_modified':headers.get('last-modified'),'etag':headers.get('etag'),
+            'request_attempts':result.get('request_attempts',1)}
+
+
+def source_error(error):
+    """Short diagnostic code; never expose exception bodies or request headers."""
+    return f'HTTP_{error.code}' if isinstance(error,HTTPError) else type(error).__name__
 
 
 def error_metadata(error):

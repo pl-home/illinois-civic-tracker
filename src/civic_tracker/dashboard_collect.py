@@ -17,7 +17,7 @@ from urllib.request import Request, build_opener
 
 from .dashboard_sources import state_committees, state_committee_role, state_schedule, senate_schedule, house_schedule, open_slip_form
 from .hearings import parse_hearing_details
-from .http import Client, fingerprint, NoRedirect
+from .http import Client, fingerprint, NoRedirect, source_error
 
 
 def month_after(day):
@@ -185,7 +185,7 @@ def verify_recent_state_events(snapshot, client):
                             verification_source_url=url, recent_source_verification='confirmed')
             except Exception as error:
                 item['recent_source_verification'] = 'unconfirmed'
-                snapshot['errors'].append({'source': 'Recent Illinois action verification', 'error': type(error).__name__})
+                snapshot['errors'].append({'source': 'Recent Illinois action verification', 'error': source_error(error)})
     snapshot['activity_verifications'] = receipts
 
 
@@ -237,7 +237,7 @@ def collect(root, state_path, federal_path, as_of):
         senate_events = senate_schedule(federal_fetch('https://www.senate.gov/general/committee_schedules/hearings.xml', 'dashboard-senate-feed.xml'))
         federal_health['Senate'] = 'published_feed_checked'
     except Exception as error:
-        federal_health['Senate'] = 'failed'; result['errors'].append({'source': 'Senate calendar', 'error': type(error).__name__})
+        federal_health['Senate'] = 'failed'; result['errors'].append({'source': 'Senate calendar', 'error': source_error(error)})
     try:
         start = as_of - timedelta(days=(as_of.weekday() + 1) % 7)
         while start <= end:
@@ -248,7 +248,7 @@ def collect(root, state_path, federal_path, as_of):
             start += timedelta(days=7)
         federal_health['House'] = 'published_weeks_checked'
     except Exception as error:
-        federal_health['House'] = 'partial_or_failed'; result['errors'].append({'source': 'House calendar', 'error': type(error).__name__})
+        federal_health['House'] = 'partial_or_failed'; result['errors'].append({'source': 'House calendar', 'error': source_error(error)})
     slip_forms = {}
     for member in settings['members']:
         data, listings = (state_events(state, member, cutoff, as_of.isoformat()) if member['jurisdiction'] == 'IL'
@@ -276,7 +276,7 @@ def collect(root, state_path, federal_path, as_of):
                         committee['role_checked_at'] = role_metadata['checked_at']
                     except Exception as error:
                         committee['role'] = None
-                        result['errors'].append({'source': committee['url'], 'purpose': 'Committee role', 'error': type(error).__name__})
+                        result['errors'].append({'source': committee['url'], 'purpose': 'Committee role', 'error': source_error(error)})
                     try:
                         body, metadata = fetch(committee['schedule_url'], f'dashboard-committee-{committee["id"]}.html')
                         committee['checked_at'] = metadata['checked_at']; committee['health'] = 'checked'
@@ -305,15 +305,15 @@ def collect(root, state_path, federal_path, as_of):
                                         slip_forms[slip] = open_slip_form(form, slip)
                                         bill['submission_checked_at'] = form_metadata['checked_at']
                                     except Exception as error:
-                                        result['errors'].append({'source': 'Witness form verification', 'error': type(error).__name__})
+                                        result['errors'].append({'source': 'Witness form verification', 'error': source_error(error)})
                                 bill['submission_verified'] = slip_forms[slip]
                             item['meetings'].append({**meeting, 'committee_name': committee['name'], 'committee_url': committee['url'],
                                 'location': parsed['location'], 'items': parsed['items']})
                     except Exception as error:
                         committee['health'] = 'failed'; item['calendar_health'] = 'partial_or_failed'
-                        result['errors'].append({'source': committee['schedule_url'], 'error': type(error).__name__})
+                        result['errors'].append({'source': committee['schedule_url'], 'error': source_error(error)})
             except Exception as error:
-                item['calendar_health'] = 'failed'; result['errors'].append({'source': member['url'], 'error': type(error).__name__})
+                item['calendar_health'] = 'failed'; result['errors'].append({'source': member['url'], 'error': source_error(error)})
         else:
             item['calendar_health'] = federal_health[member['chamber']]
             source_events = house_events if member['chamber'] == 'House' else senate_events
