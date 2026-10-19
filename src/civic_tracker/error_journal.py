@@ -111,9 +111,6 @@ def diagnostics(value):
     if not isinstance(value,dict):return {}
     out={}
     for key,v in value.items():
-        if key=='evidence_failure_code':
-            out[key]=safe_code(v)
-            continue
         if key in ENUMS and isinstance(v,str) and v in ENUMS[key]:out[key]=v
         elif key in BOOLS and type(v) is bool:out[key]=v
         elif key in NUMBERS and type(v) is int and 0<=v<=10_000_000:out[key]=v

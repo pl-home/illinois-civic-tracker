@@ -137,6 +137,7 @@ member pages and committee calendars completed successfully. The previous
 October 18 receipt remains in `data/illinois-recovery-report.json`.
 Federal source timestamps remain unchanged. Historical committee PDF coverage
 is retained; daily committee roll-call collection is still pending.
+
 ## Troubleshooting history
 
 The [bounded structured error journal](ERROR_JOURNAL.md) records source failures,

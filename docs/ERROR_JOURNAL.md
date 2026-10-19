@@ -98,3 +98,25 @@ With `true`, it exits before finalization without using any source/model service
 with `false`, it exercises recovery. It has no schedule or API secrets. Regression
 tests cover recurrence, recovery, bounded retention, malformed input, credential
 redaction, missing historical diagnostics, and receipt-cache rollover.
+
+## Verification receipt — October 19, 2026
+
+All **194 offline tests** and the repository privacy scan pass. Workflow YAML
+parses, and step IDs are unique within each job. The implementation also passed
+[hosted CI](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39343068471)
+and [Pages checks](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39343068506).
+
+The [controlled failure run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39343091807)
+intentionally failed its collector probe. Its finalizer succeeded, committed an
+open `workflow-failed` incident at the `collector` stage, and uploaded the bounded
+journal artifact. The [healthy follow-up](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39343157663)
+resolved that same incident, retained one failure occurrence, and uploaded another
+backup. Both backups expire after seven days. These two workflow runs made no
+source or model calls.
+
+All pre-existing source reports and cost ledgers are byte-for-byte unchanged from
+the preceding release. The journal preserves six historical committee model-status
+failures with unavailable status values explicitly marked. Its current size after
+the probe/recovery is about **20 KiB**, below the **96 KiB** cap. No new model charges
+were incurred; the previous unsettled PDF reservation remains intact. Daily
+committee PDF inference remains disabled.
