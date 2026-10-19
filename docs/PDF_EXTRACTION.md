@@ -119,3 +119,7 @@ does not establish reliable roll-call table interpretation: member choices,
 committee tallies, multi-column tables, amendments, scanned pages and failure
 examples still require targeted evaluation before routine integration. The
 configuration remains manual-only.
+
+The next manual evaluation tests member choices and committee tallies for six
+real documents: [committee roll-call evaluation](COMMITTEE_ROLLCALL_EVALUATION.md).
+This does not activate daily collection.

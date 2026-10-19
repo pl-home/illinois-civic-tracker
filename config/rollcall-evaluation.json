@@ -1,0 +1,134 @@
+{
+  "batch_id": "committee-rollcalls-v1",
+  "routine_enabled": false,
+  "gold_visually_reviewed": true,
+  "cases": [
+    {
+      "id": "10400HB1054_42707",
+      "member_id": "fritts",
+      "member_name": "Bradley Fritts",
+      "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB1054_42707.pdf",
+      "sha256": "78d72b7a253689e1349534f8b85f004dd51378340cf832a35813b8e2ceeb0a95",
+      "date": "2025-03-19",
+      "historical": true,
+      "expected": {
+        "raw_vote": "N",
+        "tally": {
+          "yea": 19,
+          "nay": 8,
+          "present": 0,
+          "not_voting": 2
+        },
+        "committee": "Labor & Commerce",
+        "measure": "House Bill No. 1054",
+        "motion": "Do Pass - Short Debate"
+      }
+    },
+    {
+      "id": "10400HB2490_42146",
+      "member_id": "fritts",
+      "member_name": "Bradley Fritts",
+      "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB2490_42146.pdf",
+      "sha256": "0f968abb0f30abcd57274846b4797ee52ad2338365bfba920933dcb85feb48ee",
+      "date": "2025-03-12",
+      "historical": true,
+      "expected": {
+        "raw_vote": "Y",
+        "tally": {
+          "yea": 18,
+          "nay": 3,
+          "present": 2,
+          "not_voting": 6
+        },
+        "committee": "Labor & Commerce",
+        "measure": "House Bill No. 2490",
+        "motion": "Do Pass As Amended - Short Debate"
+      }
+    },
+    {
+      "id": "10400HB1056HFA2_43449",
+      "member_id": "fritts",
+      "member_name": "Bradley Fritts",
+      "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB1056HFA2_43449.pdf",
+      "sha256": "8616df370ab018bb966c079a2abd4e29208349a3fef60453ddc467d194e2289e",
+      "date": "2025-04-09",
+      "historical": true,
+      "expected": {
+        "raw_vote": "NV",
+        "tally": {
+          "yea": 16,
+          "nay": 5,
+          "present": 0,
+          "not_voting": 8
+        },
+        "committee": "Labor & Commerce",
+        "measure": "House Bill No. 1056 - House Floor Amendment No. 2",
+        "motion": "Recommends Be Adopted"
+      }
+    },
+    {
+      "id": "10400SB0093_41621",
+      "member_id": "arellano",
+      "member_name": "Li Arellano, Jr.",
+      "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB0093_41621.pdf",
+      "sha256": "c4f8e2943f25f9e2c8a658e90b10ac67e18fe381d1081098975b946292b9dc32",
+      "date": "2025-02-04",
+      "historical": true,
+      "expected": {
+        "raw_vote": "N",
+        "tally": {
+          "yea": 7,
+          "nay": 3,
+          "present": 0,
+          "not_voting": 0
+        },
+        "committee": "Public Health",
+        "measure": "Senate Bill No. 93",
+        "motion": "Do Pass"
+      }
+    },
+    {
+      "id": "10400SB1274SCA1_41641",
+      "member_id": "arellano",
+      "member_name": "Li Arellano, Jr.",
+      "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB1274SCA1_41641.pdf",
+      "sha256": "32a0dd8c12f8ad2fec9458eb6d4be816a53b44ee641f067faff14c5576bfab77",
+      "date": "2025-02-18",
+      "historical": true,
+      "expected": {
+        "raw_vote": "Y",
+        "tally": {
+          "yea": 10,
+          "nay": 0,
+          "present": 0,
+          "not_voting": 2
+        },
+        "committee": "Health and Human Services",
+        "measure": "Senate Bill No. 1274 - Senate Committee Amendment No. 1",
+        "motion": "Be Adopted"
+      }
+    },
+    {
+      "id": "10400HB0762_44872",
+      "member_id": "arellano",
+      "member_name": "Li Arellano, Jr.",
+      "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400HB0762_44872.pdf",
+      "sha256": "249056cca4ee4483c9c91a7732a8e42373ea5071118c6ffd2b6890c3f1adfc49",
+      "date": "2025-10-29",
+      "historical": true,
+      "expected": {
+        "raw_vote": "NV",
+        "tally": {
+          "yea": 6,
+          "nay": 0,
+          "present": 0,
+          "not_voting": 4
+        },
+        "committee": "State Government",
+        "measure": "House Bill No. 762",
+        "motion": "Do Pass"
+      }
+    }
+  ],
+  "gold_reviewed_at": "2026-10-19"
+}
