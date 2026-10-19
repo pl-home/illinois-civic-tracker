@@ -1,0 +1,10 @@
+{
+  "mode": "manual-trial-only",
+  "routine_enabled": false,
+  "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB2769_45118.pdf",
+  "parser": "cloudflare-ai",
+  "paid_ocr_fallback": false,
+  "max_pages": 2,
+  "max_source_bytes": 2000000,
+  "reserved_usd": "0.005"
+}

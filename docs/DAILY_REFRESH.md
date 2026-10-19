@@ -108,3 +108,32 @@ once-per-day collection files are byte-identical to before recovery. The live
 homepage displays Illinois/Federal/Calendars `ok` and neither original error.
 The full 153-test suite and privacy guard passed. See
 [evidence/federal-recovery-validation.json](evidence/federal-recovery-validation.json).
+
+
+## October 19 Illinois source recovery
+
+The October 18 hosted run retained records after the floor CSV and both Illinois
+member pages failed. Their old diagnostics contained only `HTTPError`, so the
+original HTTP statuses cannot be reconstructed from that receipt. On October 19
+all three endpoints returned HTTP 200 from the development computer; a separate
+hosted recovery verifies runner access before claiming resolution.
+
+The shared HTTP client now makes at most three attempts for temporary network
+errors and HTTP 408/429/500/502/503/504. Every attempt re-enters the same source
+rate gate; main-site spacing remains at least ten seconds. A Retry-After above
+60 seconds stops retries, and permanent 403/404 responses are not bypassed.
+Reports preserve safe `HTTP_NNN` codes and successful request-attempt counts.
+
+The `illinois-recovery.yml` manual workflow refreshes Illinois facts and calendars,
+retains the previous health receipt, and restores prior calendars after failures
+with witness-slip submission flags cleared. Federal API records and financial
+ledgers must remain unchanged. It refreshes the displayed usage period without
+making model calls. It does not enable the unfinished committee code.
+
+Hosted recovery completed and deployed in [run 39334966772](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39334966772).
+Illinois and Calendars are both `ok` with zero source errors as of
+2026-10-19T22:26:42Z. The floor CSV returned HTTP 200 on its first attempt; the
+member pages and committee calendars completed successfully. The previous
+October 18 receipt remains in `data/illinois-recovery-report.json`.
+Federal source timestamps remain unchanged. Historical committee PDF coverage
+is retained; daily committee roll-call collection is still pending.
