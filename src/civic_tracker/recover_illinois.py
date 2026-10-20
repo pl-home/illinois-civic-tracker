@@ -30,16 +30,12 @@ def run(root, now):
             for key in ('media_reports','media_health','media_search','communications','communication_sources','communications_checked_at'):
                 if key in previous:member[key]=previous[key]
             member['activity_coverage']=previous['activity_coverage']
-            if member['calendar_health'] in ('failed','partial_or_failed'):
-                if not member.get('committees'):member['committees']=previous.get('committees',[])
-                failed={c['url'] for c in member['committees'] if c.get('health')=='failed'}
-                present={m['source_url'] for m in member['meetings']}
-                for meeting in previous['meetings']:
-                    if (member['calendar_health']=='failed' or member['jurisdiction']=='US' or meeting.get('committee_url') in failed) and meeting['source_url'] not in present and day.isoformat()<=meeting['date_local'][:10]<=snapshot['calendar_end']:
-                        member['meetings'].append({**meeting,'retained_after_failure':True,'items':[{**b,'submission_verified':False} for b in meeting.get('items',[])]})
-                member['meetings'].sort(key=lambda m:m['date_local'])
+        from .hearing_changes import retain_failed
+        retain_failed(snapshot, old, day.isoformat())
     except Exception as ex:
         snapshot=old
+        from .hearing_changes import clear_slips
+        clear_slips(snapshot)
         calendar={'status':'failed','checked_at':now.isoformat(),'errors':[{'source':'Calendar compilation','error':source_error(ex)}]}
     sources={**prior_health['sources'],'Illinois':report,'Calendars':calendar}
     snapshot['daily_refresh']={**prior_health,'source_recheck_at':now.isoformat(),

@@ -1,5 +1,12 @@
 # Member activity dashboard
 
+**October 20 Stage B update:** see [HEARING_TRACKING.md](HEARING_TRACKING.md) for
+day/committee navigation, accepted notice details and agenda/status revisions.
+The historical October 17 counts/manual-only/eight-file statements below describe
+the initial release. Current operation includes daily collection and ten public
+artifact files (including changes.json and changes.atom), bounded at 650 KB.
+No PDF work, digest delivery or broader inference is enabled by Stage B.
+
 The owner expanded the basic browsing release on October 17, 2026: the homepage now covers Bradley Fritts, Li Arellano Jr., Darin LaHood, Dick Durbin and Tammy Duckworth. It shows recent member actions, recorded votes, committee websites and the next calendar month of posted committee meetings. This narrowly brings a public federal snapshot forward from the later roadmap; it does not deploy the broader federal monitoring pipeline or satisfy the remaining M0/M1 gates.
 
 ## Representative output and provenance

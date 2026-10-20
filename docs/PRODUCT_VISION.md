@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: product vision
 
-Revision 5 — October 19, 2026, America/Chicago.
+Revision 6 — October 20, 2026, America/Chicago.
 
 This reconciles the October 15 research plan, October 16 vision/build brief,
 subsequent owner decisions and the two external-project reviews. It preserves
@@ -70,7 +70,7 @@ necessarily counts of distinct voting decisions.
 
 ## 3. Current implementation and explicit gaps
 
-Status snapshot: October 19 release and its receipts, not a promise that every
+Status snapshot: October 20 Stage B release and its receipts, not a promise that every
 source will be healthy on a later run.
 
 | Capability | Current state |
@@ -81,7 +81,7 @@ source will be healthy on a later run.
 | Inference | Only narrow Qwen3 32B / DeepInfra media-relevance screening is enabled; it selects supplied IDs, not facts or article summaries |
 | Operations | Privacy checks, source/cost receipts and bounded structured error journal implemented |
 | Common meaningful-change ledger and static feeds | Stage A delivered: source-scoped ledger and common HTML/JSON/Atom gate; quiet baseline, replay, corrections and QA. See CHANGE_FEED.md; complete historical discovery and detailed hearing/party coverage remain limited |
-| Hearing agenda/status revision history | Planned extension of existing calendar display; live open-slip coverage still needs acceptance evidence |
+| Hearing agenda/status revision history | Stage B delivered: day/committee navigation, accepted agenda/amendment revisions, explicit postponement/cancellation, conservative identity checks and stale-slip protection. Live open-form acceptance remains pending; Senate ambiguity and federal agenda limits remain explicit |
 | Broad county-party website change monitoring | Legacy bounded collector exists; full port into the hosted pipeline remains open. Member-name-filtered party feeds are not equivalent coverage |
 | Weekly digest and independent alerts | Not deployed; Monday 06:00 Central remains the digest target after acceptance |
 | Daily new committee roll-call/PDF collection | Deferred; qualified historical records remain available. The diagnostic model trial accepted 0/6 and does not enable collection |
@@ -91,7 +91,7 @@ The former Codex and Windows schedules remain stopped. Their archived readmes
 are not operating instructions. A successful workflow or passing unit tests do
 not imply complete source coverage, accepted inference or a finished M1.
 
-## 4. The next three improvements
+## 4. Core improvements and their delivery boundaries
 
 **A common meaningful-change feed.** A stable source-based event should power the
 member/bill/committee views and later digest without creating duplicate alerts.
@@ -100,7 +100,7 @@ separately. Historical backfills, unchanged observations and parser migrations
 must not masquerade as fresh activity. Corrections and confirmed removals remain
 traceable. Per-source completeness governs reconciliation and watermarks.
 
-**Hearing usability and revisions.** Keep the next-month member view; add clear
+**Hearing usability and revisions (Stage B delivered within source limits).** Keep the next-month member view; provide clear
 date/committee navigation and compact agenda detail. Show the member's exact
 published role, local time/location, official notice, agenda bill/amendment links,
 and observed additions/removals or source-confirmed postponements/cancellations.

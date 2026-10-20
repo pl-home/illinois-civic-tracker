@@ -31,16 +31,9 @@ def activity_row(item, cutoff, as_of):
     return f'''<li class="activity-row"><div class="activity-date"><time>{e(item['date'])}</time><span class="tag">{e(scope)} {e(kind)}</span>{'<span class="older-tag">Outside recent window</span>' if older else ''}</div><div><p class="activity-title">{title}</p>{vote}<p class="activity-detail">{e(item['detail'])}</p>{f'<p class="minor">{e(item["attribution"])}</p>' if item.get('attribution') else ''}{conflict}</div></li>'''
 
 
-def meeting_row(meeting):
-    local = datetime.fromisoformat(meeting['date_local']).replace(tzinfo=ZoneInfo(meeting['timezone']))
-    central = local.astimezone(ZoneInfo('America/Chicago'))
-    date_text = central.strftime('%b %d, %Y · %I:%M %p %Z')
-    slips = []
-    for bill in meeting.get('items', []):
-        if bill.get('witness_slip_url') and bill.get('submission_verified'):
-            slips.append(f'<li><a href="{e(bill["witness_slip_url"])}">{e(bill["bill"])} — open witness-slip form ↗</a></li>')
-    retained = '<p class="warning">Retained from an earlier check; this schedule could not be fully refreshed.</p>' if meeting.get("retained_after_failure") else ''
-    return f'''<li class="meeting-row"><time>{e(date_text)}</time>{retained}<strong><a href="{e(meeting['committee_url'])}">{e(meeting['committee_name'])} ↗</a></strong><p>{e(meeting.get('description') or meeting.get('location'))}</p><a href="{e(meeting['source_url'])}">Official meeting details ↗</a>{'<ul class="slip-links">'+''.join(slips)+'</ul>' if slips else '<p class="minor">No verified open witness-slip form in this collected docket.</p>'}</li>'''
+def meeting_row(meeting, reference=None):
+    from .hearing_view import meeting_row as row
+    return row(meeting, reference)
 
 
 
@@ -94,7 +87,7 @@ def communications_section(member):
     return f'<section class="member-communications" aria-label="Direct communications about {e(member["name"])}"><h3>Member, campaign &amp; party communications</h3><p class="minor">Up to three latest items per source type · last 90 days. Published by the identified office, campaign or party; these are first-party statements, not independent news reports. Claims are attributed to their publisher.</p>{warning}{"".join(parts)}<details class="communication-coverage"><summary>Sources &amp; coverage</summary><ul>{"".join(coverage)}</ul><p class="minor">Source status “link-only” means a public link is provided but no dated feed is collected. Only the first listing/feed page is checked. Shared party items require a name match; general party announcements are not assigned to every member. Facebook, private newsletters and signup-only content are not collected. Missing items do not establish inactivity.</p></details><p class="minor">Communications checked: {e(checked)} · collection uses no model calls.</p></section>'
 
 
-def member_card(member, snapshot):
+def member_card(member, snapshot, hearing_html=None):
     cutoff = snapshot['recent_start']; as_of = snapshot['as_of']
     quiet = sum(ceremonial(item['title']) for item in member['events'])
     visible = [item for item in member['events'] if not ceremonial(item['title'])]
@@ -118,7 +111,7 @@ def member_card(member, snapshot):
         calendar_note = 'Calendar coverage is incomplete. Open the official committee schedules to check dates.'
     else:
         calendar_note = 'No matching meetings are currently published in the calendar pages checked for this window. Sources may not yet post the full month.'
-    meetings = ''.join(meeting_row(meeting) for meeting in member['meetings']) or f'<li class="empty-source">{e(calendar_note)}</li>'
+    meetings = (hearing_html if hearing_html is not None else ''.join(meeting_row(meeting) for meeting in member['meetings'])) or f'<li class="empty-source">{e(calendar_note)}</li>'
     committee_links = []
     for committee in member.get('committees', []):
         schedule_link = f' · <a href="{e(committee["schedule_url"])}">Hearings ↗</a>' if committee.get('schedule_url') else ''
@@ -177,10 +170,13 @@ def render(root):
     coverage=('Daily source refresh is enabled for 01:00 Central. Source dates and collection health below identify remaining gaps.' if automatic else 'Automatic refresh is not enabled.')
     from .change_feed import payload, render as change_panel
     from .changes import read
+    from .hearing_view import sections
+    hearing_navigation, hearing_cards = sections(root, snapshot)
     substitutions = {'CHANGE_FEED': change_panel(payload(root), read(root/'data/change-quality-report.json', {})),
+        'HEARING_NAVIGATION': hearing_navigation,
         'INFERENCE_USAGE': usage_panel(snapshot), 'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
         'CALENDAR_END': e(snapshot['calendar_end']), 'MEMBER_LINKS': links,
-        'MEMBERS': ''.join(member_card(m, snapshot) for m in snapshot['members']),
+        'MEMBERS': ''.join(member_card(m, snapshot, hearing_cards.get(m['id'], '')) for m in snapshot['members']),
         'SOURCE_COUNT': str(len(snapshot['calendar_sources'])), 'ERROR_COUNT': str(len(snapshot['errors']))}
     template = (root / 'web/index.html').read_text(encoding='utf-8')
     for key, value in substitutions.items():

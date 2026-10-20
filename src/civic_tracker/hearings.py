@@ -3,6 +3,7 @@ from datetime import datetime
 import re
 from urllib.parse import urljoin, urlsplit, parse_qs
 from bs4 import BeautifulSoup
+from .hearing_changes import explicit_status, text
 
 COLUMNS = ['Bill #', 'Motion', 'Vote Motion', 'Vote Total', 'Vote Result', 'Witness Slip Results']
 
@@ -38,6 +39,22 @@ def local_datetime(raw):
     return datetime.strptime(raw, '%m/%d/%Y %I:%M %p').isoformat(timespec='minutes')
 
 
+def hearing_date(raw):
+    """Preserve date-only/TBA notices; do not invent a midnight meeting."""
+    try: return local_datetime(raw), 'minute', None
+    except ValueError: pass
+    match = re.fullmatch(r'(\d{1,2}/\d{1,2}/\d{4})(?:\s+(.*))?', text(raw))
+    if match:
+        when = datetime.strptime(match[1], '%m/%d/%Y').date().isoformat()
+        note = match[2] or 'Time not supplied'
+        if match[2] and not re.search(r'\b(TBA|TBD|to be|upon|adjournment|call of|postponed|cancel)', note, re.I):
+            raise ValueError('Unrecognized hearing time')
+        return when, 'day', note
+    if explicit_status(raw) or re.fullmatch(r'(?:TBA|TBD|To Be (?:Determined|Announced))', text(raw), re.I):
+        return None, 'unknown', text(raw)
+    raise ValueError('Unrecognized hearing date')
+
+
 def parse_hearing_details(body, source_url):
     match = re.fullmatch(r'/(House|Senate)/hearings/details/(\d+)/(\d+)/?', urlsplit(source_url).path, re.I)
     if not match:
@@ -51,13 +68,34 @@ def parse_hearing_details(body, source_url):
                     if 'Hearing Details -' in h.get_text()), None)
     if not heading:
         raise ValueError('Missing hearing title')
-    raw_date = labeled_field(main, 'Date')
+    if not re.search(r'\b104(?:th)?\s+General Assembly\b', heading, re.I):
+        raise ValueError('Hearing session mismatch')
+    raw_date = labeled_field(main, 'Date', required=False)
     raw_posted = labeled_field(main, 'Posting Date', required=False)
+    notices = []
+    for label in ('Status', 'Hearing Status', 'Notice'):
+        value = labeled_field(main, label, required=False)
+        if value: notices.append(value)
+    # Only dedicated notices/headings, not text in bill rows or site footers.
+    notices.extend(node.get_text(' ', strip=True) for node in main.select('.alert,.hearing-status,h1,h2,h3,h4')
+                   if node.find_parent('table') is None)
+    if explicit_status(raw_date): notices.append(raw_date)
+    statuses = {explicit_status(value) for value in notices} - {None}
+    if len(statuses) > 1: raise ValueError('Conflicting explicit hearing status')
+    status = next(iter(statuses), None)
+    status_notice = next((value for value in notices if explicit_status(value) == status), None) if status else None
+    if raw_date:
+        when, precision, time_note = hearing_date(raw_date)
+    elif status in {'canceled', 'postponed'}:
+        when, precision, time_note = None, 'unknown', 'No date on the official status notice'
+    else:
+        raise ValueError('Missing hearing field: Date')
     result = {'source_url': source_url, 'chamber': match[1].title(), 'committee_id': match[2],
               'hearing_id': match[3], 'title': heading, 'raw_date': raw_date,
-              'date_local': local_datetime(raw_date),
+              'date_local': when, 'time_precision': precision, 'time_note': time_note,
+              'status': status, 'status_notice': status_notice, 'status_basis': 'explicit-notice' if status else None,
               'timezone_assumption': 'America/Chicago', 'source_timezone_explicit': False,
-              'location': labeled_field(main, 'Location'),
+              'location': labeled_field(main, 'Location', required=False),
               'raw_posting_date': raw_posted, 'posting_date_local': local_datetime(raw_posted) if raw_posted else None,
               'items': []}
     found_table = False
@@ -111,7 +149,8 @@ def parse_hearing_details(body, source_url):
             if key in by_key and by_key[key] != item:
                 raise ValueError('Conflicting duplicate hearing bill')
             by_key[key] = item
-    if not found_table:
+    if not found_table and status not in {'canceled', 'postponed'}:
         raise ValueError('No supported hearing bill table; empty coverage is not a parse success')
+    result['agenda_coverage'] = 'complete' if found_table else 'not-published'
     result['items'] = list(by_key.values())
     return result

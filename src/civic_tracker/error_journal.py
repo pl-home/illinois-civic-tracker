@@ -33,6 +33,8 @@ invalid-case-identity invalid-case-schema invalid-case-text invalid-model-respon
 invalid-output-schema invalid-output-value media-config-invalid media-config-mismatch media-config-missing
 missing-output-id reservation-too-small timezone-required model-call-stopped UnicodeDecodeError'''.split())
 CODES.add('change-quality-withheld')
+CODES.update({'hearing-recheck-bound','hearing-detail-bound','hearing-agenda-bound',
+              'hearing-date-conflict','hearing-status-conflict','hearing-committee-mismatch','ambiguous-hearing-identity'})
 HOSTS={'ilga.gov','ftp.ilga.gov','my.ilga.gov','api.congress.gov','clerk.house.gov','www.senate.gov','news.google.com','openrouter.ai'}
 HOSTS.update({'repfritts.com','senatorli.com','lahood.house.gov','durbin.senate.gov','duckworth.senate.gov','leecodemocrats.com','leecountyilgop.org','capitolfax.com'})
 FILES={'daily':'data/daily-report.json','media-source':'data/media-state.json','media-model':'data/media-inference-report.json',
@@ -42,6 +44,7 @@ FILES={'daily':'data/daily-report.json','media-source':'data/media-state.json','
 LEDGERS={p:p for p in ('data/pdf-extraction-ledger.json','data/rollcall-evaluation-ledger.json',
                       'data/rollcall-diagnostics-v2-ledger.json')}
 PATHS=(r'/documents/reports/static/104MemberVotes\.csv',r'/(?:House|Senate)/Members/Details/\d{1,7}',
+       r'/(?:House|Senate)/hearings/details/\d{1,7}/\d{1,7}',r'/(?:House|Senate)/Committees/(?:Hearings|Members)/\d{1,7}',
        r'/Documents/legislation/votehistory/104/(?:house|senate)/committeevotes/10400[A-Z0-9_]{5,45}\.pdf',
        r'/Legislation/104/BillStatus/XML/',r'/Votes/MemberVotes',r'/api/v1/(?:key|chat/completions)')
 ENUMS={

@@ -49,6 +49,10 @@ jobs:
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESSGOV_API || secrets.CONGRESS_API_KEY }}
         run: python -m civic_tracker.daily run
+      - name: Record official and hearing changes without inference
+        if: steps.gate.outputs.active == 'true'
+        id: official_changes
+        run: python -m civic_tracker.changes collect
       - name: Discover public news and reserve bounded inference budget
         if: steps.gate.outputs.active == 'true'
         run: python -m civic_tracker.media prepare
@@ -107,7 +111,7 @@ jobs:
           collector: ${{ steps.collector.outcome == 'failure' && 'failure' || steps.communications.outcome == 'failure' && 'failure' || steps.collector.outcome }}
           reserve: ${{ steps.reserve.outcome }}
           model: ${{ steps.model.outcome }}
-          changes: ${{ steps.changes.outcome }}
+          changes: ${{ steps.official_changes.outcome == 'failure' && 'failure' || steps.changes.outcome }}
           privacy: ${{ steps.privacy.outcome }}
           build: ${{ steps.build.outcome }}
           persist: ${{ steps.persist.outcome }}

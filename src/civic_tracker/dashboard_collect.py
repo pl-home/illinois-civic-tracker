@@ -191,6 +191,12 @@ def verify_recent_state_events(snapshot, client):
 
 def collect(root, state_path, federal_path, as_of):
     settings = json.loads((root / 'config/dashboard.json').read_text(encoding='utf-8'))
+    from .changes import read
+    from .hearing_changes import day as hearing_day, identity as hearing_identity
+    from .hearing_collect import state_meetings
+    previous = read(root/'data/dashboard.json', {'members': []})
+    prior_members = {m['id']: m for m in previous['members']}
+    hearing_options = read(root/'config/hearings.json')
     state = json.loads(state_path.read_text(encoding='utf-8'))
     federal = json.loads(federal_path.read_text(encoding='utf-8'))
     scratch = root / '.local'; scratch.mkdir(exist_ok=True)
@@ -249,7 +255,7 @@ def collect(root, state_path, federal_path, as_of):
         federal_health['House'] = 'published_weeks_checked'
     except Exception as error:
         federal_health['House'] = 'partial_or_failed'; result['errors'].append({'source': 'House calendar', 'error': source_error(error)})
-    slip_forms = {}
+    hearing_work = {}
     for member in settings['members']:
         data, listings = (state_events(state, member, cutoff, as_of.isoformat()) if member['jurisdiction'] == 'IL'
                           else federal_events(federal, member, cutoff, as_of.isoformat()))
@@ -280,35 +286,10 @@ def collect(root, state_path, federal_path, as_of):
                     try:
                         body, metadata = fetch(committee['schedule_url'], f'dashboard-committee-{committee["id"]}.html')
                         committee['checked_at'] = metadata['checked_at']; committee['health'] = 'checked'
-                        for meeting in state_schedule(body, committee['schedule_url']):
-                            day = date.fromisoformat(meeting['date_local'][:10])
-                            if not as_of <= day <= end:
-                                continue
-                            hearing_key = hashlib.sha256(meeting['source_url'].encode()).hexdigest()
-                            detail, _ = fetch(meeting['source_url'], f'dashboard-hearing-{hearing_key}.html')
-                            parsed = parse_hearing_details(detail, meeting['source_url'])
-                            if parsed['date_local'] != meeting['date_local']:
-                                raise ValueError('Calendar/detail date conflict')
-                            for bill in parsed['items']:
-                                bill['submission_verified'] = False
-                                slip = bill.get('witness_slip_url')
-                                if not slip:
-                                    continue
-                                if slip not in slip_forms:
-                                    if len(slip_forms) >= 12:
-                                        bill['submission_status'] = 'verification request bound reached'
-                                        continue
-                                    slip_forms[slip] = False
-                                    try:
-                                        form_key = hashlib.sha256(slip.encode()).hexdigest()
-                                        form, form_metadata = fetch(slip, f'dashboard-slip-{form_key}.html')
-                                        slip_forms[slip] = open_slip_form(form, slip)
-                                        bill['submission_checked_at'] = form_metadata['checked_at']
-                                    except Exception as error:
-                                        result['errors'].append({'source': 'Witness form verification', 'error': source_error(error)})
-                                bill['submission_verified'] = slip_forms[slip]
-                            item['meetings'].append({**meeting, 'committee_name': committee['name'], 'committee_url': committee['url'],
-                                'location': parsed['location'], 'items': parsed['items']})
+                        item['meetings'].extend(state_meetings(committee, body, metadata,
+                            prior_members.get(member['id'], {}).get('meetings', []), as_of, end,
+                            fetch, hearing_options, hearing_work, result['errors']))
+                        if committee['health'] != 'checked': item['calendar_health'] = 'partial_or_failed'
                     except Exception as error:
                         committee['health'] = 'failed'; item['calendar_health'] = 'partial_or_failed'
                         result['errors'].append({'source': committee['schedule_url'], 'error': source_error(error)})
@@ -322,8 +303,17 @@ def collect(root, state_path, federal_path, as_of):
                     continue
                 for committee in item['committees']:
                     if committee['match'].casefold() in meeting['committee_name'].casefold():
-                        item['meetings'].append({**meeting, 'committee_url': committee['url'], 'items': []})
-        item['meetings'].sort(key=lambda m: m['date_local'])
+                        try:
+                            hearing_key = hearing_identity(meeting, 'US')
+                            proof_url = meeting.get('evidence_url', meeting['source_url'])
+                            proof = next((p for p in reversed(result['calendar_sources']) if p['url'] == proof_url), None)
+                            if proof is None: raise ValueError('Missing calendar receipt')
+                            item['meetings'].append({**meeting, 'committee_url': committee['url'], 'items': [],
+                                'hearing_key': hearing_key, 'evidence': proof})
+                        except Exception:
+                            item['calendar_health'] = 'partial_or_failed'
+                            result['errors'].append({'source': meeting['source_url'], 'error': 'ambiguous-hearing-identity'})
+        item['meetings'].sort(key=lambda m: (hearing_day(m), m['source_url']))
         result['members'].append(item)
     verify_recent_state_events(result, client)
     path = root / 'data/dashboard.json'

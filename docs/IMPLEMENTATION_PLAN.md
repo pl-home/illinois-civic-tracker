@@ -1,7 +1,7 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 5 — October 19, 2026, America/Chicago. Read with
-[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 5. This replaces the initial
+Revision 6 — October 20, 2026, America/Chicago. Read with
+[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 6. This replaces the initial
 October 15 plan as current delivery guidance. Earlier plans/build briefs remain
 historical acceptance evidence; their obsolete schedule, private-server proposal,
 M1 exclusions and exactly-once-mail claims do not override this revision or later
@@ -24,9 +24,9 @@ for future CI or full product acceptance.
 
 | Area | Verified implementation boundary | Remaining work |
 | --- | --- | --- |
-| Illinois | Session-wide changed XML discovery; selected member roles/actions; floor CSV; retained historical evidence | Shared meaningful-change events; stronger rule/coverage acceptance; correction sweeps within source bounds |
+| Illinois | Session-wide changed XML discovery; selected member roles/actions; floor CSV; retained history; shared Stage A changes | Stronger relevance/coverage acceptance and correction sweeps within source bounds |
 | Federal | Congress.gov relationships and official current-session floor XML, with retained prior history | Service/session transition and deeper historical/committee coverage |
-| Hearings | Bounded calendar collection, next-month display, exact role labels and qualified slip checks | Stable revisions, agenda additions/removals, confirmed cancellations/postponements and live opportunity acceptance |
+| Hearings | Stage B: day/committee navigation; accepted agenda/amendment history, explicit status changes, bounded missing-ID rechecks and stale-slip protection | Genuine upcoming/open-form live acceptance; stronger Senate hearing IDs and broader federal agenda coverage |
 | Media/communications | Visible discovery policy; up to three dated eligible newsroom items; separate attributed first-party sources | Remaining source gaps/reprints and dedicated Capitol Fax/Lee County mention acceptance |
 | County parties | Legacy bounded watcher; selected member-filtered party feeds in current communications | Port broad hosted website change coverage with equal rules and baseline suppression |
 | Health | Source reports, privacy checks, bounded error journal and usage accounting | Cross-record integrity, coverage and withheld-record QA |
@@ -64,8 +64,9 @@ is still a planned channel, not an active schedule.
 
 ## 3. Delivery sequence and acceptance gates
 
-Stage A is delivered within the coverage boundaries below. The next slice is
-**Stage B hearing navigation and revision acceptance**, with PDF work deferred.
+Stages A and B are delivered within their coverage boundaries below. The next
+implementation slice is **Stage C hosted party coverage and relevance**, while
+genuine live hearing/slip acceptance remains source-dependent. PDF work stays deferred.
 Stage C can prepare independent source coverage
 without waiting for PDF work. Stage D consumes the same accepted events. Session
 review in Stage E is date-sensitive and must not wait for M1 completion.
@@ -130,6 +131,18 @@ an unchanged run without representing legislative activity. All shared publicati
 paths reject the same invalid examples.
 
 ### Stage B: hearing navigation and revision history
+
+**Delivered October 20:** day/committee filters and source-validated notice detail;
+normalized bill/amendment agenda deltas; same-ID time/location revisions; explicit
+hearing cancellation/postponement and item-level postponement; bounded missing-ID
+rechecks; retained last-good facts; timestamped/expiring witness-form claims.
+See [HEARING_TRACKING.md](HEARING_TRACKING.md) and [the receipt](evidence/stage-b.json).
+The paced October 19 calendar check returned zero matching upcoming hearings and
+zero source errors; historical HTML from both Illinois members' committees and
+synthetic transitions establish parser/replay behavior. A genuine upcoming open
+form and real live status transition remain pending, not silently passed. Senate
+feed identities with ambiguous recurrence/time changes are withheld. No PDF,
+new model task, paid call, digest or schedule was enabled.
 
 **Outcome:** actionable next-month hearings with reliable evidence and update history.
 

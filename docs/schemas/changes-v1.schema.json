@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://pl-home.github.io/illinois-civic-tracker/schemas/changes-v1.schema.json",
-  "title": "Stage A change ledger interchange v1",
+  "title": "Shared change ledger interchange v1 (Stages A and B)",
   "description": "Structural contract only. Runtime source binding and publication policy are in changes.py. No schema validator/model establishes source facts.",
   "$defs": {
     "evidence": {
@@ -116,7 +116,107 @@
         "evidence": {
           "$ref": "#/$defs/evidence"
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "hearing"
+              }
+            },
+            "required": [
+              "hearing_key"
+            ]
+          },
+          "then": {
+            "type": "object",
+            "required": [
+              "committee",
+              "local_time",
+              "timezone",
+              "status",
+              "status_basis",
+              "agenda",
+              "agenda_coverage"
+            ],
+            "properties": {
+              "hearing_key": {
+                "type": "string",
+                "pattern": "^(IL-104|US-119)-(HOUSE|SENATE)-"
+              },
+              "committee": {
+                "type": "string",
+                "format": "uri"
+              },
+              "local_time": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "timezone": {
+                "enum": [
+                  "America/Chicago",
+                  "America/New_York"
+                ]
+              },
+              "time_note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "location": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "scheduled",
+                  "canceled",
+                  "postponed",
+                  "rescheduled",
+                  "unconfirmed",
+                  "unknown"
+                ]
+              },
+              "status_basis": {
+                "enum": [
+                  "explicit-notice",
+                  "scheduled-listing",
+                  "detail-only"
+                ]
+              },
+              "status_notice": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "agenda_coverage": {
+                "enum": [
+                  "complete",
+                  "not-published",
+                  "not-collected"
+                ]
+              },
+              "agenda": {
+                "type": "array",
+                "maxItems": 200,
+                "items": {
+                  "$ref": "#/$defs/agendaItem"
+                }
+              },
+              "posting_date_local": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      ]
     },
     "event": {
       "type": "object",
@@ -183,6 +283,44 @@
         },
         "inclusion_reason": {
           "type": "string"
+        },
+        "hearing_changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "time-changed",
+                  "location-changed",
+                  "status-changed",
+                  "notice-updated",
+                  "agenda-added",
+                  "agenda-removed",
+                  "bill-postponed",
+                  "agenda-item-updated"
+                ]
+              },
+              "item": {
+                "type": "string"
+              },
+              "before": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "after": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
         }
       }
     },
@@ -233,6 +371,72 @@
         },
         "reconcile_missing": {
           "type": "boolean"
+        }
+      }
+    },
+    "agendaItem": {
+      "type": "object",
+      "required": [
+        "id",
+        "bill",
+        "amendment",
+        "official_url",
+        "contexts"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "bill": {
+          "type": "string",
+          "pattern": "^(HB|SB|HR|SR|HJR|SJR|HJRCA|SJRCA)[1-9][0-9]*$"
+        },
+        "amendment": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(HFA|SFA|HCA|SCA)[0-9]+$"
+        },
+        "official_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "contexts": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "type": "object",
+            "required": [
+              "motion",
+              "vote_motion",
+              "vote_result",
+              "status"
+            ],
+            "properties": {
+              "motion": {
+                "type": "string",
+                "maxLength": 1000
+              },
+              "vote_motion": {
+                "type": "string",
+                "maxLength": 1000
+              },
+              "vote_result": {
+                "type": "string",
+                "maxLength": 1000
+              },
+              "status": {
+                "enum": [
+                  null,
+                  "canceled",
+                  "postponed",
+                  "rescheduled"
+                ]
+              }
+            }
+          }
         }
       }
     }

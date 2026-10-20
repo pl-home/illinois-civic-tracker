@@ -83,8 +83,8 @@ def semantic(fact):
     excluded = {'evidence'}
     # A current bill title/member association is display context on historical
     # actions, not a correction to every past action. Title has its own fact.
-    if fact.get('kind') in {'filing', 'sponsor-role', 'bill-action', 'vote'}: excluded.add('title')
-    if fact.get('kind') in {'bill-action', 'bill-title'}: excluded.add('members')
+    if fact.get('kind') in {'filing', 'sponsor-role', 'bill-action', 'vote', 'hearing'}: excluded.add('title')
+    if fact.get('kind') in {'bill-action', 'bill-title', 'hearing'}: excluded.add('members')
     return {k: ' '.join(v.split()) if k in {'title', 'detail'} and isinstance(v, str) else v
             for k, v in fact.items() if k not in excluded}
 
@@ -154,6 +154,36 @@ def validate_fact(fact, scope):
         if fact['kind'] == 'hearing':
             if not fact.get('committee') or evidence['binding'] != 'official-calendar' or not raw_hash: errors.append('committee-reference')
             if urlsplit(evidence['url']).hostname not in {'ilga.gov', 'www.ilga.gov', 'www.senate.gov', 'docs.house.gov'}: errors.append('calendar-evidence')
+            if 'hearing_key' in fact:
+                from .hearing_changes import identity, STATUSES, explicit_status, amendment
+                if identity({'source_url': evidence['url'], 'committee_code': fact.get('committee_code'),
+                             'description': fact.get('subject')}, fact['jurisdiction']) != fact['hearing_key']:
+                    errors.append('hearing-identity')
+                if fact.get('status') not in STATUSES: errors.append('hearing-status')
+                if fact.get('status') in {'canceled', 'postponed', 'rescheduled'} and not (
+                        fact.get('status_basis') == 'explicit-notice' and explicit_status(fact.get('status_notice')) == fact['status']):
+                    errors.append('unconfirmed-hearing-status')
+                chamber = 'HOUSE' if fact['hearing_key'].startswith(('IL-104-HOUSE-', 'US-119-HOUSE-')) else 'SENATE'
+                if any(('HOUSE' if member in {'fritts','lahood'} else 'SENATE') != chamber for member in fact['members']): errors.append('hearing-member-chamber')
+                if fact['jurisdiction'] == 'IL':
+                    committee_match = re.fullmatch(r'/(House|Senate)/Committees/Members/(\d+)', urlsplit(fact['committee']).path)
+                    if not committee_match or committee_match[1].upper() != chamber or committee_match[2] != fact['hearing_key'].split('-')[-2]: errors.append('hearing-committee-mismatch')
+                if fact.get('agenda_coverage') not in {'complete', 'not-published', 'not-collected'}: errors.append('agenda-coverage')
+                entries = fact.get('agenda', [])
+                if not isinstance(entries, list) or len(entries) > 200: errors.append('agenda-bound')
+                else:
+                    ids = []
+                    for item in entries:
+                        ids.append(item['id'])
+                        measure = f'{fact["jurisdiction"]}-{fact["session"]}-' + item['bill']
+                        if not measure_url(measure, item['official_url']): errors.append('agenda-session-evidence')
+                        amend = amendment(item.get('amendment'))
+                        if item['id'] != item['bill'] + (':' + amend if amend else ''): errors.append('agenda-item-identity')
+                        if not isinstance(item.get('contexts'), list) or len(item['contexts']) > 30: errors.append('agenda-context')
+                        else:
+                            for context in item['contexts']:
+                                if any(not isinstance(context.get(k), str) or len(context[k]) > 1000 for k in ('motion','vote_motion','vote_result')): errors.append('agenda-context')
+                    if len(ids) != len(set(ids)): errors.append('duplicate-agenda-item')
         if fact['kind'] == 'publication':
             if not fact.get('publisher') or fact.get('publication_kind') not in {'news', 'office', 'campaign', 'party'}: errors.append('publisher-reference')
             if evidence['binding'] not in {'publisher-listing', 'screened-news-metadata'}: errors.append('publication-evidence')
@@ -177,7 +207,7 @@ def event_revision(fact, scope_id, now, previous=None, operation=None):
               'historical record first observed after baseline' if historical else
               'new source-dated activity' if occurred else 'new listing; action date not established')
     if operation == 'removed': reason = 'relationship absent from a complete member-role listing; removal date unknown'
-    return {'id': eid, 'revision_id': rid, 'revision': revision,
+    result = {'id': eid, 'revision_id': rid, 'revision': revision,
             'supersedes': previous.get('revision_id') if previous else None,
             'previous_fingerprint': previous['fingerprint'] if previous else None,
             'previous_fact': previous['fact'] if previous else None,
@@ -187,6 +217,12 @@ def event_revision(fact, scope_id, now, previous=None, operation=None):
             'validation': 'adapter-bound', 'policy': POLICY, 'inclusion_reason': reason,
             'eligible': (not historical or previous is not None or operation == 'removed')
                         and not (fact['kind'] == 'bill-title' and previous is None)}
+    if fact['kind'] == 'hearing' and previous:
+        from .hearing_changes import delta, describe
+        result['hearing_changes'] = delta(previous['fact'], fact)
+        result['change'] = 'updated'
+        result['inclusion_reason'] = describe(result['hearing_changes']) or 'Published hearing detail updated'
+    return result
 
 
 def reconcile(ledger, observations, now):
@@ -206,6 +242,7 @@ def reconcile(ledger, observations, now):
             if old_scope and checked < timestamp(old_scope['checked_at']): errors.append('source-regression')
         except (ValueError, TypeError, AttributeError): errors.append('source-time')
         if scope.get('complete') is not True: errors.append('incomplete-scope')
+        errors.extend(scope.get('errors', []))
         incoming = {}
         for fact in scope['facts']:
             codes = validate_fact(fact, scope)
@@ -294,16 +331,20 @@ def reconcile(ledger, observations, now):
     return result, report
 
 
-def public_events(ledger, limit=60):
-    """One selection/gate for the new HTML, JSON, Atom and future digest input."""
-    latest = {}
+def validated_events(ledger):
+    """Common revision validation for feeds and the hearing history view."""
     for event in ledger['events']:
         scope = ledger['scopes'].get(event['scope'])
         # Use the observation time, not the action date, for structural checks.
         if (scope and event['policy'] == POLICY and event['validation'] == 'adapter-bound'
                 and event['fingerprint'] == digest(semantic(event['fact']))
                 and not validate_fact(event['fact'], {**scope, 'checked_at': event['observed_at']})):
-            latest[event['id']] = event
+            yield event
+
+
+def public_events(ledger, limit=60):
+    """One selection/gate for the new HTML, JSON, Atom and future digest input."""
+    latest = {event['id']: event for event in validated_events(ledger)}
     return sorted((e for e in latest.values() if e['eligible']),
                   key=lambda e: (e['observed_at'], e['revision_id']), reverse=True)[:limit]
 

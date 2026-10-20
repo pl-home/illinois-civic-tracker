@@ -65,18 +65,12 @@ def run(root, now):
             member['activity_coverage']=('Daily FTP listing changes and official floor-vote CSV; committee votes retain historical PDF coverage.' if source=='Illinois'
                 else 'Daily Congress.gov sponsorship lists and official floor roll calls; unknown cosponsorship join dates remain undated.')
             if reports[source]['status']!='ok':member['activity_coverage']+=' Source refresh is incomplete; prior verified records are retained.'
-            if member['calendar_health'] in ('failed','partial_or_failed'):
-                old=old_members[member['id']]
-                if not member.get('committees'):member['committees']=old.get('committees',[])
-                failed_urls={c['url'] for c in member['committees'] if c.get('health')=='failed'}
-                present={m['source_url'] for m in member['meetings']}
-                for meeting in old.get('meetings',[]):
-                    retain=(member['calendar_health']=='failed' or member['jurisdiction']=='US' or meeting.get('committee_url') in failed_urls)
-                    if retain and meeting['source_url'] not in present and day.isoformat()<=meeting['date_local'][:10]<=snapshot['calendar_end']:
-                        member['meetings'].append({**meeting,'retained_after_failure':True,'items':[{**bill,'submission_verified':False} for bill in meeting.get('items',[])]})
-                member['meetings'].sort(key=lambda m:m['date_local'])
+        from .hearing_changes import retain_failed
+        retain_failed(snapshot, previous, day.isoformat())
     except Exception as ex:
         snapshot=previous
+        from .hearing_changes import clear_slips
+        clear_slips(snapshot)
         reports['Calendars']={'status':'failed','checked_at':now.isoformat(),'errors':[{'source':'Dashboard compilation','error':'session-review-required' if day.isoformat()>=plan['review_before'] else type(ex).__name__}]}
     reports['Calendars']['duration_seconds']=round(time.monotonic()-calendar_started,2)
     print(json.dumps({'phase':'Calendars','status':reports['Calendars']['status'],'duration_seconds':reports['Calendars']['duration_seconds']}),flush=True)

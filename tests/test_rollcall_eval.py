@@ -79,8 +79,9 @@ class RollcallTests(unittest.TestCase):
                 'usage':{'cost':0.0001},'choices':[{'finish_reason':'stop','message':{'content':json.dumps(answer)}}]}).encode()
             opener=MagicMock();opener.open.return_value.__enter__.return_value=response
             with patch.dict('os.environ',{'OPENROUTER_API_KEY':'not-a-real-key'}),patch.object(r,'build_opener',return_value=opener):
-                r.execute(root,NOW,version='diagnostics-v2')
-                with self.assertRaisesRegex(ValueError,'batch-not-owned'):r.execute(root,NOW,version='diagnostics-v2')
+                # This is a mocked historical run, including its budget day.
+                r.execute(root,NOW,clock=lambda:NOW,version='diagnostics-v2')
+                with self.assertRaisesRegex(ValueError,'batch-not-owned'):r.execute(root,NOW,clock=lambda:NOW,version='diagnostics-v2')
             self.assertEqual(opener.open.call_count,6)
             self.assertTrue(all(p.read_bytes()==value for p,value in before.items()))
             self.assertEqual(load(r.paths(root,'diagnostics-v2')['report'])['validated'],6)

@@ -2,7 +2,7 @@
 
 ## Current operating map — Stage A, October 19, 2026
 
-Start with the revision 5 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
+Start with the revision 6 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
 `changes.py`, `change_sources.py`, `change_feed.py` and `tests/test_changes.py`.
 Existing daily_state/daily_federal/dashboard_collect produce official compact
 records; media/communications produce separately attributed metadata. The new
@@ -17,6 +17,19 @@ narrow media relevance task uses a hosted model. PDF work is deferred, and diges
 delivery is not deployed. Ten allowlisted public files total at most 650 KB;
 working JSON is capped at 20 MB, including a 10 MB ledger. Privacy checks and the
 bounded error journal cover Stage A as well. No new service/database is needed.
+
+## Stage B hearing layer — October 20, 2026
+
+Read [HEARING_TRACKING.md](HEARING_TRACKING.md) and `hearing_changes.py`,
+`hearing_collect.py`, `hearing_view.py` and `tests/test_hearing_changes.py`.
+Official URL/EventID identities and normalized bill/amendment contexts feed
+source-scoped accepted revisions. Missing or failed listings do not cancel
+meetings; explicit status needs an affirmative source assertion. Senate fallback
+identity changes are conservatively withheld. The same accepted-fact and event
+gate powers navigation, notice detail and revision history. Witness-form claims
+expire and clear on failure. Official changes are recorded before optional media
+inference. Live upcoming/open-form acceptance remains pending; PDF work stays
+deferred. Full historical payloads do not enter the bounded browser view.
 
 ## Historical M0 design notes
 

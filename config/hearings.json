@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "max_detail_pages_per_run": 24,
+  "max_missing_hearing_rechecks": 12,
+  "prior_hearing_lookback_days": 7,
+  "max_agenda_items": 200,
+  "max_witness_forms_per_run": 12,
+  "witness_fresh_hours": 24,
+  "public_calendar_bytes": 45000,
+  "public_agenda_items_per_hearing": 12,
+  "public_hearing_revisions": 3
+}

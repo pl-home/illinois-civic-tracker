@@ -126,7 +126,9 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(len(BeautifulSoup(html, 'html.parser').select('.slip-links a')), 0)
         self.assertIn('11:00 AM CST', html)
         meeting['items'][1]['submission_verified'] = True
-        self.assertIn('HB2 — open witness-slip form', meeting_row(meeting))
+        meeting['items'][1]['submission_checked_at'] = '2026-11-02T15:00:00+00:00'
+        self.assertIn('HB2 — open witness-slip form', meeting_row(meeting, '2026-11-02T16:00:00+00:00'))
+        self.assertNotIn('HB2 — open witness-slip form', meeting_row(meeting, '2026-11-04T16:00:00+00:00'))
 
     def test_live_snapshot_has_five_members_and_explicit_source_limits(self):
         html, data = render(ROOT)

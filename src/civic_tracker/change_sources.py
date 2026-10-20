@@ -124,20 +124,25 @@ def federal(archive, report):
                 family='congress-roll-' + chamber, baseline_on_add=False)
 
 
-def calendars(snapshot):
+def calendars(snapshot, ledger=None):
+    from .hearing_changes import identity, agenda, day, text
     proofs = {p['url']: p for p in snapshot.get('calendar_sources', [])}
+    prior_facts = {value['fact'].get('hearing_key'): value['fact'] for value in (ledger or {}).get('facts', {}).values()
+                   if value['fact']['kind'] == 'hearing'}
     groups = {}
     for member in snapshot.get('members', []):
         for committee in member.get('committees', []):
             ident = 'calendar:' + committee['url']
             group = groups.setdefault(ident, {'members': [], 'committee': committee, 'rows': {},
-                'jurisdiction': member['jurisdiction'], 'checked': member.get('calendar_checked_at'), 'good': True})
+                'jurisdiction': member['jurisdiction'], 'checked': member.get('calendar_checked_at'), 'good': True, 'errors': []})
             group['members'].append(member['id'])
-            good = member.get('calendar_health') not in {'failed', 'partial_or_failed'} and committee.get('health') != 'failed'
+            good = (committee.get('health') == 'checked' if member['jurisdiction'] == 'IL'
+                    else member.get('calendar_health') not in {'failed', 'partial_or_failed'})
             group['good'] = group['good'] and good
+            group['checked'] = max(filter(None, [group['checked'], committee.get('checked_at')]), default=None)
             for meeting in member.get('meetings', []):
                 if meeting.get('committee_url') != committee['url'] or meeting.get('retained_after_failure'): continue
-                proof = proofs.get(meeting['source_url'])
+                proof = meeting.get('evidence') or proofs.get(meeting['source_url'])
                 # House/Senate feed receipt may bind the parsed meeting even
                 # when an individual detail page is not fetched.
                 if not proof and member['jurisdiction'] == 'US':
@@ -146,16 +151,36 @@ def calendars(snapshot):
                 if not proof:
                     group['good'] = False
                     continue
-                key = 'hearing:' + digest(meeting['source_url'])[:24]
+                try:
+                    hearing_key = identity(meeting, member['jurisdiction'])
+                    normalized = agenda(meeting.get('items', []), member['jurisdiction'])
+                    prior = prior_facts.get(hearing_key)
+                    if (hearing_key.startswith('US-119-SENATE-') and prior
+                            and prior.get('local_time') != meeting.get('date_local')):
+                        # A later feed's "Business meeting" may be a recurrence,
+                        # not a reschedule. The feed has no ID to resolve it.
+                        group['errors'].append('ambiguous-hearing-identity')
+                        raise ValueError('ambiguous-hearing-identity')
+                except (ValueError, KeyError, TypeError):
+                    group['good'] = False
+                    continue
+                key = 'hearing:' + hearing_key
+                group['checked'] = max(filter(None, [group['checked'], proof.get('checked_at')]), default=None)
                 previous = group['rows'].get(key, {})
                 group['rows'][key] = fact(key, 'hearing', member['jurisdiction'], previous.get('members', []) + [member['id']],
-                    meeting.get('committee_name') or committee['name'], meeting.get('location') or 'Location not supplied',
+                    meeting.get('committee_name') or committee['name'], text(meeting.get('status_notice')) or 'Published schedule; see the official notice for details.',
                     evidence(meeting['source_url'], proof['checked_at'], 'official-calendar', proof.get('sha256')),
-                    meeting['date_local'][:10], committee=committee['url'], local_time=meeting['date_local'],
-                    agenda=sorted({r.get('measure', r.get('label', '')) for r in meeting.get('items', [])}),
+                    day(meeting) if meeting.get('date_local') else None,
+                    committee=committee['url'], local_time=meeting.get('date_local'),
+                    timezone=meeting.get('timezone', 'America/Chicago'), time_note=meeting.get('time_note'),
+                    hearing_key=hearing_key, committee_code=meeting.get('committee_code'), subject=text(meeting.get('description')),
+                    location=text(meeting.get('location')), agenda=normalized,
+                    agenda_coverage=meeting.get('agenda_coverage', 'not-collected'),
+                    status=meeting.get('status') or 'scheduled', status_basis=meeting.get('status_basis', 'scheduled-listing'),
+                    status_notice=meeting.get('status_notice'), posting_date_local=meeting.get('posting_date_local'),
                     attribution='Published schedule; membership does not establish attendance. Missing meetings never imply cancellation.')
     for ident, group in groups.items():
-        yield scope(ident, group['jurisdiction'], group['checked'], group['good'], list(group['rows'].values()))
+        yield scope(ident, group['jurisdiction'], group['checked'], group['good'], list(group['rows'].values()), adapter=3, errors=group['errors'])
 
 
 def publications(root, snapshot):
@@ -200,4 +225,4 @@ def observations(root):
     federal_archive = read(root / 'data/federal-index.json', {})
     snapshot = read(root / 'data/dashboard.json', {})
     return [*illinois(state, report.get('Illinois', {})), *federal(federal_archive, report.get('Federal', {})),
-            *calendars(snapshot), *publications(root, snapshot)]
+            *calendars(snapshot, read(root/'data/change-ledger.json', {})), *publications(root, snapshot)]
