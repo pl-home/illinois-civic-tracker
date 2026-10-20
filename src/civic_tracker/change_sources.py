@@ -220,9 +220,10 @@ def publications(root, snapshot):
 
 
 def observations(root):
+    from .parties import observations as party_observations
     report = read(root / 'data/daily-report.json', {}).get('sources', {})
     state = read(root / 'data/illinois-index.json', {})
     federal_archive = read(root / 'data/federal-index.json', {})
     snapshot = read(root / 'data/dashboard.json', {})
     return [*illinois(state, report.get('Illinois', {})), *federal(federal_archive, report.get('Federal', {})),
-            *calendars(snapshot, read(root/'data/change-ledger.json', {})), *publications(root, snapshot)]
+            *calendars(snapshot, read(root/'data/change-ledger.json', {})), *publications(root, snapshot), *party_observations(root)]

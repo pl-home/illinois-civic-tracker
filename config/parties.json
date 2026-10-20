@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "parser_version": 2,
+  "max_state_bytes": 350000,
+  "max_source_bytes": 1500000,
+  "stale_hours": 48,
+  "organizations": [
+    {
+      "id": "lee-democrats",
+      "label": "Lee County Democrats",
+      "host": "leecodemocrats.com",
+      "pages": [
+        {
+          "path": "/",
+          "label": "Home",
+          "categories": []
+        },
+        {
+          "path": "/about-us/",
+          "label": "Officers and organization",
+          "categories": [
+            "leadership-contact"
+          ]
+        },
+        {
+          "path": "/events/",
+          "label": "Events",
+          "categories": [
+            "event-meeting"
+          ]
+        },
+        {
+          "path": "/meet-your-dems/",
+          "label": "Candidates and elected officials",
+          "categories": [
+            "candidate-endorsement"
+          ]
+        },
+        {
+          "path": "/jerry-sheridan-drawdown-and-picnic-sunday-september-13-2026/",
+          "label": "Picnic detail",
+          "categories": [
+            "event-meeting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lee-gop",
+      "label": "Lee County IL Republican Central Committee",
+      "host": "leecountyilgop.org",
+      "pages": [
+        {
+          "path": "/",
+          "label": "Home",
+          "categories": []
+        },
+        {
+          "path": "/lee-county-il-republican-central-committee/",
+          "label": "Organization and contact",
+          "categories": [
+            "leadership-contact"
+          ]
+        },
+        {
+          "path": "/local-news-and-events/",
+          "label": "News and events",
+          "categories": [
+            "event-meeting"
+          ]
+        },
+        {
+          "path": "/lee-county-republican-precinct-committee-persons/",
+          "label": "Precinct committee persons",
+          "categories": [
+            "leadership-contact"
+          ]
+        },
+        {
+          "path": "/our-position/",
+          "label": "Published positions",
+          "categories": [
+            "position-statement"
+          ]
+        },
+        {
+          "path": "/oktoberfest-2026-fundraiser/",
+          "label": "Oktoberfest detail",
+          "categories": [
+            "event-meeting"
+          ]
+        }
+      ],
+      "assets": [
+        "https://leecountyilgop.org/wp-content/uploads/2026/10/Lee-County-Oktoberfest-Fundraiser-Poster-1024x683.png"
+      ]
+    }
+  ],
+  "mention_terms": {
+    "fritts": [
+      "Bradley Fritts",
+      "Brad Fritts"
+    ],
+    "arellano": [
+      "Li Arellano"
+    ],
+    "lahood": [
+      "Darin LaHood"
+    ],
+    "durbin": [
+      "Dick Durbin",
+      "Richard Durbin"
+    ],
+    "duckworth": [
+      "Tammy Duckworth"
+    ],
+    "lee-county": [
+      "Lee County"
+    ]
+  }
+}

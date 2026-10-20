@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "topics": {
+    "immigration": {"committees": ["Immigration and Human Rights"], "statutes": ["5 ILCS 805"], "keywords": ["immigration", "immigrant", "asylum", "deportation", "citizenship"]},
+    "energy": {"committees": ["Energy & Environment", "Energy and Public Utilities", "Public Utilities"], "statutes": ["220 ILCS 5", "20 ILCS 3855"], "keywords": ["energy", "electricity", "utilities", "renewable", "nuclear", "solar"]},
+    "pensions": {"committees": ["Personnel & Pensions", "Pensions"], "statutes": ["40 ILCS"], "keywords": ["pension", "pensions", "annuity", "pension code"]},
+    "law enforcement": {"committees": ["Police & Fire", "Criminal Law", "Judiciary - Criminal"], "statutes": ["50 ILCS 705", "725 ILCS"], "keywords": ["police", "sheriff", "law enforcement", "criminal", "surveillance"]},
+    "housing": {"committees": ["Housing", "Housing and Real Estate"], "statutes": ["310 ILCS", "765 ILCS 705"], "keywords": ["housing", "landlord", "tenant", "eviction", "homelessness", "affordable housing"]}
+  }
+}

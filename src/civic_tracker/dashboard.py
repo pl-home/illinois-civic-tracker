@@ -196,8 +196,10 @@ def render(root):
     from .change_feed import payload, render as change_panel
     from .changes import read
     from .hearing_view import sections
+    from .parties import panel as party_panel
     hearing_navigation, hearing_cards = sections(root, snapshot)
     substitutions = {'CHANGE_FEED': change_panel(payload(root), read(root/'data/change-quality-report.json', {})),
+        'PARTY_COVERAGE': party_panel(root),
         'HEARING_NAVIGATION': hearing_navigation,
         'INFERENCE_USAGE': usage_panel(snapshot), 'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
         'CALENDAR_END': e(snapshot['calendar_end']), 'MEMBER_LINKS': links,

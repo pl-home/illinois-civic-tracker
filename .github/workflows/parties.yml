@@ -1,0 +1,95 @@
+name: Check county-party websites
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: m0-source-evidence
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    outputs:
+      source_sha: ${{ steps.journal.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e .
+        id: dependencies
+      - run: python -m unittest discover -s tests -v
+        id: tests
+      - name: Check reviewed party pages and bounded mentions without inference
+        id: collector
+        run: |
+          mkdir -p .local
+          sha256sum data/media-inference-*.json data/media-work.json > .local/inference-before-parties.sha256
+          python -m civic_tracker.parties collect
+          sha256sum --check .local/inference-before-parties.sha256
+      - run: python -m civic_tracker.changes collect
+        id: changes
+      - run: python -m civic_tracker.privacy
+        id: privacy
+      - run: python -m civic_tracker.browse --output .local/site
+        id: build
+      - name: Persist reports and source receipts before publication
+        id: persist
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish public reports and collection receipts'
+            git push origin main
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .local/site
+      - name: Preserve troubleshooting journal even after a failed step
+        if: always()
+        id: journal
+        uses: ./.github/actions/error-journal
+        with:
+          scope: parties
+          status: ${{ job.status }}
+          dependencies: ${{ steps.dependencies.outcome }}
+          tests: ${{ steps.tests.outcome }}
+          collector: ${{ steps.collector.outcome }}
+          changes: ${{ steps.changes.outcome }}
+          privacy: ${{ steps.privacy.outcome }}
+          build: ${{ steps.build.outcome }}
+          persist: ${{ steps.persist.outcome }}
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Reject publication of an outdated artifact
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_SHA: ${{ needs.refresh.outputs.source_sha }}
+        run: |
+          latest=$(gh api "repos/${GITHUB_REPOSITORY}/commits/main" --jq .sha)
+          echo "active=$([ "$latest" = "$ARTIFACT_SHA" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Publish county-party website artifact
+        if: steps.current.outputs.active == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4

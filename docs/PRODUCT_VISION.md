@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: product vision
 
-Revision 9 — October 20, 2026, America/Chicago.
+Revision 10 — October 20, 2026, America/Chicago.
 
 This reconciles the October 15 research plan, October 16 vision/build brief,
 subsequent owner decisions and the two external-project reviews. It preserves
@@ -26,6 +26,13 @@ is capped at 1 MB inside the existing 20 MB JSON limit; static member/news HTML
 remains capped at 3 MB. Screening now continues beyond three accepted results,
 still at four unseen candidates per member and four paid media calls per day.
 Historical financial entries and uncertain requests are never reset or retried.
+
+October 20 Stage C: the hosted daily pipeline now checks the reviewed county-party
+pages and poster, with deterministic relevance, compact evidence, last-good
+retention and a visible held-review path. The dedicated Capitol Fax/Lee County
+headline checks use no model. See [Stage C operation and acceptance](PARTY_MONITORING.md).
+Source-dependent real-change follow-up remains qualified; the weekly digest and
+PDF work remain disabled/deferred. Storage and inference budgets are unchanged.
 
 ## 1. Purpose and access
 
@@ -99,7 +106,7 @@ source will be healthy on a later run.
 | Operations | Privacy checks, source/cost receipts and bounded structured error journal implemented |
 | Common meaningful-change ledger and static feeds | Stage A delivered: source-scoped ledger and common HTML/JSON/Atom gate; quiet baseline, replay, corrections and QA. See CHANGE_FEED.md; complete historical discovery and detailed hearing/party coverage remain limited |
 | Hearing agenda/status revision history | Stage B delivered: day/committee navigation, accepted agenda/amendment revisions, explicit postponement/cancellation, conservative identity checks and stale-slip protection. Live open-form acceptance remains pending; Senate ambiguity and federal agenda limits remain explicit |
-| Broad county-party website change monitoring | Legacy bounded collector exists; full port into the hosted pipeline remains open. Member-name-filtered party feeds are not equivalent coverage |
+| Broad county-party website change monitoring | Stage C implemented: eleven reviewed HTML pages and one poster, compact projections, quiet baselines, attributed changes and visible held review; separate from member-filtered feeds. Hosted receipt in PARTY_MONITORING.md |
 | Weekly digest and independent alerts | Not deployed; Monday 06:00 Central remains the digest target after acceptance |
 | Daily new committee roll-call/PDF collection | Deferred; qualified historical records remain available. The diagnostic model trial accepted 0/6 and does not enable collection |
 | Full-tenure/topic pages, rollover and private contact packets | Remaining milestone work |
@@ -154,7 +161,7 @@ as a regression example, not a future discovery limit or current activity count.
 News discovery uses reviewed publishers and dated indexed-feed candidates; it is
 not exhaustive article reading. The recent-media section may contain fewer than
 three items. Capitol Fax is included in the reviewed media policy. Dedicated
-per-subject/Lee County mention coverage still needs its own verified acceptance.
+per-subject/Lee County headline mention coverage is implemented with source receipts.
 Direct communications remain separate from independent news. A link-only campaign
 source or Facebook navigation link is not automatically collected content.
 

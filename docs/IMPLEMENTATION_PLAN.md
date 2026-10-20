@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 9 — October 20, 2026, America/Chicago. Read with
+Revision 10 — October 20, 2026, America/Chicago. Read with
 [PRODUCT_VISION.md](PRODUCT_VISION.md), revision 9. This replaces the initial
 October 15 plan as current delivery guidance. Earlier plans/build briefs remain
 historical acceptance evidence; their obsolete schedule, private-server proposal,
@@ -44,8 +44,8 @@ for future CI or full product acceptance.
 | Federal | Congress.gov relationships and official current-session floor XML, with retained prior history | Service/session transition and deeper historical/committee coverage |
 | Individual member history | October 20 owner request: paginated accepted current-session bill activity, names linked from homepage; separate undated relationship listings | Full-tenure/topic pages, applicable GA103 backfill and deeper source completeness remain M5 |
 | Hearings | Stage B: day/committee navigation; accepted agenda/amendment history, explicit status changes, bounded missing-ID rechecks and stale-slip protection | Genuine upcoming/open-form live acceptance; stronger Senate hearing IDs and broader federal agenda coverage |
-| Media/communications | Visible discovery policy; up to three dated eligible newsroom items; separate attributed first-party sources | Remaining source gaps/reprints and dedicated Capitol Fax/Lee County mention acceptance |
-| County parties | Legacy bounded watcher; selected member-filtered party feeds in current communications | Port broad hosted website change coverage with equal rules and baseline suppression |
+| Media/communications | Visible discovery policy; up to three dated eligible newsroom items; separate attributed first-party sources | Remaining source gaps/reprints and body-text mention coverage outside the bounded headline check |
+| County parties | Stage C hosted page/asset coverage, exact reasons, quiet baselines, pending-edit recovery, held review and six bounded mention feeds | Observe genuine subsequent live edits; human image review remains unresolved until performed |
 | Health | Source reports, privacy checks, bounded error journal and usage accounting | Cross-record integrity, coverage and withheld-record QA |
 | Notifications | One-time Gmail transport/inbox proof, not a recurring digest | Preview, event selection, conservative send ledger and weekly acceptance |
 | PDF/committee extraction | Historical records plus failed, separately versioned manual trial receipts | Deferred by owner; no routine activation or further paid trial in this workstream |
@@ -183,6 +183,13 @@ does not become cancellation. A genuine upcoming submission example must be
 validated when available; historical results alone cannot pass that gate.
 
 ### Stage C: hosted party coverage and deterministic relevance
+
+**October 20 implementation:** see [PARTY_MONITORING.md](PARTY_MONITORING.md) and
+[the dated acceptance receipt](evidence/stage-c.json). The existing daily workflow
+now includes the port; the manual source-only check adds no independent schedule
+or paid task. Synthetic symmetric edits and live baseline/hosted receipts are
+distinct; actual later source changes and human image interpretation remain
+source-dependent. Stage D is next; PDF work remains deferred.
 
 **Outcome:** both Lee County organizations receive equivalent, bounded monitoring,
 with attributed changes suitable for the same feed and digest.

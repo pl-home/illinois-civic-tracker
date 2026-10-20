@@ -2,18 +2,24 @@
 
 A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
 
-**Planning updated October 20, 2026:** start with the revision 9
+**Planning updated October 20, 2026:** start with the revision 10
 [product vision](docs/PRODUCT_VISION.md) and
 [implementation plan](docs/IMPLEMENTATION_PLAN.md). They reconcile the earlier
 research/build briefs with owner-approved changes and current implementation.
-Stages A and B now supply the common change feed, quality gates, hearing filters
-and agenda/status revisions. Next are bounded party/relevance coverage and digest
-acceptance; live open-slip acceptance remains source-dependent. PDF work is deferred.
+Stages A, B and C now supply the common change feed, quality gates, hearing filters,
+agenda/status revisions and bounded hosted party/relevance coverage. Next is digest
+preview and delivery acceptance; live open-slip acceptance remains source-dependent. PDF work is deferred.
 See [the shared change contract](docs/CHANGE_FEED.md), [completion receipt](docs/evidence/stage-a.json)
 and [actual upstream adaptation notices](THIRD_PARTY_NOTICES.md). The homepage
 now includes bounded accepted changes plus JSON and Atom subscription links.
 [Hearing tracking](docs/HEARING_TRACKING.md) explains stable notice identities,
 agenda/amendment changes, explicit postponements/cancellations and source limits.
+
+[County-party monitoring](docs/PARTY_MONITORING.md) checks eleven reviewed pages
+and one first-party poster with the daily 01:00 Central run. The homepage shows
+per-page health, attributed edits and held review; a six-subject Capitol Fax
+headline check is separate from newsroom reports. Baselines, cosmetic edits and
+parser migrations stay quiet; no new inference or raw site archive is enabled.
 
 Click any legislator's name (or **More sponsorship & bill activity**) for
 [paginated member history](docs/MEMBER_HISTORY.md): 25 entries per page, older

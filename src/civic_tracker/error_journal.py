@@ -14,7 +14,7 @@ MAX_INCIDENTS=64
 MAX_EVENTS=128
 MAX_SEEN=128
 DAYS=90
-WORKFLOWS={'daily','federal','illinois','media','pdf','rollcall','openrouter-health','journal'}
+WORKFLOWS={'daily','federal','illinois','media','parties','pdf','rollcall','openrouter-health','journal'}
 STAGES={'source-health','model-http','model-json','model-status','model-validation','workflow',
         'dependencies','tests','collector','changes','reserve','model','privacy','build','persist','journal-input'}
 CODES=set('''RuntimeError ValueError HTTPError URLError TimeoutError OSError KeyError JSONDecodeError
@@ -33,6 +33,10 @@ invalid-case-identity invalid-case-schema invalid-case-text invalid-model-respon
 invalid-output-schema invalid-output-value media-config-invalid media-config-mismatch media-config-missing
 missing-output-id reservation-too-small timezone-required model-call-stopped UnicodeDecodeError'''.split())
 CODES.add('change-quality-withheld')
+CODES.update({'party-content-structure','party-projection-bound','party-sensitive-content','party-unapproved-url',
+              'party-robots-unavailable','party-robots-disallow','party-crawl-delay-review','party-response-bound',
+              'party-asset-format','party-content-type','party-content-shrink-review',
+              'party-pending-change-bound','party-parser-pending-review'})
 CODES.update({'hearing-recheck-bound','hearing-detail-bound','hearing-agenda-bound',
               'hearing-date-conflict','hearing-status-conflict','hearing-committee-mismatch','ambiguous-hearing-identity'})
 HOSTS={'ilga.gov','ftp.ilga.gov','my.ilga.gov','api.congress.gov','clerk.house.gov','www.senate.gov','news.google.com','openrouter.ai'}
@@ -40,7 +44,8 @@ HOSTS.update({'repfritts.com','senatorli.com','lahood.house.gov','durbin.senate.
 FILES={'daily':'data/daily-report.json','media-source':'data/media-state.json','media-model':'data/media-inference-report.json',
        'pdf':'data/pdf-extraction-report.json','rollcall':'data/rollcall-evaluation-report.json','health':'data/openrouter-health.json',
        'communications':'data/communications-state.json','media-ledger':'data/media-inference-ledger.json',
-       'rollcall-v2':'data/rollcall-diagnostics-v2-report.json', 'change-quality':'data/change-quality-report.json'}
+       'rollcall-v2':'data/rollcall-diagnostics-v2-report.json', 'change-quality':'data/change-quality-report.json',
+       'parties':'data/party-state.json', 'mentions':'data/mentions-state.json'}
 LEDGERS={p:p for p in ('data/pdf-extraction-ledger.json','data/rollcall-evaluation-ledger.json',
                       'data/rollcall-diagnostics-v2-ledger.json')}
 PATHS=(r'/documents/reports/static/104MemberVotes\.csv',r'/(?:House|Senate)/Members/Details/\d{1,7}',
@@ -241,6 +246,12 @@ class Journal:
 def ingest(journal,files,commit=None,commit_time=None):
     ref=lambda file:{'file':FILES[file],**({'commit':commit} if commit else {})}
     run='history-'+commit[:12] if commit else run_id(journal.now)
+    for kind, entries in [('parties', (files.get('parties') or {}).get('pages', {})),
+                          ('mentions', (files.get('mentions') or {}).get('sources', {}))]:
+        for source, report in entries.items():
+            journal.observe(kind, report.get('url', source), report.get('checked_at') or commit_time,
+                [report.get('error', 'source-unavailable')] if report.get('status') != 'ok' else [],
+                report.get('status') == 'ok', run, ref(kind), stage='source-health')
     quality=files.get('change-quality') or {}
     if quality:
         # Bounded codes only, never source bodies, model answers or fact text.

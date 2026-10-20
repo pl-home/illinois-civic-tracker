@@ -16,12 +16,13 @@ from zoneinfo import ZoneInfo
 
 VERSION = 1
 POLICY = 'stage-a-1'
-KINDS = {'filing', 'sponsor-role', 'bill-action', 'bill-title', 'vote', 'hearing', 'publication'}
+KINDS = {'filing', 'sponsor-role', 'bill-action', 'bill-title', 'vote', 'hearing', 'publication', 'party-change'}
 CHOICES = {'yes', 'no', 'present', 'absent', 'excused', 'not-voting'}
 MEMBERS = {'fritts': ('IL', '3428'), 'arellano': ('IL', '3383'),
            'lahood': ('US', 'L000585'), 'durbin': ('US', 'D000563'), 'duckworth': ('US', 'D000622')}
 MAX_LEDGER = 10_000_000
 MAX_EXCEPTIONS = 64
+ENTITIES = {'lee-democrats': 'leecodemocrats.com', 'lee-gop': 'leecountyilgop.org'}
 
 
 def packed(value):
@@ -100,9 +101,11 @@ def validate_fact(fact, scope):
         if fact['kind'] not in KINDS: errors.append('unknown-kind')
         if fact['jurisdiction'] != scope['jurisdiction'] or fact['session'] != scope['session']:
             errors.append('source-session-mismatch')
-        if (fact['jurisdiction'], fact['session']) not in {('IL', 104), ('US', 119)}:
+        party = fact['kind'] == 'party-change'
+        if (fact['jurisdiction'], fact['session']) not in ({('LOCAL', None)} if party else {('IL', 104), ('US', 119)}):
             errors.append('source-session-mismatch')
-        if not fact['members'] or len(set(fact['members'])) != len(fact['members']): errors.append('member-reference')
+        if (not party and not fact['members']) or len(set(fact['members'])) != len(fact['members']): errors.append('member-reference')
+        if party and fact['members']: errors.append('member-reference')
         for member in fact['members']:
             if member not in MEMBERS or MEMBERS[member][0] != fact['jurisdiction']: errors.append('member-reference')
         if not isinstance(fact['key'], str) or len(fact['key']) > 250: errors.append('fact-identity')
@@ -121,7 +124,7 @@ def validate_fact(fact, scope):
             errors.append('measure-reference')
         evidence = fact['evidence']
         public_url(evidence['url']); timestamp(evidence['retrieved_at'])
-        if evidence['binding'] not in {'official-bill', 'official-roll', 'official-calendar', 'publisher-listing', 'screened-news-metadata'}:
+        if evidence['binding'] not in {'official-bill', 'official-roll', 'official-calendar', 'publisher-listing', 'screened-news-metadata', 'party-page'}:
             errors.append('evidence-binding')
         raw_hash = evidence.get('sha256')
         if raw_hash is not None and not re.fullmatch(r'[0-9a-f]{64}', raw_hash): errors.append('evidence-hash')
@@ -187,6 +190,23 @@ def validate_fact(fact, scope):
         if fact['kind'] == 'publication':
             if not fact.get('publisher') or fact.get('publication_kind') not in {'news', 'office', 'campaign', 'party'}: errors.append('publisher-reference')
             if evidence['binding'] not in {'publisher-listing', 'screened-news-metadata'}: errors.append('publication-evidence')
+        if party:
+            from .parties import CATEGORIES, source_bound
+            entities = fact.get('entities', [])
+            if len(entities) != 1 or entities[0] not in ENTITIES: errors.append('party-entity')
+            elif urlsplit(evidence['url']).netloc != ENTITIES[entities[0]]: errors.append('party-entity-source')
+            if not source_bound(fact): errors.append('party-entity-source')
+            if evidence['binding'] != 'party-page' or not raw_hash: errors.append('party-evidence')
+            for field in ('before_sha256', 'after_sha256'):
+                if not re.fullmatch(r'[0-9a-f]{64}', fact.get(field, '')): errors.append('party-evidence-hash')
+            if evidence.get('sha256') != fact.get('after_sha256'): errors.append('party-evidence-hash')
+            if not fact.get('categories') or not set(fact['categories']) <= CATEGORIES: errors.append('party-category')
+            if (not fact.get('reasons') or len(fact['reasons']) > 8 or
+                    any(not isinstance(v, str) or len(v) > 200 for v in fact['reasons'])): errors.append('party-reasons')
+            if any(not isinstance(fact.get(k), str) or len(fact[k]) > 360 for k in ('before_excerpt', 'after_excerpt')): errors.append('party-excerpt')
+            timestamp(fact['previous_good_at']); timestamp(fact['observed_at'])
+            if fact['observed_at'] != evidence['retrieved_at'] or fact['occurred_at'] is not None: errors.append('party-time')
+            if not isinstance(fact.get('after_gap'), bool): errors.append('party-gap')
     except (KeyError, ValueError, TypeError, AttributeError):
         errors.append('fact-schema')
     return sorted(set(errors))
@@ -222,6 +242,9 @@ def event_revision(fact, scope_id, now, previous=None, operation=None):
         result['hearing_changes'] = delta(previous['fact'], fact)
         result['change'] = 'updated'
         result['inclusion_reason'] = describe(result['hearing_changes']) or 'Published hearing detail updated'
+    if fact['kind'] == 'party-change':
+        result['eligible'] = not bool(set(fact['categories']) & {'image-review', 'unclassified'})
+        result['inclusion_reason'] = '; '.join(fact['reasons']) + ('; observed after a collection gap; edit date unknown' if fact['after_gap'] else '; edit date unknown')
     return result
 
 
@@ -342,10 +365,11 @@ def validated_events(ledger):
             yield event
 
 
-def public_events(ledger, limit=60):
+def public_events(ledger, limit=60, include_hidden=False):
     """One selection/gate for the new HTML, JSON, Atom and future digest input."""
     latest = {event['id']: event for event in validated_events(ledger)}
-    return sorted((e for e in latest.values() if e['eligible']),
+    from .relevance import explain
+    return sorted((e for e in latest.values() if include_hidden or (e['eligible'] and not explain(e['fact'])['hidden'])),
                   key=lambda e: (e['observed_at'], e['revision_id']), reverse=True)[:limit]
 
 
@@ -353,6 +377,8 @@ def collect(root, now):
     from .change_sources import observations
     ledger_path = root / 'data/change-ledger.json'
     ledger, report = reconcile(read(ledger_path, empty()), observations(root), now)
+    from .relevance import audit
+    report['relevance_audit'] = audit(ledger)
     report['projected_data_bytes'] = 0
     replacements = {ledger_path.name: ledger, 'change-quality-report.json': report}
     other_bytes = sum(p.stat().st_size for p in (root/'data').glob('*.json') if p.name not in replacements)

@@ -49,7 +49,11 @@ jobs:
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESSGOV_API || secrets.CONGRESS_API_KEY }}
         run: python -m civic_tracker.daily run
-      - name: Record official and hearing changes without inference
+      - name: Check county-party pages and Capitol Fax mentions without inference
+        id: parties
+        if: steps.gate.outputs.active == 'true'
+        run: python -m civic_tracker.parties collect
+      - name: Record official, hearing and county-party changes without inference
         if: steps.gate.outputs.active == 'true'
         id: official_changes
         run: python -m civic_tracker.changes collect
@@ -108,7 +112,7 @@ jobs:
           status: ${{ job.status }}
           dependencies: ${{ steps.dependencies.outcome }}
           tests: ${{ steps.tests.outcome == 'failure' && 'failure' || steps.offline.outcome }}
-          collector: ${{ steps.collector.outcome == 'failure' && 'failure' || steps.communications.outcome == 'failure' && 'failure' || steps.collector.outcome }}
+          collector: ${{ steps.parties.outcome == 'failure' && 'failure' || steps.collector.outcome == 'failure' && 'failure' || steps.collector.outcome }}
           reserve: ${{ steps.reserve.outcome }}
           model: ${{ steps.model.outcome }}
           changes: ${{ steps.official_changes.outcome == 'failure' && 'failure' || steps.changes.outcome }}

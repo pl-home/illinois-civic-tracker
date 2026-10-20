@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "stage": "C",
+  "recorded_at": "2026-10-20T17:03:00.508725+00:00",
+  "status": "local-acceptance-passed-hosted-verification-pending",
+  "code_base": {
+    "commit": "8a8f61100f65e2dd5ea171da07d71ba8c15dcbc0"
+  },
+  "tests": {
+    "offline_passed": 297,
+    "party_relevance_tests": 19,
+    "privacy_findings": 0,
+    "review_fixes": [
+      "pending edit outbox recovery",
+      "held review partition and total count",
+      "alias-aware bounded searches",
+      "centered before/after excerpts"
+    ]
+  },
+  "live_local": {
+    "checked_at": "2026-10-20T14:56:43.316347+00:00",
+    "page_asset_sources": 12,
+    "ok_sources": 12,
+    "mention_feeds": 6,
+    "ok_mention_feeds": 6,
+    "headline_matches": {
+      "arellano": 0,
+      "duckworth": 0,
+      "durbin": 0,
+      "fritts": 0,
+      "lahood": 0,
+      "lee-county": 0
+    },
+    "model_calls": 0,
+    "added_revisions": 0,
+    "preexisting_withheld_scopes": [
+      "congress:roll:US-119-HOUSE-1-00002",
+      "news:lahood",
+      "news:durbin",
+      "news:duckworth"
+    ]
+  },
+  "storage": {
+    "party_state_bytes": 33966,
+    "mention_state_bytes": 1478,
+    "canonical_json_bytes": 13736747,
+    "base_artifact_bytes": 513849,
+    "member_html_bytes": 2437693,
+    "artifact_total_bytes": 2951542,
+    "limits": {
+      "party_state": 350000,
+      "mention_state": 50000,
+      "canonical_json": 20000000,
+      "base_artifact": 650000,
+      "member_html": 3000000
+    }
+  },
+  "hosted": {
+    "status": "pending",
+    "workflow": "parties.yml",
+    "new_schedule": false,
+    "uses_existing_schedule": "01:00 America/Chicago",
+    "no_inference": true
+  },
+  "limitations": [
+    "First live baseline is not a genuine subsequent officer/event source change.",
+    "Public exact-headline checks cannot establish body-text mentions.",
+    "Parser migrations rebaseline quietly; coincident source edits may need separate review.",
+    "Only the one watched poster receives byte-level image checks; other image URLs are reference checks.",
+    "Image changes remain human-review required; no OCR or interpretation.",
+    "Historical source/cost evidence remains intact; no new paid calls or PDF work.",
+    "Stage D digest and full M1 acceptance remain pending."
+  ]
+}

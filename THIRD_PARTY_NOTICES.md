@@ -39,3 +39,15 @@ Other reviewed projects remain candidates in the implementation plan, not
 dependencies or claims of incorporated code. There is no new package/service
 dependency for Stage A. Acceptance tests: `tests/test_changes.py`,
 `tests/test_browse.py` and `tests/test_error_journal.py`.
+
+## Stage C provenance
+
+The party-page allowlist and extraction/suppression principles were reviewed
+against the owner's earlier watcher. `parties.py` is independently implemented;
+the old runner, raw archives and local-model review are not copied. The shared
+change feed continues to use the Hawaii Appleseed adaptation disclosed above.
+Deterministic relevance, symmetric category rules and explicit held-for-review
+reasons also apply the already disclosed RepWatchr review principles without
+copying additional upstream source. See `docs/PARTY_MONITORING.md` and
+`tests/test_parties.py`. Party-published text retains publisher attribution;
+no content license or independent verification is inferred.

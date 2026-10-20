@@ -31,11 +31,28 @@ def payload(root):
             omitted += 1
         else:
             rows.append(event)
+    from .relevance import explain
+    hidden = []
+    for event in public_events(ledger, 100, include_hidden=True):
+        reason = explain(event['fact'])
+        if not event['eligible'] or not reason['hidden']: continue
+        compact = {k: event[k] for k in ('id', 'observed_at', 'fact')}
+        compact['relevance'] = reason
+        proposed = hidden + [compact]
+        if len(proposed) <= 6 and len(packed(proposed).encode()) < 6000: hidden = proposed
+    for row in rows: row['relevance'] = explain(row['fact'])
+    # The explanatory fields and hidden slice share the feed's existing bound.
+    while (len(packed({'events': rows, 'hidden_events': hidden}).encode()) > MAX_JSON_BYTES
+           or len((packed({'events': rows, 'hidden_events': hidden}) + atom({'events': rows, 'updated_at': baseline})
+                   + render({'events': rows, 'hidden_events': hidden, 'baseline_at': baseline}, {})).encode()) > MAX_VIEW_BYTES):
+        if hidden: hidden.pop()
+        elif rows: rows.pop(); omitted += 1
+        else: break
     return {'schema_version': 1, 'policy': ledger['policy'], 'baseline_at': baseline,
             'updated_at': max((r['observed_at'] for r in rows), default=baseline),
             'selection': 'latest accepted revision per event; at most 20 and 32 KB of entries; historical discoveries excluded',
             'omitted_for_size': omitted,
-            'events': rows}
+            'events': rows, 'hidden_events': hidden}
 
 
 def atom(data):
@@ -81,20 +98,24 @@ def render(data, quality):
     rows = []
     for event in data['events'][:10]:
         f = event['fact']
-        label = ' · '.join(f['members'])
+        label = ' · '.join(f['members'] or f.get('entities', []))
+        relevance = event.get('relevance', {})
+        reason = '; '.join(relevance.get('reasons', []))
+        topics = '; '.join(topic['topic'] + ': ' + ', '.join(topic['reasons']) for topic in relevance.get('topics', []))
         rows.append(f'<li id="{e(event["id"])}"><p class="minor">{e(label)} · {e(f["kind"])} · Source date: {e(f["occurred_at"] or "unknown")}</p>'
             f'<strong><a href="{e(f["evidence"]["url"])}">{e(f["title"])} ↗</a></strong><p>{e(f["detail"])}</p>'
             f'<p class="minor">{e(event["inclusion_reason"])} · first observed {e(event["first_observed_at"][:10])}'
-            f' · revision {event["revision"]}</p></li>')
+            f' · revision {event["revision"]}</p><details><summary>Relevance reasons</summary><p>{e(reason)}</p><p>{e(topics or "No priority-topic match established.")}</p><p>Stance is not inferred.</p></details></li>')
     baseline = data['baseline_at'][:10] if data['baseline_at'] else 'not established'
     body = ''.join(rows) or f'<li>No accepted new changes since the baseline ({e(baseline)}). The member sections below retain historical context. Check source coverage; this does not establish inactivity.</li>'
     withheld = quality.get('withheld_scopes', 0)
     status = quality.get('status', 'not checked')
+    hidden = ''.join(f'<li><a href="{e(row["fact"]["evidence"]["url"])}">{e(row["fact"]["title"])}</a> · {e("; ".join(row["relevance"]["reasons"]))}</li>' for row in data.get('hidden_events', []))
     return f'''<section id="changes" class="dashboard-coverage" aria-label="Shared change feed"><h2>Recent changes</h2>
 <p>Source-dated activity and traceable corrections after a quiet baseline. Existing history is not a new alert. Up to ten latest accepted changes are shown here. {data.get('omitted_for_size', 0)} oversized entries omitted from the browser slice; full revisions remain in the repository.</p>
 <p><a href="changes.atom">Subscribe with Atom ↗</a> · <a href="changes.json">Compact change feed (JSON) ↗</a> · <a href="https://github.com/pl-home/illinois-civic-tracker/blob/main/docs/CHANGE_FEED.md">Coverage &amp; validation ↗</a></p>
 <details><summary>Change-feed quality · {e(status)} · {withheld} withheld source scopes</summary><p>{quality.get('accepted_facts', 0)} accepted compact facts · {quality.get('event_revisions', 0)} preserved event revisions. Failed or invalid observations retain last-good facts and completion cursors. Source-adapter checks do not independently verify publisher claims. This gate covers the new feed; older member snapshot sections retain their existing validation.</p><p>PDF collection remains deferred. Bounded vote rechecks do not establish complete historical correction coverage. Calendar absence never establishes cancellation. Feed build and collection make no model calls.</p></details>
-<ul class="activity-list">{body}</ul></section>'''
+<ul class="activity-list">{body}</ul><details><summary>Show hidden ceremony / no-opposition examples ({len(data.get('hidden_events', []))})</summary><p>Bounded recent examples only; source records remain in the compact index and bill activity remains in member history. Unknown tally never establishes no opposition.</p><ul>{hidden}</ul></details></section>'''
 
 
 def build(root, output):

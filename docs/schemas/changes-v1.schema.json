@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://pl-home.github.io/illinois-civic-tracker/schemas/changes-v1.schema.json",
-  "title": "Shared change ledger interchange v1 (Stages A and B)",
+  "title": "Shared change ledger interchange v1 (Stages A, B and C)",
   "description": "Structural contract only. Runtime source binding and publication policy are in changes.py. No schema validator/model establishes source facts.",
   "$defs": {
     "evidence": {
@@ -31,7 +31,8 @@
             "official-roll",
             "official-calendar",
             "publisher-listing",
-            "screened-news-metadata"
+            "screened-news-metadata",
+            "party-page"
           ]
         }
       }
@@ -62,24 +63,27 @@
             "bill-title",
             "vote",
             "hearing",
-            "publication"
+            "publication",
+            "party-change"
           ]
         },
         "jurisdiction": {
           "enum": [
             "IL",
-            "US"
+            "US",
+            "LOCAL"
           ]
         },
         "session": {
           "enum": [
             104,
-            119
+            119,
+            null
           ]
         },
         "members": {
           "type": "array",
-          "minItems": 1,
+          "minItems": 0,
           "uniqueItems": true,
           "items": {
             "enum": [
@@ -115,6 +119,16 @@
         },
         "evidence": {
           "$ref": "#/$defs/evidence"
+        },
+        "entities": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "enum": [
+              "lee-democrats",
+              "lee-gop"
+            ]
+          }
         }
       },
       "allOf": [
@@ -122,95 +136,54 @@
           "if": {
             "properties": {
               "kind": {
-                "const": "hearing"
+                "const": "party-change"
               }
-            },
-            "required": [
-              "hearing_key"
-            ]
+            }
           },
           "then": {
-            "type": "object",
             "required": [
-              "committee",
-              "local_time",
-              "timezone",
-              "status",
-              "status_basis",
-              "agenda",
-              "agenda_coverage"
+              "entities",
+              "publisher",
+              "categories",
+              "reasons",
+              "before_sha256",
+              "after_sha256",
+              "before_excerpt",
+              "after_excerpt",
+              "previous_good_at",
+              "after_gap",
+              "observed_at"
             ],
             "properties": {
-              "hearing_key": {
-                "type": "string",
-                "pattern": "^(IL-104|US-119)-(HOUSE|SENATE)-"
+              "jurisdiction": {
+                "const": "LOCAL"
               },
-              "committee": {
-                "type": "string",
-                "format": "uri"
+              "session": {
+                "const": null
               },
-              "local_time": {
-                "type": [
-                  "string",
-                  "null"
-                ]
+              "members": {
+                "maxItems": 0
               },
-              "timezone": {
+              "entities": {
+                "minItems": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "members": {
+                "minItems": 1
+              },
+              "jurisdiction": {
                 "enum": [
-                  "America/Chicago",
-                  "America/New_York"
+                  "IL",
+                  "US"
                 ]
               },
-              "time_note": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "location": {
-                "type": "string"
-              },
-              "status": {
+              "session": {
                 "enum": [
-                  "scheduled",
-                  "canceled",
-                  "postponed",
-                  "rescheduled",
-                  "unconfirmed",
-                  "unknown"
-                ]
-              },
-              "status_basis": {
-                "enum": [
-                  "explicit-notice",
-                  "scheduled-listing",
-                  "detail-only"
-                ]
-              },
-              "status_notice": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "agenda_coverage": {
-                "enum": [
-                  "complete",
-                  "not-published",
-                  "not-collected"
-                ]
-              },
-              "agenda": {
-                "type": "array",
-                "maxItems": 200,
-                "items": {
-                  "$ref": "#/$defs/agendaItem"
-                }
-              },
-              "posting_date_local": {
-                "type": [
-                  "string",
-                  "null"
+                  104,
+                  119
                 ]
               }
             }
@@ -344,13 +317,15 @@
         "jurisdiction": {
           "enum": [
             "IL",
-            "US"
+            "US",
+            "LOCAL"
           ]
         },
         "session": {
           "enum": [
             104,
-            119
+            119,
+            null
           ]
         },
         "checked_at": {
