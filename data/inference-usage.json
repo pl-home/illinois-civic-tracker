@@ -1,41 +1,41 @@
 {
   "day": {
     "charged_usd": "0.00066776",
-    "reserved_usd": "0.005",
-    "liability_usd": "0.00566776",
-    "unsettled_requests": 1,
+    "reserved_usd": "0.0140",
+    "liability_usd": "0.01466776",
+    "unsettled_requests": 7,
     "media_reservations": 0,
     "undated_entries": 0,
     "limit_usd": "0.02",
-    "remaining_usd": "0.01433224",
-    "used_percent": "28.338800"
+    "remaining_usd": "0.00533224",
+    "used_percent": "73.338800"
   },
   "week": {
     "charged_usd": "0.00066776",
-    "reserved_usd": "0.005",
-    "liability_usd": "0.00566776",
-    "unsettled_requests": 1,
+    "reserved_usd": "0.0140",
+    "liability_usd": "0.01466776",
+    "unsettled_requests": 7,
     "media_reservations": 0,
     "undated_entries": 0,
     "limit_usd": "0.20",
-    "remaining_usd": "0.19433224",
-    "used_percent": "2.833880"
+    "remaining_usd": "0.18533224",
+    "used_percent": "7.333880"
   },
   "lifetime": {
     "charged_usd": "0.00287632",
-    "reserved_usd": "0.005",
-    "liability_usd": "0.00787632",
-    "unsettled_requests": 1,
+    "reserved_usd": "0.0140",
+    "liability_usd": "0.01687632",
+    "unsettled_requests": 7,
     "media_reservations": 4,
     "undated_entries": 0,
     "limit_usd": "20",
-    "remaining_usd": "19.99212368",
-    "used_percent": "0.03938160"
+    "remaining_usd": "19.98312368",
+    "used_percent": "0.08438160"
   },
   "week_start": "2026-10-19",
   "week_end": "2026-10-25",
   "schema_version": 1,
-  "as_of": "2026-10-19T23:16:35.572077+00:00",
+  "as_of": "2026-10-20T01:37:58.260807+00:00",
   "local_date": "2026-10-19",
   "timezone": "America/Chicago",
   "week_definition": "Monday through Sunday",

@@ -1,0 +1,115 @@
+{
+  "batch_id": "committee-rollcalls-diagnostics-v2",
+  "config_sha256": "301ebfab6d3f4e7c0e03d191408818d28b49260a09efd7737f74b494463fe459",
+  "prompt_sha256": "adee1e9bf87c68aea7c381b3ee12fddca00104807da5ac9d75d545a75933d136",
+  "entries": [
+    {
+      "case_id": "10400HB1054_42707",
+      "attempted_at": "2026-10-20T01:37:58.260807+00:00",
+      "status": "reserved",
+      "reserved_usd": "0.0015",
+      "charged_usd": null,
+      "source": {
+        "url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB1054_42707.pdf",
+        "status": 200,
+        "bytes": 30238,
+        "sha256": "78d72b7a253689e1349534f8b85f004dd51378340cf832a35813b8e2ceeb0a95",
+        "last_modified": "Thu, 20 Mar 2025 05:12:49 GMT",
+        "etag": "\"980b2b95699db1:0\"",
+        "request_attempts": 1
+      },
+      "native_sha256": "a356175c733ac45354d58f836936ecd66dc096fa281aab9ee00f4b86e9c5f2a2",
+      "pages": 1
+    },
+    {
+      "case_id": "10400HB2490_42146",
+      "attempted_at": "2026-10-20T01:37:58.260807+00:00",
+      "status": "reserved",
+      "reserved_usd": "0.0015",
+      "charged_usd": null,
+      "source": {
+        "url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB2490_42146.pdf",
+        "status": 200,
+        "bytes": 31008,
+        "sha256": "0f968abb0f30abcd57274846b4797ee52ad2338365bfba920933dcb85feb48ee",
+        "last_modified": "Thu, 13 Mar 2025 05:12:38 GMT",
+        "etag": "\"61a4ff89d693db1:0\"",
+        "request_attempts": 1
+      },
+      "native_sha256": "3fb3a9584d22bfd0198a8d29f4dc02684c1c1a5f89d863b6a53dfd03940bbfe2",
+      "pages": 1
+    },
+    {
+      "case_id": "10400HB1056HFA2_43449",
+      "attempted_at": "2026-10-20T01:37:58.260807+00:00",
+      "status": "reserved",
+      "reserved_usd": "0.0015",
+      "charged_usd": null,
+      "source": {
+        "url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB1056HFA2_43449.pdf",
+        "status": 200,
+        "bytes": 30927,
+        "sha256": "8616df370ab018bb966c079a2abd4e29208349a3fef60453ddc467d194e2289e",
+        "last_modified": "Thu, 10 Apr 2025 05:12:49 GMT",
+        "etag": "\"b11ed533d7a9db1:0\"",
+        "request_attempts": 1
+      },
+      "native_sha256": "8c1ab2538561e12f27c9f7a19249eb6c963a7ef2364d6fdfdeae3d03c334383c",
+      "pages": 1
+    },
+    {
+      "case_id": "10400SB0093_41621",
+      "attempted_at": "2026-10-20T01:37:58.260807+00:00",
+      "status": "reserved",
+      "reserved_usd": "0.0015",
+      "charged_usd": null,
+      "source": {
+        "url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB0093_41621.pdf",
+        "status": 200,
+        "bytes": 28359,
+        "sha256": "c4f8e2943f25f9e2c8a658e90b10ac67e18fe381d1081098975b946292b9dc32",
+        "last_modified": "Wed, 05 Feb 2025 06:12:30 GMT",
+        "etag": "\"976ce1ef9477db1:0\"",
+        "request_attempts": 1
+      },
+      "native_sha256": "f4f37258633187384e7615d5346b45555a2bf8bdae66529726349b58561ffa56",
+      "pages": 1
+    },
+    {
+      "case_id": "10400SB1274SCA1_41641",
+      "attempted_at": "2026-10-20T01:37:58.260807+00:00",
+      "status": "reserved",
+      "reserved_usd": "0.0015",
+      "charged_usd": null,
+      "source": {
+        "url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB1274SCA1_41641.pdf",
+        "status": 200,
+        "bytes": 27004,
+        "sha256": "32a0dd8c12f8ad2fec9458eb6d4be816a53b44ee641f067faff14c5576bfab77",
+        "last_modified": "Wed, 19 Feb 2025 06:12:30 GMT",
+        "etag": "\"d94524429582db1:0\"",
+        "request_attempts": 1
+      },
+      "native_sha256": "2bc6f8afcd51a89b72670cc11305da8507e3b0994320d586c2e4505f40d2a5bb",
+      "pages": 1
+    },
+    {
+      "case_id": "10400HB0762_44872",
+      "attempted_at": "2026-10-20T01:37:58.260807+00:00",
+      "status": "reserved",
+      "reserved_usd": "0.0015",
+      "charged_usd": null,
+      "source": {
+        "url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400HB0762_44872.pdf",
+        "status": 200,
+        "bytes": 33112,
+        "sha256": "249056cca4ee4483c9c91a7732a8e42373ea5071118c6ffd2b6890c3f1adfc49",
+        "last_modified": "Thu, 30 Oct 2025 05:12:37 GMT",
+        "etag": "\"448bc9ce5b49dc1:0\"",
+        "request_attempts": 1
+      },
+      "native_sha256": "65b5b63447845f87c9098a99b38f35b0b089969eaac5419d2a7759c3a26da80b",
+      "pages": 1
+    }
+  ]
+}

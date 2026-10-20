@@ -1,0 +1,321 @@
+{
+  "checked_at": "2026-10-20T01:39:58.683615+00:00",
+  "source_pinned": true,
+  "model_calls": 0,
+  "reference_cases": 6,
+  "negative_controls": 38,
+  "rejected": 38,
+  "cases": [
+    {
+      "case_id": "10400HB1054_42707",
+      "reference_checks": {
+        "member_cell": {
+          "name": "Fritts, Bradley",
+          "raw_vote": "N",
+          "page": 1,
+          "quote": "N Fritts, Bradley"
+        },
+        "named_roster_count": 29,
+        "roster_tally": {
+          "yea": 19,
+          "nay": 8,
+          "present": 0,
+          "not_voting": 2
+        }
+      },
+      "controls": [
+        {
+          "control": "wrong-choice",
+          "rejected": true,
+          "reason": "member-cell-binding"
+        },
+        {
+          "control": "wrong-member",
+          "rejected": true,
+          "reason": "wrong-member"
+        },
+        {
+          "control": "wrong-tally",
+          "rejected": true,
+          "reason": "tally-quote-binding"
+        },
+        {
+          "control": "wrong-page",
+          "rejected": true,
+          "reason": "evidence-page"
+        },
+        {
+          "control": "lost-column",
+          "rejected": true,
+          "reason": "member-cell-ambiguous"
+        },
+        {
+          "control": "duplicated-page",
+          "rejected": true,
+          "reason": "member-cell-ambiguous"
+        }
+      ]
+    },
+    {
+      "case_id": "10400HB2490_42146",
+      "reference_checks": {
+        "member_cell": {
+          "name": "Fritts, Bradley",
+          "raw_vote": "Y",
+          "page": 1,
+          "quote": "Y Fritts, Bradley"
+        },
+        "named_roster_count": 29,
+        "roster_tally": {
+          "yea": 18,
+          "nay": 3,
+          "present": 2,
+          "not_voting": 6
+        }
+      },
+      "controls": [
+        {
+          "control": "wrong-choice",
+          "rejected": true,
+          "reason": "member-cell-binding"
+        },
+        {
+          "control": "wrong-member",
+          "rejected": true,
+          "reason": "wrong-member"
+        },
+        {
+          "control": "wrong-tally",
+          "rejected": true,
+          "reason": "tally-quote-binding"
+        },
+        {
+          "control": "wrong-page",
+          "rejected": true,
+          "reason": "evidence-page"
+        },
+        {
+          "control": "lost-column",
+          "rejected": true,
+          "reason": "named-roster-tally-mismatch"
+        },
+        {
+          "control": "duplicated-page",
+          "rejected": true,
+          "reason": "member-cell-ambiguous"
+        }
+      ]
+    },
+    {
+      "case_id": "10400HB1056HFA2_43449",
+      "reference_checks": {
+        "member_cell": {
+          "name": "Fritts, Bradley",
+          "raw_vote": "NV",
+          "page": 1,
+          "quote": "NV Fritts, Bradley"
+        },
+        "named_roster_count": 29,
+        "roster_tally": {
+          "yea": 16,
+          "nay": 5,
+          "present": 0,
+          "not_voting": 8
+        }
+      },
+      "controls": [
+        {
+          "control": "wrong-choice",
+          "rejected": true,
+          "reason": "member-cell-binding"
+        },
+        {
+          "control": "wrong-member",
+          "rejected": true,
+          "reason": "wrong-member"
+        },
+        {
+          "control": "wrong-tally",
+          "rejected": true,
+          "reason": "tally-quote-binding"
+        },
+        {
+          "control": "wrong-page",
+          "rejected": true,
+          "reason": "evidence-page"
+        },
+        {
+          "control": "lost-column",
+          "rejected": true,
+          "reason": "named-roster-tally-mismatch"
+        },
+        {
+          "control": "duplicated-page",
+          "rejected": true,
+          "reason": "member-cell-ambiguous"
+        },
+        {
+          "control": "lost-amendment",
+          "rejected": true,
+          "reason": "measure-mismatch"
+        }
+      ]
+    },
+    {
+      "case_id": "10400SB0093_41621",
+      "reference_checks": {
+        "member_cell": {
+          "name": "Arellano Jr., Li",
+          "raw_vote": "N",
+          "page": 1,
+          "quote": "N Arellano Jr., Li"
+        },
+        "named_roster_count": 10,
+        "roster_tally": {
+          "yea": 7,
+          "nay": 3,
+          "present": 0,
+          "not_voting": 0
+        }
+      },
+      "controls": [
+        {
+          "control": "wrong-choice",
+          "rejected": true,
+          "reason": "member-cell-binding"
+        },
+        {
+          "control": "wrong-member",
+          "rejected": true,
+          "reason": "wrong-member"
+        },
+        {
+          "control": "wrong-tally",
+          "rejected": true,
+          "reason": "tally-quote-binding"
+        },
+        {
+          "control": "wrong-page",
+          "rejected": true,
+          "reason": "evidence-page"
+        },
+        {
+          "control": "lost-column",
+          "rejected": true,
+          "reason": "named-roster-tally-mismatch"
+        },
+        {
+          "control": "duplicated-page",
+          "rejected": true,
+          "reason": "member-cell-ambiguous"
+        }
+      ]
+    },
+    {
+      "case_id": "10400SB1274SCA1_41641",
+      "reference_checks": {
+        "member_cell": {
+          "name": "Arellano Jr., Li",
+          "raw_vote": "Y",
+          "page": 1,
+          "quote": "Y Arellano Jr., Li"
+        },
+        "named_roster_count": 12,
+        "roster_tally": {
+          "yea": 10,
+          "nay": 0,
+          "present": 0,
+          "not_voting": 2
+        }
+      },
+      "controls": [
+        {
+          "control": "wrong-choice",
+          "rejected": true,
+          "reason": "member-cell-binding"
+        },
+        {
+          "control": "wrong-member",
+          "rejected": true,
+          "reason": "wrong-member"
+        },
+        {
+          "control": "wrong-tally",
+          "rejected": true,
+          "reason": "tally-quote-binding"
+        },
+        {
+          "control": "wrong-page",
+          "rejected": true,
+          "reason": "evidence-page"
+        },
+        {
+          "control": "lost-column",
+          "rejected": true,
+          "reason": "member-cell-ambiguous"
+        },
+        {
+          "control": "duplicated-page",
+          "rejected": true,
+          "reason": "member-cell-ambiguous"
+        },
+        {
+          "control": "lost-amendment",
+          "rejected": true,
+          "reason": "measure-mismatch"
+        }
+      ]
+    },
+    {
+      "case_id": "10400HB0762_44872",
+      "reference_checks": {
+        "member_cell": {
+          "name": "Arellano Jr., Li",
+          "raw_vote": "NV",
+          "page": 1,
+          "quote": "NV Arellano Jr., Li"
+        },
+        "named_roster_count": 10,
+        "roster_tally": {
+          "yea": 6,
+          "nay": 0,
+          "present": 0,
+          "not_voting": 4
+        }
+      },
+      "controls": [
+        {
+          "control": "wrong-choice",
+          "rejected": true,
+          "reason": "member-cell-binding"
+        },
+        {
+          "control": "wrong-member",
+          "rejected": true,
+          "reason": "wrong-member"
+        },
+        {
+          "control": "wrong-tally",
+          "rejected": true,
+          "reason": "tally-quote-binding"
+        },
+        {
+          "control": "wrong-page",
+          "rejected": true,
+          "reason": "evidence-page"
+        },
+        {
+          "control": "lost-column",
+          "rejected": true,
+          "reason": "named-roster-tally-mismatch"
+        },
+        {
+          "control": "duplicated-page",
+          "rejected": true,
+          "reason": "member-cell-ambiguous"
+        }
+      ]
+    }
+  ],
+  "routine_enabled": false
+}
