@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-20T13:33:37.147731+00:00",
+  "checked_at": "2026-10-20T13:36:43.315752+00:00",
   "scope": "accepted current-session member bill-history browsing only",
   "report": {
     "records": 134,
     "ceremonial": 24,
-    "artifact_bytes": 2304230,
-    "base_artifact_bytes": 504293,
+    "artifact_bytes": 2304304,
+    "base_artifact_bytes": 504367,
     "member_history": {
       "members": {
         "fritts": {
