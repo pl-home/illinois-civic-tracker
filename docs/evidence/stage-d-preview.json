@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "stage": "D-preview",
+  "status": "local-passed-hosted-pending",
+  "recorded_at": "2026-10-20",
+  "delivery": {
+    "attempts": 0,
+    "enabled": false,
+    "state": "preview-only"
+  },
+  "model_calls": 0,
+  "pdf_work": "deferred",
+  "new_schedule": false,
+  "tests": {
+    "offline_passed": 319,
+    "digest_tests": 21,
+    "privacy_findings": 0,
+    "coverage": [
+      "normal quiet partial snapshots",
+      "source config fingerprint consistency",
+      "backdated mutable source rejection",
+      "backfill correction separation",
+      "vote links raw choice tallies",
+      "party attribution held images",
+      "DST inclusive cutoff exclusive period end",
+      "stale and mismatched witness proofs",
+      "private untrusted content",
+      "repeatable output lock storage bounds"
+    ]
+  },
+  "preview": {
+    "preview_id": "digest-7c548e7fd891cc27650ff5a4",
+    "artifact_bytes": 26832,
+    "selected_revisions": 0,
+    "opportunities": 0,
+    "delivery_enabled": false,
+    "model_calls": 0
+  },
+  "period": {
+    "as_of": "2026-10-20T12:17:25.872381-05:00",
+    "complete_period": false,
+    "cutoff": "2026-10-20T12:17:25.872381-05:00",
+    "cutoff_inclusive": true,
+    "definition": "Monday 06:00 to Monday 06:00 Central; end exclusive",
+    "end": "2026-10-26T06:00:00-05:00",
+    "opportunity_end": "2026-10-30T12:17:25.872381-05:00",
+    "start": "2026-10-19T06:00:00-05:00",
+    "timezone": "America/Chicago"
+  },
+  "health": {
+    "status": "partial",
+    "rows": 46,
+    "withheld_scopes": [
+      "congress:roll:US-119-HOUSE-1-00002",
+      "news:duckworth",
+      "news:durbin",
+      "news:lahood"
+    ]
+  },
+  "omitted": {
+    "baseline_history_or_held_review": 4,
+    "bounded_hearings": 0
+  },
+  "storage": {
+    "preview_bytes": 26832,
+    "base_artifact_bytes": 540631,
+    "total_artifact_bytes": 2978324,
+    "limits": {
+      "preview": 90000,
+      "base": 650000,
+      "member_html": 3000000,
+      "combined": 3650000
+    }
+  },
+  "invariants": {
+    "tracked_source_data_identical_to_base": true,
+    "financial_ledgers_unchanged": true,
+    "input_sha256": {
+      "config/communications.json": "8325609824600fc5fcab1d7a790bdb85ec0c9e0405493e24a0875f6584208d49",
+      "config/digest.json": "831770e74258afa88342919c2ccbfcf2c46adf4d50faa4862c153666b00e73d2",
+      "config/hearings.json": "bac90ae79e85cde5feeeba1a77b4165292a2e2d1d476d246df7fc1be298cc047",
+      "config/relevance.json": "21717e0a155d2e2688e5ffbcd2dcafdad1e113ea6395ab0fc38b272b1e90bdd5",
+      "data/change-ledger.json": "b976a8d38618d952ef9f8fe822403f3de49e74863605f8514ff3dbcb5dc211e2",
+      "data/change-quality-report.json": "f5bb4420ffa02fc5ca94d72a6ca6e7cb8bd2f0ed8d1a267bd72feb6b443ff032",
+      "data/communications-state.json": "9a02b028980ffe408d47a566a46802ef8232fe52d98aa10f39a56c9c0bb5caa2",
+      "data/daily-report.json": "8c38edd89311a4813c373a2988fdc4e5ef63d1edf1b73de570edb24b11b28e73",
+      "data/dashboard.json": "07bab20b7e9b59b8277e275be56233ceb1503835fac01011b8a663d63965a0cd",
+      "data/media-state.json": "0ac76ab8de02ff0046cfca681130786d9ac4a2f831526decf53b9b65b71df384",
+      "data/mentions-state.json": "8a49b0bf9b8469b4f540f0e0b4f27a8a50262ad5c52799f637a1acd661b399ff",
+      "data/party-state.json": "3069a4962f56687de6b0688017f3ae331fa629ecd6048da0d223491476e34ca4"
+    }
+  },
+  "hosted": {
+    "status": "pending"
+  },
+  "remaining": [
+    "owner review before delivery work",
+    "durable send reservation and uncertain recovery",
+    "controlled SMTP inbox acceptance and schedule",
+    "genuine live hearing open-form acceptance",
+    "PDF extraction deferred"
+  ],
+  "base": {
+    "commit": "80c34b35edd06cc5c766d53b9b58dd10bf7d6258"
+  }
+}

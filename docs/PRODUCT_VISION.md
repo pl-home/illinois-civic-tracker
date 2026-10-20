@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: product vision
 
-Revision 10 — October 20, 2026, America/Chicago.
+Revision 11 — October 20, 2026, America/Chicago.
 
 This reconciles the October 15 research plan, October 16 vision/build brief,
 subsequent owner decisions and the two external-project reviews. It preserves
@@ -17,7 +17,7 @@ coverage links; homepage
 news retains 90 days. The same five feed requests, cache and model guard apply;
 no additional model request allowance, schedule or PDF task is enabled. Added
 static news markup raises the generated-member-HTML ceiling from 2 MB to 3 MB;
-the ten-file base remains 650 KB and canonical working JSON remains 20 MB.
+the base remains 650 KB and canonical working JSON remains 20 MB.
 
 October 20 news-pagination follow-up: the member news browser shows five articles
 per page and retains up to 100 exact-cache-screened reports per member within
@@ -31,8 +31,15 @@ October 20 Stage C (hosted verification passed; 298 tests): the daily pipeline n
 pages and poster, with deterministic relevance, compact evidence, last-good
 retention and a visible held-review path. The dedicated Capitol Fax/Lee County
 headline checks use no model. See [Stage C operation and acceptance](PARTY_MONITORING.md).
-Source-dependent real-change follow-up remains qualified; the weekly digest and
-PDF work remain disabled/deferred. Storage and inference budgets are unchanged.
+Source-dependent real-change follow-up remains qualified. PDF work stays deferred;
+digest delivery remains disabled. Storage and inference budgets are unchanged.
+
+October 20 Stage D preview slice: [HTML/text previews](DIGEST_PREVIEWS.md) and an
+exact selection manifest now consume accepted changes, ten-day hearing
+opportunities and source health without source/model calls. Preview artifacts
+fit inside the unchanged 650 KB base ceiling (now fourteen files). Owner review
+precedes delivery-state implementation, SMTP acceptance and any sending schedule;
+full Stage D and M1 remain incomplete.
 
 ## 1. Purpose and access
 
@@ -107,7 +114,7 @@ source will be healthy on a later run.
 | Common meaningful-change ledger and static feeds | Stage A delivered: source-scoped ledger and common HTML/JSON/Atom gate; quiet baseline, replay, corrections and QA. See CHANGE_FEED.md; complete historical discovery and detailed hearing/party coverage remain limited |
 | Hearing agenda/status revision history | Stage B delivered: day/committee navigation, accepted agenda/amendment revisions, explicit postponement/cancellation, conservative identity checks and stale-slip protection. Live open-form acceptance remains pending; Senate ambiguity and federal agenda limits remain explicit |
 | Broad county-party website change monitoring | Stage C implemented: eleven reviewed HTML pages and one poster, compact projections, quiet baselines, attributed changes and visible held review; separate from member-filtered feeds. Hosted receipt in PARTY_MONITORING.md |
-| Weekly digest and independent alerts | Not deployed; Monday 06:00 Central remains the digest target after acceptance |
+| Weekly digest and independent alerts | Stage D HTML/text previews implemented; email delivery disabled pending owner review and delivery acceptance. Monday 06:00 Central remains the planned sending target |
 | Daily new committee roll-call/PDF collection | Deferred; qualified historical records remain available. The diagnostic model trial accepted 0/6 and does not enable collection |
 | Full-tenure/topic pages, rollover and private contact packets | Remaining milestone work |
 

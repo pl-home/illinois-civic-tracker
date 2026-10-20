@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "delivery_enabled": false,
+  "timezone": "America/Chicago",
+  "opportunity_days": 10,
+  "source_fresh_hours": 48,
+  "max_events": 20,
+  "max_per_section": 6,
+  "max_hearings": 8,
+  "max_agenda_items": 6,
+  "max_artifact_bytes": 90000
+}

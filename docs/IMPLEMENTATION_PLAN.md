@@ -1,7 +1,7 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 10 — October 20, 2026, America/Chicago. Read with
-[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 9. This replaces the initial
+Revision 11 — October 20, 2026, America/Chicago. Read with
+[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 11. This replaces the initial
 October 15 plan as current delivery guidance. Earlier plans/build briefs remain
 historical acceptance evidence; their obsolete schedule, private-server proposal,
 M1 exclusions and exactly-once-mail claims do not override this revision or later
@@ -18,7 +18,7 @@ coverage links; homepage
 news retains 90 days. The same five feed requests, cache and model guard apply;
 no additional model request allowance, schedule or PDF task is enabled. Added
 static news markup raises the generated-member-HTML ceiling from 2 MB to 3 MB;
-the ten-file base remains 650 KB and canonical working JSON remains 20 MB.
+the base remains 650 KB and canonical working JSON remains 20 MB.
 
 October 20 news-pagination follow-up: the member news browser shows five articles
 per page and retains up to 100 exact-cache-screened reports per member within
@@ -47,7 +47,7 @@ for future CI or full product acceptance.
 | Media/communications | Visible discovery policy; up to three dated eligible newsroom items; separate attributed first-party sources | Remaining source gaps/reprints and body-text mention coverage outside the bounded headline check |
 | County parties | Stage C hosted page/asset coverage, exact reasons, quiet baselines, pending-edit recovery, held review and six bounded mention feeds | Observe genuine subsequent live edits; human image review remains unresolved until performed |
 | Health | Source reports, privacy checks, bounded error journal and usage accounting | Cross-record integrity, coverage and withheld-record QA |
-| Notifications | One-time Gmail transport/inbox proof, not a recurring digest | Preview, event selection, conservative send ledger and weekly acceptance |
+| Notifications | Stage D HTML/text previews and exact selection manifest; prior one-time Gmail transport/inbox proof | Owner preview review, conservative send ledger, controlled delivery and weekly acceptance; email disabled |
 | PDF/committee extraction | Historical records plus failed, separately versioned manual trial receipts | Deferred by owner; no routine activation or further paid trial in this workstream |
 
 The current codebase is the public `pl-home/illinois-civic-tracker` repository.
@@ -69,8 +69,8 @@ Keep existing modules as working inputs rather than replacing all collectors:
 | Build/privacy/health/accounting | `browse.py`, `privacy.py`, `error_journal.py`, `usage.py` |
 
 Implemented Stage A flow: source adapters → validated compact facts → material-change ledger
-→ shared website/JSON/Atom gate. Broader inclusion rules, digest rendering and
-gated delivery remain planned.
+→ shared website/JSON/Atom gate. Stage D now renders bounded digest previews from that feed; gated delivery
+remains planned.
 One event may appear in several views; it must not become several notifications.
 Private positions and annotations remain separate from refreshed public facts.
 
@@ -81,11 +81,10 @@ is still a planned channel, not an active schedule.
 
 ## 3. Delivery sequence and acceptance gates
 
-Stages A and B are delivered within their coverage boundaries below. The next
-implementation slice is **Stage C hosted party coverage and relevance**, while
-genuine live hearing/slip acceptance remains source-dependent. PDF work stays deferred.
-Stage C can prepare independent source coverage
-without waiting for PDF work. Stage D consumes the same accepted events. Session
+Stages A, B and C are delivered within their coverage boundaries below. Stage D
+**previews are implemented; owner review precedes any delivery work**. Genuine
+live hearing/slip acceptance remains source-dependent. PDF work stays deferred.
+Stage D consumes the same accepted events. Session
 review in Stage E is date-sensitive and must not wait for M1 completion.
 
 ### Stage A: common change contract, ledger and publication gate
@@ -189,7 +188,7 @@ validated when available; historical results alone cannot pass that gate.
 now includes the port; the manual source-only check adds no independent schedule
 or paid task. Synthetic symmetric edits and live baseline/hosted receipts are
 distinct; actual later source changes and human image interpretation remain
-source-dependent. Stage D is next; PDF work remains deferred.
+source-dependent. Stage D previews follow below; PDF work remains deferred.
 
 **Outcome:** both Lee County organizations receive equivalent, bounded monitoring,
 with attributed changes suitable for the same feed and digest.
@@ -213,6 +212,14 @@ The 134-item Fritts export is a historical regression fixture, not a discovery
 whitelist. Arellano monitoring must not depend on obtaining an equivalent export.
 
 ### Stage D: digest preview, then safe delivery
+
+**Preview slice delivered October 20 (319 offline tests):** HTML, plain text and
+exact selection manifests now use accepted shared revisions and source health.
+See [DIGEST_PREVIEWS.md](DIGEST_PREVIEWS.md) and [the receipt](evidence/stage-d-preview.json).
+Steps 1–3 are implemented within the documented snapshot/coverage limits. The
+owner explicitly requires preview review before delivery: steps 4–6, reservation
+state, SMTP acceptance and weekly scheduling remain pending. No email is sent,
+no new source/model work is run, and PDF work remains deferred.
 
 **Outcome:** the planned Monday 06:00 Central owner digest, using accepted events.
 

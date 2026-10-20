@@ -51,3 +51,12 @@ reasons also apply the already disclosed RepWatchr review principles without
 copying additional upstream source. See `docs/PARTY_MONITORING.md` and
 `tests/test_parties.py`. Party-published text retains publisher attribution;
 no content license or independent verification is inferred.
+
+## Stage D preview provenance
+
+The digest reuses `change_feed.write_if_changed`, including the Hawaii Appleseed
+adaptation disclosed above. Preview selection, windows, manifests, health,
+hearing/form checks and HTML/text rendering are independently implemented. No
+additional upstream source or email template was copied. Existing shared
+validation and relevance principles continue to apply. Acceptance tests:
+`tests/test_digest.py` and the extended `tests/test_browse.py`.

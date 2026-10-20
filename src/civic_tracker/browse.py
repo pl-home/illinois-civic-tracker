@@ -117,7 +117,7 @@ def build(root, output):
     if re.search(r'\{\{[A-Z_]+\}\}', template):
         raise ValueError('Unresolved page template')
     # Write an allowlisted artifact only. Never recursively copy the repository.
-    artifact_names = {'index.html', 'archive.html', 'dashboard.json', 'records.json', 'styles.css', 'app.js', 'dashboard.js', '.nojekyll', 'changes.json', 'changes.atom'}
+    artifact_names = {'index.html', 'archive.html', 'dashboard.json', 'records.json', 'styles.css', 'app.js', 'dashboard.js', '.nojekyll', 'changes.json', 'changes.atom', 'digest-preview.html', 'digest-preview.txt', 'digest-preview.json', 'digest-preview.css'}
     from .member_history import artifact_names as history_names, build_pages
     managed_history_names = history_names()
     if output.is_symlink() or (output.exists() and any(
@@ -130,6 +130,10 @@ def build(root, output):
     history_pages, history_report = build_pages(root, snapshot)
     from .change_feed import build as build_change_feed
     build_change_feed(root, output)
+    from .digest import artifacts as digest_artifacts
+    digest_pages, digest_report = digest_artifacts(root)
+    for name, content in digest_pages.items():
+        (output/name).write_text(content, encoding='utf-8', newline='\n')
     (output / 'index.html').write_text(homepage, encoding='utf-8', newline='\n')
     (output / 'archive.html').write_text(template, encoding='utf-8', newline='\n')
     (output / 'dashboard.json').write_text(json.dumps(snapshot, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
@@ -148,7 +152,7 @@ def build(root, output):
         raise ValueError('browser-artifact-size-budget-exceeded')
     return {'records': len(records), 'ceremonial': sum(r['ceremonial'] for r in records),
             'artifact_bytes': artifact_bytes + history_report['artifact_bytes'],
-            'base_artifact_bytes': artifact_bytes, 'member_history': history_report}
+            'base_artifact_bytes': artifact_bytes, 'member_history': history_report, 'digest_preview': digest_report}
 
 
 def main():

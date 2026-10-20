@@ -2,13 +2,16 @@
 
 A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
 
-**Planning updated October 20, 2026:** start with the revision 10
+**Planning updated October 20, 2026:** start with the revision 11
 [product vision](docs/PRODUCT_VISION.md) and
 [implementation plan](docs/IMPLEMENTATION_PLAN.md). They reconcile the earlier
 research/build briefs with owner-approved changes and current implementation.
 Stages A, B and C now supply the common change feed, quality gates, hearing filters,
-agenda/status revisions and bounded hosted party/relevance coverage. Next is digest
-preview and delivery acceptance; live open-slip acceptance remains source-dependent. PDF work is deferred.
+agenda/status revisions and bounded hosted party/relevance coverage. Stage D now provides
+[HTML and plain-text digest previews](docs/DIGEST_PREVIEWS.md), with an exact
+selection manifest. **Email delivery stays disabled pending owner review.**
+Delivery-state/SMTP acceptance remains future work; live open-slip acceptance
+remains source-dependent. PDF work is deferred.
 See [the shared change contract](docs/CHANGE_FEED.md), [completion receipt](docs/evidence/stage-a.json)
 and [actual upstream adaptation notices](THIRD_PARTY_NOTICES.md). The homepage
 now includes bounded accepted changes plus JSON and Atom subscription links.

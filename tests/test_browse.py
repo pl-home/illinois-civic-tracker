@@ -44,7 +44,7 @@ class BrowseTests(unittest.TestCase):
             self.assertEqual(build(ROOT, output), report)
             self.assertEqual({p.name: p.read_bytes() for p in output.iterdir()}, first)
             history, _ = build_pages(ROOT, json.loads(first['dashboard.json']))
-            self.assertEqual(set(first), {'index.html', 'archive.html', 'dashboard.json', 'styles.css', 'app.js', 'dashboard.js', 'records.json', '.nojekyll', 'changes.json', 'changes.atom'} | set(history))
+            self.assertEqual(set(first), {'index.html', 'archive.html', 'dashboard.json', 'styles.css', 'app.js', 'dashboard.js', 'records.json', '.nojekyll', 'changes.json', 'changes.atom', 'digest-preview.html', 'digest-preview.txt', 'digest-preview.json', 'digest-preview.css'} | set(history))
             self.assertLess(report['base_artifact_bytes'], 650_000)
             self.assertLess(report['member_history']['artifact_bytes'], MAX_HISTORY_BYTES)
             self.assertEqual(report['artifact_bytes'], sum(len(b) for b in first.values()))
