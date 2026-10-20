@@ -42,7 +42,7 @@ class BrowseTests(unittest.TestCase):
             first = {p.name: p.read_bytes() for p in output.iterdir()}
             self.assertEqual(build(ROOT, output), report)
             self.assertEqual({p.name: p.read_bytes() for p in output.iterdir()}, first)
-            self.assertEqual(set(first), {'index.html', 'archive.html', 'dashboard.json', 'styles.css', 'app.js', 'dashboard.js', 'records.json', '.nojekyll'})
+            self.assertEqual(set(first), {'index.html', 'archive.html', 'dashboard.json', 'styles.css', 'app.js', 'dashboard.js', 'records.json', '.nojekyll', 'changes.json', 'changes.atom'})
             self.assertLess(report['artifact_bytes'], 650_000)
             for name in first:
                 self.assertEqual(violations(first[name].decode()), [], name)

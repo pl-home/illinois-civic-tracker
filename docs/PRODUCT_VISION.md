@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: product vision
 
-Revision 4 — October 19, 2026, America/Chicago.
+Revision 5 — October 19, 2026, America/Chicago.
 
 This reconciles the October 15 research plan, October 16 vision/build brief,
 subsequent owner decisions and the two external-project reviews. It preserves
@@ -80,7 +80,7 @@ source will be healthy on a later run.
 | Recent media and direct communications | Implemented separately: up to three eligible newsroom reports per member, visible discovery method, and attributed office/campaign/party communications with source coverage |
 | Inference | Only narrow Qwen3 32B / DeepInfra media-relevance screening is enabled; it selects supplied IDs, not facts or article summaries |
 | Operations | Privacy checks, source/cost receipts and bounded structured error journal implemented |
-| Common meaningful-change ledger and static feeds | Planned next; current source indexes, snapshots and logs are inputs, not a completed universal event system |
+| Common meaningful-change ledger and static feeds | Stage A delivered: source-scoped ledger and common HTML/JSON/Atom gate; quiet baseline, replay, corrections and QA. See CHANGE_FEED.md; complete historical discovery and detailed hearing/party coverage remain limited |
 | Hearing agenda/status revision history | Planned extension of existing calendar display; live open-slip coverage still needs acceptance evidence |
 | Broad county-party website change monitoring | Legacy bounded collector exists; full port into the hosted pipeline remains open. Member-name-filtered party feeds are not equivalent coverage |
 | Weekly digest and independent alerts | Not deployed; Monday 06:00 Central remains the digest target after acceptance |

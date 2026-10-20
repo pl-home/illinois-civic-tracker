@@ -1,5 +1,30 @@
 # Architecture and reviewer guide
 
+## Current operating map — Stage A, October 19, 2026
+
+Start with the revision 5 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
+`changes.py`, `change_sources.py`, `change_feed.py` and `tests/test_changes.py`.
+Existing daily_state/daily_federal/dashboard_collect produce official compact
+records; media/communications produce separately attributed metadata. The new
+offline change adapters validate source-scoped projections and atomically store
+facts, revisions and completion cursors. The shared public selection feeds HTML,
+JSON and Atom. browse/dashboard render without fetching or mutating state.
+
+Daily/federal/Illinois-recovery/media workflows run the offline ledger under the
+existing shared state lock before publication. Pages/CI builds remain read-only.
+The 01:00 Central schedule and spending limits are unchanged. Only the existing
+narrow media relevance task uses a hosted model. PDF work is deferred, and digest
+delivery is not deployed. Ten allowlisted public files total at most 650 KB;
+working JSON is capped at 20 MB, including a 10 MB ledger. Privacy checks and the
+bounded error journal cover Stage A as well. No new service/database is needed.
+
+## Historical M0 design notes
+
+The sections below preserve the earlier verification architecture as history.
+Their manual-only/eight-file/no-daily/no-inference statements describe M0,
+not current operation. Current code, Stage A documentation, and dated source and
+financial receipts take precedence; historical source findings still apply.
+
 ## What exists now
 
 This is an M0 verification foundation, not the production tracker. Start with README.md, docs/M0_FINDINGS.md, and one evidence file appropriate to the question. The full raw archive is not needed for a structural review.

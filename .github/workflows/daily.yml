@@ -71,6 +71,9 @@ jobs:
         if: steps.gate.outputs.active == 'true'
         run: python -m civic_tracker.media execute
       - if: steps.gate.outputs.active == 'true'
+        run: python -m civic_tracker.changes collect
+        id: changes
+      - if: steps.gate.outputs.active == 'true'
         run: python -m civic_tracker.privacy
         id: privacy
       - if: steps.gate.outputs.active == 'true'
@@ -104,6 +107,7 @@ jobs:
           collector: ${{ steps.collector.outcome == 'failure' && 'failure' || steps.communications.outcome == 'failure' && 'failure' || steps.collector.outcome }}
           reserve: ${{ steps.reserve.outcome }}
           model: ${{ steps.model.outcome }}
+          changes: ${{ steps.changes.outcome }}
           privacy: ${{ steps.privacy.outcome }}
           build: ${{ steps.build.outcome }}
           persist: ${{ steps.persist.outcome }}

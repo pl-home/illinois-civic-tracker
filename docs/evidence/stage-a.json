@@ -1,0 +1,72 @@
+{
+  "checked_on": "2026-10-19",
+  "timezone": "America/Chicago",
+  "stage": "A",
+  "status": "delivered-with-explicit-coverage-limits",
+  "accepted_facts": 5927,
+  "accepted_event_revisions": 0,
+  "baseline_emitted_events": 0,
+  "unchanged_replay_added_revisions": 0,
+  "withheld_scopes": 1,
+  "withheld_example": "US-119-HOUSE-1-00002 is a candidate-name Speaker ballot, not a binary choice; retained in original archive and withheld from Stage A.",
+  "tests": {
+    "offline_passed": 225,
+    "new_stateful_tests": 27,
+    "independent_review": "No remaining material issues in reviewed scope; 25 focused tests independently passed before the last two source coverage checks."
+  },
+  "storage": {
+    "working_json_bytes": 13612199,
+    "ledger_bytes": 6211696,
+    "browser_artifact_bytes": 499344,
+    "working_json_limit": 20000000,
+    "ledger_limit": 10000000,
+    "browser_limit": 650000
+  },
+  "effects": {
+    "network_collection_runs": 0,
+    "new_model_calls": 0,
+    "new_inference_cost_usd": "0",
+    "pdf_work_deferred": true,
+    "outbound_messages": 0,
+    "new_schedules": 0,
+    "existing_source_workflows_extended_with_offline_stage": true
+  },
+  "checks": {
+    "quiet_baseline": true,
+    "unchanged_replay": true,
+    "atomic_scope_failure_retains_last_good": true,
+    "correction_removal_readd_lineage": true,
+    "unknown_choice_quarantined": true,
+    "shared_html_json_atom_gate": true,
+    "read_only_deterministic_build": true,
+    "worst_case_escaped_text_payload_bounded": true
+  },
+  "unchanged_protected_files_sha256": {
+    "data/inference-evaluation-ledger.json": "caaebd29fc1c9c1718370b37fc840115323eba5c9b46b9c730f17d8a9f354e8e",
+    "data/inference-evaluation-v2-ledger.json": "efe67828b17e4d3418dd7fe0dd80449d964c5af8c75a1a37562786fc017ad6e3",
+    "data/inference-usage.json": "1893f7f88bc3df189dc9d986989a2b19e002838c48c23dd06882220f1f392066",
+    "data/media-inference-cache.json": "ba322e41f070d98282c9c0c3163b09c7c03f1d875395c41c259c51bdc417a3cb",
+    "data/media-inference-ledger.json": "4d4dfd7867412c1c4e650edddeecab96261ca77fd5814ceb970f18152f04fcd9",
+    "data/media-inference-report.json": "a29983007b69da90fc91bbeb52c2b33aa2044ceb94f216f0ef55e88c842f81c0",
+    "data/pdf-extraction-ledger.json": "d1ea7df7443e244561f9b57b587e95b7cbf2c46cc434708edd4c13ab932c3a25",
+    "data/pdf-extraction-report.json": "0b6c12471ad78649f2d99ff1260eb8c933296cee6a4d62ab2d4b5eb63627118c",
+    "data/rollcall-evaluation-ledger.json": "1fa5531a519b4dce062cbffa57510274eeffc0e4721c26cc6391bda43c603e83",
+    "data/rollcall-evaluation-report.json": "8e483496a4d02320bc6b45d6c740d44dbd079906ef569556382b129a8681f2f3",
+    "data/rollcall-diagnostics-v2-ledger.json": "809354cf616fc7eb26f9b55e09d4e1d48b0c4d77921f8c8442d7f8efd02f444e",
+    "data/rollcall-diagnostics-v2-report.json": "9025f29fe9d4ea20534a1a36071f5c42841b7a5a6f51ab3217a23caefa266573",
+    "data/media-work.json": "73a6a4fa174a2568e99a1d1e0fe6dbd2c51fbc21af8fd98b779aa1a016b47b0c",
+    "data/illinois-index.json": "4d823e62498b918a069abbd680fffb6083645d13bcb4593c143ee2def67b59a4",
+    "data/federal-index.json": "aa52082bc95af595f1f2db7845163fd23e96c9e2b68f395d885ceafa71ebf524",
+    "data/daily-report.json": "f7bee23be0bb37bc729062ef235c4353832b918e248df2b281b18ee95135cdca",
+    "data/collection-state.json": "5aa0c683ef120b6ff0b4fb14fc599cbebb0e1ea47cfb1a2a7ec2f3e6a7bd6602"
+  },
+  "provenance": "docs/provenance/stage-a.json",
+  "remaining": [
+    "Detailed hearing revision/reschedule/cancellation acceptance: Stage B",
+    "Broad equivalent county website monitoring and relevance reasons: Stage C",
+    "Weekly digest preview/delivery: Stage D",
+    "Year-growth/correction sweeps and service rollover: Stage E",
+    "Unknown candidate-name House ballot adapter",
+    "PDF work remains deferred"
+  ]
+}

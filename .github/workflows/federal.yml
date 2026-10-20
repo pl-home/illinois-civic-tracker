@@ -65,6 +65,8 @@ jobs:
             python -m civic_tracker.daily federal
           fi
           sha256sum --check .local/federal-unrelated-before.sha256
+      - run: python -m civic_tracker.changes collect
+        id: changes
       - run: python -m civic_tracker.privacy
         id: privacy
       - run: python -m civic_tracker.browse --output .local/site
@@ -95,6 +97,7 @@ jobs:
           collector: ${{ steps.collector.outcome == 'failure' && 'failure' || steps.communications.outcome == 'failure' && 'failure' || steps.collector.outcome }}
           reserve: ${{ steps.reserve.outcome }}
           model: ${{ steps.model.outcome }}
+          changes: ${{ steps.changes.outcome }}
           privacy: ${{ steps.privacy.outcome }}
           build: ${{ steps.build.outcome }}
           persist: ${{ steps.persist.outcome }}

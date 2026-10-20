@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pl-home.github.io/illinois-civic-tracker/schemas/changes-v1.schema.json",
+  "title": "Stage A change ledger interchange v1",
+  "description": "Structural contract only. Runtime source binding and publication policy are in changes.py. No schema validator/model establishes source facts.",
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": [
+        "url",
+        "retrieved_at",
+        "binding"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "binding": {
+          "enum": [
+            "official-bill",
+            "official-roll",
+            "official-calendar",
+            "publisher-listing",
+            "screened-news-metadata"
+          ]
+        }
+      }
+    },
+    "fact": {
+      "type": "object",
+      "required": [
+        "key",
+        "kind",
+        "jurisdiction",
+        "session",
+        "members",
+        "occurred_at",
+        "date_precision",
+        "title",
+        "detail",
+        "evidence"
+      ],
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "filing",
+            "sponsor-role",
+            "bill-action",
+            "bill-title",
+            "vote",
+            "hearing",
+            "publication"
+          ]
+        },
+        "jurisdiction": {
+          "enum": [
+            "IL",
+            "US"
+          ]
+        },
+        "session": {
+          "enum": [
+            104,
+            119
+          ]
+        },
+        "members": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "fritts",
+              "arellano",
+              "lahood",
+              "durbin",
+              "duckworth"
+            ]
+          }
+        },
+        "occurred_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date_precision": {
+          "enum": [
+            "day",
+            "timestamp",
+            "unknown"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence"
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "id",
+        "revision_id",
+        "revision",
+        "supersedes",
+        "scope",
+        "fingerprint",
+        "fact",
+        "first_observed_at",
+        "observed_at",
+        "validation",
+        "policy",
+        "eligible",
+        "inclusion_reason"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^change-[a-f0-9]{24}$"
+        },
+        "revision_id": {
+          "type": "string",
+          "pattern": "^change-[a-f0-9]{24}-r[1-9][0-9]*$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "supersedes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": "string"
+        },
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "fact": {
+          "$ref": "#/$defs/fact"
+        },
+        "first_observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "policy": {
+          "const": "stage-a-1"
+        },
+        "validation": {
+          "const": "adapter-bound"
+        },
+        "eligible": {
+          "type": "boolean"
+        },
+        "inclusion_reason": {
+          "type": "string"
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "adapter",
+        "jurisdiction",
+        "session",
+        "checked_at",
+        "fingerprint",
+        "fact_count",
+        "baseline_at",
+        "reconcile_missing"
+      ],
+      "properties": {
+        "adapter": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "jurisdiction": {
+          "enum": [
+            "IL",
+            "US"
+          ]
+        },
+        "session": {
+          "enum": [
+            104,
+            119
+          ]
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "fact_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "baseline_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reconcile_missing": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "required": [
+    "schema_version",
+    "policy",
+    "scopes",
+    "facts",
+    "events",
+    "exceptions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "policy": {
+      "const": "stage-a-1"
+    },
+    "scopes": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/coverage"
+      }
+    },
+    "facts": {
+      "type": "object"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "exceptions": {
+      "type": "array",
+      "maxItems": 64
+    }
+  }
+}

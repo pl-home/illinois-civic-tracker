@@ -117,7 +117,7 @@ def build(root, output):
     if re.search(r'\{\{[A-Z_]+\}\}', template):
         raise ValueError('Unresolved page template')
     # Write an allowlisted artifact only. Never recursively copy the repository.
-    artifact_names = {'index.html', 'archive.html', 'dashboard.json', 'records.json', 'styles.css', 'app.js', 'dashboard.js', '.nojekyll'}
+    artifact_names = {'index.html', 'archive.html', 'dashboard.json', 'records.json', 'styles.css', 'app.js', 'dashboard.js', '.nojekyll', 'changes.json', 'changes.atom'}
     if output.is_symlink() or (output.exists() and any(
             item.name not in artifact_names or not item.is_file() or item.is_symlink()
             for item in output.iterdir())):
@@ -125,6 +125,8 @@ def build(root, output):
     output.mkdir(parents=True, exist_ok=True)
     from .dashboard import render
     homepage, snapshot = render(root)
+    from .change_feed import build as build_change_feed
+    build_change_feed(root, output)
     (output / 'index.html').write_text(homepage, encoding='utf-8', newline='\n')
     (output / 'archive.html').write_text(template, encoding='utf-8', newline='\n')
     (output / 'dashboard.json').write_text(json.dumps(snapshot, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8', newline='\n')
@@ -132,8 +134,11 @@ def build(root, output):
     for name in ('styles.css', 'app.js', 'dashboard.js'):
         shutil.copyfile(root / 'web' / name, output / name)
     (output / '.nojekyll').write_text('', encoding='utf-8')
+    artifact_bytes = sum((output / name).stat().st_size for name in artifact_names)
+    if artifact_bytes > 650_000:
+        raise ValueError('browser-artifact-size-budget-exceeded')
     return {'records': len(records), 'ceremonial': sum(r['ceremonial'] for r in records),
-            'artifact_bytes': sum((output / name).stat().st_size for name in artifact_names)}
+            'artifact_bytes': artifact_bytes}
 
 
 def main():

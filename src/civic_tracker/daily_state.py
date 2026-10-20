@@ -72,7 +72,7 @@ def parse_bill(body, meta, members, ga):
     url = meta.get('source_url') or 'https://ilga.gov/Legislation/BillStatus?'+urlencode({'DocNum':number,'GAID':meta['ga_id'],'DocTypeID':typ,'SessionID':meta['session_id']})
     return {'record_id':f'IL-{ga}-{typ}{number}','title':tree.findtext('shortdesc') or tree.findtext('title'),
             'type':typ,'number':number,'source_url':url,'role_events':roles,'current_target_sponsors':targets,
-            'original_filing':first,'displayed_last_action':last_action}
+            'original_filing':first,'displayed_last_action':last_action,'actions':actions}
 
 
 def refresh(root, previous, state, now):

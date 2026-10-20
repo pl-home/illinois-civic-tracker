@@ -1,7 +1,7 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 4 — October 19, 2026, America/Chicago. Read with
-[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 4. This replaces the initial
+Revision 5 — October 19, 2026, America/Chicago. Read with
+[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 5. This replaces the initial
 October 15 plan as current delivery guidance. Earlier plans/build briefs remain
 historical acceptance evidence; their obsolete schedule, private-server proposal,
 M1 exclusions and exactly-once-mail claims do not override this revision or later
@@ -18,7 +18,7 @@ As of the October 19 release, the public website, GitHub-hosted daily official
 collection, limited media screening and direct-communications sections are
 implemented. State/federal source health, configured calendars/roles, budgets and
 privacy checks are visible. A structured error journal has recurrence/recovery
-tracking and a 96 KiB live cap. The implementation has 198 passing offline tests
+tracking and a 96 KiB live cap. The pre-Stage A implementation had 198 passing offline tests
 in the latest recorded local validation; that dated count is not a substitute
 for future CI or full product acceptance.
 
@@ -51,8 +51,9 @@ Keep existing modules as working inputs rather than replacing all collectors:
 | Media and direct statements | `media.py`, `communications.py`, reviewed source configs |
 | Build/privacy/health/accounting | `browse.py`, `privacy.py`, `error_journal.py`, `usage.py` |
 
-Planned flow: source adapters → validated compact facts → material-change ledger
-→ deterministic inclusion rules → website/feed/digest renderers → gated delivery.
+Implemented Stage A flow: source adapters → validated compact facts → material-change ledger
+→ shared website/JSON/Atom gate. Broader inclusion rules, digest rendering and
+gated delivery remain planned.
 One event may appear in several views; it must not become several notifications.
 Private positions and annotations remain separate from refreshed public facts.
 
@@ -63,12 +64,23 @@ is still a planned channel, not an active schedule.
 
 ## 3. Delivery sequence and acceptance gates
 
-The next implementation slice is **Stage A with its quality checks**, not more
-PDF extraction. Stage B follows; Stage C can prepare independent source coverage
+Stage A is delivered within the coverage boundaries below. The next slice is
+**Stage B hearing navigation and revision acceptance**, with PDF work deferred.
+Stage C can prepare independent source coverage
 without waiting for PDF work. Stage D consumes the same accepted events. Session
 review in Stage E is date-sensitive and must not wait for M1 completion.
 
 ### Stage A: common change contract, ledger and publication gate
+
+**Delivered October 19:** the source-scoped ledger, shared homepage/JSON/Atom gate,
+quiet baseline/replay, revision/removal history, exception queue, journal hook and
+size checks are implemented. See [CHANGE_FEED.md](CHANGE_FEED.md) and the
+[completion receipt](evidence/stage-a.json). Existing member cards remain legacy
+snapshot views; the new shared gate covers the new feed. Candidate-name House
+ballots are withheld; complete historical correction coverage, detailed hearing
+revision acceptance and broad county website monitoring remain later work. No
+model calls, PDF retry, digest or new schedule was enabled. Actual adapted source
+is now disclosed in [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
 
 **Outcome:** a durable, explainable feed of changes from existing verified sources.
 This implements the earlier “Since my last review” idea and the core M1 digest
@@ -216,7 +228,8 @@ the old schedules or postpone rollover behind a later feature milestone.
 ## 4. Reuse register and implementation boundaries
 
 Permission to adapt code with disclosure is recorded from the owner's instruction.
-The following are **candidates**, not claims that upstream code is already used.
+The following remain candidates except the specific Stage A feed adaptation
+recorded in [the attribution register](../THIRD_PARTY_NOTICES.md).
 For each actual adaptation add a provenance entry containing repository, source
 path, full revision, applicable notices, changes and our acceptance tests. Keep
 third-party code separated enough for a programmer to identify and review it.

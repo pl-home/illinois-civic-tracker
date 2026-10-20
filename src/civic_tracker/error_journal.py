@@ -16,7 +16,7 @@ MAX_SEEN=128
 DAYS=90
 WORKFLOWS={'daily','federal','illinois','media','pdf','rollcall','openrouter-health','journal'}
 STAGES={'source-health','model-http','model-json','model-status','model-validation','workflow',
-        'dependencies','tests','collector','reserve','model','privacy','build','persist','journal-input'}
+        'dependencies','tests','collector','changes','reserve','model','privacy','build','persist','journal-input'}
 CODES=set('''RuntimeError ValueError HTTPError URLError TimeoutError OSError KeyError JSONDecodeError
 SSLCertVerificationError ConnectionError workflow-failed model-abstained output-schema evidence-schema
 evidence-page evidence-size evidence-quote committee-mismatch measure-mismatch motion-mismatch member-schema
@@ -32,12 +32,13 @@ duplicate-output-id endpoint-extra-fee-rejected input-bound-exceeded invalid-bat
 invalid-case-identity invalid-case-schema invalid-case-text invalid-model-response invalid-output-id invalid-output-json
 invalid-output-schema invalid-output-value media-config-invalid media-config-mismatch media-config-missing
 missing-output-id reservation-too-small timezone-required model-call-stopped UnicodeDecodeError'''.split())
+CODES.add('change-quality-withheld')
 HOSTS={'ilga.gov','ftp.ilga.gov','my.ilga.gov','api.congress.gov','clerk.house.gov','www.senate.gov','news.google.com','openrouter.ai'}
 HOSTS.update({'repfritts.com','senatorli.com','lahood.house.gov','durbin.senate.gov','duckworth.senate.gov','leecodemocrats.com','leecountyilgop.org','capitolfax.com'})
 FILES={'daily':'data/daily-report.json','media-source':'data/media-state.json','media-model':'data/media-inference-report.json',
        'pdf':'data/pdf-extraction-report.json','rollcall':'data/rollcall-evaluation-report.json','health':'data/openrouter-health.json',
        'communications':'data/communications-state.json','media-ledger':'data/media-inference-ledger.json',
-       'rollcall-v2':'data/rollcall-diagnostics-v2-report.json'}
+       'rollcall-v2':'data/rollcall-diagnostics-v2-report.json', 'change-quality':'data/change-quality-report.json'}
 LEDGERS={p:p for p in ('data/pdf-extraction-ledger.json','data/rollcall-evaluation-ledger.json',
                       'data/rollcall-diagnostics-v2-ledger.json')}
 PATHS=(r'/documents/reports/static/104MemberVotes\.csv',r'/(?:House|Senate)/Members/Details/\d{1,7}',
@@ -237,6 +238,12 @@ class Journal:
 def ingest(journal,files,commit=None,commit_time=None):
     ref=lambda file:{'file':FILES[file],**({'commit':commit} if commit else {})}
     run='history-'+commit[:12] if commit else run_id(journal.now)
+    quality=files.get('change-quality') or {}
+    if quality:
+        # Bounded codes only, never source bodies, model answers or fact text.
+        journal.observe('change-quality','Stage A quality',quality.get('checked_at') or commit_time,
+            ['change-quality-withheld'] if quality.get('status')!='ok' else [],quality.get('status')=='ok',run,ref('change-quality'),
+            stage='source-health')
     daily=files.get('daily') or {}
     for name,report in daily.get('sources',{}).items():
         if name not in ('Illinois','Federal','Calendars') or not isinstance(report,dict):continue
@@ -331,7 +338,7 @@ def collect(root,now,workflow,job_status,bootstrap=False):
                 journal.observe('workflow',key,now.isoformat(),[],True,run_id(now),{'file':path},stage='journal-input',group='journal-input:'+key)
     ingest(journal,files)
     stage='workflow'
-    for name in ('dependencies','tests','collector','reserve','model','privacy','build','persist'):
+    for name in ('dependencies','tests','collector','changes','reserve','model','privacy','build','persist'):
         if os.environ.get('JOURNAL_'+name.upper())=='failure':stage=name;break
     status=job_status if job_status in ('success','failure','cancelled') else 'unknown'
     ident=run_id(now)

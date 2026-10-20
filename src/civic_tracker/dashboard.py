@@ -175,7 +175,10 @@ def render(root):
         health=f'<details class="refresh-health" open><summary>Daily refresh · {e(daily["status"])} · starts 01:00 Central</summary><ul>{lines}</ul>'+('<p>Source failures; prior verified records retained:</p><ul>'+failures+'</ul>' if failures else '')+'<p>Illinois committee votes retain historical PDF coverage; daily committee-vote discovery is pending. GitHub may start jobs late; publication follows collection.</p></details>'
     automatic=snapshot.get('automatic_refresh_enabled',False)
     coverage=('Daily source refresh is enabled for 01:00 Central. Source dates and collection health below identify remaining gaps.' if automatic else 'Automatic refresh is not enabled.')
-    substitutions = {'INFERENCE_USAGE': usage_panel(snapshot), 'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
+    from .change_feed import payload, render as change_panel
+    from .changes import read
+    substitutions = {'CHANGE_FEED': change_panel(payload(root), read(root/'data/change-quality-report.json', {})),
+        'INFERENCE_USAGE': usage_panel(snapshot), 'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
         'CALENDAR_END': e(snapshot['calendar_end']), 'MEMBER_LINKS': links,
         'MEMBERS': ''.join(member_card(m, snapshot) for m in snapshot['members']),
         'SOURCE_COUNT': str(len(snapshot['calendar_sources'])), 'ERROR_COUNT': str(len(snapshot['errors']))}

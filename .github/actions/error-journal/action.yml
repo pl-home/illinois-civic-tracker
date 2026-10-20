@@ -16,6 +16,9 @@ inputs:
   collector:
     default: ''
     description: Collector step outcome
+  changes:
+    default: ''
+    description: Offline change ledger step outcome
   reserve:
     default: ''
     description: Reservation step outcome
@@ -48,6 +51,7 @@ runs:
         JOURNAL_DEPENDENCIES: ${{ inputs.dependencies }}
         JOURNAL_TESTS: ${{ inputs.tests }}
         JOURNAL_COLLECTOR: ${{ inputs.collector }}
+        JOURNAL_CHANGES: ${{ inputs.changes }}
         JOURNAL_RESERVE: ${{ inputs.reserve }}
         JOURNAL_MODEL: ${{ inputs.model }}
         JOURNAL_PRIVACY: ${{ inputs.privacy }}
