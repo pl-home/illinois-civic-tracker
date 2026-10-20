@@ -143,9 +143,35 @@
         "956c9f50c3ddd91cf5f747c7"
       ],
       "reserved_usd": "0.002",
-      "charged_usd": null,
-      "status": "reserved",
-      "prepared_at": "2026-10-20T13:59:49.246133+00:00"
+      "charged_usd": "0.00015696",
+      "status": "valid",
+      "prepared_at": "2026-10-20T13:59:49.246133+00:00",
+      "attempted_at": "2026-10-20T14:00:03.142299+00:00",
+      "diagnostics": {
+        "envelope_shape": "object",
+        "provider_match": true,
+        "model_match": true,
+        "response_id": "gen-1792504803-dt0sJNJ77kAFFdp9vYas",
+        "prompt_tokens": 891,
+        "completion_tokens": 306,
+        "total_tokens": 1197,
+        "finish_reason": "stop",
+        "refusal_present": false,
+        "reasoning_present": false,
+        "content_shape": "string",
+        "content_bytes": 632,
+        "code_fence": false,
+        "json_parse": "ok",
+        "json_shape": "object",
+        "missing_fields": [],
+        "unexpected_field_count": 0,
+        "status_shape": "null",
+        "model_status": "not-captured"
+      },
+      "usage": {
+        "prompt_tokens": 891,
+        "completion_tokens": 306
+      }
     }
   ]
 }
