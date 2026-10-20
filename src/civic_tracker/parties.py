@@ -51,6 +51,10 @@ def parse_page(raw, page, host):
     root = soup.select_one('.elementor-widget-theme-post-content,.et-l--body,.entry-content,main')
     if root is None:
         raise ValueError('party-content-structure')
+    # Remove third-party widgets before contact fingerprinting too. A phone
+    # number inside a rotating social post is not the organization's contact.
+    for node in soup.select('script,style,nav,header,form,iframe,noscript,svg,#cff,.cff-wrapper,.sharedaddy,.share'):
+        node.decompose()
     body_text = soup.get_text(' ', strip=True)
     contacts = sorted(set([a.get('href', '') for a in soup.select('a[href^="mailto:"],a[href^="tel:"]')]
                           + EMAIL.findall(body_text) + PHONE.findall(body_text)))

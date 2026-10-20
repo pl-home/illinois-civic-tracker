@@ -1,8 +1,9 @@
 # Stage C: hosted county-party monitoring and deterministic relevance
 
-**Graceful pause October 20:** implementation and 297 offline tests are complete
-locally. Hosted verification is pending before final release acceptance. The dated
-acceptance receipt distinguishes local evidence from hosted results.
+**October 20 release verification:** the hosted source-only check passed for all
+12 page/asset sources and six mention feeds without model calls or financial
+changes. A final parser guard excludes social-widget contact values; its hosted
+follow-up is pending in the dated acceptance receipt. All 298 offline tests pass.
 
 This port checks the Lee County Democrats and Lee County IL Republican Central
 Committee with the existing daily **01:00 America/Chicago** hosted refresh. It

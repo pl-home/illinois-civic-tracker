@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "parser_version": 2,
+  "parser_version": 3,
   "max_state_bytes": 350000,
   "max_source_bytes": 1500000,
   "stale_hours": 48,

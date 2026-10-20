@@ -7,14 +7,15 @@
     "commit": "8a8f61100f65e2dd5ea171da07d71ba8c15dcbc0"
   },
   "tests": {
-    "offline_passed": 297,
-    "party_relevance_tests": 19,
+    "offline_passed": 298,
+    "party_relevance_tests": 20,
     "privacy_findings": 0,
     "review_fixes": [
       "pending edit outbox recovery",
       "held review partition and total count",
       "alias-aware bounded searches",
-      "centered before/after excerpts"
+      "centered before/after excerpts",
+      "exclude rotating social contacts from first-party contact fingerprint"
     ]
   },
   "live_local": {
@@ -56,11 +57,32 @@
     }
   },
   "hosted": {
-    "status": "pending",
+    "status": "passed-parser-2-followup-parser-3-pending",
     "workflow": "parties.yml",
     "new_schedule": false,
     "uses_existing_schedule": "01:00 America/Chicago",
-    "no_inference": true
+    "no_inference": true,
+    "run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39464116978",
+    "verified_commit": {
+      "commit": "f622fe116d35ebedd4bc6b3d4ab67bc8f40b781c"
+    },
+    "checked_at": "2026-10-20T17:13:21.814392+00:00",
+    "ok_sources": 12,
+    "ok_mention_feeds": 6,
+    "added_revisions": 0,
+    "financial_files_unchanged": 10,
+    "ci_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39463136156",
+    "pages_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39463136224",
+    "dispatch_diagnostics": {
+      "initial_run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39462817952",
+      "initial_dispatch_http": 502,
+      "observed_initial_status": "queued with zero jobs",
+      "cancel_http": 409,
+      "force_cancel_http": 409,
+      "retry_dispatch_http": 204,
+      "source_lock_preserved": true,
+      "initial_run_not_deleted": true
+    }
   },
   "limitations": [
     "First live baseline is not a genuine subsequent officer/event source change.",

@@ -174,6 +174,12 @@ class PartyTests(unittest.TestCase):
         self.assertTrue(all('leadership-contact' in p['change']['categories'] for p in state['pages'].values()))
         self.assertNotIn(mail, json.dumps(state)); self.assertEqual(violations(json.dumps(state)), [])
 
+    def test_rotating_social_contact_values_do_not_change_party_projection(self):
+        first = html('Contact our county organization for information.', '<div id="cff">Social hotline 555-123-4567</div>')
+        second = first.replace(b'555-123-4567', b'555-987-6543')
+        page = {'path': '/'}
+        self.assertEqual(parties.parse_page(first,page,'leecodemocrats.com'), parties.parse_page(second,page,'leecodemocrats.com'))
+
     def test_unclassified_link_change_is_visible_for_review_not_feed(self):
         self.body = html('County public information for all visitors.', '<a href="/old/">Information</a>')
         self.run_collect(-5); ledger, _ = reconcile(empty(), self.scopes(), NOW.isoformat())
