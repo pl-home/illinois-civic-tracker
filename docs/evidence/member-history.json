@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-20T13:36:43.315752+00:00",
+  "checked_at": "2026-10-20T13:39:39.545492+00:00",
   "scope": "accepted current-session member bill-history browsing only",
   "report": {
     "records": 134,
     "ceremonial": 24,
-    "artifact_bytes": 2304304,
+    "artifact_bytes": 2305924,
     "base_artifact_bytes": 504367,
     "member_history": {
       "members": {
@@ -46,7 +46,7 @@
         }
       },
       "pages": 108,
-      "artifact_bytes": 1799937
+      "artifact_bytes": 1801557
     }
   },
   "tests": {

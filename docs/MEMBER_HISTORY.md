@@ -55,6 +55,8 @@ failure, and only obsolete known generated member pages may be removed from the
 output directory. Canonical history and evidence are never deleted. CSP permits
 only the local stylesheet; source strings are escaped, and official URLs pass
 the shared validation gate. Existing privacy checks cover every emitted page.
+The stylesheet link includes its content hash so browser/CDN caches do not keep
+an older homepage layout when member-page styles change.
 
 The existing Pages/daily publication builds these pages automatically from the
 latest committed accepted facts. Schedules, collector request bounds, inference

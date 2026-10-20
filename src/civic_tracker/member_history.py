@@ -1,5 +1,6 @@
 """Static, paginated bill history from accepted facts; no collection or model calls."""
 from collections import Counter
+from hashlib import sha256
 from html import escape
 import math
 
@@ -95,6 +96,7 @@ def pagination(member, number, count, undated):
 
 
 def build_pages(root, snapshot):
+    style_version = sha256((root/'web/styles.css').read_bytes()).hexdigest()[:12]
     ledger = read(root/'data/change-ledger.json', empty())
     quality = read(root/'data/change-quality-report.json', {})
     withheld = {s['id'] for s in quality.get('scopes', []) if s['status'] == 'withheld'}
@@ -137,7 +139,7 @@ def build_pages(root, snapshot):
                 pages[name] = (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
                     '<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer">'
                     '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; style-src \'self\'; base-uri \'none\'; form-action \'none\'; object-src \'none\'">'
-                    f'<title>{e(member["name"])} · {e(title)} · page {number}</title><link rel="stylesheet" href="styles.css"></head>'
+                    f'<title>{e(member["name"])} · {e(title)} · page {number}</title><link rel="stylesheet" href="styles.css?v={style_version}"></head>'
                     '<body class="dashboard member-history"><a class="skip" href="#history">Skip to activity history</a>'
                     '<header class="masthead"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">IL</span>Illinois civic tracker</a>'
                     f'<nav aria-label="Main"><a href="./#member-{ident}">← Back to homepage</a></nav></header><main>'
