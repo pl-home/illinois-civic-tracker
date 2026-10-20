@@ -63,6 +63,17 @@ class MemberHistoryTests(unittest.TestCase):
         self.assertIn('Date unknown', html.select_one('#history').get_text())
         self.assertIn('do not establish when a cosponsorship began or ended', html.get_text())
 
+    def test_every_member_history_page_has_200_day_news_column(self):
+        for name,html in self.pages.items():
+            page=BeautifulSoup(html,'html.parser')
+            columns=page.select_one('.member-history-columns')
+            self.assertIsNotNone(columns.select_one('#history'),name)
+            news=columns.select_one('aside.history-news .member-media')
+            self.assertIsNotNone(news,name)
+            self.assertIn('last 200 days',news.get_text(),name)
+            self.assertLessEqual(len(news.select('.media-row')),3,name)
+            self.assertIsNotNone(news.select_one('details.news-method'),name)
+
     def test_tampered_fingerprint_wrong_session_unsafe_url_and_identity_are_withheld(self):
         candidate = next((k, s) for k,s in self.ledger['facts'].items()
                          if s['fact']['kind']=='sponsor-role' and 'fritts' in s['fact']['members'])

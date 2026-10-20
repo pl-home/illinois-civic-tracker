@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "enabled": true,
-  "lookback_days": 90,
+  "lookback_days": 200,
   "max_items": 3,
   "candidates_per_member": 4,
   "inference": {
@@ -16,11 +16,11 @@
     "weekly_cap_usd": "0.20"
   },
   "queries": {
-    "fritts": "\"Bradley Fritts\" OR \"Brad Fritts\" when:90d",
-    "arellano": "\"Li Arellano\" when:90d",
-    "lahood": "\"Darin LaHood\" when:90d",
-    "durbin": "\"Dick Durbin\" when:90d",
-    "duckworth": "\"Tammy Duckworth\" when:90d"
+    "fritts": "\"Bradley Fritts\" OR \"Brad Fritts\" when:200d",
+    "arellano": "\"Li Arellano\" when:200d",
+    "lahood": "\"Darin LaHood\" when:200d",
+    "durbin": "\"Dick Durbin\" when:200d",
+    "duckworth": "\"Tammy Duckworth\" when:200d"
   },
   "name_anchors": {
     "fritts": [

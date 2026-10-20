@@ -123,11 +123,13 @@ def prepare(root, now):
         ident = member['id']
         try:
             rows = parse_feed(fetch_feed(config['queries'][ident]), member, config, now)
-            receipt = {'status':'ok','checked_at':now.isoformat(),'candidates':rows}
+            receipt = {'status':'ok','checked_at':now.isoformat(),'candidates':rows,
+                       'query':config['queries'][ident], 'lookback_days':config['lookback_days']}
         except Exception:
             rows = previous['members'].get(ident, {}).get('candidates', [])
             rows = [row for row in rows if now-timedelta(days=config['lookback_days']) <= datetime.fromisoformat(row['published_at']) <= now]
-            receipt = {'status':'failed','checked_at':now.isoformat(),'error':'feed-unavailable-or-invalid','candidates':rows}
+            receipt = {'status':'failed','checked_at':now.isoformat(),'error':'feed-unavailable-or-invalid','candidates':rows,
+                       'query':config['queries'][ident], 'lookback_days':config['lookback_days']}
         state['members'][ident] = receipt
         all_cases = [case(row) for row in rows]
         inference.carry_forward_positives(root, all_cases)
@@ -181,8 +183,8 @@ def apply(root, now):
                     break
         member['media_health'] = {'source_status':source.get('status','unavailable'),
             'checked_at':source.get('checked_at'), 'inference_status':'partial' if unresolved else 'complete',
-            'lookback_days':config['lookback_days']}
-        query=config['queries'].get(member['id'],'')
+            'lookback_days':source.get('lookback_days',90)}
+        query=source.get('query', member.get('media_search', {}).get('query', config['queries'].get(member['id'],'')))
         member['media_search']={'query':query,
             'search_url':'https://news.google.com/search?'+urlencode({'q':query,'hl':'en-US','gl':'US','ceid':'US:en'}),
             'feed_url':'https://news.google.com/rss/search?'+urlencode({'q':query,'hl':'en-US','gl':'US','ceid':'US:en'}),

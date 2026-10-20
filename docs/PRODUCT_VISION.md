@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: product vision
 
-Revision 7 — October 20, 2026, America/Chicago.
+Revision 8 — October 20, 2026, America/Chicago.
 
 This reconciles the October 15 research plan, October 16 vision/build brief,
 subsequent owner decisions and the two external-project reviews. It preserves
@@ -10,6 +10,13 @@ acceptance gates. The [published planning copy](https://github.com/pl-home/illin
 and workspace copy share this revision; they are handoff mirrors, not separate
 implementations. Earlier plans and dated receipts remain historical evidence.
 Owner instructions and newer approved decisions take precedence over older text.
+
+October 20 owner-requested news extension: individual member history pages now
+include a 200-day newsroom column with up to three screened reports; homepage
+news retains 90 days. The same five feed requests, cache and model guard apply;
+no additional model request allowance, schedule or PDF task is enabled. Added
+static news markup raises the generated-member-HTML ceiling from 2 MB to 3 MB;
+the ten-file base remains 650 KB and canonical working JSON remains 20 MB.
 
 ## 1. Purpose and access
 
@@ -163,8 +170,8 @@ evidence; avoid creating another large local mirror.
 
 Preserve the existing 20,000,000-byte working JSON limit and 650,000-byte base
 website-artifact bound. The owner-requested October 20 member-history extension
-adds a separately checked 2,000,000-byte allowance for generated, paginated HTML;
-the combined ceiling is 2,650,000 bytes. It adds no canonical stored index, raw
+adds a separately checked 3,000,000-byte allowance for generated, paginated HTML;
+the combined ceiling is 3,650,000 bytes. It adds no canonical stored index, raw
 mirror or inference. Each history page contains at most 25 entries; size/page
 growth fails closed rather than silently truncating history. Repository target
 remains at most 100 MB, with the earlier

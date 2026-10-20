@@ -2,7 +2,7 @@
 
 A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
 
-**Planning updated October 20, 2026:** start with the revision 7
+**Planning updated October 20, 2026:** start with the revision 8
 [product vision](docs/PRODUCT_VISION.md) and
 [implementation plan](docs/IMPLEMENTATION_PLAN.md). They reconcile the earlier
 research/build briefs with owner-approved changes and current implementation.
@@ -20,6 +20,9 @@ Click any legislator's name (or **More sponsorship & bill activity**) for
 actions and official links, with undated federal relationships kept separately.
 These pages reuse accepted records without new collection or inference; current
 session coverage is incomplete and does not establish full service history.
+Each member history page also has a 200-day news column with up to three screened
+reports. Homepage news retains its 90-day display window; request/spending caps
+are unchanged. See [news evidence limits](docs/MEDIA_REPORTS.md).
 
 **Browse the tracker:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The homepage shows recent actions and recorded votes for Fritts, Arellano, LaHood, Durbin and Duckworth, plus committee links, a rolling month of posted meetings and recent attributed media reports. Source dates and incomplete coverage are explicit. Daily website refresh is configured for 01:00 Central; collection health and source dates remain visible. Weekly digest delivery remains undeployed. See [daily source scope and operation](docs/DAILY_REFRESH.md). See [dashboard sources and limits](docs/DASHBOARD.md). The original 134-item Fritts export remains available in the historical archive. Public facts only; no private advocacy notes are published. Each card also shows the exact news search and a separate office/campaign/party communications section with source coverage. See [news discovery and direct communications](docs/COMMUNICATIONS.md).
 

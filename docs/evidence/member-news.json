@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-20T13:58:17.005866+00:00",
+  "scope": "homepage-style news column on every paginated member page",
+  "lookback_days": {
+    "homepage_display": 90,
+    "member_display": 200,
+    "feed_discovery": 200
+  },
+  "max_display_items": 3,
+  "artifact": {
+    "records": 134,
+    "ceremonial": 24,
+    "artifact_bytes": 2714258,
+    "base_artifact_bytes": 505422,
+    "member_history": {
+      "members": {
+        "fritts": {
+          "dated": 279,
+          "undated": 0,
+          "withheld_records": 0,
+          "earliest": "2025-01-09",
+          "latest": "2026-10-02"
+        },
+        "arellano": {
+          "dated": 432,
+          "undated": 0,
+          "withheld_records": 0,
+          "earliest": "2025-01-13",
+          "latest": "2026-08-21"
+        },
+        "lahood": {
+          "dated": 38,
+          "undated": 188,
+          "withheld_records": 0,
+          "earliest": "2025-01-03",
+          "latest": "2026-09-17"
+        },
+        "durbin": {
+          "dated": 234,
+          "undated": 594,
+          "withheld_records": 0,
+          "earliest": "2025-01-15",
+          "latest": "2026-09-30"
+        },
+        "duckworth": {
+          "dated": 135,
+          "undated": 647,
+          "withheld_records": 0,
+          "earliest": "2025-01-13",
+          "latest": "2026-09-24"
+        }
+      },
+      "pages": 108,
+      "artifact_bytes": 2208836
+    }
+  },
+  "offline_tests": 271,
+  "privacy_findings": 0,
+  "browser_checks": [
+    "desktop side-by-side bill activity and news column",
+    "source window pending is disclosed for old 90-day receipts"
+  ],
+  "live_free_feed_sample": {
+    "member": "arellano",
+    "query": "\"Li Arellano\" when:200d",
+    "eligible_candidates": 2,
+    "candidates_older_than_90_days": 0,
+    "oldest_candidate_date": "2026-08-27",
+    "model_calls": 0
+  },
+  "preserved": [
+    "all existing source/financial/data ledgers",
+    "all workflow definitions and schedules",
+    "publisher allowlist and name anchors",
+    "model/prompt/provider and exact-case cache",
+    "USD 0.02/day, USD 0.20/week, USD 20 lifetime",
+    "four candidates per member and four media calls per Chicago day",
+    "PDF deferral and no outreach"
+  ],
+  "publication_limits": {
+    "base_bytes": 650000,
+    "member_html_bytes": 3000000,
+    "combined_bytes": 3650000,
+    "working_json_bytes": 20000000
+  },
+  "limitations": [
+    "up to three newest accepted reports, not a 200-day archive",
+    "bounded feed results can omit older indexed reports",
+    "publisher dates/content are not independently verified against article bodies",
+    "old source windows are not relabeled as completed expanded searches"
+  ],
+  "build_model_calls": 0,
+  "upstream_code_newly_copied": false
+}

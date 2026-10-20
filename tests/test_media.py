@@ -48,6 +48,42 @@ class MediaTests(unittest.TestCase):
         self.assertEqual(len(media.parse_feed(feed(item(),item()),MEMBER,CONFIG,NOW)),1)
         with self.assertRaises(ValueError):media.parse_feed(b'<!DOCTYPE rss><rss/>',MEMBER,CONFIG,NOW)
 
+    def test_200_day_discovery_accepts_older_news_but_excludes_expired_and_future(self):
+        def dated(age):
+            return item(title=f'Fritts housing report age {age}',
+                        date=(NOW-timedelta(days=age)).strftime('%a, %d %b %Y %H:%M:%S GMT'))
+        rows=media.parse_feed(feed(*(dated(age) for age in (100,199,200,201,-1))),MEMBER,CONFIG,NOW)
+        self.assertEqual(len(rows),3)
+        self.assertEqual([r['title'] for r in rows], [f'Fritts housing report age {age}' for age in (100,199,200)])
+
+    def test_homepage_90_day_and_member_200_day_windows_are_separate(self):
+        row=media.parse_feed(feed(item()),MEMBER,CONFIG,NOW)[0]
+        old={**row,'published_at':(NOW-timedelta(days=120)).isoformat()}
+        member={**MEMBER,'media_reports':[old], 'media_health':{'lookback_days':200,'source_status':'ok',
+                'inference_status':'complete','checked_at':NOW.isoformat()}}
+        home=BeautifulSoup(media_section(member,as_of=NOW.isoformat()),'html.parser')
+        history=BeautifulSoup(media_section(member,200,NOW.isoformat()),'html.parser')
+        self.assertEqual(len(home.select('.media-row')),0)
+        self.assertEqual(len(history.select('.media-row')),1)
+        self.assertIn('last 200 days',history.get_text())
+        self.assertIn('last 90 days',home.get_text())
+        self.assertNotIn('has not completed',history.get_text())
+        for age in (201,-1):
+            member['media_reports']=[{**row,'published_at':(NOW-timedelta(days=age)).isoformat()}]
+            self.assertNotIn('class="media-row"',media_section(member,200,NOW.isoformat()))
+
+    def test_older_source_receipt_does_not_claim_a_completed_200_day_search(self):
+        member={**MEMBER,'media_reports':[],'media_health':{'lookback_days':90,
+                'source_status':'ok','inference_status':'complete','checked_at':NOW.isoformat()}}
+        self.assertIn('200-day search has not completed',media_section(member,200,NOW.isoformat()))
+
+    def test_window_change_reuses_existing_exact_case_cache_identity(self):
+        narrow={**CONFIG,'lookback_days':90}
+        old=media.parse_feed(feed(item()),MEMBER,narrow,NOW)[0]
+        expanded=media.parse_feed(feed(item()),MEMBER,CONFIG,NOW)[0]
+        self.assertEqual(media.case(old),media.case(expanded))
+        self.assertEqual(media.inference._case_hash(media.case(old)),media.inference._case_hash(media.case(expanded)))
+
     def test_google_public_id_exception_still_rejects_secrets_and_other_hosts(self):
         public='Ab12Cd34'*12
         self.assertEqual(violations('https://news.google.com/rss/articles/'+public),[])
@@ -94,6 +130,25 @@ class MediaTests(unittest.TestCase):
             self.assertEqual({row['id'] for row in queued},{row['id'] for row in rows[4:]})
             health=media.load(root/'data/dashboard.json')['members'][0]['media_health']
             self.assertEqual(health['inference_status'],'partial')
+            self.assertEqual(health['lookback_days'],200)
+            source=media.load(root/'data/media-state.json')['members'][MEMBER['id']]
+            self.assertEqual(source['query'],CONFIG['queries'][MEMBER['id']])
+            self.assertEqual(source['lookback_days'],200)
+
+    def test_apply_preserves_older_screened_articles_without_relabeling_old_source_window(self):
+        row=media.parse_feed(feed(item()),MEMBER,CONFIG,NOW)[0]
+        row['published_at']=(NOW-timedelta(days=120)).isoformat()
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            media.save(root/'config/media.json',CONFIG)
+            media.save(root/'data/dashboard.json',{'members':[{**MEMBER,'media_reports':[row],
+                'media_search':{'query':'Fritts when:90d'}}]})
+            media.save(root/'data/media-state.json',{'members':{'fritts':{'status':'failed','candidates':[]}}})
+            media.apply(root,NOW)
+            member=media.load(root/'data/dashboard.json')['members'][0]
+            self.assertEqual(len(member['media_reports']),1)
+            self.assertEqual(member['media_health']['lookback_days'],90)
+            self.assertEqual(member['media_search']['query'],'Fritts when:90d')
 
 
 if __name__=='__main__':unittest.main()

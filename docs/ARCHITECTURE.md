@@ -2,7 +2,7 @@
 
 ## Current operating map — Stage A, October 19, 2026
 
-Start with the revision 7 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
+Start with the revision 8 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
 `changes.py`, `change_sources.py`, `change_feed.py` and `tests/test_changes.py`.
 Existing daily_state/daily_federal/dashboard_collect produce official compact
 records; media/communications produce separately attributed metadata. The new
@@ -16,7 +16,7 @@ The 01:00 Central schedule and spending limits are unchanged. Only the existing
 narrow media relevance task uses a hosted model. PDF work is deferred, and digest
 delivery is not deployed. Ten base public files total at most 650 KB;
 the October 20 member-history extension adds separately allowlisted static pages
-capped at 2 MB. See [MEMBER_HISTORY.md](MEMBER_HISTORY.md). Current build output
+capped at 3 MB. See [MEMBER_HISTORY.md](MEMBER_HISTORY.md). Current build output
 reports both components and their sum; working canonical records are not copied
 into a new stored index. Each page contains at most 25 entries and works without
 scripts. History publication rechecks the shared fact schema and fingerprint;
@@ -112,3 +112,8 @@ The ILGA servers were reachable from the local platform but failed Ubuntu certif
 Read the complete M0/M1 table in M0_FINDINGS.md before implementation or deployment. Outstanding source timing, post-veto CSV cadence, motion/choice reconciliation and nonempty hearing evidence must be resolved or explicitly addressed in the release decision. M1 also needs import/replay, failure isolation, DST and delay behavior, complete digest rendering, duplicate suppression and size-growth tests.
 
 The old local schedules remain stopped. The bounded metadata observation is the only new schedule. Its first wake after the end date disables that workflow using the [GitHub workflow endpoint](https://docs.github.com/en/rest/actions/workflows#disable-a-workflow); only that observer has Actions-write permission. The source module independently refuses requests after the configured end time. No nightly product collection or Monday digest workflow is enabled.
+
+October 20 news-column extension: `dashboard.media_section` supplies the same
+escaped, source-attributed view to member pages (200 days) and the homepage
+(90 days). `media.py` persists each query/window in its source receipt, retaining
+legacy 90-day provenance. Discovery now uses 200 days; model gates are unchanged.

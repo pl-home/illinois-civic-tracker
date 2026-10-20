@@ -1,5 +1,5 @@
 """Render the member homepage from a bounded, source-attributed snapshot."""
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from html import escape
 import json
 from zoneinfo import ZoneInfo
@@ -37,11 +37,28 @@ def meeting_row(meeting, reference=None):
 
 
 
-def media_section(member):
+def media_section(member, lookback_days=90, as_of=None):
     health = member.get('media_health', {})
     reports = member.get('media_reports', [])
+    references = []
+    for value in (as_of, health.get('checked_at')):
+        try:
+            if value:
+                stamp = datetime.fromisoformat(value)
+                if stamp.tzinfo is None:
+                    stamp = stamp.replace(hour=23, minute=59, second=59, tzinfo=timezone.utc)
+                references.append(stamp)
+        except (ValueError, TypeError):
+            continue
+    reference = max(references) if references else None
     rows = []
     for report in reports:
+        try:
+            published = datetime.fromisoformat(report['published_at'])
+            if published.tzinfo is None or (reference and not reference-timedelta(days=lookback_days) <= published <= reference):
+                continue
+        except (ValueError, TypeError, KeyError):
+            continue
         # Never expose a script/data URL even if a stored snapshot is malformed.
         from urllib.parse import urlsplit
         link = urlsplit(report.get('url', ''))
@@ -49,16 +66,20 @@ def media_section(member):
             continue
         route = ' · via Google News' if report.get('link_route') == 'Google News' else ''
         rows.append(f'<li class="media-row"><time datetime="{e(report["published_at"])}">{e(report["published_at"][:10])}</time><strong><a href="{e(report["url"])}">{e(report["title"])} ↗</a></strong><p class="minor">{e(report["publisher"])}{route}</p></li>')
-    body = ''.join(rows) or '<li class="empty-source">No eligible reports found in the last 90 days from the selected newsrooms. Coverage is incomplete.</li>'
+        if len(rows) == 3: break
+    body = ''.join(rows) or f'<li class="empty-source">No screened reports are available in the last {lookback_days} days from the selected newsrooms. Coverage is incomplete.</li>'
     warning = ''
     if health.get('source_status') != 'ok' or health.get('inference_status') != 'complete':
         warning = '<p class="warning">News refresh or relevance screening is incomplete; previously screened reports may be retained.</p>'
+    searched_days = health.get('lookback_days', 90)
+    if searched_days < lookback_days:
+        warning += f'<p class="warning">The latest source discovery used {e(searched_days)} days; the {lookback_days}-day search has not completed yet.</p>'
     checked = health.get('checked_at') or 'not yet checked'
     search = member.get('media_search', {})
     method = ''
     if search:
-        method = f'<details class="news-method"><summary>How we find news about {e(member["name"])}</summary><p>Exact Google News query: <code>{e(search["query"])}</code></p><p><a href="{e(search["search_url"])}">Open this news search ↗</a> · <a href="{e(search["feed_url"])}">RSS feed used by the tracker ↗</a></p><ol><li>Read up to 150 feed entries; keep dates within 90 days and publishers in the <a href="{e(search["publisher_policy_url"])}">reviewed newsroom list ↗</a>.</li><li>Require a member-name anchor in the headline or snippet; remove duplicate headlines and explicit opinion/editorial titles, then sort by publication date and retain up to 30 candidates.</li><li>Qwen screens headline relevance using supplied IDs only. Cached decisions are reused; up to four unseen candidates per member are considered per run within the shared daily budget.</li><li>Display the three newest accepted results found. This is indexed-feed coverage, not a search of every article or its full text.</li></ol><p class="minor">{e(search["candidate_count"])} eligible feed candidates at the latest check. Sections use the publishing source: a newsroom may republish a release, and its original authorship is not verified from feed metadata.</p></details>'
-    return f'<section class="member-media" aria-label="Recent media reports about {e(member["name"])}"><h3>Recent media reports</h3><p class="minor">Up to three latest reports found · last 90 days · selected major and Illinois newsrooms. AI screens headline relevance; article content is not independently verified.</p>{warning}<ul class="media-list">{body}</ul><p class="minor">News checked: {e(checked)}. Links may route through Google News; publisher access terms apply.</p>{method}</section>'
+        method = f'<details class="news-method"><summary>How we find news about {e(member["name"])}</summary><p>Exact Google News query: <code>{e(search["query"])}</code></p><p><a href="{e(search["search_url"])}">Open this news search ↗</a> · <a href="{e(search["feed_url"])}">RSS feed used by the tracker ↗</a></p><ol><li>Read up to 150 feed entries; discovery window: {e(searched_days)} days. Require publishers in the <a href="{e(search["publisher_policy_url"])}">reviewed newsroom list ↗</a>.</li><li>Require a member-name anchor in the headline or snippet; remove duplicate headlines and explicit opinion/editorial titles, then sort by publication date and retain up to 30 candidates.</li><li>Qwen screens headline relevance using supplied IDs only. Cached decisions are reused; up to four unseen candidates per member are considered per run within the shared daily budget.</li><li>Display up to three newest accepted results within this page’s {lookback_days}-day window. This is bounded indexed-feed coverage, not a complete article archive or a search of full article text.</li></ol><p class="minor">{e(search["candidate_count"])} eligible feed candidates at the latest check. Sections use the publishing source: a newsroom may republish a release, and its original authorship is not verified from feed metadata.</p></details>'
+    return f'<section class="member-media" aria-label="Recent media reports about {e(member["name"])}"><h3>Recent media reports</h3><p class="minor">Up to three latest reports found · last {lookback_days} days · selected major and Illinois newsrooms. AI screens headline relevance; article content is not independently verified.</p>{warning}<ul class="media-list">{body}</ul><p class="minor">News checked: {e(checked)}. Links may route through Google News; publisher access terms apply.</p>{method}</section>'
 
 
 
@@ -132,7 +153,7 @@ def member_card(member, snapshot, hearing_html=None):
     link_note = member.get('public_links', {}).get('note', '')
     member_links = '<nav class="member-public-links" aria-label="' + e(member['name']) + ' websites">' + member_links + (f'<small>{e(link_note)}</small>' if link_note else '') + '</nav>'
     recent_votes = sum(item['kind'] == 'vote' and item['date'] >= cutoff for item in member['events'])
-    return f'''<article class="member-card" id="member-{e(member['id'])}" data-member="{e(member['id'])}"><header class="member-head"><div><p class="eyebrow">{e(member['office'])}</p><h2><a href="member-{e(member['id'])}.html">{e(member['name'])}</a></h2></div>{member_links}</header><p class="source-line">Activity source snapshot: {e(member['activity_source_checked_at'][:10])} · Latest available vote: {e(member.get('latest_vote_date') or 'not loaded')} · {recent_votes} recorded votes in recent window</p><div class="member-columns"><section><h3>Recent sponsorship &amp; bill activity</h3><ul class="activity-list">{body}</ul><p><a class="member-history-link" href="member-{e(member['id'])}.html">More sponsorship &amp; bill activity →</a></p>{listing_html}<h3>Latest recorded votes</h3><p class="minor">Choice applies to the motion shown. Floor and committee votes are distinct; older rows are labeled.</p><ul class="activity-list">{vote_body}</ul></section><section class="committee-column"><h3>Committee meetings · next month</h3><p class="minor">{e(snapshot['as_of'])} through {e(snapshot['calendar_end'])} · times shown in Central</p><ul class="meeting-list">{meetings}</ul><details class="committee-links" open><summary>Committee websites &amp; schedules ({len(member.get('committees', []))})</summary><ul>{committees}</ul></details><p class="minor">{e(snapshot['attendance_note'])}</p><p class="slip-note">{'Illinois witness slips appear only with a verified open submission form; historical results links are not submission forms.' if member['jurisdiction']=='IL' else 'Congress has no general Illinois-style witness-slip system. See each committee’s participation guidance.'}</p>{media_section(member)}{communications_section(member)}</section></div><footer class="member-foot">{e(member['activity_coverage'])}{f' {quiet} ceremonial entries remain in the public snapshot.' if quiet else ''}</footer></article>'''
+    return f'''<article class="member-card" id="member-{e(member['id'])}" data-member="{e(member['id'])}"><header class="member-head"><div><p class="eyebrow">{e(member['office'])}</p><h2><a href="member-{e(member['id'])}.html">{e(member['name'])}</a></h2></div>{member_links}</header><p class="source-line">Activity source snapshot: {e(member['activity_source_checked_at'][:10])} · Latest available vote: {e(member.get('latest_vote_date') or 'not loaded')} · {recent_votes} recorded votes in recent window</p><div class="member-columns"><section><h3>Recent sponsorship &amp; bill activity</h3><ul class="activity-list">{body}</ul><p><a class="member-history-link" href="member-{e(member['id'])}.html">More sponsorship &amp; bill activity →</a></p>{listing_html}<h3>Latest recorded votes</h3><p class="minor">Choice applies to the motion shown. Floor and committee votes are distinct; older rows are labeled.</p><ul class="activity-list">{vote_body}</ul></section><section class="committee-column"><h3>Committee meetings · next month</h3><p class="minor">{e(snapshot['as_of'])} through {e(snapshot['calendar_end'])} · times shown in Central</p><ul class="meeting-list">{meetings}</ul><details class="committee-links" open><summary>Committee websites &amp; schedules ({len(member.get('committees', []))})</summary><ul>{committees}</ul></details><p class="minor">{e(snapshot['attendance_note'])}</p><p class="slip-note">{'Illinois witness slips appear only with a verified open submission form; historical results links are not submission forms.' if member['jurisdiction']=='IL' else 'Congress has no general Illinois-style witness-slip system. See each committee’s participation guidance.'}</p>{media_section(member, as_of=as_of)}{communications_section(member)}</section></div><footer class="member-foot">{e(member['activity_coverage'])}{f' {quiet} ceremonial entries remain in the public snapshot.' if quiet else ''}</footer></article>'''
 
 
 

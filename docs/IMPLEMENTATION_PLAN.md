@@ -1,7 +1,7 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 7 — October 20, 2026, America/Chicago. Read with
-[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 7. This replaces the initial
+Revision 8 — October 20, 2026, America/Chicago. Read with
+[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 8. This replaces the initial
 October 15 plan as current delivery guidance. Earlier plans/build briefs remain
 historical acceptance evidence; their obsolete schedule, private-server proposal,
 M1 exclusions and exactly-once-mail claims do not override this revision or later
@@ -11,6 +11,13 @@ The [published planning copy](https://github.com/pl-home/illinois-civic-tracker/
 and workspace copy share the same content. This plan sequences work; it does not
 declare proposals implemented or enable any workflow/model task. Code, current
 configuration and dated collection reports establish actual operating state.
+
+October 20 owner-requested news extension: individual member history pages now
+include a 200-day newsroom column with up to three screened reports; homepage
+news retains 90 days. The same five feed requests, cache and model guard apply;
+no additional model request allowance, schedule or PDF task is enabled. Added
+static news markup raises the generated-member-HTML ceiling from 2 MB to 3 MB;
+the ten-file base remains 650 KB and canonical working JSON remains 20 MB.
 
 ## 1. Baseline and remaining scope
 
@@ -233,7 +240,7 @@ The October 20 owner-requested member-history pages implement one bounded displa
 slice now, without moving M5 discovery/backfill forward. Accepted existing facts
 are paginated 25 per page, with a separate undated section and evidence/coverage
 labels. Base public files retain their 650,000-byte ceiling; generated member
-HTML has a separate 2,000,000-byte ceiling (2,650,000 combined), at most 100 pages
+HTML has a separate 3,000,000-byte ceiling (3,650,000 combined), at most 100 pages
 per member/section. Canonical working JSON stays at 20 MB. Size growth fails
 closed; no raw files, old evidence or financial/source ledgers are deleted.
 See [MEMBER_HISTORY.md](MEMBER_HISTORY.md) and its completion receipt. No workflow,

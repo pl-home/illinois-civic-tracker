@@ -3,8 +3,9 @@
 **October 20 member-history update:** names and **More sponsorship & bill
 activity** open [individual history pages](MEMBER_HISTORY.md), generated from
 accepted shared-ledger facts. Dated activity and undated relationships have
-separate 25-row pagination. The existing ten-file base artifact retains its
-650 KB cap; added static history pages have a separate 2 MB cap. Older file-count
+separate 25-row pagination. Each paginated member page also has a 200-day newsroom column; homepage news
+keeps 90 days. The existing ten-file base artifact retains its
+650 KB cap; added static history pages have a separate 3 MB cap. Older file-count
 and total-artifact statements below are dated release evidence.
 
 **October 20 Stage B update:** see [HEARING_TRACKING.md](HEARING_TRACKING.md) for

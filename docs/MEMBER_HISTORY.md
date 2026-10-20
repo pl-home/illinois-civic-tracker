@@ -32,19 +32,18 @@ by the accepted ledger, without inventing a removal date.
 Coverage is GA104 or Congress119, according to the member. It is not complete
 tenure history. Older imported Illinois bills may have only dated role actions
 and a last bill update, rather than every intermediate action. Federal bill
-actions beyond the collected filing/relationship facts are not invented. Votes,
-news, hearings and direct communications remain available on the homepage; this
-extension is specifically a bill-activity browser. Collection failures/withheld
+actions beyond the collected filing/relationship facts are not invented. Votes, hearings and direct communications remain available on the homepage.
+Each member page also has a separate 200-day news column. Collection failures/withheld
 source scopes warn that prior accepted history is retained. Invalid stored facts
 are withheld and counted. Absence does not establish inactivity.
 
 ## Storage and publication
 
 The original ten-file artifact keeps its 650,000-byte budget. Generated member
-HTML has a separate 2,000,000-byte budget, for a combined maximum of 2,650,000.
+HTML has a separate 3,000,000-byte budget, for a combined maximum of 3,650,000.
 Each dated/undated member section is limited to 100 pages (2,500 entries); growth
 past page/byte limits fails the build rather than silently truncating data.
-This release currently adds about 1.8 MB of static HTML, downloaded page by page.
+This release currently adds about 2.3 MB of static HTML, downloaded page by page.
 There is no additional browser JSON or raw evidence archive. Working JSON remains
 bounded at 20 MB. See [completion receipt](evidence/member-history.json) for
 measured counts, date ranges and sizes.
@@ -73,3 +72,19 @@ relationships, tamper/session/unsafe-URL withholding, escaping, failure warnings
 page/size limits, deterministic artifact contents and generated-output cleanup.
 No external source code was newly copied for this extension; it uses our existing
 shared fact contract. Existing adaptation notices remain in THIRD_PARTY_NOTICES.
+
+## Member-page news column (October 20 extension)
+
+Every dated and undated page shows up to three screened newsroom reports from
+the last 200 days, alongside bill activity on desktop and below it on narrow
+screens. Dates, publishers, links, source health and the expandable search
+methodology use the shared homepage renderer. Homepage news keeps 90 days.
+The source query uses 200 days; the same five bounded feeds, 30 candidates,
+exact-case cache and existing inference spending/request guards are reused.
+No full article text or new archive is stored. The three newest accepted reports
+are retained across the 200-day window; this does not create a comprehensive
+news archive. Older 90-day source receipts show an explicit pending-window
+notice until refreshed, rather than pretending the broader search succeeded.
+The generated HTML allowance rises to 3 MB, with the unchanged 650 KB base and
+20 MB canonical JSON limits. See [news evidence limits](MEDIA_REPORTS.md) and
+[the news-column receipt](evidence/member-news.json).

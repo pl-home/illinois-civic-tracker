@@ -9,7 +9,7 @@ from .rules import ceremonial
 
 PAGE_SIZE = 25
 MAX_PAGES = 100  # Per member, per dated/undated section; fail closed on growth.
-MAX_HISTORY_BYTES = 2_000_000
+MAX_HISTORY_BYTES = 3_000_000
 KINDS = {'filing', 'sponsor-role', 'bill-action'}
 
 
@@ -96,6 +96,7 @@ def pagination(member, number, count, undated):
 
 
 def build_pages(root, snapshot):
+    from .dashboard import media_section
     style_version = sha256((root/'web/styles.css').read_bytes()).hexdigest()[:12]
     ledger = read(root/'data/change-ledger.json', empty())
     quality = read(root/'data/change-quality-report.json', {})
@@ -126,6 +127,7 @@ def build_pages(root, snapshot):
                     f'{counts["bill-action"]} related bill updates. {len(undated)} undated relationship listings.')
         date_range = (f'Available dated records: {report[ident]["earliest"]}–{report[ident]["latest"]}.'
                       if dated else 'No dated entries are available in the accepted records.')
+        news_column = media_section(member, lookback_days=200, as_of=snapshot['as_of'])
         for is_undated, records in ((False, dated), (True, undated)):
             count = max(1, math.ceil(len(records)/PAGE_SIZE))
             if count > MAX_PAGES:
@@ -156,7 +158,8 @@ def build_pages(root, snapshot):
                     f'<p>Snapshot: {e(snapshot["as_of"])} · {rejected} invalid stored records withheld.</p></details>'
                     f'<nav class="history-pagination" aria-label="History sections"><a href="{filename(ident)}">Dated bill activity ({len(dated)})</a>'
                     f'<a href="{filename(ident, undated=True)}">Undated listings ({len(undated)})</a></nav></section>'
-                    f'<section id="history"><h2>{e(title)}</h2>{nav}<ul class="activity-list">{rows}</ul>{nav}</section>'
+                    f'<div class="member-history-columns"><section id="history"><h2>{e(title)}</h2>{nav}<ul class="activity-list">{rows}</ul>{nav}</section>'
+                    f'<aside class="history-news" aria-label="News coverage for {e(member["name"])}">{news_column}</aside></div>'
                     '</main><footer><span>Official sources linked on each entry · No automatic outreach</span></footer></body></html>')
     size = sum(len(page.encode('utf-8')) for page in pages.values())
     if size > MAX_HISTORY_BYTES:
