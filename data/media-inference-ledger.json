@@ -197,9 +197,35 @@
         "df8bceb6996a9a25ad9678ca"
       ],
       "reserved_usd": "0.002",
-      "charged_usd": null,
-      "status": "reserved",
-      "prepared_at": "2026-10-20T14:27:26.917896+00:00"
+      "charged_usd": "0.0001552",
+      "status": "valid",
+      "prepared_at": "2026-10-20T14:27:26.917896+00:00",
+      "attempted_at": "2026-10-20T14:27:41.274146+00:00",
+      "diagnostics": {
+        "envelope_shape": "object",
+        "provider_match": true,
+        "model_match": true,
+        "response_id": "gen-1792506461-xDp87WeuI4n6qpMJNp1M",
+        "prompt_tokens": 862,
+        "completion_tokens": 308,
+        "total_tokens": 1170,
+        "finish_reason": "stop",
+        "refusal_present": false,
+        "reasoning_present": false,
+        "content_shape": "string",
+        "content_bytes": 631,
+        "code_fence": false,
+        "json_parse": "ok",
+        "json_shape": "object",
+        "missing_fields": [],
+        "unexpected_field_count": 0,
+        "status_shape": "null",
+        "model_status": "not-captured"
+      },
+      "usage": {
+        "prompt_tokens": 862,
+        "completion_tokens": 308
+      }
     },
     {
       "batch_hash": "38b6b9399a894bf5cd821ab7e5395495609078103da861c159c9f5b99ec19b04",
@@ -217,9 +243,35 @@
         "95f8e8374823cbbb2b064553"
       ],
       "reserved_usd": "0.002",
-      "charged_usd": null,
-      "status": "reserved",
-      "prepared_at": "2026-10-20T14:27:26.917896+00:00"
+      "charged_usd": "0.00007964",
+      "status": "valid",
+      "prepared_at": "2026-10-20T14:27:26.917896+00:00",
+      "attempted_at": "2026-10-20T14:27:50.202396+00:00",
+      "diagnostics": {
+        "envelope_shape": "object",
+        "provider_match": true,
+        "model_match": true,
+        "response_id": "gen-1792506470-KVswdpLD38ooerfcFAfH",
+        "prompt_tokens": 502,
+        "completion_tokens": 141,
+        "total_tokens": 643,
+        "finish_reason": "stop",
+        "refusal_present": false,
+        "reasoning_present": false,
+        "content_shape": "string",
+        "content_bytes": 255,
+        "code_fence": false,
+        "json_parse": "ok",
+        "json_shape": "object",
+        "missing_fields": [],
+        "unexpected_field_count": 0,
+        "status_shape": "null",
+        "model_status": "not-captured"
+      },
+      "usage": {
+        "prompt_tokens": 502,
+        "completion_tokens": 141
+      }
     }
   ]
 }
