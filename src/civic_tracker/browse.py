@@ -118,13 +118,16 @@ def build(root, output):
         raise ValueError('Unresolved page template')
     # Write an allowlisted artifact only. Never recursively copy the repository.
     artifact_names = {'index.html', 'archive.html', 'dashboard.json', 'records.json', 'styles.css', 'app.js', 'dashboard.js', '.nojekyll', 'changes.json', 'changes.atom'}
+    from .member_history import artifact_names as history_names, build_pages
+    managed_history_names = history_names()
     if output.is_symlink() or (output.exists() and any(
-            item.name not in artifact_names or not item.is_file() or item.is_symlink()
+            item.name not in artifact_names | managed_history_names or not item.is_file() or item.is_symlink()
             for item in output.iterdir())):
         raise ValueError('Output must contain only the allowlisted public artifact files')
     output.mkdir(parents=True, exist_ok=True)
     from .dashboard import render
     homepage, snapshot = render(root)
+    history_pages, history_report = build_pages(root, snapshot)
     from .change_feed import build as build_change_feed
     build_change_feed(root, output)
     (output / 'index.html').write_text(homepage, encoding='utf-8', newline='\n')
@@ -134,11 +137,18 @@ def build(root, output):
     for name in ('styles.css', 'app.js', 'dashboard.js'):
         shutil.copyfile(root / 'web' / name, output / name)
     (output / '.nojekyll').write_text('', encoding='utf-8')
+    for name, content in history_pages.items():
+        (output / name).write_text(content, encoding='utf-8', newline='\n')
+    # Remove obsolete generated pages only, after the closed file/symlink check.
+    for item in output.iterdir():
+        if item.name in managed_history_names and item.name not in history_pages:
+            item.unlink()
     artifact_bytes = sum((output / name).stat().st_size for name in artifact_names)
     if artifact_bytes > 650_000:
         raise ValueError('browser-artifact-size-budget-exceeded')
     return {'records': len(records), 'ceremonial': sum(r['ceremonial'] for r in records),
-            'artifact_bytes': artifact_bytes}
+            'artifact_bytes': artifact_bytes + history_report['artifact_bytes'],
+            'base_artifact_bytes': artifact_bytes, 'member_history': history_report}
 
 
 def main():

@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from civic_tracker.browse import build, card, records_from_export
 from civic_tracker.privacy import violations
+from civic_tracker.member_history import build_pages, MAX_HISTORY_BYTES
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE = ROOT / 'tests/fixtures/fritts-sponsorship-104.csv'
@@ -42,8 +43,11 @@ class BrowseTests(unittest.TestCase):
             first = {p.name: p.read_bytes() for p in output.iterdir()}
             self.assertEqual(build(ROOT, output), report)
             self.assertEqual({p.name: p.read_bytes() for p in output.iterdir()}, first)
-            self.assertEqual(set(first), {'index.html', 'archive.html', 'dashboard.json', 'styles.css', 'app.js', 'dashboard.js', 'records.json', '.nojekyll', 'changes.json', 'changes.atom'})
-            self.assertLess(report['artifact_bytes'], 650_000)
+            history, _ = build_pages(ROOT, json.loads(first['dashboard.json']))
+            self.assertEqual(set(first), {'index.html', 'archive.html', 'dashboard.json', 'styles.css', 'app.js', 'dashboard.js', 'records.json', '.nojekyll', 'changes.json', 'changes.atom'} | set(history))
+            self.assertLess(report['base_artifact_bytes'], 650_000)
+            self.assertLess(report['member_history']['artifact_bytes'], MAX_HISTORY_BYTES)
+            self.assertEqual(report['artifact_bytes'], sum(len(b) for b in first.values()))
             for name in first:
                 self.assertEqual(violations(first[name].decode()), [], name)
             homepage = BeautifulSoup(first['index.html'].decode(), 'html.parser')
@@ -101,6 +105,19 @@ class BrowseTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'allowlisted'):
                 build(ROOT, path)
             self.assertFalse((path / 'index.html').exists())
+
+    def test_only_obsolete_generated_member_pages_are_removed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)
+            obsolete=path/'member-fritts-99.html'
+            obsolete.write_text('obsolete generated page')
+            build(ROOT,path)
+            self.assertFalse(obsolete.exists())
+            self.assertTrue((path/'member-fritts.html').exists())
+            invalid=path/'member-unknown.html'
+            invalid.write_text('not an allowlisted member page')
+            with self.assertRaisesRegex(ValueError,'allowlisted'):build(ROOT,path)
+            self.assertTrue(invalid.exists())
 
 
 if __name__ == '__main__':

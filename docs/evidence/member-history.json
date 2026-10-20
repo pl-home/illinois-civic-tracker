@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-20T13:33:37.147731+00:00",
+  "scope": "accepted current-session member bill-history browsing only",
+  "report": {
+    "records": 134,
+    "ceremonial": 24,
+    "artifact_bytes": 2304230,
+    "base_artifact_bytes": 504293,
+    "member_history": {
+      "members": {
+        "fritts": {
+          "dated": 279,
+          "undated": 0,
+          "withheld_records": 0,
+          "earliest": "2025-01-09",
+          "latest": "2026-10-02"
+        },
+        "arellano": {
+          "dated": 432,
+          "undated": 0,
+          "withheld_records": 0,
+          "earliest": "2025-01-13",
+          "latest": "2026-08-21"
+        },
+        "lahood": {
+          "dated": 38,
+          "undated": 188,
+          "withheld_records": 0,
+          "earliest": "2025-01-03",
+          "latest": "2026-09-17"
+        },
+        "durbin": {
+          "dated": 234,
+          "undated": 594,
+          "withheld_records": 0,
+          "earliest": "2025-01-15",
+          "latest": "2026-09-30"
+        },
+        "duckworth": {
+          "dated": 135,
+          "undated": 647,
+          "withheld_records": 0,
+          "earliest": "2025-01-13",
+          "latest": "2026-09-24"
+        }
+      },
+      "pages": 108,
+      "artifact_bytes": 1799937
+    }
+  },
+  "tests": {
+    "offline_suite": 265,
+    "result": "passed",
+    "browser": [
+      "homepage member-name link opens history",
+      "older actions page 2",
+      "oldest available page 12 with January 2025 actions",
+      "federal dated history and separate unknown-date relationships",
+      "compact coverage disclosure and official navigation links"
+    ]
+  },
+  "privacy_findings": 0,
+  "artifact_files": 118,
+  "data_config_workflow_files_unchanged": 61,
+  "comparison": "Git HEAD content with CRLF/LF normalization for existing checkout line endings",
+  "existing_line_ending_differences": [
+    ".github/workflows/rollcall-diagnostics-v2.yml",
+    "config/rollcall-diagnostics-v2.json"
+  ],
+  "source_ledger_sha256": "951472b6dded3fcc8dec6a4729e9441fddc2b416d3aaecbcf95cd6d1eb76fc0c",
+  "data_json_bytes": 13574673,
+  "bounds": {
+    "base_artifact_bytes": 650000,
+    "member_history_bytes": 2000000,
+    "combined_artifact_bytes": 2650000,
+    "entries_per_page": 25,
+    "pages_per_member_section": 100
+  },
+  "model_calls": 0,
+  "new_source_requests": 0,
+  "new_upstream_code_copied": false,
+  "limitations": [
+    "GA104 and Congress119 accepted records only; not full tenure",
+    "older Illinois imports may contain roles plus last action, not every intermediate action",
+    "federal cosponsorship join/removal dates remain unknown",
+    "PDF work and new committee-roll-call collection deferred",
+    "full-tenure/topic pages and GA103 backfill remain planned"
+  ]
+}

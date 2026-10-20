@@ -262,7 +262,7 @@ class ChangeTests(unittest.TestCase):
                 data = payload(ROOT)
                 self.assertGreater(data['omitted_for_size'], 0)
                 report = build(ROOT, Path(temp))
-        self.assertLess(report['artifact_bytes'], 650_000)
+        self.assertLess(report['base_artifact_bytes'], 650_000)
 
     def test_quality_failure_and_recovery_reuse_the_existing_journal(self):
         from datetime import datetime

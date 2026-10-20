@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: product vision
 
-Revision 6 — October 20, 2026, America/Chicago.
+Revision 7 — October 20, 2026, America/Chicago.
 
 This reconciles the October 15 research plan, October 16 vision/build brief,
 subsequent owner decisions and the two external-project reviews. It preserves
@@ -76,6 +76,7 @@ source will be healthy on a later run.
 | Capability | Current state |
 | --- | --- |
 | Public member dashboard and historical browser | Deployed; recent actions/votes, member links, committee roles/links and a rolling month of meetings, with coverage labels |
+| Individual member bill-history pages | Owner-approved October 20 extension: dated accepted filing/sponsor/bill actions and separate undated relationships, 25 per static page; current sessions only, no new historical discovery |
 | Scheduled official collection | GitHub Actions targets 01:00 America/Chicago daily; Illinois XML/floor CSV, federal bill relationships/floor XML and bounded calendars; completeness qualified per source |
 | Recent media and direct communications | Implemented separately: up to three eligible newsroom reports per member, visible discovery method, and attributed office/campaign/party communications with source coverage |
 | Inference | Only narrow Qwen3 32B / DeepInfra media-relevance screening is enabled; it selects supplied IDs, not facts or article summaries |
@@ -160,8 +161,13 @@ source/financial ledgers. Raw HTML/XML, full CSVs, PDF text and full bill/articl
 text are not routine repository payloads. Bound temporary scratch and exceptional
 evidence; avoid creating another large local mirror.
 
-Preserve the existing 20,000,000-byte working JSON limit and configured website
-artifact bounds. Repository target remains at most 100 MB, with the earlier
+Preserve the existing 20,000,000-byte working JSON limit and 650,000-byte base
+website-artifact bound. The owner-requested October 20 member-history extension
+adds a separately checked 2,000,000-byte allowance for generated, paginated HTML;
+the combined ceiling is 2,650,000 bytes. It adds no canonical stored index, raw
+mirror or inference. Each history page contains at most 25 entries; size/page
+growth fails closed rather than silently truncating history. Repository target
+remains at most 100 MB, with the earlier
 400 MB hard ceiling; simulated growth and Git history must be measured. Moving
 new snapshots to releases does not erase old Git history or justify losing compact
 full-tenure facts. The error journal's live cap is 96 KiB with bounded events and

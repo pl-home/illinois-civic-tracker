@@ -1,7 +1,7 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 6 — October 20, 2026, America/Chicago. Read with
-[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 6. This replaces the initial
+Revision 7 — October 20, 2026, America/Chicago. Read with
+[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 7. This replaces the initial
 October 15 plan as current delivery guidance. Earlier plans/build briefs remain
 historical acceptance evidence; their obsolete schedule, private-server proposal,
 M1 exclusions and exactly-once-mail claims do not override this revision or later
@@ -26,6 +26,7 @@ for future CI or full product acceptance.
 | --- | --- | --- |
 | Illinois | Session-wide changed XML discovery; selected member roles/actions; floor CSV; retained history; shared Stage A changes | Stronger relevance/coverage acceptance and correction sweeps within source bounds |
 | Federal | Congress.gov relationships and official current-session floor XML, with retained prior history | Service/session transition and deeper historical/committee coverage |
+| Individual member history | October 20 owner request: paginated accepted current-session bill activity, names linked from homepage; separate undated relationship listings | Full-tenure/topic pages, applicable GA103 backfill and deeper source completeness remain M5 |
 | Hearings | Stage B: day/committee navigation; accepted agenda/amendment history, explicit status changes, bounded missing-ID rechecks and stale-slip protection | Genuine upcoming/open-form live acceptance; stronger Senate hearing IDs and broader federal agenda coverage |
 | Media/communications | Visible discovery policy; up to three dated eligible newsroom items; separate attributed first-party sources | Remaining source gaps/reprints and dedicated Capitol Fax/Lee County mention acceptance |
 | County parties | Legacy bounded watcher; selected member-filtered party feeds in current communications | Port broad hosted website change coverage with equal rules and baseline suppression |
@@ -227,6 +228,16 @@ copying Hawaii's destructive three-year retention. Measure working JSON, browser
 payload, evidence retention and cumulative Git growth in a simulated year against
 existing limits. Git releases/snapshots are a possible later export mechanism,
 not permission to delete history or add a raw local mirror.
+
+The October 20 owner-requested member-history pages implement one bounded display
+slice now, without moving M5 discovery/backfill forward. Accepted existing facts
+are paginated 25 per page, with a separate undated section and evidence/coverage
+labels. Base public files retain their 650,000-byte ceiling; generated member
+HTML has a separate 2,000,000-byte ceiling (2,650,000 combined), at most 100 pages
+per member/section. Canonical working JSON stays at 20 MB. Size growth fails
+closed; no raw files, old evidence or financial/source ledgers are deleted.
+See [MEMBER_HISTORY.md](MEMBER_HISTORY.md) and its completion receipt. No workflow,
+schedule, collector, PDF task or model permission changes are part of this slice.
 
 Plan bounded deeper correction sweeps where current source discovery heuristics
 miss unchanged listing metadata or old records. Incomplete sweeps remain explicit

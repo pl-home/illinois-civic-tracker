@@ -2,7 +2,7 @@
 
 ## Current operating map — Stage A, October 19, 2026
 
-Start with the revision 6 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
+Start with the revision 7 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
 `changes.py`, `change_sources.py`, `change_feed.py` and `tests/test_changes.py`.
 Existing daily_state/daily_federal/dashboard_collect produce official compact
 records; media/communications produce separately attributed metadata. The new
@@ -14,8 +14,14 @@ Daily/federal/Illinois-recovery/media workflows run the offline ledger under the
 existing shared state lock before publication. Pages/CI builds remain read-only.
 The 01:00 Central schedule and spending limits are unchanged. Only the existing
 narrow media relevance task uses a hosted model. PDF work is deferred, and digest
-delivery is not deployed. Ten allowlisted public files total at most 650 KB;
-working JSON is capped at 20 MB, including a 10 MB ledger. Privacy checks and the
+delivery is not deployed. Ten base public files total at most 650 KB;
+the October 20 member-history extension adds separately allowlisted static pages
+capped at 2 MB. See [MEMBER_HISTORY.md](MEMBER_HISTORY.md). Current build output
+reports both components and their sum; working canonical records are not copied
+into a new stored index. Each page contains at most 25 entries and works without
+scripts. History publication rechecks the shared fact schema and fingerprint;
+quiet baselines remain history rather than new alerts. Working JSON is capped
+at 20 MB, including a 10 MB ledger. Privacy checks and the
 bounded error journal cover Stage A as well. No new service/database is needed.
 
 ## Stage B hearing layer — October 20, 2026
