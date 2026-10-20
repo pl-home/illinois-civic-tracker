@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-20T13:59:49.246133+00:00",
+  "checked_at": "2026-10-20T14:27:26.917896+00:00",
   "members": {
     "fritts": {
       "status": "ok",
-      "checked_at": "2026-10-20T13:59:49.246133+00:00",
+      "checked_at": "2026-10-20T14:27:26.917896+00:00",
       "candidates": [
         {
           "id": "6200806ad5f0d349d1657570",
@@ -44,11 +44,12 @@
         }
       ],
       "query": "\"Bradley Fritts\" OR \"Brad Fritts\" when:200d",
-      "lookback_days": 200
+      "lookback_days": 200,
+      "last_successful_checked_at": "2026-10-20T14:27:26.917896+00:00"
     },
     "arellano": {
       "status": "ok",
-      "checked_at": "2026-10-20T13:59:49.246133+00:00",
+      "checked_at": "2026-10-20T14:27:26.917896+00:00",
       "candidates": [
         {
           "id": "9fce761a8c3ebc5dde0c9d71",
@@ -76,11 +77,12 @@
         }
       ],
       "query": "\"Li Arellano\" when:200d",
-      "lookback_days": 200
+      "lookback_days": 200,
+      "last_successful_checked_at": "2026-10-20T14:27:26.917896+00:00"
     },
     "lahood": {
       "status": "ok",
-      "checked_at": "2026-10-20T13:59:49.246133+00:00",
+      "checked_at": "2026-10-20T14:27:26.917896+00:00",
       "candidates": [
         {
           "id": "94bc0c2c64fe6d14e087a6a7",
@@ -299,18 +301,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "8b3d5c8ffd3b53ed5f4063d0",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "Rep. LaHood advocates for Belvidere Assembly Plant reopening, crucial for local jobs",
-          "snippet": "Rep. LaHood advocates for Belvidere Assembly Plant reopening, crucial for local jobs MyStateline",
-          "publisher": "MyStateline",
-          "publisher_host": "mystateline.com",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMFQ3cUd2SE5abGdMbjdqOF9FTzdZMGg5WDg4U2JYUFBnS1p0eXJrdkQxOWRUQkR1YWJYODZQTlBLT0QyLUQ5SENuNVd4bXVIUXNiM0xtdy1mS3Z1Q2R5ZzNvRkt1eW15SFY5N3lueUdIeTQ2eDBfWWhwWGhfWVVHNUdzOElMZGJrY0trVVEtSGxsS0tLajk1RF8zclFqZWFLYlZLMWw1anVtSjB2OU1XTkF5UEJGa2_SAbwBQVVfeXFMTlNzS1FLdmN2a0ZFUE84ZlU4dTlEMUZta3EzSFdaY3pTTnJ1RkZJVTVlSVJULVo0Y1I0b3RYS29WS3JTWHk2dEhWRmp6UVVXZXRQYkhiY0JUTThCSHlXRUFXYjhrRng5S2NXWjR6M2gtWW51RGhVRWdPYTdsSHE1bE1Zd3lMV0U2YkVzT3ZxS2dhSVhYTXU1Sm84MXladWRQOXhma2w4bXlxWXpkVVkybUxnWlY4WDF4b093b3Q",
-          "published_at": "2026-07-10T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "ac0fe7c1411478a157ccfea2",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
@@ -432,11 +422,12 @@
         }
       ],
       "query": "\"Darin LaHood\" when:200d",
-      "lookback_days": 200
+      "lookback_days": 200,
+      "last_successful_checked_at": "2026-10-20T14:27:26.917896+00:00"
     },
     "durbin": {
       "status": "ok",
-      "checked_at": "2026-10-20T13:59:49.246133+00:00",
+      "checked_at": "2026-10-20T14:27:26.917896+00:00",
       "candidates": [
         {
           "id": "3c0e7807a10c72485ee4a971",
@@ -644,11 +635,12 @@
         }
       ],
       "query": "\"Dick Durbin\" when:200d",
-      "lookback_days": 200
+      "lookback_days": 200,
+      "last_successful_checked_at": "2026-10-20T14:27:26.917896+00:00"
     },
     "duckworth": {
       "status": "ok",
-      "checked_at": "2026-10-20T13:59:49.246133+00:00",
+      "checked_at": "2026-10-20T14:27:26.917896+00:00",
       "candidates": [
         {
           "id": "6af4c7398e9fb93361450f9e",
@@ -767,6 +759,18 @@
           "publisher": "Chicago Tribune",
           "publisher_host": "chicagotribune.com",
           "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5UZXluMFJBVXBES3BoWkZyM0REb1YxQjBBSlFRTGtiTTAxY1JiSDJYdWtZZ3V4azNVOVRQVVNacml3SU1ZRlRhUDI0TWQyWHJOOVhYb1BDOS01Zi1WaEhLX2IzRXR4RUgyV0ZoaA",
+          "published_at": "2026-07-31T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "7765a5c67d6bcaa843d798fb",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Durbin and Duckworth challenge FAA decision to extend O’Hare flight caps",
+          "snippet": "Durbin and Duckworth challenge FAA decision to extend O’Hare flight caps MyStateline",
+          "publisher": "MyStateline",
+          "publisher_host": "mystateline.com",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPLVdHY0JmdnRiTWVqVkl5Z1hfdGdKUmhiVU9mLTRpUmt2ZXltMU4tVW1ySkJFUjM0eUdmbDJUdVFLd2VERExRNUlnX2NldHJtYl95WG5zVno4QXN6NW9mTkxIQW9TdkNJd0pWZHFOSWE3UlRpSmU3V1JZZzlzSGVWYzQ2TTRXVGhvZWpXbVAtMEFoZ1hIYWE3dW9pSGVhQlhLR2lGbFJXclfSAa4BQVVfeXFMUFRFRUk4R3ZtWGEza1VfVzNyUWtiRUpqdW5KNG40MDJIWFcyQmt4V3gwdldpdXZUOXhPOXgtanRhWlBjN1pXSzBCU1daNG0tbGdjWGZYcUJTbzJPTkxIc2ptdkctVmNIQ0MwdnJuMUpzaXZPVVRmNFVuWmw3RU5hRnpBdlBpM1MwSXNmTVFVdEEtWU9KcnRwZHdfN2xjUTZtdVhGcWFaSC1PMGRIUkpB",
           "published_at": "2026-07-31T07:00:00+00:00",
           "link_route": "Google News"
         },
@@ -913,10 +917,23 @@
           "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUGZCM3JYTVNkYU1yckZJUmE0QW9CQjBZYld5M1Z2VlZBS2VSdWZ2Y1N2Uk1sQXJKYkJuY3RPT2U4YWxqb1R6YUs3YVM2eTQ5R2xUQVJ6ZjQ3ZS1UVEFrR20wWVRVTVN3bWJqTS1LZjlhVHN5dURsbmI4bTd5NVZrNUdvYVlhWkxU",
           "published_at": "2026-05-15T07:00:00+00:00",
           "link_route": "Google News"
+        },
+        {
+          "id": "b75984f0a19e39bdf33beb0c",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth Grills Hegseth, Caine Over 'Lack Of Strategy' In Iran",
+          "snippet": "Duckworth Grills Hegseth, Caine Over 'Lack Of Strategy' In Iran RiverBender.com",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQ09LVlJpMWxjTFh2QS1xVDRJbk9Ed05Fa1NuOVoyeV9pR214MGd0cFB3LVhMMWFWVVo1QVpnTlUxUGsyUF81MWh2NXZPeTRHVmlDX09iRVYtZkMtNWQtWnhrNFFkcEI1b2xMbEVhNG42RjFnaEpFNnZVN1lOMS04RGZiLVJXbVNyTEVDb3dyRUlqUVV0T1RfOUtXOWZsa1ZjQW9LRk4xcU5xcGlpWVVpag",
+          "published_at": "2026-04-30T07:00:00+00:00",
+          "link_route": "Google News"
         }
       ],
       "query": "\"Tammy Duckworth\" when:200d",
-      "lookback_days": 200
+      "lookback_days": 200,
+      "last_successful_checked_at": "2026-10-20T14:27:26.917896+00:00"
     }
   }
 }
