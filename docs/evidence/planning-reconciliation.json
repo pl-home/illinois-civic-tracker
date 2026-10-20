@@ -1,0 +1,27 @@
+{
+  "checked_on": "2026-10-19",
+  "scope": "Documentation reconciliation only",
+  "revision": 4,
+  "checks": {
+    "original_three_document_archives_verified": true,
+    "workspace_and_published_plan_vision_match": true,
+    "relative_links_checked": 28,
+    "independent_consistency_review": "no material conflicts",
+    "code_configuration_workflows_and_data_unchanged": true,
+    "new_model_calls": 0
+  },
+  "documents": {
+    "README.md": {
+      "sha256": "4fc0b85c9b069c9fbd0d025d9bd9376625811aa12d2a697ca07feb0034c2ca06",
+      "bytes": 8425
+    },
+    "docs/PRODUCT_VISION.md": {
+      "sha256": "aa3a92c2fb8eaa8069ebde8cc6208b2f14e4bb2137b479dcd4f32ed01400438e",
+      "bytes": 15275
+    },
+    "docs/IMPLEMENTATION_PLAN.md": {
+      "sha256": "2d7f5094f81d1ea9206a4c630daf7909d0675cdd27f8ab651ae7d6336467e84a",
+      "bytes": 20233
+    }
+  }
+}

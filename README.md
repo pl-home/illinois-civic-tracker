@@ -2,6 +2,15 @@
 
 A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
 
+**Planning reconciled October 19, 2026:** start with the revision 4
+[product vision](docs/PRODUCT_VISION.md) and
+[implementation plan](docs/IMPLEMENTATION_PLAN.md). They reconcile the earlier
+research/build briefs with owner-approved changes and current implementation.
+The next M1 work is a common change feed with quality gates, hearing revisions,
+bounded party/relevance coverage and digest acceptance. PDF work is deferred.
+The plan records upstream code-reuse candidates and required attribution; it
+does not claim those components are already incorporated or activate a workflow.
+
 **Browse the tracker:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The homepage shows recent actions and recorded votes for Fritts, Arellano, LaHood, Durbin and Duckworth, plus committee links, a rolling month of posted meetings and recent attributed media reports. Source dates and incomplete coverage are explicit. Daily website refresh is configured for 01:00 Central; collection health and source dates remain visible. Weekly digest delivery remains undeployed. See [daily source scope and operation](docs/DAILY_REFRESH.md). See [dashboard sources and limits](docs/DASHBOARD.md). The original 134-item Fritts export remains available in the historical archive. Public facts only; no private advocacy notes are published. Each card also shows the exact news search and a separate office/campaign/party communications section with source coverage. See [news discovery and direct communications](docs/COMMUNICATIONS.md).
 
 The homepage reports recorded AI usage against **USD 0.02/day and USD 0.20/week**, using Monday–Sunday in America/Chicago. Actual charges and unsettled reservations are separate; earlier evaluations count. Details: [usage and budget policy](docs/BUDGET_USAGE.md).
@@ -25,7 +34,11 @@ manual only; daily committee collection remains disabled.
 
 **Staged daily website refresh is configured; complete M1 verification and digest deployment remain open.** The former local schedules were stopped before this repository was started. Historical source material is read only. This is a fresh repository; it contains no private vault, raw archive, email addresses or credential values.
 
-For a focused code review, read [architecture and boundaries](docs/ARCHITECTURE.md), [M0 findings](docs/M0_FINDINGS.md), and one representative evidence file.
+For a focused code review, read the current vision and implementation plan first,
+then [architecture and boundaries](docs/ARCHITECTURE.md),
+[dated M0 findings](docs/M0_FINDINGS.md), and one representative evidence file.
+Older operational statements and the October 16 build brief remain historical
+where superseded; code, configuration and dated receipts establish actual coverage.
 
 Read [the product vision](docs/PRODUCT_VISION.md), [the build brief](docs/BUILD_BRIEF_M0_M1.md) and [M0 findings](docs/M0_FINDINGS.md). Findings distinguish direct observations, normalization gaps and tests that still need time or corrected credentials. Hosted source access and Gmail self-delivery to INBOX pass. The follow-up audit reaches 96.59% comparison-key coverage and validates a five-page historical hearing fallback. Retained source gaps, upcoming hearing behavior and multi-day timing remain open.
 
