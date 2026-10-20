@@ -96,6 +96,14 @@
       ]
     }
   ],
+  "mention_queries": {
+    "fritts": "Fritts",
+    "arellano": "Arellano",
+    "lahood": "LaHood",
+    "durbin": "Durbin",
+    "duckworth": "Duckworth",
+    "lee-county": "\"Lee County\""
+  },
   "mention_terms": {
     "fritts": [
       "Bradley Fritts",

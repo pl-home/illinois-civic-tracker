@@ -314,7 +314,10 @@ def collect_mentions(root, now, get=fetch):
         if ex.code == 404: robot = RobotFileParser(); robot.parse([])
     except Exception: pass
     for subject, terms in config['mention_terms'].items():
-        query = ' OR '.join('"' + term + '"' for term in terms)
+        # WordPress ANDs search terms rather than interpreting an OR expression.
+        # A reviewed surname query covers aliases within one candidate budget;
+        # acceptance below still requires a configured full headline name.
+        query = config.get('mention_queries', {}).get(subject, terms[0])
         url = 'https://capitolfax.com/?' + urlencode({'s': query, 'feed': 'rss2'})
         row = {'url': url, 'checked_at': now, 'status': 'failed'}
         try:

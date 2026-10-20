@@ -217,7 +217,7 @@ class PartyTests(unittest.TestCase):
         self.assertEqual(result['sources']['lee-county']['matched'], 1)
         self.assertEqual(result['model_calls'], 0)
 
-    def test_mentions_query_includes_aliases_with_one_twelve_candidate_budget(self):
+    def test_mentions_surname_query_covers_aliases_with_one_twelve_candidate_budget(self):
         self.config['mention_terms'] = {'fritts': ['Bradley Fritts', 'Brad Fritts']}; self.save_config()
         seen = []
         def get(url, limit):
@@ -226,7 +226,7 @@ class PartyTests(unittest.TestCase):
             return b'<rss><channel/></rss>', 'application/rss+xml'
         parties.collect_mentions(self.root, NOW.isoformat(), get)
         from urllib.parse import parse_qs, urlsplit
-        self.assertEqual(parse_qs(urlsplit(seen[1]).query)['s'], ['"Bradley Fritts" OR "Brad Fritts"'])
+        self.assertEqual(parse_qs(urlsplit(seen[1]).query)['s'], ['Fritts'])
         self.assertEqual(len(seen), 2)
 
     def test_party_failures_and_recoveries_enter_bounded_journal(self):

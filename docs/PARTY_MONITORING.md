@@ -84,7 +84,9 @@ source for contact details. HTML source strings are escaped when displayed.
 - Existing source/cost ledgers and old evidence are not deleted or reset.
 
 Capitol Fax gets one anonymous search feed per member and one for **Lee County**,
-up to twelve candidates each. Only public, dated, exact headline name matches are
+up to twelve candidates each. Reviewed surname queries cover name aliases within
+that single bound; the county query uses the quoted phrase. WordPress combines
+search terms with AND, so an OR expression is not used. Only public, dated, exact headline name matches are
 retained; protected titles, future/invalid dates and other hosts are excluded.
 A search result is not evidence of a body-text mention. A zero count says nothing
 about mentions inside an article or paywalled content. This is separate mention
