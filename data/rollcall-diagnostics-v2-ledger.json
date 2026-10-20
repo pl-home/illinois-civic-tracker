@@ -6,9 +6,9 @@
     {
       "case_id": "10400HB1054_42707",
       "attempted_at": "2026-10-20T01:37:58.260807+00:00",
-      "status": "reserved",
+      "status": "attempted-invalid",
       "reserved_usd": "0.0015",
-      "charged_usd": null,
+      "charged_usd": "0.00011116",
       "source": {
         "url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB1054_42707.pdf",
         "status": 200,
@@ -24,9 +24,9 @@
     {
       "case_id": "10400HB2490_42146",
       "attempted_at": "2026-10-20T01:37:58.260807+00:00",
-      "status": "reserved",
+      "status": "attempted-invalid",
       "reserved_usd": "0.0015",
-      "charged_usd": null,
+      "charged_usd": "0.00011276",
       "source": {
         "url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB2490_42146.pdf",
         "status": 200,
@@ -42,9 +42,9 @@
     {
       "case_id": "10400HB1056HFA2_43449",
       "attempted_at": "2026-10-20T01:37:58.260807+00:00",
-      "status": "reserved",
+      "status": "attempted-invalid",
       "reserved_usd": "0.0015",
-      "charged_usd": null,
+      "charged_usd": "0.0001102",
       "source": {
         "url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB1056HFA2_43449.pdf",
         "status": 200,
@@ -60,9 +60,9 @@
     {
       "case_id": "10400SB0093_41621",
       "attempted_at": "2026-10-20T01:37:58.260807+00:00",
-      "status": "reserved",
+      "status": "attempted-invalid",
       "reserved_usd": "0.0015",
-      "charged_usd": null,
+      "charged_usd": "0.00008964",
       "source": {
         "url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB0093_41621.pdf",
         "status": 200,
@@ -78,9 +78,9 @@
     {
       "case_id": "10400SB1274SCA1_41641",
       "attempted_at": "2026-10-20T01:37:58.260807+00:00",
-      "status": "reserved",
+      "status": "attempted-invalid",
       "reserved_usd": "0.0015",
-      "charged_usd": null,
+      "charged_usd": "0.00009948",
       "source": {
         "url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400SB1274SCA1_41641.pdf",
         "status": 200,
@@ -96,9 +96,9 @@
     {
       "case_id": "10400HB0762_44872",
       "attempted_at": "2026-10-20T01:37:58.260807+00:00",
-      "status": "reserved",
+      "status": "attempted-invalid",
       "reserved_usd": "0.0015",
-      "charged_usd": null,
+      "charged_usd": "0.0000906",
       "source": {
         "url": "https://ilga.gov/Documents/legislation/votehistory/104/senate/committeevotes/10400HB0762_44872.pdf",
         "status": 200,
