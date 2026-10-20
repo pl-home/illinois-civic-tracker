@@ -1,9 +1,9 @@
 {
-  "status": "complete",
-  "work_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "status": "prepared",
+  "work_hash": "0244e75ccf0174dd02f91c7fce93d8beb7ee1ef42832018a17db8926e6c0410e",
   "model_calls": 0,
   "costs": {
-    "liability_usd": "0"
+    "reserved_usd": "0.002"
   },
   "decisions": {},
   "deferred_ids": [],

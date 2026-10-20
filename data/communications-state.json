@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-18T10:53:35.092845+00:00",
+  "checked_at": "2026-10-20T13:59:49.246133+00:00",
   "sources": {
     "fritts-office": {
       "items": [
@@ -139,7 +139,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-08",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Representative Bradley Fritts office",
       "kind": "office",
       "members": [
@@ -285,7 +285,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-09-24",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Senator Li Arellano office",
       "kind": "office",
       "members": [
@@ -360,26 +360,13 @@
           "kind": "office",
           "publisher_host": "lahood.house.gov",
           "source_url": "https://lahood.house.gov/news"
-        },
-        {
-          "id": "727b61057339e54e24b32bf3",
-          "member_id": "lahood",
-          "title": "LaHood Supports AADAPT Act to Better Support Alzheimer's and Dementia Patients",
-          "url": "https://lahood.house.gov/2026/7/lahood-supports-aadapt-act-to-better-support-alzheimer-s-and-dementia-patients",
-          "published_at": "2026-07-20",
-          "date_precision": "day",
-          "source_id": "lahood-office",
-          "publisher": "Representative Darin LaHood office",
-          "kind": "office",
-          "publisher_host": "lahood.house.gov",
-          "source_url": "https://lahood.house.gov/news"
         }
       ],
       "entries_checked": 10,
       "rejected_entries": 0,
       "latest_source_date": "2026-10-07",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Representative Darin LaHood office",
       "kind": "office",
       "members": [
@@ -390,6 +377,45 @@
     },
     "durbin-office": {
       "items": [
+        {
+          "id": "b2cb08fab0b626c7f5962eef",
+          "member_id": "durbin",
+          "title": "Durbin Statement On President Zelenskyy Meeting With A Bipartisan Group Of Members Following President Trump’s Recent Actions Further Catering To Vladimir Putin",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-statement-on-president-zelenskyy-meeting-with-a-bipartisan-group-of-members-following-president-trumps-recent-actions-further-catering-to-vladimir-putin",
+          "published_at": "2026-10-19",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "0ddbfe3edc8510771de1e62f",
+          "member_id": "durbin",
+          "title": "Ahead Of The Midterm Elections, Durbin, Padilla, Warner, & Peters Request Information From DOJ & FBI Regarding The Trump Administration’s Attempted Attacks On Our Elections",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/ahead-of-the-midterm-elections-durbin-padilla-warner-and-peters-request-information-from-doj_fbi-regarding-the-trump-administrations-attempted-attacks-on-our-elections",
+          "published_at": "2026-10-15",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "9f85b96c72dbdf76dcdf8045",
+          "member_id": "durbin",
+          "title": "Durbin Receives Proclamation From Chicago Metropolitan Agency For Planning In Recognition Of Decades Of Advocacy For Illinois Infrastructure Projects",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-receives-proclamation-from-chicago-metropolitan-agency-for-planning-in-recognition-of-decades-of-advocacy-for-illinois-infrastructure-projects",
+          "published_at": "2026-10-14",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
         {
           "id": "d4e23c18dc9962f0d2f5171a",
           "member_id": "durbin",
@@ -610,52 +636,13 @@
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
           "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
-        },
-        {
-          "id": "905773babc9b8625371de234",
-          "member_id": "durbin",
-          "title": "Durbin Questions Former Special Counsel Jack Smith During Senate Judiciary Committee Hearing",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-questions-former-special-counsel-jack-smith-during-senate-judiciary-committee-hearing",
-          "published_at": "2026-09-29",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
-        },
-        {
-          "id": "2f29546ef6bc4ce3c6cf2192",
-          "member_id": "durbin",
-          "title": "Durbin Delivers Opening Statement During Judiciary Committee Hearing With Former Special Counsel Jack Smith",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-delivers-opening-statement-during-judiciary-committee-hearing-with-former-special-counsel-jack-smith",
-          "published_at": "2026-09-29",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
-        },
-        {
-          "id": "ef5625c5f7b90c14cb7d1b90",
-          "member_id": "durbin",
-          "title": "Durbin Amendment To Protect State Laws Related To Student Athlete Abuse, Hazing, And Campus Safety Passes Senate As Part Of College Sports Bill",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-amendment-to-protect-state-laws-related-to-student-athlete-abuse-hazing-and-campus-safety-passes-senate-as-part-of-college-sports-bill",
-          "published_at": "2026-09-28",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         }
       ],
       "entries_checked": 20,
       "rejected_entries": 0,
-      "latest_source_date": "2026-10-13",
+      "latest_source_date": "2026-10-19",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Senator Dick Durbin office",
       "kind": "office",
       "members": [
@@ -666,6 +653,19 @@
     },
     "duckworth-office": {
       "items": [
+        {
+          "id": "ca44d9c7313e6bbb6bf43fea",
+          "member_id": "duckworth",
+          "title": "Duckworth, Senate Democrats Call on HHS Secretary to Reverse Plans for Trump Administration Lawyers to Represent Unaccompanied Children in Immigration Court",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-senate-democrats-call-on-hhs-secretary-to-reverse-plans-for-trump-administration-lawyers-to-represent-unaccompanied-children-in-immigration-court",
+          "published_at": "2026-10-19",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
         {
           "id": "cb1163fbaa55e144cb9b84b9",
           "member_id": "duckworth",
@@ -912,26 +912,13 @@
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
           "source_url": "https://www.duckworth.senate.gov/news/press-releases"
-        },
-        {
-          "id": "bff20bdc686ca75c2017e27b",
-          "member_id": "duckworth",
-          "title": "As Trump Craters Economy, Duckworth and Meng Reintroduce Resolution to Empower Mothers in the Workforce",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/as-trump-craters-economy-duckworth-and-meng-reintroduce-resolution-to-empower-mothers-in-the-workforce",
-          "published_at": "2026-09-25",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         }
       ],
       "entries_checked": 20,
       "rejected_entries": 0,
-      "latest_source_date": "2026-10-16",
+      "latest_source_date": "2026-10-19",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Senator Tammy Duckworth office",
       "kind": "office",
       "members": [
@@ -946,7 +933,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2025-07-15",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Fritts campaign",
       "kind": "campaign",
       "members": [
@@ -961,7 +948,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2024-11-05",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "LaHood campaign",
       "kind": "campaign",
       "members": [
@@ -974,7 +961,7 @@
       "status": "link-only",
       "items": [],
       "note": "Older campaign site describes his previous House race; current dated release feed not verified.",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Arellano campaign (older site)",
       "kind": "campaign",
       "members": [
@@ -986,7 +973,7 @@
       "status": "link-only",
       "items": [],
       "note": "Campaign link verified previously; no dated public release feed verified for this collector.",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Durbin campaign",
       "kind": "campaign",
       "members": [
@@ -998,7 +985,7 @@
       "status": "link-only",
       "items": [],
       "note": "No dated public release archive verified; campaign site link only.",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Duckworth campaign",
       "kind": "campaign",
       "members": [
@@ -1012,7 +999,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-14",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Illinois Senate Republican Caucus",
       "kind": "party",
       "members": [
@@ -1027,7 +1014,7 @@
       "status": "link-only",
       "items": [],
       "note": "Public homepage returned HTTP 403 during collector setup; link only.",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Illinois House Republican Caucus",
       "kind": "party",
       "members": [
@@ -1041,7 +1028,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-17",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Senate Democratic Caucus",
       "kind": "party",
       "members": [
@@ -1057,7 +1044,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-08-18",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Lee County Democrats",
       "kind": "party",
       "members": [
@@ -1073,7 +1060,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-01",
       "status": "ok",
-      "checked_at": "2026-10-18T10:53:35.092845+00:00",
+      "checked_at": "2026-10-20T13:59:49.246133+00:00",
       "label": "Lee County Republican Central Committee",
       "kind": "party",
       "members": [
