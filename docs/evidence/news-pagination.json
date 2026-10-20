@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-20T14:25:38.525707+00:00",
+  "scope": "five reports per member-news page with independent static pagination",
+  "artifact": {
+    "records": 134,
+    "ceremonial": 24,
+    "artifact_bytes": 2907482,
+    "base_artifact_bytes": 507306,
+    "member_history": {
+      "members": {
+        "fritts": {
+          "dated": 279,
+          "undated": 0,
+          "withheld_records": 0,
+          "earliest": "2025-01-09",
+          "latest": "2026-10-02",
+          "screened_news": 3,
+          "news_pages": 1
+        },
+        "arellano": {
+          "dated": 432,
+          "undated": 0,
+          "withheld_records": 0,
+          "earliest": "2025-01-13",
+          "latest": "2026-08-21",
+          "screened_news": 2,
+          "news_pages": 1
+        },
+        "lahood": {
+          "dated": 38,
+          "undated": 188,
+          "withheld_records": 0,
+          "earliest": "2025-01-03",
+          "latest": "2026-09-17",
+          "screened_news": 5,
+          "news_pages": 1
+        },
+        "durbin": {
+          "dated": 234,
+          "undated": 594,
+          "withheld_records": 0,
+          "earliest": "2025-01-15",
+          "latest": "2026-09-30",
+          "screened_news": 5,
+          "news_pages": 1
+        },
+        "duckworth": {
+          "dated": 135,
+          "undated": 647,
+          "withheld_records": 0,
+          "earliest": "2025-01-13",
+          "latest": "2026-09-24",
+          "screened_news": 5,
+          "news_pages": 1
+        }
+      },
+      "pages": 113,
+      "artifact_bytes": 2400176
+    }
+  },
+  "offline_tests": 278,
+  "privacy_findings": 0,
+  "build_model_calls": 0,
+  "source_and_financial_files_unchanged_before_refresh": true,
+  "guards": {
+    "display_window_days": 200,
+    "homepage_window_days": 90,
+    "homepage_items": 3,
+    "news_page_size": 5,
+    "max_reports_per_member": 100,
+    "max_display_cache_bytes": 1000000,
+    "working_json_bytes": 20000000,
+    "base_artifact_bytes": 650000,
+    "member_html_bytes": 3000000,
+    "daily_media_calls": 4,
+    "candidates_per_member": 4,
+    "daily_usd": "0.02",
+    "weekly_usd": "0.20",
+    "lifetime_usd": "20"
+  },
+  "tests": [
+    "12 accepted reports across three pages without loss or duplicates",
+    "exact screening-cache identity and member/URL/date validation",
+    "unknown/negative/expired/future records withheld",
+    "feed failures preserve original source dates",
+    "changed screening decisions invalidate stored reports",
+    "rolling count and atomic byte-bound failures",
+    "screening continues beyond three positives without increasing candidate/request caps"
+  ],
+  "upstream_code_newly_copied": false,
+  "limitations": [
+    "bounded indexed coverage, not a complete news archive",
+    "older screening progresses gradually under unchanged budget",
+    "publisher content/date are not independently verified against article bodies",
+    "news coverage remains separate from office/campaign/party communications",
+    "PDF work remains deferred"
+  ]
+}

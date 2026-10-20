@@ -1,8 +1,15 @@
 # Architecture and reviewer guide
 
+**October 20 pagination follow-up:** member news now shows five articles per page
+with older/newer navigation and a bounded rolling cache of up to 100 screened
+reports per member, covering 200 days. Homepage news remains three within 90 days.
+This supersedes the earlier three-result member-column limit below. Read
+[NEWS_PAGINATION.md](NEWS_PAGINATION.md) for exact-cache checks, gradual screening,
+storage bounds and coverage limits. Model request and spending caps are unchanged.
+
 ## Current operating map — Stage A, October 19, 2026
 
-Start with the revision 8 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
+Start with the revision 9 vision/plan, [CHANGE_FEED.md](CHANGE_FEED.md),
 `changes.py`, `change_sources.py`, `change_feed.py` and `tests/test_changes.py`.
 Existing daily_state/daily_federal/dashboard_collect produce official compact
 records; media/communications produce separately attributed metadata. The new

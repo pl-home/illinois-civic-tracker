@@ -37,7 +37,7 @@ def meeting_row(meeting, reference=None):
 
 
 
-def media_section(member, lookback_days=90, as_of=None):
+def media_section(member, lookback_days=90, as_of=None, limit=3, offset=0):
     health = member.get('media_health', {})
     reports = member.get('media_reports', [])
     references = []
@@ -65,12 +65,15 @@ def media_section(member, lookback_days=90, as_of=None):
         if link.scheme != 'https' or link.username or link.password:
             continue
         route = ' · via Google News' if report.get('link_route') == 'Google News' else ''
-        rows.append(f'<li class="media-row"><time datetime="{e(report["published_at"])}">{e(report["published_at"][:10])}</time><strong><a href="{e(report["url"])}">{e(report["title"])} ↗</a></strong><p class="minor">{e(report["publisher"])}{route}</p></li>')
-        if len(rows) == 3: break
-    body = ''.join(rows) or f'<li class="empty-source">No screened reports are available in the last {lookback_days} days from the selected newsrooms. Coverage is incomplete.</li>'
+        retained = (f'<p class="minor">Retained metadata · last seen {e(report["source_checked_at"][:10])}</p>'
+                    if report.get('source_checked_at') and report['source_checked_at'] != health.get('checked_at') else '')
+        rows.append(f'<li class="media-row"><time datetime="{e(report["published_at"])}">{e(report["published_at"][:10])}</time><strong><a href="{e(report["url"])}">{e(report["title"])} ↗</a></strong><p class="minor">{e(report["publisher"])}{route}</p>{retained}</li>')
+    body = ''.join(rows[offset:offset+limit]) or f'<li class="empty-source">No screened reports are available in the last {lookback_days} days from the selected newsrooms. Coverage is incomplete.</li>'
     warning = ''
     if health.get('source_status') != 'ok' or health.get('inference_status') != 'complete':
         warning = '<p class="warning">News refresh or relevance screening is incomplete; previously screened reports may be retained.</p>'
+    if health.get('pending_candidates') or health.get('withheld_candidates'):
+        warning += f'<p class="minor">{e(str(health.get("pending_candidates",0)))} candidates await screening; {e(str(health.get("withheld_candidates",0)))} are withheld after invalid, uncertain or quarantined screening. Unscreened articles are not displayed.</p>'
     searched_days = health.get('lookback_days', 90)
     if searched_days < lookback_days:
         warning += f'<p class="warning">The latest source discovery used {e(searched_days)} days; the {lookback_days}-day search has not completed yet.</p>'
@@ -78,8 +81,9 @@ def media_section(member, lookback_days=90, as_of=None):
     search = member.get('media_search', {})
     method = ''
     if search:
-        method = f'<details class="news-method"><summary>How we find news about {e(member["name"])}</summary><p>Exact Google News query: <code>{e(search["query"])}</code></p><p><a href="{e(search["search_url"])}">Open this news search ↗</a> · <a href="{e(search["feed_url"])}">RSS feed used by the tracker ↗</a></p><ol><li>Read up to 150 feed entries; discovery window: {e(searched_days)} days. Require publishers in the <a href="{e(search["publisher_policy_url"])}">reviewed newsroom list ↗</a>.</li><li>Require a member-name anchor in the headline or snippet; remove duplicate headlines and explicit opinion/editorial titles, then sort by publication date and retain up to 30 candidates.</li><li>Qwen screens headline relevance using supplied IDs only. Cached decisions are reused; up to four unseen candidates per member are considered per run within the shared daily budget.</li><li>Display up to three newest accepted results within this page’s {lookback_days}-day window. This is bounded indexed-feed coverage, not a complete article archive or a search of full article text.</li></ol><p class="minor">{e(search["candidate_count"])} eligible feed candidates at the latest check. Sections use the publishing source: a newsroom may republish a release, and its original authorship is not verified from feed metadata.</p></details>'
-    return f'<section class="member-media" aria-label="Recent media reports about {e(member["name"])}"><h3>Recent media reports</h3><p class="minor">Up to three latest reports found · last {lookback_days} days · selected major and Illinois newsrooms. AI screens headline relevance; article content is not independently verified.</p>{warning}<ul class="media-list">{body}</ul><p class="minor">News checked: {e(checked)}. Links may route through Google News; publisher access terms apply.</p>{method}</section>'
+        method = f'<details class="news-method"><summary>How we find news about {e(member["name"])}</summary><p>Exact Google News query: <code>{e(search["query"])}</code></p><p><a href="{e(search["search_url"])}">Open this news search ↗</a> · <a href="{e(search["feed_url"])}">RSS feed used by the tracker ↗</a></p><ol><li>Read up to 150 feed entries; discovery window: {e(searched_days)} days. Require publishers in the <a href="{e(search["publisher_policy_url"])}">reviewed newsroom list ↗</a>.</li><li>Require a member-name anchor in the headline or snippet; remove duplicate headlines and explicit opinion/editorial titles, then sort by publication date and retain up to 30 candidates.</li><li>Qwen screens headline relevance using supplied IDs only. Cached decisions are reused; up to four unseen candidates per member are considered per run within the shared daily budget. Screening continues past the first three accepted articles.</li><li>Show up to {limit} accepted results per page within this page’s {lookback_days}-day window. The member news browser retains up to 100 screened reports per member. This is bounded indexed-feed coverage, not a complete article archive or a search of full article text.</li></ol><p class="minor">{e(search["candidate_count"])} eligible feed candidates at the latest check. Sections use the publishing source: a newsroom may republish a release, and its original authorship is not verified from feed metadata.</p></details>'
+    count_label = 'Up to three latest reports found' if limit == 3 else f'Up to {limit} reports per page'
+    return f'<section class="member-media" aria-label="Recent media reports about {e(member["name"])}"><h3>Recent media reports</h3><p class="minor">{count_label} · last {lookback_days} days · selected major and Illinois newsrooms. AI screens headline relevance; article content is not independently verified.</p>{warning}<ul class="media-list">{body}</ul><p class="minor">News checked: {e(checked)}. Links may route through Google News; publisher access terms apply.</p>{method}</section>'
 
 
 

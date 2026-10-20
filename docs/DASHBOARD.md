@@ -1,5 +1,12 @@
 # Member activity dashboard
 
+**October 20 pagination follow-up:** member news now shows five articles per page
+with older/newer navigation and a bounded rolling cache of up to 100 screened
+reports per member, covering 200 days. Homepage news remains three within 90 days.
+This supersedes the earlier three-result member-column limit below. Read
+[NEWS_PAGINATION.md](NEWS_PAGINATION.md) for exact-cache checks, gradual screening,
+storage bounds and coverage limits. Model request and spending caps are unchanged.
+
 **October 20 member-history update:** names and **More sponsorship & bill
 activity** open [individual history pages](MEMBER_HISTORY.md), generated from
 accepted shared-ledger facts. Dated activity and undated relationships have

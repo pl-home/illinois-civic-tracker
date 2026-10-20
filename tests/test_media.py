@@ -135,6 +135,21 @@ class MediaTests(unittest.TestCase):
             self.assertEqual(source['query'],CONFIG['queries'][MEMBER['id']])
             self.assertEqual(source['lookback_days'],200)
 
+    def test_queue_continues_past_three_accepted_reports_without_changing_request_bound(self):
+        raw=feed(*(item(title=f'Fritts legislative report {i}') for i in range(7)))
+        rows=media.parse_feed(raw,MEMBER,CONFIG,NOW)
+        accepted={row['id']:True for row in rows[:3]}
+        statuses={row['id']:'valid' for row in rows[:3]}
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            media.save(root/'config/media.json',CONFIG)
+            media.save(root/'config/dashboard.json',{'members':[MEMBER]})
+            media.save(root/'data/dashboard.json',{'members':[MEMBER]})
+            with patch.object(media,'fetch_feed',return_value=raw),patch.object(media.inference,'cached_statuses',return_value=statuses),patch.object(media.inference,'cached_decisions',return_value=accepted),patch.object(media.inference,'prepare',return_value={'status':'prepared'}) as prepare:
+                media.prepare(root,NOW)
+            self.assertEqual({c['id'] for c in prepare.call_args.args[1]}, {r['id'] for r in rows[3:]})
+            self.assertEqual(len(prepare.call_args.args[1]),CONFIG['candidates_per_member'])
+
     def test_apply_preserves_older_screened_articles_without_relabeling_old_source_window(self):
         row=media.parse_feed(feed(item()),MEMBER,CONFIG,NOW)[0]
         row['published_at']=(NOW-timedelta(days=120)).isoformat()

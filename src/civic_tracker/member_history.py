@@ -11,6 +11,8 @@ PAGE_SIZE = 25
 MAX_PAGES = 100  # Per member, per dated/undated section; fail closed on growth.
 MAX_HISTORY_BYTES = 3_000_000
 KINDS = {'filing', 'sponsor-role', 'bill-action'}
+NEWS_PAGE_SIZE = 5
+MAX_NEWS_PAGES = 20
 
 
 def e(value):
@@ -24,8 +26,25 @@ def filename(member, page=1, undated=False):
 
 
 def artifact_names():
-    return {filename(member, page, undated) for member in MEMBERS
-            for page in range(1, MAX_PAGES + 1) for undated in (False, True)}
+    return ({filename(member, page, undated) for member in MEMBERS
+             for page in range(1, MAX_PAGES + 1) for undated in (False, True)} |
+            {news_filename(member,page) for member in MEMBERS for page in range(1,MAX_NEWS_PAGES+1)})
+
+
+def news_filename(member, page=1):
+    if member not in MEMBERS or type(page) is not int or not 1 <= page <= MAX_NEWS_PAGES:
+        raise ValueError('member-news-page-identity')
+    return f'member-{member}-news{"-"+str(page) if page>1 else ""}.html'
+
+
+def news_navigation(member, number, count):
+    links = []
+    if number > 1: links.append(f'<a rel="prev" href="{news_filename(member,number-1)}#news">← Newer coverage</a>')
+    if number < count: links.append(f'<a rel="next" href="{news_filename(member,number+1)}#news">Older coverage →</a>')
+    if count > 1:
+        links.extend([f'<a href="{news_filename(member)}#news">Newest coverage</a>',
+                      f'<a href="{news_filename(member,count)}#news">Oldest available coverage</a>'])
+    return f'<nav class="news-pagination" aria-label="News pages"><span>News page {number} of {count} · {NEWS_PAGE_SIZE} per page</span>{"".join(links)}</nav>'
 
 
 def accepted_rows(ledger, member, as_of):
@@ -97,11 +116,14 @@ def pagination(member, number, count, undated):
 
 def build_pages(root, snapshot):
     from .dashboard import media_section
+    from . import news_archive
     style_version = sha256((root/'web/styles.css').read_bytes()).hexdigest()[:12]
     ledger = read(root/'data/change-ledger.json', empty())
     quality = read(root/'data/change-quality-report.json', {})
     withheld = {s['id'] for s in quality.get('scopes', []) if s['status'] == 'withheld'}
     pages = {}; report = {}
+    archive = read(root/'data/media-history.json',{'members':{}})
+    news_state = read(root/'data/media-state.json',{'members':{}})
     for member in snapshot['members']:
         ident = member['id']
         dated, undated, rejected = accepted_rows(ledger, ident, snapshot['as_of'])
@@ -127,7 +149,15 @@ def build_pages(root, snapshot):
                     f'{counts["bill-action"]} related bill updates. {len(undated)} undated relationship listings.')
         date_range = (f'Available dated records: {report[ident]["earliest"]}–{report[ident]["latest"]}.'
                       if dated else 'No dated entries are available in the accepted records.')
-        news_column = media_section(member, lookback_days=200, as_of=snapshot['as_of'])
+        news_rows = news_archive.reports(root,member,snapshot['as_of'],archive,news_state)
+        news_member = {**member,'media_reports':news_rows,
+            'media_health':{**member.get('media_health',{}),**news_archive.coverage(root,news_state['members'].get(ident,{}))}}
+        news_count = max(1,math.ceil(len(news_rows)/NEWS_PAGE_SIZE))
+        report[ident]['screened_news'] = len(news_rows)
+        report[ident]['news_pages'] = news_count
+        news_column = (media_section(news_member,lookback_days=200,as_of=snapshot['as_of'],limit=NEWS_PAGE_SIZE)
+                       + news_navigation(ident,1,news_count)
+                       + f'<p><a href="{news_filename(ident)}#news">Browse all {len(news_rows)} screened reports →</a></p>')
         for is_undated, records in ((False, dated), (True, undated)):
             count = max(1, math.ceil(len(records)/PAGE_SIZE))
             if count > MAX_PAGES:
@@ -161,6 +191,23 @@ def build_pages(root, snapshot):
                     f'<div class="member-history-columns"><section id="history"><h2>{e(title)}</h2>{nav}<ul class="activity-list">{rows}</ul>{nav}</section>'
                     f'<aside class="history-news" aria-label="News coverage for {e(member["name"])}">{news_column}</aside></div>'
                     '</main><footer><span>Official sources linked on each entry · No automatic outreach</span></footer></body></html>')
+        for number in range(1,news_count+1):
+            nav = news_navigation(ident,number,news_count)
+            body = media_section(news_member,lookback_days=200,as_of=snapshot['as_of'],limit=NEWS_PAGE_SIZE,
+                                 offset=(number-1)*NEWS_PAGE_SIZE)
+            pages[news_filename(ident,number)] = (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                '<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer">'
+                '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; style-src \'self\'; base-uri \'none\'; form-action \'none\'; object-src \'none\'">'
+                f'<title>{e(member["name"])} · News coverage · page {number}</title><link rel="stylesheet" href="styles.css?v={style_version}"></head>'
+                '<body class="dashboard member-news-archive"><a class="skip" href="#news">Skip to news coverage</a><header class="masthead">'
+                '<a class="brand" href="./"><span class="brand-mark" aria-hidden="true">IL</span>Illinois civic tracker</a>'
+                f'<nav aria-label="Main"><a href="{filename(ident)}">← Member bill activity</a><a href="./#member-{ident}">Homepage</a></nav></header><main>'
+                f'<section class="intro"><div><p class="eyebrow">{e(member["office"])}</p><h1>{e(member["name"])}</h1>'
+                '<p class="lede">News coverage · last 200 days</p></div></section>'
+                f'<section id="news"><h2>{len(news_rows)} screened reports available</h2><p>Newest first · five per page. '
+                'This is collected indexed coverage, not a complete archive. Screening expands within the existing daily budget; '
+                'missing reports do not establish a lack of coverage.</p>'
+                f'{nav}{body}{nav}</section></main><footer><span>Attributed newsroom links · No automatic outreach</span></footer></body></html>')
     size = sum(len(page.encode('utf-8')) for page in pages.values())
     if size > MAX_HISTORY_BYTES:
         raise ValueError('member-history-size-budget-exceeded')

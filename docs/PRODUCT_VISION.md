@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: product vision
 
-Revision 8 — October 20, 2026, America/Chicago.
+Revision 9 — October 20, 2026, America/Chicago.
 
 This reconciles the October 15 research plan, October 16 vision/build brief,
 subsequent owner decisions and the two external-project reviews. It preserves
@@ -12,11 +12,20 @@ implementations. Earlier plans and dated receipts remain historical evidence.
 Owner instructions and newer approved decisions take precedence over older text.
 
 October 20 owner-requested news extension: individual member history pages now
-include a 200-day newsroom column with up to three screened reports; homepage
+include a 200-day newsroom column with five reports per page and older/newer
+coverage links; homepage
 news retains 90 days. The same five feed requests, cache and model guard apply;
 no additional model request allowance, schedule or PDF task is enabled. Added
 static news markup raises the generated-member-HTML ceiling from 2 MB to 3 MB;
 the ten-file base remains 650 KB and canonical working JSON remains 20 MB.
+
+October 20 news-pagination follow-up: the member news browser shows five articles
+per page and retains up to 100 exact-cache-screened reports per member within
+200 days. The homepage retains three within 90 days. A rolling metadata store
+is capped at 1 MB inside the existing 20 MB JSON limit; static member/news HTML
+remains capped at 3 MB. Screening now continues beyond three accepted results,
+still at four unseen candidates per member and four paid media calls per day.
+Historical financial entries and uncertain requests are never reset or retried.
 
 ## 1. Purpose and access
 

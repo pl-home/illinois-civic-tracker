@@ -45,9 +45,9 @@ class MemberHistoryTests(unittest.TestCase):
                         self.assertIsNotNone(page.select_one('a[href="'+member['public_links'][kind]['url']+'"]'))
                     self.assertIsNone(page.find('script'))  # Works with scripts disabled.
                     for link in page.select('a[href^="member-"]'):
-                        self.assertIn(link['href'], self.pages)
+                        self.assertTrue(link['href'].split('#')[0] in self.pages,link['href'])
                         self.assertTrue(link['href'].startswith('member-'+ident))
-                    if not page.select_one('a[rel="next"]'): break
+                    if not page.select_one('.history-pagination a[rel="next"]'): break
                     number += 1
                 self.assertEqual(seen, [r['id'] for r in rows])
                 self.assertEqual(len(seen), len(set(seen)))
@@ -65,14 +65,16 @@ class MemberHistoryTests(unittest.TestCase):
 
     def test_every_member_history_page_has_200_day_news_column(self):
         for name,html in self.pages.items():
+            if '-news' in name: continue
             page=BeautifulSoup(html,'html.parser')
             columns=page.select_one('.member-history-columns')
             self.assertIsNotNone(columns.select_one('#history'),name)
             news=columns.select_one('aside.history-news .member-media')
             self.assertIsNotNone(news,name)
             self.assertIn('last 200 days',news.get_text(),name)
-            self.assertLessEqual(len(news.select('.media-row')),3,name)
+            self.assertLessEqual(len(news.select('.media-row')),5,name)
             self.assertIsNotNone(news.select_one('details.news-method'),name)
+            self.assertIsNotNone(columns.select_one('.news-pagination'),name)
 
     def test_tampered_fingerprint_wrong_session_unsafe_url_and_identity_are_withheld(self):
         candidate = next((k, s) for k,s in self.ledger['facts'].items()

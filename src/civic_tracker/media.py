@@ -124,24 +124,23 @@ def prepare(root, now):
         try:
             rows = parse_feed(fetch_feed(config['queries'][ident]), member, config, now)
             receipt = {'status':'ok','checked_at':now.isoformat(),'candidates':rows,
-                       'query':config['queries'][ident], 'lookback_days':config['lookback_days']}
+                       'query':config['queries'][ident], 'lookback_days':config['lookback_days'],
+                       'last_successful_checked_at':now.isoformat()}
         except Exception:
             rows = previous['members'].get(ident, {}).get('candidates', [])
             rows = [row for row in rows if now-timedelta(days=config['lookback_days']) <= datetime.fromisoformat(row['published_at']) <= now]
             receipt = {'status':'failed','checked_at':now.isoformat(),'error':'feed-unavailable-or-invalid','candidates':rows,
-                       'query':config['queries'][ident], 'lookback_days':config['lookback_days']}
+                       'query':config['queries'][ident], 'lookback_days':config['lookback_days'],
+                       'last_successful_checked_at':previous['members'].get(ident,{}).get('last_successful_checked_at') or
+                           (previous['members'].get(ident,{}).get('checked_at') if previous['members'].get(ident,{}).get('status')=='ok' else None)}
         state['members'][ident] = receipt
         all_cases = [case(row) for row in rows]
         inference.carry_forward_positives(root, all_cases)
         statuses = inference.cached_statuses(root, all_cases)
         known = inference.cached_decisions(root, all_cases)
-        accepted = 0; queued = 0
+        queued = 0
         for candidate in all_cases:
-            if known.get(candidate['id']) is True:
-                accepted += 1
-                if accepted >= config['max_items']:
-                    break
-            elif statuses.get(candidate['id']) in (None, 'reconsider') and queued < config['candidates_per_member']:
+            if candidate['id'] not in known and statuses.get(candidate['id']) in (None, 'reconsider') and queued < config['candidates_per_member']:
                 cases.append(candidate); queued += 1
     save(root/'data/media-state.json', state)
     from . import communications
@@ -158,6 +157,8 @@ def apply(root, now):
     report = load(root/'data/media-inference-report.json', {})
     decisions = report.get('decisions', {})
     snapshot = load(root/'data/dashboard.json')
+    from . import news_archive
+    history = news_archive.update(root,snapshot,state,now)
     for member in snapshot['members']:
         source = state['members'].get(member['id'], {})
         rows = source.get('candidates', [])
@@ -165,6 +166,7 @@ def apply(root, now):
         cached = inference.cached_decisions(root, all_cases)
         decisions_for_member = {**cached, **decisions}
         selected = [row for row in rows if decisions_for_member.get(row['id']) is True]
+        selected.extend(row for row in history[member['id']] if row['id'] not in {r['id'] for r in selected})
         # Preserve previously screened rows through temporary source/model failure.
         known = {row['id'] for row in selected}
         for row in member.get('media_reports', []):
@@ -173,16 +175,13 @@ def apply(root, now):
         selected = [row for row in selected if now-timedelta(days=config['lookback_days']) <= datetime.fromisoformat(row['published_at']) <= now]
         selected.sort(key=lambda row:row['published_at'], reverse=True)
         member['media_reports'] = [{k:v for k,v in row.items() if k not in ('snippet','member_id','member_name')} for row in selected[:config['max_items']]]
-        accepted = 0; unresolved = False
-        for row in rows:
-            if row['id'] not in decisions_for_member:
-                unresolved = True
-            elif decisions_for_member[row['id']]:
-                accepted += 1
-                if accepted >= config['max_items']:
-                    break
+        statuses = inference.cached_statuses(root,all_cases)
+        pending = sum(row['id'] not in decisions_for_member and statuses.get(row['id']) in (None,'reconsider') for row in rows)
+        withheld = sum(row['id'] not in decisions_for_member and statuses.get(row['id']) not in (None,'reconsider') for row in rows)
         member['media_health'] = {'source_status':source.get('status','unavailable'),
-            'checked_at':source.get('checked_at'), 'inference_status':'partial' if unresolved else 'complete',
+            'checked_at':source.get('checked_at'), 'inference_status':'partial' if pending or withheld else 'complete',
+            'pending_candidates':pending, 'withheld_candidates':withheld,
+            'screened_history_count':len(history[member['id']]),
             'lookback_days':source.get('lookback_days',90)}
         query=source.get('query', member.get('media_search', {}).get('query', config['queries'].get(member['id'],'')))
         member['media_search']={'query':query,

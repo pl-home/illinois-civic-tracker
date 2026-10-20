@@ -1,5 +1,12 @@
 # Individual legislator bill history
 
+**October 20 pagination follow-up:** member news now shows five articles per page
+with older/newer navigation and a bounded rolling cache of up to 100 screened
+reports per member, covering 200 days. Homepage news remains three within 90 days.
+This supersedes the earlier three-result member-column limit below. Read
+[NEWS_PAGINATION.md](NEWS_PAGINATION.md) for exact-cache checks, gradual screening,
+storage bounds and coverage limits. Model request and spending caps are unchanged.
+
 October 20, 2026 owner-requested browsing extension. Click a member's name in
 their homepage banner, or **More sponsorship & bill activity**, to open
 `member-<id>.html`. Each page contains at most 25 entries, with newer/older,
