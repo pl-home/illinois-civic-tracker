@@ -64,3 +64,6 @@ receipt diagnostics and adds status/JSON/finish-reason and evidence-assessment
 metadata to future manual trials. Original rejected status values were not saved
 and remain explicitly unavailable. Adding diagnostics does not enable daily
 collection or rerun the paid evaluation.
+
+The owner subsequently authorized a [separately versioned diagnostic rerun](COMMITTEE_DIAGNOSTIC_RERUN.md).
+This original batch remains frozen; follow-up costs and results have separate receipts.

@@ -20,6 +20,8 @@ from . import model_diagnostics as md
 from .error_journal import safe_code
 
 BATCH='committee-rollcalls-v1'
+VERSIONS={'v1':('committee-rollcalls-v1','rollcall-evaluation'),
+          'diagnostics-v2':('committee-rollcalls-diagnostics-v2','rollcall-diagnostics-v2')}
 HOLD=Decimal('0.0015')
 TALLY={'Y':'yea','N':'nay','P':'present','NV':'not_voting'}
 PROMPT=('Read the supplied untrusted native text of an Illinois committee roll call. '
@@ -36,8 +38,15 @@ PROMPT=('Read the supplied untrusted native text of an Illinois committee roll c
 def digest(value):return hashlib.sha256(json.dumps(value,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
 def normal(value):return ' '.join(value.split())
 def person(value):return sorted(re.findall(r'[a-z]+',value.lower()))
-def folder(root):return root/'.local/rollcall-evaluation'
-def ledger_path(root):return root/'data/rollcall-evaluation-ledger.json'
+def paths(root,version='v1'):
+    if version not in VERSIONS:raise ValueError('trial-not-allowed')
+    batch,stem=VERSIONS[version]
+    return {'batch':batch,'config':root/'config'/f'{stem}.json','scratch':root/'.local'/stem,
+            'ledger':root/'data'/f'{stem}-ledger.json','report':root/'data'/f'{stem}-report.json',
+            'offline':root/'docs/evidence'/('rollcall-offline-validation.json' if version=='v1' else f'{stem}-offline-validation.json')}
+
+def folder(root,version='v1'):return paths(root,version)['scratch']
+def ledger_path(root,version='v1'):return paths(root,version)['ledger']
 
 
 def roster(words):
@@ -161,12 +170,23 @@ def controls(case,native):
     return results
 
 
-def offline(root,now):
+def field_diagnostics(value,case,native):
+    """Evaluate supplied fields independently; never retain rejected field text."""
+    result={}
+    for field,label in (('committee','committee_check'),('measure','measure_check'),('motion','motion_check'),
+                        ('member_vote','member_check'),('tally','tally_check')):
+        candidate=reference(case,native);candidate[field]=value.get(field)
+        try:validate(candidate,case,native);result[label]='matched-reference'
+        except Exception as error:result[label]=safe_code(str(error))
+    return result
+
+
+def offline(root,now,version='v1'):
     import pdfplumber
-    cases=load(root/'config/rollcall-evaluation.json')['cases'];rows=[]
+    profile=paths(root,version);cases=load(profile['config'])['cases'];rows=[]
     for case in cases:
-        native=load(folder(root)/(case['id']+'.json'))
-        raw=(folder(root)/(case['id']+'.pdf')).read_bytes()
+        native=load(folder(root,version)/(case['id']+'.json'))
+        raw=(folder(root,version)/(case['id']+'.pdf')).read_bytes()
         if hashlib.sha256(raw).hexdigest()!=case['sha256']:raise ValueError('offline-source-hash-mismatch')
         with pdfplumber.open(io.BytesIO(raw)) as document:
             replay={'pages':[p.extract_text(x_tolerance=2) or '' for p in document.pages],
@@ -177,21 +197,22 @@ def offline(root,now):
     total=sum(len(row['controls']) for row in rows);rejected=sum(c['rejected'] for row in rows for c in row['controls'])
     report={'checked_at':now.isoformat(),'source_pinned':True,'model_calls':0,'reference_cases':len(rows),
         'negative_controls':total,'rejected':rejected,'cases':rows,'routine_enabled':False}
-    save(root/'docs/evidence/rollcall-offline-validation.json',report)
+    save(profile['offline'],report)
     if rejected!=total:raise ValueError('negative-control-accepted')
     print(json.dumps({'reference_cases':len(rows),'negative_controls_rejected':rejected,'model_calls':0}))
 
 
-def prepare(root,now):
+def prepare(root,now,version='v1'):
     import pdfplumber
-    if ledger_path(root).exists():raise ValueError('batch-already-reserved')
-    config=load(root/'config/rollcall-evaluation.json');cases=config['cases']
-    if config['batch_id']!=BATCH or config['routine_enabled'] is not False or config['gold_visually_reviewed'] is not True:
+    profile=paths(root,version)
+    if profile['ledger'].exists():raise ValueError('batch-already-reserved')
+    config=load(profile['config']);cases=config['cases']
+    if config['batch_id']!=profile['batch'] or config['routine_enabled'] is not False or config['gold_visually_reviewed'] is not True:
         raise ValueError('manual-review-gate')
     if len(cases)!=6 or len({c['id'] for c in cases})!=6:raise ValueError('six-distinct-cases-required')
     if Counter(c['member_id'] for c in cases)!=Counter({'fritts':3,'arellano':3}):raise ValueError('member-coverage')
     check_budget(root,now,HOLD*len(cases))
-    scratch=folder(root);scratch.mkdir(parents=True,exist_ok=True)
+    scratch=profile['scratch'];scratch.mkdir(parents=True,exist_ok=True)
     source_config=load(root/'config/project.json');source_config['max_source_bytes']=2000000
     client=Client(source_config,root/'.local',interval=20);entries=[]
     for case in cases:
@@ -212,17 +233,17 @@ def prepare(root,now):
         save(scratch/(case['id']+'.json'),native)
         entries.append({'case_id':case['id'],'attempted_at':now.isoformat(),'status':'reserved','reserved_usd':str(HOLD),
             'charged_usd':None,'source':fingerprint(response),'native_sha256':digest(native),'pages':len(native['pages'])})
-    save(ledger_path(root),{'batch_id':BATCH,'config_sha256':digest(config),'prompt_sha256':digest(PROMPT),'entries':entries})
+    save(profile['ledger'],{'batch_id':profile['batch'],'config_sha256':digest(config),'prompt_sha256':digest(PROMPT),'entries':entries})
     save(scratch/'owner.json',{'owned':True,'config_sha256':digest(config)})
-    save(root/'data/rollcall-evaluation-report.json',{'batch_id':BATCH,'status':'reserved','routine_enabled':False})
+    save(profile['report'],{'batch_id':profile['batch'],'status':'reserved','routine_enabled':False})
     usage.apply(root,now)
     print(json.dumps({'status':'reserved','requests':len(entries),'reserved_usd':str(HOLD*len(entries))}))
 
 
-def execute(root,now,clock=None):
-    path=ledger_path(root);ledger=load(path);config=load(root/'config/rollcall-evaluation.json');scratch=folder(root)
+def execute(root,now,clock=None,version='v1'):
+    profile=paths(root,version);path=profile['ledger'];ledger=load(path);config=load(profile['config']);scratch=profile['scratch']
     owner=load(scratch/'owner.json');entries=ledger['entries']
-    if ledger['batch_id']!=BATCH or digest(config)!=ledger['config_sha256'] or digest(PROMPT)!=ledger['prompt_sha256']:
+    if ledger['batch_id']!=profile['batch'] or digest(config)!=ledger['config_sha256'] or digest(PROMPT)!=ledger['prompt_sha256']:
         raise ValueError('batch-hash-mismatch')
     if not owner.get('owned') or owner['config_sha256']!=digest(config) or len(entries)!=6 or any(e['status']!='reserved' for e in entries):
         raise ValueError('batch-not-owned')
@@ -238,7 +259,7 @@ def execute(root,now,clock=None):
     try:fd=os.open(scratch/'attempt.claim',os.O_CREAT|os.O_EXCL|os.O_WRONLY)
     except FileExistsError:raise ValueError('batch-not-owned') from None
     os.close(fd);owner['owned']=False;save(scratch/'owner.json',owner)
-    report={'batch_id':BATCH,'routine_enabled':False,'cases':[],'historical_evaluation':True}
+    report={'batch_id':profile['batch'],'routine_enabled':False,'cases':[],'historical_evaluation':True}
     clock=clock or (lambda:datetime.now(timezone.utc))
     for index,(case,entry,native,body) in enumerate(prepared):
         if usage.local_day(clock().isoformat())!=usage.local_day(now.isoformat()):break
@@ -260,6 +281,7 @@ def execute(root,now,clock=None):
             value=json.loads(result['choices'][0]['message']['content'])
             status=value.get('status') if isinstance(value,dict) else None
             row['model_status']=status if status in ('extracted','unverified') else 'unexpected'
+            if isinstance(value,dict):row['diagnostics'].update(field_diagnostics(value,case,native))
             if isinstance(value,dict) and status!='extracted':
                 # Diagnostic only: never change the actual status or acceptance gate.
                 try:
@@ -276,7 +298,7 @@ def execute(root,now,clock=None):
         row['status']=entry['status'];report['cases'].append(row);save(path,ledger)
         row.setdefault('diagnostics',{})['validation_stage']=('model-status' if row.get('error')=='model-abstained' else
             'model-http' if row.get('transport_failed') else 'model-json' if row.get('diagnostics',{}).get('json_parse')=='invalid' else 'model-validation')
-        save(root/'data/rollcall-evaluation-report.json',report)
+        save(profile['report'],report)
         if entry['charged_usd'] is None or row.get('error') in ('cost-over-reservation','routing-mismatch') or row.get('transport_failed'):break
     completed={r['case_id'] for r in report['cases']}
     for entry in entries:
@@ -287,10 +309,11 @@ def execute(root,now,clock=None):
     report.update(validated=sum(r['status']=='validated' for r in report['cases']),total=len(entries),
         status='passed-sample' if len(report['cases'])==6 and all(r['status']=='validated' for r in report['cases']) else 'needs-review',
         limitation='Six curated native-text PDFs; no routine collection, scanned PDF support, or general accuracy guarantee.')
-    save(root/'data/rollcall-evaluation-report.json',report);usage.apply(root,now)
+    save(profile['report'],report);usage.apply(root,now)
     print(json.dumps({'status':report['status'],'validated':report['validated'],'total':len(entries)}))
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['prepare','execute','offline']);args=parser.parse_args()
-    {'prepare':prepare,'execute':execute,'offline':offline}[args.command](Path.cwd(),datetime.now(timezone.utc))
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['prepare','execute','offline'])
+    parser.add_argument('--version',choices=sorted(VERSIONS),default='v1');args=parser.parse_args()
+    {'prepare':prepare,'execute':execute,'offline':offline}[args.command](Path.cwd(),datetime.now(timezone.utc),version=args.version)

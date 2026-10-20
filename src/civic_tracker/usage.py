@@ -40,7 +40,7 @@ def entries(root, media=None):
             except (TypeError,ValueError):pass
         charge=ev.money(batch['charged_usd']) if batch.get('charged_usd') is not None else None
         yield {'day':day,'charge':charge,'reserve':ev.money(batch['reserved_usd']),'media':True}
-    for filename in ('pdf-extraction-ledger.json','rollcall-evaluation-ledger.json'):
+    for filename in ('pdf-extraction-ledger.json','rollcall-evaluation-ledger.json','rollcall-diagnostics-v2-ledger.json'):
         for entry in load(root/'data'/filename,{'entries':[]}).get('entries',[]):
             yield {'day':local_day(entry.get('attempted_at')),
                 'charge':ev.money(entry['charged_usd']) if entry.get('charged_usd') is not None else None,

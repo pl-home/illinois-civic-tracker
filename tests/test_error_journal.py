@@ -97,6 +97,18 @@ class JournalTests(unittest.TestCase):
             self.assertFalse(d['diagnostics_available']);self.assertEqual(d['model_status'],'not-captured')
             self.assertEqual(d['completion_tokens'],261)
 
+    def test_diagnostic_rerun_retains_separate_incident_and_new_metadata(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            journal=j.Journal(tmp,NOW)
+            row={'case_id':'sample','status':'attempted-invalid','error':'model-abstained',
+                'diagnostics':{'model_status':'unverified','finish_reason':'stop','evidence_assessment':'rejected','evidence_failure_code':'member-cell-binding'}}
+            files={'rollcall-v2':{'cases':[row]},'data/rollcall-diagnostics-v2-ledger.json':{'entries':[{'case_id':'sample','attempted_at':NOW.isoformat()}]}}
+            j.ingest(journal,files);journal.finish()
+            incident=journal.data['incidents'][0]
+            self.assertEqual(incident['collector'],'rollcall-v2');self.assertTrue(incident['diagnostics']['diagnostics_available'])
+            self.assertEqual(incident['evidence']['file'],'data/rollcall-diagnostics-v2-report.json')
+            self.assertEqual(incident['diagnostics']['evidence_failure_code'],'member-cell-binding')
+
     def test_receipt_cache_rollover_does_not_inflate_retained_incident(self):
         with tempfile.TemporaryDirectory() as tmp:
             journal=j.Journal(tmp,NOW)

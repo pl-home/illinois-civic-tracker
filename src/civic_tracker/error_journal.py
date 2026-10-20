@@ -36,7 +36,10 @@ HOSTS={'ilga.gov','ftp.ilga.gov','my.ilga.gov','api.congress.gov','clerk.house.g
 HOSTS.update({'repfritts.com','senatorli.com','lahood.house.gov','durbin.senate.gov','duckworth.senate.gov','leecodemocrats.com','leecountyilgop.org','capitolfax.com'})
 FILES={'daily':'data/daily-report.json','media-source':'data/media-state.json','media-model':'data/media-inference-report.json',
        'pdf':'data/pdf-extraction-report.json','rollcall':'data/rollcall-evaluation-report.json','health':'data/openrouter-health.json',
-       'communications':'data/communications-state.json','media-ledger':'data/media-inference-ledger.json'}
+       'communications':'data/communications-state.json','media-ledger':'data/media-inference-ledger.json',
+       'rollcall-v2':'data/rollcall-diagnostics-v2-report.json'}
+LEDGERS={p:p for p in ('data/pdf-extraction-ledger.json','data/rollcall-evaluation-ledger.json',
+                      'data/rollcall-diagnostics-v2-ledger.json')}
 PATHS=(r'/documents/reports/static/104MemberVotes\.csv',r'/(?:House|Senate)/Members/Details/\d{1,7}',
        r'/Documents/legislation/votehistory/104/(?:house|senate)/committeevotes/10400[A-Z0-9_]{5,45}\.pdf',
        r'/Legislation/104/BillStatus/XML/',r'/Votes/MemberVotes',r'/api/v1/(?:key|chat/completions)')
@@ -111,6 +114,9 @@ def diagnostics(value):
     if not isinstance(value,dict):return {}
     out={}
     for key,v in value.items():
+        if key in {'committee_check','measure_check','motion_check','member_check','tally_check'}:
+            out[key]='matched-reference' if v=='matched-reference' else safe_code(v)
+            continue
         if key in ENUMS and isinstance(v,str) and v in ENUMS[key]:out[key]=v
         elif key in BOOLS and type(v) is bool:out[key]=v
         elif key in NUMBERS and type(v) is int and 0<=v<=10_000_000:out[key]=v
@@ -269,13 +275,15 @@ def ingest(journal,files,commit=None,commit_time=None):
         if component=='endpoint' and result.get('present') is False:code='approved-endpoint-unavailable'
         journal.observe('health',component,health.get('checked_at') or commit_time,[code] if code else [],
             result.get('status')=='ok' if component=='authentication' else result.get('present') is True,run,ref('health'))
-    for collector,ledger_file in [('pdf','data/pdf-extraction-ledger.json'),('rollcall','data/rollcall-evaluation-ledger.json')]:
+    for collector,ledger_file in [('pdf','data/pdf-extraction-ledger.json'),('rollcall','data/rollcall-evaluation-ledger.json'),
+                                  ('rollcall-v2','data/rollcall-diagnostics-v2-ledger.json')]:
         report=files.get(collector) or {};ledger=files.get(ledger_file) or {}
         entries=ledger.get('entries',[])
-        rows=report.get('cases',[]) if collector=='rollcall' else ([report] if report.get('trial_id') else [])
+        is_rollcall=collector in ('rollcall','rollcall-v2')
+        rows=report.get('cases',[]) if is_rollcall else ([report] if report.get('trial_id') else [])
         for row in rows:
             if not isinstance(row,dict) or row.get('status') in ('reserved','not-attempted'):continue
-            key=row.get('case_id') if collector=='rollcall' else row.get('trial_id')
+            key=row.get('case_id') if is_rollcall else row.get('trial_id')
             entry=next((e for e in entries if e.get('case_id',e.get('trial_id'))==key),{})
             when=row.get('attempted_at') or entry.get('attempted_at') or commit_time
             detail={**(row.get('diagnostics') or {}),'diagnostics_available':bool(row.get('diagnostics'))}
@@ -303,7 +311,7 @@ def collect(root,now,workflow,job_status,bootstrap=False):
             commit,when=line.split(' ',1)
             if not re.fullmatch(r'[0-9a-f]{40}',commit) or not stamp(when) or stamp(when)<now-timedelta(days=DAYS):continue
             snapshots={}
-            for key,path in {**FILES,'data/pdf-extraction-ledger.json':'data/pdf-extraction-ledger.json','data/rollcall-evaluation-ledger.json':'data/rollcall-evaluation-ledger.json'}.items():
+            for key,path in {**FILES,**LEDGERS}.items():
                 result=subprocess.run(['git','show',commit+':'+path],cwd=root,capture_output=True)
                 if result.returncode==0:
                     try:snapshots[key]=json.loads(result.stdout)
@@ -311,7 +319,7 @@ def collect(root,now,workflow,job_status,bootstrap=False):
             ingest(journal,snapshots,commit,when)
         journal.data['bootstrap_complete']=True
     files={}
-    for key,path in {**FILES,'data/pdf-extraction-ledger.json':'data/pdf-extraction-ledger.json','data/rollcall-evaluation-ledger.json':'data/rollcall-evaluation-ledger.json'}.items():
+    for key,path in {**FILES,**LEDGERS}.items():
         value=read_report(Path(root)/path)
         if isinstance(value,dict) and '_input_error' in value:
             journal.observe('workflow',key,now.isoformat(),[value['_input_error']],False,run_id(now),{'file':path},stage='journal-input',group='journal-input:'+key)

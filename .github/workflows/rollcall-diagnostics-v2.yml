@@ -1,0 +1,110 @@
+name: Manual committee roll-call diagnostic rerun
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: m0-source-evidence
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    outputs:
+      source_sha: ${{ steps.journal.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e ".[verification]"
+        id: dependencies
+      - run: python -m unittest discover -s tests -v
+        id: tests
+      - name: Fetch six pinned official PDFs; reserve shared budget
+        id: collector
+        run: python -m civic_tracker.rollcall_eval prepare --version diagnostics-v2
+      - name: Reconcile named rosters and reject corrupted evidence without inference
+        id: offline
+        run: python -m civic_tracker.rollcall_eval offline --version diagnostics-v2
+      - name: Preserve reservation before exposing the inference key
+        id: reserve
+        run: |
+          python -m civic_tracker.privacy
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data docs/evidence/rollcall-diagnostics-v2-offline-validation.json
+          git commit -m 'Reserve bounded committee diagnostic rerun'
+          git push origin main
+      - name: Six independent native-text reads with capped DeepInfra inference
+        id: model
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m civic_tracker.rollcall_eval execute --version diagnostics-v2
+      - run: python -m civic_tracker.privacy
+        id: privacy
+      - run: python -m civic_tracker.browse --output .local/site
+        id: build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: committee-rollcall-diagnostics-v2-previews
+          path: .local/rollcall-diagnostics-v2/*.png
+          retention-days: 7
+      - name: Preserve extraction and measured cost
+        id: persist
+        run: |
+          git add data docs/evidence/rollcall-diagnostics-v2-offline-validation.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record committee diagnostic rerun and measured costs'
+            git push origin main
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .local/site
+      - name: Preserve troubleshooting journal even after a failed step
+        if: always()
+        id: journal
+        uses: ./.github/actions/error-journal
+        with:
+          scope: rollcall
+          status: ${{ job.status }}
+          dependencies: ${{ steps.dependencies.outcome }}
+          tests: ${{ steps.tests.outcome == 'failure' && 'failure' || steps.offline.outcome }}
+          collector: ${{ steps.collector.outcome == 'failure' && 'failure' || steps.communications.outcome == 'failure' && 'failure' || steps.collector.outcome }}
+          reserve: ${{ steps.reserve.outcome }}
+          model: ${{ steps.model.outcome }}
+          privacy: ${{ steps.privacy.outcome }}
+          build: ${{ steps.build.outcome }}
+          persist: ${{ steps.persist.outcome }}
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Reject publication of an outdated artifact
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_SHA: ${{ needs.refresh.outputs.source_sha }}
+        run: |
+          latest=$(gh api "repos/${GITHUB_REPOSITORY}/commits/main" --jq .sha)
+          echo "active=$([ "$latest" = "$ARTIFACT_SHA" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Publish measured committee evaluation usage
+        if: steps.current.outputs.active == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4

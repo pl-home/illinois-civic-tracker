@@ -31,24 +31,57 @@ def sample():
     return case,native
 
 
-def setup(root):
-    (root/'config').mkdir();(root/'data').mkdir();r.folder(root).mkdir(parents=True)
+def setup(root,version='v1'):
+    profile=r.paths(root,version)
+    (root/'config').mkdir(exist_ok=True);(root/'data').mkdir(exist_ok=True);r.folder(root,version).mkdir(parents=True)
     case,native=sample();cases=[];entries=[]
     for i in range(6):
         c=deepcopy(case);c['id']='sample-'+str(i);cases.append(c)
-        save(r.folder(root)/(c['id']+'.json'),native)
+        save(r.folder(root,version)/(c['id']+'.json'),native)
         entries.append({'case_id':c['id'],'attempted_at':NOW.isoformat(),'status':'reserved','reserved_usd':str(r.HOLD),
                         'charged_usd':None,'native_sha256':r.digest(native)})
-    config={'batch_id':r.BATCH,'routine_enabled':False,'gold_visually_reviewed':True,'cases':cases}
-    save(root/'config/rollcall-evaluation.json',config)
+    config={'batch_id':profile['batch'],'routine_enabled':False,'gold_visually_reviewed':True,'cases':cases}
+    save(profile['config'],config)
     save(root/'config/media.json',{'inference':{'daily_cap_usd':'0.02','weekly_cap_usd':'0.20','lifetime_cap_usd':'20'}})
     save(root/'data/dashboard.json',{'members':[{'id':'fritts'}]})
-    save(r.ledger_path(root),{'batch_id':r.BATCH,'config_sha256':r.digest(config),'prompt_sha256':r.digest(r.PROMPT),'entries':entries})
-    save(r.folder(root)/'owner.json',{'owned':True,'config_sha256':r.digest(config)})
+    save(r.ledger_path(root,version),{'batch_id':profile['batch'],'config_sha256':r.digest(config),'prompt_sha256':r.digest(r.PROMPT),'entries':entries})
+    save(r.folder(root,version)/'owner.json',{'owned':True,'config_sha256':r.digest(config)})
     return case,native
 
 
 class RollcallTests(unittest.TestCase):
+    def test_independent_field_diagnostics_do_not_accept_or_retain_rejected_text(self):
+        case,native=sample();answer=r.reference(case,native);answer['status']='unverified'
+        answer['member_vote']['raw_vote']='Y';answer['tally']['yea']=99
+        answer['motion']['value']='invented rejected wording'
+        detail=r.field_diagnostics(answer,case,native)
+        self.assertEqual(detail['committee_check'],'matched-reference');self.assertEqual(detail['measure_check'],'matched-reference')
+        self.assertEqual(detail['member_check'],'member-cell-binding');self.assertEqual(detail['tally_check'],'tally-quote-binding')
+        self.assertEqual(detail['motion_check'],'evidence-quote');self.assertNotIn('invented',json.dumps(detail))
+        with self.assertRaisesRegex(ValueError,'model-abstained'):r.validate(answer,case,native)
+
+    def test_diagnostic_version_preserves_old_evidence_counts_all_liability_and_cannot_replay(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);setup(root)
+            old=r.ledger_path(root);data=load(old)
+            for entry in data['entries']:entry.update(charged_usd='0.0001',status='attempted-invalid')
+            save(old,data);save(r.paths(root)['report'],{'status':'needs-review'})
+            save(root/'data/pdf-extraction-ledger.json',{'entries':[{'attempted_at':NOW.isoformat(),'reserved_usd':'0.005','charged_usd':None}]})
+            before={p:p.read_bytes() for p in (old,r.paths(root)['config'],r.paths(root)['report'],root/'data/pdf-extraction-ledger.json')}
+            case,native=setup(root,'diagnostics-v2');answer=r.reference(case,native)
+            response=MagicMock();response.read.return_value=json.dumps({'provider':'DeepInfra','model':'qwen/qwen3-32b',
+                'usage':{'cost':0.0001},'choices':[{'finish_reason':'stop','message':{'content':json.dumps(answer)}}]}).encode()
+            opener=MagicMock();opener.open.return_value.__enter__.return_value=response
+            with patch.dict('os.environ',{'OPENROUTER_API_KEY':'not-a-real-key'}),patch.object(r,'build_opener',return_value=opener):
+                r.execute(root,NOW,version='diagnostics-v2')
+                with self.assertRaisesRegex(ValueError,'batch-not-owned'):r.execute(root,NOW,version='diagnostics-v2')
+            self.assertEqual(opener.open.call_count,6)
+            self.assertTrue(all(p.read_bytes()==value for p,value in before.items()))
+            self.assertEqual(load(r.paths(root,'diagnostics-v2')['report'])['validated'],6)
+            self.assertEqual(usage.periods(root,NOW.date())['day']['liability_usd'],'0.0062')
+            with self.assertRaisesRegex(ValueError,'shared-budget-exhausted'):r.check_budget(root,NOW,Decimal('0.014'))
+            with self.assertRaisesRegex(ValueError,'trial-not-allowed'):r.paths(root,'unapproved')
+
     def test_columns_member_and_full_roster_counts(self):
         case,native=sample();answer=r.reference(case,native)
         checked=r.validate(answer,case,native)
