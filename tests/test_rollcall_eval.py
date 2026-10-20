@@ -50,6 +50,12 @@ def setup(root,version='v1'):
 
 
 class RollcallTests(unittest.TestCase):
+    def test_display_name_cannot_replace_printed_name_in_literal_evidence(self):
+        case,native=sample();answer=r.reference(case,native)
+        answer['member_vote']['name']=case['member_name']
+        self.assertEqual(r.person(answer['member_vote']['name']),r.person(r.reference(case,native)['member_vote']['name']))
+        with self.assertRaisesRegex(ValueError,'evidence-quote'):r.validate(answer,case,native)
+
     def test_independent_field_diagnostics_do_not_accept_or_retain_rejected_text(self):
         case,native=sample();answer=r.reference(case,native);answer['status']='unverified'
         answer['member_vote']['raw_vote']='Y';answer['tally']['yea']=99

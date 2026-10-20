@@ -1,0 +1,130 @@
+{
+  "checked_at": "2026-10-20T01:42:37.141239+00:00",
+  "workflow_run": 39354481195,
+  "model_calls": 6,
+  "charged_usd": "0.00061384",
+  "additional_investigation_model_calls": 0,
+  "accepted": 0,
+  "source_records_unchanged": true,
+  "original_ledgers_and_trial_unchanged": true,
+  "routine_enabled": false,
+  "observed_field_results": {
+    "committee_check": {
+      "matched-reference": 6
+    },
+    "measure_check": {
+      "measure-mismatch": 1,
+      "evidence-quote": 1,
+      "matched-reference": 4
+    },
+    "motion_check": {
+      "matched-reference": 6
+    },
+    "member_check": {
+      "evidence-quote": 6
+    },
+    "tally_check": {
+      "matched-reference": 6
+    }
+  },
+  "offline_name_contract_reproductions": [
+    {
+      "case_id": "10400HB1054_42707",
+      "source_and_native_match_hosted": true,
+      "reference_validated": true,
+      "display_name_with_correct_source_quote_rejected": "evidence-quote",
+      "observed_member_failure": "evidence-quote",
+      "limitation": "Synthetic reproduction of a compatible failure mechanism; actual rejected name/quote was not retained."
+    },
+    {
+      "case_id": "10400HB2490_42146",
+      "source_and_native_match_hosted": true,
+      "reference_validated": true,
+      "display_name_with_correct_source_quote_rejected": "evidence-quote",
+      "observed_member_failure": "evidence-quote",
+      "limitation": "Synthetic reproduction of a compatible failure mechanism; actual rejected name/quote was not retained."
+    },
+    {
+      "case_id": "10400HB1056HFA2_43449",
+      "source_and_native_match_hosted": true,
+      "reference_validated": true,
+      "display_name_with_correct_source_quote_rejected": "evidence-quote",
+      "observed_member_failure": "evidence-quote",
+      "limitation": "Synthetic reproduction of a compatible failure mechanism; actual rejected name/quote was not retained."
+    },
+    {
+      "case_id": "10400SB0093_41621",
+      "source_and_native_match_hosted": true,
+      "reference_validated": true,
+      "display_name_with_correct_source_quote_rejected": "evidence-quote",
+      "observed_member_failure": "evidence-quote",
+      "limitation": "Synthetic reproduction of a compatible failure mechanism; actual rejected name/quote was not retained."
+    },
+    {
+      "case_id": "10400SB1274SCA1_41641",
+      "source_and_native_match_hosted": true,
+      "reference_validated": true,
+      "display_name_with_correct_source_quote_rejected": "evidence-quote",
+      "observed_member_failure": "evidence-quote",
+      "limitation": "Synthetic reproduction of a compatible failure mechanism; actual rejected name/quote was not retained."
+    },
+    {
+      "case_id": "10400HB0762_44872",
+      "source_and_native_match_hosted": true,
+      "reference_validated": true,
+      "display_name_with_correct_source_quote_rejected": "evidence-quote",
+      "observed_member_failure": "evidence-quote",
+      "limitation": "Synthetic reproduction of a compatible failure mechanism; actual rejected name/quote was not retained."
+    }
+  ],
+  "budget": {
+    "day": {
+      "charged_usd": "0.00128160",
+      "reserved_usd": "0.005",
+      "liability_usd": "0.00628160",
+      "unsettled_requests": 1,
+      "media_reservations": 0,
+      "undated_entries": 0,
+      "limit_usd": "0.02",
+      "remaining_usd": "0.01371840",
+      "used_percent": "31.408000"
+    },
+    "week": {
+      "charged_usd": "0.00128160",
+      "reserved_usd": "0.005",
+      "liability_usd": "0.00628160",
+      "unsettled_requests": 1,
+      "media_reservations": 0,
+      "undated_entries": 0,
+      "limit_usd": "0.20",
+      "remaining_usd": "0.19371840",
+      "used_percent": "3.140800"
+    },
+    "lifetime": {
+      "charged_usd": "0.00349016",
+      "reserved_usd": "0.005",
+      "liability_usd": "0.00849016",
+      "unsettled_requests": 1,
+      "media_reservations": 4,
+      "undated_entries": 0,
+      "limit_usd": "20",
+      "remaining_usd": "19.99150984",
+      "used_percent": "0.04245080"
+    },
+    "week_start": "2026-10-19",
+    "week_end": "2026-10-25",
+    "schema_version": 1,
+    "as_of": "2026-10-20T01:42:37.141239+00:00",
+    "local_date": "2026-10-19",
+    "timezone": "America/Chicago",
+    "week_definition": "Monday through Sunday",
+    "scope": "Tracker inference only, including earlier evaluations; excludes unrelated OpenRouter account use."
+  },
+  "journal": {
+    "bytes": 31287,
+    "cap_bytes": 98304,
+    "diagnostic_rerun_incidents": 6,
+    "original_trial_incidents_preserved": 6,
+    "evicted_incidents": 0
+  }
+}
