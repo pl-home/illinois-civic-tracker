@@ -27,7 +27,7 @@ remains capped at 3 MB. Screening now continues beyond three accepted results,
 still at four unseen candidates per member and four paid media calls per day.
 Historical financial entries and uncertain requests are never reset or retried.
 
-October 20 Stage C: the hosted daily pipeline now checks the reviewed county-party
+October 20 Stage C (hosted verification passed; 298 tests): the daily pipeline now checks the reviewed county-party
 pages and poster, with deterministic relevance, compact evidence, last-good
 retention and a visible held-review path. The dedicated Capitol Fax/Lee County
 headline checks use no model. See [Stage C operation and acceptance](PARTY_MONITORING.md).

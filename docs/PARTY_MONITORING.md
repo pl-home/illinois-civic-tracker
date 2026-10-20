@@ -1,9 +1,12 @@
 # Stage C: hosted county-party monitoring and deterministic relevance
 
-**October 20 release verification:** the hosted source-only check passed for all
-12 page/asset sources and six mention feeds without model calls or financial
-changes. A final parser guard excludes social-widget contact values; its hosted
-follow-up is pending in the dated acceptance receipt. All 298 offline tests pass.
+**October 20 release verified:** [the hosted source-only check](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39464619419)
+passed for all twelve page/asset sources and six mention feeds, with zero added
+change alerts, zero model calls and all ten financial/trial records unchanged.
+All 298 offline tests, hosted CI, privacy and publication checks passed. The
+[dated receipt](evidence/stage-c.json) records exact coverage, sizes and remaining
+source-dependent follow-ups. The published page and its disclosures were checked
+in the browser.
 
 This port checks the Lee County Democrats and Lee County IL Republican Central
 Committee with the existing daily **01:00 America/Chicago** hosted refresh. It

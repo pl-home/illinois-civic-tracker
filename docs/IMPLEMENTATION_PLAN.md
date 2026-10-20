@@ -184,7 +184,7 @@ validated when available; historical results alone cannot pass that gate.
 
 ### Stage C: hosted party coverage and deterministic relevance
 
-**October 20 implementation:** see [PARTY_MONITORING.md](PARTY_MONITORING.md) and
+**October 20 implementation — hosted verification passed; 298 tests:** see [PARTY_MONITORING.md](PARTY_MONITORING.md) and
 [the dated acceptance receipt](evidence/stage-c.json). The existing daily workflow
 now includes the port; the manual source-only check adds no independent schedule
 or paid task. Synthetic symmetric edits and live baseline/hosted receipts are

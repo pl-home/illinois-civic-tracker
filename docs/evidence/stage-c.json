@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "stage": "C",
-  "recorded_at": "2026-10-20T17:03:00.508725+00:00",
-  "status": "local-acceptance-passed-hosted-verification-pending",
+  "recorded_at": "2026-10-20T17:20:01.554939+00:00",
+  "status": "hosted-acceptance-passed-with-source-dependent-followups",
   "code_base": {
     "commit": "8a8f61100f65e2dd5ea171da07d71ba8c15dcbc0"
   },
@@ -43,11 +43,11 @@
   },
   "storage": {
     "party_state_bytes": 33966,
-    "mention_state_bytes": 1478,
-    "canonical_json_bytes": 13736747,
-    "base_artifact_bytes": 513849,
+    "mention_state_bytes": 1380,
+    "canonical_json_bytes": 13738033,
+    "base_artifact_bytes": 513751,
     "member_html_bytes": 2437693,
-    "artifact_total_bytes": 2951542,
+    "artifact_total_bytes": 2951444,
     "limits": {
       "party_state": 350000,
       "mention_state": 50000,
@@ -57,22 +57,22 @@
     }
   },
   "hosted": {
-    "status": "passed-parser-2-followup-parser-3-pending",
+    "status": "passed",
     "workflow": "parties.yml",
     "new_schedule": false,
     "uses_existing_schedule": "01:00 America/Chicago",
     "no_inference": true,
-    "run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39464116978",
+    "run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39464619419",
     "verified_commit": {
-      "commit": "f622fe116d35ebedd4bc6b3d4ab67bc8f40b781c"
+      "commit": "476b75ae952d467b7992449d0b50bad3a48040c1"
     },
-    "checked_at": "2026-10-20T17:13:21.814392+00:00",
+    "checked_at": "2026-10-20T17:16:52.570145+00:00",
     "ok_sources": 12,
     "ok_mention_feeds": 6,
     "added_revisions": 0,
     "financial_files_unchanged": 10,
-    "ci_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39463136156",
-    "pages_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39463136224",
+    "ci_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39464565581",
+    "pages_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39464566012",
     "dispatch_diagnostics": {
       "initial_run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39462817952",
       "initial_dispatch_http": 502,
@@ -82,6 +82,31 @@
       "retry_dispatch_http": 204,
       "source_lock_preserved": true,
       "initial_run_not_deleted": true
+    },
+    "previous_successful_run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39464116978",
+    "parser_version": 3,
+    "model_calls": 0,
+    "mention_candidates": {
+      "arellano": 12,
+      "duckworth": 12,
+      "durbin": 12,
+      "fritts": 12,
+      "lahood": 12,
+      "lee-county": 0
+    },
+    "headline_matches": {
+      "arellano": 0,
+      "duckworth": 0,
+      "durbin": 0,
+      "fritts": 0,
+      "lahood": 0,
+      "lee-county": 0
+    },
+    "browser_verification": {
+      "url": "https://pl-home.github.io/illinois-civic-tracker/#county-parties",
+      "both_organizations_and_dated_page_health": true,
+      "coverage_disclosures_and_methodology": true,
+      "screenshot": "stage-c-published.png"
     }
   },
   "limitations": [
@@ -92,5 +117,8 @@
     "Image changes remain human-review required; no OCR or interpretation.",
     "Historical source/cost evidence remains intact; no new paid calls or PDF work.",
     "Stage D digest and full M1 acceptance remain pending."
-  ]
+  ],
+  "implementation": {
+    "commit": "d16555c759e79d117ebea74c9b2711c15369a33e"
+  }
 }
