@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-10-21T00:06:06.355255+00:00",
-  "status": "local-verified-hosted-refresh-pending",
+  "recorded_at": "2026-10-21T00:11:20.598002+00:00",
+  "status": "caucus-blog-published-office-retained-after-hosted-failure",
   "source_id": "il-house-gop",
   "publisher": "The Caucus Blog · Illinois House Republican Caucus",
   "listing_url": "https://www.thecaucusblog.com/",
@@ -36,6 +36,38 @@
   "pdf_work": "deferred",
   "new_schedule": false,
   "hosted": {
-    "status": "pending"
+    "status": "blog-source-and-deployment-passed",
+    "run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39519265975",
+    "verify_run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39519233550",
+    "data_revision": {
+      "commit": "49a4d9f0c542280c031f2ad714f5252ccc14843e"
+    },
+    "actual_deployment_step": "success",
+    "model_step": "skipped",
+    "model_calls": 0,
+    "financial_files_byte_identical": 4,
+    "house_caucus_status": "ok",
+    "house_caucus_entries_checked": 25,
+    "house_caucus_recent_items": 11,
+    "house_caucus_displayed": 3,
+    "quiet_initial_facts": 11,
+    "initial_alert_events": 0,
+    "office_status": "failed",
+    "office_displayed_retained_items": 3,
+    "other_incomplete_sources": [
+      "arellano-office",
+      "durbin-office",
+      "duckworth-office",
+      "senate-democrats"
+    ],
+    "office_local_check": "ok; dated HTML parser returned valid items",
+    "browser_verified": true,
+    "public_section": "https://pl-home.github.io/illinois-civic-tracker/#member-fritts"
+  },
+  "storage": {
+    "base_artifact_bytes": 546175,
+    "total_artifact_bytes": 2983868,
+    "base_limit": 650000,
+    "combined_limit": 3650000
   }
 }

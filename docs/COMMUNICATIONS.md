@@ -83,3 +83,17 @@ posts can appear in the browser without being represented as new actions today.
 
 The [source-update receipt](evidence/house-caucus-source.json) separates local
 source/parser verification from the hosted communications-only refresh.
+
+The October 20 communications-only hosted refresh collected all 25 blog feed
+entries without rejection (11 within 90 days) and published its three newest
+items under Fritts. The shared ledger stored eleven quiet initial facts and
+created no baseline alerts. Browser checks confirmed the separate office and
+caucus groups, publisher labels and caucus-wide qualification. Inference was
+skipped and all four model/work/financial files remained byte-identical.
+
+The refresh job succeeded but not all publishers were reachable: Fritts office,
+Arellano office, Durbin office, Duckworth office and Senate Democratic Caucus
+checks failed; their last verified dated metadata was retained and labeled.
+Fritts HTML listing parsed successfully locally, so its hosted failure is not
+a demonstrated parser regression. The scheduled daily phase will recheck within
+existing bounds; this source addition does not claim those sources healthy.
