@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "stage": "D-preview",
-  "status": "local-passed-hosted-pending",
-  "recorded_at": "2026-10-20",
+  "status": "preview-published-delivery-disabled",
+  "recorded_at": "2026-10-21T00:01:50.104836+00:00",
   "delivery": {
     "attempts": 0,
     "enabled": false,
@@ -91,7 +91,30 @@
     }
   },
   "hosted": {
-    "status": "pending"
+    "status": "passed",
+    "verified_code": {
+      "commit": "0a04a1166ed3c97f307f10f56e55b26dfac3da00"
+    },
+    "verify_run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39518501694",
+    "pages_run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39518501672",
+    "actual_deploy_step": "success",
+    "preview_url": "https://pl-home.github.io/illinois-civic-tracker/digest-preview.html",
+    "published_artifacts_match_local": true,
+    "artifact_sha256": {
+      "digest-preview.html": "62f5e7eddb21493d6d7c05c0c431fb7e92d310b1f9bfe9c6d7fe68b2a427e8ee",
+      "digest-preview.txt": "83670fba72f6e078abecb444cf37901707cf4deb17c6fbf3d8b99388444af4fb",
+      "digest-preview.json": "d86ca6eb9f73c9b2b99bd73ed86e7719b4a222c000d63612b3605c3513820ede",
+      "digest-preview.css": "584eb3276fdd1c55eb72bc949afaf5008b89882f1c425f082976e8c7dd5e3ff7"
+    },
+    "browser_checks": [
+      "homepage digest link opens preview",
+      "disabled-delivery banner",
+      "week-so-far source cutoff",
+      "quiet sections with incomplete-coverage language",
+      "HTML text and selection manifest links"
+    ],
+    "local_synthetic_review_examples": 3,
+    "source_or_model_workflows_dispatched": false
   },
   "remaining": [
     "owner review before delivery work",
