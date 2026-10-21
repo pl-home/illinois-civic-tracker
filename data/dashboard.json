@@ -500,7 +500,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "27d458aef44145f86ea91166",
@@ -513,7 +514,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "80ccc571b8f35ae125076cbd",
@@ -526,7 +528,47 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
+        },
+        {
+          "id": "673350a1339ed197727b3bc2",
+          "member_id": "fritts",
+          "title": "Governor Pritzker Isn’t Telling The Truth on Taxes",
+          "url": "https://www.thecaucusblog.com/2026/10/governor-pritzker-isnt-telling-truth-on.html",
+          "published_at": "2026-10-15T13:30:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "f8d142218dd7cbc5b755b580",
+          "member_id": "fritts",
+          "title": "Another Life Lost, Another Electronic Monitoring Failure",
+          "url": "https://www.thecaucusblog.com/2026/10/another-life-lost-another-electronic.html",
+          "published_at": "2026-10-14T13:50:06+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "454774de5e275ede6ff377c5",
+          "member_id": "fritts",
+          "title": "On Crypto Tax, Who Could Have Seen This Coming?",
+          "url": "https://www.thecaucusblog.com/2026/10/on-crypto-tax-who-could-have-seen-this.html",
+          "published_at": "2026-10-09T13:30:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
         }
       ],
       "communication_sources": [
@@ -535,8 +577,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "url": "https://repfritts.com/latest-news/",
-          "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "status": "failed",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-08",
           "note": ""
         },
@@ -546,7 +588,7 @@
           "kind": "campaign",
           "url": "https://fritts4rep.com/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2025-07-15",
           "note": ""
         },
@@ -556,19 +598,19 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-20",
           "note": ""
         },
         {
           "id": "il-house-gop",
-          "publisher": "Illinois House Republican Caucus",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
           "kind": "party",
-          "url": "https://www.ilhousegop.org/",
-          "status": "link-only",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
-          "latest_source_date": null,
-          "note": "Public homepage returned HTTP 403 during collector setup; link only."
+          "url": "https://www.thecaucusblog.com/",
+          "status": "ok",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
+          "latest_source_date": "2026-10-15",
+          "note": "Caucus-wide House Republican updates, shown for Fritts as a House member. Posts need not name him and do not establish his authorship or endorsement. This is a legislative caucus publication, not a campaign or independent newsroom."
         },
         {
           "id": "lee-gop",
@@ -576,12 +618,12 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-01",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-20T14:27:26.917896+00:00"
+      "communications_checked_at": "2026-10-21T00:06:56.023164+00:00"
     },
     {
       "id": "arellano",
@@ -1078,7 +1120,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "aac60bf749ea6080b89b6e48",
@@ -1091,7 +1134,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "7ad531472b17ab38218e7f96",
@@ -1104,7 +1148,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         }
       ],
       "communication_sources": [
@@ -1113,8 +1158,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "url": "https://www.senatorli.com/",
-          "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "status": "failed",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-09-24",
           "note": ""
         },
@@ -1124,7 +1169,7 @@
           "kind": "campaign",
           "url": "https://electarellano.com/",
           "status": "link-only",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": null,
           "note": "Older campaign site describes his previous House race; current dated release feed not verified."
         },
@@ -1134,7 +1179,7 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-20",
           "note": ""
         },
@@ -1144,12 +1189,12 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-01",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-20T14:27:26.917896+00:00"
+      "communications_checked_at": "2026-10-21T00:06:56.023164+00:00"
     },
     {
       "id": "lahood",
@@ -1518,7 +1563,7 @@
           "kind": "office",
           "url": "https://lahood.house.gov/news",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-07",
           "note": "HTML listing dates are used; the advertised RSS contained malformed dates and is not used."
         },
@@ -1528,7 +1573,7 @@
           "kind": "campaign",
           "url": "https://lahoodforcongress.com/news/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2024-11-05",
           "note": ""
         },
@@ -1538,7 +1583,7 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-20",
           "note": ""
         },
@@ -1548,12 +1593,12 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-01",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-20T14:27:26.917896+00:00"
+      "communications_checked_at": "2026-10-21T00:06:56.023164+00:00"
     },
     {
       "id": "durbin",
@@ -2172,7 +2217,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "0ddbfe3edc8510771de1e62f",
@@ -2185,7 +2231,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "9f85b96c72dbdf76dcdf8045",
@@ -2198,7 +2245,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         }
       ],
       "communication_sources": [
@@ -2207,8 +2255,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "status": "failed",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-19",
           "note": ""
         },
@@ -2218,7 +2266,7 @@
           "kind": "campaign",
           "url": "https://www.durbinforsenate.com/",
           "status": "link-only",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": null,
           "note": "Campaign link verified previously; no dated public release feed verified for this collector."
         },
@@ -2227,8 +2275,8 @@
           "publisher": "Senate Democratic Caucus",
           "kind": "party",
           "url": "https://www.democrats.senate.gov/newsroom/press-releases",
-          "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "status": "failed",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-17",
           "note": ""
         },
@@ -2238,12 +2286,12 @@
           "kind": "party",
           "url": "https://leecodemocrats.com/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-08-18",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-20T14:27:26.917896+00:00"
+      "communications_checked_at": "2026-10-21T00:06:56.023164+00:00"
     },
     {
       "id": "duckworth",
@@ -2870,7 +2918,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "cb1163fbaa55e144cb9b84b9",
@@ -2883,7 +2932,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "d550fc669043f205551a1af9",
@@ -2896,7 +2946,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         }
       ],
       "communication_sources": [
@@ -2905,8 +2956,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "url": "https://www.duckworth.senate.gov/news/press-releases",
-          "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "status": "failed",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-19",
           "note": ""
         },
@@ -2916,7 +2967,7 @@
           "kind": "campaign",
           "url": "https://tammyduckworth.com/",
           "status": "link-only",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": null,
           "note": "No dated public release archive verified; campaign site link only."
         },
@@ -2925,8 +2976,8 @@
           "publisher": "Senate Democratic Caucus",
           "kind": "party",
           "url": "https://www.democrats.senate.gov/newsroom/press-releases",
-          "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "status": "failed",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-10-17",
           "note": ""
         },
@@ -2936,12 +2987,12 @@
           "kind": "party",
           "url": "https://leecodemocrats.com/",
           "status": "ok",
-          "checked_at": "2026-10-20T14:27:26.917896+00:00",
+          "checked_at": "2026-10-21T00:06:56.023164+00:00",
           "latest_source_date": "2026-08-18",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-20T14:27:26.917896+00:00"
+      "communications_checked_at": "2026-10-21T00:06:56.023164+00:00"
     }
   ],
   "calendar_sources": [
@@ -3487,7 +3538,7 @@
     "week_start": "2026-10-19",
     "week_end": "2026-10-25",
     "schema_version": 1,
-    "as_of": "2026-10-20T14:27:40.982733+00:00",
+    "as_of": "2026-10-21T00:06:56.023164+00:00",
     "local_date": "2026-10-20",
     "timezone": "America/Chicago",
     "week_definition": "Monday through Sunday",

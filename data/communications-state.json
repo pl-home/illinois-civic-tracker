@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-20T14:27:26.917896+00:00",
+  "checked_at": "2026-10-21T00:06:56.023164+00:00",
   "sources": {
     "fritts-office": {
+      "status": "failed",
       "items": [
         {
           "id": "5f2e5bb60f44b940000d7eae",
@@ -15,7 +16,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "27d458aef44145f86ea91166",
@@ -28,7 +30,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "80ccc571b8f35ae125076cbd",
@@ -41,7 +44,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "9688e3af4c3bf0fb32a5ab8a",
@@ -54,7 +58,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "14a9f91d1e6463f6b9d8a632",
@@ -67,7 +72,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "fa967141accd33a09bd6969d",
@@ -80,7 +86,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "be2be2b681fd057d798d77d9",
@@ -93,7 +100,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "2904be619eb5d1bed1d156b1",
@@ -106,7 +114,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "25e5a240b7cf930d8ef1fbca",
@@ -119,7 +128,8 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         },
         {
           "id": "1fa0412bdd29ccc17f7507b1",
@@ -132,14 +142,13 @@
           "publisher": "Representative Bradley Fritts office",
           "kind": "office",
           "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "source_url": "https://repfritts.com/latest-news/",
+          "retained_after_failure": true
         }
       ],
-      "entries_checked": 10,
-      "rejected_entries": 0,
+      "error": "source-unavailable-or-listing-changed",
       "latest_source_date": "2026-10-08",
-      "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Representative Bradley Fritts office",
       "kind": "office",
       "members": [
@@ -149,6 +158,7 @@
       "note": ""
     },
     "arellano-office": {
+      "status": "failed",
       "items": [
         {
           "id": "f280dfa909a19d87195ad5a5",
@@ -161,7 +171,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "aac60bf749ea6080b89b6e48",
@@ -174,7 +185,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "7ad531472b17ab38218e7f96",
@@ -187,7 +199,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "b45e7ae6f1a21856030c91c3",
@@ -200,7 +213,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "f4f3fee562f28f64e1d0418b",
@@ -213,7 +227,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "a932e25ec332cf9e83447839",
@@ -226,7 +241,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "7fbc4ca1a018a4cdf2cee251",
@@ -239,7 +255,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "c1ae0f901b3675e44abb1dda",
@@ -252,7 +269,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "674a2a5d4de71a82bfd16e07",
@@ -265,7 +283,8 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         },
         {
           "id": "a9f1823332b8bf313a261cf7",
@@ -278,14 +297,13 @@
           "publisher": "Senator Li Arellano office",
           "kind": "office",
           "publisher_host": "senatorli.com",
-          "source_url": "https://www.senatorli.com/"
+          "source_url": "https://www.senatorli.com/",
+          "retained_after_failure": true
         }
       ],
-      "entries_checked": 10,
-      "rejected_entries": 0,
+      "error": "source-unavailable-or-listing-changed",
       "latest_source_date": "2026-09-24",
-      "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Senator Li Arellano office",
       "kind": "office",
       "members": [
@@ -366,7 +384,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-07",
       "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Representative Darin LaHood office",
       "kind": "office",
       "members": [
@@ -376,6 +394,7 @@
       "note": "HTML listing dates are used; the advertised RSS contained malformed dates and is not used."
     },
     "durbin-office": {
+      "status": "failed",
       "items": [
         {
           "id": "b2cb08fab0b626c7f5962eef",
@@ -388,7 +407,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "0ddbfe3edc8510771de1e62f",
@@ -401,7 +421,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "9f85b96c72dbdf76dcdf8045",
@@ -414,7 +435,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "d4e23c18dc9962f0d2f5171a",
@@ -427,7 +449,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "7004bcb66a43f8a6fe71592f",
@@ -440,7 +463,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "ed412e9b0972c1de5630c328",
@@ -453,7 +477,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "06cf926db5b7c01271558b3d",
@@ -466,7 +491,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "c9f247b9c5f5a05a2487e285",
@@ -479,7 +505,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "7c7ad2d8069ee63eeea3aa01",
@@ -492,7 +519,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "3c9256f73c54a32717330adb",
@@ -505,7 +533,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "217a7a0711f52e64d76b4cc6",
@@ -518,7 +547,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "9b9bad5e84e55bd51ca4dfa9",
@@ -531,7 +561,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "f2ede0cc8f1cc6c34297f79f",
@@ -544,7 +575,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "2ae2c8278a67d3f0bba5c6c5",
@@ -557,7 +589,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "0f201311218991ac04c15bd1",
@@ -570,7 +603,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "572e74323f69372e79f2800e",
@@ -583,7 +617,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "f5738ebdc758ed9804abe331",
@@ -596,7 +631,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "b1e829832c4372d9e1ae96cd",
@@ -609,7 +645,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "cac1c23a0f8baacdc7041e50",
@@ -622,7 +659,8 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "ff13f4d97341a5f7b6a51545",
@@ -635,14 +673,13 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
+          "retained_after_failure": true
         }
       ],
-      "entries_checked": 20,
-      "rejected_entries": 0,
+      "error": "source-unavailable-or-listing-changed",
       "latest_source_date": "2026-10-19",
-      "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Senator Dick Durbin office",
       "kind": "office",
       "members": [
@@ -652,6 +689,7 @@
       "note": ""
     },
     "duckworth-office": {
+      "status": "failed",
       "items": [
         {
           "id": "ca44d9c7313e6bbb6bf43fea",
@@ -664,7 +702,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "cb1163fbaa55e144cb9b84b9",
@@ -677,7 +716,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "d550fc669043f205551a1af9",
@@ -690,7 +730,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "dde34db32bcf79b095d7f13b",
@@ -703,7 +744,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "405e453737813d88a42d9aa1",
@@ -716,7 +758,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "4e2f721e1efac27b98e17240",
@@ -729,7 +772,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "c26ec01e44c17db2eeceb0dd",
@@ -742,7 +786,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "097d2345147f6b85c4f91140",
@@ -755,7 +800,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "da7bfb91554202016a9832b5",
@@ -768,7 +814,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "b737e158870fb6d7560383a0",
@@ -781,7 +828,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "cc62dca35ce320da83148f80",
@@ -794,7 +842,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "19397fea3241a15108edf9e8",
@@ -807,7 +856,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "8dea0ce2ceb50b2447294501",
@@ -820,7 +870,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "881af77d540c7078c7ee32e5",
@@ -833,7 +884,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "eed00f2570648063d44384f5",
@@ -846,7 +898,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "13d1a9f18249d7ae5cad6ca8",
@@ -859,7 +912,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "eb478907ddc4149c67eae1d1",
@@ -872,7 +926,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "ee247795fd7835fe9a06cd60",
@@ -885,7 +940,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "8fb027ec07aa062b376c650b",
@@ -898,7 +954,8 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         },
         {
           "id": "f8e043c866cffe226ae3f5d3",
@@ -911,14 +968,13 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
+          "retained_after_failure": true
         }
       ],
-      "entries_checked": 20,
-      "rejected_entries": 0,
+      "error": "source-unavailable-or-listing-changed",
       "latest_source_date": "2026-10-19",
-      "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Senator Tammy Duckworth office",
       "kind": "office",
       "members": [
@@ -933,7 +989,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2025-07-15",
       "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Fritts campaign",
       "kind": "campaign",
       "members": [
@@ -948,7 +1004,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2024-11-05",
       "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "LaHood campaign",
       "kind": "campaign",
       "members": [
@@ -961,7 +1017,7 @@
       "status": "link-only",
       "items": [],
       "note": "Older campaign site describes his previous House race; current dated release feed not verified.",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Arellano campaign (older site)",
       "kind": "campaign",
       "members": [
@@ -973,7 +1029,7 @@
       "status": "link-only",
       "items": [],
       "note": "Campaign link verified previously; no dated public release feed verified for this collector.",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Durbin campaign",
       "kind": "campaign",
       "members": [
@@ -985,7 +1041,7 @@
       "status": "link-only",
       "items": [],
       "note": "No dated public release archive verified; campaign site link only.",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Duckworth campaign",
       "kind": "campaign",
       "members": [
@@ -999,7 +1055,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-20",
       "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Illinois Senate Republican Caucus",
       "kind": "party",
       "members": [
@@ -1011,24 +1067,170 @@
       "note": ""
     },
     "il-house-gop": {
-      "status": "link-only",
-      "items": [],
-      "note": "Public homepage returned HTTP 403 during collector setup; link only.",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
-      "label": "Illinois House Republican Caucus",
+      "items": [
+        {
+          "id": "673350a1339ed197727b3bc2",
+          "member_id": "fritts",
+          "title": "Governor Pritzker Isn’t Telling The Truth on Taxes",
+          "url": "https://www.thecaucusblog.com/2026/10/governor-pritzker-isnt-telling-truth-on.html",
+          "published_at": "2026-10-15T13:30:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "f8d142218dd7cbc5b755b580",
+          "member_id": "fritts",
+          "title": "Another Life Lost, Another Electronic Monitoring Failure",
+          "url": "https://www.thecaucusblog.com/2026/10/another-life-lost-another-electronic.html",
+          "published_at": "2026-10-14T13:50:06+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "454774de5e275ede6ff377c5",
+          "member_id": "fritts",
+          "title": "On Crypto Tax, Who Could Have Seen This Coming?",
+          "url": "https://www.thecaucusblog.com/2026/10/on-crypto-tax-who-could-have-seen-this.html",
+          "published_at": "2026-10-09T13:30:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "15b2fbb01cf747d963ed37fd",
+          "member_id": "fritts",
+          "title": "Three Years Later, Ending Cash Bail Has Had Deadly Consequences",
+          "url": "https://www.thecaucusblog.com/2026/09/three-years-later-ending-cash-bail-has.html",
+          "published_at": "2026-09-18T13:30:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "13e3a1523121741cd8b3970b",
+          "member_id": "fritts",
+          "title": "Canty Can’t Have It Both Ways",
+          "url": "https://www.thecaucusblog.com/2026/09/canty-cant-have-it-both-ways.html",
+          "published_at": "2026-09-10T19:15:28+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "583980f8a5a3cf8ed85c2103",
+          "member_id": "fritts",
+          "title": "Amid Ongoing Controversy, Murri Briel Steps Down From Welch’s PR Working Group",
+          "url": "https://www.thecaucusblog.com/2026/09/amid-ongoing-controversy-murri-briel.html",
+          "published_at": "2026-09-03T13:30:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "80522933b0260226bd3b7539",
+          "member_id": "fritts",
+          "title": "Even Democrats Aren’t Buying Welch’s Working Group",
+          "url": "https://www.thecaucusblog.com/2026/08/even-democrats-arent-buying-welchs.html",
+          "published_at": "2026-08-12T16:36:01+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "d00f122371640ab08c718233",
+          "member_id": "fritts",
+          "title": "Democrats' Working Group is a PR Stunt, Not Reform",
+          "url": "https://www.thecaucusblog.com/2026/08/democrats-working-group-is-pr-stunt-not.html",
+          "published_at": "2026-08-06T18:20:44+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "3779cae11e3cc6296089f76d",
+          "member_id": "fritts",
+          "title": "Just More Excuses From Speaker Welch",
+          "url": "https://www.thecaucusblog.com/2026/08/just-more-excuses-from-speaker-welch.html",
+          "published_at": "2026-08-06T18:16:01+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "b62367a157d0b46e8137e46a",
+          "member_id": "fritts",
+          "title": "Pritzker Turns a Blind Eye to Welch’s Mishandling of Sexual Harassment Allegations",
+          "url": "https://www.thecaucusblog.com/2026/08/pritzker-turns-blind-eye-to-welchs.html",
+          "published_at": "2026-08-05T20:00:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
+        {
+          "id": "6e8eba4254a3f2c31e6419a3",
+          "member_id": "fritts",
+          "title": "Speaker Welch's Promise Rings Hollow",
+          "url": "https://www.thecaucusblog.com/2026/07/speaker-welchs-promise-rings-hollow.html",
+          "published_at": "2026-07-23T18:55:03+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        }
+      ],
+      "entries_checked": 25,
+      "rejected_entries": 0,
+      "latest_source_date": "2026-10-15",
+      "status": "ok",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
+      "label": "The Caucus Blog · Illinois House Republican Caucus",
       "kind": "party",
       "members": [
         "fritts"
       ],
-      "source_url": "https://www.ilhousegop.org/"
+      "source_url": "https://www.thecaucusblog.com/",
+      "note": "Caucus-wide House Republican updates, shown for Fritts as a House member. Posts need not name him and do not establish his authorship or endorsement. This is a legislative caucus publication, not a campaign or independent newsroom."
     },
     "senate-democrats": {
+      "status": "failed",
       "items": [],
-      "entries_checked": 20,
-      "rejected_entries": 0,
+      "error": "source-unavailable-or-listing-changed",
       "latest_source_date": "2026-10-17",
-      "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Senate Democratic Caucus",
       "kind": "party",
       "members": [
@@ -1044,7 +1246,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-08-18",
       "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Lee County Democrats",
       "kind": "party",
       "members": [
@@ -1060,7 +1262,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-01",
       "status": "ok",
-      "checked_at": "2026-10-20T14:27:26.917896+00:00",
+      "checked_at": "2026-10-21T00:06:56.023164+00:00",
       "label": "Lee County Republican Central Committee",
       "kind": "party",
       "members": [
