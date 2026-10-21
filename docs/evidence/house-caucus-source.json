@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-21T00:06:06.355255+00:00",
+  "status": "local-verified-hosted-refresh-pending",
+  "source_id": "il-house-gop",
+  "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+  "listing_url": "https://www.thecaucusblog.com/",
+  "feed_url": "https://www.thecaucusblog.com/feeds/posts/default?alt=rss",
+  "source_discovery": "RSS and Atom advertised by the supplied homepage; publisher identified in its footer",
+  "members": [
+    "fritts"
+  ],
+  "kind": "party",
+  "scope": "explicit caucus-wide context; authorship and endorsement not inferred",
+  "verified_existing_office_url": "https://repfritts.com/latest-news/",
+  "local": {
+    "feed_entries_checked": 25,
+    "feed_entries_rejected": 0,
+    "recent_caucus_items": 11,
+    "party_items_displayed": 3,
+    "office_items_displayed": 3,
+    "other_members_assigned_house_items": 0,
+    "offline_tests_passed": 319,
+    "privacy_findings": 0,
+    "model_calls": 0
+  },
+  "bounds": {
+    "source_count": 15,
+    "automated": 12,
+    "link_only": 3,
+    "source_cap": 16,
+    "lookback_days": 90,
+    "max_per_kind": 3
+  },
+  "delivery_enabled": false,
+  "pdf_work": "deferred",
+  "new_schedule": false,
+  "hosted": {
+    "status": "pending"
+  }
+}

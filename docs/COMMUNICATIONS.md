@@ -34,13 +34,14 @@ Configured automatic sources:
 | Fritts campaign, `fritts4rep.com/feed/` | Advertised RSS |
 | LaHood campaign, `lahoodforcongress.com/feed/` | Advertised RSS |
 | Illinois Senate Republican Caucus, `ilsenategop.org/feed/` | Advertised RSS; name match required |
+| The Caucus Blog, Illinois House Republican Caucus | Advertised RSS; caucus-wide posts shown only for Fritts, the tracked Illinois House member |
 | Senate Democratic Caucus press releases | Dated public HTML listing; name match required |
 | Lee County Democrats, `leecodemocrats.com/feed/` | Advertised RSS; name match required |
 | Lee County GOP, `leecountyilgop.org/feed/` | Advertised RSS; name match required |
 
-The exact verified HTTPS URLs, per-member source mappings and notes are in [config/communications.json](../config/communications.json). Shared party feeds must name the member in their headline or bounded excerpt; a general party announcement is not assigned to every party member. This is a member-communications view, not a replacement for broader monitoring of party websites.
+The exact verified HTTPS URLs, per-member source mappings and notes are in [config/communications.json](../config/communications.json). Shared party feeds normally must name the member in their headline or bounded excerpt. The owner-authorized House caucus exception is explicit: The Caucus Blog supplies caucus-wide context for Fritts, with publisher attribution and a note that authorship/endorsement is not established. It is not assigned to the tracked Illinois senator or federal members. This is a member-communications view, not a replacement for broader monitoring of party websites.
 
-Four source links are **link-only**: Arellano's older campaign site, the Durbin and Duckworth campaign sites without verified dated feeds, and the Illinois House GOP site whose public homepage returned HTTP 403 in the setup check. They are visible in source coverage and are not represented as automatically collected. Fritts' and LaHood's campaign feeds are active collection sources but their latest posts observed during setup were July 15, 2025 and November 5, 2024 respectively. No recent campaign stories are invented to fill the groups.
+Three source links remain **link-only**: Arellano's older campaign site and the Durbin and Duckworth campaign sites without verified dated feeds. The original House GOP link-only homepage was replaced October 20 by The Caucus Blog's verified advertised RSS feed. They are visible in source coverage and are not represented as automatically collected. Fritts' and LaHood's campaign feeds are active collection sources but their latest posts observed during setup were July 15, 2025 and November 5, 2024 respectively. No recent campaign stories are invented to fill the groups.
 
 LaHood's advertised RSS contains malformed publication dates such as day 280 of October; those dates are rejected rather than repaired. The separate official news listing provides valid dates, so the configured collector uses that listing. HTML publication dates are stored with `date_precision: day`; a time or timezone is not fabricated.
 
@@ -61,3 +62,24 @@ The [communications-only hosted run](https://github.com/pl-home/illinois-civic-t
 Both local and hosted checksum checks confirmed unchanged inference records; the model step was skipped and this refresh made zero model calls. All 137 offline tests and the privacy scan passed. Independent review identified missing-link and partial-date handling issues; targeted regressions now reject source/listing links as article substitutes, count missing HTML metadata, and retain earlier dated items under incomplete health.
 
 The live browser confirmed five exact-query panels with working search/RSS/publisher-policy links and five separate communications sections. Fritts' expanded methodology and office releases were visually checked. Compact results: [communications-validation.json](evidence/communications-validation.json).
+
+## October 20 House caucus source update
+
+The owner supplied The Caucus Blog and Fritts latest-news links. Fritts latest
+news was already collected as `fritts-office` using its dated HTML listing.
+The existing `il-house-gop` entry now collects the blog's advertised HTTPS RSS
+(`feeds/posts/default?alt=rss`) and links coverage to the blog homepage. Its
+footer identifies the publisher as the Illinois House Republican Caucus. Posts
+appear under Fritts **Party / caucus**, with no member-name requirement for this
+explicit caucus-wide source, separately from his **Member office** and newsroom
+reports. This does not imply personal authorship, agreement or campaign origin.
+
+No parser, model task, spending allowance, retention limit, email delivery or
+schedule is added. Source count remains fifteen (twelve automated, three
+link-only), below the existing sixteen-source cap. The existing daily
+communications phase refreshes both supplied sites. First collection of this
+previously link-only publisher establishes a quiet shared-feed baseline; old
+posts can appear in the browser without being represented as new actions today.
+
+The [source-update receipt](evidence/house-caucus-source.json) separates local
+source/parser verification from the hosted communications-only refresh.

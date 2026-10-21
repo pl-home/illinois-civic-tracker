@@ -131,11 +131,12 @@
       "members": [
         "fritts"
       ],
-      "label": "Illinois House Republican Caucus",
+      "label": "The Caucus Blog · Illinois House Republican Caucus",
       "kind": "party",
-      "url": "https://www.ilhousegop.org/",
-      "format": "link-only",
-      "note": "Public homepage returned HTTP 403 during collector setup; link only."
+      "url": "https://www.thecaucusblog.com/feeds/posts/default?alt=rss",
+      "format": "rss",
+      "note": "Caucus-wide House Republican updates, shown for Fritts as a House member. Posts need not name him and do not establish his authorship or endorsement. This is a legislative caucus publication, not a campaign or independent newsroom.",
+      "listing_url": "https://www.thecaucusblog.com/"
     },
     {
       "id": "senate-democrats",
