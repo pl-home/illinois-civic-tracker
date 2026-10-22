@@ -162,13 +162,14 @@
     },
     {
       "id": "P02",
-      "state": "owner-gated",
+      "state": "planned",
       "depends_on": [
         "P01"
       ],
       "gates": [
-        "accepted-lateness-policy",
-        "new-owner-task"
+        "new-owner-task",
+        "documented-bounded-lateness-policy",
+        "preserve-one-normal-attempt-per-date"
       ],
       "start_files": [
         "src/civic_tracker/daily.py",

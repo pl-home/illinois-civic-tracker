@@ -48,8 +48,10 @@ Latest checked-in evidence at this audit, not fresh source checks:
 
 GitHub workflow-state lookup found daily/CI/Pages active and the expired M0
 observer disabled. An active manual trial workflow is **available**, not authorized
-or scheduled. Latest CI/Pages API lookups timed out during this audit; previous
-dated receipts remain evidence, not a new hosted acceptance claim. No collectors,
+or scheduled. Initial CI/Pages lookups timed out; the handoff itself subsequently passed
+clean-runner CI and actual Pages deployment, recorded in the
+[documentation receipt](evidence/documentation-handoff.json). That does not refresh
+source evidence. No collectors,
 model calls, mail or diagnostics were dispatched for this documentation update.
 The former Codex/Windows schedules were previously stopped; they were not
 reactivated or independently reverified here.
@@ -75,6 +77,7 @@ bytes. Dated test counts remain attached to their receipts; the audit receipt
 records current validation. Git growth is a separate unpassed Stage E gate.
 
 Use [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md) and one [work packet](WORK_PACKETS.md).
+The reconciliation passed 323 offline tests and privacy checks.
 The small offline handoff checker validates documentation, dependencies and
 disabled-feature configuration; a pass does not prove live source health or
 grant authority to execute a planned task.

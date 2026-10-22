@@ -27,10 +27,12 @@ If GitHub evidence is unavailable, record that limit instead of guessing.
 
 ## P02 Bounded delayed-run observability and repair
 
-**Depends on P01 and acceptance of its lateness policy.** Own `daily.py`,
+**Depends on P01 and a task to implement its bounded lateness policy.** Own `daily.py`,
 `tests/test_daily.py`, `daily.yml` only if necessary, and `DAILY_REFRESH.md`.
 First add explicit safe gate reasons/last-attempt versus last-success evidence.
-Then implement only the agreed bounded catch-up behavior. Preserve the target
+Then implement the documented bounded catch-up behavior within existing daily
+collection authorization. No extra confirmation is needed for routine reversible
+checks already in scope; ask only if the proposed repair expands authorization. Preserve the target
 01:00 Central, at most one normal attempt per date, shared lock, DST behavior,
 January guard and budget reservations. No new collector schedule.
 

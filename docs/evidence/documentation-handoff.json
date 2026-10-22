@@ -2,7 +2,7 @@
   "schema_version": 1,
   "audit_date": "2026-10-22",
   "timezone": "America/Chicago",
-  "status": "local-passed-hosted-pending",
+  "status": "passed-documentation-published-production-unchanged",
   "base": {
     "commit": "c83ca2ab96c5646ac1f4deecee96c0c41b6e4f28"
   },
@@ -65,6 +65,13 @@
     "no claim that smaller models can self-approve missing delivery/security/identity evidence"
   ],
   "hosted": {
-    "status": "pending"
+    "status": "passed",
+    "verified_revision": {
+      "commit": "47a8bae728a4fee25717b5309eba0e015adeb081"
+    },
+    "verify_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39867850774",
+    "pages_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39867850801",
+    "actual_deploy_step": "success",
+    "collector_or_trial_dispatches": 0
   }
 }
