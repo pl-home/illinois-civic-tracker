@@ -1,5 +1,7 @@
 # Stage D: digest previews
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 Delivered October 20, 2026: the preview slice of Stage D. **Email delivery is
 disabled until owner review.** No SMTP transport, delivery reservation/attempt
 ledger, recipient lookup, new schedule, collection, model call or PDF extraction

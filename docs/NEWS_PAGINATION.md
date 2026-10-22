@@ -1,5 +1,7 @@
 # Paginated 200-day member news
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 October 20, 2026 owner-requested follow-up. Member bill-history pages now show
 five screened articles in their news column. **Older coverage**, **Newer coverage**,
 **Newest coverage** and **Oldest available coverage** lead to independently

@@ -1,9 +1,23 @@
 # Daily website refresh
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
+## October 22 operating qualification
+
+The schedule is configured, but run success is not collection success. Scheduled
+[run 39771120266](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39771120266)
+created at 06:30:40 Central completed with source, model and publish steps skipped.
+The current gate accepts local hours 01:00 through before 06:00, once per completed
+date. Compare gate output/step outcomes, `data/collection-state.json` and each
+`data/daily-report.json` source timestamp before claiming freshness. Latest stored
+Illinois/Federal/Calendar checks are October 19/18/20 UTC respectively. No repair,
+manual collection or schedule change is part of this documentation reconciliation.
+[WORK_PACKETS.md](WORK_PACKETS.md) separates diagnosis, policy and bounded repair.
+
 **Latest October 17 scope update:** the owner authorized recent media reports for all five members and narrow routine Qwen3 32B / DeepInfra relevance screening, with USD 0.02 daily, USD 0.20 weekly and USD 20 lifetime limits. [MEDIA_REPORTS.md](MEDIA_REPORTS.md) describes operation and evidence limits. Older statements excluding routine inference are superseded only for this task; party and legislative inference remain disabled.
 
 
-The owner authorized daily website updates at **01:00 America/Chicago** on October 17, 2026. This supersedes the earlier 23:00 collection target for the public website. It is a staged daily dashboard release, separate from the still-gated complete M1 digest and later inference activation. The [first hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39043392873) completed and deployed on October 17. Illinois and calendars passed; federal coverage was partial (House Clerk HTTP 503 and one incomplete Congress.gov pagination sequence). Prior facts were retained and failures were published. This is an operational deployment with visible source gaps, not a claim that every source passed. `data/daily-report.json` is the current receipt.
+The owner authorized daily website updates at **01:00 America/Chicago** on October 17, 2026. This supersedes the earlier 23:00 collection target for the public website. It is a staged daily dashboard release, separate from the still-gated complete M1 digest and broader inference proposals. The [first hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39043392873) completed and deployed on October 17. Illinois and calendars passed; federal coverage was partial (House Clerk HTTP 503 and one incomplete Congress.gov pagination sequence). Prior facts were retained and failures were published. This is an operational deployment with visible source gaps, not a claim that every source passed. `data/daily-report.json` is the current receipt.
 
 ## Operation
 

@@ -1,36 +1,19 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 11 — October 20, 2026, America/Chicago. Read with
-[PRODUCT_VISION.md](PRODUCT_VISION.md), revision 11. This replaces the initial
-October 15 plan as current delivery guidance. Earlier plans/build briefs remain
-historical acceptance evidence; their obsolete schedule, private-server proposal,
-M1 exclusions and exactly-once-mail claims do not override this revision or later
-owner instructions.
+Revision 12 — October 22, 2026, America/Chicago. Read with revision 12
+[PRODUCT_VISION.md](PRODUCT_VISION.md), [CURRENT_STATUS.md](CURRENT_STATUS.md)
+and the bounded [execution guide](EXECUTION_GUIDE.md). The current plan replaces
+obsolete October 15/16 schedule, no-inference and exactly-once-mail claims only
+where later owner decisions explicitly supersede them. Historical receipts,
+failed trials and pending source-dependent gates remain intact.
 
-The [published planning copy](https://github.com/pl-home/illinois-civic-tracker/blob/main/docs/IMPLEMENTATION_PLAN.md)
-and workspace copy share the same content. This plan sequences work; it does not
-declare proposals implemented or enable any workflow/model task. Code, current
-configuration and dated collection reports establish actual operating state.
-
-October 20 owner-requested news extension: individual member history pages now
-include a 200-day newsroom column with five reports per page and older/newer
-coverage links; homepage
-news retains 90 days. The same five feed requests, cache and model guard apply;
-no additional model request allowance, schedule or PDF task is enabled. Added
-static news markup raises the generated-member-HTML ceiling from 2 MB to 3 MB;
-the base remains 650 KB and canonical working JSON remains 20 MB.
-
-October 20 news-pagination follow-up: the member news browser shows five articles
-per page and retains up to 100 exact-cache-screened reports per member within
-200 days. The homepage retains three within 90 days. A rolling metadata store
-is capped at 1 MB inside the existing 20 MB JSON limit; static member/news HTML
-remains capped at 3 MB. Screening now continues beyond three accepted results,
-still at four unseen candidates per member and four paid media calls per day.
-Historical financial entries and uncertain requests are never reset or retried.
+This update reconciles documentation and prepares future work; it implements no
+remaining packet, sends no mail, runs no source/model/PDF job and changes no
+production configuration. Workspace/published vision and plan remain mirrors.
 
 ## 1. Baseline and remaining scope
 
-As of the October 19 release, the public website, GitHub-hosted daily official
+Through the October 20 delivered slices, the public website, GitHub-hosted daily official
 collection, limited media screening and direct-communications sections are
 implemented. State/federal source health, configured calendars/roles, budgets and
 privacy checks are visible. A structured error journal has recurrence/recovery
@@ -44,7 +27,7 @@ for future CI or full product acceptance.
 | Federal | Congress.gov relationships and official current-session floor XML, with retained prior history | Service/session transition and deeper historical/committee coverage |
 | Individual member history | October 20 owner request: paginated accepted current-session bill activity, names linked from homepage; separate undated relationship listings | Full-tenure/topic pages, applicable GA103 backfill and deeper source completeness remain M5 |
 | Hearings | Stage B: day/committee navigation; accepted agenda/amendment history, explicit status changes, bounded missing-ID rechecks and stale-slip protection | Genuine upcoming/open-form live acceptance; stronger Senate hearing IDs and broader federal agenda coverage |
-| Media/communications | Visible discovery policy; up to three dated eligible newsroom items; separate attributed first-party sources | Remaining source gaps/reprints and body-text mention coverage outside the bounded headline check |
+| Media/communications | Visible discovery policy; homepage three reports/90 days; member news five/page/200 days; separate attributed first-party sources including House Caucus Blog context for Fritts | Remaining source gaps/reprints and body-text mention coverage outside the bounded headline check |
 | County parties | Stage C hosted page/asset coverage, exact reasons, quiet baselines, pending-edit recovery, held review and six bounded mention feeds | Observe genuine subsequent live edits; human image review remains unresolved until performed |
 | Health | Source reports, privacy checks, bounded error journal and usage accounting | Cross-record integrity, coverage and withheld-record QA |
 | Notifications | Stage D HTML/text previews and exact selection manifest; prior one-time Gmail transport/inbox proof | Owner preview review, conservative send ledger, controlled delivery and weekly acceptance; email disabled |
@@ -80,6 +63,16 @@ hosted database to implement the following stages. The Monday 06:00 digest targe
 is still a planned channel, not an active schedule.
 
 ## 3. Delivery sequence and acceptance gates
+
+The concrete execution order is P01 daily skip/freshness diagnosis, then a
+reviewed bounded delay fix (P02) and source diagnostics (P03). P04 live hearing
+acceptance is source-dependent. Offline storage simulation (P05) and the
+January rollover review (P06) are independent of blocked digest delivery.
+[WORK_PACKETS.md](WORK_PACKETS.md) names exact starting files, tests and done/stop
+conditions; [handoff.json](handoff.json) records dependencies. Small-model
+execution follows [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md), one packet per task.
+D00 owner preview review blocks D01–D04 delivery work; this documentation request
+is not that review or authority to run a paid/send workflow.
 
 Stages A, B and C are delivered within their coverage boundaries below. Stage D
 **previews are implemented; owner review precedes any delivery work**. Genuine

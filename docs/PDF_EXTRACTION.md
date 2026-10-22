@@ -1,5 +1,7 @@
 # Hosted PDF extraction
 
+> Documentation review: October 22, 2026. Deferred/manual-trial reference; no new PDF, model or delivery execution authorized. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 The owner authorized setting up PDF extraction on October 19, 2026. This is a
 manually versioned trial, not a scheduled collector and not a replacement for official
 vote validation. The paused committee implementation is not included in this release.

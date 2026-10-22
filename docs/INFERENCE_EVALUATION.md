@@ -1,5 +1,7 @@
 # One bounded hosted inference evaluation
 
+> Documentation review: October 22, 2026. Historical evidence/setup; not current activation instructions. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 The owner authorized this evaluation on October 17, 2026: Qwen3 32B through DeepInfra, within the USD 20 trial cap. **Routine inference remains disabled.** This is separate from the deterministic M1 collection/digest and the public browsing page.
 
 The [first run and review](INFERENCE_EVALUATION_RESULTS.md) are complete: 30 calls, USD 0.00145256, failed mandatory adversarial gate. The unchanged protocol and frozen inputs below describe that original experiment.

@@ -1,116 +1,78 @@
 # Illinois civic tracker
 
-A small, factual Illinois legislative and county-party monitor. The intended product is a weekly digest that helps a constituent notice relevant actions and upcoming hearings. It does not infer a position or send messages to legislators.
+A factual tracker for Bradley Fritts and Li Arellano, Jr. (GA104), and Darin
+LaHood, Dick Durbin and Tammy Duckworth (Congress119), plus the two Lee County
+party organizations. Public browsing is on [the website](https://pl-home.github.io/illinois-civic-tracker/);
+private positions, notes and correspondence stay in Obsidian. No automatic outreach.
 
-**Planning updated October 20, 2026:** start with the revision 11
-[product vision](docs/PRODUCT_VISION.md) and
-[implementation plan](docs/IMPLEMENTATION_PLAN.md). They reconcile the earlier
-research/build briefs with owner-approved changes and current implementation.
-Stages A, B and C now supply the common change feed, quality gates, hearing filters,
-agenda/status revisions and bounded hosted party/relevance coverage. Stage D now provides
-[HTML and plain-text digest previews](docs/DIGEST_PREVIEWS.md), with an exact
-selection manifest. **Email delivery stays disabled pending owner review.**
-Delivery-state/SMTP acceptance remains future work; live open-slip acceptance
-remains source-dependent. PDF work is deferred.
-See [the shared change contract](docs/CHANGE_FEED.md), [completion receipt](docs/evidence/stage-a.json)
-and [actual upstream adaptation notices](THIRD_PARTY_NOTICES.md). The homepage
-now includes bounded accepted changes plus JSON and Atom subscription links.
-[Hearing tracking](docs/HEARING_TRACKING.md) explains stable notice identities,
-agenda/amendment changes, explicit postponements/cancellations and source limits.
+## Start here — October 22, 2026
 
-[County-party monitoring](docs/PARTY_MONITORING.md) checks eleven reviewed pages
-and one first-party poster with the daily 01:00 Central run. The homepage shows
-per-page health, attributed edits and held review; a six-subject Capitol Fax
-headline check is separate from newsroom reports. Baselines, cosmetic edits and
-parser migrations stay quiet; no new inference or raw site archive is enabled.
+1. [Current status and decisions](docs/CURRENT_STATUS.md): implemented boundaries, actual receipt dates and known failures.
+2. [Execution guide](docs/EXECUTION_GUIDE.md): safe commands, ownership, side effects and stop rules.
+3. [One work packet](docs/WORK_PACKETS.md): exact starting files, dependencies and acceptance criteria.
+4. [Product vision](docs/PRODUCT_VISION.md) and [implementation plan](docs/IMPLEMENTATION_PLAN.md), revision 12.
+5. [Documentation index](docs/DOCUMENTATION_INDEX.md): every public guide classified as current, reference, historical or deferred.
 
-Click any legislator's name (or **More sponsorship & bill activity**) for
-[paginated member history](docs/MEMBER_HISTORY.md): 25 entries per page, older
-actions and official links, with undated federal relationships kept separately.
-These pages reuse accepted records without new collection or inference; current
-session coverage is incomplete and does not establish full service history.
-Each member history page also has a 200-day news column with five reports per
-page and links to paginated older coverage. Homepage news retains its 90-day display window; request/spending caps
-are unchanged. See [news evidence limits](docs/MEDIA_REPORTS.md).
+Stages A–C and Stage D **previews** are implemented within their documented
+coverage limits. [HTML/text previews](docs/DIGEST_PREVIEWS.md) are available;
+**email delivery is disabled pending owner review**. Full Stage D and M1 remain
+incomplete. PDF work and daily new committee-roll-call extraction stay deferred.
 
-**Browse the tracker:** [Illinois civic tracker](https://pl-home.github.io/illinois-civic-tracker/). The homepage shows recent actions and recorded votes for Fritts, Arellano, LaHood, Durbin and Duckworth, plus committee links, a rolling month of posted meetings and recent attributed media reports. Source dates and incomplete coverage are explicit. Daily website refresh is configured for 01:00 Central; collection health and source dates remain visible. Weekly digest delivery remains undeployed. See [daily source scope and operation](docs/DAILY_REFRESH.md). See [dashboard sources and limits](docs/DASHBOARD.md). The original 134-item Fritts export remains available in the historical archive. Public facts only; no private advocacy notes are published. Each card also shows the exact news search and a separate office/campaign/party communications section with source coverage. See [news discovery and direct communications](docs/COMMUNICATIONS.md).
+## What runs, and what does not
 
-The homepage reports recorded AI usage against **USD 0.02/day and USD 0.20/week**, using Monday–Sunday in America/Chicago. Actual charges and unsettled reservations are separate; earlier evaluations count. Details: [usage and budget policy](docs/BUDGET_USAGE.md).
+The GitHub daily workflow targets **01:00 America/Chicago** without an AI chat or
+local computer. It collects official source metadata/calendars, bounded party
+pages and news/communications. Only public media-headline relevance uses Qwen3
+32B through DeepInfra, capped at **USD 0.02/day, 0.20/week and 20 lifetime**.
+Unsettled requests stay held. [Budget accounting](docs/BUDGET_USAGE.md).
 
-[PDF extraction setup and trial receipts](docs/PDF_EXTRACTION.md) document the
-manual native-text/OpenRouter pilot, source-grounding checks and outstanding
-liabilities. It is not a scheduled collector and does not change verified votes.
-The [six-case committee evaluation](docs/COMMITTEE_ROLLCALL_EVALUATION.md) passed
-the native choice/tally checks but failed the model output-status gate; daily
-committee PDF inference remains disabled.
+A configured schedule or green job does not establish current collection. The
+October 22 scheduled run skipped its collection steps; source receipts are
+older. [Current status](docs/CURRENT_STATUS.md) gives the exact evidence. The
+first recommended task is daily freshness/delay diagnosis, not enabling delivery.
+Manual trial workflows are not authorization to run them. Old Codex/Windows
+schedules remain outside this runner and must not be reactivated here.
 
-[Troubleshooting journal](docs/ERROR_JOURNAL.md): compact recurring errors,
-recoveries and allowlisted model diagnostics, capped at 96 KiB. Existing model
-receipts and cost ledgers remain authoritative.
+The browser provides member actions/votes, committee roles/meetings, accepted
+changes, paginated history and news, and separate office/campaign/party material.
+The Caucus Blog is explicit caucus-wide context for Fritts, not proof of his
+personal authorship. Historical imports and the 134-item export are not new
+activity or the discovery universe. [Architecture](docs/ARCHITECTURE.md),
+[source coverage](docs/DAILY_REFRESH.md), [communications](docs/COMMUNICATIONS.md).
 
-The [versioned committee diagnostic rerun](docs/COMMITTEE_DIAGNOSTIC_RERUN.md)
-preserves the original trial and uses separate bounded spending receipts. It is
-manual only; daily committee collection remains disabled.
+## Safe offline verification
 
-## Current status
-
-**Staged daily website refresh is configured; complete M1 verification and digest deployment remain open.** The former local schedules were stopped before this repository was started. Historical source material is read only. This is a fresh repository; it contains no private vault, raw archive, email addresses or credential values.
-
-For a focused code review, read the current vision and implementation plan first,
-then [architecture and boundaries](docs/ARCHITECTURE.md),
-[dated M0 findings](docs/M0_FINDINGS.md), and one representative evidence file.
-Older operational statements and the October 16 build brief remain historical
-where superseded; code, configuration and dated receipts establish actual coverage.
-
-Read [the product vision](docs/PRODUCT_VISION.md), [the build brief](docs/BUILD_BRIEF_M0_M1.md) and [M0 findings](docs/M0_FINDINGS.md). Findings distinguish direct observations, normalization gaps and tests that still need time or corrected credentials. Hosted source access and Gmail self-delivery to INBOX pass. The follow-up audit reaches 96.59% comparison-key coverage and validates a five-page historical hearing fallback. Retained source gaps, upcoming hearing behavior and multi-day timing remain open.
-
-The [first Qwen3 32B / DeepInfra evaluation](docs/INFERENCE_EVALUATION_RESULTS.md) completed 30 calls for USD 0.00145256. It failed the mandatory instruction-injection gate despite 92.3% held-out category accuracy. The [v2 follow-up](docs/INFERENCE_EVALUATION_V2.md) quarantined five attacks before calls but accepted only one of three eligible held-out responses; its single actual website delta also leaves the real-change coverage gate unmet. Both trials together cost USD 0.00172472. The owner subsequently authorized narrow media-headline relevance screening within the configured project budget. That separate ID-only task is enabled; party and legislative inference remain disabled. See [media evidence, spending controls and operation](docs/MEDIA_REPORTS.md). The credential stays in Actions secrets.
-
-## Intended M1 operation
-
-- Public website source refresh daily at 01:00 America/Chicago (owner update October 17).
-- Factual digest Mondays at 06:00 America/Chicago, including a quiet-week health summary.
-- FTP XML first; one conditional floor-vote CSV retrieval, committee assignments, bounded party pages and Capitol Fax feed metadata.
-- Official facts and change collection remain deterministic. A separate, capped media-relevance task is enabled; federal daily collection supplements owner-managed Congress.gov alerts.
-- Compact public records; positions, correspondence and contact packets remain private.
-
-The daily website workflow is configured separately from the time-limited M0 observation. No digest is enabled. Only the narrow media-relevance inference task is scheduled alongside daily website collection. The [daily release notes](docs/DAILY_REFRESH.md) state its remaining coverage limits.
-
-## Repository map
-
-| Folder | Responsibility |
-| --- | --- |
-| config | Subjects, source policy and bounded M0 observation window |
-| src/civic_tracker | Small source verification, normalization, privacy and rule modules |
-| tests | Synthetic tests and a reviewed 134-item public sponsorship export |
-| docs/evidence | Compact public verification outcomes, not raw source copies |
-| data | Reserved for M1 compact records and ledgers |
-| web | Accessible static browser template, styling and filter enhancement |
-| .github/workflows | Tests, Pages publication, M0 source access and bounded observations |
-
-Raw downloads and temporary inspection stay in ignored scratch storage. No full vote CSV, PDF, ZIP or HTML snapshot is committed. The eventual data budget is below 100 MB; broader history growth must be measured before deployment.
-
-## Local checks
+Use Python 3.11 from the actual repository root, with the package installed:
 
 ```sh
-python -m pip install -e .
-python -m unittest discover -s tests -v
+python scripts/check_handoff.py
 python -m civic_tracker.privacy
+python -m unittest discover -s tests -v
+python -m civic_tracker.browse --output .local/handoff-site
+python -m civic_tracker.digest preview --output .local/handoff-digest
 ```
 
-The privacy check reports file names and finding categories only. It rejects non-allowlisted addresses, machine profile paths and credential-shaped strings. Before pushing, enable GitHub secret scanning with push protection and keep commit email private. Commits must use a GitHub noreply identity; workflow commits use the Actions bot identity. These settings complement, rather than replace, file review.
+These do not collect sources, use credentials, invoke a model or send mail.
+The checker validates docs/packet dependencies and disabled-feature flags, not
+live source health. [Commands with side effects](docs/EXECUTION_GUIDE.md).
 
-## Access policy
+## Repository map and boundaries
 
-Requests to the main ILGA site are sequential, with at least ten seconds between starts; one-time backfill verification uses twenty seconds. Logged-in and disallowed paths are rejected. FTP is preferred. Redirects require an explicit rate-checked retry so an automatic redirect cannot bypass the gate. Source failures must not be converted into an empty successful digest.
+| Path | Responsibility |
+| --- | --- |
+| `config/` | Reviewed identities, source bounds, schedules and feature limits; no secret values |
+| `src/civic_tracker/` | Collection, accepted facts, rendering, diagnostics and accounting |
+| `data/` | Compact public records/receipts/ledgers; collector-owned, not scratch |
+| `web/` | Static browser templates and enhancement |
+| `tests/` | Offline regressions and reviewed public/synthetic fixtures |
+| `docs/` | Current guides, explicit future tasks and immutable dated evidence |
+| `scripts/check_handoff.py` | Read-only documentation/packet consistency check |
+| `.github/workflows/` | Existing hosted collection/publication and restricted manual tools |
 
-## Credentials and delivery
-
-SMTP verification uses only repository secrets named GMAIL_USER, GMAIL_APP_PASSWORD and DIGEST_TO. OPENSTATES_API_KEY and LEGISCAN_API_KEY are optional. Values never belong in files, fixtures, logs or job summaries. Submission and INBOX confirmation are recorded separately in the M0 mail receipt; SMTP acceptance alone is not a delivery pass.
-
-A sent-week ledger suppresses ordinary repeated triggers. SMTP does not offer an atomic transaction with a Git commit: a crash between submission and ledger persistence can make delivery uncertain. The M1 delivery design must document that boundary rather than promise unconditional exactly-once delivery. GitHub scheduling can also be delayed; catch-up behavior is a release gate.
-
-[Paginated news coverage](docs/NEWS_PAGINATION.md) retains up to 100 accepted
-reports per member in a bounded rolling metadata cache, rechecking exact-case
-screening decisions. Older candidates are screened gradually within the same
-request/spending guards; there is no claim of a complete 200-day news archive.
+Canonical JSON is capped at 20 MB, the shared ledger at 10 MB, base public files
+at 650 KB and member/news HTML at 3 MB separately. No raw HTML/PDF/ZIP/CSV archive,
+private vault, credential, address or machine profile path is published. Keep
+source/financial history and failed receipts intact; do not prune to make checks
+pass. Main ILGA requests are sequential with verified TLS and at least ten-second
+spacing (twenty for backfill). Use a noreply commit identity and explicit owned
+paths. Actual reused code is disclosed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

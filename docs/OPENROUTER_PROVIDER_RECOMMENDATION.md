@@ -1,5 +1,7 @@
 # Hosted inference selection and original recommendation
 
+> Documentation review: October 22, 2026. Historical evidence/setup; not current activation instructions. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 Reviewed October 17, 2026. The owner subsequently approved this model/provider for one bounded manual evaluation. Routine inference remains disabled. The original selection rationale follows; current execution controls are in [INFERENCE_EVALUATION.md](INFERENCE_EVALUATION.md). The owner reports OPENROUTER_API_KEY saved as an Actions secret and approves a **USD 20 trial ceiling**. No monthly reset, automatic replenishment, or production spending is assumed. The original provider research used no credential or model call. The later [authorized evaluation](INFERENCE_EVALUATION_RESULTS.md) used the Actions secret inside its worker, completed 30 calls for USD 0.00145256, and failed its mandatory adversarial gate. No credential value was copied out or published.
 
 ## Proposed model and host

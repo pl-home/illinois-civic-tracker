@@ -1,22 +1,15 @@
 # Recent media reports and narrowly enabled inference
 
-**October 20 pagination follow-up:** member news now shows five articles per page
-with older/newer navigation and a bounded rolling cache of up to 100 screened
-reports per member, covering 200 days. Homepage news remains three within 90 days.
-This supersedes the earlier three-result member-column limit below. Read
-[NEWS_PAGINATION.md](NEWS_PAGINATION.md) for exact-cache checks, gradual screening,
-storage bounds and coverage limits. Model request and spending caps are unchanged.
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
 
-**October 20 member-page update:** each paginated member page has a news column
-with up to three screened reports from the last **200 days**. The shared five
-Google News queries now request 200 days; the homepage still displays only reports
-within 90 days. The same accepted metadata/cache supplies both views. Bounds stay
-at 150 feed entries, 30 eligible candidates, four candidates per member and four
-model calls per Chicago day, within the existing USD 0.02/day, USD 0.20/week and
-USD 20 lifetime guards. Bounded feeds may return only newer indexed results;
-this is not a complete 200-day archive. Rendering never triggers a request.
-Receipts retain the actual query/window; old 90-day receipts are not relabeled.
-See [member-page layout and storage](MEMBER_HISTORY.md).
+Current discovery uses the same five 200-day Google News queries. Homepage
+news shows up to three accepted reports within 90 days; member pages show five
+per page within 200 days, retaining at most 100 screened records/member.
+[NEWS_PAGINATION.md](NEWS_PAGINATION.md) defines exact-cache checks, gradual
+screening and bounds. Up to 150 feed entries and 30 eligible candidates per
+member are considered; four unseen candidates/member and four paid calls per
+Chicago day stay within the existing budget. This is not complete news coverage.
+Older receipts retain their actual discovery window; rendering never fetches.
 
 Owner authorization, October 17, 2026: put recent reports under each member's witness-slip guidance and enable inference initially with a target below one US cent per day, later raised by the owner to USD 0.02/day and USD 0.20/week. This supersedes the older no-routine-inference rule **only for media relevance screening**. Party categorization, legislative topic inference, amendment/shell-bill detection and model-generated synopses remain disabled. The failed v1/v2 evaluation gates remain failed; this constrained Boolean task does not claim to pass them.
 
@@ -24,9 +17,9 @@ The owner subsequently requested visible per-member search methodology and separ
 
 ## Display and evidence
 
-Each of the five homepage member cards shows up to three latest eligible articles found within 90 days; individual member pages use 200 days. The collector searches free Google News RSS feeds for the member's name within 200 days, then requires a dated article, a name anchor in its title/snippet and a source host in the reviewed major/Illinois newsroom list in `config/media.json`. Journalistic campaign coverage, debate/forum attendance or absence, interviews, questionnaires, profiles, awards and staffing reports qualify alongside policy and official activity. Relevance is not an importance or policy-only test. Explicit opinion/editorial/endorsement titles, government offices, campaign-owned sites, party sites and unlisted publishers are excluded. The list is a source selection policy, not an assertion of political neutrality or article accuracy. Genre inferred from headlines is fallible: commentary or press-release-derived reporting may remain even though the prompt asks to exclude opinion. The display attributes links rather than certifying their contents.
+Each of the five homepage member cards shows up to three latest eligible articles found within 90 days; individual member pages show five per page within 200 days. The collector searches free Google News RSS feeds for the member's name within 200 days, then requires a dated article, a name anchor in its title/snippet and a source host in the reviewed major/Illinois newsroom list in `config/media.json`. Journalistic campaign coverage, debate/forum attendance or absence, interviews, questionnaires, profiles, awards and staffing reports qualify alongside policy and official activity. Relevance is not an importance or policy-only test. Explicit opinion/editorial/endorsement titles, government offices, campaign-owned sites, party sites and unlisted publishers are excluded. The list is a source selection policy, not an assertion of political neutrality or article accuracy. Genre inferred from headlines is fallible: commentary or press-release-derived reporting may remain even though the prompt asks to exclude opinion. The display attributes links rather than certifying their contents.
 
-Feed results are sorted by publication timestamp and identical normalized headlines are deduplicated. Up to four candidates per member are screened; the page may show fewer than three. This is not comprehensive media monitoring: indexing gaps, body-only mentions, paywalls, ambiguous titles and the candidate bound can omit coverage. An absent report is not proof of absent activity. Similar reports about the same event may appear when their headlines differ.
+Feed results are sorted by publication timestamp and identical normalized headlines are deduplicated. Up to four candidates per member are screened; a homepage can show fewer than three and a member news page fewer than five. This is not comprehensive media monitoring: indexing gaps, body-only mentions, paywalls, ambiguous titles and the candidate bound can omit coverage. An absent report is not proof of absent activity. Similar reports about the same event may appear when their headlines differ.
 
 Only public title, publisher, date and link are displayed, with attribution. RSS descriptions are brief feed metadata, often just a repeated headline, and are not full article text. No paywall, logged-in content or article body is fetched. Google News article links route to publishers; the UI identifies that route and publisher access terms still apply. Feed metadata is not independently verified against article bodies, and the model cannot supply or change it. Collection failures retain earlier screened reports within the age window and display incomplete coverage.
 

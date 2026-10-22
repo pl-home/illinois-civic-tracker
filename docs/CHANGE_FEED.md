@@ -1,5 +1,7 @@
 # Stage A: shared changes and quality checks
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 Delivered October 19, 2026, America/Chicago. Start review with `changes.py`,
 `change_sources.py`, `change_feed.py`, `tests/test_changes.py` and the dated
 `docs/evidence/stage-a.json` receipt. Attribution is in

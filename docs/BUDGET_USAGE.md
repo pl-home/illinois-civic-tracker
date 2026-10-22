@@ -1,5 +1,7 @@
 # AI usage and budget reporting
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 The owner's later October 17, 2026 authorization raises the tracker budget to **USD 0.02 per day** and **USD 0.20 per week**. Weeks run Monday 00:00 through the following Monday 00:00 in **America/Chicago**, with Sunday shown as the last inclusive date. Both limits are enforced independently before a paid reservation. The original USD 20 lifetime ceiling remains in place. These are ceilings, not spending goals; collection frequency, candidate limits and the four-media-request daily safeguard are unchanged.
 
 The homepage's **AI usage & budget** panel appears near the top, before collection health and member cards. It shows week dates, recorded weekly and daily charges, limits, remaining capacity and progress meters. Its expandable **Usage details** disclosure explains exact amounts, unsettled reservations, calculation time and scope. A disclosure is the HTML `<details>` / `<summary>` control also used for **How we find news**; a coordinated group is often called an accordion.

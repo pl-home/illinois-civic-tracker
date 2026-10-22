@@ -1,5 +1,7 @@
 # Browsing page and historical archive
 
+> Documentation review: October 22, 2026. Historical evidence/setup; not current activation instructions. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 The October 17 homepage revision is documented in [DASHBOARD.md](DASHBOARD.md). The five-member activity dashboard is now the main page; the original export described below is preserved at `archive.html`. This document describes that historical collection.
 
 On October 17, 2026 the owner brought a basic read-only browser forward into the first release. This supersedes the earlier M1 exclusion of all public-site work. It does not authorize production collection, email schedules, or inference before their gates pass. Full-tenure and topic pages remain later work.

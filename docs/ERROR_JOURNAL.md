@@ -1,5 +1,7 @@
 # Bounded troubleshooting journal
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 Start with [`data/error-journal.json`](../data/error-journal.json). It is a compact
 public index of failures and recoveries, not a dump of exception messages or model
 responses. Existing collection reports and financial ledgers remain authoritative.

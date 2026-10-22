@@ -1,5 +1,7 @@
 # Stage B: committee hearing navigation and changes
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 Delivered October 20, 2026, America/Chicago, within the boundaries below.
 Read this with [CHANGE_FEED.md](CHANGE_FEED.md), the revision 6 vision/plan and
 [the completion receipt](evidence/stage-b.json). PDF extraction and new committee

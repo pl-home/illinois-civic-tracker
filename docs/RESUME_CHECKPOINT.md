@@ -1,33 +1,13 @@
-# Current checkpoint
+# Resume checkpoint
 
-**Latest October 17 scope update:** the owner authorized recent media reports for all five members and narrow routine Qwen3 32B / DeepInfra relevance screening, with USD 0.02 daily, USD 0.20 weekly and USD 20 lifetime limits. [MEDIA_REPORTS.md](MEDIA_REPORTS.md) describes operation and evidence limits. Older statements excluding routine inference are superseded only for this task; party and legislative inference remain disabled.
+Superseded checkpoint reconciled October 22, 2026. This file is a stable pointer,
+not another independently maintained status narrative.
 
+1. Read [CURRENT_STATUS.md](CURRENT_STATUS.md).
+2. Follow [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md) and one [WORK_PACKETS.md](WORK_PACKETS.md) card.
+3. Resolve the actual checkout/dirty files from the private workspace handoff and Git before editing.
 
-**October 17 daily website scope update:** the owner explicitly authorized daily public website refresh at **01:00 America/Chicago**, superseding its previous 23:00 target and manual-only status. This staged source-refresh release does not declare unresolved M0/M1 checks passed or enable the weekly digest/inference. Read [DAILY_REFRESH.md](DAILY_REFRESH.md) for source coverage, retained failures, initial hosted verification and remaining gates. Earlier status statements below are dated evidence.
-
-
-Future requirement added: amendment-aware website synopses and semantic rewrite detection (M2). SB2427 is a reviewed continuity regression: replacement boilerplate must not automatically mean an unrelated shell rewrite. Distinguish adopted versions from pending/tabled amendments, and substantive same-subject changes from actual subject changes. See AMENDMENT_INFERENCE_REQUIREMENTS.md; no inference or alert activation accompanies this note.
-
-Current daily status: 01:00 Central independent GitHub workflow is active. October 17 federal recovery is complete and deployed (records commit `dadba9f`): Illinois, Federal and Calendars report ok. Both Congress.gov secret names are supported, with CONGRESSGOV_API preferred. All six member-role lists and the complete House/Senate vote indexes passed; an identical Congress.gov source row is explicitly deduplicated. Reused successful checks retain original timestamps. No inference calls or ledger changes accompanied recovery. See DAILY_REFRESH.md and evidence/federal-recovery-validation.json; 153 tests pass and the live homepage was verified.
-
-October 17 homepage revision is published at the existing Pages URL (implementation `380611e`). The five-member dashboard passed 92 tests, privacy checks, clean-runner CI, Pages deployment and live browser review. Read DASHBOARD.md and evidence/dashboard-validation.json for the 97-event snapshot, 23 schedule receipts, source dates and future live witness-slip gates. Automatic source refresh remains off; archive.html preserves the original export.
-
-The separate v2 evaluation completed five calls, charged USD 0.00027216, with five attack samples quarantined before requests. Only 1/3 eligible held-out responses passed evidence validation; the actual website delta was rejected. There is only one genuine delta against a minimum five. The quality gate failed and routine inference remains disabled. Combined v1/v2 recorded cost: USD 0.00172472, no uncertain liability. Read INFERENCE_EVALUATION_V2.md and its frozen receipt/ledger. Do not rerun or change this corpus to improve its score.
-
-Next: close production collection/delivery gates while retaining manual-snapshot labeling. For inference, gather further genuine paired website deltas, review the voter-information category, and design deterministic evidence-span selection before a separately versioned future trial. Old local schedules remain stopped; no new routine model, collection or digest schedule was enabled.
-
-Homepage metadata follow-up: all five banners include source-reviewed Facebook and campaign links, with account type and Arellano's older campaign-site limitation visible. Fourteen official Illinois rosters now supply exact-ID committee roles; federal full-committee roles are dated configuration. Arellano Public Health: Minority Spokesperson; Durbin Judiciary: Ranking Member. The collector now rechecks Illinois roles without treating a missing role as ordinary membership. The historical export is explicitly an archive/test fixture, not the monitoring universe; no equivalent manual Arellano export is required. Follow-up suite: 95 passing tests, privacy clear. See DASHBOARD.md for the production collection gates that remain open.
-
-## Earlier checkpoint (preserved context)
-
-Updated October 17, 2026 after the owner brought basic browsing into the first release.
-
-- The [public browsing page](https://pl-home.github.io/illinois-civic-tracker/) is live. It renders the reviewed 134-item Fritts sponsorship export, with 24 ceremonial entries hidden by default. Search, measure-type filtering, expandable source fields, item permalinks and a compact public JSON download work. It is a historical preview, not a current-activity feed.
-- See BROWSING_PAGE.md and evidence/browsing-validation.json for architecture, provenance, validation and limits. Exact Fritts roles, original filing, topics, votes, Arellano and other source coverage are not loaded. This does not satisfy the full M1 index acceptance gate.
-- The browsing 57-test suite passed locally and in clean-runner CI; the expanded suite now has 70 passing tests, including 13 offline inference-evaluation tests. Pages build/deploy jobs passed. Live UI verified 110 default and 134 show-ceremonial records. Mobile content had no horizontal overflow.
-- OpenRouter: the approved Qwen3 32B / DeepInfra evaluation completed 30 calls on October 17 at 8:32-8:33 a.m. Central. API-reported cost USD 0.00145256; no uncertain charges remain. Held-out category accuracy 24/26, topic precision/recall each 10/11. Both party pairs and repeated notice were consistent, but one of two injection cases contaminated a housing tag. The mandatory quality gate failed. Routine inference remains disabled. Read INFERENCE_EVALUATION_RESULTS.md, the compact evidence report and the preserved ledger. Do not clear reservations, change original labels, or retune/re-score this corpus as fresh held-out data. No second paid run occurred.
-- Earlier source verification remains: 2,439/2,525 legacy vote comparison keys covered (96.594%), with 86 retained source-detail/label/date cases; five nonempty historical hearing pages / 103 posted items parsed; 20 bill identities and histories cross-checked. These are verification evidence, not production imports.
-- M0_FINDINGS.md retains production release gates. Recent metadata observations have been preserved; multi-day source timing and future hearing behavior still need review, and post-veto CSV cadence is a dated follow-up.
-- Old Codex and Windows schedules remain stopped. Only the bounded M0 observer is scheduled. Pages publishes on repository pushes; it does not collect sources, send email, access secrets or invoke a model. No nightly product collection or digest schedule is enabled.
-
-Next: build/review the compact production index and source adapters while closing the documented gates. Keep historical imports separate from new activity. Any future inference work must address the documented injection failure, preserve this regression set and use fresh held-out material under a separately versioned bounded run. Review README.md, BROWSING_PAGE.md, M0_FINDINGS.md and INFERENCE_EVALUATION_RESULTS.md before resuming.
+Next recommended task is P01: explain daily skips versus actual source freshness.
+Stage D previews exist; owner review remains pending. Email stays disabled; PDF
+work stays deferred. This documentation update approves neither activation.
+Historical checkpoint text remains in Git history and the private planning archive.

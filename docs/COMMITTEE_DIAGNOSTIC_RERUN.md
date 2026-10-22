@@ -1,5 +1,7 @@
 # Committee PDF diagnostic rerun
 
+> Documentation review: October 22, 2026. Deferred/manual-trial reference; no new PDF, model or delivery execution authorized. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 The owner authorized a separately versioned diagnostic rerun on October 19, 2026.
 It uses the same six reviewed PDFs for Fritts and Arellano, unchanged Qwen3 32B /
 DeepInfra routing, prompt, response schema, 1,000-token output bound and validation.

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-22",
+  "timezone": "America/Chicago",
+  "status": "local-passed-hosted-pending",
+  "base": {
+    "commit": "c83ca2ab96c5646ac1f4deecee96c0c41b6e4f28"
+  },
+  "scope": "documentation reconciliation and read-only handoff validation; no remaining product packet implemented",
+  "documentation": {
+    "revision": 12,
+    "public_markdown_classified": 35,
+    "work_packets": 15,
+    "private_planning_mirrors_match": true,
+    "old_entry_points_preserved_with_hashes": true,
+    "original_evidence_json_unchanged": true
+  },
+  "checks": {
+    "offline_tests_passed": 323,
+    "handoff_fault_tests": 4,
+    "handoff_checker_passed": true,
+    "relative_links_and_dependency_graph": "passed",
+    "privacy_findings": 0,
+    "protected_files_unchanged": 140,
+    "protected_groups": [
+      "data",
+      "config",
+      "src",
+      "preexisting tests",
+      "workflows"
+    ],
+    "protected_comparison": "SHA-256 after CRLF-to-LF normalization; filesystem stat differences are not content changes"
+  },
+  "storage": {
+    "base_artifact_bytes": 546229,
+    "member_html_bytes": 2437693,
+    "total_artifact_bytes": 2983922,
+    "digest_bytes": 27258
+  },
+  "invariants": {
+    "source_collectors_dispatched": 0,
+    "model_calls": 0,
+    "new_model_spend_usd": "0",
+    "emails_sent": 0,
+    "production_schedule_changes": 0,
+    "workflow_dispatches": 0,
+    "github_metadata_read_only": true,
+    "delivery_enabled": false,
+    "pdf_work": "deferred"
+  },
+  "observed_gap": {
+    "run_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39771120266",
+    "run_conclusion": "success",
+    "run_created_at_utc": "2026-10-22T11:30:40Z",
+    "created_at_central": "2026-10-22T06:30:40-05:00",
+    "source_steps": "skipped",
+    "publication_job": "skipped",
+    "interpretation": "not evidence of refreshed sources; outside configured before-06:00 collection window",
+    "next_packet": "P01"
+  },
+  "limitations": [
+    "historical source findings and failed trials were preserved, not rerun",
+    "source health was read from dated checked-in receipts, not freshly collected",
+    "initial latest CI and Pages metadata lookups timed out",
+    "no claim that smaller models can self-approve missing delivery/security/identity evidence"
+  ],
+  "hosted": {
+    "status": "pending"
+  }
+}

@@ -1,6 +1,8 @@
 # Future amendment-aware synopses and rewrite detection
 
-Owner requirement recorded October 17, 2026. This is deferred M2/product work, not runtime activation. It adds a use for inference beyond topic tagging: explaining how an amended bill's policy content changed. Routine inference remains disabled; existing evaluation corpora and results stay frozen.
+> Documentation review: October 22, 2026. Deferred/manual-trial reference; no new PDF, model or delivery execution authorized. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
+Owner requirement recorded October 17, 2026. This is deferred M2/product work, not runtime activation. It adds a use for inference beyond topic tagging: explaining how an amended bill's policy content changed. Routine amendment/synopsis inference remains disabled; separate bounded media-headline screening is enabled. For this deferred task, existing evaluation corpora and results stay frozen.
 
 ## Required distinction
 

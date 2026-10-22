@@ -1,26 +1,20 @@
 # Member activity dashboard
 
-**October 20 pagination follow-up:** member news now shows five articles per page
-with older/newer navigation and a bounded rolling cache of up to 100 screened
-reports per member, covering 200 days. Homepage news remains three within 90 days.
-This supersedes the earlier three-result member-column limit below. Read
-[NEWS_PAGINATION.md](NEWS_PAGINATION.md) for exact-cache checks, gradual screening,
-storage bounds and coverage limits. Model request and spending caps are unchanged.
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
 
-**October 20 member-history update:** names and **More sponsorship & bill
-activity** open [individual history pages](MEMBER_HISTORY.md), generated from
-accepted shared-ledger facts. Dated activity and undated relationships have
-separate 25-row pagination. Each paginated member page also has a 200-day newsroom column; homepage news
-keeps 90 days. The existing ten-file base artifact retains its
-650 KB cap; added static history pages have a separate 3 MB cap. Older file-count
-and total-artifact statements below are dated release evidence.
+Current architecture: [ARCHITECTURE.md](ARCHITECTURE.md). The homepage covers five
+members, roles/hearings, accepted changes and separate newsroom/first-party
+communications. Member activity/news pagination is described in
+[MEMBER_HISTORY.md](MEMBER_HISTORY.md) and [NEWS_PAGINATION.md](NEWS_PAGINATION.md).
+Four digest preview files join the original eight plus change JSON/Atom: fourteen
+base files capped at 650,000 bytes, plus member/news HTML capped at 3,000,000
+separately. Combined ceiling: 3,650,000. Digest delivery remains disabled.
 
-**October 20 Stage B update:** see [HEARING_TRACKING.md](HEARING_TRACKING.md) for
-day/committee navigation, accepted notice details and agenda/status revisions.
-The historical October 17 counts/manual-only/eight-file statements below describe
-the initial release. Current operation includes daily collection and ten public
-artifact files (including changes.json and changes.atom), bounded at 650 KB.
-No PDF work, digest delivery or broader inference is enabled by Stage B.
+## Historical October 17 deployment evidence
+
+The paragraphs/counts below describe that release, not current source freshness.
+Current daily operation and its skip/retained-source gaps are in
+[DAILY_REFRESH.md](DAILY_REFRESH.md) and [CURRENT_STATUS.md](CURRENT_STATUS.md).
 
 The owner expanded the basic browsing release on October 17, 2026: the homepage now covers Bradley Fritts, Li Arellano Jr., Darin LaHood, Dick Durbin and Tammy Duckworth. It shows recent member actions, recorded votes, committee websites and the next calendar month of posted committee meetings. This narrowly brings a public federal snapshot forward from the later roadmap; it does not deploy the broader federal monitoring pipeline or satisfy the remaining M0/M1 gates.
 
@@ -49,13 +43,13 @@ python -m civic_tracker.browse --output .local/site
 
 Run from the repository root after installation. Imported facts are public and bounded; full archives, PDFs and HTML are not published. Main ILGA and public slip-host requests share the sequential ten-second gate. FTP is preferred. Collection errors remain visible instead of becoming empty success. Rendering makes no requests, uses no credentials, and escapes source text.
 
-The Pages artifact contains exactly eight allowlisted files: `index.html`, `archive.html`, `dashboard.json`, `records.json`, `styles.css`, `app.js`, `dashboard.js` and `.nojekyll`. The current artifact is about 407 KB. Unexpected output files or symlinks cause the build to fail. The original 134-item export and its 24 ceremonial flags remain in the archive, with old item links redirected there. The homepage works without JavaScript; its small script warns about stale snapshots and preserves legacy links. There are no external scripts, analytics or browser-held API credentials.
+The Pages artifact contains exactly eight allowlisted files: `index.html`, `archive.html`, `dashboard.json`, `records.json`, `styles.css`, `app.js`, `dashboard.js` and `.nojekyll`. That October 17 artifact was about 407 KB. Unexpected output files or symlinks cause the build to fail. The original 134-item export and its 24 ceremonial flags remain in the archive, with old item links redirected there. The homepage works without JavaScript; its small script warns about stale snapshots and preserves legacy links. There are no external scripts, analytics or browser-held API credentials.
 
 ## Verification and limits
 
 The 92-test suite and privacy scan pass. Coverage includes date windows, empty-versus-failed schedules, committee scoping, source URLs, raw vote choices, unknown cosponsor dates, conservative slip controls, escaping, artifact isolation and archive invariants. Browser checks confirmed all five members, expandable votes, the archive and mobile layout without horizontal overflow.
 
-This is a manually collected snapshot. The Pages workflow publishes committed data; it does not refresh legislative sources, run inference or send a digest. Automatic refresh stays off until production gates pass. Party-site inference remains a separately versioned manual evaluation and cannot supply official legislative facts.
+That initial snapshot was manually collected. The Pages workflow publishes committed data; it does not refresh legislative sources, run inference or send a digest. Automatic refresh was off at that initial check; the later authorized daily runner is now configured, with its dated coverage limits. Party-site inference remains a separately versioned manual evaluation and cannot supply official legislative facts.
 
 The published implementation is `380611e`. Clean-runner [CI](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39039374030) and [Pages deployment](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39039374009) passed; the live homepage was checked after deployment. See [compact dashboard validation](evidence/dashboard-validation.json).
 

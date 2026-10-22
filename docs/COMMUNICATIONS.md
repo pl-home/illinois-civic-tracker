@@ -1,5 +1,7 @@
 # News discovery and direct communications
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 Owner update, October 17, 2026: make news discovery visible and display campaign releases and direct office/party communications in their own section. This enables deterministic public first-party collection alongside the existing daily news phase. It does not enable the legacy AI party classifier, automatic outreach, Facebook scraping, private email access or a new local schedule.
 
 ## How news is found
@@ -8,13 +10,13 @@ Each member card now has **How we find news about [member]**, with the exact Goo
 
 | Member | Exact query |
 | --- | --- |
-| Bradley Fritts | `"Bradley Fritts" OR "Brad Fritts" when:90d` |
-| Li Arellano, Jr. | `"Li Arellano" when:90d` |
-| Darin LaHood | `"Darin LaHood" when:90d` |
-| Dick Durbin | `"Dick Durbin" when:90d` |
-| Tammy Duckworth | `"Tammy Duckworth" when:90d` |
+| Bradley Fritts | `"Bradley Fritts" OR "Brad Fritts" when:200d` |
+| Li Arellano, Jr. | `"Li Arellano" when:200d` |
+| Darin LaHood | `"Darin LaHood" when:200d` |
+| Dick Durbin | `"Dick Durbin" when:200d` |
+| Tammy Duckworth | `"Tammy Duckworth" when:200d` |
 
-The collector reads up to 150 RSS items, checks publication dates, requires a reviewed newsroom host and a name anchor in the headline/snippet, excludes explicit opinion/editorial titles, deduplicates normalized headlines and retains at most 30 candidates per member. Qwen's bounded relevance decisions select from these IDs; it does not discover stories, change their dates, generate their titles, verify their contents or rank them by importance. Date sorting determines display order. Up to four not-yet-screened candidates per member are considered per run within the shared daily limits. [MEDIA_REPORTS.md](MEDIA_REPORTS.md) describes cache, uncertainty and spending controls.
+The collector reads up to 150 RSS items, checks publication dates, requires a reviewed newsroom host and a name anchor in the headline/snippet, excludes explicit opinion/editorial titles, deduplicates normalized headlines and retains at most 30 candidates per member. Qwen's bounded relevance decisions select from these IDs; it does not discover stories, change their dates, generate their titles, verify their contents or rank them by importance. Date sorting determines display order. Homepage reports use 90 days/three items; member news pages use 200 days/five per page with a bounded 100-item screened cache. Up to four not-yet-screened candidates per member are considered per run within the shared daily limits. [MEDIA_REPORTS.md](MEDIA_REPORTS.md) describes cache, uncertainty and spending controls.
 
 This is an indexed-feed search, not exhaustive web coverage. Full articles are not read. Source ownership determines the section: newsroom reporting about an election remains in news. A newsroom can reprint a release; the current metadata-only collector cannot certify original authorship or identify every reprint. It does not label a newspaper article a campaign statement merely because it covers a campaign.
 
@@ -57,7 +59,7 @@ For review start with this file, `config/communications.json`, `src/civic_tracke
 
 ## Hosted acceptance
 
-The [communications-only hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39048939298) completed and deployed October 17. All 11 automated sources were healthy; four sources were explicitly link-only. Each member displayed three office posts. Campaign and party groups had no eligible recent items in this bounded check and remain visibly empty with source coverage explanations. No publication date or release was invented to fill them.
+The [communications-only hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39048939298) completed and deployed October 17. All 11 automated sources were healthy; four sources were explicitly link-only. Each member displayed three office posts. Campaign and party groups had no eligible recent items at that October 17 check; this dated observation is superseded by later source receipts and the House blog addition below. No publication date or release was invented to fill them.
 
 Both local and hosted checksum checks confirmed unchanged inference records; the model step was skipped and this refresh made zero model calls. All 137 offline tests and the privacy scan passed. Independent review identified missing-link and partial-date handling issues; targeted regressions now reject source/listing links as article substitutes, count missing HTML metadata, and retain earlier dated items under incomplete health.
 

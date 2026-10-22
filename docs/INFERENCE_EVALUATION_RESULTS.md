@@ -1,5 +1,7 @@
 # Qwen3 32B / DeepInfra: first evaluation
 
+> Documentation review: October 22, 2026. Historical evidence/setup; not current activation instructions. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 **Decision: do not enable routine inference.** The authorized evaluation completed successfully as a workflow, but its predeclared quality gate failed on instruction-injection contamination. No prompt, corpus labels or thresholds were changed after reading the results, and no second paid run was made.
 
 Run: October 17, 2026, **8:32:42–8:33:56 a.m. America/Chicago**. [GitHub Actions run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39036984374). The full compact [result receipt](evidence/inference-evaluation.json), [trial ledger](../data/inference-evaluation-ledger.json), [protocol](INFERENCE_EVALUATION.md) and [frozen corpus](../tests/fixtures/inference-evaluation.json) permit review without reading old archives.

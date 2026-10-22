@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "revision": 12,
+  "reviewed_date": "2026-10-22",
+  "execution_authorization": false,
+  "documents": [
+    {
+      "path": "AGENTS.md",
+      "class": "current"
+    },
+    {
+      "path": "docs/AMENDMENT_INFERENCE_REQUIREMENTS.md",
+      "class": "deferred"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "class": "current"
+    },
+    {
+      "path": "docs/BROWSING_PAGE.md",
+      "class": "historical"
+    },
+    {
+      "path": "docs/BUDGET_USAGE.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/BUILD_BRIEF_M0_M1.md",
+      "class": "historical"
+    },
+    {
+      "path": "docs/CHANGE_FEED.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/COMMITTEE_DIAGNOSTIC_RERUN.md",
+      "class": "deferred"
+    },
+    {
+      "path": "docs/COMMITTEE_ROLLCALL_EVALUATION.md",
+      "class": "deferred"
+    },
+    {
+      "path": "docs/COMMUNICATIONS.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/CURRENT_STATUS.md",
+      "class": "current"
+    },
+    {
+      "path": "docs/DAILY_REFRESH.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/DASHBOARD.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/DIGEST_PREVIEWS.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/DOCUMENTATION_INDEX.md",
+      "class": "current"
+    },
+    {
+      "path": "docs/ERROR_JOURNAL.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/EXECUTION_GUIDE.md",
+      "class": "current"
+    },
+    {
+      "path": "docs/HEARING_TRACKING.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "class": "current"
+    },
+    {
+      "path": "docs/INFERENCE_EVALUATION.md",
+      "class": "historical"
+    },
+    {
+      "path": "docs/INFERENCE_EVALUATION_RESULTS.md",
+      "class": "historical"
+    },
+    {
+      "path": "docs/INFERENCE_EVALUATION_V2.md",
+      "class": "historical"
+    },
+    {
+      "path": "docs/M0_FINDINGS.md",
+      "class": "historical"
+    },
+    {
+      "path": "docs/MEDIA_REPORTS.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/MEMBER_HISTORY.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/NEWS_PAGINATION.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/OPENROUTER_PROVIDER_RECOMMENDATION.md",
+      "class": "historical"
+    },
+    {
+      "path": "docs/OPENROUTER_SETUP.md",
+      "class": "historical"
+    },
+    {
+      "path": "docs/PARTY_MONITORING.md",
+      "class": "reference"
+    },
+    {
+      "path": "docs/PDF_EXTRACTION.md",
+      "class": "deferred"
+    },
+    {
+      "path": "docs/PRODUCT_VISION.md",
+      "class": "current"
+    },
+    {
+      "path": "docs/RESUME_CHECKPOINT.md",
+      "class": "current"
+    },
+    {
+      "path": "docs/WORK_PACKETS.md",
+      "class": "current"
+    },
+    {
+      "path": "README.md",
+      "class": "current"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "class": "reference"
+    }
+  ],
+  "packets": [
+    {
+      "id": "P01",
+      "state": "planned",
+      "depends_on": [],
+      "gates": [
+        "new-owner-task"
+      ],
+      "start_files": [
+        "src/civic_tracker/daily.py",
+        ".github/workflows/daily.yml",
+        "tests/test_daily.py",
+        "data/daily-report.json"
+      ]
+    },
+    {
+      "id": "P02",
+      "state": "owner-gated",
+      "depends_on": [
+        "P01"
+      ],
+      "gates": [
+        "accepted-lateness-policy",
+        "new-owner-task"
+      ],
+      "start_files": [
+        "src/civic_tracker/daily.py",
+        "tests/test_daily.py",
+        ".github/workflows/daily.yml"
+      ]
+    },
+    {
+      "id": "P03",
+      "state": "planned",
+      "depends_on": [],
+      "gates": [
+        "new-owner-task",
+        "bounded-source-check-only-after-offline-tests"
+      ],
+      "start_files": [
+        "src/civic_tracker/communications.py",
+        "tests/test_communications.py",
+        "docs/COMMUNICATIONS.md"
+      ]
+    },
+    {
+      "id": "P04",
+      "state": "source-dependent",
+      "depends_on": [],
+      "gates": [
+        "genuine-future-notice-and-open-form",
+        "no-submission"
+      ],
+      "start_files": [
+        "src/civic_tracker/hearing_collect.py",
+        "src/civic_tracker/hearing_changes.py",
+        "src/civic_tracker/digest.py",
+        "tests/test_hearing_changes.py"
+      ]
+    },
+    {
+      "id": "P05",
+      "state": "planned",
+      "depends_on": [],
+      "gates": [
+        "new-owner-task",
+        "offline-synthetic-only"
+      ],
+      "start_files": [
+        "src/civic_tracker/browse.py",
+        "src/civic_tracker/member_history.py",
+        "src/civic_tracker/error_journal.py"
+      ]
+    },
+    {
+      "id": "P06",
+      "state": "planned",
+      "depends_on": [],
+      "gates": [
+        "new-owner-task",
+        "official-service-identity-review-before-migration"
+      ],
+      "start_files": [
+        "config/project.json",
+        "config/dashboard.json",
+        "config/daily.json",
+        "src/civic_tracker/daily_federal.py"
+      ]
+    },
+    {
+      "id": "D00",
+      "state": "owner-gated",
+      "depends_on": [],
+      "gates": [
+        "owner-preview-review"
+      ],
+      "start_files": [
+        "docs/DIGEST_PREVIEWS.md",
+        "src/civic_tracker/digest.py"
+      ]
+    },
+    {
+      "id": "D01",
+      "state": "owner-gated",
+      "depends_on": [
+        "D00"
+      ],
+      "gates": [
+        "explicit-delivery-implementation-task",
+        "independent-state-design-review"
+      ],
+      "start_files": [
+        "src/civic_tracker/digest.py",
+        "src/civic_tracker/mail_test.py",
+        ".github/workflows/m0-mail.yml"
+      ]
+    },
+    {
+      "id": "D02",
+      "state": "owner-gated",
+      "depends_on": [
+        "D01"
+      ],
+      "gates": [
+        "reviewed-state-machine",
+        "no-transport-no-secrets-rehearsal"
+      ],
+      "start_files": [
+        ".github/workflows/daily.yml",
+        "src/civic_tracker/mail_test.py"
+      ]
+    },
+    {
+      "id": "D03",
+      "state": "owner-gated",
+      "depends_on": [
+        "D02"
+      ],
+      "gates": [
+        "explicit-controlled-send-authorization",
+        "senior-review",
+        "no-automatic-uncertain-retry"
+      ],
+      "start_files": [
+        "src/civic_tracker/mail_test.py",
+        "src/civic_tracker/mail_diagnostics.py"
+      ]
+    },
+    {
+      "id": "D04",
+      "state": "owner-gated",
+      "depends_on": [
+        "D03"
+      ],
+      "gates": [
+        "owner-delivery-acceptance",
+        "explicit-scheduling-authorization"
+      ],
+      "start_files": [
+        ".github/workflows/daily.yml",
+        "docs/IMPLEMENTATION_PLAN.md"
+      ]
+    },
+    {
+      "id": "M2",
+      "state": "future-design",
+      "depends_on": [],
+      "gates": [
+        "separate-design-task",
+        "no-inference-or-PDF-activation"
+      ],
+      "start_files": [
+        "docs/AMENDMENT_INFERENCE_REQUIREMENTS.md"
+      ]
+    },
+    {
+      "id": "M4",
+      "state": "future-design",
+      "depends_on": [],
+      "gates": [
+        "separate-federal-source-design-task"
+      ],
+      "start_files": [
+        "src/civic_tracker/daily_federal.py",
+        "src/civic_tracker/dashboard_sources.py"
+      ]
+    },
+    {
+      "id": "M5",
+      "state": "future-design",
+      "depends_on": [],
+      "gates": [
+        "separate-history-design-task",
+        "preserve-permanent-history"
+      ],
+      "start_files": [
+        "src/civic_tracker/member_history.py",
+        "config/project.json"
+      ]
+    },
+    {
+      "id": "M6",
+      "state": "future-design",
+      "depends_on": [],
+      "gates": [
+        "separate-private-design-task",
+        "no-automatic-outreach"
+      ],
+      "start_files": [
+        "docs/PRODUCT_VISION.md"
+      ]
+    }
+  ]
+}

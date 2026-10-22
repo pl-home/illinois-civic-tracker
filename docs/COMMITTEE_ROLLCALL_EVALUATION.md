@@ -1,5 +1,7 @@
 # Committee roll-call PDF evaluation
 
+> Documentation review: October 22, 2026. Deferred/manual-trial reference; no new PDF, model or delivery execution authorized. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 The owner authorized this manual evaluation on October 19, 2026. It does not enable daily committee collection or change any verified vote record. The current release's historical coverage label remains accurate. Paused committee integration work is separate.
 
 ## Sample and reference answers

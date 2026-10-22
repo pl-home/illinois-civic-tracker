@@ -1,45 +1,17 @@
 # Illinois Civic Tracker: product vision
 
-Revision 11 — October 20, 2026, America/Chicago.
+Revision 12 — October 22, 2026, America/Chicago. Purpose and milestone scope are
+here; [CURRENT_STATUS.md](CURRENT_STATUS.md) owns present operating state and
+[IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) owns sequence/gates. Workspace
+and published copies of this vision/plan share this revision. Dated findings are
+historical evidence, not an alternative active plan.
 
-This reconciles the October 15 research plan, October 16 vision/build brief,
-subsequent owner decisions and the two external-project reviews. It preserves
-the product's purpose while correcting obsolete scope and implementation status.
-The [implementation plan](IMPLEMENTATION_PLAN.md) defines delivery order and
-acceptance gates. The [published planning copy](https://github.com/pl-home/illinois-civic-tracker/blob/main/docs/PRODUCT_VISION.md)
-and workspace copy share this revision; they are handoff mirrors, not separate
-implementations. Earlier plans and dated receipts remain historical evidence.
-Owner instructions and newer approved decisions take precedence over older text.
-
-October 20 owner-requested news extension: individual member history pages now
-include a 200-day newsroom column with five reports per page and older/newer
-coverage links; homepage
-news retains 90 days. The same five feed requests, cache and model guard apply;
-no additional model request allowance, schedule or PDF task is enabled. Added
-static news markup raises the generated-member-HTML ceiling from 2 MB to 3 MB;
-the base remains 650 KB and canonical working JSON remains 20 MB.
-
-October 20 news-pagination follow-up: the member news browser shows five articles
-per page and retains up to 100 exact-cache-screened reports per member within
-200 days. The homepage retains three within 90 days. A rolling metadata store
-is capped at 1 MB inside the existing 20 MB JSON limit; static member/news HTML
-remains capped at 3 MB. Screening now continues beyond three accepted results,
-still at four unseen candidates per member and four paid media calls per day.
-Historical financial entries and uncertain requests are never reset or retried.
-
-October 20 Stage C (hosted verification passed; 298 tests): the daily pipeline now checks the reviewed county-party
-pages and poster, with deterministic relevance, compact evidence, last-good
-retention and a visible held-review path. The dedicated Capitol Fax/Lee County
-headline checks use no model. See [Stage C operation and acceptance](PARTY_MONITORING.md).
-Source-dependent real-change follow-up remains qualified. PDF work stays deferred;
-digest delivery remains disabled. Storage and inference budgets are unchanged.
-
-October 20 Stage D preview slice: [HTML/text previews](DIGEST_PREVIEWS.md) and an
-exact selection manifest now consume accepted changes, ten-day hearing
-opportunities and source health without source/model calls. Preview artifacts
-fit inside the unchanged 650 KB base ceiling (now fourteen files). Owner review
-precedes delivery-state implementation, SMTP acceptance and any sending schedule;
-full Stage D and M1 remain incomplete.
+Stages A–C and Stage D previews are implemented within documented limits.
+Email remains disabled pending owner review; PDF work is deferred. The first
+operational follow-up is actual daily freshness/delay diagnosis; the October 22
+successful scheduled job skipped collection. Use one bounded
+[work packet](WORK_PACKETS.md) through [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md).
+This handoff does not enable future features or change authorization/budgets.
 
 ## 1. Purpose and access
 

@@ -1,5 +1,7 @@
 # Stage C: hosted county-party monitoring and deterministic relevance
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 **October 20 release verified:** [the hosted source-only check](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39464619419)
 passed for all twelve page/asset sources and six mention feeds, with zero added
 change alerts, zero model calls and all ten financial/trial records unchanged.

@@ -1,5 +1,7 @@
 # Inference evaluation v2: quarantine and evidence checks
 
+> Documentation review: October 22, 2026. Historical evidence/setup; not current activation instructions. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 **Status: completed October 17, 2026; quality gate failed. Routine inference remains disabled.** The first experiment stays frozen in `docs/INFERENCE_EVALUATION_RESULTS.md`, its original corpus, report, and ledger. This is a separate experiment with a separate corpus, config, ledger, and receipt.
 
 ## What changed

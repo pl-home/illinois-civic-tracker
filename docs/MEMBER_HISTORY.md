@@ -1,5 +1,7 @@
 # Individual legislator bill history
 
+> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+
 **October 20 pagination follow-up:** member news now shows five articles per page
 with older/newer navigation and a bounded rolling cache of up to 100 screened
 reports per member, covering 200 days. Homepage news remains three within 90 days.
@@ -80,18 +82,13 @@ page/size limits, deterministic artifact contents and generated-output cleanup.
 No external source code was newly copied for this extension; it uses our existing
 shared fact contract. Existing adaptation notices remain in THIRD_PARTY_NOTICES.
 
-## Member-page news column (October 20 extension)
+## Member-page news and pagination — current October 20 follow-up
 
-Every dated and undated page shows up to three screened newsroom reports from
-the last 200 days, alongside bill activity on desktop and below it on narrow
-screens. Dates, publishers, links, source health and the expandable search
-methodology use the shared homepage renderer. Homepage news keeps 90 days.
-The source query uses 200 days; the same five bounded feeds, 30 candidates,
-exact-case cache and existing inference spending/request guards are reused.
-No full article text or new archive is stored. The three newest accepted reports
-are retained across the 200-day window; this does not create a comprehensive
-news archive. Older 90-day source receipts show an explicit pending-window
-notice until refreshed, rather than pretending the broader search succeeded.
-The generated HTML allowance rises to 3 MB, with the unchanged 650 KB base and
-20 MB canonical JSON limits. See [news evidence limits](MEDIA_REPORTS.md) and
-[the news-column receipt](evidence/member-news.json).
+Each dated/undated activity page has a five-report news column with navigation to
+older coverage within 200 days. The dedicated news pages paginate the same
+screened cache, at most 100 metadata records/member. Homepage news remains three
+within 90 days. The five queries, 30 candidates, exact-case cache and paid-call
+bounds stay unchanged. No full article or complete archive is claimed; old
+90-day receipts keep their original window. The 3 MB member/news HTML and 650 KB
+base ceilings remain separate. See [NEWS_PAGINATION.md](NEWS_PAGINATION.md),
+[MEDIA_REPORTS.md](MEDIA_REPORTS.md) and [the earlier layout receipt](evidence/member-news.json).
