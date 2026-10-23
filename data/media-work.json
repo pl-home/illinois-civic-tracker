@@ -1,66 +1,66 @@
 {
-  "work_hash": "b2af7c9a3acc291579ff02151f75982b8bd86ec18a5f28a74aa7484fcc7a5268",
-  "day": "2026-10-20",
-  "created_at": "2026-10-20T14:27:26.917896+00:00",
+  "work_hash": "0be5beea34faaf0cec407ed948f902dcc52112e468143e99f52ddf3947202049",
+  "day": "2026-10-23",
+  "created_at": "2026-10-23T11:32:14.864325+00:00",
   "batches": [
     {
-      "batch_hash": "e79dede1f2e636d18cfedeb0cbc599bc0349322added56680b5d8c32f3562c21",
+      "batch_hash": "b42e3f446dd50bb18b3e5c7335d35182a47c3dda8c5f19840de9e6cb3eb91a1e",
       "cases": [
         {
-          "id": "a366bb2faabcdb926843f1f2",
+          "id": "31c5a234e8645c86ee6deeb9",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "At Peoria debate, challenger Paul Nolley on the attack while longtime incumbent Darin LaHood touts record",
-          "snippet": "At Peoria debate, challenger Paul Nolley on the attack while longtime incumbent Darin LaHood touts record WGLT"
+          "title": "LaHood, Nolley offer competing plans to address rising costs in 16th District race",
+          "snippet": "LaHood, Nolley offer competing plans to address rising costs in 16th District race The Pantagraph"
         },
         {
-          "id": "56c0d34d866f686930e31d3e",
+          "id": "c172ebb5b49da68428f8ad94",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Republican Rep. Darin LaHood asks Trump for help with Illinois storm recovery",
-          "snippet": "Republican Rep. Darin LaHood asks Trump for help with Illinois storm recovery CBS News"
+          "title": "Why LaHood doesn't support Trump plan to send Americans $5K election checks",
+          "snippet": "Why LaHood doesn't support Trump plan to send Americans $5K election checks Peoria Journal Star"
         },
         {
-          "id": "9b0c6b1a6621e127e0b5b27a",
+          "id": "00a71bf953c681710124bebf",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Iran, ICE, data centers: Five takeaways from LaHood, Nolley forum",
-          "snippet": "Iran, ICE, data centers: Five takeaways from LaHood, Nolley forum Peoria Journal Star"
+          "title": "Rep. Darin LaHood defends Iran war, discusses tariffs and immigration solutions on 21st Show",
+          "snippet": "Rep. Darin LaHood defends Iran war, discusses tariffs and immigration solutions on 21st Show IPM Newsroom"
         },
         {
-          "id": "ae3fdf3c86a9300159177132",
+          "id": "d35ea6bbe9dad8b01da9abad",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Who is Paul Nolley? Meet the Democrat running to unseat Darin LaHood",
-          "snippet": "Who is Paul Nolley? Meet the Democrat running to unseat Darin LaHood Peoria Journal Star"
+          "title": "2026 Election Questionnaire: Darin LaHood, U.S. House of Representatives, 16th District",
+          "snippet": "2026 Election Questionnaire: Darin LaHood, U.S. House of Representatives, 16th District Shaw Local"
         },
         {
-          "id": "d0789af82ab822d9a5a19d56",
+          "id": "3e05f4eec226dab152db14a3",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Sen. Dick Durbin on ICE, Social Security and democracy",
-          "snippet": "Sen. Dick Durbin on ICE, Social Security and democracy NPR Illinois"
+          "title": "In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future",
+          "snippet": "In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future CBS News"
         },
         {
-          "id": "ddabbad383149f4ce8169b7f",
+          "id": "ee3c6bb841bdaaa6463d6076",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’",
-          "snippet": "Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’ WTTW News"
+          "title": "WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin",
+          "snippet": "WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin PBS"
         },
         {
-          "id": "53f09c81db239ea553e061ec",
+          "id": "b9c8118e505e6242b47d94c4",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Durbin warns of deep divisions in farewell address to Illinois lawmakers",
-          "snippet": "Durbin warns of deep divisions in farewell address to Illinois lawmakers Capitol News Illinois"
+          "title": "Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions",
+          "snippet": "Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions RiverBender.com"
         },
         {
-          "id": "df8bceb6996a9a25ad9678ca",
+          "id": "222872f25b0fc7b66cc76fde",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Illinois Lawmakers Hail Retiring US Sen. Dick Durbin at Joint Session in Capitol",
-          "snippet": "Illinois Lawmakers Hail Retiring US Sen. Dick Durbin at Joint Session in Capitol WTTW News"
+          "title": "Democrat Juliana Stratton faces Don Tracy, former GOP chair, in Senate battle for Dick Durbin's seat",
+          "snippet": "Democrat Juliana Stratton faces Don Tracy, former GOP chair, in Senate battle for Dick Durbin's seat Chicago Sun-Times"
         }
       ],
       "payload": {
@@ -85,7 +85,7 @@
           },
           {
             "role": "user",
-            "content": "[{\"id\": \"a366bb2faabcdb926843f1f2\", \"member_name\": \"Darin LaHood\", \"title\": \"At Peoria debate, challenger Paul Nolley on the attack while longtime incumbent Darin LaHood touts record\", \"snippet\": \"At Peoria debate, challenger Paul Nolley on the attack while longtime incumbent Darin LaHood touts record WGLT\"}, {\"id\": \"56c0d34d866f686930e31d3e\", \"member_name\": \"Darin LaHood\", \"title\": \"Republican Rep. Darin LaHood asks Trump for help with Illinois storm recovery\", \"snippet\": \"Republican Rep. Darin LaHood asks Trump for help with Illinois storm recovery CBS News\"}, {\"id\": \"9b0c6b1a6621e127e0b5b27a\", \"member_name\": \"Darin LaHood\", \"title\": \"Iran, ICE, data centers: Five takeaways from LaHood, Nolley forum\", \"snippet\": \"Iran, ICE, data centers: Five takeaways from LaHood, Nolley forum Peoria Journal Star\"}, {\"id\": \"ae3fdf3c86a9300159177132\", \"member_name\": \"Darin LaHood\", \"title\": \"Who is Paul Nolley? Meet the Democrat running to unseat Darin LaHood\", \"snippet\": \"Who is Paul Nolley? Meet the Democrat running to unseat Darin LaHood Peoria Journal Star\"}, {\"id\": \"d0789af82ab822d9a5a19d56\", \"member_name\": \"Dick Durbin\", \"title\": \"Sen. Dick Durbin on ICE, Social Security and democracy\", \"snippet\": \"Sen. Dick Durbin on ICE, Social Security and democracy NPR Illinois\"}, {\"id\": \"ddabbad383149f4ce8169b7f\", \"member_name\": \"Dick Durbin\", \"title\": \"Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’\", \"snippet\": \"Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’ WTTW News\"}, {\"id\": \"53f09c81db239ea553e061ec\", \"member_name\": \"Dick Durbin\", \"title\": \"Durbin warns of deep divisions in farewell address to Illinois lawmakers\", \"snippet\": \"Durbin warns of deep divisions in farewell address to Illinois lawmakers Capitol News Illinois\"}, {\"id\": \"df8bceb6996a9a25ad9678ca\", \"member_name\": \"Dick Durbin\", \"title\": \"Illinois Lawmakers Hail Retiring US Sen. Dick Durbin at Joint Session in Capitol\", \"snippet\": \"Illinois Lawmakers Hail Retiring US Sen. Dick Durbin at Joint Session in Capitol WTTW News\"}]"
+            "content": "[{\"id\": \"31c5a234e8645c86ee6deeb9\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood, Nolley offer competing plans to address rising costs in 16th District race\", \"snippet\": \"LaHood, Nolley offer competing plans to address rising costs in 16th District race The Pantagraph\"}, {\"id\": \"c172ebb5b49da68428f8ad94\", \"member_name\": \"Darin LaHood\", \"title\": \"Why LaHood doesn't support Trump plan to send Americans $5K election checks\", \"snippet\": \"Why LaHood doesn't support Trump plan to send Americans $5K election checks Peoria Journal Star\"}, {\"id\": \"00a71bf953c681710124bebf\", \"member_name\": \"Darin LaHood\", \"title\": \"Rep. Darin LaHood defends Iran war, discusses tariffs and immigration solutions on 21st Show\", \"snippet\": \"Rep. Darin LaHood defends Iran war, discusses tariffs and immigration solutions on 21st Show IPM Newsroom\"}, {\"id\": \"d35ea6bbe9dad8b01da9abad\", \"member_name\": \"Darin LaHood\", \"title\": \"2026 Election Questionnaire: Darin LaHood, U.S. House of Representatives, 16th District\", \"snippet\": \"2026 Election Questionnaire: Darin LaHood, U.S. House of Representatives, 16th District Shaw Local\"}, {\"id\": \"3e05f4eec226dab152db14a3\", \"member_name\": \"Dick Durbin\", \"title\": \"In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future\", \"snippet\": \"In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future CBS News\"}, {\"id\": \"ee3c6bb841bdaaa6463d6076\", \"member_name\": \"Dick Durbin\", \"title\": \"WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin\", \"snippet\": \"WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin PBS\"}, {\"id\": \"b9c8118e505e6242b47d94c4\", \"member_name\": \"Dick Durbin\", \"title\": \"Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions\", \"snippet\": \"Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions RiverBender.com\"}, {\"id\": \"222872f25b0fc7b66cc76fde\", \"member_name\": \"Dick Durbin\", \"title\": \"Democrat Juliana Stratton faces Don Tracy, former GOP chair, in Senate battle for Dick Durbin's seat\", \"snippet\": \"Democrat Juliana Stratton faces Don Tracy, former GOP chair, in Senate battle for Dick Durbin's seat Chicago Sun-Times\"}]"
           }
         ],
         "response_format": {
@@ -104,14 +104,14 @@
                       "id": {
                         "type": "string",
                         "enum": [
-                          "a366bb2faabcdb926843f1f2",
-                          "56c0d34d866f686930e31d3e",
-                          "9b0c6b1a6621e127e0b5b27a",
-                          "ae3fdf3c86a9300159177132",
-                          "d0789af82ab822d9a5a19d56",
-                          "ddabbad383149f4ce8169b7f",
-                          "53f09c81db239ea553e061ec",
-                          "df8bceb6996a9a25ad9678ca"
+                          "31c5a234e8645c86ee6deeb9",
+                          "c172ebb5b49da68428f8ad94",
+                          "00a71bf953c681710124bebf",
+                          "d35ea6bbe9dad8b01da9abad",
+                          "3e05f4eec226dab152db14a3",
+                          "ee3c6bb841bdaaa6463d6076",
+                          "b9c8118e505e6242b47d94c4",
+                          "222872f25b0fc7b66cc76fde"
                         ]
                       },
                       "relevant": {
@@ -144,35 +144,21 @@
       }
     },
     {
-      "batch_hash": "38b6b9399a894bf5cd821ab7e5395495609078103da861c159c9f5b99ec19b04",
+      "batch_hash": "479a1eb12345938dbc6712eb83a213c7223da1b17a1b489e98d02d699c3b0969",
       "cases": [
         {
-          "id": "ddb2df32967e640688fd56b2",
+          "id": "3a9a404488174a99554038d1",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Duckworth floats more promotion transparency",
-          "snippet": "Duckworth floats more promotion transparency Punchbowl News"
+          "title": "Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court",
+          "snippet": "Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court RiverBender.com"
         },
         {
-          "id": "cfa7a87342058e7287e2354e",
+          "id": "fb069b544cf1dc8e67e6faa4",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Bridgeport residents push back on Amtrak plan for Chicago maintenance facility; Durbin and Duckworth seek answers",
-          "snippet": "Bridgeport residents push back on Amtrak plan for Chicago maintenance facility; Durbin and Duckworth seek answers CBS News"
-        },
-        {
-          "id": "a44f49ce9c0a0cc21ac38a47",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "NASA retiree Dr. Sylvia Washington of Winfield says pension disappeared, Illinois Senator Duckworth cites broader backlog concerns",
-          "snippet": "NASA retiree Dr. Sylvia Washington of Winfield says pension disappeared, Illinois Senator Duckworth cites broader backlog concerns ABC7 Chicago"
-        },
-        {
-          "id": "95f8e8374823cbbb2b064553",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Illinois Sen. Tammy Duckworth among congressional Democrats investigating efforts to deport US military members",
-          "snippet": "Illinois Sen. Tammy Duckworth among congressional Democrats investigating efforts to deport US military members Chicago Tribune"
+          "title": "Duckworth opposes candidate to replace Platner: ‘Maine deserves better’",
+          "snippet": "Duckworth opposes candidate to replace Platner: ‘Maine deserves better’ The Hill"
         }
       ],
       "payload": {
@@ -197,7 +183,7 @@
           },
           {
             "role": "user",
-            "content": "[{\"id\": \"ddb2df32967e640688fd56b2\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth floats more promotion transparency\", \"snippet\": \"Duckworth floats more promotion transparency Punchbowl News\"}, {\"id\": \"cfa7a87342058e7287e2354e\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Bridgeport residents push back on Amtrak plan for Chicago maintenance facility; Durbin and Duckworth seek answers\", \"snippet\": \"Bridgeport residents push back on Amtrak plan for Chicago maintenance facility; Durbin and Duckworth seek answers CBS News\"}, {\"id\": \"a44f49ce9c0a0cc21ac38a47\", \"member_name\": \"Tammy Duckworth\", \"title\": \"NASA retiree Dr. Sylvia Washington of Winfield says pension disappeared, Illinois Senator Duckworth cites broader backlog concerns\", \"snippet\": \"NASA retiree Dr. Sylvia Washington of Winfield says pension disappeared, Illinois Senator Duckworth cites broader backlog concerns ABC7 Chicago\"}, {\"id\": \"95f8e8374823cbbb2b064553\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Illinois Sen. Tammy Duckworth among congressional Democrats investigating efforts to deport US military members\", \"snippet\": \"Illinois Sen. Tammy Duckworth among congressional Democrats investigating efforts to deport US military members Chicago Tribune\"}]"
+            "content": "[{\"id\": \"3a9a404488174a99554038d1\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court\", \"snippet\": \"Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court RiverBender.com\"}, {\"id\": \"fb069b544cf1dc8e67e6faa4\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth opposes candidate to replace Platner: ‘Maine deserves better’\", \"snippet\": \"Duckworth opposes candidate to replace Platner: ‘Maine deserves better’ The Hill\"}]"
           }
         ],
         "response_format": {
@@ -216,10 +202,8 @@
                       "id": {
                         "type": "string",
                         "enum": [
-                          "ddb2df32967e640688fd56b2",
-                          "cfa7a87342058e7287e2354e",
-                          "a44f49ce9c0a0cc21ac38a47",
-                          "95f8e8374823cbbb2b064553"
+                          "3a9a404488174a99554038d1",
+                          "fb069b544cf1dc8e67e6faa4"
                         ]
                       },
                       "relevant": {
@@ -254,18 +238,16 @@
   ],
   "decisions": {},
   "case_hashes": {
-    "a366bb2faabcdb926843f1f2": "b2cb12af93b9bb1ff8294051fb52264e5f64eb567cec0b928c59b6ffba1f18c6",
-    "56c0d34d866f686930e31d3e": "512e0d7ee312793ebf144ba7c6b00fd83eb072d871cacaf274c7e225c6d1f1b9",
-    "9b0c6b1a6621e127e0b5b27a": "773122da7cfd6290d4baa9894418bd83cc2ceb246b8f30b1e61b6c46ad765ab8",
-    "ae3fdf3c86a9300159177132": "f0102aba2bd0ed08bdff5386e690d115b133f9b377f0f8264f5276e7e2aa3909",
-    "d0789af82ab822d9a5a19d56": "0d8a050a4c623298c2f5fbd51c535feb78f91082e589c6fcf33647f3fd6209db",
-    "ddabbad383149f4ce8169b7f": "10e7185e4b07ac518e3bd9cbc63280083fe79a32758f8b4e6571471bfee1d263",
-    "53f09c81db239ea553e061ec": "57a17374d4641bb45a5cd8b0241d7640aa1de0e58ce3841a183b0031f1e2be2b",
-    "df8bceb6996a9a25ad9678ca": "c1fe0ecb17c42aad09cdda1d226d230dc72f8d07c2c7ee5114fd0b8d1c0bbc8c",
-    "ddb2df32967e640688fd56b2": "2a2498ddb6f293893a75243f8f3654a84c04525d68caa45e46ccd0e0aaf753f9",
-    "cfa7a87342058e7287e2354e": "fac0bf9b7d5047fbde583655011e5cb3ce985f62bd3cd8141936816f5d8a9f52",
-    "a44f49ce9c0a0cc21ac38a47": "e7453819ce7430a82bdfe443d4daa96a833f3e6997120234a02d7cb59d7a8d4d",
-    "95f8e8374823cbbb2b064553": "8c1d0e521be7056f321cebd5047fe7c69adfd5ed344ea47fe271659d869e3bf9"
+    "31c5a234e8645c86ee6deeb9": "3e0803ac1469a42afe069c02108921ba1324d4703157891cb5a10bf6352a4add",
+    "c172ebb5b49da68428f8ad94": "b594780dc9e63c4d2c6a08ccb80951d5a166640bfdbc7d62a2fc74e95b81bef0",
+    "00a71bf953c681710124bebf": "95f96b465c5d80c221a64cefe2562d7ce033d9aff3fc4cf6430b887114a3494b",
+    "d35ea6bbe9dad8b01da9abad": "b0b2921d9f4c967d9cbc85a8f226d621a44da4792e6e3837cc78b364634e74ea",
+    "3e05f4eec226dab152db14a3": "2db5aee6b70d4d3d94c31d091db7472db26210461403fd35e8a7790db6236fce",
+    "ee3c6bb841bdaaa6463d6076": "4c86aaa2856b776a378d24eaf44c4af229b8b132706e85ec5cea8143cc5b255c",
+    "b9c8118e505e6242b47d94c4": "77e23f0eb74d1524dbee873028b015ebddcdd44582bed9487d733f414c9e3c4d",
+    "222872f25b0fc7b66cc76fde": "c2ba8d60ba7c52bdcbc58a0a7000b1638f5f98d75d65882d15e09e2c1bfbcd55",
+    "3a9a404488174a99554038d1": "63b5f81fb6bccac6d545eada79da22c9375ff6780b787c48ae2943fa3f223ffa",
+    "fb069b544cf1dc8e67e6faa4": "9425e274fd05ad2d34f95aa0b7690c519cb87cfd9de608b224e3fb41bdc8ac35"
   },
   "deferred_ids": [],
   "errors": []
