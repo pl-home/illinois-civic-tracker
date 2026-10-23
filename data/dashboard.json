@@ -1485,6 +1485,15 @@
       "calendar_health": "partial_or_failed",
       "media_reports": [
         {
+          "id": "31c5a234e8645c86ee6deeb9",
+          "title": "LaHood, Nolley offer competing plans to address rising costs in 16th District race",
+          "publisher": "The Pantagraph",
+          "publisher_host": "pantagraph.com",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMjFXTFRRRGNWTHZyZkdoaHVlUDhLWi1MRHdUR0E3M1ZUWThkaVhGaGhjV0l6WkpnN2Z0dWZka0NpV3NGc3UxZlJ6SzFkNVk5V2RZT0RuTGg3WERmVEI3ZnpaUEV0ZWhDWGYwbWdkZFFyYkVzVDZJaE9ORTdFa3hrN0JNMW9xek5mQlV3VUhkQ0tpYjc2akNmUWE1QzViZFcyRkFPTmZDRGVTbHgxeW1waWExRQ",
+          "published_at": "2026-10-21T02:30:00+00:00",
+          "link_route": "Google News"
+        },
+        {
           "id": "94bc0c2c64fe6d14e087a6a7",
           "title": "LaHood missed Dixon candidate forum for Peoria event, campaign says",
           "publisher": "Shaw Local",
@@ -1501,15 +1510,6 @@
           "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPc1B1V19QRU10dUxuMUVkSXNwZHJUYjRBa1BuQ0ktYWRUU0gtTWhaZkR3UC1fdU0tOWtGZXVYRGdGTVQ3SDNnekp4SkNzbENJMENkdFBhaWlvWExTVXNtYXpjMjYwUnVsbmFzeUtITGtLaHBHZ0xITWNkcnFXbjIwS0h6X3FtTG9aWUxlZlJ4VU1JeEhtUGhoSXc1ZFZHMm94Qi0tTHFyZm9lWFhkc2N2TDFpS0ZjbFZ1XzlGajR6aEzSAcYBQVVfeXFMUGJYbFlMbHZIeFhoSXZkRWlNeXVHRkJUaG5pYV9aVzZUT1pJQnZkc3U1SkFzSWh1SDRvc2lQTG9aWk9kaGxzbDBVM1VWQWF5RXVMTlpOTnV2amlpS1Fmc2YxTGNQbkVDMjd4MlhNN213YU1BZVBvZWdybXQzOVV6NmQxQlV0eDBGaW4wdlVVYVRtbWhKTkttYl9PZ0tPU3RTOWpSSWRYWVF3c0VxY2pYQW1BVFU2MmVTNGdIcHhqeDFaSlJTSTl3",
           "published_at": "2026-10-09T20:01:52+00:00",
           "link_route": "Google News"
-        },
-        {
-          "id": "0ae885c4bbe1d0dbea3046ec",
-          "title": "LaHood, Nolley discuss key issues during 16th Congressional District debate",
-          "publisher": "WEEK | 25 News Now",
-          "publisher_host": "25newsnow.com",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc0JxRF9kMDRzakkzUEtXSDFHNFZpX0R6Qzg0c25vVlVkM3Z3Z0FnTWViVERXRS16clQ2RUpGSmhEelF3RmNvNmZkWUxQNXlmcXg4VERsbVotOG9XVVl2M1g5WHl0Nk1SeDFyYVFfWjNfWFowUXNGUngyd0xxWENITGc1b2dMU0lyNFBFT1dTTjBrbmJqczBrUFlaU0NaUDVKM3ZOMU1pd2VCTDhXZnZHcjV30gHGAUFVX3lxTFAwYnRKVURCTlByd2dnRWpJUHd1U3lVM2pVUS1Zd19PNWtyNXpXRTVZNHlNTE1tcFRGRGMxQXJFQWdFNWxpSTl1MU5CUkUzQ0NRRkxmZ0NSRnFkTG0zUXU0bklMeHE5dmk0Z2d3NURHRDVReVBlNzJ3VVlhSzNKYWlDVklaeUFITkszTE5vVmQwLU94akFZSVdEV05CUW1XcW5GTHZyUWtRMnM5aVhILWdpbnlEMzVmRS1YalBiTjc4dGIzem5BZw",
-          "published_at": "2026-10-09T07:00:00+00:00",
-          "link_route": "Google News"
         }
       ],
       "media_health": {
@@ -1517,8 +1517,8 @@
         "checked_at": "2026-10-23T11:32:14.864325+00:00",
         "inference_status": "partial",
         "pending_candidates": 14,
-        "withheld_candidates": 4,
-        "screened_history_count": 9,
+        "withheld_candidates": 0,
+        "screened_history_count": 13,
         "lookback_days": 200
       },
       "media_search": {
@@ -2117,33 +2117,31 @@
       "calendar_health": "failed",
       "media_reports": [
         {
-          "id": "3c0e7807a10c72485ee4a971",
-          "title": "Ending a Notable Career, Durbin Laments the Decline of Legislating",
-          "publisher": "The New York Times",
-          "publisher_host": "nytimes.com",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5HdHpMdDlycTI0YzUzZFdMUFFJWWZOTTViaF92YVhydFB5QW1QSXhjdkEzak1VYm4yY0FQM2dPV0xueDY2Mlh2R25FbkpYcGFkQzdnbm9oSHZmRUFBcTVvaElKYWhMUmhnNTZKNzBpb0c",
-          "published_at": "2026-10-09T07:00:00+00:00",
-          "link_route": "Google News",
-          "source_checked_at": "2026-10-20T14:27:26.917896+00:00"
-        },
-        {
-          "id": "1d8051e3ba1d75118136cb59",
-          "title": "Durbin asks DOJ watchdog to investigate FBI's new hiring standards on bestiality, prostitution and employment theft",
+          "id": "3e05f4eec226dab152db14a3",
+          "title": "In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future",
           "publisher": "CBS News",
           "publisher_host": "cbsnews.com",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZmZqMU0tYkFWR194VmV1YWNHWmZhb1FZU1d4X2hILVZQUVJJd3VFVUd0cG9jTGszOUtEVXpGd3JwZzBhT0ZCSkdCYTlRY0FVT29WMVBwbEZ6SWUxVkNCWDgzZ3hRVk5LM245ZkRMNjNHNWdINnR6SmM5RVdIbmJ3UzFIVkMtYUVqNlNtXzF0dEJRbXRBN1IzUERlLVAyeXRpQVEyckhn",
-          "published_at": "2026-10-09T07:00:00+00:00",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQ2pOSUtKTFNWUTFmckxCYUwxWExGb094U1dfZTNsYWdibFV5WmxuTUJ5Q2FvTFpMSlMwcjlzUGhxMjR4a3Utc0tPMDlCSjk2b1k5dVM2YlM0T2swS3pJVGlQZTR0SDFyX2tKVDc0UWYwZVRJWjAwcFdQMnVnaVBLdEU0MDgxYXlmdE1PUGtwdW1Jc19uZTV0ZXJLMmhIejU5a2NVMlF3",
+          "published_at": "2026-10-22T23:15:00+00:00",
           "link_route": "Google News"
         },
         {
-          "id": "d35615ee6cfb2b362903c667",
-          "title": "Dick Durbin responds to DOJ seeking Hutchinson indictment",
-          "publisher": "Punchbowl News",
-          "publisher_host": "punchbowl.news",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9VeFViMUJOTkhQaTJoRTJfMWhMNmVVc3JnY25FbWdpZ05wbFVZRWlLeC0xdkUwZENVLTJZQnY3MEJ2WVFSNGRDeUUyVlItcTFCdi0xcFcxWGVFY1B4YzAwbGl2NUh4RW1uaHN3dQ",
-          "published_at": "2026-10-08T22:18:13+00:00",
-          "link_route": "Google News",
-          "source_checked_at": "2026-10-20T14:27:26.917896+00:00"
+          "id": "ee3c6bb841bdaaa6463d6076",
+          "title": "WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin",
+          "publisher": "PBS",
+          "publisher_host": "pbs.org",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVXVTM24tRmNQN0RweVpYaUJwQWViS29SNEI0RzI2c3J6eWo3TUhaOEtHYXd0OURTcWxsWXlOcDlEUDF6eFBuS1FxUFhsa1JoU3RhZ1V3RnZ0a2t3UElmQWdmUDdHYTg2emlwOGswTWlZQllfLU9hdmxUdWstN2tfZlhpTWlqd0hCZ1RRVHh2RG9NbjcyUWNrTm5VVVdfUHl1S21XRGt6VzVTQXVJbVJObGVFQTNNUdIBuwFBVV95cUxNMm1ISGJiZUtXX01MdzhpOVVSeXFTeVZEUjcwMEU1OHFFVlNuamRnZHFVdVBONHFSRlZ0eUx4VzdVX3V2TWg2cFAwZHlmckRyaE1xbXYxbjA5QmtlRHdvQzkzVzJiM2FHbUc3aHFub0t3NE5PZ19pYlpyVTlQWDdrNVJOVnlKQTJ6cmM4dWJHV3JQOUI3aU44aXV3Vk9pbFhYVjBVOHVncEhvWE00em12R0d4YW9ZUHpIcTZR",
+          "published_at": "2026-10-20T21:37:44+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "b9c8118e505e6242b47d94c4",
+          "title": "Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNU3ZoZnRVeTQ3ZVlEa1UteURJa2F3M3hDQnB2YlpxWGlWbGtEY1lWak1KT0N1SDV5NXljdGVvanB4Y0RNWUlLcHl4V2Q0cnpWdEZ2eHB1SkFRYzB2aGo1blFrbWJSTVc0UWpUb2ktYW1QR1Z2d2QzZWdHQjU3NlJYOEw4bm1qdTZDeXRReFVKUHdLZEY4X29TcEY0RnhPcHJvcG9jWVJ6aFJTdHQ5RW9DaFhhaXdpQlJKQmZqRlA2eWtTQQ",
+          "published_at": "2026-10-20T18:28:00+00:00",
+          "link_route": "Google News"
         }
       ],
       "media_health": {
@@ -2151,8 +2149,8 @@
         "checked_at": "2026-10-23T11:32:14.864325+00:00",
         "inference_status": "partial",
         "pending_candidates": 4,
-        "withheld_candidates": 4,
-        "screened_history_count": 9,
+        "withheld_candidates": 0,
+        "screened_history_count": 13,
         "lookback_days": 200
       },
       "media_search": {
@@ -2762,6 +2760,15 @@
       "calendar_health": "failed",
       "media_reports": [
         {
+          "id": "3a9a404488174a99554038d1",
+          "title": "Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxQbkp2bHlqQmNIMWtTcGlFLWp1SXMtNW1RYXVpekowZlRNQ2NPUllzM0prWGRIVGxxZklTbTVnNkxqUkFKQjlQZFR0SDlvMFA1Q3NhUEZuZ2J5aG5ET2tsRG51bEVyX2loNmpHeWVDWmRweTljQXByX2JOaXFoMEdYcThXUEJiTDZ2bTVVR0tLMDIyM2VmckhLQkJfV2VGUm1UdzNhZFNoa05KUGd1M05HcVhVZWQ3Ty1xdWM1TmRsRGJXRTBONEJzVUJZNVliNGZDbFhKei0wT2lKaHFidW9nZG1Yek15emV6UmVrSEVyQl9NX0Jtd3FQaVZxUHJRVHRMaXl5VUtWRmNGcnhXa09GQXdwa3JTWlhBLVVuampYdFU1RDd4SkE",
+          "published_at": "2026-10-20T18:35:00+00:00",
+          "link_route": "Google News"
+        },
+        {
           "id": "c24a608140e345a67ce66b1f",
           "title": "Duckworth needs introduction to economist",
           "publisher": "The Beverly Review",
@@ -2778,25 +2785,15 @@
           "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSG5EekhrMXkxaE1Cb0ZqZHI3RVdhaFpyVS1XcGhJYUpXdm5XQmpNcWRObVpHbzhYaXQ4bndUT3p5T05SYXVqeVNUZDdqRFl4TG95SkctV2cycVVGMWZPUVRoUG5uY1hreVBkT1c5TDlCZm1ZQ1ZNVW5OWGx0WGJxZlh2VEJyVzdPZi1Db0c0bEhqQUFwb3BjYmxFWTI4SV9mQUE5d3B2RnpTS29GYThIeU9UdzllUTYyMno3UTVZdGVPUzlBUWc",
           "published_at": "2026-10-10T13:30:00+00:00",
           "link_route": "Google News"
-        },
-        {
-          "id": "6af4c7398e9fb93361450f9e",
-          "title": "Duckworth announces longtime advisor Kelsey Becker named Chief of Staff",
-          "publisher": "WAND",
-          "publisher_host": "wandtv.com",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPS0hwdTJJREMzV3Jic2ZzNnFSWjZqM2oyQkZCY25Zc3htRk5welhCX2YyUDBCekZSSFljSFdkb1M3ZW1aeVZteGtScGJuN2JSUW91YkFIMG1WSXN0UGYxU2lHczlRRXR1RldQc3RpLXRzS1Z5QldvbVZFTFlPYXBaSGM5b0Z2dGtxdjZKemZJZVR0SS1nOEJHeTZNUlN0MG1qQWxQQm5R0gG6AUFVX3lxTE9GMVZwbHhWR3padl9EY3ZkMzhmclRjdktSWGY2SWVlQnUxN2Q3c2p5UDA1eWVhVDdtVjBwRVY0WkNaZnhKQkdnUzY0ME1jLUt2dGo5MEZIU1JFSl9KbXhnd1NPSzlYVW11YXk0VW54ZDd5b1diVWdCNUE2bndUQnhRemtyZjNfcEtmX3ZVZFNpb3AxU3dleEJoX205dEw3a1RBR3NjOTExbUs0VjlBVEdSVlJ6NFBVUi1kQQ",
-          "published_at": "2026-10-05T07:00:00+00:00",
-          "link_route": "Google News",
-          "source_checked_at": "2026-10-20T14:27:26.917896+00:00"
         }
       ],
       "media_health": {
         "source_status": "ok",
         "checked_at": "2026-10-23T11:32:14.864325+00:00",
-        "inference_status": "partial",
+        "inference_status": "complete",
         "pending_candidates": 0,
-        "withheld_candidates": 2,
-        "screened_history_count": 9,
+        "withheld_candidates": 0,
+        "screened_history_count": 11,
         "lookback_days": 200
       },
       "media_search": {
@@ -3411,42 +3408,42 @@
   },
   "inference_usage": {
     "day": {
-      "charged_usd": "0",
-      "reserved_usd": "0.004",
-      "liability_usd": "0.004",
-      "unsettled_requests": 2,
+      "charged_usd": "0.00020308",
+      "reserved_usd": "0",
+      "liability_usd": "0.00020308",
+      "unsettled_requests": 0,
       "media_reservations": 2,
       "undated_entries": 0,
       "limit_usd": "0.02",
-      "remaining_usd": "0.016",
-      "used_percent": "20.0"
+      "remaining_usd": "0.01979692",
+      "used_percent": "1.015400"
     },
     "week": {
-      "charged_usd": "0.00167340",
-      "reserved_usd": "0.009",
-      "liability_usd": "0.01067340",
-      "unsettled_requests": 3,
+      "charged_usd": "0.00187648",
+      "reserved_usd": "0.005",
+      "liability_usd": "0.00687648",
+      "unsettled_requests": 1,
       "media_reservations": 5,
       "undated_entries": 0,
       "limit_usd": "0.20",
-      "remaining_usd": "0.18932660",
-      "used_percent": "5.336700"
+      "remaining_usd": "0.19312352",
+      "used_percent": "3.438240"
     },
     "lifetime": {
-      "charged_usd": "0.00388196",
-      "reserved_usd": "0.009",
-      "liability_usd": "0.01288196",
-      "unsettled_requests": 3,
+      "charged_usd": "0.00408504",
+      "reserved_usd": "0.005",
+      "liability_usd": "0.00908504",
+      "unsettled_requests": 1,
       "media_reservations": 9,
       "undated_entries": 0,
       "limit_usd": "20",
-      "remaining_usd": "19.98711804",
-      "used_percent": "0.06440980"
+      "remaining_usd": "19.99091496",
+      "used_percent": "0.04542520"
     },
     "week_start": "2026-10-19",
     "week_end": "2026-10-25",
     "schema_version": 1,
-    "as_of": "2026-10-23T11:32:14.864325+00:00",
+    "as_of": "2026-10-23T11:32:30.476653+00:00",
     "local_date": "2026-10-23",
     "timezone": "America/Chicago",
     "week_definition": "Monday through Sunday",
