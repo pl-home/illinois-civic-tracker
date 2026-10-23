@@ -1,6 +1,6 @@
 # Current status and decision record
 
-Revision 13 — October 23, 2026, America/Chicago. This is the current status entry
+Revision 14 — October 23, 2026, America/Chicago. This is the current status entry
 point, not a claim that every live source was checked today. Read it before dated
 findings, checkpoints or trial instructions. [Documentation index](DOCUMENTATION_INDEX.md).
 
@@ -26,6 +26,10 @@ P06 records the service/session rollover matrix in
 [SESSION_ROLLOVER_REVIEW.md](SESSION_ROLLOVER_REVIEW.md) and its evidence JSON.
 The January safety guard remains in place; no GA105 or Congress120 identity is
 verified or configured.
+
+P07 records deterministic veto-session metadata and candidate bill-action labels
+in [VETO_SESSION_COVERAGE.md](VETO_SESSION_COVERAGE.md). Published November
+17–19 dates are shown; no December date is inferred.
 
 ## Operating configuration and observed health
 
@@ -95,7 +99,7 @@ attached to their receipts; Git growth is forecast separately in the report.
 Use [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md) and one [work packet](WORK_PACKETS.md).
 The reconciliation passed 323 offline tests and privacy checks. The later P02/P03
 implementation passed 325 tests; P05 adds three offline tests for a current total
-of 328. The October 23 scheduled run completed two
+of 332. The October 23 scheduled run completed two
 bounded media model calls for USD 0.00020308 and published a partial but current
 dashboard. Model calls remain limited to public media relevance.
 The small offline handoff checker validates documentation, dependencies and

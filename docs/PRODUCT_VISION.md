@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: product vision
 
-Revision 13 — October 23, 2026, America/Chicago. Purpose and milestone scope are
+Revision 14 — October 23, 2026, America/Chicago. Purpose and milestone scope are
 here; [CURRENT_STATUS.md](CURRENT_STATUS.md) owns present operating state and
 [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) owns sequence/gates. Workspace
 and published copies of this vision/plan share this revision. Dated findings are
