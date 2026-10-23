@@ -22,7 +22,7 @@ implementation task.
 
 ## P02 Bounded delayed-run observability and repair
 
-**Depends on P01 and is locally implemented; hosted proof remains pending.** Own `daily.py`,
+**Depends on P01; complete for the bounded gate and hosted proof.** Own `daily.py`,
 `tests/test_daily.py`, `daily.yml` only if necessary, and `DAILY_REFRESH.md`.
 Explicit safe gate reasons and last-attempt versus last-success evidence are now
 present. The documented bounded catch-up behavior is implemented within existing
@@ -33,11 +33,11 @@ January guard and budget reservations. No new collector schedule.
 
 Run `python -m unittest discover -s tests -p test_daily.py -v`, then common checks.
 Fixtures cover on-time, late allowed/refused, completed-date duplicate, fall-back
-repeated hour, spring-forward, disabled plan and January guard. **Local done:**
-gate reasons and state distinction pass the focused suite. **Hosted gate pending:**
-a reviewed scheduled example must advance source receipt times or clearly report
-why it did not; a skipped job alone is not acceptance. No forced/manual refresh
-without task scope.
+repeated hour, spring-forward, disabled plan and January guard. The hosted
+scheduled run 39945362221 began at 06:20 Central, advanced the dashboard to
+October 23, and deployed a partial receipt; the late-window path therefore
+passed while source-specific failures remained visible. No forced/manual refresh
+was used.
 
 ## P03 First-party source diagnostics and failure isolation
 

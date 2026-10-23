@@ -60,3 +60,14 @@ The [initial run](https://github.com/pl-home/illinois-civic-tracker/actions/runs
 The initial narrow prompt rejected legitimate campaign reporting; v3 explicitly includes it. The correction also demonstrated that headline-only genre judgment is unstable, so exclusion of every opinion item is not a passed claim. Source-level article/category metadata would be needed to improve that distinction. This does not authorize AI-generated article summaries or factual interpretation.
 
 The live page was checked for five correctly placed sections, publication dates, publisher attribution and HTTPS links. It displays 3 Fritts, 2 Arellano, 3 LaHood, 3 Durbin and 3 Duckworth reports. Arellano's sparse 90-day results are not padded. All 131 offline tests and the privacy check passed; independent review covered accounting, migration and crash/date-boundary replay. Compact results: [media-activation.json](evidence/media-activation.json).
+
+### October 23 hosted routine proof
+
+The scheduled daily run [39945362221](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39945362221)
+entered the approved late window at 06:20 Central. The media preparation and
+execution steps completed with two Qwen3 32B / DeepInfra calls and a charged
+cost of USD 0.00020308; no model error or unsettled request was reported. The
+result was published with partial source health, and the model remained limited
+to Boolean relevance decisions over supplied public headline metadata. This is
+routine media integration evidence, not authorization for legislative, party,
+amendment, PDF or synopsis inference.

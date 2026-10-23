@@ -14,7 +14,7 @@ findings, checkpoints or trial instructions. [Documentation index](DOCUMENTATION
 | Stage D preview | HTML, text, selection JSON and CSS from accepted data; ten-day opportunities; quiet/partial health | Owner has not approved delivery. No sender, reservation ledger or weekly job is implemented |
 | Member browsing | 25 activity entries per page; separate undated relationships; member news five per page within 200 days | Homepage news remains three within 90 days; up to 100 screened records/member; not complete tenure or article coverage |
 | Communications | Separate office/campaign/party metadata; fifteen sources, twelve automated and three link-only | The Caucus Blog is explicit caucus-wide context for Fritts; his office latest-news page is separate. Publisher text is attributed, not independently verified |
-| Inference | Only bounded public media-headline relevance: Qwen3 32B via DeepInfra | USD 0.02/day, 0.20/Chicago Monday–Sunday week, 20 lifetime; unsettled amounts stay held |
+| Inference | Only bounded public media-headline relevance: Qwen3 32B via DeepInfra; hosted daily calls are now proven | USD 0.02/day, 0.20/Chicago Monday–Sunday week, 20 lifetime; unsettled amounts stay held |
 | PDF / committee roll calls | Qualified historical records and preserved failed trials | Daily new PDF collection, new trials/OCR and legislative/party inference remain deferred |
 | Stage E / M2–M6 | Planning and some display slices only | Storage simulation, correction coverage, rollover, semantic rewrites, deeper federal history and private contact packets remain incomplete |
 
@@ -36,9 +36,13 @@ reported success, but **source collection, tests, model steps and publication
 were skipped**. It began at 06:30:43 Central, after the configured 01:00–05:59
 non-manual window; the persisted local-date ledger was still October 18. This
 was a late-window refusal, not a completed refresh. P01 recorded the evidence;
-P02 now implements the bounded late window through 09:00 Central, with hosted
-proof still pending. See [the diagnosis receipt](evidence/daily-delay-diagnosis.json)
-and [P02](WORK_PACKETS.md#p02-bounded-delayed-run-observability-and-repair).
+P02 is now hosted-proven: [run 39945362221](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39945362221)
+started at 06:20 Central inside the late window, advanced the dashboard to
+October 23, ran the model step, and deployed successfully. The result was
+correctly partial: Illinois retained a bounded-file backlog, Senate roll-call
+discovery returned `HTTP_403`, and both calendar sources had safe failures.
+See [the diagnosis receipt](evidence/daily-delay-diagnosis.json) and
+[P02](WORK_PACKETS.md#p02-bounded-delayed-run-observability-and-repair).
 Confirm future freshness against gate reasons, step outcomes and dated source
 receipts, never a green badge alone.
 
@@ -83,7 +87,10 @@ bytes. Dated test counts remain attached to their receipts; the audit receipt
 records current validation. Git growth is a separate unpassed Stage E gate.
 
 Use [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md) and one [work packet](WORK_PACKETS.md).
-The reconciliation passed 323 offline tests and privacy checks.
+The reconciliation passed 323 offline tests and privacy checks. The later P02/P03
+implementation passed 325 tests; the October 23 scheduled run completed two
+bounded media model calls for USD 0.00020308 and published a partial but current
+dashboard. Model calls remain limited to public media relevance.
 The small offline handoff checker validates documentation, dependencies and
 disabled-feature configuration; a pass does not prove live source health or
 grant authority to execute a planned task.
