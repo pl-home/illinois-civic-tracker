@@ -1,6 +1,6 @@
 # Architecture and reviewer guide
 
-Revision 14 — October 23, 2026. Current boundaries are in
+Revision 15 — October 23, 2026. Current boundaries are in
 [CURRENT_STATUS.md](CURRENT_STATUS.md); dated M0 designs/results remain in
 [M0_FINDINGS.md](M0_FINDINGS.md) and Git history, not competing active architecture.
 

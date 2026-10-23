@@ -22,7 +22,9 @@ def context(config, as_of):
     if current < _day(days[0]):
         status = 'upcoming'
     elif current > _day(days[-1]):
-        status = 'completed'
+        # The schedule page names a November/December period, but only these
+        # exact days are published. Do not imply the broader period is over.
+        status = 'published-days-passed'
     elif current.isoformat() in days:
         status = 'active'
     else:

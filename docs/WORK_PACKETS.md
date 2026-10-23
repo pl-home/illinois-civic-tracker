@@ -1,6 +1,6 @@
 # Remaining implementation work packets
 
-Revision 14 — October 23, 2026. These are bounded plans, **not blanket execution
+Revision 15 — October 23, 2026. These are bounded plans, **not blanket execution
 authorization**. This documentation task implements none of these features.
 Machine-readable IDs/dependencies are in [handoff.json](handoff.json).
 Common checks and stop rules: [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md).

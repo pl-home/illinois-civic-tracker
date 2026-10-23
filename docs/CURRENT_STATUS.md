@@ -1,6 +1,6 @@
 # Current status and decision record
 
-Revision 14 — October 23, 2026, America/Chicago. This is the current status entry
+Revision 15 — October 23, 2026, America/Chicago. This is the current status entry
 point, not a claim that every live source was checked today. Read it before dated
 findings, checkpoints or trial instructions. [Documentation index](DOCUMENTATION_INDEX.md).
 

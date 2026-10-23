@@ -10,5 +10,6 @@
   "network_calls": 0,
   "model_calls": 0,
   "production_data_writes": 0,
-  "next": "Use real veto-session bill and hearing records to validate labels and same-day freshness without changing the GA105/Congress120 guard."
+  "next": "Use real veto-session bill and hearing records to validate labels and same-day freshness without changing the GA105/Congress120 guard.",
+  "state_semantics": "published-days-passed does not imply the broader November/December period has ended"
 }

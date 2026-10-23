@@ -9,8 +9,10 @@ model.
 - `config/veto-session.json` records the published House and Senate session days
   of November 17–19, 2026 and links to both official calendar PDFs and schedule
   pages.
-- `veto_session.context()` exposes `upcoming`, `active`, `completed`, or
-  `between-published-session-days` without inferring unpublished December dates.
+- `veto_session.context()` exposes `upcoming`, `active`, `published-days-passed`,
+  or `between-published-session-days` without inferring unpublished December
+  dates. “Published days passed” does not mean the broader veto-session period
+  has ended.
 - The public homepage shows the veto-session state and links before the member
   cards. It distinguishes published session dates from daily calendars and bill
   actions.
