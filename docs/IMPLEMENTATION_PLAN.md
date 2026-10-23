@@ -64,10 +64,11 @@ is still a planned channel, not an active schedule.
 
 ## 3. Delivery sequence and acceptance gates
 
-P01 daily skip/freshness diagnosis, the reviewed bounded delay fix (P02), and
-source diagnostics (P03) are complete within their documented boundaries. P04
-live hearing acceptance is source-dependent. Offline storage simulation (P05) and the
-January rollover review (P06) are independent of blocked digest delivery.
+P01 daily skip/freshness diagnosis, the reviewed bounded delay fix (P02), source
+diagnostics (P03), and the offline storage simulation (P05) are complete within
+their documented boundaries. P04 live hearing acceptance is source-dependent.
+The January rollover review (P06) is the next date-sensitive task and remains
+independent of blocked digest delivery.
 [WORK_PACKETS.md](WORK_PACKETS.md) names exact starting files, tests and done/stop
 conditions; [handoff.json](handoff.json) records dependencies. Small-model
 execution follows [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md), one packet per task.

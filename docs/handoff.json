@@ -219,6 +219,11 @@
     {
       "id": "P05",
       "state": "planned",
+      "completion": {
+        "status": "complete",
+        "evidence": "docs/evidence/storage-growth-simulation.json",
+        "next": "P06"
+      },
       "depends_on": [],
       "gates": [
         "new-owner-task",

@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "task": "P05",
+  "method": "Synthetic offline forecast; no source, model, network, storage service, or production-data writes.",
+  "days": 365,
+  "limits_bytes": {
+    "canonical_json": 20000000,
+    "change_ledger": 10000000,
+    "error_journal": 98304,
+    "base_artifact": 650000,
+    "member_history": 3000000,
+    "digest_artifact": 90000,
+    "combined_site": 3650000
+  },
+  "baselines_bytes": {
+    "canonical_json": 7043154,
+    "change_ledger": 1200000,
+    "error_journal": 18000,
+    "base_artifact": 546175,
+    "member_history": 2410435,
+    "digest_artifact": 27258
+  },
+  "assumption_notes": [
+    "Unchanged runs retain bounded displays but still add small receipts.",
+    "Realistic and noisy rates are synthetic byte deltas, not observed legislative volume.",
+    "Journal and rolling member/history displays are measured at their existing caps; permanent canonical and change-ledger forecasts are never truncated.",
+    "Git history is forecast separately because it has no live-file cap."
+  ],
+  "scenarios": {
+    "unchanged": {
+      "days": 365,
+      "assumptions": {
+        "canonical_per_day": 2000,
+        "ledger_per_day": 400,
+        "journal_per_day": 250,
+        "base_per_day": 20,
+        "history_per_day": 0,
+        "digest_per_day": 10
+      },
+      "generated_member_history_pages": 110,
+      "news_records_per_member": 100,
+      "raw_forecast_bytes": {
+        "canonical_json": 7773154,
+        "change_ledger": 1346000,
+        "error_journal": 109250,
+        "base_artifact": 553475,
+        "member_history": 2410435,
+        "digest_artifact": 30908
+      },
+      "bounded_measurement": {
+        "canonical_json": 7773154,
+        "change_ledger": 1346000,
+        "error_journal": 98304,
+        "base_artifact": 553475,
+        "member_history": 2410435,
+        "digest_artifact": 30908,
+        "combined_site": 2994818,
+        "git_history_forecast": 978200
+      },
+      "checks": {
+        "canonical_json": {
+          "bytes": 7773154,
+          "limit": 20000000,
+          "pass": true
+        },
+        "change_ledger": {
+          "bytes": 1346000,
+          "limit": 10000000,
+          "pass": true
+        },
+        "error_journal": {
+          "bytes": 98304,
+          "limit": 98304,
+          "pass": true
+        },
+        "base_artifact": {
+          "bytes": 553475,
+          "limit": 650000,
+          "pass": true
+        },
+        "member_history": {
+          "bytes": 2410435,
+          "limit": 3000000,
+          "pass": true
+        },
+        "digest_artifact": {
+          "bytes": 30908,
+          "limit": 90000,
+          "pass": true
+        },
+        "combined_site": {
+          "bytes": 2994818,
+          "limit": 3650000,
+          "pass": true
+        }
+      },
+      "raw_bound_warnings": {
+        "canonical_json": {
+          "bytes": 7773154,
+          "limit": 20000000,
+          "would_exceed_without_bound": false
+        },
+        "change_ledger": {
+          "bytes": 1346000,
+          "limit": 10000000,
+          "would_exceed_without_bound": false
+        },
+        "error_journal": {
+          "bytes": 109250,
+          "limit": 98304,
+          "would_exceed_without_bound": true
+        },
+        "base_artifact": {
+          "bytes": 553475,
+          "limit": 650000,
+          "would_exceed_without_bound": false
+        },
+        "member_history": {
+          "bytes": 2410435,
+          "limit": 3000000,
+          "would_exceed_without_bound": false
+        },
+        "digest_artifact": {
+          "bytes": 30908,
+          "limit": 90000,
+          "would_exceed_without_bound": false
+        }
+      },
+      "pass": true
+    },
+    "realistic": {
+      "days": 365,
+      "assumptions": {
+        "canonical_per_day": 25000,
+        "ledger_per_day": 7500,
+        "journal_per_day": 1200,
+        "base_per_day": 120,
+        "history_per_day": 950,
+        "digest_per_day": 120
+      },
+      "generated_member_history_pages": 110,
+      "news_records_per_member": 100,
+      "raw_forecast_bytes": {
+        "canonical_json": 16168154,
+        "change_ledger": 3937500,
+        "error_journal": 456000,
+        "base_artifact": 589975,
+        "member_history": 2757185,
+        "digest_artifact": 71058
+      },
+      "bounded_measurement": {
+        "canonical_json": 16168154,
+        "change_ledger": 3937500,
+        "error_journal": 98304,
+        "base_artifact": 589975,
+        "member_history": 2757185,
+        "digest_artifact": 71058,
+        "combined_site": 3418218,
+        "git_history_forecast": 12734850
+      },
+      "checks": {
+        "canonical_json": {
+          "bytes": 16168154,
+          "limit": 20000000,
+          "pass": true
+        },
+        "change_ledger": {
+          "bytes": 3937500,
+          "limit": 10000000,
+          "pass": true
+        },
+        "error_journal": {
+          "bytes": 98304,
+          "limit": 98304,
+          "pass": true
+        },
+        "base_artifact": {
+          "bytes": 589975,
+          "limit": 650000,
+          "pass": true
+        },
+        "member_history": {
+          "bytes": 2757185,
+          "limit": 3000000,
+          "pass": true
+        },
+        "digest_artifact": {
+          "bytes": 71058,
+          "limit": 90000,
+          "pass": true
+        },
+        "combined_site": {
+          "bytes": 3418218,
+          "limit": 3650000,
+          "pass": true
+        }
+      },
+      "raw_bound_warnings": {
+        "canonical_json": {
+          "bytes": 16168154,
+          "limit": 20000000,
+          "would_exceed_without_bound": false
+        },
+        "change_ledger": {
+          "bytes": 3937500,
+          "limit": 10000000,
+          "would_exceed_without_bound": false
+        },
+        "error_journal": {
+          "bytes": 456000,
+          "limit": 98304,
+          "would_exceed_without_bound": true
+        },
+        "base_artifact": {
+          "bytes": 589975,
+          "limit": 650000,
+          "would_exceed_without_bound": false
+        },
+        "member_history": {
+          "bytes": 2757185,
+          "limit": 3000000,
+          "would_exceed_without_bound": false
+        },
+        "digest_artifact": {
+          "bytes": 71058,
+          "limit": 90000,
+          "would_exceed_without_bound": false
+        }
+      },
+      "pass": true
+    },
+    "noisy-worst-case": {
+      "days": 365,
+      "assumptions": {
+        "canonical_per_day": 65000,
+        "ledger_per_day": 35000,
+        "journal_per_day": 4000,
+        "base_per_day": 450,
+        "history_per_day": 2400,
+        "digest_per_day": 300
+      },
+      "generated_member_history_pages": 110,
+      "news_records_per_member": 100,
+      "raw_forecast_bytes": {
+        "canonical_json": 30768154,
+        "change_ledger": 13975000,
+        "error_journal": 1478000,
+        "base_artifact": 710425,
+        "member_history": 3286435,
+        "digest_artifact": 136758
+      },
+      "bounded_measurement": {
+        "canonical_json": 30768154,
+        "change_ledger": 13975000,
+        "error_journal": 98304,
+        "base_artifact": 710425,
+        "member_history": 3000000,
+        "digest_artifact": 136758,
+        "combined_site": 3847183,
+        "git_history_forecast": 39109750
+      },
+      "checks": {
+        "canonical_json": {
+          "bytes": 30768154,
+          "limit": 20000000,
+          "pass": false
+        },
+        "change_ledger": {
+          "bytes": 13975000,
+          "limit": 10000000,
+          "pass": false
+        },
+        "error_journal": {
+          "bytes": 98304,
+          "limit": 98304,
+          "pass": true
+        },
+        "base_artifact": {
+          "bytes": 710425,
+          "limit": 650000,
+          "pass": false
+        },
+        "member_history": {
+          "bytes": 3000000,
+          "limit": 3000000,
+          "pass": true
+        },
+        "digest_artifact": {
+          "bytes": 136758,
+          "limit": 90000,
+          "pass": false
+        },
+        "combined_site": {
+          "bytes": 3847183,
+          "limit": 3650000,
+          "pass": false
+        }
+      },
+      "raw_bound_warnings": {
+        "canonical_json": {
+          "bytes": 30768154,
+          "limit": 20000000,
+          "would_exceed_without_bound": true
+        },
+        "change_ledger": {
+          "bytes": 13975000,
+          "limit": 10000000,
+          "would_exceed_without_bound": true
+        },
+        "error_journal": {
+          "bytes": 1478000,
+          "limit": 98304,
+          "would_exceed_without_bound": true
+        },
+        "base_artifact": {
+          "bytes": 710425,
+          "limit": 650000,
+          "would_exceed_without_bound": true
+        },
+        "member_history": {
+          "bytes": 3286435,
+          "limit": 3000000,
+          "would_exceed_without_bound": true
+        },
+        "digest_artifact": {
+          "bytes": 136758,
+          "limit": 90000,
+          "would_exceed_without_bound": true
+        }
+      },
+      "pass": false
+    }
+  },
+  "overall_pass": false,
+  "recommendation": "No deletion is proposed. If a scenario fails, shard or window the affected display and preserve permanent source/financial history."
+}

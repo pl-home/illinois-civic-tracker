@@ -69,7 +69,7 @@ All ILGA/main slip-host requests share the ten-second sequential gate. FTP is pr
 
 ## Review and next work
 
-Read `daily.py`, then `daily_state.py` / `daily_federal.py`, `dashboard_collect.py` and one `daily-report.json`. Tests cover DST/catch-up/date deduplication, pagination failure isolation, identity/tally reconciliation, corrected CSV evidence/retired identities, malformed CSV watermark protection and partial calendar retention. The full suite currently has 105 tests. Production M1 acceptance is still qualified: daily committee votes, live upcoming/slip evidence, exact role/index review, post-veto cadence, deterministic topic reasons, digest rendering/delivery idempotency and growth simulation remain open.
+Read `daily.py`, then `daily_state.py` / `daily_federal.py`, `dashboard_collect.py` and one `daily-report.json`. Tests cover DST/catch-up/date deduplication, pagination failure isolation, identity/tally reconciliation, corrected CSV evidence/retired identities, malformed CSV watermark protection and partial calendar retention. The full suite currently has 105 tests. Production M1 acceptance is still qualified: daily committee votes, live upcoming/slip evidence, exact role/index review, post-veto cadence, deterministic topic reasons and digest rendering/delivery idempotency remain open. P05 records the offline growth simulation separately; it does not change production collection or delivery gates.
 
 ## Initial deployment evidence
 

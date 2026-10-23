@@ -74,9 +74,9 @@ absence cannot substitute. **Done:** dated live receipt and page/preview evidenc
 or explicit pending source availability. Do not label historical results or
 synthetic fixtures a live pass. No PDF work or fabricated sample data in production.
 
-## P05 Annual storage and history-growth simulation
+## P05 Annual storage and history-growth simulation — complete
 
-**Ready for a separate offline task, independent of delivery.** Start with
+**Offline task complete; independent of delivery.** Start with
 `member_history.py`, `news_archive.py`, `changes.py`, `error_journal.py`,
 `browse.py`, `digest.py` and their size tests. Add a separate offline simulator
 in `scripts/` and synthetic growth fixtures only; do not prune production data.
@@ -84,9 +84,13 @@ in `scripts/` and synthetic growth fixtures only; do not prune production data.
 Model unchanged runs, realistic revisions, noisy worst case, 100 news records/
 member, bounded journal and generated pages for 365 days. Measure canonical JSON,
 base/member/digest artifacts, Git history separately and year-one forecast.
-**Done:** reproducible report with assumptions and pass/fail against existing
-limits. Size failure proposes sharding/windowed display, not deletion of source,
-financial or permanent Tier A/B history. No network/model/storage service purchase.
+The reproducible report is
+[evidence/storage-growth-simulation.json](evidence/storage-growth-simulation.json).
+The unchanged and realistic scenarios pass current limits; the noisy scenario
+fails canonical JSON, change ledger, base artifact, digest and combined-site
+limits. The report recommends sharding/windowing those outputs, never deleting
+source, financial or permanent Tier A/B history. No network, model or storage
+service was used.
 
 ## P06 Service/session rollover review
 
