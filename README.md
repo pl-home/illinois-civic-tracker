@@ -30,7 +30,8 @@ A configured schedule or green job does not establish current collection. The
 October 23 scheduled run entered the bounded late window, refreshed sources,
 ran two approved media-model calls, and published a partial but current site.
 [Current status](docs/CURRENT_STATUS.md) gives the exact evidence. P01/P02/P03/P05
-are complete within their limits; the next date-sensitive review is P06. P04
+are complete within their limits, and P06 records the rollover matrix without
+changing identities. Successor migration remains pending official evidence; P04
 remains source-dependent.
 Manual trial workflows are not authorization to run them. Old Codex/Windows
 schedules remain outside this runner and must not be reactivated here.

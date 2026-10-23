@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "task": "P06",
+  "reviewed_on": "2026-10-23",
+  "status": "review-complete-no-migration",
+  "current_services": {
+    "illinois": {"general_assembly": 104, "ga_id": 18, "session_id": 114, "members": {"fritts": "3428", "arellano": "3383"}},
+    "federal": {"congress": 119, "vote_session": 2, "members": {"lahood": "L000585", "durbin": "D000563", "duckworth": "D000622"}}
+  },
+  "guard": {"review_before": "2027-01-03", "behavior": "session-review-required", "verified_by": ["src/civic_tracker/daily.py", "tests/test_daily.py"]},
+  "official_references": [
+    "https://ilga.gov/",
+    "https://www.ilga.gov/House/Members/List",
+    "https://my.ilga.gov/ga",
+    "https://www.congress.gov/",
+    "https://clerk.house.gov/members/L000585",
+    "https://www.senate.gov/legislative/LIS/roll_call_lists/"
+  ],
+  "migration_matrix": {
+    "ilga_ftp_xml": "pending-official-successor-evidence",
+    "ilga_floor_csv": "pending",
+    "ilga_member_pages": "pending",
+    "ilga_hearings": "pending",
+    "ilga_pdf_history": "deferred",
+    "federal_legislation": "pending",
+    "federal_votes": "pending",
+    "federal_committees": "pending",
+    "daily_guard": "verified"
+  },
+  "changes_made": [],
+  "model_calls": 0,
+  "network_collection": false,
+  "next": "Separately reviewed migration packet after official GA105/Congress120 service evidence"
+}

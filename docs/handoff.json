@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": 12,
-  "reviewed_date": "2026-10-22",
+  "revision": 13,
+  "reviewed_date": "2026-10-23",
   "execution_authorization": false,
   "documents": [
     {
@@ -133,6 +133,10 @@
       "class": "current"
     },
     {
+      "path": "docs/SESSION_ROLLOVER_REVIEW.md",
+      "class": "current"
+    },
+    {
       "path": "docs/WORK_PACKETS.md",
       "class": "current"
     },
@@ -238,6 +242,11 @@
     {
       "id": "P06",
       "state": "planned",
+      "completion": {
+        "status": "complete",
+        "evidence": "docs/evidence/session-rollover-review.json",
+        "next": "successor-identity-migration"
+      },
       "depends_on": [],
       "gates": [
         "new-owner-task",

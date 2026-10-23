@@ -67,8 +67,9 @@ is still a planned channel, not an active schedule.
 P01 daily skip/freshness diagnosis, the reviewed bounded delay fix (P02), source
 diagnostics (P03), and the offline storage simulation (P05) are complete within
 their documented boundaries. P04 live hearing acceptance is source-dependent.
-The January rollover review (P06) is the next date-sensitive task and remains
-independent of blocked digest delivery.
+The January rollover review (P06) is complete as a review/report. Successor
+identity migration remains a separate task requiring official evidence and
+before/after fixtures; it remains independent of blocked digest delivery.
 [WORK_PACKETS.md](WORK_PACKETS.md) names exact starting files, tests and done/stop
 conditions; [handoff.json](handoff.json) records dependencies. Small-model
 execution follows [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md), one packet per task.

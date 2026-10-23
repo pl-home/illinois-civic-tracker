@@ -92,7 +92,7 @@ limits. The report recommends sharding/windowing those outputs, never deleting
 source, financial or permanent Tier A/B history. No network, model or storage
 service was used.
 
-## P06 Service/session rollover review
+## P06 Service/session rollover review — complete
 
 **Date-sensitive; do not wait for digest.** Before January 3, 2027, read
 `config/project.json`, `config/dashboard.json`, `config/daily.json`,
@@ -103,9 +103,12 @@ Identify every GA104/GAID/session/Congress119/member/service/committee literal,
 URL shape and review guard. Separate proposed successors from verified service
 facts. January 3 is a review guard, not proof both legislatures roll over that
 day. Preserve outgoing member history, chamber-specific dates and service periods.
-**Done:** official evidence and a reviewed migration/test matrix; no speculative
-ID swaps, deleting history or merely moving the guard date. Implementation of
-verified identities needs a separate reviewed packet and before/after fixtures.
+**Done:** [SESSION_ROLLOVER_REVIEW.md](SESSION_ROLLOVER_REVIEW.md) and
+[evidence/session-rollover-review.json](evidence/session-rollover-review.json)
+record current official references, every reviewed dependency, and the required
+migration/test matrix. No speculative ID swaps, history deletion, or guard-date
+move was made. Verified identity implementation needs a separate reviewed packet
+and before/after fixtures.
 
 ## D00 Owner preview review
 
