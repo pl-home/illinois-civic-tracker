@@ -5,25 +5,20 @@ authorization**. This documentation task implements none of these features.
 Machine-readable IDs/dependencies are in [handoff.json](handoff.json).
 Common checks and stop rules: [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md).
 
-## P01 Daily-run freshness and delay diagnosis
+## P01 Daily-run freshness and delay diagnosis — complete
 
-**Next recommended task; diagnosis first.** Read `daily.due`/`main` in
-`src/civic_tracker/daily.py`, `.github/workflows/daily.yml`,
-`tests/test_daily.py`, `data/collection-state.json`, `data/daily-report.json`,
-`docs/DAILY_REFRESH.md` and the latest job's gate/step outcomes. Do not read keys.
-
-The October 22 successful scheduled run skipped every collection step. It was
-created at 06:30 Central, after the configured 06:00 cutoff. Determine whether
-late start, an already completed date or disabled configuration caused each
-representative skip. The initial skip/receipt evidence is already recorded in
-CURRENT_STATUS.md and the documentation-handoff receipt; do not repeat that
-audit or redownload sources for reassurance. The remaining deliverable is a
-proposed bounded lateness policy, using one additional run only if needed to
-resolve a specific missing fact. Produce a small dated evidence table and explicit proposed
-late-run policy; no collection, new cron, date-ledger reset or schedule extension
-in this diagnostic packet. **Done:** explain actual gate decisions using logs,
-local-time conversion and receipt dates; old `ok` cannot be described as fresh.
-If GitHub evidence is unavailable, record that limit instead of guessing.
+The October 22 run began at 06:30:43 Central. The gate succeeded, but all
+collection/test/model/publication steps and deployment were skipped because the
+non-manual predicate admits local hours 01:00 through before 06:00. The persisted
+completed-date ledger was October 18, so duplicate-date suppression and disabled
+configuration were not the cause. The dated evidence and proposed policy are in
+[evidence/daily-delay-diagnosis.json](evidence/daily-delay-diagnosis.json) and
+[DAILY_REFRESH.md](DAILY_REFRESH.md). The proposal retains the normal window and
+allows one ordinary late catch-up through 09:00 Central, then refuses with a
+typed `late-window-expired` reason. No collector, schedule, ledger or source was
+changed. **Done:** gate decision, local-time conversion, receipt age and hosted
+step outcomes are documented; old `ok` is not called fresh. P02 is the next
+implementation task.
 
 ## P02 Bounded delayed-run observability and repair
 

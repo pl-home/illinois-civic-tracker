@@ -149,6 +149,11 @@
     {
       "id": "P01",
       "state": "planned",
+      "completion": {
+        "status": "complete",
+        "evidence": "docs/evidence/daily-delay-diagnosis.json",
+        "next": "P02"
+      },
       "depends_on": [],
       "gates": [
         "new-owner-task"

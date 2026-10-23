@@ -14,6 +14,28 @@ Illinois/Federal/Calendar checks are October 19/18/20 UTC respectively. No repai
 manual collection or schedule change is part of this documentation reconciliation.
 [WORK_PACKETS.md](WORK_PACKETS.md) separates diagnosis, policy and bounded repair.
 
+### P01 diagnosis: late scheduled job
+
+The October 22 run was created at `11:30:40Z` and began at `11:30:43Z`, or
+06:30:43 Central while daylight time was in effect. Its gate step succeeded,
+but the official-source, test, model and publication steps were all skipped and
+the deployment job was skipped. The configured non-manual predicate is
+`start_hour <= local.hour < catch_up_before_hour`; with `start_hour=1`,
+`catch_up_before_hour=6`, and `local.hour=6`, it correctly returned false. The
+local-date ledger still showed `2026-10-18`, so this was not a duplicate completed
+date. The run was green because a refused gate is a successful workflow path;
+the source receipts therefore did not become fresh. See the compact evidence
+record in [evidence/daily-delay-diagnosis.json](evidence/daily-delay-diagnosis.json)
+and the public run receipt above.
+
+The proposed P02 policy is to retain the normal 01:00–05:59 window and add one
+bounded late-catch-up window through 09:00 Central. A date with no completed
+attempt could receive at most one ordinary attempt in that late window; after it,
+the gate would refuse with a typed `late-window-expired` reason while retaining
+prior records. This is a proposal only. P02 must add explicit gate reasons and
+last-attempt/last-success evidence, then test the date, DST, disabled-plan and
+January-guard cases. No schedule, ledger or collector was changed by P01.
+
 **Latest October 17 scope update:** the owner authorized recent media reports for all five members and narrow routine Qwen3 32B / DeepInfra relevance screening, with USD 0.02 daily, USD 0.20 weekly and USD 20 lifetime limits. [MEDIA_REPORTS.md](MEDIA_REPORTS.md) describes operation and evidence limits. Older statements excluding routine inference are superseded only for this task; party and legislative inference remain disabled.
 
 

@@ -29,7 +29,9 @@ Unsettled requests stay held. [Budget accounting](docs/BUDGET_USAGE.md).
 A configured schedule or green job does not establish current collection. The
 October 22 scheduled run skipped its collection steps; source receipts are
 older. [Current status](docs/CURRENT_STATUS.md) gives the exact evidence. The
-first recommended task is daily freshness/delay diagnosis, not enabling delivery.
+P01 daily freshness/delay diagnosis is recorded in the evidence receipt; the
+next recommended task is the bounded observability/repair in P02, not enabling
+delivery.
 Manual trial workflows are not authorization to run them. Old Codex/Windows
 schedules remain outside this runner and must not be reactivated here.
 

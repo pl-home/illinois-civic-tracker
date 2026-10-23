@@ -31,10 +31,14 @@ The January 3, 2027 review guard still requires a service/session review.
 
 The October 22 [scheduled run 39771120266](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39771120266)
 reported success, but **source collection, tests, model steps and publication
-were skipped**. It was created at 11:30:40 UTC (06:30:40 Central); this is outside
-the configured collection window. Do not infer a refreshed site from its green
-workflow badge. Confirm any future conclusion against actual gate logs, step
-outcomes and dated source receipts. [First work packet](WORK_PACKETS.md#p01-daily-run-freshness-and-delay-diagnosis).
+were skipped**. It began at 06:30:43 Central, after the configured 01:00–05:59
+non-manual window; the persisted local-date ledger was still October 18. This
+was a late-window refusal, not a completed refresh. P01 recorded the evidence
+and proposed a bounded late window through 09:00 Central; no production policy
+or schedule has changed. See [the diagnosis receipt](evidence/daily-delay-diagnosis.json)
+and [P02](WORK_PACKETS.md#p02-bounded-delayed-run-observability-and-repair) for
+the implementation task. Confirm future freshness against gate reasons, step
+outcomes and dated source receipts, never a green badge alone.
 
 Latest checked-in evidence at this audit, not fresh source checks:
 

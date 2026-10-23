@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "task": "P01",
+  "observed_at": "2026-10-22",
+  "timezone": "America/Chicago",
+  "run": {
+    "id": 39771120266,
+    "created_at": "2026-10-22T11:30:40Z",
+    "started_at": "2026-10-22T11:30:43Z",
+    "local_start": "2026-10-22T06:30:43-05:00",
+    "conclusion": "success",
+    "gate_step": "success",
+    "refresh_steps": "skipped",
+    "deployment": "skipped",
+    "evidence_url": "https://github.com/pl-home/illinois-civic-tracker/actions/runs/39771120266"
+  },
+  "gate_inputs": {
+    "enabled": true,
+    "start_hour": 1,
+    "catch_up_before_hour": 6,
+    "last_completed_local_date": "2026-10-18",
+    "manual": false
+  },
+  "decision": {
+    "result": "refused",
+    "reason": "late-window-expired",
+    "explanation": "The local hour was 6, so the strict less-than-6 catch-up boundary was false. The job was not a manual run and no collection step was eligible.",
+    "source_freshness": "not refreshed by this run"
+  },
+  "proposed_policy": {
+    "status": "proposed; requires P02 implementation task",
+    "normal_window": "01:00 through 05:59 America/Chicago",
+    "bounded_late_window": "06:00 through 09:00 America/Chicago",
+    "allowance": "At most one ordinary attempt for a local date when no completed attempt exists.",
+    "after_window": "Refuse collection with an explicit late-window-expired reason and retain prior verified records.",
+    "preserve": ["01:00 Central target and existing UTC wakes", "shared source lock", "DST behavior", "January 3, 2027 review guard", "source and model budgets", "last-attempt versus last-success evidence"],
+    "not_authorized_here": ["changing the schedule", "running a collector or manual refresh", "resetting the local-date ledger", "extending the window in production"]
+  }
+}
