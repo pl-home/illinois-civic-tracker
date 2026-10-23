@@ -42,6 +42,8 @@ class DashboardTests(unittest.TestCase):
     def test_banner_links_and_leadership_are_in_published_snapshot(self):
         html, data = render(ROOT)
         page = BeautifulSoup(html, 'html.parser')
+        self.assertIn('Illinois 104th General Assembly veto session', page.get_text())
+        self.assertIn('2026-11-17', page.get_text())
         for member in data['members']:
             card = page.select_one('#member-'+member['id'])
             links = card.select('.member-public-links a')

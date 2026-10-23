@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task": "P07",
+  "status": "complete",
+  "scope": "Deterministic metadata, display and candidate action labels; no collector run",
+  "session_days": ["2026-11-17", "2026-11-18", "2026-11-19"],
+  "calendar_status": "published-session-dates-only",
+  "action_labels": ["gubernatorial-veto", "governor-recommendations", "reduced-or-vetoed-appropriation", "veto-session-procedure"],
+  "official_sources": ["https://ilga.gov/House/Schedules", "https://ilga.gov/Senate/Schedules", "https://ilga.gov/Uploads/Schedules/House/House%20Calendar%20-%202026%20Veto%20Session.pdf", "https://www.ilga.gov/Uploads/Schedules/Senate/2026%20104th%20GA%20Veto%20Calendar.pdf"],
+  "network_calls": 0,
+  "model_calls": 0,
+  "production_data_writes": 0,
+  "next": "Use real veto-session bill and hearing records to validate labels and same-day freshness without changing the GA105/Congress120 guard."
+}

@@ -70,6 +70,8 @@ their documented boundaries. P04 live hearing acceptance is source-dependent.
 The January rollover review (P06) is complete as a review/report. Successor
 identity migration remains a separate task requiring official evidence and
 before/after fixtures; it remains independent of blocked digest delivery.
+P07 veto-session metadata and deterministic candidate labels are complete; real
+veto-session records still need a bounded validation pass.
 [WORK_PACKETS.md](WORK_PACKETS.md) names exact starting files, tests and done/stop
 conditions; [handoff.json](handoff.json) records dependencies. Small-model
 execution follows [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md), one packet per task.

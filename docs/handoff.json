@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 13,
+  "revision": 14,
   "reviewed_date": "2026-10-23",
   "execution_authorization": false,
   "documents": [
@@ -137,6 +137,10 @@
       "class": "current"
     },
     {
+      "path": "docs/VETO_SESSION_COVERAGE.md",
+      "class": "current"
+    },
+    {
       "path": "docs/WORK_PACKETS.md",
       "class": "current"
     },
@@ -258,6 +262,18 @@
         "config/daily.json",
         "src/civic_tracker/daily_federal.py"
       ]
+    },
+    {
+      "id": "P07",
+      "state": "planned",
+      "completion": {
+        "status": "complete",
+        "evidence": "docs/evidence/veto-session-coverage.json",
+        "next": "real-veto-session-validation"
+      },
+      "depends_on": [],
+      "gates": ["deterministic-only", "no-pdf", "no-model"],
+      "start_files": ["config/veto-session.json", "src/civic_tracker/veto_session.py", "tests/test_veto_session.py"]
     },
     {
       "id": "D00",

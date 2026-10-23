@@ -14,6 +14,8 @@ def activity_row(item, cutoff, as_of):
     older = item['date'] < cutoff
     labels = {'sponsorship': 'Sponsorship', 'introduction': 'Introduction / filing', 'bill_status': 'Related bill update', 'vote': 'Vote'}
     kind = labels[item['kind']]
+    veto = (' · Veto-session scope: ' + ', '.join(item['veto_session_categories'])
+            if item.get('veto_session_categories') else '')
     scope = ('Committee' if item.get('scope') == 'committee' else 'Floor') if item['kind'] == 'vote' else ''
     choice = item.get('raw_choice') or item.get('choice') or ''
     choice_label = {'yes': 'Yea', 'no': 'Nay', 'present': 'Present', 'not-voting': 'Not voting',
@@ -28,7 +30,7 @@ def activity_row(item, cutoff, as_of):
     conflict = ''
     if item.get('pdf_date') and item['pdf_date'] != item['date']:
         conflict = f'<p class="warning">Source date conflict: index {e(item["date"])}; PDF {e(item["pdf_date"])}.</p>'
-    return f'''<li class="activity-row"><div class="activity-date"><time>{e(item['date'])}</time><span class="tag">{e(scope)} {e(kind)}</span>{'<span class="older-tag">Outside recent window</span>' if older else ''}</div><div><p class="activity-title">{title}</p>{vote}<p class="activity-detail">{e(item['detail'])}</p>{f'<p class="minor">{e(item["attribution"])}</p>' if item.get('attribution') else ''}{conflict}</div></li>'''
+    return f'''<li class="activity-row"><div class="activity-date"><time>{e(item['date'])}</time><span class="tag">{e(scope)} {e(kind)}</span>{'<span class="older-tag">Outside recent window</span>' if older else ''}</div><div><p class="activity-title">{title}</p>{vote}<p class="activity-detail">{e(item['detail'])}{e(veto)}</p>{f'<p class="minor">{e(item["attribution"])}</p>' if item.get('attribution') else ''}{conflict}</div></li>'''
 
 
 def meeting_row(meeting, reference=None):
@@ -180,6 +182,21 @@ def usage_panel(snapshot):
     return f'<section class="usage-panel" aria-label="AI usage and budget"><div class="usage-heading"><h2>AI usage &amp; budget</h2><span>{e(report["week_start"])}–{e(report["week_end"])} · Monday–Sunday · Central</span></div><p class="minor">Recorded tracker inference, including earlier evaluations · calculated {e(updated)} · updated with the daily 01:00 Central refresh.</p><div class="usage-grid">{"".join(cards)}</div>{warning}<details><summary>Usage details</summary><p>Weekly charges: ${e(report["week"]["charged_usd"])}. Unsettled reservations: ${e(report["week"]["reserved_usd"])} across {e(report["week"]["unsettled_requests"])} request(s). Reservations count against the limits until charges are known.</p><p>{e(report["scope"])}</p><p>Lifetime recorded charges: ${e(report["lifetime"]["charged_usd"])} · lifetime ceiling ${Decimal(report["lifetime"]["limit_usd"]):.2f}. Earlier evaluation costs are included. Free source collection and cached decisions add no inference charge.</p><p>Calculated {e(updated)}. Recalculated with the daily 01:00 Central site refresh; this is a dated project ledger report, not live account billing.</p></details></section>'
 
 
+def veto_session_panel(snapshot, root):
+    from .veto_session import context, load_config
+    session = snapshot.get('veto_session') or context(load_config(root), snapshot['as_of'])
+    days = ', '.join(session['session_days'])
+    links = session['calendar_urls']
+    return (f'<section class="notice veto-session" aria-label="Illinois veto session">'
+            f'<strong>{e(session["label"])} · {e(session["status"])}</strong>'
+            f'<p>Published session days: {e(days)}. Daily calendars and bill actions are checked separately; '
+            f'no dates outside this published list are inferred.</p>'
+            f'<p><a href="{e(links["house_schedule"])}">House schedules ↗</a> · '
+            f'<a href="{e(links["senate_schedule"])}">Senate schedules ↗</a> · '
+            f'<a href="{e(links["house"])}">House calendar ↗</a> · '
+            f'<a href="{e(links["senate"])}">Senate calendar ↗</a></p></section>')
+
+
 def render(root):
     snapshot = json.loads((root / 'data/dashboard.json').read_text(encoding='utf-8'))
     if snapshot['schema_version'] != 1 or len(snapshot['members']) != 5:
@@ -201,7 +218,7 @@ def render(root):
     substitutions = {'CHANGE_FEED': change_panel(payload(root), read(root/'data/change-quality-report.json', {})),
         'PARTY_COVERAGE': party_panel(root),
         'HEARING_NAVIGATION': hearing_navigation,
-        'INFERENCE_USAGE': usage_panel(snapshot), 'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
+        'INFERENCE_USAGE': usage_panel(snapshot), 'VETO_SESSION': veto_session_panel(snapshot, root), 'REFRESH_HEALTH': health, 'AUTO_REFRESH': coverage, 'AS_OF': e(snapshot['as_of']), 'RECENT_START': e(snapshot['recent_start']),
         'CALENDAR_END': e(snapshot['calendar_end']), 'MEMBER_LINKS': links,
         'MEMBERS': ''.join(member_card(m, snapshot, hearing_cards.get(m['id'], '')) for m in snapshot['members']),
         'SOURCE_COUNT': str(len(snapshot['calendar_sources'])), 'ERROR_COUNT': str(len(snapshot['errors']))}

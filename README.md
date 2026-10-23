@@ -32,7 +32,8 @@ ran two approved media-model calls, and published a partial but current site.
 [Current status](docs/CURRENT_STATUS.md) gives the exact evidence. P01/P02/P03/P05
 are complete within their limits, and P06 records the rollover matrix without
 changing identities. Successor migration remains pending official evidence; P04
-remains source-dependent.
+remains source-dependent. P07 adds deterministic Illinois veto-session metadata
+and candidate action labels; real session records still require validation.
 Manual trial workflows are not authorization to run them. Old Codex/Windows
 schedules remain outside this runner and must not be reactivated here.
 

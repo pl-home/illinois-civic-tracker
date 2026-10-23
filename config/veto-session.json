@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "ilga-104-veto-2026",
+  "general_assembly": 104,
+  "label": "Illinois 104th General Assembly veto session",
+  "session_days": ["2026-11-17", "2026-11-18", "2026-11-19"],
+  "calendar_urls": {
+    "house": "https://ilga.gov/Uploads/Schedules/House/House%20Calendar%20-%202026%20Veto%20Session.pdf",
+    "senate": "https://www.ilga.gov/Uploads/Schedules/Senate/2026%20104th%20GA%20Veto%20Calendar.pdf",
+    "house_schedule": "https://ilga.gov/House/Schedules",
+    "senate_schedule": "https://ilga.gov/Senate/Schedules"
+  },
+  "calendar_status": "published-session-dates-only",
+  "scope_note": "Published session dates are tracked separately from daily calendars, hearings and bill actions. No December date is inferred from the schedule heading."
+}

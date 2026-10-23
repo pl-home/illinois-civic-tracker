@@ -42,6 +42,7 @@ one [work packet](WORK_PACKETS.md), then only its named reference/code/tests.
 | [docs/PRODUCT_VISION.md](PRODUCT_VISION.md) | current |
 | [docs/RESUME_CHECKPOINT.md](RESUME_CHECKPOINT.md) | current |
 | [docs/SESSION_ROLLOVER_REVIEW.md](SESSION_ROLLOVER_REVIEW.md) | current |
+| [docs/VETO_SESSION_COVERAGE.md](VETO_SESSION_COVERAGE.md) | current |
 | [docs/WORK_PACKETS.md](WORK_PACKETS.md) | current |
 | [README.md](../README.md) | current |
 | [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) | reference |

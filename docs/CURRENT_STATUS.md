@@ -16,7 +16,7 @@ findings, checkpoints or trial instructions. [Documentation index](DOCUMENTATION
 | Communications | Separate office/campaign/party metadata; fifteen sources, twelve automated and three link-only | The Caucus Blog is explicit caucus-wide context for Fritts; his office latest-news page is separate. Publisher text is attributed, not independently verified |
 | Inference | Only bounded public media-headline relevance: Qwen3 32B via DeepInfra; hosted daily calls are now proven | USD 0.02/day, 0.20/Chicago Monday–Sunday week, 20 lifetime; unsettled amounts stay held |
 | PDF / committee roll calls | Qualified historical records and preserved failed trials | Daily new PDF collection, new trials/OCR and legislative/party inference remain deferred |
-| Stage E / M2–M6 | P05 storage simulation and P06 rollover review | Successor identity migration, correction coverage, semantic rewrites, deeper federal history and private contact packets remain incomplete |
+| Stage E / M2–M6 | P05 storage simulation, P06 rollover review and P07 veto-session coverage | Successor identity migration, correction coverage, semantic rewrites, deeper federal history and private contact packets remain incomplete |
 
 M1 and full Stage D are **not complete**. A transport self-test is not a weekly
 delivery system. Updating documentation is not preview approval or permission

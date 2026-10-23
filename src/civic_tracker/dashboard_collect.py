@@ -16,6 +16,7 @@ from urllib.parse import urlsplit
 from urllib.request import Request, build_opener
 
 from .dashboard_sources import state_committees, state_committee_role, state_schedule, senate_schedule, house_schedule, open_slip_form
+from .veto_session import classify_action, context as veto_session_context, load_config as load_veto_session
 from .hearings import parse_hearing_details
 from .http import Client, fingerprint, NoRedirect, source_error
 
@@ -79,9 +80,11 @@ def state_events(archive, member, cutoff, as_of):
         if associated:
             action = bill.get('displayed_last_action', {})
             if action.get('date'):
+                veto_labels = classify_action(action.get('action', ''))
                 events.append(event(f'{ident}-status-{who}', 'bill_status', action['date'], title,
                     action['action'], source, retrieved, measure=ident.split('-')[-1],
-                    attribution='Action on an associated bill; not necessarily an action by this member.', source_sha256=evidence.get('sha256')))
+                    attribution='Action on an associated bill; not necessarily an action by this member.',
+                    veto_session_categories=veto_labels, source_sha256=evidence.get('sha256')))
     for vote in archive['votes'].values():
         if vote.get('verification') not in ('reconciled-official-pdf', 'official-csv'):
             continue
@@ -208,6 +211,7 @@ def collect(root, state_path, federal_path, as_of):
         'calendar_end': end.isoformat(), 'generated_at': checked, 'automatic_refresh_enabled': False,
         'attendance_note': 'A committee meeting is not evidence that a member will attend.',
         'members': [], 'calendar_sources': [], 'errors': []}
+    result['veto_session'] = veto_session_context(load_veto_session(root), as_of)
     def fetch(url, name):
         cache = scratch / name
         if cache.exists() and time.time() - cache.stat().st_mtime < 1800:

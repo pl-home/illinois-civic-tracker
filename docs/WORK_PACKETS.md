@@ -110,6 +110,19 @@ migration/test matrix. No speculative ID swaps, history deletion, or guard-date
 move was made. Verified identity implementation needs a separate reviewed packet
 and before/after fixtures.
 
+## P07 Illinois veto-session coverage — complete
+
+**Deterministic source/display task.** Own the published 104th General Assembly
+veto-session dates, session-state display, and explainable candidate labels for
+official bill-status actions. Keep daily calendars, floor-vote freshness and
+hearing changes source-specific. Do not infer unpublished December dates, migrate
+member IDs, read PDFs, send email, or invoke a model.
+
+**Done:** [VETO_SESSION_COVERAGE.md](VETO_SESSION_COVERAGE.md),
+[evidence/veto-session-coverage.json](evidence/veto-session-coverage.json),
+`config/veto-session.json`, the deterministic module, public panel and focused
+tests are complete. Real veto-session records still need a later validation pass.
+
 ## D00 Owner preview review
 
 **Blocked on owner decision.** Provide the real HTML/text preview and clearly
