@@ -7,8 +7,11 @@
 The schedule is configured, but run success is not collection success. Scheduled
 [run 39771120266](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39771120266)
 created at 06:30:40 Central completed with source, model and publish steps skipped.
-The current gate accepts local hours 01:00 through before 06:00, once per completed
-date. Compare gate output/step outcomes, `data/collection-state.json` and each
+The current gate accepts local hours 01:00 through before 06:00 on time, and
+06:00 through before 09:00 as one bounded late catch-up, once per completed date.
+It emits safe reasons such as `on-time-window`, `late-catch-up-window`,
+`completed-date`, `late-window-expired` or `session-review-required`. Compare gate
+output/step outcomes, `data/collection-state.json` and each
 `data/daily-report.json` source timestamp before claiming freshness. Latest stored
 Illinois/Federal/Calendar checks are October 19/18/20 UTC respectively. No repair,
 manual collection or schedule change is part of this documentation reconciliation.
@@ -28,13 +31,13 @@ the source receipts therefore did not become fresh. See the compact evidence
 record in [evidence/daily-delay-diagnosis.json](evidence/daily-delay-diagnosis.json)
 and the public run receipt above.
 
-The proposed P02 policy is to retain the normal 01:00–05:59 window and add one
-bounded late-catch-up window through 09:00 Central. A date with no completed
-attempt could receive at most one ordinary attempt in that late window; after it,
-the gate would refuse with a typed `late-window-expired` reason while retaining
-prior records. This is a proposal only. P02 must add explicit gate reasons and
-last-attempt/last-success evidence, then test the date, DST, disabled-plan and
-January-guard cases. No schedule, ledger or collector was changed by P01.
+P02 implements that policy without changing the 01:00 target or UTC wakes. A date
+with no completed attempt can receive at most one ordinary attempt in the late
+window; after it, the gate refuses with `late-window-expired` while retaining
+prior records. The state now distinguishes the latest attempt from the latest
+successful attempt, and the gate protects the disabled-plan, DST, duplicate-date
+and January review cases. A hosted run that starts late is still required to
+prove the new path; no forced or manual refresh was run for this repair.
 
 **Latest October 17 scope update:** the owner authorized recent media reports for all five members and narrow routine Qwen3 32B / DeepInfra relevance screening, with USD 0.02 daily, USD 0.20 weekly and USD 20 lifetime limits. [MEDIA_REPORTS.md](MEDIA_REPORTS.md) describes operation and evidence limits. Older statements excluding routine inference are superseded only for this task; party and legislative inference remain disabled.
 

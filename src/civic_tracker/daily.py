@@ -19,12 +19,29 @@ def save(path, value):
     temporary.replace(path)
 
 
-def due(plan, state, now, manual=False):
+def gate_decision(plan, state, now, manual=False):
     local = now.astimezone(ZoneInfo(plan['timezone']))
-    if not plan['enabled']:return False
-    if manual:return True
-    return (plan['start_hour'] <= local.hour < plan['catch_up_before_hour']
-            and state.get('last_completed_local_date') != local.date().isoformat())
+    day = local.date().isoformat()
+    if not plan['enabled']:
+        return {'active': False, 'reason': 'disabled'}
+    if day >= plan.get('review_before', '9999-12-31'):
+        return {'active': False, 'reason': 'session-review-required'}
+    if state.get('last_completed_local_date') == day:
+        return {'active': False, 'reason': 'completed-date'}
+    if manual:
+        return {'active': True, 'reason': 'manual'}
+    if local.hour < plan['start_hour']:
+        return {'active': False, 'reason': 'before-window'}
+    if local.hour < plan['catch_up_before_hour']:
+        return {'active': True, 'reason': 'on-time-window'}
+    late_before = plan.get('late_catch_up_before_hour', plan['catch_up_before_hour'])
+    if local.hour < late_before:
+        return {'active': True, 'reason': 'late-catch-up-window'}
+    return {'active': False, 'reason': 'late-window-expired'}
+
+
+def due(plan, state, now, manual=False):
+    return gate_decision(plan, state, now, manual)['active']
 
 
 def run(root, now):
@@ -81,7 +98,11 @@ def run(root, now):
     # retains its old as_of and source dates; only the attempt receipt changes.
     save(root/'data/dashboard.json',snapshot)
     state['last_completed_local_date']=day.isoformat(); state['last_attempt_at']=now.isoformat()
+    state['last_gate_reason']='on-time-window' if now.astimezone(ZoneInfo(plan['timezone'])).hour < plan.get('catch_up_before_hour', 6) else 'late-catch-up-window'
     state['last_status']=snapshot['daily_refresh']['status']
+    if state['last_status'] == 'ok':
+        state['last_success_at'] = now.isoformat()
+        state['last_success_local_date'] = day.isoformat()
     save(root/'data/collection-state.json',state)
     save(root/'data/daily-report.json',snapshot['daily_refresh'])
     size=sum(p.stat().st_size for p in (root/'data').glob('*.json'))
@@ -180,7 +201,9 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('command',choices=['gate','run','federal']);parser.add_argument('--manual',action='store_true');parser.add_argument('--failed-only',action='store_true')
     args=parser.parse_args();root=Path.cwd();now=datetime.now(timezone.utc)
     if args.command=='gate':
-        print('active='+str(due(load(root/'config/daily.json'),load(root/'data/collection-state.json'),now,args.manual)).lower())
+        decision = gate_decision(load(root/'config/daily.json'),load(root/'data/collection-state.json'),now,args.manual)
+        print('active='+str(decision['active']).lower())
+        print('reason='+decision['reason'])
     elif args.command=='federal':run_federal(root,now,args.failed_only)
     else:run(root,now)
 

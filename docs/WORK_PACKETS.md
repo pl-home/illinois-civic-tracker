@@ -22,21 +22,22 @@ implementation task.
 
 ## P02 Bounded delayed-run observability and repair
 
-**Depends on P01 and a task to implement its bounded lateness policy.** Own `daily.py`,
+**Depends on P01 and is locally implemented; hosted proof remains pending.** Own `daily.py`,
 `tests/test_daily.py`, `daily.yml` only if necessary, and `DAILY_REFRESH.md`.
-First add explicit safe gate reasons/last-attempt versus last-success evidence.
-Then implement the documented bounded catch-up behavior within existing daily
-collection authorization. No extra confirmation is needed for routine reversible
-checks already in scope; ask only if the proposed repair expands authorization. Preserve the target
+Explicit safe gate reasons and last-attempt versus last-success evidence are now
+present. The documented bounded catch-up behavior is implemented within existing
+daily collection authorization. No extra confirmation is needed for routine reversible
+checks already in scope; ask only if a later change expands authorization. Preserve the target
 01:00 Central, at most one normal attempt per date, shared lock, DST behavior,
 January guard and budget reservations. No new collector schedule.
 
 Run `python -m unittest discover -s tests -p test_daily.py -v`, then common checks.
-Fixtures must cover on-time, late allowed/refused, completed-date duplicate,
-fall-back repeated hour, spring-forward, disabled plan and January guard. A
-manual flag is not evidence that cron works. **Done:** a reviewed hosted example
-actually advances source receipt times or clearly reports why it did not; a
-skipped job alone is not acceptance. No forced/manual refresh without task scope.
+Fixtures cover on-time, late allowed/refused, completed-date duplicate, fall-back
+repeated hour, spring-forward, disabled plan and January guard. **Local done:**
+gate reasons and state distinction pass the focused suite. **Hosted gate pending:**
+a reviewed scheduled example must advance source receipt times or clearly report
+why it did not; a skipped job alone is not acceptance. No forced/manual refresh
+without task scope.
 
 ## P03 First-party source diagnostics and failure isolation
 

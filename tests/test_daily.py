@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
-from civic_tracker.daily import due, run, run_federal, retry_failed_federal, save, load
+from civic_tracker.daily import due, gate_decision, run, run_federal, retry_failed_federal, save, load
 from civic_tracker.daily_state import refresh
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -83,13 +83,28 @@ class DailyTests(unittest.TestCase):
             self.assertEqual(load(root/'data/federal-recheck-report.json')['previous_federal_report'], old_health['sources']['Federal'])
 
     def test_chicago_schedule_dst_repeat_and_catch_up(self):
-        plan={'enabled':True,'timezone':'America/Chicago','start_hour':1,'catch_up_before_hour':6}
+        plan={'enabled':True,'timezone':'America/Chicago','start_hour':1,'catch_up_before_hour':6,'late_catch_up_before_hour':9,'review_before':'2027-01-03'}
         for value in ['2026-07-01T06:00:00+00:00','2026-12-01T07:00:00+00:00','2026-11-01T06:00:00+00:00','2026-11-01T07:00:00+00:00']:
             now=datetime.fromisoformat(value)
             self.assertTrue(due(plan,{},now))
             self.assertFalse(due(plan,{'last_completed_local_date':now.date().isoformat()},now))
         self.assertFalse(due(plan,{},datetime.fromisoformat('2026-12-01T06:00:00+00:00')))
         self.assertTrue(due(plan,{},datetime.fromisoformat('2026-07-01T07:45:00+00:00')))
+
+    def test_gate_reasons_bound_late_runs_and_preserve_review_guard(self):
+        plan={'enabled':True,'timezone':'America/Chicago','start_hour':1,'catch_up_before_hour':6,'late_catch_up_before_hour':9,'review_before':'2027-01-03'}
+        on_time=gate_decision(plan,{},datetime.fromisoformat('2026-07-01T07:00:00+00:00'))
+        late=gate_decision(plan,{},datetime.fromisoformat('2026-07-01T12:30:00+00:00'))
+        expired=gate_decision(plan,{},datetime.fromisoformat('2026-07-01T14:00:00+00:00'))
+        completed=gate_decision(plan,{'last_completed_local_date':'2026-07-01'},datetime.fromisoformat('2026-07-01T12:30:00+00:00'))
+        disabled=gate_decision({**plan,'enabled':False},{},datetime.fromisoformat('2026-07-01T12:30:00+00:00'))
+        guarded=gate_decision(plan,{},datetime.fromisoformat('2027-01-03T08:00:00+00:00'))
+        self.assertEqual(on_time,{'active':True,'reason':'on-time-window'})
+        self.assertEqual(late,{'active':True,'reason':'late-catch-up-window'})
+        self.assertEqual(expired,{'active':False,'reason':'late-window-expired'})
+        self.assertEqual(completed,{'active':False,'reason':'completed-date'})
+        self.assertEqual(disabled,{'active':False,'reason':'disabled'})
+        self.assertEqual(guarded,{'active':False,'reason':'session-review-required'})
 
     def test_csv_correction_replaces_totals_and_retires_previous_identity(self):
         with tempfile.TemporaryDirectory() as tmp:
