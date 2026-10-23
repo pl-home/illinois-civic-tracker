@@ -1,6 +1,6 @@
 # Bounded execution guide
 
-Revision 12 — October 22, 2026. Written for an implementer with limited context.
+Revision 13 — October 23, 2026. Written for an implementer with limited context.
 Use one packet at a time. Do not read every raw report or old conversation.
 
 ## Start every task
