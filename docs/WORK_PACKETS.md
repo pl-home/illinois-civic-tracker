@@ -39,7 +39,7 @@ October 23, and deployed a partial receipt; the late-window path therefore
 passed while source-specific failures remained visible. No forced/manual refresh
 was used.
 
-## P03 First-party source diagnostics and failure isolation
+## P03 First-party source diagnostics and failure isolation — complete
 
 **Independent source reliability task.** Own `communications.py`,
 `tests/test_communications.py`, `COMMUNICATIONS.md`; change `error_journal.py`
@@ -54,9 +54,10 @@ success. Do not change publisher mapping/name filters to fix network failures.
 No retry of permanent 403/404; any transient retry is bounded and respectful.
 Use mocked failures first, then one approved bounded hosted check. The existing
 `media.yml` **mode=communications** skips inference; verify all financial/work
-files unchanged. **Done:** distinguish each failure, confirm the new House blog
-still has publisher attribution, no other member gains its caucus-wide posts,
-and the displayed health/dated receipts match the result. No model use.
+files unchanged. **Done:** safe categories are covered by offline tests and the
+hosted communications-only run [39898483019](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39898483019)
+completed successfully without model calls; retained records and publisher
+attribution remained intact. No model use.
 
 ## P04 Genuine live hearing/form acceptance
 

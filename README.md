@@ -5,7 +5,7 @@ LaHood, Dick Durbin and Tammy Duckworth (Congress119), plus the two Lee County
 party organizations. Public browsing is on [the website](https://pl-home.github.io/illinois-civic-tracker/);
 private positions, notes and correspondence stay in Obsidian. No automatic outreach.
 
-## Start here — October 22, 2026
+## Start here — October 23, 2026
 
 1. [Current status and decisions](docs/CURRENT_STATUS.md): implemented boundaries, actual receipt dates and known failures.
 2. [Execution guide](docs/EXECUTION_GUIDE.md): safe commands, ownership, side effects and stop rules.
@@ -27,11 +27,11 @@ pages and news/communications. Only public media-headline relevance uses Qwen3
 Unsettled requests stay held. [Budget accounting](docs/BUDGET_USAGE.md).
 
 A configured schedule or green job does not establish current collection. The
-October 22 scheduled run skipped its collection steps; source receipts are
-older. [Current status](docs/CURRENT_STATUS.md) gives the exact evidence. The
-P01 daily freshness/delay diagnosis is recorded in the evidence receipt; the
-next recommended task is the bounded observability/repair in P02, not enabling
-delivery.
+October 23 scheduled run entered the bounded late window, refreshed sources,
+ran two approved media-model calls, and published a partial but current site.
+[Current status](docs/CURRENT_STATUS.md) gives the exact evidence. P01/P02 and
+P03 are complete within their limits; the next available offline implementation
+packet is P05 storage-growth simulation. P04 remains source-dependent.
 Manual trial workflows are not authorization to run them. Old Codex/Windows
 schedules remain outside this runner and must not be reactivated here.
 

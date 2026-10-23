@@ -64,9 +64,9 @@ is still a planned channel, not an active schedule.
 
 ## 3. Delivery sequence and acceptance gates
 
-The concrete execution order is P01 daily skip/freshness diagnosis, then a
-reviewed bounded delay fix (P02) and source diagnostics (P03). P04 live hearing
-acceptance is source-dependent. Offline storage simulation (P05) and the
+P01 daily skip/freshness diagnosis, the reviewed bounded delay fix (P02), and
+source diagnostics (P03) are complete within their documented boundaries. P04
+live hearing acceptance is source-dependent. Offline storage simulation (P05) and the
 January rollover review (P06) are independent of blocked digest delivery.
 [WORK_PACKETS.md](WORK_PACKETS.md) names exact starting files, tests and done/stop
 conditions; [handoff.json](handoff.json) records dependencies. Small-model

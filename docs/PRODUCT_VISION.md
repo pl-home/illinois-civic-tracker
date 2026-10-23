@@ -7,9 +7,10 @@ and published copies of this vision/plan share this revision. Dated findings are
 historical evidence, not an alternative active plan.
 
 Stages A–C and Stage D previews are implemented within documented limits.
-Email remains disabled pending owner review; PDF work is deferred. The first
-operational follow-up is actual daily freshness/delay diagnosis; the October 22
-successful scheduled job skipped collection. Use one bounded
+Email remains disabled pending owner review; PDF work is deferred. Daily
+freshness and first-party diagnostics are complete within their boundaries; the
+October 23 scheduled job entered the bounded late window, ran the approved media
+model, and published a partial but current site. Use one bounded
 [work packet](WORK_PACKETS.md) through [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md).
 This handoff does not enable future features or change authorization/budgets.
 

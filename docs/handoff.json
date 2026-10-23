@@ -185,6 +185,11 @@
     {
       "id": "P03",
       "state": "planned",
+      "completion": {
+        "status": "complete",
+        "hosted_run": "39898483019",
+        "next": "P05"
+      },
       "depends_on": [],
       "gates": [
         "new-owner-task",
