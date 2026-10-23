@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from urllib.error import HTTPError, URLError
 from unittest.mock import patch
 from bs4 import BeautifulSoup
 from civic_tracker import communications as com
@@ -64,6 +65,23 @@ class CommunicationsTests(unittest.TestCase):
             result=media.load(root/'data/dashboard.json')['members'][0]
             self.assertTrue(result['communications'][0]['retained_after_failure'])
             self.assertEqual(result['communication_sources'][0]['status'],'failed')
+
+    def test_failed_source_records_safe_transport_categories(self):
+        source={**SOURCE,'format':'rss'}
+        failures=[(HTTPError(source['url'],503,'body must not persist',{},None),'http','HTTP_503'),
+                  (URLError('private provider detail'),'transport','TRANSPORT_ERROR'),
+                  (ValueError('parser body detail'),'parse','PARSE_ERROR')]
+        for exc,category,code in failures:
+            with self.subTest(category=category), tempfile.TemporaryDirectory() as temp:
+                root=Path(temp); media.save(root/'config/communications.json',{'sources':[source],'max_sources':16,'lookback_days':90,'max_per_kind':3})
+                media.save(root/'config/media.json',{'name_anchors':CONFIG['name_anchors']})
+                media.save(root/'data/dashboard.json',{'members':[{'id':'fritts','name':'Bradley Fritts'}]})
+                media.save(root/'data/communications-state.json',{'sources':{}})
+                with patch.object(com,'fetch',side_effect=exc): com.collect(root,NOW)
+                receipt=media.load(root/'data/communications-state.json')['sources']['office']
+                self.assertEqual(receipt['error_category'],category)
+                self.assertEqual(receipt['error_code'],code)
+                self.assertNotIn('body',json.dumps(receipt))
 
     def test_partial_listing_retains_old_entries_and_marks_failure(self):
         with tempfile.TemporaryDirectory() as temp:

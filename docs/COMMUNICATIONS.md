@@ -57,6 +57,16 @@ The existing daily `media prepare` phase collects first-party metadata; `media e
 
 For review start with this file, `config/communications.json`, `src/civic_tracker/communications.py`, `tests/test_communications.py`, then a member's `communications` and `communication_sources` arrays in `data/dashboard.json`. Coverage receipts expose source type, last check, latest listing date and unsupported feeds. Missing results are not proof of inactivity.
 
+### P03 failure diagnostics
+
+Failed first-party sources retain their last-good items and record only a safe
+category and code: `http` with `HTTP_NNN`, `timeout` with `TIMEOUT`, `tls` with
+`TLS_ERROR`, `transport` with `TRANSPORT_ERROR`, or `parse` with `PARSE_ERROR`.
+Provider exception text, response bodies, headers and URLs are never persisted.
+A failed source is not converted into an empty successful feed; its dated receipt
+remains marked failed. The mapping is covered offline before any bounded hosted
+communications check.
+
 ## Hosted acceptance
 
 The [communications-only hosted run](https://github.com/pl-home/illinois-civic-tracker/actions/runs/39048939298) completed and deployed October 17. All 11 automated sources were healthy; four sources were explicitly link-only. Each member displayed three office posts. Campaign and party groups had no eligible recent items at that October 17 check; this dated observation is superseded by later source receipts and the House blog addition below. No publication date or release was invented to fill them.

@@ -5,6 +5,8 @@ import hashlib
 import re
 from urllib.parse import urljoin, urlsplit, urlunsplit
 from urllib.request import Request, build_opener, HTTPRedirectHandler
+from urllib.error import HTTPError, URLError
+import ssl
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
@@ -135,6 +137,27 @@ def fetch(source):
         return response.read(1_000_001)
 
 
+def safe_failure(exc):
+    """Return a bounded category/code without exposing provider text or URLs."""
+    if isinstance(exc, HTTPError):
+        code = exc.code if isinstance(exc.code, int) and 100 <= exc.code <= 599 else 0
+        return {'category': 'http', 'code': f'HTTP_{code}' if code else 'HTTP_ERROR'}
+    if isinstance(exc, ssl.SSLError):
+        return {'category': 'tls', 'code': 'TLS_ERROR'}
+    if isinstance(exc, TimeoutError):
+        return {'category': 'timeout', 'code': 'TIMEOUT'}
+    if isinstance(exc, URLError):
+        reason = getattr(exc, 'reason', None)
+        if isinstance(reason, TimeoutError):
+            return {'category': 'timeout', 'code': 'TIMEOUT'}
+        if isinstance(reason, ssl.SSLError):
+            return {'category': 'tls', 'code': 'TLS_ERROR'}
+        return {'category': 'transport', 'code': 'TRANSPORT_ERROR'}
+    if isinstance(exc, ValueError):
+        return {'category': 'parse', 'code': 'PARSE_ERROR'}
+    return {'category': 'collection', 'code': 'COLLECTION_ERROR'}
+
+
 def collect(root,now):
     config=load(root/'config/communications.json')
     news_config=load(root/'config/media.json')
@@ -158,11 +181,13 @@ def collect(root,now):
                         if row['id'] not in known and (now-timedelta(days=config['lookback_days'])).date().isoformat()<=row['published_at'][:10]<=now.date().isoformat():
                             result['items'].append({**row,'retained_after_failure':True})
                     result['items']=sorted(result['items'],key=lambda row:row['published_at'],reverse=True)[:60]
-            except Exception:
+            except Exception as exc:
                 old=previous['sources'].get(source['id'],{})
                 items=[{**row,'retained_after_failure':True} for row in old.get('items',[])
                     if (now-timedelta(days=config['lookback_days'])).date().isoformat()<=row['published_at'][:10]<=now.date().isoformat()]
+                failure=safe_failure(exc)
                 result={'status':'failed','items':items,'error':'source-unavailable-or-listing-changed',
+                    'error_category':failure['category'],'error_code':failure['code'],
                     'latest_source_date':old.get('latest_source_date')}
         result.update(checked_at=now.isoformat(),label=source['label'],kind=source['kind'],members=source['members'],
             source_url=source.get('listing_url',source['url']),note=source.get('note',result.get('note','')))
@@ -185,6 +210,7 @@ def apply(root,now):
             receipts.append({'id':source['id'],'publisher':source['label'],'kind':source['kind'],
                 'url':source.get('listing_url',source['url']), 'status':receipt.get('status','not-checked'),
                 'checked_at':receipt.get('checked_at'), 'latest_source_date':receipt.get('latest_source_date'),
+                'error_category':receipt.get('error_category'), 'error_code':receipt.get('error_code'),
                 'note':receipt.get('note',source.get('note',''))})
             for row in receipt.get('items',[]):
                 if row['member_id']==member['id'] and (now-timedelta(days=config['lookback_days'])).date().isoformat()<=row['published_at'][:10]<=now.date().isoformat():
