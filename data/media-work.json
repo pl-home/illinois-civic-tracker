@@ -1,66 +1,66 @@
 {
-  "work_hash": "0be5beea34faaf0cec407ed948f902dcc52112e468143e99f52ddf3947202049",
-  "day": "2026-10-23",
-  "created_at": "2026-10-23T11:32:14.864325+00:00",
+  "work_hash": "6c5e61f7778b75dda93b1c6baf0dddf79935b21f6aef548dfa986195e12c960d",
+  "day": "2026-10-24",
+  "created_at": "2026-10-24T10:51:07.297676+00:00",
   "batches": [
     {
-      "batch_hash": "b42e3f446dd50bb18b3e5c7335d35182a47c3dda8c5f19840de9e6cb3eb91a1e",
+      "batch_hash": "ccf2ae755e4da1bd4fa4ad4bde674ea16beb81b3525d23290efd8b9030f5fa42",
       "cases": [
         {
-          "id": "31c5a234e8645c86ee6deeb9",
+          "id": "5491fbf1990c3fa2905ae55d",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "LaHood, Nolley offer competing plans to address rising costs in 16th District race",
-          "snippet": "LaHood, Nolley offer competing plans to address rising costs in 16th District race The Pantagraph"
+          "title": "Archbishop Fulton Sheen recognized by Congressman Darin LaHood",
+          "snippet": "Archbishop Fulton Sheen recognized by Congressman Darin LaHood WEEK | 25 News Now"
         },
         {
-          "id": "c172ebb5b49da68428f8ad94",
+          "id": "b011e6596a027c95af08ac09",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Why LaHood doesn't support Trump plan to send Americans $5K election checks",
-          "snippet": "Why LaHood doesn't support Trump plan to send Americans $5K election checks Peoria Journal Star"
+          "title": "LaHood recognizes Fulton Sheen on House floor, saying archbishop was ‘one of our own’",
+          "snippet": "LaHood recognizes Fulton Sheen on House floor, saying archbishop was ‘one of our own’ WEEK | 25 News Now"
         },
         {
-          "id": "00a71bf953c681710124bebf",
+          "id": "8e734a0da9e817fb5b5d97e1",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Rep. Darin LaHood defends Iran war, discusses tariffs and immigration solutions on 21st Show",
-          "snippet": "Rep. Darin LaHood defends Iran war, discusses tariffs and immigration solutions on 21st Show IPM Newsroom"
+          "title": "Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability",
+          "snippet": "Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability WCBU Peoria"
         },
         {
-          "id": "d35ea6bbe9dad8b01da9abad",
+          "id": "1856a5b3f7db1c1bfa94c5f5",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "2026 Election Questionnaire: Darin LaHood, U.S. House of Representatives, 16th District",
-          "snippet": "2026 Election Questionnaire: Darin LaHood, U.S. House of Representatives, 16th District Shaw Local"
+          "title": "LaHood, Sorensen debate Trump tax cuts’ impact on working families",
+          "snippet": "LaHood, Sorensen debate Trump tax cuts’ impact on working families WEEK | 25 News Now"
         },
         {
-          "id": "3e05f4eec226dab152db14a3",
+          "id": "40d3f54c7bed4b87056fc383",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future",
-          "snippet": "In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future CBS News"
+          "title": "Durbin, Foster decry legal services funding halt for immigrant children",
+          "snippet": "Durbin, Foster decry legal services funding halt for immigrant children Chicago Tribune"
         },
         {
-          "id": "ee3c6bb841bdaaa6463d6076",
+          "id": "b3b842f6a9129fcd0dad05a0",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin",
-          "snippet": "WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin PBS"
+          "title": "WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service",
+          "snippet": "WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service WEEK | 25 News Now"
         },
         {
-          "id": "b9c8118e505e6242b47d94c4",
+          "id": "7a08a2c4647915a16973a59a",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions",
-          "snippet": "Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions RiverBender.com"
+          "title": "Illinois General Assembly honors retiring U.S. Sen. Dick Durbin's career",
+          "snippet": "Illinois General Assembly honors retiring U.S. Sen. Dick Durbin's career CBS News"
         },
         {
-          "id": "222872f25b0fc7b66cc76fde",
+          "id": "9c63fe4e19cd84e2b392fba1",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Democrat Juliana Stratton faces Don Tracy, former GOP chair, in Senate battle for Dick Durbin's seat",
-          "snippet": "Democrat Juliana Stratton faces Don Tracy, former GOP chair, in Senate battle for Dick Durbin's seat Chicago Sun-Times"
+          "title": "Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal",
+          "snippet": "Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal WGLT"
         }
       ],
       "payload": {
@@ -85,7 +85,7 @@
           },
           {
             "role": "user",
-            "content": "[{\"id\": \"31c5a234e8645c86ee6deeb9\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood, Nolley offer competing plans to address rising costs in 16th District race\", \"snippet\": \"LaHood, Nolley offer competing plans to address rising costs in 16th District race The Pantagraph\"}, {\"id\": \"c172ebb5b49da68428f8ad94\", \"member_name\": \"Darin LaHood\", \"title\": \"Why LaHood doesn't support Trump plan to send Americans $5K election checks\", \"snippet\": \"Why LaHood doesn't support Trump plan to send Americans $5K election checks Peoria Journal Star\"}, {\"id\": \"00a71bf953c681710124bebf\", \"member_name\": \"Darin LaHood\", \"title\": \"Rep. Darin LaHood defends Iran war, discusses tariffs and immigration solutions on 21st Show\", \"snippet\": \"Rep. Darin LaHood defends Iran war, discusses tariffs and immigration solutions on 21st Show IPM Newsroom\"}, {\"id\": \"d35ea6bbe9dad8b01da9abad\", \"member_name\": \"Darin LaHood\", \"title\": \"2026 Election Questionnaire: Darin LaHood, U.S. House of Representatives, 16th District\", \"snippet\": \"2026 Election Questionnaire: Darin LaHood, U.S. House of Representatives, 16th District Shaw Local\"}, {\"id\": \"3e05f4eec226dab152db14a3\", \"member_name\": \"Dick Durbin\", \"title\": \"In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future\", \"snippet\": \"In bid to replace U.S. Sen. Dick Durbin, Juliana Stratton and Don Tracy have very different visions for the future CBS News\"}, {\"id\": \"ee3c6bb841bdaaa6463d6076\", \"member_name\": \"Dick Durbin\", \"title\": \"WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin\", \"snippet\": \"WATCH LIVE: Illinois U.S. Senate candidates face off in forum to replace Durbin PBS\"}, {\"id\": \"b9c8118e505e6242b47d94c4\", \"member_name\": \"Dick Durbin\", \"title\": \"Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions\", \"snippet\": \"Durbin Says Congress Will Back Ukraine After Trump Eases Russia Sanctions RiverBender.com\"}, {\"id\": \"222872f25b0fc7b66cc76fde\", \"member_name\": \"Dick Durbin\", \"title\": \"Democrat Juliana Stratton faces Don Tracy, former GOP chair, in Senate battle for Dick Durbin's seat\", \"snippet\": \"Democrat Juliana Stratton faces Don Tracy, former GOP chair, in Senate battle for Dick Durbin's seat Chicago Sun-Times\"}]"
+            "content": "[{\"id\": \"5491fbf1990c3fa2905ae55d\", \"member_name\": \"Darin LaHood\", \"title\": \"Archbishop Fulton Sheen recognized by Congressman Darin LaHood\", \"snippet\": \"Archbishop Fulton Sheen recognized by Congressman Darin LaHood WEEK | 25 News Now\"}, {\"id\": \"b011e6596a027c95af08ac09\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood recognizes Fulton Sheen on House floor, saying archbishop was ‘one of our own’\", \"snippet\": \"LaHood recognizes Fulton Sheen on House floor, saying archbishop was ‘one of our own’ WEEK | 25 News Now\"}, {\"id\": \"8e734a0da9e817fb5b5d97e1\", \"member_name\": \"Darin LaHood\", \"title\": \"Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability\", \"snippet\": \"Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability WCBU Peoria\"}, {\"id\": \"1856a5b3f7db1c1bfa94c5f5\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood, Sorensen debate Trump tax cuts’ impact on working families\", \"snippet\": \"LaHood, Sorensen debate Trump tax cuts’ impact on working families WEEK | 25 News Now\"}, {\"id\": \"40d3f54c7bed4b87056fc383\", \"member_name\": \"Dick Durbin\", \"title\": \"Durbin, Foster decry legal services funding halt for immigrant children\", \"snippet\": \"Durbin, Foster decry legal services funding halt for immigrant children Chicago Tribune\"}, {\"id\": \"b3b842f6a9129fcd0dad05a0\", \"member_name\": \"Dick Durbin\", \"title\": \"WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service\", \"snippet\": \"WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service WEEK | 25 News Now\"}, {\"id\": \"7a08a2c4647915a16973a59a\", \"member_name\": \"Dick Durbin\", \"title\": \"Illinois General Assembly honors retiring U.S. Sen. Dick Durbin's career\", \"snippet\": \"Illinois General Assembly honors retiring U.S. Sen. Dick Durbin's career CBS News\"}, {\"id\": \"9c63fe4e19cd84e2b392fba1\", \"member_name\": \"Dick Durbin\", \"title\": \"Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal\", \"snippet\": \"Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal WGLT\"}]"
           }
         ],
         "response_format": {
@@ -104,14 +104,14 @@
                       "id": {
                         "type": "string",
                         "enum": [
-                          "31c5a234e8645c86ee6deeb9",
-                          "c172ebb5b49da68428f8ad94",
-                          "00a71bf953c681710124bebf",
-                          "d35ea6bbe9dad8b01da9abad",
-                          "3e05f4eec226dab152db14a3",
-                          "ee3c6bb841bdaaa6463d6076",
-                          "b9c8118e505e6242b47d94c4",
-                          "222872f25b0fc7b66cc76fde"
+                          "5491fbf1990c3fa2905ae55d",
+                          "b011e6596a027c95af08ac09",
+                          "8e734a0da9e817fb5b5d97e1",
+                          "1856a5b3f7db1c1bfa94c5f5",
+                          "40d3f54c7bed4b87056fc383",
+                          "b3b842f6a9129fcd0dad05a0",
+                          "7a08a2c4647915a16973a59a",
+                          "9c63fe4e19cd84e2b392fba1"
                         ]
                       },
                       "relevant": {
@@ -144,21 +144,35 @@
       }
     },
     {
-      "batch_hash": "479a1eb12345938dbc6712eb83a213c7223da1b17a1b489e98d02d699c3b0969",
+      "batch_hash": "4547a7d5d7ab79eccbd01c8ff005110d42bf6efc3905dc23533309f8e818e547",
       "cases": [
         {
-          "id": "3a9a404488174a99554038d1",
+          "id": "5859c16af07710f190f095cb",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court",
-          "snippet": "Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court RiverBender.com"
+          "title": "Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War",
+          "snippet": "Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War RiverBender.com"
         },
         {
-          "id": "fb069b544cf1dc8e67e6faa4",
+          "id": "1306ebb910665f3389d6665d",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Duckworth opposes candidate to replace Platner: ‘Maine deserves better’",
-          "snippet": "Duckworth opposes candidate to replace Platner: ‘Maine deserves better’ The Hill"
+          "title": "Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare",
+          "snippet": "Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare Chicago Tribune"
+        },
+        {
+          "id": "d4864b516f0f8ba897619cea",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat",
+          "snippet": "Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat RiverBender.com"
+        },
+        {
+          "id": "11c4b9660709bed0660db46c",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities",
+          "snippet": "US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities Chicago Tribune"
         }
       ],
       "payload": {
@@ -183,7 +197,7 @@
           },
           {
             "role": "user",
-            "content": "[{\"id\": \"3a9a404488174a99554038d1\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court\", \"snippet\": \"Duckworth, Democrats Call On HHS Secretary To Reverse Plans For Trump Administration Lawyers To Represent Unaccompanied Children In Immigration Court RiverBender.com\"}, {\"id\": \"fb069b544cf1dc8e67e6faa4\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth opposes candidate to replace Platner: ‘Maine deserves better’\", \"snippet\": \"Duckworth opposes candidate to replace Platner: ‘Maine deserves better’ The Hill\"}]"
+            "content": "[{\"id\": \"5859c16af07710f190f095cb\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War\", \"snippet\": \"Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War RiverBender.com\"}, {\"id\": \"1306ebb910665f3389d6665d\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare\", \"snippet\": \"Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare Chicago Tribune\"}, {\"id\": \"d4864b516f0f8ba897619cea\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat\", \"snippet\": \"Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat RiverBender.com\"}, {\"id\": \"11c4b9660709bed0660db46c\", \"member_name\": \"Tammy Duckworth\", \"title\": \"US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities\", \"snippet\": \"US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities Chicago Tribune\"}]"
           }
         ],
         "response_format": {
@@ -202,8 +216,10 @@
                       "id": {
                         "type": "string",
                         "enum": [
-                          "3a9a404488174a99554038d1",
-                          "fb069b544cf1dc8e67e6faa4"
+                          "5859c16af07710f190f095cb",
+                          "1306ebb910665f3389d6665d",
+                          "d4864b516f0f8ba897619cea",
+                          "11c4b9660709bed0660db46c"
                         ]
                       },
                       "relevant": {
@@ -238,16 +254,18 @@
   ],
   "decisions": {},
   "case_hashes": {
-    "31c5a234e8645c86ee6deeb9": "3e0803ac1469a42afe069c02108921ba1324d4703157891cb5a10bf6352a4add",
-    "c172ebb5b49da68428f8ad94": "b594780dc9e63c4d2c6a08ccb80951d5a166640bfdbc7d62a2fc74e95b81bef0",
-    "00a71bf953c681710124bebf": "95f96b465c5d80c221a64cefe2562d7ce033d9aff3fc4cf6430b887114a3494b",
-    "d35ea6bbe9dad8b01da9abad": "b0b2921d9f4c967d9cbc85a8f226d621a44da4792e6e3837cc78b364634e74ea",
-    "3e05f4eec226dab152db14a3": "2db5aee6b70d4d3d94c31d091db7472db26210461403fd35e8a7790db6236fce",
-    "ee3c6bb841bdaaa6463d6076": "4c86aaa2856b776a378d24eaf44c4af229b8b132706e85ec5cea8143cc5b255c",
-    "b9c8118e505e6242b47d94c4": "77e23f0eb74d1524dbee873028b015ebddcdd44582bed9487d733f414c9e3c4d",
-    "222872f25b0fc7b66cc76fde": "c2ba8d60ba7c52bdcbc58a0a7000b1638f5f98d75d65882d15e09e2c1bfbcd55",
-    "3a9a404488174a99554038d1": "63b5f81fb6bccac6d545eada79da22c9375ff6780b787c48ae2943fa3f223ffa",
-    "fb069b544cf1dc8e67e6faa4": "9425e274fd05ad2d34f95aa0b7690c519cb87cfd9de608b224e3fb41bdc8ac35"
+    "5491fbf1990c3fa2905ae55d": "1d43c495397bd7a133ef7fac50a910361149eec13a6dbfd697c266c20adc6162",
+    "b011e6596a027c95af08ac09": "b8d53317925dc24ca91d942c9265e63f57dce4ae70628e4e1538cd5d355d6d92",
+    "8e734a0da9e817fb5b5d97e1": "e7ec4812f921b4a4f4ff3db8929f37527c8b55ac291091fea75759fc574190f0",
+    "1856a5b3f7db1c1bfa94c5f5": "9568335f480dc28ee1c466ed32e93d21aa2ceb41c39d4e86800c6dccad449908",
+    "40d3f54c7bed4b87056fc383": "8c77ee08163066381167bed8aded36c2dcfe92f8c7367e1d8807eec7ee991837",
+    "b3b842f6a9129fcd0dad05a0": "60d647ab2acad0b88684602d3186a0e9db109fd3f2933cab884a4b5a50c23bdc",
+    "7a08a2c4647915a16973a59a": "3714fc3ab3b140aad273f48c10947b66d9d63c220834ecd8540883c322d9099e",
+    "9c63fe4e19cd84e2b392fba1": "7e328d753ae30cc9953a74ab2d97d94862452c2b11ab970d8758803b07e50511",
+    "5859c16af07710f190f095cb": "141ce500ad79c7718c3c672e7bdbfe411c81023a3c7b8622cba6d00a08afa7af",
+    "1306ebb910665f3389d6665d": "448961447a314f7c5cfe61fc89792799e3c4f729be931eae47151a8aa0f5079c",
+    "d4864b516f0f8ba897619cea": "d9f83058b13c6ee19d9a709f36fd85c2518065c2ed600f5c3e5c6de66aa58cfa",
+    "11c4b9660709bed0660db46c": "059623575f87f85d014e4a40b15d62ea2ed559365413189cd539fa72e6d4e47c"
   },
   "deferred_ids": [],
   "errors": []
