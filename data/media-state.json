@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-24T10:51:07.297676+00:00",
+  "checked_at": "2026-10-25T11:23:36.218124+00:00",
   "members": {
     "fritts": {
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "candidates": [
         {
           "id": "6200806ad5f0d349d1657570",
@@ -41,15 +41,27 @@
           "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVF9DZ0FDSUUwVUxjVm5QYTZLZnBmLUVTWjk2ZGRpVnRsTHh6a3hOVEpKSGQ5QmcwX2dfSTVpWFJqSXUxZ1dRcWJnMksyRTRQQVQ3ZlBRM3dUMUdKV19BZnVPZGRRWHJ1Vzlzd2pTNkdlUkRDdFhxcjZFUXJNcU1nS0NMZFB0Ri1Dc1VpVzJoOGF2OEpqWUNMajF3eTcwTjJNQnMtcGFJbFJWa0hmU3B0aE5UWUw2eHRDU0prVmJYbnpsSlA0Q3hRd2tpV09UZDB4",
           "published_at": "2026-09-25T07:00:00+00:00",
           "link_route": "Google News"
+        },
+        {
+          "id": "2f470c018c123d5e8eb948e4",
+          "member_id": "fritts",
+          "member_name": "Bradley Fritts",
+          "title": "Fritts honors local women at 2026 Women to Watch Event",
+          "snippet": "Fritts honors local women at 2026 Women to Watch Event Shaw Local",
+          "publisher": "Shaw Local",
+          "publisher_host": "shawlocal.com",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQU2I2emowNnlmdUVJOE5OSEp6QXVWaEMxUFpHY3Z6T0VBVkY5eXBGT2hNaXV2eHpZNUhMdjI0NVFlVmtGZ0laQ2Z6QlFsWFVLOHhzSm9VWFVpdWEyWW1fOXcycGZ6bmJzdFJ4V0R5U1FmRjVxeUFkRmtobHg3U0tJdW9xMXRjM1JIWWpMbmF2WnNmc3FVM010VnRWdkcta21DdHN5eDJqOA",
+          "published_at": "2026-04-28T07:00:00+00:00",
+          "link_route": "Google News"
         }
       ],
       "query": "\"Bradley Fritts\" OR \"Brad Fritts\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-24T10:51:07.297676+00:00"
+      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
     },
     "arellano": {
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "candidates": [
         {
           "id": "184f1a75161ae3b8fe01e97f",
@@ -66,12 +78,24 @@
       ],
       "query": "\"Li Arellano\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-24T10:51:07.297676+00:00"
+      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
     },
     "lahood": {
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "candidates": [
+        {
+          "id": "0c0e45b1520ce7a0836025d6",
+          "member_id": "lahood",
+          "member_name": "Darin LaHood",
+          "title": "Trump endorses LaHood in 16th Congressional District race",
+          "snippet": "Trump endorses LaHood in 16th Congressional District race MyStateline",
+          "publisher": "MyStateline",
+          "publisher_host": "mystateline.com",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOanVDMEtMTkR5N0FIYVl5MUZCdjlnUExpckJJcHIxRXgzUHRMbHhLZ252Q3htQlYtUWRCRVp2R0NKeDNqc0lMajMwajBBNktQSHg5c3p3LVZsYmNOUW1fWHRfUk55VHRKUXRtQnJ6ZWlORkJEV0JXcndkS0JTYXVmZmV4MUFpckl3eXfSAY8BQVVfeXFMT3MwWHRjdjhGZlNTdUtmNVVORGFnTExqZjY5ZDhXS3o3bkpLNFhETWJZQXBGTkRGMEdIQmdhbk50b3RkRlRmTk91VDQ3Z1ZGQU9hTUpBYkNheWJwYlhLYjNqbWtRSks0dUNqYy14NHJ3NTN1UGFkaHc3YVN0NlZOZE40dE1MQmplT05ORVBMMlU",
+          "published_at": "2026-10-24T18:27:25+00:00",
+          "link_route": "Google News"
+        },
         {
           "id": "31c5a234e8645c86ee6deeb9",
           "member_id": "lahood",
@@ -229,18 +253,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "5491fbf1990c3fa2905ae55d",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "Archbishop Fulton Sheen recognized by Congressman Darin LaHood",
-          "snippet": "Archbishop Fulton Sheen recognized by Congressman Darin LaHood WEEK | 25 News Now",
-          "publisher": "WEEK | 25 News Now",
-          "publisher_host": "25newsnow.com",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbWtlaEx2clQ3S0djWTd5cHBCSjV5VDBuNlk4c29PS24zTGQ4ZnhtUFZqX1l5WWxrNnd0THo0RUNfQVlBRmZqWUFCWmNEVmdXMEFuUlUxZDlfZUVXeVFzcGlHNENWOUcwMkllZ3ByX0JMb2NZNDhSSTk3YmI1U1VURFVLak05U3I4Znk1aXgxakdrYUZZeFdPUE1yMUsxR0Y4d3g3MWRWeWF6UQ",
-          "published_at": "2026-09-18T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "b011e6596a027c95af08ac09",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
@@ -301,14 +313,14 @@
           "link_route": "Google News"
         },
         {
-          "id": "ac0fe7c1411478a157ccfea2",
+          "id": "1186e20a27d72216a0bbb5a1",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "LaHood tours Illinois Central College’s health facilities",
-          "snippet": "LaHood tours Illinois Central College’s health facilities WEEK | 25 News Now",
+          "title": "Rep. Darin Lahood tours Illinois Central College's health facilities",
+          "snippet": "Rep. Darin Lahood tours Illinois Central College's health facilities WEEK | 25 News Now",
           "publisher": "WEEK | 25 News Now",
           "publisher_host": "25newsnow.com",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQd0w4c1d1NDAzR2RaUzJ2bU5EWV9kdnExYmdSLXRkTTBnaXJnc3hhVGNZeU9JWU02bWNsbTdGY0Vaa3pZX1YtNUROb1Y2dXdtR0xGMDV0Zl9wSHc5dmY4cUpaU2d4SFlqNlc1aUhrTnl6eTlFb1EtQ0Z0bTExYlFldHl4dXI5bE5zeE0taWxpZ3d1WTdsdDNid0tn0gGuAUFVX3lxTE9FOV9kRVFvMGZ0cG1VOGcxZ2RJY1Y1VmJnaVZUU01xOVNlZEpCMUJ1UnFabk5LTzVORTBXT3FHVTI1eTVoMWp4bVFFcUhscUdlTmRlckhFVl9pRUJCdkZteUJwZC0tOU96UzMxU21DYWdQc0VqeUlvOHZXSGVJdXJYcmdMZW1fT09hVW1qNWZxMS1MTDd5Q2V2MFIwN1cwbmxzWEFSVHJ3MXhxUk1OQQ",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa3RwZFhYVlQ2V0FEcHRiTFd1TW9KODRGQXE0ZENXUzVBS3FhQjNRLTdwTFc1ODRGdnJLSFJnRVdtU0w5NW9SOGgzX2J3VGpPWFlldWZqaGVtdDJhNnFMYllTSlR4elVqOEExRjNKRUZWZWlJWk5JVzBMWXNUUG5nOTdpSE5XZi1GT3Vib1VNYXVXbzJNeGx2Mk9nRzBCRUtUWU1XT2tfZWpXUVRNUHBJ",
           "published_at": "2026-07-09T07:00:00+00:00",
           "link_route": "Google News"
         },
@@ -387,11 +399,11 @@
       ],
       "query": "\"Darin LaHood\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-24T10:51:07.297676+00:00"
+      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
     },
     "durbin": {
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "candidates": [
         {
           "id": "3e05f4eec226dab152db14a3",
@@ -418,14 +430,14 @@
           "link_route": "Google News"
         },
         {
-          "id": "be67bba4a5fe4bc9cd58b741",
+          "id": "a3940b101f89f55b88ee2925",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
           "title": "What to know about the U.S. Senate race to replace Sen. Dick Durbin",
-          "snippet": "What to know about the U.S. Senate race to replace Sen. Dick Durbin WBEZ Chicago",
-          "publisher": "WBEZ Chicago",
-          "publisher_host": "wbez.org",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNeTc2a0VvWHN4OEJHTk52TXUyMGJFXzVLZFY1MHplbENRQ3VzaWNvSWlBa2kyWEZCRFdmTHdyRzBSOElRSlBhVzZ1V0FqOEN3UUdCSHNNUHlWbFNscWdISHdQZEpmRTQ3aWNxeHBSUEE4QjJ3MEJrcE9VdWhsZXNobUliN2pwc2VGa3ZNVXNGeEdmYV9sMHI0VjBMb2Qzck12dkZTYlVnZnRxemd0bTBQZzVXdExZT0wyTllCU2t1ZHU0VUFzY2pN",
+          "snippet": "What to know about the U.S. Senate race to replace Sen. Dick Durbin Chicago Sun-Times",
+          "publisher": "Chicago Sun-Times",
+          "publisher_host": "chicago.suntimes.com",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUHRLdzdnWFFpTFNlZ3J4a19UMTJrMUFYS0xBX25LejdMbUk3UWJmN21tYkJaRnMySUd4OVY1LVh1OGlPd0RqS2ZvV0oxMUJHdThmVEFQb2p3T1V3NzlRN3REdjYyMWhqbEVGcGFJOV9pNlY5MW5FaE5BRDBrdnBDUUcyOFdKOTdkRjc2TTExVXphMHI3c0lGLVIxNlF3QW9DZGR5eWk4TEdWMVZTNks5cXdmOXRJUDA",
           "published_at": "2026-10-01T07:00:00+00:00",
           "link_route": "Google News"
         },
@@ -588,11 +600,11 @@
       ],
       "query": "\"Dick Durbin\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-24T10:51:07.297676+00:00"
+      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
     },
     "duckworth": {
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "candidates": [
         {
           "id": "6af4c7398e9fb93361450f9e",
@@ -652,6 +664,18 @@
           "publisher_host": "riverbender.com",
           "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPc0pzNnFGS09LMk5IWmxfZmxMbzRmTjZETEpPM1ZqWWdCcWxURnU3YVV5UVFpaGpad21ZbWlaZ0tjZklTUTRSblRmZTdGZ2ZHQUNmUUtDMEEyUk1XSS15LUZ0Rzc0XzBMdlZXYVhtMGtsV2g1MXcyWU1IT2xGMzJtbTdFRkpiNFNqNloxQlpqU3N6OGp4bHQ1RzI4cEZ5dTJrN0VsMEYxS013SDBBM0tVV2h3cmgwSEZOVzI0M2hveW5kV2JiVUZGeHYtemxWQ1k4cTl3X3ZvTFJMemdkV2J1cjU3V2NXV09lSmJYX2tTV1NnZw",
           "published_at": "2026-09-17T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "1f90b5bda6c85d28f7f07489",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth",
+          "snippet": "Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth RiverBender.com",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNQmJUME1VYnV4OXpId3VwOVNiaGRHc1FxVmkybWFLUlFDSmNyUzN0VVNMd3JoZjVobW9KTDFGT1U0MDNzeV94SWpxY2xjREdLZVhrZGd4a2Vwd0ZMdjNmNWQyX0hRRXp0ZXEzQ2tONF9hbjhxQTNJQ1I5dnVaWVhDT3UwNmFEcUNrZy1HN3BJVXM5ZFZXU19kNlZMWWJCRjR5NDBiNG5RaGZJYWFkVmE4amVlNjJsM2tRRjMyZ0xxQUR1TXc3eW5PbGFWR3JEVFdqdlYxRlVBWkZqNENxRWZXZ01ZU2xkQ1p4aHJMRnJGVjBBRlR6NldIQlExWkV0VWcxbVE",
+          "published_at": "2026-09-10T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -835,18 +859,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "75ef6756ffaa5d1c8439ae48",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Sen. Duckworth on ICE's release of soldier's wife, and her concerns about airline staffing",
-          "snippet": "Sen. Duckworth on ICE's release of soldier's wife, and her concerns about airline staffing CBS News",
-          "publisher": "CBS News",
-          "publisher_host": "cbsnews.com",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUGZCM3JYTVNkYU1yckZJUmE0QW9CQjBZYld5M1Z2VlZBS2VSdWZ2Y1N2Uk1sQXJKYkJuY3RPT2U4YWxqb1R6YUs3YVM2eTQ5R2xUQVJ6ZjQ3ZS1UVEFrR20wWVRVTVN3bWJqTS1LZjlhVHN5dURsbmI4bTd5NVZrNUdvYVlhWkxU",
-          "published_at": "2026-05-15T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "b75984f0a19e39bdf33beb0c",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
@@ -861,7 +873,7 @@
       ],
       "query": "\"Tammy Duckworth\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-24T10:51:07.297676+00:00"
+      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
     }
   }
 }

@@ -1,66 +1,66 @@
 {
-  "work_hash": "6c5e61f7778b75dda93b1c6baf0dddf79935b21f6aef548dfa986195e12c960d",
-  "day": "2026-10-24",
-  "created_at": "2026-10-24T10:51:07.297676+00:00",
+  "work_hash": "3905c72920f4af5d2f4bfbcc57818c2a1cdeb14c415a804a8b23423cb97c53e9",
+  "day": "2026-10-25",
+  "created_at": "2026-10-25T11:23:36.218124+00:00",
   "batches": [
     {
-      "batch_hash": "ccf2ae755e4da1bd4fa4ad4bde674ea16beb81b3525d23290efd8b9030f5fa42",
+      "batch_hash": "cea62f1beee30aa9ab41813dbed03be94418c659913ca184a9e771ed7f9c64cd",
       "cases": [
         {
-          "id": "5491fbf1990c3fa2905ae55d",
+          "id": "2f470c018c123d5e8eb948e4",
+          "member_id": "fritts",
+          "member_name": "Bradley Fritts",
+          "title": "Fritts honors local women at 2026 Women to Watch Event",
+          "snippet": "Fritts honors local women at 2026 Women to Watch Event Shaw Local"
+        },
+        {
+          "id": "0c0e45b1520ce7a0836025d6",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Archbishop Fulton Sheen recognized by Congressman Darin LaHood",
-          "snippet": "Archbishop Fulton Sheen recognized by Congressman Darin LaHood WEEK | 25 News Now"
+          "title": "Trump endorses LaHood in 16th Congressional District race",
+          "snippet": "Trump endorses LaHood in 16th Congressional District race MyStateline"
         },
         {
-          "id": "b011e6596a027c95af08ac09",
+          "id": "a33b37d20672af1d9c149cee",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "LaHood recognizes Fulton Sheen on House floor, saying archbishop was ‘one of our own’",
-          "snippet": "LaHood recognizes Fulton Sheen on House floor, saying archbishop was ‘one of our own’ WEEK | 25 News Now"
+          "title": "U.S. Rep. LaHood visits Rochelle, tours Wheatland Tube",
+          "snippet": "U.S. Rep. LaHood visits Rochelle, tours Wheatland Tube Shaw Local"
         },
         {
-          "id": "8e734a0da9e817fb5b5d97e1",
+          "id": "19627fdf0a51c948ae97f488",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability",
-          "snippet": "Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability WCBU Peoria"
+          "title": "LaHood, Sorensen have big cash advantages in re-election bids",
+          "snippet": "LaHood, Sorensen have big cash advantages in re-election bids WGLT"
         },
         {
-          "id": "1856a5b3f7db1c1bfa94c5f5",
+          "id": "1186e20a27d72216a0bbb5a1",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "LaHood, Sorensen debate Trump tax cuts’ impact on working families",
-          "snippet": "LaHood, Sorensen debate Trump tax cuts’ impact on working families WEEK | 25 News Now"
+          "title": "Rep. Darin Lahood tours Illinois Central College's health facilities",
+          "snippet": "Rep. Darin Lahood tours Illinois Central College's health facilities WEEK | 25 News Now"
         },
         {
-          "id": "40d3f54c7bed4b87056fc383",
+          "id": "a3940b101f89f55b88ee2925",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Durbin, Foster decry legal services funding halt for immigrant children",
-          "snippet": "Durbin, Foster decry legal services funding halt for immigrant children Chicago Tribune"
+          "title": "What to know about the U.S. Senate race to replace Sen. Dick Durbin",
+          "snippet": "What to know about the U.S. Senate race to replace Sen. Dick Durbin Chicago Sun-Times"
         },
         {
-          "id": "b3b842f6a9129fcd0dad05a0",
+          "id": "915479414d6d144c62e10438",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service",
-          "snippet": "WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service WEEK | 25 News Now"
+          "title": "Illinois Sen. Dick Durbin fires Sheri Mecklenburg as Senate Judiciary Committee counsel after Broadview Six allegations",
+          "snippet": "Illinois Sen. Dick Durbin fires Sheri Mecklenburg as Senate Judiciary Committee counsel after Broadview Six allegations CBS News"
         },
         {
-          "id": "7a08a2c4647915a16973a59a",
+          "id": "bfbba49505ac6ed3e5229d0b",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Illinois General Assembly honors retiring U.S. Sen. Dick Durbin's career",
-          "snippet": "Illinois General Assembly honors retiring U.S. Sen. Dick Durbin's career CBS News"
-        },
-        {
-          "id": "9c63fe4e19cd84e2b392fba1",
-          "member_id": "durbin",
-          "member_name": "Dick Durbin",
-          "title": "Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal",
-          "snippet": "Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal WGLT"
+          "title": "Sen. Dick Durbin warns DOJ against ‘doling out compensation to rioters’ in new Trump fund",
+          "snippet": "Sen. Dick Durbin warns DOJ against ‘doling out compensation to rioters’ in new Trump fund NBC News"
         }
       ],
       "payload": {
@@ -85,7 +85,7 @@
           },
           {
             "role": "user",
-            "content": "[{\"id\": \"5491fbf1990c3fa2905ae55d\", \"member_name\": \"Darin LaHood\", \"title\": \"Archbishop Fulton Sheen recognized by Congressman Darin LaHood\", \"snippet\": \"Archbishop Fulton Sheen recognized by Congressman Darin LaHood WEEK | 25 News Now\"}, {\"id\": \"b011e6596a027c95af08ac09\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood recognizes Fulton Sheen on House floor, saying archbishop was ‘one of our own’\", \"snippet\": \"LaHood recognizes Fulton Sheen on House floor, saying archbishop was ‘one of our own’ WEEK | 25 News Now\"}, {\"id\": \"8e734a0da9e817fb5b5d97e1\", \"member_name\": \"Darin LaHood\", \"title\": \"Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability\", \"snippet\": \"Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability WCBU Peoria\"}, {\"id\": \"1856a5b3f7db1c1bfa94c5f5\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood, Sorensen debate Trump tax cuts’ impact on working families\", \"snippet\": \"LaHood, Sorensen debate Trump tax cuts’ impact on working families WEEK | 25 News Now\"}, {\"id\": \"40d3f54c7bed4b87056fc383\", \"member_name\": \"Dick Durbin\", \"title\": \"Durbin, Foster decry legal services funding halt for immigrant children\", \"snippet\": \"Durbin, Foster decry legal services funding halt for immigrant children Chicago Tribune\"}, {\"id\": \"b3b842f6a9129fcd0dad05a0\", \"member_name\": \"Dick Durbin\", \"title\": \"WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service\", \"snippet\": \"WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service WEEK | 25 News Now\"}, {\"id\": \"7a08a2c4647915a16973a59a\", \"member_name\": \"Dick Durbin\", \"title\": \"Illinois General Assembly honors retiring U.S. Sen. Dick Durbin's career\", \"snippet\": \"Illinois General Assembly honors retiring U.S. Sen. Dick Durbin's career CBS News\"}, {\"id\": \"9c63fe4e19cd84e2b392fba1\", \"member_name\": \"Dick Durbin\", \"title\": \"Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal\", \"snippet\": \"Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal WGLT\"}]"
+            "content": "[{\"id\": \"2f470c018c123d5e8eb948e4\", \"member_name\": \"Bradley Fritts\", \"title\": \"Fritts honors local women at 2026 Women to Watch Event\", \"snippet\": \"Fritts honors local women at 2026 Women to Watch Event Shaw Local\"}, {\"id\": \"0c0e45b1520ce7a0836025d6\", \"member_name\": \"Darin LaHood\", \"title\": \"Trump endorses LaHood in 16th Congressional District race\", \"snippet\": \"Trump endorses LaHood in 16th Congressional District race MyStateline\"}, {\"id\": \"a33b37d20672af1d9c149cee\", \"member_name\": \"Darin LaHood\", \"title\": \"U.S. Rep. LaHood visits Rochelle, tours Wheatland Tube\", \"snippet\": \"U.S. Rep. LaHood visits Rochelle, tours Wheatland Tube Shaw Local\"}, {\"id\": \"19627fdf0a51c948ae97f488\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood, Sorensen have big cash advantages in re-election bids\", \"snippet\": \"LaHood, Sorensen have big cash advantages in re-election bids WGLT\"}, {\"id\": \"1186e20a27d72216a0bbb5a1\", \"member_name\": \"Darin LaHood\", \"title\": \"Rep. Darin Lahood tours Illinois Central College's health facilities\", \"snippet\": \"Rep. Darin Lahood tours Illinois Central College's health facilities WEEK | 25 News Now\"}, {\"id\": \"a3940b101f89f55b88ee2925\", \"member_name\": \"Dick Durbin\", \"title\": \"What to know about the U.S. Senate race to replace Sen. Dick Durbin\", \"snippet\": \"What to know about the U.S. Senate race to replace Sen. Dick Durbin Chicago Sun-Times\"}, {\"id\": \"915479414d6d144c62e10438\", \"member_name\": \"Dick Durbin\", \"title\": \"Illinois Sen. Dick Durbin fires Sheri Mecklenburg as Senate Judiciary Committee counsel after Broadview Six allegations\", \"snippet\": \"Illinois Sen. Dick Durbin fires Sheri Mecklenburg as Senate Judiciary Committee counsel after Broadview Six allegations CBS News\"}, {\"id\": \"bfbba49505ac6ed3e5229d0b\", \"member_name\": \"Dick Durbin\", \"title\": \"Sen. Dick Durbin warns DOJ against ‘doling out compensation to rioters’ in new Trump fund\", \"snippet\": \"Sen. Dick Durbin warns DOJ against ‘doling out compensation to rioters’ in new Trump fund NBC News\"}]"
           }
         ],
         "response_format": {
@@ -104,14 +104,14 @@
                       "id": {
                         "type": "string",
                         "enum": [
-                          "5491fbf1990c3fa2905ae55d",
-                          "b011e6596a027c95af08ac09",
-                          "8e734a0da9e817fb5b5d97e1",
-                          "1856a5b3f7db1c1bfa94c5f5",
-                          "40d3f54c7bed4b87056fc383",
-                          "b3b842f6a9129fcd0dad05a0",
-                          "7a08a2c4647915a16973a59a",
-                          "9c63fe4e19cd84e2b392fba1"
+                          "2f470c018c123d5e8eb948e4",
+                          "0c0e45b1520ce7a0836025d6",
+                          "a33b37d20672af1d9c149cee",
+                          "19627fdf0a51c948ae97f488",
+                          "1186e20a27d72216a0bbb5a1",
+                          "a3940b101f89f55b88ee2925",
+                          "915479414d6d144c62e10438",
+                          "bfbba49505ac6ed3e5229d0b"
                         ]
                       },
                       "relevant": {
@@ -144,35 +144,35 @@
       }
     },
     {
-      "batch_hash": "4547a7d5d7ab79eccbd01c8ff005110d42bf6efc3905dc23533309f8e818e547",
+      "batch_hash": "7a9402c306797dcf66d83c8a337eb4ed4dbdbfa3de53ed144ca78e04c34fabfb",
       "cases": [
         {
-          "id": "5859c16af07710f190f095cb",
+          "id": "1f90b5bda6c85d28f7f07489",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War",
-          "snippet": "Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War RiverBender.com"
+          "title": "Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth",
+          "snippet": "Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth RiverBender.com"
         },
         {
-          "id": "1306ebb910665f3389d6665d",
+          "id": "190fa4ac9cf24df0593ade15",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare",
-          "snippet": "Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare Chicago Tribune"
+          "title": "Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing",
+          "snippet": "Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing Chicago Sun-Times"
         },
         {
-          "id": "d4864b516f0f8ba897619cea",
+          "id": "d3b338ed7a7f677d6e4b70c7",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat",
-          "snippet": "Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat RiverBender.com"
+          "title": "Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \"Broadview Six\" misconduct accusations",
+          "snippet": "Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \"Broadview Six\" misconduct accusations CBS News"
         },
         {
-          "id": "11c4b9660709bed0660db46c",
+          "id": "2a90cd16cf6aa7523febcf5d",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities",
-          "snippet": "US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities Chicago Tribune"
+          "title": "Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’",
+          "snippet": "Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’ WTTW News"
         }
       ],
       "payload": {
@@ -197,7 +197,7 @@
           },
           {
             "role": "user",
-            "content": "[{\"id\": \"5859c16af07710f190f095cb\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War\", \"snippet\": \"Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War RiverBender.com\"}, {\"id\": \"1306ebb910665f3389d6665d\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare\", \"snippet\": \"Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare Chicago Tribune\"}, {\"id\": \"d4864b516f0f8ba897619cea\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat\", \"snippet\": \"Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat RiverBender.com\"}, {\"id\": \"11c4b9660709bed0660db46c\", \"member_name\": \"Tammy Duckworth\", \"title\": \"US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities\", \"snippet\": \"US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities Chicago Tribune\"}]"
+            "content": "[{\"id\": \"1f90b5bda6c85d28f7f07489\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth\", \"snippet\": \"Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth RiverBender.com\"}, {\"id\": \"190fa4ac9cf24df0593ade15\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing\", \"snippet\": \"Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing Chicago Sun-Times\"}, {\"id\": \"d3b338ed7a7f677d6e4b70c7\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \\\"Broadview Six\\\" misconduct accusations\", \"snippet\": \"Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \\\"Broadview Six\\\" misconduct accusations CBS News\"}, {\"id\": \"2a90cd16cf6aa7523febcf5d\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’\", \"snippet\": \"Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’ WTTW News\"}]"
           }
         ],
         "response_format": {
@@ -216,10 +216,10 @@
                       "id": {
                         "type": "string",
                         "enum": [
-                          "5859c16af07710f190f095cb",
-                          "1306ebb910665f3389d6665d",
-                          "d4864b516f0f8ba897619cea",
-                          "11c4b9660709bed0660db46c"
+                          "1f90b5bda6c85d28f7f07489",
+                          "190fa4ac9cf24df0593ade15",
+                          "d3b338ed7a7f677d6e4b70c7",
+                          "2a90cd16cf6aa7523febcf5d"
                         ]
                       },
                       "relevant": {
@@ -254,18 +254,18 @@
   ],
   "decisions": {},
   "case_hashes": {
-    "5491fbf1990c3fa2905ae55d": "1d43c495397bd7a133ef7fac50a910361149eec13a6dbfd697c266c20adc6162",
-    "b011e6596a027c95af08ac09": "b8d53317925dc24ca91d942c9265e63f57dce4ae70628e4e1538cd5d355d6d92",
-    "8e734a0da9e817fb5b5d97e1": "e7ec4812f921b4a4f4ff3db8929f37527c8b55ac291091fea75759fc574190f0",
-    "1856a5b3f7db1c1bfa94c5f5": "9568335f480dc28ee1c466ed32e93d21aa2ceb41c39d4e86800c6dccad449908",
-    "40d3f54c7bed4b87056fc383": "8c77ee08163066381167bed8aded36c2dcfe92f8c7367e1d8807eec7ee991837",
-    "b3b842f6a9129fcd0dad05a0": "60d647ab2acad0b88684602d3186a0e9db109fd3f2933cab884a4b5a50c23bdc",
-    "7a08a2c4647915a16973a59a": "3714fc3ab3b140aad273f48c10947b66d9d63c220834ecd8540883c322d9099e",
-    "9c63fe4e19cd84e2b392fba1": "7e328d753ae30cc9953a74ab2d97d94862452c2b11ab970d8758803b07e50511",
-    "5859c16af07710f190f095cb": "141ce500ad79c7718c3c672e7bdbfe411c81023a3c7b8622cba6d00a08afa7af",
-    "1306ebb910665f3389d6665d": "448961447a314f7c5cfe61fc89792799e3c4f729be931eae47151a8aa0f5079c",
-    "d4864b516f0f8ba897619cea": "d9f83058b13c6ee19d9a709f36fd85c2518065c2ed600f5c3e5c6de66aa58cfa",
-    "11c4b9660709bed0660db46c": "059623575f87f85d014e4a40b15d62ea2ed559365413189cd539fa72e6d4e47c"
+    "2f470c018c123d5e8eb948e4": "5cadde1190b9b32199b3ad8a2a94d52ce7f07f87e7e197151619da73e499204f",
+    "0c0e45b1520ce7a0836025d6": "a83af3ac338cf4e4e469f5e60c2784ba9b7996cc3c488c7944347d01e7102aca",
+    "a33b37d20672af1d9c149cee": "3115bb13298a77e071e6d561520ca212799b10225dd6289d48b3265710257c61",
+    "19627fdf0a51c948ae97f488": "d41f25bf3d8abba043f799d1269230cfb125e3c1e6bbc0ea8adc070bcb9f5892",
+    "1186e20a27d72216a0bbb5a1": "399cf57f30695072da61b41fe5e95a1ff25d89fa66b88f66db48080bc65e4041",
+    "a3940b101f89f55b88ee2925": "c62172d0e1b34a19c135da4c31ca6f160a5f95c66d33d562da841d6607007706",
+    "915479414d6d144c62e10438": "6260290a401b1497fec6f8991d6b5d508688021f2353f196c733a8dd07d51b1c",
+    "bfbba49505ac6ed3e5229d0b": "6d056d09b4cb5358601da072c7dcb831084ee0ceee36644f51941fe9177d5521",
+    "1f90b5bda6c85d28f7f07489": "39711ab14f3a924c24c58e5696b77f6294713466a7c1ba6f51b86aa0a5e8662a",
+    "190fa4ac9cf24df0593ade15": "cee5fcd3adb84c971e154afe9aed7402e7bac3945ff3b07994ba04658b969bd3",
+    "d3b338ed7a7f677d6e4b70c7": "a22402781801f4f8e5a3fc1ce564f601eff5e512bd26c7740b5624ac0d651dea",
+    "2a90cd16cf6aa7523febcf5d": "b393fc29723dde362899779f2382ec43d680542d6976efc67dcca8e629d50bde"
   },
   "deferred_ids": [],
   "errors": []

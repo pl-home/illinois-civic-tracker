@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-24T10:51:07.297676+00:00",
+  "checked_at": "2026-10-25T11:23:36.218124+00:00",
   "sources": {
     "fritts-office": {
       "items": [
@@ -139,7 +139,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-22",
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Representative Bradley Fritts office",
       "kind": "office",
       "members": [
@@ -285,7 +285,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-21",
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Senator Li Arellano office",
       "kind": "office",
       "members": [
@@ -353,7 +353,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-07",
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Representative Darin LaHood office",
       "kind": "office",
       "members": [
@@ -650,7 +650,7 @@
       "error_category": "http",
       "error_code": "HTTP_403",
       "latest_source_date": "2026-10-22",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Senator Dick Durbin office",
       "kind": "office",
       "members": [
@@ -947,7 +947,7 @@
       "error_category": "http",
       "error_code": "HTTP_403",
       "latest_source_date": "2026-10-20",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Senator Tammy Duckworth office",
       "kind": "office",
       "members": [
@@ -962,7 +962,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2025-07-15",
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Fritts campaign",
       "kind": "campaign",
       "members": [
@@ -972,13 +972,12 @@
       "note": ""
     },
     "lahood-campaign": {
-      "status": "failed",
       "items": [],
-      "error": "source-unavailable-or-listing-changed",
-      "error_category": "collection",
-      "error_code": "COLLECTION_ERROR",
+      "entries_checked": 8,
+      "rejected_entries": 0,
       "latest_source_date": "2024-11-05",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "status": "ok",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "LaHood campaign",
       "kind": "campaign",
       "members": [
@@ -991,7 +990,7 @@
       "status": "link-only",
       "items": [],
       "note": "Older campaign site describes his previous House race; current dated release feed not verified.",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Arellano campaign (older site)",
       "kind": "campaign",
       "members": [
@@ -1003,7 +1002,7 @@
       "status": "link-only",
       "items": [],
       "note": "Campaign link verified previously; no dated public release feed verified for this collector.",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Durbin campaign",
       "kind": "campaign",
       "members": [
@@ -1015,7 +1014,7 @@
       "status": "link-only",
       "items": [],
       "note": "No dated public release archive verified; campaign site link only.",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Duckworth campaign",
       "kind": "campaign",
       "members": [
@@ -1029,7 +1028,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-20",
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Illinois Senate Republican Caucus",
       "kind": "party",
       "members": [
@@ -1177,7 +1176,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-15",
       "status": "ok",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "The Caucus Blog · Illinois House Republican Caucus",
       "kind": "party",
       "members": [
@@ -1193,7 +1192,7 @@
       "error_category": "http",
       "error_code": "HTTP_403",
       "latest_source_date": "2026-10-17",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Senate Democratic Caucus",
       "kind": "party",
       "members": [
@@ -1204,13 +1203,12 @@
       "note": ""
     },
     "lee-democrats": {
-      "status": "failed",
       "items": [],
-      "error": "source-unavailable-or-listing-changed",
-      "error_category": "collection",
-      "error_code": "COLLECTION_ERROR",
+      "entries_checked": 10,
+      "rejected_entries": 0,
       "latest_source_date": "2026-08-18",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "status": "ok",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Lee County Democrats",
       "kind": "party",
       "members": [
@@ -1224,10 +1222,10 @@
       "status": "failed",
       "items": [],
       "error": "source-unavailable-or-listing-changed",
-      "error_category": "collection",
-      "error_code": "COLLECTION_ERROR",
+      "error_category": "parse",
+      "error_code": "PARSE_ERROR",
       "latest_source_date": "2026-10-01",
-      "checked_at": "2026-10-24T10:51:07.297676+00:00",
+      "checked_at": "2026-10-25T11:23:36.218124+00:00",
       "label": "Lee County Republican Central Committee",
       "kind": "party",
       "members": [

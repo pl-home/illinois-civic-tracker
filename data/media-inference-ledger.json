@@ -468,6 +468,54 @@
         "prompt_tokens": 531,
         "completion_tokens": 161
       }
+    },
+    {
+      "batch_hash": "cea62f1beee30aa9ab41813dbed03be94418c659913ca184a9e771ed7f9c64cd",
+      "day": "2026-10-25",
+      "case_hashes": [
+        "5cadde1190b9b32199b3ad8a2a94d52ce7f07f87e7e197151619da73e499204f",
+        "a83af3ac338cf4e4e469f5e60c2784ba9b7996cc3c488c7944347d01e7102aca",
+        "3115bb13298a77e071e6d561520ca212799b10225dd6289d48b3265710257c61",
+        "d41f25bf3d8abba043f799d1269230cfb125e3c1e6bbc0ea8adc070bcb9f5892",
+        "399cf57f30695072da61b41fe5e95a1ff25d89fa66b88f66db48080bc65e4041",
+        "c62172d0e1b34a19c135da4c31ca6f160a5f95c66d33d562da841d6607007706",
+        "6260290a401b1497fec6f8991d6b5d508688021f2353f196c733a8dd07d51b1c",
+        "6d056d09b4cb5358601da072c7dcb831084ee0ceee36644f51941fe9177d5521"
+      ],
+      "ids": [
+        "2f470c018c123d5e8eb948e4",
+        "0c0e45b1520ce7a0836025d6",
+        "a33b37d20672af1d9c149cee",
+        "19627fdf0a51c948ae97f488",
+        "1186e20a27d72216a0bbb5a1",
+        "a3940b101f89f55b88ee2925",
+        "915479414d6d144c62e10438",
+        "bfbba49505ac6ed3e5229d0b"
+      ],
+      "reserved_usd": "0.002",
+      "charged_usd": null,
+      "status": "reserved",
+      "prepared_at": "2026-10-25T11:23:36.218124+00:00"
+    },
+    {
+      "batch_hash": "7a9402c306797dcf66d83c8a337eb4ed4dbdbfa3de53ed144ca78e04c34fabfb",
+      "day": "2026-10-25",
+      "case_hashes": [
+        "39711ab14f3a924c24c58e5696b77f6294713466a7c1ba6f51b86aa0a5e8662a",
+        "cee5fcd3adb84c971e154afe9aed7402e7bac3945ff3b07994ba04658b969bd3",
+        "a22402781801f4f8e5a3fc1ce564f601eff5e512bd26c7740b5624ac0d651dea",
+        "b393fc29723dde362899779f2382ec43d680542d6976efc67dcca8e629d50bde"
+      ],
+      "ids": [
+        "1f90b5bda6c85d28f7f07489",
+        "190fa4ac9cf24df0593ade15",
+        "d3b338ed7a7f677d6e4b70c7",
+        "2a90cd16cf6aa7523febcf5d"
+      ],
+      "reserved_usd": "0.002",
+      "charged_usd": null,
+      "status": "reserved",
+      "prepared_at": "2026-10-25T11:23:36.218124+00:00"
     }
   ]
 }
