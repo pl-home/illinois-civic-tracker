@@ -480,10 +480,10 @@
       "media_health": {
         "source_status": "ok",
         "checked_at": "2026-10-25T11:23:36.218124+00:00",
-        "inference_status": "partial",
+        "inference_status": "complete",
         "pending_candidates": 0,
-        "withheld_candidates": 1,
-        "screened_history_count": 4,
+        "withheld_candidates": 0,
+        "screened_history_count": 5,
         "lookback_days": 200
       },
       "media_search": {
@@ -1495,6 +1495,15 @@
       "calendar_health": "published_weeks_checked",
       "media_reports": [
         {
+          "id": "0c0e45b1520ce7a0836025d6",
+          "title": "Trump endorses LaHood in 16th Congressional District race",
+          "publisher": "MyStateline",
+          "publisher_host": "mystateline.com",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOanVDMEtMTkR5N0FIYVl5MUZCdjlnUExpckJJcHIxRXgzUHRMbHhLZ252Q3htQlYtUWRCRVp2R0NKeDNqc0lMajMwajBBNktQSHg5c3p3LVZsYmNOUW1fWHRfUk55VHRKUXRtQnJ6ZWlORkJEV0JXcndkS0JTYXVmZmV4MUFpckl3eXfSAY8BQVVfeXFMT3MwWHRjdjhGZlNTdUtmNVVORGFnTExqZjY5ZDhXS3o3bkpLNFhETWJZQXBGTkRGMEdIQmdhbk50b3RkRlRmTk91VDQ3Z1ZGQU9hTUpBYkNheWJwYlhLYjNqbWtRSks0dUNqYy14NHJ3NTN1UGFkaHc3YVN0NlZOZE40dE1MQmplT05ORVBMMlU",
+          "published_at": "2026-10-24T18:27:25+00:00",
+          "link_route": "Google News"
+        },
+        {
           "id": "31c5a234e8645c86ee6deeb9",
           "title": "LaHood, Nolley offer competing plans to address rising costs in 16th District race",
           "publisher": "The Pantagraph",
@@ -1511,15 +1520,6 @@
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcW9sS2hjVXVwNWxiMTlGYi04T01DYkdNczhyTXhsZ2VXX19GcF9VeGtzN1VseFFBenRQeHNQcXM0SFBoMTZKWFI3aEU3bXVhX1ZSVTVzZElVQVBqVXR6RkozMTZWSWZwbDJMQmk0R1pwQzJKR09CS2ttMmtVVFZjT0ZzcDRJaVE4dnV5cG4tMWxqZEtLS2tPd3U5VXpFcGphYmZPRGQweUhfRnNMcEc1R1JCUnVqN1U",
           "published_at": "2026-10-12T07:00:00+00:00",
           "link_route": "Google News"
-        },
-        {
-          "id": "6bba157e1055e5cf8e4ee820",
-          "title": "LaHood and Nolley duke out for Central and Northern Illinois votes",
-          "publisher": "MyStateline",
-          "publisher_host": "mystateline.com",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPc1B1V19QRU10dUxuMUVkSXNwZHJUYjRBa1BuQ0ktYWRUU0gtTWhaZkR3UC1fdU0tOWtGZXVYRGdGTVQ3SDNnekp4SkNzbENJMENkdFBhaWlvWExTVXNtYXpjMjYwUnVsbmFzeUtITGtLaHBHZ0xITWNkcnFXbjIwS0h6X3FtTG9aWUxlZlJ4VU1JeEhtUGhoSXc1ZFZHMm94Qi0tTHFyZm9lWFhkc2N2TDFpS0ZjbFZ1XzlGajR6aEzSAcYBQVVfeXFMUGJYbFlMbHZIeFhoSXZkRWlNeXVHRkJUaG5pYV9aVzZUT1pJQnZkc3U1SkFzSWh1SDRvc2lQTG9aWk9kaGxzbDBVM1VWQWF5RXVMTlpOTnV2amlpS1Fmc2YxTGNQbkVDMjd4MlhNN213YU1BZVBvZWdybXQzOVV6NmQxQlV0eDBGaW4wdlVVYVRtbWhKTkttYl9PZ0tPU3RTOWpSSWRYWVF3c0VxY2pYQW1BVFU2MmVTNGdIcHhqeDFaSlJTSTl3",
-          "published_at": "2026-10-09T20:01:52+00:00",
-          "link_route": "Google News"
         }
       ],
       "media_health": {
@@ -1527,8 +1527,8 @@
         "checked_at": "2026-10-25T11:23:36.218124+00:00",
         "inference_status": "partial",
         "pending_candidates": 6,
-        "withheld_candidates": 4,
-        "screened_history_count": 17,
+        "withheld_candidates": 0,
+        "screened_history_count": 21,
         "lookback_days": 200
       },
       "media_search": {
@@ -2093,10 +2093,10 @@
       "media_health": {
         "source_status": "ok",
         "checked_at": "2026-10-25T11:23:36.218124+00:00",
-        "inference_status": "partial",
+        "inference_status": "complete",
         "pending_candidates": 0,
-        "withheld_candidates": 3,
-        "screened_history_count": 17,
+        "withheld_candidates": 0,
+        "screened_history_count": 20,
         "lookback_days": 200
       },
       "media_search": {
@@ -2673,8 +2673,8 @@
         "checked_at": "2026-10-25T11:23:36.218124+00:00",
         "inference_status": "partial",
         "pending_candidates": 6,
-        "withheld_candidates": 4,
-        "screened_history_count": 15,
+        "withheld_candidates": 0,
+        "screened_history_count": 19,
         "lookback_days": 200
       },
       "media_search": {
@@ -3320,42 +3320,42 @@
   },
   "inference_usage": {
     "day": {
-      "charged_usd": "0",
-      "reserved_usd": "0.004",
-      "liability_usd": "0.004",
-      "unsettled_requests": 2,
+      "charged_usd": "0.00023812",
+      "reserved_usd": "0",
+      "liability_usd": "0.00023812",
+      "unsettled_requests": 0,
       "media_reservations": 2,
       "undated_entries": 0,
       "limit_usd": "0.02",
-      "remaining_usd": "0.016",
-      "used_percent": "20.0"
+      "remaining_usd": "0.01976188",
+      "used_percent": "1.190600"
     },
     "week": {
-      "charged_usd": "0.00211928",
-      "reserved_usd": "0.009",
-      "liability_usd": "0.01111928",
-      "unsettled_requests": 3,
+      "charged_usd": "0.00235740",
+      "reserved_usd": "0.005",
+      "liability_usd": "0.00735740",
+      "unsettled_requests": 1,
       "media_reservations": 9,
       "undated_entries": 0,
       "limit_usd": "0.20",
-      "remaining_usd": "0.18888072",
-      "used_percent": "5.559640"
+      "remaining_usd": "0.19264260",
+      "used_percent": "3.678700"
     },
     "lifetime": {
-      "charged_usd": "0.00432784",
-      "reserved_usd": "0.009",
-      "liability_usd": "0.01332784",
-      "unsettled_requests": 3,
+      "charged_usd": "0.00456596",
+      "reserved_usd": "0.005",
+      "liability_usd": "0.00956596",
+      "unsettled_requests": 1,
       "media_reservations": 13,
       "undated_entries": 0,
       "limit_usd": "20",
-      "remaining_usd": "19.98667216",
-      "used_percent": "0.06663920"
+      "remaining_usd": "19.99043404",
+      "used_percent": "0.04782980"
     },
     "week_start": "2026-10-19",
     "week_end": "2026-10-25",
     "schema_version": 1,
-    "as_of": "2026-10-25T11:23:36.218124+00:00",
+    "as_of": "2026-10-25T11:23:54.373549+00:00",
     "local_date": "2026-10-25",
     "timezone": "America/Chicago",
     "week_definition": "Monday through Sunday",

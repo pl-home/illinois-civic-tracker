@@ -622,5 +622,101 @@
       "prompt_version": "media-relevance-v3",
       "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
     }
+  },
+  "5cadde1190b9b32199b3ad8a2a94d52ce7f07f87e7e197151619da73e499204f": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "a83af3ac338cf4e4e469f5e60c2784ba9b7996cc3c488c7944347d01e7102aca": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "3115bb13298a77e071e6d561520ca212799b10225dd6289d48b3265710257c61": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "d41f25bf3d8abba043f799d1269230cfb125e3c1e6bbc0ea8adc070bcb9f5892": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "399cf57f30695072da61b41fe5e95a1ff25d89fa66b88f66db48080bc65e4041": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "c62172d0e1b34a19c135da4c31ca6f160a5f95c66d33d562da841d6607007706": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "6260290a401b1497fec6f8991d6b5d508688021f2353f196c733a8dd07d51b1c": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "6d056d09b4cb5358601da072c7dcb831084ee0ceee36644f51941fe9177d5521": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "39711ab14f3a924c24c58e5696b77f6294713466a7c1ba6f51b86aa0a5e8662a": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "cee5fcd3adb84c971e154afe9aed7402e7bac3945ff3b07994ba04658b969bd3": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "a22402781801f4f8e5a3fc1ce564f601eff5e512bd26c7740b5624ac0d651dea": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
+  },
+  "b393fc29723dde362899779f2382ec43d680542d6976efc67dcca8e629d50bde": {
+    "status": "valid",
+    "relevant": true,
+    "provenance": {
+      "prompt_version": "media-relevance-v3",
+      "prompt_sha256": "b9d294aeb52e8063a465f7be22dd5770ffd013416c4c1b926fa52ed2c548a315"
+    }
   }
 }
