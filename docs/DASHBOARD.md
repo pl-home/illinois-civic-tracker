@@ -8,7 +8,7 @@ communications. Member activity/news pagination is described in
 [MEMBER_HISTORY.md](MEMBER_HISTORY.md) and [NEWS_PAGINATION.md](NEWS_PAGINATION.md).
 Four digest preview files join the original eight plus change JSON/Atom: fourteen
 base files capped at 650,000 bytes, plus member/news HTML capped at 3,000,000
-separately. Combined ceiling: 3,650,000. Digest delivery remains disabled.
+separately. Combined ceiling: 3,650,000. Owner-only digest delivery is kept in a separate durable workflow and does not change the public dashboard artifact.
 
 ## Historical October 17 deployment evidence
 

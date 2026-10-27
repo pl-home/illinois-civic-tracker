@@ -216,7 +216,11 @@ class DigestTests(unittest.TestCase):
         scoped.update(checked_at=CHECKED,facts=[p]);self.add([])
         data=d.preview(self.root);self.assertEqual(len(data['sections']['parties']),1)
         self.assertEqual(data['sections']['members'],[]);self.assertIsNone(data['sections']['parties'][0]['source_date'])
+        self.assertEqual(data['sections']['parties'][0]['before_excerpt'],'Synthetic previous meeting notice')
+        self.assertEqual(data['sections']['parties'][0]['after_excerpt'],'Synthetic changed meeting notice')
         self.assertIn('claims attributed',d.render_text(data));self.assertIn('collection gap',data['sections']['parties'][0]['reason'])
+        self.assertIn('Before: Synthetic previous meeting notice',d.render_text(data))
+        self.assertIn('What changed on the party page',d.render_html(data))
         p['categories']=['image-review'];p['reasons']=['image change; human visual review required']
         p['observed_at']='2026-10-20T16:00:00+00:00';p['evidence']['retrieved_at']=p['observed_at']
         scoped['checked_at']=p['observed_at'];self.add([],p['observed_at'])

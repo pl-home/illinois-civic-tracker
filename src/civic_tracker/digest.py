@@ -79,7 +79,12 @@ def event_row(event, titles, withheld, relevance_config):
         'reason': event['inclusion_reason'], 'topics': relevance['topics'], 'stance': 'not inferred',
         'latest_scope_withheld': event['scope'] in withheld, 'publisher': f.get('publisher'),
         'choice': f.get('choice'), 'raw_choice': f.get('raw_choice'), 'vote_scope': f.get('vote_scope'),
-        'totals': f.get('totals'), 'hearing_status': f.get('status') if f['kind']=='hearing' else None}
+        'totals': f.get('totals'), 'hearing_status': f.get('status') if f['kind']=='hearing' else None,
+        # Party collectors retain bounded, readable excerpts around the changed
+        # span. Keep them in the digest row so a reader can understand the edit
+        # without opening the full shared ledger or storing a page archive.
+        'before_excerpt': f.get('before_excerpt') if f['kind'] == 'party-change' else None,
+        'after_excerpt': f.get('after_excerpt') if f['kind'] == 'party-change' else None}
 
 
 def opportunities(ledger, snapshot, withheld, as_of, config):
@@ -260,6 +265,9 @@ def render_text(data):
                 'Source: ' + row['source_url'], 'Source date: ' + (row['source_date'] or 'unknown') + ' (' + row['date_precision'] + ')',
                 'First observed: ' + row['first_observed_at'] + ' · revision observed: ' + row['observed_at'],
                 'Why included: ' + row['reason'], 'Revision: ' + row['revision_id']]
+            if row['before_excerpt'] or row['after_excerpt']:
+                lines += ['Before: ' + (row['before_excerpt'] or '[unavailable]'),
+                          'After: ' + (row['after_excerpt'] or '[unavailable]')]
             if row['publisher']: lines += ['Published by ' + row['publisher'] + '; claims attributed, not independently verified.']
             if row['choice']: lines += ['Recorded ' + str(row['vote_scope']) + ' choice: ' + row['choice'] + ' · raw: ' + str(row['raw_choice']) + ' · tally: ' + packed(row['totals'])]
             if row['latest_scope_withheld']: lines += ['Latest scope check incomplete; last accepted evidence retained.']
@@ -292,7 +300,10 @@ def render_html(data):
             attribution = f'<p>Published by {e(row["publisher"])}; claims attributed, not independently verified.</p>' if row['publisher'] else ''
             warning = '<p>Latest scope check incomplete; last accepted evidence retained.</p>' if row['latest_scope_withheld'] else ''
             topics = '; '.join(t['topic'] + ': ' + ', '.join(t['reasons']) for t in row['topics'])
-            pieces += [f'<li><p class="minor">{e(", ".join(row["subjects"]))} · {e(row["kind"])} · Change: {e(row["change"])}</p><strong><a href="{e(row["title_url"])}">{e(row["title"])}</a></strong><p>{e(row["detail"])}</p>{choice}{attribution}{warning}<p>Why included: {e(row["reason"])}</p><p class="minor">Source date: {e(row["source_date"] or "unknown")} ({e(row["date_precision"])}). First observed {e(row["first_observed_at"])}; revision observed {e(row["observed_at"])}.<br>{e(topics)} Stance is not inferred.<br>Revision {e(row["revision_id"])} · <a href="{e(row["source_url"])}">Source evidence</a></p></li>']
+            diff = ''
+            if row['before_excerpt'] or row['after_excerpt']:
+                diff = f'<details><summary>What changed on the party page</summary><p><strong>Before:</strong> {e(row["before_excerpt"] or "[unavailable]")}<br><strong>After:</strong> {e(row["after_excerpt"] or "[unavailable]")}</p><p class="minor">These are bounded excerpts around the changed span; the tracker does not retain a full page archive.</p></details>'
+            pieces += [f'<li><p class="minor">{e(", ".join(row["subjects"]))} · {e(row["kind"])} · Change: {e(row["change"])}</p><strong><a href="{e(row["title_url"])}">{e(row["title"])}</a></strong><p>{e(row["detail"])}</p>{diff}{choice}{attribution}{warning}<p>Why included: {e(row["reason"])}</p><p class="minor">Source date: {e(row["source_date"] or "unknown")} ({e(row["date_precision"])}). First observed {e(row["first_observed_at"])}; revision observed {e(row["observed_at"])}.<br>{e(topics)} Stance is not inferred.<br>Revision {e(row["revision_id"])} · <a href="{e(row["source_url"])}">Source evidence</a></p></li>']
         if not data['sections'][key]: pieces += ['<li>No accepted new items selected for this period. This does not establish inactivity.</li>']
         pieces += ['</ul>']
     pieces += [f'<h2>Source health &amp; limits</h2><p>{len(data["health"]["withheld_scopes"])} withheld source scopes. This is a preview of accepted records, not complete activity coverage.</p><details><summary>Source check dates and coverage</summary><ul class="health">']

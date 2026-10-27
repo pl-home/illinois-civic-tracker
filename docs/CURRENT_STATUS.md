@@ -1,6 +1,6 @@
 # Current status and decision record
 
-Revision 15 — October 23, 2026, America/Chicago. This is the current status entry
+Revision 16 — October 27, 2026, America/Chicago. This is the current status entry
 point, not a claim that every live source was checked today. Read it before dated
 findings, checkpoints or trial instructions. [Documentation index](DOCUMENTATION_INDEX.md).
 
@@ -11,16 +11,18 @@ findings, checkpoints or trial instructions. [Documentation index](DOCUMENTATION
 | Stage A | Source-scoped accepted facts/revisions, QA, quiet baseline, JSON/Atom/homepage feed | Retained conflicts and withheld scopes are not repaired facts |
 | Stage B | Hearing navigation, agenda/amendment revisions, explicit postponements/cancellations, expiring witness proof | Genuine live upcoming/open-form acceptance remains source-dependent; missing notices do not imply cancellation or attendance |
 | Stage C | Eleven reviewed county-party HTML pages, one poster, six bounded Capitol Fax headline feeds, deterministic relevance | Images/ambiguous edits remain held; a real subsequent source edit is distinct from a baseline or synthetic test |
-| Stage D preview | HTML, text, selection JSON and CSS from accepted data; ten-day opportunities; quiet/partial health | Owner has not approved delivery. No sender, reservation ledger or weekly job is implemented |
+| Stage D / digest delivery | HTML/text preview, bounded party before/after excerpts, durable owner-only reservation and three-day delivery workflow | First hosted three-day run must establish a confirmed receipt; uncertain attempts remain held and require review |
 | Member browsing | 25 activity entries per page; separate undated relationships; member news five per page within 200 days | Homepage news remains three within 90 days; up to 100 screened records/member; not complete tenure or article coverage |
 | Communications | Separate office/campaign/party metadata; fifteen sources, twelve automated and three link-only | The Caucus Blog is explicit caucus-wide context for Fritts; his office latest-news page is separate. Publisher text is attributed, not independently verified |
 | Inference | Only bounded public media-headline relevance: Qwen3 32B via DeepInfra; hosted daily calls are now proven | USD 0.02/day, 0.20/Chicago Monday–Sunday week, 20 lifetime; unsettled amounts stay held |
 | PDF / committee roll calls | Qualified historical records and preserved failed trials | Daily new PDF collection, new trials/OCR and legislative/party inference remain deferred |
 | Stage E / M2–M6 | P05 storage simulation, P06 rollover review and P07 veto-session coverage | Successor identity migration, correction coverage, semantic rewrites, deeper federal history and private contact packets remain incomplete |
 
-M1 and full Stage D are **not complete**. A transport self-test is not a weekly
-delivery system. Updating documentation is not preview approval or permission
-to send mail, invoke a model, retry an uncertain charge or change a schedule.
+M1 remains incomplete. The owner has approved the digest preview and requested
+an owner-only update every three days. Delivery is limited to the configured
+Gmail plus-address, never legislators, parties or campaigns. A transport or
+inbox failure remains an address-free retained attempt and is not retried
+automatically.
 
 P06 records the service/session rollover matrix in
 [SESSION_ROLLOVER_REVIEW.md](SESSION_ROLLOVER_REVIEW.md) and its evidence JSON.

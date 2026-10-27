@@ -5,7 +5,7 @@ LaHood, Dick Durbin and Tammy Duckworth (Congress119), plus the two Lee County
 party organizations. Public browsing is on [the website](https://pl-home.github.io/illinois-civic-tracker/);
 private positions, notes and correspondence stay in Obsidian. No automatic outreach.
 
-## Start here — October 23, 2026
+## Start here — October 27, 2026
 
 1. [Current status and decisions](docs/CURRENT_STATUS.md): implemented boundaries, actual receipt dates and known failures.
 2. [Execution guide](docs/EXECUTION_GUIDE.md): safe commands, ownership, side effects and stop rules.
@@ -13,10 +13,11 @@ private positions, notes and correspondence stay in Obsidian. No automatic outre
 4. [Product vision](docs/PRODUCT_VISION.md) and [implementation plan](docs/IMPLEMENTATION_PLAN.md), revision 12.
 5. [Documentation index](docs/DOCUMENTATION_INDEX.md): every public guide classified as current, reference, historical or deferred.
 
-Stages A–C and Stage D **previews** are implemented within their documented
-coverage limits. [HTML/text previews](docs/DIGEST_PREVIEWS.md) are available;
-**email delivery is disabled pending owner review**. Full Stage D and M1 remain
-incomplete. PDF work and daily new committee-roll-call extraction stay deferred.
+Stages A–C and the Stage D preview are implemented within their documented
+coverage limits. Party-page digests now include bounded before/after excerpts.
+Owner-only digest delivery is configured on a three-day cadence; the first
+hosted run must still establish its address-free reservation and delivery
+receipt. PDF work and daily new committee-roll-call extraction stay deferred.
 
 ## What runs, and what does not
 
