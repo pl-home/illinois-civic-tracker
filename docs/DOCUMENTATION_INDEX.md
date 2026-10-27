@@ -1,6 +1,6 @@
 # Documentation index
 
-Revision 15 — October 23, 2026. Every public Markdown guide is classified below.
+Revision 16 — October 27, 2026. Every public Markdown guide is classified below.
 Current status is authoritative for operating state; dated receipts retain their
 original outcomes. Do not read a historical command as execution authorization.
 

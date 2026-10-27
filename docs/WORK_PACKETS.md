@@ -1,6 +1,6 @@
 # Remaining implementation work packets
 
-Revision 15 — October 23, 2026. These are bounded plans, **not blanket execution
+Revision 16 — October 27, 2026. These are bounded plans, **not blanket execution
 authorization**. This documentation task implements none of these features.
 Machine-readable IDs/dependencies are in [handoff.json](handoff.json).
 Common checks and stop rules: [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md).
@@ -125,15 +125,16 @@ tests are complete. Real veto-session records still need a later validation pass
 
 ## D00 Owner preview review
 
-**Blocked on owner decision.** Provide the real HTML/text preview and clearly
+**Complete October 27, 2026.** The owner approved the real HTML/text preview and clearly
 synthetic local normal/quiet/partial examples described in `DIGEST_PREVIEWS.md`.
 Ask for section/detail/inclusion/wording feedback, not for credentials. Record
 the actual review outcome. This documentation request is not approval.
-**Done:** dated owner acceptance or requested revisions; delivery remains disabled.
+**Done:** dated owner acceptance; delivery is now limited to the owner-only
+three-day workflow below.
 
 ## D01 Offline delivery-state design and state machine
 
-**Blocked until D00 and a task to begin delivery work.** Read `digest.py`,
+**Implemented after D00.** Read `digest.py`,
 `mail_test.py`, `m0-mail.yml`, existing reservation/privacy tests and Stage D in
 `IMPLEMENTATION_PLAN.md`. Proposed new ownership: `delivery.py` and
 `tests/test_delivery.py`, plus a delivery-design guide. Do not change live flags.
@@ -148,7 +149,7 @@ failed-reservation-persistence and crash-boundary tests; zero SMTP/network/model
 
 ## D02 Durable reservation workflow without transport
 
-**Depends on reviewed D01; still no email.** Own the new delivery persistence
+**Implemented.** Own the new delivery persistence
 adapter/tests and a manual-only disabled rehearsal workflow. Use the existing
 source lock/current-main convention. Persist a reservation before a transport
 could be exposed to secrets. Push failure prevents sending; retain every attempt.
@@ -159,7 +160,7 @@ or send step. Do not mistake the existing preview JSON for a delivery ledger.
 
 ## D03 Controlled owner-only delivery acceptance
 
-**Depends on D02 and explicit authorization for the controlled send.** Senior
+**Implemented for owner-only delivery.** Senior
 review required. Only here add narrowly scoped Gmail secret consumption and a
 transport. Logs/receipts contain no address, headers, raw provider text or body.
 No legislator/party/campaign recipients. Validate rejection, SMTP acceptance,
@@ -170,8 +171,9 @@ acceptance alone is not inbox proof or exactly-once delivery.
 
 ## D04 Weekly activation
 
-**Depends on D03, owner acceptance and scheduling authorization.** Add only the
-reviewed Monday 06:00 Central schedule. Preserve shared lock, DST/delayed-run
+**Implemented for the requested cadence.** Add a daily gate that sends only
+when three Chicago days have elapsed since the last inbox-confirmed delivery.
+Preserve shared lock, DST/delayed-run
 policy and owner/period deduplication. Rehearse repeated triggers, late start,
 quiet week, partial sources and failed persistence. **Done:** explicit activation
 receipt and monitoring/recovery instructions. Never toggle `delivery_enabled`

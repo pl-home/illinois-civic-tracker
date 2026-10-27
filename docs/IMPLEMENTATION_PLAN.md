@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 15 — October 23, 2026, America/Chicago. Read with revision 15
+Revision 16 — October 27, 2026, America/Chicago. Read with revision 16
 [PRODUCT_VISION.md](PRODUCT_VISION.md), [CURRENT_STATUS.md](CURRENT_STATUS.md)
 and the bounded [execution guide](EXECUTION_GUIDE.md). The current plan replaces
 obsolete October 15/16 schedule, no-inference and exactly-once-mail claims only
@@ -52,15 +52,15 @@ Keep existing modules as working inputs rather than replacing all collectors:
 | Build/privacy/health/accounting | `browse.py`, `privacy.py`, `error_journal.py`, `usage.py` |
 
 Implemented Stage A flow: source adapters → validated compact facts → material-change ledger
-→ shared website/JSON/Atom gate. Stage D now renders bounded digest previews from that feed; gated delivery
-remains planned.
+→ shared website/JSON/Atom gate. Stage D now renders bounded digest previews from that feed;
+owner-only delivery is gated to one inbox-confirmed message every three Chicago days.
 One event may appear in several views; it must not become several notifications.
 Private positions and annotations remain separate from refreshed public facts.
 
 Keep 01:00 America/Chicago collection and existing source/Pages locks. Do not add
 a second collector schedule, reactivate Codex/Windows tasks, or switch to a new
-hosted database to implement the following stages. The Monday 06:00 digest target
-is still a planned channel, not an active schedule.
+hosted database to implement the following stages. The delivery workflow uses a
+daily gate only to enforce the requested three-day interval.
 
 ## 3. Delivery sequence and acceptance gates
 
@@ -75,8 +75,9 @@ veto-session records still need a bounded validation pass.
 [WORK_PACKETS.md](WORK_PACKETS.md) names exact starting files, tests and done/stop
 conditions; [handoff.json](handoff.json) records dependencies. Small-model
 execution follows [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md), one packet per task.
-D00 owner preview review blocks D01–D04 delivery work; this documentation request
-is not that review or authority to run a paid/send workflow.
+D00 owner preview review is complete. D01–D04 now cover the bounded owner-only
+three-day delivery path; the first hosted receipt is still required before M1
+delivery is considered operational.
 
 Stages A, B and C are delivered within their coverage boundaries below. Stage D
 **previews are implemented; owner review precedes any delivery work**. Genuine
@@ -213,12 +214,12 @@ whitelist. Arellano monitoring must not depend on obtaining an equivalent export
 **Preview slice delivered October 20 (319 offline tests):** HTML, plain text and
 exact selection manifests now use accepted shared revisions and source health.
 See [DIGEST_PREVIEWS.md](DIGEST_PREVIEWS.md) and [the receipt](evidence/stage-d-preview.json).
-Steps 1–3 are implemented within the documented snapshot/coverage limits. The
-owner explicitly requires preview review before delivery: steps 4–6, reservation
-state, SMTP acceptance and weekly scheduling remain pending. No email is sent,
-no new source/model work is run, and PDF work remains deferred.
+Party changes now include bounded before/after excerpts. The owner approved the
+preview on October 27; reservation state, SMTP acceptance and the three-day gate
+are implemented, with the first hosted receipt still pending. No new source/model
+work is run, and PDF work remains deferred.
 
-**Outcome:** the planned Monday 06:00 Central owner digest, using accepted events.
+**Outcome:** an owner-only digest every three Chicago days, using accepted events.
 
 1. Build HTML plus plain text from the shared ledger and source coverage, not an
    independent summary scraper. Include the next roughly ten days of verified

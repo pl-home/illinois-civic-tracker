@@ -19,7 +19,7 @@ EXPECTED = {
                           'start_hour': 1, 'review_before': '2027-01-03'},
 }
 CLASSES = {'current', 'reference', 'historical', 'deferred'}
-STATES = {'planned', 'owner-gated', 'source-dependent', 'future-design'}
+STATES = {'planned', 'owner-gated', 'source-dependent', 'future-design', 'complete', 'hosted-validation-pending'}
 
 
 def check(root):

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "timezone": "America/Chicago",
+  "interval_days": 3,
+  "max_attempts": 24,
+  "sender_secret": "GMAIL_USER",
+  "password_secret": "GMAIL_APP_PASSWORD",
+  "recipient_secret": "DIGEST_TO"
+}

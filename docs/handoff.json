@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": 16,
-  "reviewed_date": "2026-10-23",
+  "revision": 17,
+  "reviewed_date": "2026-10-27",
   "execution_authorization": false,
   "documents": [
     {
@@ -277,7 +277,7 @@
     },
     {
       "id": "D00",
-      "state": "owner-gated",
+      "state": "complete",
       "depends_on": [],
       "gates": [
         "owner-preview-review"
@@ -289,7 +289,7 @@
     },
     {
       "id": "D01",
-      "state": "owner-gated",
+      "state": "complete",
       "depends_on": [
         "D00"
       ],
@@ -299,13 +299,15 @@
       ],
       "start_files": [
         "src/civic_tracker/digest.py",
+        "src/civic_tracker/delivery.py",
         "src/civic_tracker/mail_test.py",
-        ".github/workflows/m0-mail.yml"
+        ".github/workflows/digest-delivery.yml",
+        "tests/test_delivery.py"
       ]
     },
     {
       "id": "D02",
-      "state": "owner-gated",
+      "state": "complete",
       "depends_on": [
         "D01"
       ],
@@ -314,13 +316,14 @@
         "no-transport-no-secrets-rehearsal"
       ],
       "start_files": [
-        ".github/workflows/daily.yml",
-        "src/civic_tracker/mail_test.py"
+        "src/civic_tracker/delivery.py",
+        "tests/test_delivery.py",
+        "config/digest-delivery.json"
       ]
     },
     {
       "id": "D03",
-      "state": "owner-gated",
+      "state": "complete",
       "depends_on": [
         "D02"
       ],
@@ -330,13 +333,14 @@
         "no-automatic-uncertain-retry"
       ],
       "start_files": [
+        "src/civic_tracker/delivery.py",
         "src/civic_tracker/mail_test.py",
-        "src/civic_tracker/mail_diagnostics.py"
+        "tests/test_delivery.py"
       ]
     },
     {
       "id": "D04",
-      "state": "owner-gated",
+      "state": "hosted-validation-pending",
       "depends_on": [
         "D03"
       ],
@@ -345,7 +349,8 @@
         "explicit-scheduling-authorization"
       ],
       "start_files": [
-        ".github/workflows/daily.yml",
+        ".github/workflows/digest-delivery.yml",
+        "config/digest-delivery.json",
         "docs/IMPLEMENTATION_PLAN.md"
       ]
     },

@@ -1,11 +1,14 @@
 # Stage D: digest previews
 
-> Documentation review: October 22, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+> Documentation review: October 27, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
 
-Delivered October 20, 2026: the preview slice of Stage D. **Email delivery is
-disabled until owner review.** No SMTP transport, delivery reservation/attempt
-ledger, recipient lookup, new schedule, collection, model call or PDF extraction
-is part of this implementation. Full Stage D and M1 remain incomplete.
+Delivered October 20, 2026: the preview slice of Stage D. The owner approved
+the preview on October 27 and requested an owner-only update every three days.
+The separate delivery workflow reserves an immutable preview before accessing
+Gmail secrets, sends only to the configured owner plus-address, checks the exact
+message in that mailbox, and retains an address-free result. No legislator,
+party or campaign recipient is permitted. Full M1 remains incomplete until the
+hosted path produces its first confirmed receipt.
 
 ## Review entry points
 
@@ -45,6 +48,10 @@ newsroom metadata and office/campaign/party communications. Publisher claims
 remain attributed. Votes retain raw choice, motion/result detail and tallies;
 the title links to a validated bill page when available and the choice to vote
 evidence. No generated bill synopsis is added.
+
+Party-page changes include a compact **Before / After** excerpt centered on the
+changed span. The excerpt is evidence for review, not a full page archive; the
+source URL, observation time and SHA-256 fingerprints remain authoritative.
 
 Future hearings may come from quiet baseline facts, but only with fresh proof
 (at most 48 hours), accepted scope and scheduled/rescheduled status. Postponed,
@@ -89,9 +96,12 @@ output rejects unowned files, symlinks and concurrent writes. Rendering escapes
 source text, validates links, privacy-checks every output and applies restrictive
 CSP with local CSS and no scripts/forms/tracking.
 
-`config/digest.json` is preview-only: setting `delivery_enabled` true fails
-validation. There is no sender to enable. No workflow consumes Gmail secrets
-for this feature. Existing source/model schedules and budgets are unchanged.
+`config/digest.json` remains preview-only and must keep `delivery_enabled` false.
+`config/digest-delivery.json` owns the separate three-day owner workflow. Its
+durable state is `data/digest-delivery.json`; a reservation is committed before
+secrets are exposed, and an SMTP submission without exact inbox confirmation is
+held as uncertain. The workflow is a daily gate so the interval is measured in
+elapsed time rather than an ambiguous cron expression.
 
 ## Acceptance and remaining gates
 
@@ -103,9 +113,8 @@ witness proof. Fixture examples are explicitly synthetic and never inserted
 into the public ledger. The complete offline suite passes 319 tests; hosted
 verification is recorded separately in the receipt.
 
-Owner review should assess section order, useful detail, reasons, quiet/partial
-wording and HTML versus text. Only after review should remaining Stage D work
-begin: durable owner/period reservation and delivery state, conservative uncertain
-send recovery, controlled SMTP/inbox proof, concurrent/failure tests and eventual
-Monday scheduling acceptance. Publishing previews does not pass those gates.
-PDF work stays deferred.
+The owner review approved section order, detail, quiet/partial wording and HTML
+versus text on October 27. Remaining acceptance is operational: confirm the
+first hosted three-day reservation and inbox receipt, then review any
+uncertain/failure record before allowing another attempt. PDF work stays
+deferred.

@@ -87,7 +87,7 @@ source will be healthy on a later run.
 | Common meaningful-change ledger and static feeds | Stage A delivered: source-scoped ledger and common HTML/JSON/Atom gate; quiet baseline, replay, corrections and QA. See CHANGE_FEED.md; complete historical discovery and detailed hearing/party coverage remain limited |
 | Hearing agenda/status revision history | Stage B delivered: day/committee navigation, accepted agenda/amendment revisions, explicit postponement/cancellation, conservative identity checks and stale-slip protection. Live open-form acceptance remains pending; Senate ambiguity and federal agenda limits remain explicit |
 | Broad county-party website change monitoring | Stage C implemented: eleven reviewed HTML pages and one poster, compact projections, quiet baselines, attributed changes and visible held review; separate from member-filtered feeds. Hosted receipt in PARTY_MONITORING.md |
-| Weekly digest and independent alerts | Stage D HTML/text previews implemented; email delivery disabled pending owner review and delivery acceptance. Monday 06:00 Central remains the planned sending target |
+| Digest and independent alerts | Stage D HTML/text previews plus bounded party before/after excerpts implemented; owner-only delivery is configured for one inbox-confirmed message every three days |
 | Daily new committee roll-call/PDF collection | Deferred; qualified historical records remain available. The diagnostic model trial accepted 0/6 and does not enable collection |
 | Full-tenure/topic pages, rollover and private contact packets | Remaining milestone work |
 
@@ -192,7 +192,10 @@ follows collection and successful persistence. Preserve source locking, explicit
 failure isolation, verified TLS, official FTP preference, configured request
 bounds and sequential ten-second ILGA-main spacing. No logged-in collection.
 
-The planned digest target remains **Monday 06:00 America/Chicago**, disabled until
+The public digest preview remains generated from accepted source revisions. The
+owner delivery target is **one inbox-confirmed message every three days in
+America/Chicago**, with a daily gate and durable reservation before secrets are
+read.
 preview and delivery gates pass. Persist a reservation before side effects and
 handle uncertain delivery conservatively. SMTP acceptance and durable state cannot
 be one atomic transaction; do not promise exactly-once delivery from a timestamp
