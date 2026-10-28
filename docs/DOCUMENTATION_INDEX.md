@@ -1,6 +1,6 @@
 # Documentation index
 
-Revision 16 — October 27, 2026. Every public Markdown guide is classified below.
+Revision 17 — October 28, 2026. Every public Markdown guide is classified below.
 Current status is authoritative for operating state; dated receipts retain their
 original outcomes. Do not read a historical command as execution authorization.
 
@@ -60,3 +60,4 @@ For a quick structural review use status → architecture → one packet/guide �
 representative receipt and its tests. No need to load all collected records or
 earlier conversations. Future model/provider/pricing/source claims require fresh
 primary evidence before changing implementation, not copying old research tables.
+
