@@ -1,6 +1,6 @@
 # Illinois Civic Tracker: implementation plan
 
-Revision 16 — October 27, 2026, America/Chicago. Read with revision 16
+Revision 17 — October 28, 2026, America/Chicago. Read with revision 17
 [PRODUCT_VISION.md](PRODUCT_VISION.md), [CURRENT_STATUS.md](CURRENT_STATUS.md)
 and the bounded [execution guide](EXECUTION_GUIDE.md). The current plan replaces
 obsolete October 15/16 schedule, no-inference and exactly-once-mail claims only
