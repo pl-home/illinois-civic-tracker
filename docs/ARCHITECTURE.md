@@ -1,6 +1,6 @@
 # Architecture and reviewer guide
 
-Revision 15 — October 23, 2026. Current boundaries are in
+Revision 17 — October 28, 2026. Current boundaries are in
 [CURRENT_STATUS.md](CURRENT_STATUS.md); dated M0 designs/results remain in
 [M0_FINDINGS.md](M0_FINDINGS.md) and Git history, not competing active architecture.
 
@@ -35,7 +35,7 @@ unless the source's completeness contract supports it.
 | Direct communications | `communications.py`, `config/communications.json` | Publisher-owned office/campaign/party sections; explicit House caucus-wide exception for Fritts; retained-source flags |
 | Shared event layer | `change_sources.py`, `changes.py`, `relevance.py`, `change_feed.py` | Schema/fingerprint/source gate, quiet/replay/correction handling, source-scoped QA |
 | Static browsing | `dashboard.py`, `browse.py`, `member_history.py`, `web/` | No network, source-state mutation, credential or model access during builds |
-| Stage D previews | `digest.py`, `config/digest.json` | Same accepted revisions, ten-day hearing opportunities, exact selection hashes; no sender/delivery ledger |
+| Stage D previews/delivery | `digest.py`, `delivery.py`, `config/digest.json`, `config/digest-delivery.json` | Same accepted revisions and exact selection hashes; owner-only three-day delivery reserves before SMTP and retains uncertainty |
 | Diagnostics/accounting | `error_journal.py`, `model_diagnostics.py`, `usage.py`, `privacy.py` | Sanitized bounded journal; permanent charges/holds; no raw exceptions, prompts, private data or credentials |
 | Manual historical tools | `mail_test.py`, `inference_eval.py`, `pdf_extract.py`, `rollcall_eval.py` | Dated trials, not general repair runners or activated product features |
 
@@ -52,10 +52,12 @@ secrets become available. Pages uses a separate publication lock and SHA guard;
 a green deploy job can still skip an obsolete artifact. Daily green can mean a
 skipped time gate. The operational gap is documented, not silently fixed here.
 
-There is no recurring digest workflow, delivery transport or durable send ledger.
-M0 Gmail/INBOX proof applies only to its reserved self-test. Future delivery must
-preserve owner/period identity, persist before side effects and retain uncertainty
-between SMTP submission and durable acknowledgment. No exactly-once SMTP claim.
+The owner-only digest workflow runs a daily gate and sends only when three
+America/Chicago days have elapsed since the last inbox-confirmed delivery. Its
+durable ledger persists the reservation before secrets are exposed and retains
+uncertain SMTP outcomes. M0 Gmail/INBOX proof remains a separate historical
+self-test; this workflow makes no exactly-once SMTP claim and never addresses
+legislators, parties or campaigns.
 
 ## Trust, identity and storage
 
@@ -84,3 +86,4 @@ or `tests/test_digest.py` for the respective layer. All commands and dangerous
 near-names are classified in [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md).
 [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) prevents old trial setup notes
 from being mistaken for current permissions.
+
