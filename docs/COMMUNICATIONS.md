@@ -86,9 +86,10 @@ appear under Fritts **Party / caucus**, with no member-name requirement for this
 explicit caucus-wide source, separately from his **Member office** and newsroom
 reports. This does not imply personal authorship, agreement or campaign origin.
 
-No parser, model task, spending allowance, retention limit, email delivery or
-schedule is added. Source count remains fifteen (twelve automated, three
-link-only), below the existing sixteen-source cap. The existing daily
+No communications-specific parser, model task, spending allowance, retention
+limit or schedule is added. Owner digest delivery is a separate three-day
+workflow. Source count remains fifteen (twelve automated, three link-only),
+below the existing sixteen-source cap. The existing daily
 communications phase refreshes both supplied sites. First collection of this
 previously link-only publisher establishes a quiet shared-feed baseline; old
 posts can appear in the browser without being represented as new actions today.
@@ -109,3 +110,4 @@ checks failed; their last verified dated metadata was retained and labeled.
 Fritts HTML listing parsed successfully locally, so its hosted failure is not
 a demonstrated parser regression. The scheduled daily phase will recheck within
 existing bounds; this source addition does not claim those sources healthy.
+
