@@ -12,7 +12,10 @@ from .changes import empty, packed, public_events, read
 BASE = 'https://pl-home.github.io/illinois-civic-tracker/'
 LIMIT = 20
 MAX_JSON_BYTES = 32_000
-MAX_VIEW_BYTES = 90_000
+# Keep the feed comfortably below the browser's total artifact budget.  This
+# is intentionally lower than the standalone feed limit because the same HTML
+# is embedded in the homepage alongside member history and diagnostics.
+MAX_VIEW_BYTES = 70_000
 
 
 def payload(root):
@@ -50,7 +53,7 @@ def payload(root):
         else: break
     return {'schema_version': 1, 'policy': ledger['policy'], 'baseline_at': baseline,
             'updated_at': max((r['observed_at'] for r in rows), default=baseline),
-            'selection': 'latest accepted revision per event; at most 20 and 32 KB of entries; historical discoveries excluded',
+            'selection': 'latest accepted revision per event; at most 20 and 32 KB of entries; the embedded view is capped at 70 KB; historical discoveries excluded',
             'omitted_for_size': omitted,
             'events': rows, 'hidden_events': hidden}
 
