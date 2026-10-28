@@ -13,8 +13,9 @@ in the browser.
 This port checks the Lee County Democrats and Lee County IL Republican Central
 Committee with the existing daily **01:00 America/Chicago** hosted refresh. It
 does not need an open chat, local computer, local model or new paid service.
-The former Windows/Codex schedules remain stopped. PDF work and digest delivery
-remain deferred. No new model task or model request is enabled.
+The former Windows/Codex schedules remain stopped. PDF work remains deferred.
+Digest delivery is handled separately by the owner-only three-day workflow;
+party collection itself remains deterministic and has no model request.
 
 ## Start here for review
 
@@ -137,3 +138,4 @@ baseline is not proof of a genuine subsequent officer/event change. Multi-day
 source-change observation and a poster requiring actual visual review remain
 source-dependent follow-ups. M1 remains incomplete until Stage D digest acceptance
 and remaining hearing/source/storage gates pass. PDF work stays deferred.
+
