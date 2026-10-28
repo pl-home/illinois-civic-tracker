@@ -1,6 +1,6 @@
 # Stage D: digest previews
 
-> Documentation review: October 27, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
+> Documentation review: October 28, 2026. Operational reference; dated acceptance sections remain historical. Start with [current status](CURRENT_STATUS.md) and the [execution guide](EXECUTION_GUIDE.md). Failed results and original evidence remain unchanged.
 
 Delivered October 20, 2026: the preview slice of Stage D. The owner approved
 the preview on October 27 and requested an owner-only update every three days.
@@ -118,3 +118,4 @@ versus text on October 27. Remaining acceptance is operational: confirm the
 first hosted three-day reservation and inbox receipt, then review any
 uncertain/failure record before allowing another attempt. PDF work stays
 deferred.
+
