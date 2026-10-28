@@ -1,6 +1,6 @@
 # Remaining implementation work packets
 
-Revision 16 — October 27, 2026. These are bounded plans, **not blanket execution
+Revision 17 — October 28, 2026. These are bounded plans, **not blanket execution
 authorization**. This documentation task implements none of these features.
 Machine-readable IDs/dependencies are in [handoff.json](handoff.json).
 Common checks and stop rules: [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md).
@@ -169,7 +169,7 @@ uncertainty recovery without resending. **Done:** reviewed controlled receipt,
 retained failed/uncertain attempts, no automatic uncertainty replay. Transport
 acceptance alone is not inbox proof or exactly-once delivery.
 
-## D04 Weekly activation
+## D04 Three-day activation
 
 **Implemented for the requested cadence.** Add a daily gate that sends only
 when three Chicago days have elapsed since the last inbox-confirmed delivery.
@@ -194,3 +194,4 @@ these gates pass; no assumption that preview review approves every later side ef
 PDF/committee extraction remains explicitly deferred across all packets. Preserve
 failed trial receipts and unsettled liability; availability of a manual workflow
 does not permit rerunning it.
+
