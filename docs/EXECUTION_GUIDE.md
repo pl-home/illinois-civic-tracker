@@ -1,6 +1,6 @@
 # Bounded execution guide
 
-Revision 15 — October 23, 2026. Written for an implementer with limited context.
+Revision 17 — October 28, 2026. Written for an implementer with limited context.
 Use one packet at a time. Do not read every raw report or old conversation.
 
 ## Start every task
@@ -9,7 +9,7 @@ Use one packet at a time. Do not read every raw report or old conversation.
 2. Inspect `git status --short`, `git log -3 --oneline`, `git worktree list`, then `git fetch origin main` and compare `HEAD` with `origin/main`. Fetching is read-only; never reset, stash, switch or overwrite someone else's work to make progress.
 3. Use the checkout identified by the private workspace handoff. Do not assume the primary checkout is current: it contains paused work. If dirty data is reported, compare actual normalized bytes with Git; do not discard it. Commit only your named files. Unexplained differences require investigation, not blanket `git add`.
 4. Run the safe baseline below. Record the starting commit, checks, known failing source receipts and exact task scope. A preexisting source failure is not a failed offline test, and a successful offline test is not source recovery.
-5. Check the packet's owner/evidence gates. A future roadmap entry is not authorization. This handoff authorizes no delivery, PDF retry, paid evaluation, schedule expansion or private-data migration.
+5. Check the packet's owner/evidence gates. A future roadmap entry is not authorization. The owner-only three-day digest delivery is now authorized and implemented; PDF retry, paid evaluation, schedule expansion beyond that cadence and private-data migration remain gated.
 
 ## Safe local commands
 
@@ -104,3 +104,4 @@ If interrupted, leave one private continuation note with actual checkout/commit,
 dirty owned files, finished checks, next command, unresolved gates and any running
 job/lock. A new implementer should resume that exact step rather than restart
 collection or consume credentials.
+
