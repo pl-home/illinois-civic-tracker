@@ -30,7 +30,7 @@ for future CI or full product acceptance.
 | Media/communications | Visible discovery policy; homepage three reports/90 days; member news five/page/200 days; separate attributed first-party sources including House Caucus Blog context for Fritts | Remaining source gaps/reprints and body-text mention coverage outside the bounded headline check |
 | County parties | Stage C hosted page/asset coverage, exact reasons, quiet baselines, pending-edit recovery, held review and six bounded mention feeds | Observe genuine subsequent live edits; human image review remains unresolved until performed |
 | Health | Source reports, privacy checks, bounded error journal and usage accounting | Cross-record integrity, coverage and withheld-record QA |
-| Notifications | Stage D HTML/text previews and exact selection manifest; prior one-time Gmail transport/inbox proof | Owner preview review, conservative send ledger, controlled delivery and weekly acceptance; email disabled |
+| Notifications | Stage D HTML/text previews, bounded party before/after excerpts and owner-only three-day delivery ledger | First hosted reservation/inbox receipt and continued uncertain-attempt review |
 | PDF/committee extraction | Historical records plus failed, separately versioned manual trial receipts | Deferred by owner; no routine activation or further paid trial in this workstream |
 
 The current codebase is the public `pl-home/illinois-civic-tracker` repository.
@@ -80,7 +80,8 @@ three-day delivery path; the first hosted receipt is still required before M1
 delivery is considered operational.
 
 Stages A, B and C are delivered within their coverage boundaries below. Stage D
-**previews are implemented; owner review precedes any delivery work**. Genuine
+**previews and owner-only three-day delivery are implemented; the first hosted
+receipt remains an operational check**. Genuine
 live hearing/slip acceptance remains source-dependent. PDF work stays deferred.
 Stage D consumes the same accepted events. Session
 review in Stage E is date-sensitive and must not wait for M1 completion.
@@ -339,3 +340,4 @@ remain evidence. Keep this plan's implemented/planned states and README entry
 points synchronized; preserve old documents as history instead of leaving two
 competing active plans. Updating documentation never resets evidence or passes an
 unresolved acceptance gate.
+
