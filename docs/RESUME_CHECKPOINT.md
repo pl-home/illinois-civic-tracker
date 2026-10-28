@@ -11,6 +11,7 @@ P01/P02 daily freshness, P03 communications diagnostics, P05 storage-growth
 simulation, and the P06 rollover review are complete. P04 waits for a genuine
 future notice/open form; successor identity migration needs its own packet.
 Stage D previews exist; owner review is complete. Owner-only email delivery is
-gated to one confirmed message every three days; PDF
-work stays deferred. This documentation update approves neither activation.
+gated to one confirmed message every three days; the first hosted receipt is
+still pending. PDF work stays deferred.
 Historical checkpoint text remains in Git history and the private planning archive.
+
