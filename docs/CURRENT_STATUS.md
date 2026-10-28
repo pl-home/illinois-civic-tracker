@@ -1,6 +1,6 @@
 # Current status and decision record
 
-Revision 16 — October 27, 2026, America/Chicago. This is the current status entry
+Revision 17 — October 28, 2026, America/Chicago. This is the current status entry
 point, not a claim that every live source was checked today. Read it before dated
 findings, checkpoints or trial instructions. [Documentation index](DOCUMENTATION_INDEX.md).
 
@@ -107,3 +107,4 @@ dashboard. Model calls remain limited to public media relevance.
 The small offline handoff checker validates documentation, dependencies and
 disabled-feature configuration; a pass does not prove live source health or
 grant authority to execute a planned task.
+
