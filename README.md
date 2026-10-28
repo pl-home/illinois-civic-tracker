@@ -5,7 +5,7 @@ LaHood, Dick Durbin and Tammy Duckworth (Congress119), plus the two Lee County
 party organizations. Public browsing is on [the website](https://pl-home.github.io/illinois-civic-tracker/);
 private positions, notes and correspondence stay in Obsidian. No automatic outreach.
 
-## Start here — October 27, 2026
+## Start here — October 28, 2026
 
 1. [Current status and decisions](docs/CURRENT_STATUS.md): implemented boundaries, actual receipt dates and known failures.
 2. [Execution guide](docs/EXECUTION_GUIDE.md): safe commands, ownership, side effects and stop rules.
@@ -81,3 +81,4 @@ source/financial history and failed receipts intact; do not prune to make checks
 pass. Main ILGA requests are sequential with verified TLS and at least ten-second
 spacing (twenty for backfill). Use a noreply commit identity and explicit owned
 paths. Actual reused code is disclosed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
