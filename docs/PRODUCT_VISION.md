@@ -1,12 +1,14 @@
 # Illinois Civic Tracker: product vision
 
-Revision 15 — October 23, 2026, America/Chicago. Purpose and milestone scope are
+Revision 17 — October 28, 2026, America/Chicago. Purpose and milestone scope are
 here; [CURRENT_STATUS.md](CURRENT_STATUS.md) owns present operating state and
 [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) owns sequence/gates. Workspace
 and published copies of this vision/plan share this revision. Dated findings are
 historical evidence, not an alternative active plan.
 
-Stages A–C and Stage D previews are implemented within documented limits.
+Stages A–C and Stage D previews are implemented within documented limits. The
+owner-only three-day digest delivery path is implemented; its first hosted
+receipt remains an operational check.
 Email remains disabled pending owner review; PDF work is deferred. Daily
 freshness and first-party diagnostics are complete within their boundaries; the
 October 23 scheduled job entered the bounded late window, ran the approved media
@@ -236,3 +238,4 @@ acceptance tests belong with every adapted component.
 Open decisions remain topic refinements/pins, deeper federal committee coverage,
 full-tenure depth, and later evidence-storage choices. This vision changes the
 documentation and delivery plan, not running schedules, notifications or costs.
+
