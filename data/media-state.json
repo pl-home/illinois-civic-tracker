@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-25T11:23:36.218124+00:00",
+  "checked_at": "2026-10-29T12:56:05.611537+00:00",
   "members": {
     "fritts": {
       "status": "ok",
-      "checked_at": "2026-10-25T11:23:36.218124+00:00",
+      "checked_at": "2026-10-29T12:56:05.611537+00:00",
       "candidates": [
+        {
+          "id": "177c49ecab08e8fc892dadd9",
+          "member_id": "fritts",
+          "member_name": "Bradley Fritts",
+          "title": "Fritts, ROE 47 to host winter clothing drive Nov. 2-15",
+          "snippet": "Fritts, ROE 47 to host winter clothing drive Nov. 2-15 Shaw Local",
+          "publisher": "Shaw Local",
+          "publisher_host": "shawlocal.com",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaHZuYldILUxlMzNTZmpPeGVHNjRSMHhuaUNKUEtjNmVRUjhQSGNOVkhLUE9WdUJyMVFwYS1fWThZZXN4NkdDeExOOE9vZWdKSzhGSE9kSFVhc1V4MHJMd2J0THY2bE4taE5LUmtvU3FQdHBfbUFoc3IzTkhWb21OU0JGUkl4d09vSjYzQXU4bmotWU5aRnpCSEw4clN2c1hhMDNvRA",
+          "published_at": "2026-10-27T23:00:00+00:00",
+          "link_route": "Google News"
+        },
         {
           "id": "6200806ad5f0d349d1657570",
           "member_id": "fritts",
@@ -27,7 +39,7 @@
           "publisher": "Shaw Local",
           "publisher_host": "shawlocal.com",
           "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOeDczeTlqZUZlY29aenJxNU84Z1d2Vmp2TEU2bS15SmhGaHh2YU4xWkYyLVRYUEZuWFA3MDNhdnRBUzRpZWNiWlZjOXU1dHJTdjFqb1BkUTNocGtPOEpVN3lSck1RdG4zWFEwSDdDSnYwNmplS0JzWDJqZHVYa0ZjYk5tS2dPaUk5eHVLU1JXMzFRQTZ5azJETHo5VERTZGRKZWJ3QjdjNWJzUEhhTnp6QlJDb0ZfdUFRQ3N2TTd3YTBVbXRZUVpuVXFoMHNVeUk4QXZ4QVJ3",
-          "published_at": "2026-10-07T23:27:35+00:00",
+          "published_at": "2026-10-07T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -40,6 +52,18 @@
           "publisher_host": "shawlocal.com",
           "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVF9DZ0FDSUUwVUxjVm5QYTZLZnBmLUVTWjk2ZGRpVnRsTHh6a3hOVEpKSGQ5QmcwX2dfSTVpWFJqSXUxZ1dRcWJnMksyRTRQQVQ3ZlBRM3dUMUdKV19BZnVPZGRRWHJ1Vzlzd2pTNkdlUkRDdFhxcjZFUXJNcU1nS0NMZFB0Ri1Dc1VpVzJoOGF2OEpqWUNMajF3eTcwTjJNQnMtcGFJbFJWa0hmU3B0aE5UWUw2eHRDU0prVmJYbnpsSlA0Q3hRd2tpV09UZDB4",
           "published_at": "2026-09-25T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "1f8b63f84cecb5ff14c32721",
+          "member_id": "fritts",
+          "member_name": "Bradley Fritts",
+          "title": "Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano",
+          "snippet": "Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano Shaw Local",
+          "publisher": "Shaw Local",
+          "publisher_host": "shawlocal.com",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOWTlEVk9yN1lUMFFmNDRMOXBfRjJpZUFwM09kVm9RN1RYeGtvZGdfcEUxUkxyb3hCa0FXelBteVNRVmN4cGkxb1dreHk0SWpuSmFuWWo5MGdfTS1CQ2Y0S3lrMkpwQjhyYmxXcEtSY2NKQ0pfZUtuWnRhM25STzdFQmd0UGRhOWFLTWtrN1FFVGVDUUxONkg2OVg0ZjRwVlVlT0RpZjNTeW9JVlVfSmJXWER2RGhrSWd5ZnFhX3lBVEV0ZHJvbl9zLW5mb3p0OVpReFJ1bXZlM3JNQTlCd3FyT3NJUzE",
+          "published_at": "2026-05-28T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -57,11 +81,11 @@
       ],
       "query": "\"Bradley Fritts\" OR \"Brad Fritts\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
+      "last_successful_checked_at": "2026-10-29T12:56:05.611537+00:00"
     },
     "arellano": {
       "status": "ok",
-      "checked_at": "2026-10-25T11:23:36.218124+00:00",
+      "checked_at": "2026-10-29T12:56:05.611537+00:00",
       "candidates": [
         {
           "id": "184f1a75161ae3b8fe01e97f",
@@ -74,38 +98,74 @@
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVlFQVFJfLTZBVmxLMmQ0S2cxbnVkbnV2cDJLblFUaF9yNmg2TUJjSlpGa05PbEowdkdyX1czNEVic1lNSTBkN0Z3NVJCY0NPODF1NXNhNFJXOXkydS0zendXRjIzM0lXMzltRE9fWWdoYTkxT1JpOXVfWkc5V0daMmxGOExVVVhTUnJpNFkweHA3MmZfR3ZuemZoSmFhTUpFaU5ZeWJSN3dMYzVXVFRNWWNR",
           "published_at": "2026-08-27T07:00:00+00:00",
           "link_route": "Google News"
+        },
+        {
+          "id": "2a887f37bc61ee6f4c1884ce",
+          "member_id": "arellano",
+          "member_name": "Li Arellano, Jr.",
+          "title": "Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano",
+          "snippet": "Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano Shaw Local",
+          "publisher": "Shaw Local",
+          "publisher_host": "shawlocal.com",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOWTlEVk9yN1lUMFFmNDRMOXBfRjJpZUFwM09kVm9RN1RYeGtvZGdfcEUxUkxyb3hCa0FXelBteVNRVmN4cGkxb1dreHk0SWpuSmFuWWo5MGdfTS1CQ2Y0S3lrMkpwQjhyYmxXcEtSY2NKQ0pfZUtuWnRhM25STzdFQmd0UGRhOWFLTWtrN1FFVGVDUUxONkg2OVg0ZjRwVlVlT0RpZjNTeW9JVlVfSmJXWER2RGhrSWd5ZnFhX3lBVEV0ZHJvbl9zLW5mb3p0OVpReFJ1bXZlM3JNQTlCd3FyT3NJUzE",
+          "published_at": "2026-05-28T07:00:00+00:00",
+          "link_route": "Google News"
         }
       ],
       "query": "\"Li Arellano\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
+      "last_successful_checked_at": "2026-10-29T12:56:05.611537+00:00"
     },
     "lahood": {
       "status": "ok",
-      "checked_at": "2026-10-25T11:23:36.218124+00:00",
+      "checked_at": "2026-10-29T12:56:05.611537+00:00",
       "candidates": [
         {
-          "id": "0c0e45b1520ce7a0836025d6",
+          "id": "92257d7ba9b72c57f66f2074",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Trump endorses LaHood in 16th Congressional District race",
-          "snippet": "Trump endorses LaHood in 16th Congressional District race MyStateline",
-          "publisher": "MyStateline",
-          "publisher_host": "mystateline.com",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOanVDMEtMTkR5N0FIYVl5MUZCdjlnUExpckJJcHIxRXgzUHRMbHhLZ252Q3htQlYtUWRCRVp2R0NKeDNqc0lMajMwajBBNktQSHg5c3p3LVZsYmNOUW1fWHRfUk55VHRKUXRtQnJ6ZWlORkJEV0JXcndkS0JTYXVmZmV4MUFpckl3eXfSAY8BQVVfeXFMT3MwWHRjdjhGZlNTdUtmNVVORGFnTExqZjY5ZDhXS3o3bkpLNFhETWJZQXBGTkRGMEdIQmdhbk50b3RkRlRmTk91VDQ3Z1ZGQU9hTUpBYkNheWJwYlhLYjNqbWtRSks0dUNqYy14NHJ3NTN1UGFkaHc3YVN0NlZOZE40dE1MQmplT05ORVBMMlU",
-          "published_at": "2026-10-24T18:27:25+00:00",
+          "title": "Loeffler, LaHood talk entrepreneurship with Illinois Wesleyan students",
+          "snippet": "Loeffler, LaHood talk entrepreneurship with Illinois Wesleyan students The Pantagraph",
+          "publisher": "The Pantagraph",
+          "publisher_host": "pantagraph.com",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQ1RkM2NVdTEtbWR5NXZsWUQ3MTNhWDJzaUdYejhrTF9QUTZsb1RBTDVvQUI1NnlkWWc4Rm5SZTVWbnVtcDNPMWZHbGhza0dmcXU5NWd0V0dMN09NUE5CTGRTNjdQenZIOGRiXzA2bExPQVFpLTlFWnVQUkt1LTJ3eW1GYTVNV1RydVZPZV9QWXNXQzJrc0tBSHVHYzZwYVZmQVRkOHp3",
+          "published_at": "2026-10-29T12:00:00+00:00",
           "link_route": "Google News"
         },
         {
-          "id": "31c5a234e8645c86ee6deeb9",
+          "id": "1c236a34d828d869343e05fe",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "LaHood, Nolley offer competing plans to address rising costs in 16th District race",
-          "snippet": "LaHood, Nolley offer competing plans to address rising costs in 16th District race The Pantagraph",
-          "publisher": "The Pantagraph",
-          "publisher_host": "pantagraph.com",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMjFXTFRRRGNWTHZyZkdoaHVlUDhLWi1MRHdUR0E3M1ZUWThkaVhGaGhjV0l6WkpnN2Z0dWZka0NpV3NGc3UxZlJ6SzFkNVk5V2RZT0RuTGg3WERmVEI3ZnpaUEV0ZWhDWGYwbWdkZFFyYkVzVDZJaE9ORTdFa3hrN0JNMW9xek5mQlV3VUhkQ0tpYjc2akNmUWE1QzViZFcyRkFPTmZDRGVTbHgxeW1waWExRQ",
-          "published_at": "2026-10-21T02:30:00+00:00",
+          "title": "LaHood optimistic for successful appeal after McLean County denied FEMA storm recovery aid",
+          "snippet": "LaHood optimistic for successful appeal after McLean County denied FEMA storm recovery aid WGLT",
+          "publisher": "WGLT",
+          "publisher_host": "wglt.org",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNX0l0bElzemJnd0RTT2ktaC1SWUZuOThMQ3ZKWWdhb254Tm9kdUVNWUYzYld5MkJvTF9Bd2puTHlQV1JxMlN3WTZOX2JIX0xUTkhQdTFCejQ3RjhNNDJoUXp2ZXBycEkzVUF1RGQ2WWNaUFpTanhYUUtQNWp5bW1Hb1B5UkZtaXR4Wm9iTWdfa0xFcUxTc003cEwyU2U4emdxUnl0ZjdQal9tb3U5LWZmYlF6YW13NGZBTVp3QXF6TjNzTDU3aDBENHhabjRRUQ",
+          "published_at": "2026-10-29T00:41:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "04db1498c354636d5eba561a",
+          "member_id": "lahood",
+          "member_name": "Darin LaHood",
+          "title": "LaHood writes Trump, FEMA appealing for disaster aid",
+          "snippet": "LaHood writes Trump, FEMA appealing for disaster aid WEEK | 25 News Now",
+          "publisher": "WEEK | 25 News Now",
+          "publisher_host": "25newsnow.com",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONUpycWNENVV5WFRzLXVJODdJM0xDLUZjQnktaC10dDNDTjNXbW4tcXQ2V1V3LTlxTjhOaHRpdGVoWExwX3dvM3ZERnJDQ3dRUC1TX0VBRnF0TFhJTlhTWmVEM1FSSXdpN2MyZS1kQ2VHVFR5TnZFOG1rc19ScURZQzVYa0pYM2JlcWppcnlR0gGiAUFVX3lxTE9CT0NEckdKRWNQWVRBUGozUEc0aGtLaEZCUEhVMkhVanowWmpYUVZSNzlGM3pUQ0VuWVFKWjFNNWN4bllVLW9SWnFFZnk2MUZZcXJpcTdVQkdhMlJ0YWl5YVEzS0xGYnY3N3h1V1J3Sk5Fb2FmZ1dKREtvRDYtRTItNzNuSWtRcTNST19Sa01VWHJpLXRUMzlaRDhweVpyYzlRUQ",
+          "published_at": "2026-10-27T02:12:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "c7643b2a2f90da17b647782a",
+          "member_id": "lahood",
+          "member_name": "Darin LaHood",
+          "title": "Trump endorses Darin LaHood, other Illinois Republicans for midterms",
+          "snippet": "Trump endorses Darin LaHood, other Illinois Republicans for midterms Peoria Journal Star",
+          "publisher": "Peoria Journal Star",
+          "publisher_host": "pjstar.com",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOUy1YU1JWLU5mVTFGWU5WaVJhbHgwU2tGY0Rmemk2XzZwbWZ2c05CRUY3MVYwZXBzZmlnV1hTMmxyUGZ5WnlvVFkzU3puU0R6Ynp1SEtROXRyOFEzYkpFaGNQME12R1U4Yzg0Uk93VFNkT004STBOb3d1RFVDQ183RWRCMW1GNDBjbS0weVdGbS1YTG9GZ0E4cDNzbHpKeDFGYm5URUZQdlZfX3hIUVE4WE5Ud01yR3M3SGdxOHgtT3hudXVsUFpDcHR5RUIyREQ1SFZXbDZB",
+          "published_at": "2026-10-23T21:38:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -129,18 +189,6 @@
           "publisher": "WEEK | 25 News Now",
           "publisher_host": "25newsnow.com",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc0JxRF9kMDRzakkzUEtXSDFHNFZpX0R6Qzg0c25vVlVkM3Z3Z0FnTWViVERXRS16clQ2RUpGSmhEelF3RmNvNmZkWUxQNXlmcXg4VERsbVotOG9XVVl2M1g5WHl0Nk1SeDFyYVFfWjNfWFowUXNGUngyd0xxWENITGc1b2dMU0lyNFBFT1dTTjBrbmJqczBrUFlaU0NaUDVKM3ZOMU1pd2VCTDhXZnZHcjV30gHGAUFVX3lxTFAwYnRKVURCTlByd2dnRWpJUHd1U3lVM2pVUS1Zd19PNWtyNXpXRTVZNHlNTE1tcFRGRGMxQXJFQWdFNWxpSTl1MU5CUkUzQ0NRRkxmZ0NSRnFkTG0zUXU0bklMeHE5dmk0Z2d3NURHRDVReVBlNzJ3VVlhSzNKYWlDVklaeUFITkszTE5vVmQwLU94akFZSVdEV05CUW1XcW5GTHZyUWtRMnM5aVhILWdpbnlEMzVmRS1YalBiTjc4dGIzem5BZw",
-          "published_at": "2026-10-09T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "b403e5864680647be78ca7b2",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "LaHood absent as Democratic challenger Nolley takes questions at Dixon candidates’ forum",
-          "snippet": "LaHood absent as Democratic challenger Nolley takes questions at Dixon candidates’ forum Shaw Local",
-          "publisher": "Shaw Local",
-          "publisher_host": "shawlocal.com",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNYjFCZ2U3N0pzd0g5aEJ6anRQWjFUVnFrQWtCWXBqem5HNVMwZktBN3ljZm5ha0JpcDRUYXNGOFpvWlY5U3ZpbVozSXpDdG1mM2YxenBCQ000MDFhMURqZi1wMlNFWGxGbDN6eUFMMDJsZHUwM25YNXFqNHhXTUs3cFRETGVaNnAyWEE4ckJyazZEcVNJekZNdUtvNGllM3ltbURXVXEwVm9udlJJY19oN2FHYTFiWF9fbFdVREQ2djJmUDNmYVJrMG5HemxvRlBZSE13",
           "published_at": "2026-10-09T07:00:00+00:00",
           "link_route": "Google News"
         },
@@ -177,30 +225,6 @@
           "publisher": "Peoria Journal Star",
           "publisher_host": "pjstar.com",
           "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSlV5R1g5N21JRDVqY2xLZ2FFWFo0V0k1ZkU2R0dRZFlHNmRoZV9NM0dFYXhQMFhOVTZ3OTFrUWNxeEJTQTNnYUpNbmZReURuUVRiZmswYUloVkViTVhJZ0VsUnN2QlVydmY2cHpCNmx5eXZfWTBoUXY4WHNyOHBQdE9xS2UtMDNoWm5wZkRTbk1VM2NLSGJkcVJsNGs0Yy1VUkhsQjZZZlotdG5VWF9Edk01RkREN1J4UmRtc1BjVEk2Nk5EajlHYw",
-          "published_at": "2026-10-08T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "64b934e14387470219d476ad",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "President Trump denies FEMA help for Illinois after August storms, even after GOP Rep. LaHood asks in letter",
-          "snippet": "President Trump denies FEMA help for Illinois after August storms, even after GOP Rep. LaHood asks in letter CBS News",
-          "publisher": "CBS News",
-          "publisher_host": "cbsnews.com",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZGx0ZElvbFQ1VWMzVjdqdjNzQUwxZ21qS2h3M2l0cTJmdkozcXFDU0V6dXpsX2oxbU9tSWh1SXNxazNNdDZyLTZrMlQ1WUl5YWt0TlZYUl9ITE1TXzF0TExTYU9rMXhkWmxYYVlTM0JSNGNKSnZFT004TlFsMkQ1eXNRVm4wOWszV3I4NUN0WF9OMjBWUHRCQ3dVMEtNYnM",
-          "published_at": "2026-10-08T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "b2ca851a9823b9141cb5d8cd",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "‘Most people in this district are hurting’: Nolley seeks to unseat LaHood with focus on jobs, healthcare",
-          "snippet": "‘Most people in this district are hurting’: Nolley seeks to unseat LaHood with focus on jobs, healthcare MyStateline",
-          "publisher": "MyStateline",
-          "publisher_host": "mystateline.com",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZGN5TnZQNHNITmJ3c001ckFvczJKaU5SMWdBS19Hc19JOGtxMWhPRWE1dUtqNTB3Vk1mdGhGMkluVWRrUkJVT0ZFdXFxaTlILXNxUnMxOXN0eTdEOTZHQlAtc1llWTl2UkRtUUs5M0RUa0tHLUxnQnhndnVOYlR3Vm9lZFNkLVXSAYwBQVVfeXFMTTFwQ3F4cUZLMkdiSlJzNTBMdmtwTllTWTgtMGxCVzFZekNobmFzTFQtcU8zUWgyNThUNlZCVGJlMG9EeXRMOW1DVVVBMjdhaVR4ZGlkRlI5VHM0MEJZTHpuV20tZ050NE5Da19mRFlLRUJ6d0FGMVQtcmNrc0o1N2dtWV9sSFZRclVKNlY",
           "published_at": "2026-10-08T07:00:00+00:00",
           "link_route": "Google News"
         },
@@ -253,6 +277,18 @@
           "link_route": "Google News"
         },
         {
+          "id": "5491fbf1990c3fa2905ae55d",
+          "member_id": "lahood",
+          "member_name": "Darin LaHood",
+          "title": "Archbishop Fulton Sheen recognized by Congressman Darin LaHood",
+          "snippet": "Archbishop Fulton Sheen recognized by Congressman Darin LaHood WEEK | 25 News Now",
+          "publisher": "WEEK | 25 News Now",
+          "publisher_host": "25newsnow.com",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbWtlaEx2clQ3S0djWTd5cHBCSjV5VDBuNlk4c29PS24zTGQ4ZnhtUFZqX1l5WWxrNnd0THo0RUNfQVlBRmZqWUFCWmNEVmdXMEFuUlUxZDlfZUVXeVFzcGlHNENWOUcwMkllZ3ByX0JMb2NZNDhSSTk3YmI1U1VURFVLak05U3I4Znk1aXgxakdrYUZZeFdPUE1yMUsxR0Y4d3g3MWRWeWF6UQ",
+          "published_at": "2026-09-18T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
           "id": "b011e6596a027c95af08ac09",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
@@ -262,18 +298,6 @@
           "publisher_host": "25newsnow.com",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONGMyOEppOXdfZkowZTQ1bC1WUUViSGw5MzBoSkZCRjlLZVhhWnFuendaTElTYVZuZDVneUpzRUxHSUphdWo4eU1kR0ZvY0ZCd0p1VUZNVUlNTkU0XzlPaUpjQWhEUGN4cDNlTWkwTjlweHRGM05vaFFsV2QyazFGaWNRMENFV0lkSWpGcHNyQV9Ea2JjaFE4WHBMaEpSOGZ6ZkdJc2pWRUhlWnJiSHFiWW92ZEbSAcgBQVVfeXFMTmxkbm9KQmxxY3JLVjJXb04zamRXY21VMEpMV0NCeTB0UUVVMnAzVzAzVlVETGROVVVaMzRqWUJ3Q2Q4d3Z5V2ZKdzJVd0RQOG9iaFFONzdrSzhVUjFHZUZweUhBRHFJLWRiaHFfR3U5akJzcVcxM0RxWWFhYno3ckVXLWtmUHIzN1IwYmVaRlpSLTF6cDFiNW9wMHNfT3I5OGxMTXNSeWVmWXZINTdDM2VWZ1ZVdlpKaUxzMXpEMWVtSm83MUVQTmE",
           "published_at": "2026-09-18T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "8e734a0da9e817fb5b5d97e1",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability",
-          "snippet": "Rep. LaHood says mail-in voting will not be disrupted; Trump should work on affordability WCBU Peoria",
-          "publisher": "WCBU Peoria",
-          "publisher_host": "wcbu.org",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNbUh0VW9vcVZvR3NlMnM5RnZ4WkRGdHc2cHR6MUZqWDJFZGxReW5CRWFocGpJNlZZWS0wZWU1cFJuMXZ4VmtKWE5Dc0ZqV0JLZzFSY3F5TWxVb1JQY2xEcXg3R0NDVUwwaFlRYWd5bWRpQUxsb1h2MDY0blItM19oN2pfM3JMUlZYT3BoYWJncDl0OXFwSWtYU1hHbWE5OGVTWmttWk1HVXBBWDlsUlBwaVFSTTFSeW1aWUxNcXBjRHNQaVdqSk9CYmZB",
-          "published_at": "2026-09-08T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -310,18 +334,6 @@
           "publisher_host": "wglt.org",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPU0FlY3h4d0FtTzUwa2xYLS1jQng4MjZJZGJvOHJ5b053d1dxSUFzM3ZJdHRSNmJwQnptZDhpbTRlcGVCNlFVckJqcVhZXy1lbDNhTF9mOGI3VS1aTmIzWVNxblI3VFhuQS10blBtLXQ4bEk5S1lNV21pc19fVkxmN1VZTF8yUm16eUNyWnB6Mm82ZkduVV9wM3o5TzhOVm1tdlZsVw",
           "published_at": "2026-07-20T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "1186e20a27d72216a0bbb5a1",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "Rep. Darin Lahood tours Illinois Central College's health facilities",
-          "snippet": "Rep. Darin Lahood tours Illinois Central College's health facilities WEEK | 25 News Now",
-          "publisher": "WEEK | 25 News Now",
-          "publisher_host": "25newsnow.com",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa3RwZFhYVlQ2V0FEcHRiTFd1TW9KODRGQXE0ZENXUzVBS3FhQjNRLTdwTFc1ODRGdnJLSFJnRVdtU0w5NW9SOGgzX2J3VGpPWFlldWZqaGVtdDJhNnFMYllTSlR4elVqOEExRjNKRUZWZWlJWk5JVzBMWXNUUG5nOTdpSE5XZi1GT3Vib1VNYXVXbzJNeGx2Mk9nRzBCRUtUWU1XT2tfZWpXUVRNUHBJ",
-          "published_at": "2026-07-09T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -373,15 +385,15 @@
           "link_route": "Google News"
         },
         {
-          "id": "d3fa9a777810839dfa672f9e",
+          "id": "cf401b0c4a71a69d458bf5cc",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
           "title": "Rep. LaHood again calls for ‘off ramp’ on U.S. war in Iran to bring fuel costs down",
-          "snippet": "Rep. LaHood again calls for ‘off ramp’ on U.S. war in Iran to bring fuel costs down WCBU Peoria",
-          "publisher": "WCBU Peoria",
-          "publisher_host": "wcbu.org",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOU1XYjhLVHNoSFdsQ2RudkNhLXBRSkl5X1d0Qi11Wk1JekJ6ZDM1YUtJNXZpQ1dXMWpsdGRZTW9MZEdPZ1ZJS3B5bzJLcHE4UmtLeDRDeER0djY3bmpXdjlVSGY2TWotMVhLdDZGZEV0ZmhQU0tGeUxEczNHcnZfU0N6S0h0MHEyOHB4eURGRmEwNmVlbnRHNE54bmRQdnZCZFJ2RE12Vmw0cDBWUmIxb2lRQ2VpQnFXdE5DRDFEaw",
-          "published_at": "2026-05-06T07:00:00+00:00",
+          "snippet": "Rep. LaHood again calls for ‘off ramp’ on U.S. war in Iran to bring fuel costs down IPM Newsroom",
+          "publisher": "IPM Newsroom",
+          "publisher_host": "ipmnewsroom.org",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObHppZmp3cEZ0ZmJjUmdERjZPR1dwTGtVd1ZGQ3lwVV9tbjV1WFRlUW92MmhBbWc3cWhLaXhyWmJIWTRNNERuOG1tTE92VW9BSU1IRnFkRmM3NlVBVWtodGY1ODN0YmZpUFlLWTJDaDUyRTU0eXVGR3F6RVNwSkZLR0JVX2NCSTlBSmphbUVvZEFuRHdGY0Fieks1S2cyeVdLa25pcnFDUQ",
+          "published_at": "2026-05-07T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -399,11 +411,11 @@
       ],
       "query": "\"Darin LaHood\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
+      "last_successful_checked_at": "2026-10-29T12:56:05.611537+00:00"
     },
     "durbin": {
       "status": "ok",
-      "checked_at": "2026-10-25T11:23:36.218124+00:00",
+      "checked_at": "2026-10-29T12:56:05.611537+00:00",
       "candidates": [
         {
           "id": "3e05f4eec226dab152db14a3",
@@ -430,15 +442,39 @@
           "link_route": "Google News"
         },
         {
-          "id": "a3940b101f89f55b88ee2925",
+          "id": "d35615ee6cfb2b362903c667",
+          "member_id": "durbin",
+          "member_name": "Dick Durbin",
+          "title": "Dick Durbin responds to DOJ seeking Hutchinson indictment",
+          "snippet": "Dick Durbin responds to DOJ seeking Hutchinson indictment Punchbowl News",
+          "publisher": "Punchbowl News",
+          "publisher_host": "punchbowl.news",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9VeFViMUJOTkhQaTJoRTJfMWhMNmVVc3JnY25FbWdpZ05wbFVZRWlLeC0xdkUwZENVLTJZQnY3MEJ2WVFSNGRDeUUyVlItcTFCdi0xcFcxWGVFY1B4YzAwbGl2NUh4RW1uaHN3dQ",
+          "published_at": "2026-10-08T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "be67bba4a5fe4bc9cd58b741",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
           "title": "What to know about the U.S. Senate race to replace Sen. Dick Durbin",
-          "snippet": "What to know about the U.S. Senate race to replace Sen. Dick Durbin Chicago Sun-Times",
-          "publisher": "Chicago Sun-Times",
-          "publisher_host": "chicago.suntimes.com",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUHRLdzdnWFFpTFNlZ3J4a19UMTJrMUFYS0xBX25LejdMbUk3UWJmN21tYkJaRnMySUd4OVY1LVh1OGlPd0RqS2ZvV0oxMUJHdThmVEFQb2p3T1V3NzlRN3REdjYyMWhqbEVGcGFJOV9pNlY5MW5FaE5BRDBrdnBDUUcyOFdKOTdkRjc2TTExVXphMHI3c0lGLVIxNlF3QW9DZGR5eWk4TEdWMVZTNks5cXdmOXRJUDA",
+          "snippet": "What to know about the U.S. Senate race to replace Sen. Dick Durbin WBEZ Chicago",
+          "publisher": "WBEZ Chicago",
+          "publisher_host": "wbez.org",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNeTc2a0VvWHN4OEJHTk52TXUyMGJFXzVLZFY1MHplbENRQ3VzaWNvSWlBa2kyWEZCRFdmTHdyRzBSOElRSlBhVzZ1V0FqOEN3UUdCSHNNUHlWbFNscWdISHdQZEpmRTQ3aWNxeHBSUEE4QjJ3MEJrcE9VdWhsZXNobUliN2pwc2VGa3ZNVXNGeEdmYV9sMHI0VjBMb2Qzck12dkZTYlVnZnRxemd0bTBQZzVXdExZT0wyTllCU2t1ZHU0VUFzY2pN",
           "published_at": "2026-10-01T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "49ff51986d534ef884517f83",
+          "member_id": "durbin",
+          "member_name": "Dick Durbin",
+          "title": "Sen. Durbin offers advice and earmarks to Illinois Wesleyan University students",
+          "snippet": "Sen. Durbin offers advice and earmarks to Illinois Wesleyan University students WGLT",
+          "publisher": "WGLT",
+          "publisher_host": "wglt.org",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRnhlczlJNWMzS0J4a3pNU2hubjQ2MXpfYjFFTHVhN19fZE9xNmREZUkyYzFmczllM2xBTDJKdVlRNzFvQVhGNFpHTmZaeGtRY2RqclNGaXBPd3JvQ2pjb3NyZ0NGX0xCb0RjSS1ITk10c2JwSzI0ekY0akJORE1qSDdwbkhlbzJjRHlMME51QVlKWjhaZEJnS0g3TUFlWm5QaHZhRlkzZzBXcG85U0hza19WZ09TMjVBRE5mbmx3",
+          "published_at": "2026-09-01T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -451,18 +487,6 @@
           "publisher_host": "cbsnews.com",
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNUE9xc1lTR1Utdm1JcWNTTEJ4MEJxVTdieGJfOUVObVBwTGxJMlkybExmOHhoZUxzRDRfcHBrcXppOUxiU211STBVdHlsN2RaRE41Z0pvRVk0NldPeEY0VkJJMVp0ZmxYMzhnTGdnS0lyQ2FrUGk0bzl3S0hXOVFzS2Y1R1pCV3RYVGVyTmMxQXdXUWU5V2c",
           "published_at": "2026-08-19T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "40d3f54c7bed4b87056fc383",
-          "member_id": "durbin",
-          "member_name": "Dick Durbin",
-          "title": "Durbin, Foster decry legal services funding halt for immigrant children",
-          "snippet": "Durbin, Foster decry legal services funding halt for immigrant children Chicago Tribune",
-          "publisher": "Chicago Tribune",
-          "publisher_host": "chicagotribune.com",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNcHRDZ2xjVGtLVExPd2l2WDVMOVVEZHhWdVdfYlB6ckRxazZUNkYxd3NuUFN1cUhkSTFKbi02RFl4QzdHajVvNHRpYms1M29LTTBVejlySERGRndZYlhRVmlnQ2NEd1VHUDNWZnJGMVBwRmh2MUZEeFpxckpFWXRHaUVpN1haTDAteE5vcUZ4b2p0b2V6YnFmMjE3RE1VajQ",
-          "published_at": "2026-07-31T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -538,18 +562,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "b3b842f6a9129fcd0dad05a0",
-          "member_id": "durbin",
-          "member_name": "Dick Durbin",
-          "title": "WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service",
-          "snippet": "WATCH: Sen. Dick Durbin delivers farewell address after 44 years of service WEEK | 25 News Now",
-          "publisher": "WEEK | 25 News Now",
-          "publisher_host": "25newsnow.com",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdFJZQkRmN21Gekc3S3ZOdUVrd2U2aEV2V3B6QTBuT2hwQnR3N0pRbmlPMFRZWWJqZ1JsYkhvRXVnMWcxakJBalpwTnF5OGM1WXZhUV9XaHhTaXZycTlBYTRkS21SN1JJSnAwOGZDR0RhNDRfVldRVUI3YjE1TVdqZFdtdHJ3eEhtWFBLTUw2SnRaUGkzTzB2LURYOU5rWlJUdWlnadIBuAFBVV95cUxOWlRUM3MtQld4aUJpX2tSY2puR0NXcFk1amdTOFNsMWw1S3BnTU1HYmFOdHYzVFplSzY1UDFLY2VOVWg3dThsS1ZIWExpVFVzNzJ2bTI2RjlTb05GM21tUkE2TG9IeU9zUnpKQTUyX1hrRzRGczFBSU04dXdfZUp2RGFKaGFOS2NWMFFBYndENENtX2ZwWjgwY0NTZDNfZVVJZEl3REFQTkRnenRQWmJtQWpMTWVqb1NH",
-          "published_at": "2026-05-27T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "7a08a2c4647915a16973a59a",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
@@ -562,15 +574,15 @@
           "link_route": "Google News"
         },
         {
-          "id": "9c63fe4e19cd84e2b392fba1",
+          "id": "8d9f2fdd64538232c8564f4e",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal",
-          "snippet": "Sen. Durbin is hopeful, but skeptical, of Trump closing Iran deal WGLT",
+          "title": "Illinois lawmakers celebrate Sen. Durbin as he wraps up 44-year career in Congress",
+          "snippet": "Illinois lawmakers celebrate Sen. Durbin as he wraps up 44-year career in Congress WGLT",
           "publisher": "WGLT",
           "publisher_host": "wglt.org",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNjVnTm51Zlh0X2VRUURCY2F4Z3lkdUZDb0VaOXQ0S1ZsUjFwRE9GNEF3UC1DLUVjdTJZcVdwLXF6SVAycW9uRGlyZGJkR3lTNmtWeE82N2Q5VlJ0a0dKR21rY0prM0xLUDUyM0VkdW10NWhWV0JPQTFPMldQWEtGajUyYTBJeEpyUUpfbzVnWHczcXpzTFF5SEQwLUdBdmpHVHRpSHRHVkg",
-          "published_at": "2026-05-26T07:00:00+00:00",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYXFKNmlpQ3doWGRqaVFrd01XZ3hCNndTQXFINXkxZUg1a2tTY0czc3ZYcVA2ZGRYWExrMDRaOFNONFlaUkR0ZDVHYjZNUC1TdzhiaHIxb2k4a3M3dk1nbkI2TnY5Y3BpUVFoSWk4Vk9fa0VzdnhzRGw5M2taRFJHUkNyUDZ1RU1EUlg4VnJ4dC12RWo5YVg1elp0eXZKTkpOS29NMWRRdzk5b0lIcHJxdXRROW5ZSjJ3cHdxcUEtRmh5UQ",
+          "published_at": "2026-05-27T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -596,37 +608,73 @@
           "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQXpQcnhqVzRQVzEtWXBsVVQzdVdrdDRlTWhuR2tReVRsVnJ4M3FTTy1FV3JlT2NoazVXZjVhT1BVRXlBdnluTUN3dWV3LTJGdDcxVkVlRW5iLU9uamZ4ODlIMDdDcDFpSnUyazNDSmplYmRBR1hlbGlYcURkWG42Y1ZtWGF4SnZmSFRMRlFVbnRMalFWSk5xRHh1c0YxSmpnRjNPd0Fn",
           "published_at": "2026-05-20T07:00:00+00:00",
           "link_route": "Google News"
+        },
+        {
+          "id": "b1f1d743eff857118514ffed",
+          "member_id": "durbin",
+          "member_name": "Dick Durbin",
+          "title": "How the Supreme Court's voting rights decision could impact Illinois and explaining Dick Durbin's 'John Lewis Voting Rights Act'",
+          "snippet": "How the Supreme Court's voting rights decision could impact Illinois and explaining Dick Durbin's 'John Lewis Voting Rights Act' IPM Newsroom",
+          "publisher": "IPM Newsroom",
+          "publisher_host": "ipmnewsroom.org",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPQjVNRmc2Sk1oemF6aHlJNldVUjhpQWlBWVhySGc1WVE2Y09TY21hbTFtNC1IUDJ1UnZ5dmFEZUU3dzBqZV9QQ1I0Tjc1bU16T0hzdlVrclJtRm0tZGlMckhOaVFLdVVOZG1CeG1MRkNXZlhkQVBYQzhWeXBTMHMtTWFSMk0waUlTdi1PQ3hDREtESEp6UUJXcExVSU1QYXo0M19DaHc2bEYxbTZlY0NMYXM4U25IZ0EtdzJXMHpxN3pBT3ZWXzVMSTFneUdIdDNwS1BqbWd1RXkwLXprWHNjdUwwVQ",
+          "published_at": "2026-05-19T07:00:00+00:00",
+          "link_route": "Google News"
         }
       ],
       "query": "\"Dick Durbin\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
+      "last_successful_checked_at": "2026-10-29T12:56:05.611537+00:00"
     },
     "duckworth": {
       "status": "ok",
-      "checked_at": "2026-10-25T11:23:36.218124+00:00",
+      "checked_at": "2026-10-29T12:56:05.611537+00:00",
       "candidates": [
         {
-          "id": "6af4c7398e9fb93361450f9e",
+          "id": "707a4ece7d63671665146674",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Duckworth announces longtime advisor Kelsey Becker named Chief of Staff",
-          "snippet": "Duckworth announces longtime advisor Kelsey Becker named Chief of Staff WAND",
-          "publisher": "WAND",
-          "publisher_host": "wandtv.com",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPS0hwdTJJREMzV3Jic2ZzNnFSWjZqM2oyQkZCY25Zc3htRk5welhCX2YyUDBCekZSSFljSFdkb1M3ZW1aeVZteGtScGJuN2JSUW91YkFIMG1WSXN0UGYxU2lHczlRRXR1RldQc3RpLXRzS1Z5QldvbVZFTFlPYXBaSGM5b0Z2dGtxdjZKemZJZVR0SS1nOEJHeTZNUlN0MG1qQWxQQm5R0gG6AUFVX3lxTE9GMVZwbHhWR3padl9EY3ZkMzhmclRjdktSWGY2SWVlQnUxN2Q3c2p5UDA1eWVhVDdtVjBwRVY0WkNaZnhKQkdnUzY0ME1jLUt2dGo5MEZIU1JFSl9KbXhnd1NPSzlYVW11YXk0VW54ZDd5b1diVWdCNUE2bndUQnhRemtyZjNfcEtmX3ZVZFNpb3AxU3dleEJoX205dEw3a1RBR3NjOTExbUs0VjlBVEdSVlJ6NFBVUi1kQQ",
-          "published_at": "2026-10-05T07:00:00+00:00",
+          "title": "Duckworth, Colleagues Demand Restoration Of Canceled Energy Grants Before Permitting Vote",
+          "snippet": "Duckworth, Colleagues Demand Restoration Of Canceled Energy Grants Before Permitting Vote RiverBender.com",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNTi1YT1ZwWUlCb3RCbUdxdmhvNms0UkRFRVJlNkZ2ejByYXRnRlI1QzU1WWtKM2F1N3JiaFJpcGM3TmtkX0kxMUtKTEd0V0Q1MldCUHlLRzFPWklMOS16YVVQZmIxUTluU1ZRcEZaM0RneWNpcURPVUo4MFYwd3JQeVRaUDhXbGl0UHFmN0FOcWhzelAyaENmNGVPTkF0dEVJbUhKSTlkZGxIV0VuR2NjM29mTTdQOU9VMjlYRHJqNWl2WkN5VFVZSTJnTXdXOTA2Q3BHbHdn",
+          "published_at": "2026-10-28T14:20:00+00:00",
           "link_route": "Google News"
         },
         {
-          "id": "a36cc1df94e1c4feb31a91e0",
+          "id": "9ded0d96e1d89cbfb7c329d2",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "On Laquan McDonald’s Birthday, Duckworth Reintroduces Bill Aiming to Prevent Police-Involved Deaths",
-          "snippet": "On Laquan McDonald’s Birthday, Duckworth Reintroduces Bill Aiming to Prevent Police-Involved Deaths WTTW News",
-          "publisher": "WTTW News",
-          "publisher_host": "news.wttw.com",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ0JyQlFKOHRpMjI4d1p1SWRQSXhLRHN1SENPbC04YXRnZnM2MkxrZDRRVGZyTkZhVFZ6T1ppQTB2QnZWMzc0Q3Vxc0Q2Ni1qRDVZdFZ3cjRBOTJKZGRKWDg4ZUhsdDIxZHFhV1BWclNBNlBtUG1wLWw5UEJ0Umo2bjlHcG9CWGFjaGNZRDJzQVJESkVuUlNIeW1jZEJteFkyTEsyeFdYSmdXZktXOElIUGZpbjA0QjFYWUE",
+          "title": "Matthew Unglesbee accused of sending letters with white powder to Mike Quigley, Brad Schneider, Jan Schakowsky, Tammy Duckworth",
+          "snippet": "Matthew Unglesbee accused of sending letters with white powder to Mike Quigley, Brad Schneider, Jan Schakowsky, Tammy Duckworth ABC7 Chicago",
+          "publisher": "ABC7 Chicago",
+          "publisher_host": "abc7chicago.com",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPckU0d0xQYTRlcm50SlJVMV9IWS0wRmJ1Z2ZrQXJyS3lFMHQ3djZfM0R5OWFmWnZMX1FhWXlxTjAyd2xfb2ZpalZYUHlfU2JWSVNvb0N3OHE4a3k4M3ZRS0w1YWI4RVkwNnNzeFF3MDhwR2h0SktVSmY5aVRQb21xc0VtbE9xVmcxa0RiVzdOLUVLSGE0Z0tqeV9kWngybW1maXl0dzgtNk94QlY3ZTk3Z3o3S0FvZ3gzampHSEFNdTNKY2RIaVV0X3Z4eVBuZWt50gHWAUFVX3lxTE5fcmEwVW1jbktKREdFaVJjeU40VHZPbXhscjBRYnVISE9Yck0zeXU4Tm5Qb2d1NDZSYUNpcm1VM01fNXZGSDY0bERIbVhPXzVNQmFMZ25JUm1HS3luUnVYU19TZHZ1ZW1DQ0JocTVENjlDbUR3bVVTcEtVU2VHSHZBc0liek05UjdjcHB6aWhtRXZiT2hpNG5jTkJhVVdNbi1nWGZmRFp6amFQWFhSWXIwdGVtNU9wVTlqblM1QmxqRlBVNTNiOUZvUWRGamlXaEtuak85RlE",
+          "published_at": "2026-10-26T22:45:34+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "806a22b7d38c37fcc6ac2cc9",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth, Gillibrand, Schiff Press The FDA On Plan To Mitigate Estrogen Patch Shortage",
+          "snippet": "Duckworth, Gillibrand, Schiff Press The FDA On Plan To Mitigate Estrogen Patch Shortage RiverBender.com",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQWNZd3dWLVZDbS1Nb3pDQUNKZElmWHNjNUVJbzByVy01UUdUTE9FUS1TWmpDY28wX3BDUHE2QUZQc0hQOFdmdWVuZnJjTjJjckVEdGxqQUUydExrMThJMEFibmRVYnlzSVNkcU5hUi04ajgwYS14VUtQdEdldFl2RW1PN1BfZVBEMVo4cGVxTjcwbVJqWTY1dTlsNllKS1lyN2xTOUI2U1NFUUd4T25NY21zcUZGd19BV2MtcTN4d1Q1eU02aFRWNm91M3RqRU4teEE",
+          "published_at": "2026-10-26T19:38:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "de201dbcba6d4ab045c76305",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Sen. Duckworth slams Trump's \"foolhardy plan\" to make triumphal arch a military complex",
+          "snippet": "Sen. Duckworth slams Trump's \"foolhardy plan\" to make triumphal arch a military complex CBS News",
+          "publisher": "CBS News",
+          "publisher_host": "cbsnews.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSll6N0EwbEVIc2lsTEpJQ0JMNl9zWHJxaW1RMGlQa2J5Z3llSzViSkRndFBycGlfSHotaWM1c2Rpc2ZSeDFIbkhLWEQzc0JIaDZGanVFdmNpWlB2NDZnVllSMWIwVXlGRHBRUl9mc3Ata1pnUG8tOGZzSVFWbFROZ0ZMa0ptRGhuM284N3hYSWV5S1RJaWhj",
           "published_at": "2026-09-25T07:00:00+00:00",
           "link_route": "Google News"
         },
@@ -643,66 +691,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "5859c16af07710f190f095cb",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War",
-          "snippet": "Duckworth, Durbin, Senate Democrats Call On Hegseth To Report Total Costs Of Iran War RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNjRac1lZclhWdU95bUxlbUxYNVRWS0UxejZBeFRWRzBqMWgxVGtrWUxQTHhHSkdybW1ZdDd3V3JYQXZtelItc2RwaWVDOFl4eHVTT1cwVWJqdUhGc0xHamRWaVNHdXVLd0lMYllIU2k1ZEc5QU9aN1MtNEF1Y2o3b3EtcXRQdnhMNDBnYkg1ajQzbWxVSklNRUpIOGM5elZSNzFoNDJGOUIyaENlaUlValNTU3RBYjZmMVAzR2VNc042QUFpSHhaTU1wZXpNMFU",
-          "published_at": "2026-09-18T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "956c9f50c3ddd91cf5f747c7",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Senator Tammy Duckworth Awarded 2026 Champion Of The Industry Award By Association Of Equipment Manufacturers",
-          "snippet": "Senator Tammy Duckworth Awarded 2026 Champion Of The Industry Award By Association Of Equipment Manufacturers RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPc0pzNnFGS09LMk5IWmxfZmxMbzRmTjZETEpPM1ZqWWdCcWxURnU3YVV5UVFpaGpad21ZbWlaZ0tjZklTUTRSblRmZTdGZ2ZHQUNmUUtDMEEyUk1XSS15LUZ0Rzc0XzBMdlZXYVhtMGtsV2g1MXcyWU1IT2xGMzJtbTdFRkpiNFNqNloxQlpqU3N6OGp4bHQ1RzI4cEZ5dTJrN0VsMEYxS013SDBBM0tVV2h3cmgwSEZOVzI0M2hveW5kV2JiVUZGeHYtemxWQ1k4cTl3X3ZvTFJMemdkV2J1cjU3V2NXV09lSmJYX2tTV1NnZw",
-          "published_at": "2026-09-17T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "1f90b5bda6c85d28f7f07489",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth",
-          "snippet": "Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNQmJUME1VYnV4OXpId3VwOVNiaGRHc1FxVmkybWFLUlFDSmNyUzN0VVNMd3JoZjVobW9KTDFGT1U0MDNzeV94SWpxY2xjREdLZVhrZGd4a2Vwd0ZMdjNmNWQyX0hRRXp0ZXEzQ2tONF9hbjhxQTNJQ1I5dnVaWVhDT3UwNmFEcUNrZy1HN3BJVXM5ZFZXU19kNlZMWWJCRjR5NDBiNG5RaGZJYWFkVmE4amVlNjJsM2tRRjMyZ0xxQUR1TXc3eW5PbGFWR3JEVFdqdlYxRlVBWkZqNENxRWZXZ01ZU2xkQ1p4aHJMRnJGVjBBRlR6NldIQlExWkV0VWcxbVE",
-          "published_at": "2026-09-10T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "cfa7a87342058e7287e2354e",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Bridgeport residents push back on Amtrak plan for Chicago maintenance facility; Durbin and Duckworth seek answers",
-          "snippet": "Bridgeport residents push back on Amtrak plan for Chicago maintenance facility; Durbin and Duckworth seek answers CBS News",
-          "publisher": "CBS News",
-          "publisher_host": "cbsnews.com",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUGRCaXlHbXVCZ1pGbjFhNTFnLU5lbGY0OUozRnBNbHNPRTh6bC00VGlNU1o0NEdUVi1OWl9CdUFzc191dGdNXzdtTEZRZnlaR1ZjMVFIOTlJTkE3MUpTTTlsSWxrV0xjWkx1WlhaY1lSQUNUQ1l1TzRyc2pHUGFRclQtc1d1bEZ4N2t3c0NJdDJhMmd6WnZocVJueHNqTFBiZ01TV0JVWQ",
-          "published_at": "2026-08-27T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "a44f49ce9c0a0cc21ac38a47",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "NASA retiree Dr. Sylvia Washington of Winfield says pension disappeared, Illinois Senator Duckworth cites broader backlog concerns",
-          "snippet": "NASA retiree Dr. Sylvia Washington of Winfield says pension disappeared, Illinois Senator Duckworth cites broader backlog concerns ABC7 Chicago",
-          "publisher": "ABC7 Chicago",
-          "publisher_host": "abc7chicago.com",
-          "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPU2JmUFBGaHpiaTU0LTJtd3dxcmU1OV9KOGpUZTlTNmdMN1VPR1BJV1ZaQlJyalhZRVJ5UTNuUHlXMDBZNTRFRl84T1VidUdFZXA4M3BQUDNvUkdKNnBNVFZjV21kSy1lVTJPUXQyS0l0VmVHYnlkN2w3UzBZZXBhQ2R1MWM1cWVuVTdRbHVaTTVXRlpSV255dUpDTDE0ZGZuUm5rWFVqUVphSGxHNDhhYk0yZFJiUHNybVZGaFJFQjIxMW1XLXZfbGVram1fbkhKLVVNM3hPY21USGJ1TlNvaVBGN29kNU13ZHp2UmRjWnZlSGE4ZG9Z0gH8AUFVX3lxTE9UUW5sZFBJRjJNN0JDa2ltVHZuZ1NsWVpRakZFNkdHRzZwTTNMV2ZlT0NNNmNjZmJ6Uy1ZSG5OT0RMQnNhdUZFVUt1NXBjV2NHU2JPUDNlbzRJZl9pOXk0bF9xNXlLTy03d1p0ZHpWa2d2Mm9WaUtVNmdiNWlIc2dvT0Y3bXZ5aUFwcUZWVUhoUjRid0FXYjB0M0gxZ2M5RjY0TTB2eGRSbEdMbDlXeDZ3ZEJKV3A3VjBsNm5kS3lLVzBFaVJEYkNtbW9LZDFqZTZZZzJSYU8xQWh2VGlzVkdlVDNNcDRfUFc0WlF6MjhVa0pEX2VqS2xsV1pVbw",
-          "published_at": "2026-08-20T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "95f8e8374823cbbb2b064553",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
@@ -712,42 +700,6 @@
           "publisher_host": "chicagotribune.com",
           "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZHBtbWJQWDJuRzlvUFpPQWd2VlZabjlEczVMUHRPUnJ2TEJmczdqWTI2TDBLX2Q3Y0lkbEFKcjdQOVdubHN2LW9zRTJkWVN2aGhabUhPSkZfd3JjZkJZdU44Qzc0bTBRREtJengzWnl1ZGNhZ2V5Z2phQ1N2LVdkVzBQcXdpNDFiM21ROS1TQldYdlJjdEVGUnRERTBhQmM3bF8zLTN5UEFwUGdibkF4NTNaM1dHVTI2dWJQd1NR",
           "published_at": "2026-08-10T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "1306ebb910665f3389d6665d",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare",
-          "snippet": "Sens. Dick Durbin and Tammy Duckworth question FAA flight caps at O’Hare Chicago Tribune",
-          "publisher": "Chicago Tribune",
-          "publisher_host": "chicagotribune.com",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5UZXluMFJBVXBES3BoWkZyM0REb1YxQjBBSlFRTGtiTTAxY1JiSDJYdWtZZ3V4azNVOVRQVVNacml3SU1ZRlRhUDI0TWQyWHJOOVhYb1BDOS01Zi1WaEhLX2IzRXR4RUgyV0ZoaA",
-          "published_at": "2026-07-31T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "d4864b516f0f8ba897619cea",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat",
-          "snippet": "Duckworth, Hirono Introduce WARRIOR Act to Codify Women’s Right to Serve in Combat RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOeTZyWklJM1J6a3VBbUJPN2dfTmhfVUxsSktKZi1ScnNpSEJRMW5vLTFKMzVSNTc0Vk1icnBlV0hJc0Y0UTJMZTZlVm1rYUZBbjdNT2paZnV6YkhOTThfdTN6RzN6bmprczBwVlJSVVFnVm9jOFNNS1Y2aGlSei1hQ2NJYkZnZzFrVVZoOTM2N3JjNjE0VkxvMEpnNV80cnFKYV92TTk4WUExWW9WcVphcjl3RG9oTTEzU09Yc0NSVmNfWDJ0NW96d1pmSQ",
-          "published_at": "2026-07-31T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "11c4b9660709bed0660db46c",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities",
-          "snippet": "US Sen. Tammy Duckworth pushes legislation to close ‘challenge’ for riders with disabilities Chicago Tribune",
-          "publisher": "Chicago Tribune",
-          "publisher_host": "chicagotribune.com",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdllYUHk4aTNLNVFZREwwUjJKZUdTd0k2TW9wVUs1SW9DMktpQzVTN1lkRXNZclJ6RDdsaFBKeUNxOEhvUGp2ZmE1NmltbHlHNTFRc0hmaU9rNDJpNGpUTDd1Q0FWaGY1NDRlOGpCTmMxWm1DVnF3Zk5UY1JVeW5NdHpjSkEwZVFLVDJIcTFXU05mV0g2Z1BJelZDYw",
-          "published_at": "2026-07-23T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -763,117 +715,21 @@
           "link_route": "Google News"
         },
         {
-          "id": "190fa4ac9cf24df0593ade15",
+          "id": "cd6724361339f4bd2c76e8d0",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing",
-          "snippet": "Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing Chicago Sun-Times",
-          "publisher": "Chicago Sun-Times",
-          "publisher_host": "chicago.suntimes.com",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTXRqMlFteW82RnI3bmN3bDRhdTVBUzJPcjNGazhVX2doV0Z2Y3RKUjljLURnLTZoS1N4TDdPZW1BVnItR1ZqUWNKVVRNa3hCZ3JkVWxzemI0ZjZXbF9IOE5HM0Z1WEtLaUFXN3dOUUhaeFNDMjBCR2VpalUwMmNXT3EzSUtGUGdKLXduUU5jNWlDV2RwUEh3YmlUbUN5cEVTTm1sbS1YUEY2SWExbHNWNEx5Ung2NXk1",
-          "published_at": "2026-07-02T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "d3b338ed7a7f677d6e4b70c7",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \"Broadview Six\" misconduct accusations",
-          "snippet": "Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \"Broadview Six\" misconduct accusations CBS News",
-          "publisher": "CBS News",
-          "publisher_host": "cbsnews.com",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSWdYdU5PZVpTWGdKM2RpQUVyNUtCZWtDRTJNS3JnZVlDcnh0VXZDOVBfQUUzTW1hek9xc1lYZFlydlEyU09YV1pLU180N2pJUVJ1aU0xMHNwNEMtNnNwSW9aOEJOQjVrUzhMQlpfVXFSVGpld0p0TFBnZ3laajdRT2FCVmQ3TjNKU0cydmNqeGNRTkdvMVFJazB0WkRETG9OZUE0",
-          "published_at": "2026-06-03T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "2a90cd16cf6aa7523febcf5d",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’",
-          "snippet": "Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’ WTTW News",
-          "publisher": "WTTW News",
-          "publisher_host": "news.wttw.com",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdmFBN3FCZ09OVUQtNjI3dEg5b1dWdmVCN1BCcjlMOEUwemJ6ajViT2o0dHpnYlpMNzlYNy1QbU5QUklZWFU4TlY5aWxrdnJjRzVFME9xTFgwenFxLU9VeWNOUUhYUW5LYzVzelJfSkJ3TG9YbDhzbXpjNGIwN1BsYzhhekhSb0NSWEI1WjRjVTRmbkFSVlhoUVBxT201c210Qk1UTWItSlNFSWlhYzRBWnlB",
-          "published_at": "2026-06-02T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "17b19f722e00c981f159efb9",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Durbin, Duckworth want Chicago's top federal prosecutor to resign over botched 'Broadview Six' case",
-          "snippet": "Durbin, Duckworth want Chicago's top federal prosecutor to resign over botched 'Broadview Six' case NPR Illinois",
-          "publisher": "NPR Illinois",
-          "publisher_host": "nprillinois.org",
-          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVmYzRkNNUV9IelNfYklZQ3hMSGJTeGZ4TGk1MC1HSlpHazFNbUNkaWZpVTJxWmpGNmdDdC1iczNnV3lLcDlxR0FkUVJwNDdlUkNHWUZNQVNtbmNTVVdseUh0amhfYi1rdzFsQ1BTalBVTDdTOG10X2R3Y3FOOEViNFVBWE8yYUtiWm1tcXFxUF9oR0NWTHVMX3FKRGRvUWRKZkRlZ2haeWduVmJaVm5oZENzTldJR1JLaEdsSExxQXVQQk5pRm5BM0ZkVFNUaTBOaG9EVERKT1dmZkU",
-          "published_at": "2026-06-02T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "b601697102116d2fe39c45c9",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "‘Chaos’ and ‘dysfunction’: Durbin, Duckworth want top federal prosecutor out; Boutros fights back",
-          "snippet": "‘Chaos’ and ‘dysfunction’: Durbin, Duckworth want top federal prosecutor out; Boutros fights back Daily Herald",
-          "publisher": "Daily Herald",
-          "publisher_host": "dailyherald.com",
-          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQRGx2cFJkUGY2SzNDZ1VyMGp5MGlZOVVpbTZiLWNWXzF0ZEhOektuU1FZVTBmV2kwbjhpbDRRVUk5c08wRUxaNmh3dXdxXzhicjRBc0NkTzZtWUgtNzZvTDYzX2tiYy1LaDZDNmFKamZUNlJpWFF2QUxLWm1uX3NXeU14b19RQ01kc2N6bC16RUt0TXV5eXVSMVVUaWk0TG4wSzg1WXE1NmxRUmZkQXQ2cUZPQm85US1qYUNqNUt0NHBmMDY2aHdxTThxQUtSc0ZaR3g0RDJJZzBfZkVqMHpBeVF3",
-          "published_at": "2026-06-02T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "ee4a318b1b47eb4b1ef8597f",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Curtis Unveil Bipartisan Bills Aimed At South China Sea Crisis Planning",
-          "snippet": "Duckworth, Curtis Unveil Bipartisan Bills Aimed At South China Sea Crisis Planning RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSnhyM1FuVENsTEt4REFnMGgxM193RURjNEhIN2pEVHo2OTVJNVZDSURMQ0JBeFZkeV91UHBWNDJRZmdvdU8wUmE5MDBVc0R5T3NKcTg3RmZQMzc5MzRscno3VDZVV3I0MExFczNEMzhUR1RnUVYxX1BuMUx1LWpuRDNaYkRWalplTk84aC05R3FidlFhY1pBa0hhWnR2UlBDM2tNc3ZVaHRqZnkxQlkyV3Qxd2xJWVk3dVN5Y1pDN2ZRUVlyc044aE1oS1Y",
-          "published_at": "2026-05-27T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "2159a6674e96af3b866b3f3f",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth And Baldwin Urge FAA To Review How Reduced Crew Size Impacts Emergency Evacuation Standards And Passenger Safety",
-          "snippet": "Duckworth And Baldwin Urge FAA To Review How Reduced Crew Size Impacts Emergency Evacuation Standards And Passenger Safety RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPNWh4R1dBdTF6RFdOQW4xbkIyZlhXWkJ5UHplejFwMktQMzJlM25jR1NYb0c2MlBncXB3Q2pQbGI4Q3N6U1JPVHRFMmdJOTh5RzFxMEwzZDc2OEl5QWtsaHVRUVU0Tk5aN19lZ3NuWGt4UDB0aE1ZbUZIOUdDNkFaSUFxNUhfcHNEbFFsUUFjMENTUENmblQtdTdWdDRHZHc2X3lhQUZYUW5KZmJ3OUNPVHdGbXR2eWszTXdNeGZET2k0c0VZNkZLcjhOcno2RHJ3b0ItSVNDMVVaTURlTFhkbUFHRXRJVEFvOVhCSnVRZVVUR21nbjFQQXNiQ05BT01GRWpB",
-          "published_at": "2026-05-18T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "8b182ee785d6e7870f76c603",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Sens. Duckworth, Baldwin call on FAA to study impact of reduced flight attendant staffing",
-          "snippet": "Sens. Duckworth, Baldwin call on FAA to study impact of reduced flight attendant staffing CBS News",
-          "publisher": "CBS News",
-          "publisher_host": "cbsnews.com",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORlZnNHd6MXR5eWg1QWYtMW9aWHFhbGF1ekhjR3JydTZOMXpIZG5wdi1xXy0zVGd4VDZ3bU90cE42dlNuT3YxMjAyMW9nVThzdklJcG1CSjN0X0gyRzJSRmdPUlY2Nl9vWjk4cVRkeHh0ZjUwb00ydDdtTXB2cW8zR2UyVC15RGEwTHAwSWF4c1c4V2xfMjdGazNsdjBvNHc",
-          "published_at": "2026-05-15T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "b75984f0a19e39bdf33beb0c",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth Grills Hegseth, Caine Over 'Lack Of Strategy' In Iran",
-          "snippet": "Duckworth Grills Hegseth, Caine Over 'Lack Of Strategy' In Iran RiverBender.com",
-          "publisher": "RiverBender.com",
-          "publisher_host": "riverbender.com",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQ09LVlJpMWxjTFh2QS1xVDRJbk9Ed05Fa1NuOVoyeV9pR214MGd0cFB3LVhMMWFWVVo1QVpnTlUxUGsyUF81MWh2NXZPeTRHVmlDX09iRVYtZkMtNWQtWnhrNFFkcEI1b2xMbEVhNG42RjFnaEpFNnZVN1lOMS04RGZiLVJXbVNyTEVDb3dyRUlqUVV0T1RfOUtXOWZsa1ZjQW9LRk4xcU5xcGlpWVVpag",
-          "published_at": "2026-04-30T07:00:00+00:00",
+          "title": "Driscoll shuts down social media accounts after post celebrating Duckworth",
+          "snippet": "Driscoll shuts down social media accounts after post celebrating Duckworth The Hill",
+          "publisher": "The Hill",
+          "publisher_host": "thehill.com",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOLVlUNGlJTnpBLVV0cFMyZjVLZDZXaW8tZkZXMENMYk1LRU1OenFFQ1U3UW9kTE1ocFVkdk5mU3RrVGZUVFN1WUdxMEFHMTNLQVV0NHZjcXROSlhNQU5kTm5Bek02bHRNRU50X3lXYmdyVG9pU3QzbmZURWRid2VjTlBiMHpsOGhjX0I4dllwNVgyNGVPd2fSAZsBQVVfeXFMTlo3YVVYU1JBSnd3bWJENTV0dE1XQUxsUlVjbmRER0FLRG0xOXo1ZGR5WF9GQU50Q2pNYWFCUE9DTHFpUlNKbTVtekdqRW1fRTE5Q283ak9FMFd0MTlOdFk4M1JHMHhlSjRSS2FUaHhBc1kzQzJPVHI2ZTY0N1NfaE5UR093NWdfSER1amQzYUw0TDljckZObXdZSE0",
+          "published_at": "2026-04-15T07:00:00+00:00",
           "link_route": "Google News"
         }
       ],
       "query": "\"Tammy Duckworth\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-10-25T11:23:36.218124+00:00"
+      "last_successful_checked_at": "2026-10-29T12:56:05.611537+00:00"
     }
   }
 }

@@ -1,66 +1,66 @@
 {
-  "work_hash": "3905c72920f4af5d2f4bfbcc57818c2a1cdeb14c415a804a8b23423cb97c53e9",
-  "day": "2026-10-25",
-  "created_at": "2026-10-25T11:23:36.218124+00:00",
+  "work_hash": "4d7c915f1e01679a43830b837cc228ccab0e97faa7c629e8a4681fe90062d7b7",
+  "day": "2026-10-29",
+  "created_at": "2026-10-29T12:56:05.611537+00:00",
   "batches": [
     {
-      "batch_hash": "cea62f1beee30aa9ab41813dbed03be94418c659913ca184a9e771ed7f9c64cd",
+      "batch_hash": "09a2530212275f491887574f6e6320f7bbc2b56634feeb91932c2ae8ed7122d6",
       "cases": [
         {
-          "id": "2f470c018c123d5e8eb948e4",
+          "id": "177c49ecab08e8fc892dadd9",
           "member_id": "fritts",
           "member_name": "Bradley Fritts",
-          "title": "Fritts honors local women at 2026 Women to Watch Event",
-          "snippet": "Fritts honors local women at 2026 Women to Watch Event Shaw Local"
+          "title": "Fritts, ROE 47 to host winter clothing drive Nov. 2-15",
+          "snippet": "Fritts, ROE 47 to host winter clothing drive Nov. 2-15 Shaw Local"
         },
         {
-          "id": "0c0e45b1520ce7a0836025d6",
+          "id": "1f8b63f84cecb5ff14c32721",
+          "member_id": "fritts",
+          "member_name": "Bradley Fritts",
+          "title": "Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano",
+          "snippet": "Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano Shaw Local"
+        },
+        {
+          "id": "2a887f37bc61ee6f4c1884ce",
+          "member_id": "arellano",
+          "member_name": "Li Arellano, Jr.",
+          "title": "Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano",
+          "snippet": "Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano Shaw Local"
+        },
+        {
+          "id": "92257d7ba9b72c57f66f2074",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Trump endorses LaHood in 16th Congressional District race",
-          "snippet": "Trump endorses LaHood in 16th Congressional District race MyStateline"
+          "title": "Loeffler, LaHood talk entrepreneurship with Illinois Wesleyan students",
+          "snippet": "Loeffler, LaHood talk entrepreneurship with Illinois Wesleyan students The Pantagraph"
         },
         {
-          "id": "a33b37d20672af1d9c149cee",
+          "id": "1c236a34d828d869343e05fe",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "U.S. Rep. LaHood visits Rochelle, tours Wheatland Tube",
-          "snippet": "U.S. Rep. LaHood visits Rochelle, tours Wheatland Tube Shaw Local"
+          "title": "LaHood optimistic for successful appeal after McLean County denied FEMA storm recovery aid",
+          "snippet": "LaHood optimistic for successful appeal after McLean County denied FEMA storm recovery aid WGLT"
         },
         {
-          "id": "19627fdf0a51c948ae97f488",
+          "id": "04db1498c354636d5eba561a",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "LaHood, Sorensen have big cash advantages in re-election bids",
-          "snippet": "LaHood, Sorensen have big cash advantages in re-election bids WGLT"
+          "title": "LaHood writes Trump, FEMA appealing for disaster aid",
+          "snippet": "LaHood writes Trump, FEMA appealing for disaster aid WEEK | 25 News Now"
         },
         {
-          "id": "1186e20a27d72216a0bbb5a1",
+          "id": "c7643b2a2f90da17b647782a",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
-          "title": "Rep. Darin Lahood tours Illinois Central College's health facilities",
-          "snippet": "Rep. Darin Lahood tours Illinois Central College's health facilities WEEK | 25 News Now"
+          "title": "Trump endorses Darin LaHood, other Illinois Republicans for midterms",
+          "snippet": "Trump endorses Darin LaHood, other Illinois Republicans for midterms Peoria Journal Star"
         },
         {
-          "id": "a3940b101f89f55b88ee2925",
+          "id": "49ff51986d534ef884517f83",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
-          "title": "What to know about the U.S. Senate race to replace Sen. Dick Durbin",
-          "snippet": "What to know about the U.S. Senate race to replace Sen. Dick Durbin Chicago Sun-Times"
-        },
-        {
-          "id": "915479414d6d144c62e10438",
-          "member_id": "durbin",
-          "member_name": "Dick Durbin",
-          "title": "Illinois Sen. Dick Durbin fires Sheri Mecklenburg as Senate Judiciary Committee counsel after Broadview Six allegations",
-          "snippet": "Illinois Sen. Dick Durbin fires Sheri Mecklenburg as Senate Judiciary Committee counsel after Broadview Six allegations CBS News"
-        },
-        {
-          "id": "bfbba49505ac6ed3e5229d0b",
-          "member_id": "durbin",
-          "member_name": "Dick Durbin",
-          "title": "Sen. Dick Durbin warns DOJ against ‘doling out compensation to rioters’ in new Trump fund",
-          "snippet": "Sen. Dick Durbin warns DOJ against ‘doling out compensation to rioters’ in new Trump fund NBC News"
+          "title": "Sen. Durbin offers advice and earmarks to Illinois Wesleyan University students",
+          "snippet": "Sen. Durbin offers advice and earmarks to Illinois Wesleyan University students WGLT"
         }
       ],
       "payload": {
@@ -85,7 +85,7 @@
           },
           {
             "role": "user",
-            "content": "[{\"id\": \"2f470c018c123d5e8eb948e4\", \"member_name\": \"Bradley Fritts\", \"title\": \"Fritts honors local women at 2026 Women to Watch Event\", \"snippet\": \"Fritts honors local women at 2026 Women to Watch Event Shaw Local\"}, {\"id\": \"0c0e45b1520ce7a0836025d6\", \"member_name\": \"Darin LaHood\", \"title\": \"Trump endorses LaHood in 16th Congressional District race\", \"snippet\": \"Trump endorses LaHood in 16th Congressional District race MyStateline\"}, {\"id\": \"a33b37d20672af1d9c149cee\", \"member_name\": \"Darin LaHood\", \"title\": \"U.S. Rep. LaHood visits Rochelle, tours Wheatland Tube\", \"snippet\": \"U.S. Rep. LaHood visits Rochelle, tours Wheatland Tube Shaw Local\"}, {\"id\": \"19627fdf0a51c948ae97f488\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood, Sorensen have big cash advantages in re-election bids\", \"snippet\": \"LaHood, Sorensen have big cash advantages in re-election bids WGLT\"}, {\"id\": \"1186e20a27d72216a0bbb5a1\", \"member_name\": \"Darin LaHood\", \"title\": \"Rep. Darin Lahood tours Illinois Central College's health facilities\", \"snippet\": \"Rep. Darin Lahood tours Illinois Central College's health facilities WEEK | 25 News Now\"}, {\"id\": \"a3940b101f89f55b88ee2925\", \"member_name\": \"Dick Durbin\", \"title\": \"What to know about the U.S. Senate race to replace Sen. Dick Durbin\", \"snippet\": \"What to know about the U.S. Senate race to replace Sen. Dick Durbin Chicago Sun-Times\"}, {\"id\": \"915479414d6d144c62e10438\", \"member_name\": \"Dick Durbin\", \"title\": \"Illinois Sen. Dick Durbin fires Sheri Mecklenburg as Senate Judiciary Committee counsel after Broadview Six allegations\", \"snippet\": \"Illinois Sen. Dick Durbin fires Sheri Mecklenburg as Senate Judiciary Committee counsel after Broadview Six allegations CBS News\"}, {\"id\": \"bfbba49505ac6ed3e5229d0b\", \"member_name\": \"Dick Durbin\", \"title\": \"Sen. Dick Durbin warns DOJ against ‘doling out compensation to rioters’ in new Trump fund\", \"snippet\": \"Sen. Dick Durbin warns DOJ against ‘doling out compensation to rioters’ in new Trump fund NBC News\"}]"
+            "content": "[{\"id\": \"177c49ecab08e8fc892dadd9\", \"member_name\": \"Bradley Fritts\", \"title\": \"Fritts, ROE 47 to host winter clothing drive Nov. 2-15\", \"snippet\": \"Fritts, ROE 47 to host winter clothing drive Nov. 2-15 Shaw Local\"}, {\"id\": \"1f8b63f84cecb5ff14c32721\", \"member_name\": \"Bradley Fritts\", \"title\": \"Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano\", \"snippet\": \"Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano Shaw Local\"}, {\"id\": \"2a887f37bc61ee6f4c1884ce\", \"member_name\": \"Li Arellano, Jr.\", \"title\": \"Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano\", \"snippet\": \"Dixon Chamber to host Legislative Luncheon featuring state Rep. Brad Fritts and state Sen. Li Arellano Shaw Local\"}, {\"id\": \"92257d7ba9b72c57f66f2074\", \"member_name\": \"Darin LaHood\", \"title\": \"Loeffler, LaHood talk entrepreneurship with Illinois Wesleyan students\", \"snippet\": \"Loeffler, LaHood talk entrepreneurship with Illinois Wesleyan students The Pantagraph\"}, {\"id\": \"1c236a34d828d869343e05fe\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood optimistic for successful appeal after McLean County denied FEMA storm recovery aid\", \"snippet\": \"LaHood optimistic for successful appeal after McLean County denied FEMA storm recovery aid WGLT\"}, {\"id\": \"04db1498c354636d5eba561a\", \"member_name\": \"Darin LaHood\", \"title\": \"LaHood writes Trump, FEMA appealing for disaster aid\", \"snippet\": \"LaHood writes Trump, FEMA appealing for disaster aid WEEK | 25 News Now\"}, {\"id\": \"c7643b2a2f90da17b647782a\", \"member_name\": \"Darin LaHood\", \"title\": \"Trump endorses Darin LaHood, other Illinois Republicans for midterms\", \"snippet\": \"Trump endorses Darin LaHood, other Illinois Republicans for midterms Peoria Journal Star\"}, {\"id\": \"49ff51986d534ef884517f83\", \"member_name\": \"Dick Durbin\", \"title\": \"Sen. Durbin offers advice and earmarks to Illinois Wesleyan University students\", \"snippet\": \"Sen. Durbin offers advice and earmarks to Illinois Wesleyan University students WGLT\"}]"
           }
         ],
         "response_format": {
@@ -104,14 +104,14 @@
                       "id": {
                         "type": "string",
                         "enum": [
-                          "2f470c018c123d5e8eb948e4",
-                          "0c0e45b1520ce7a0836025d6",
-                          "a33b37d20672af1d9c149cee",
-                          "19627fdf0a51c948ae97f488",
-                          "1186e20a27d72216a0bbb5a1",
-                          "a3940b101f89f55b88ee2925",
-                          "915479414d6d144c62e10438",
-                          "bfbba49505ac6ed3e5229d0b"
+                          "177c49ecab08e8fc892dadd9",
+                          "1f8b63f84cecb5ff14c32721",
+                          "2a887f37bc61ee6f4c1884ce",
+                          "92257d7ba9b72c57f66f2074",
+                          "1c236a34d828d869343e05fe",
+                          "04db1498c354636d5eba561a",
+                          "c7643b2a2f90da17b647782a",
+                          "49ff51986d534ef884517f83"
                         ]
                       },
                       "relevant": {
@@ -144,35 +144,49 @@
       }
     },
     {
-      "batch_hash": "7a9402c306797dcf66d83c8a337eb4ed4dbdbfa3de53ed144ca78e04c34fabfb",
+      "batch_hash": "fde617ab83877ab76e6ddfc0c242cf9db896d5e2c441315a7844c1df7e3ad6af",
       "cases": [
         {
-          "id": "1f90b5bda6c85d28f7f07489",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth",
-          "snippet": "Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth RiverBender.com"
+          "id": "8d9f2fdd64538232c8564f4e",
+          "member_id": "durbin",
+          "member_name": "Dick Durbin",
+          "title": "Illinois lawmakers celebrate Sen. Durbin as he wraps up 44-year career in Congress",
+          "snippet": "Illinois lawmakers celebrate Sen. Durbin as he wraps up 44-year career in Congress WGLT"
         },
         {
-          "id": "190fa4ac9cf24df0593ade15",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing",
-          "snippet": "Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing Chicago Sun-Times"
+          "id": "b1f1d743eff857118514ffed",
+          "member_id": "durbin",
+          "member_name": "Dick Durbin",
+          "title": "How the Supreme Court's voting rights decision could impact Illinois and explaining Dick Durbin's 'John Lewis Voting Rights Act'",
+          "snippet": "How the Supreme Court's voting rights decision could impact Illinois and explaining Dick Durbin's 'John Lewis Voting Rights Act' IPM Newsroom"
         },
         {
-          "id": "d3b338ed7a7f677d6e4b70c7",
+          "id": "707a4ece7d63671665146674",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \"Broadview Six\" misconduct accusations",
-          "snippet": "Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \"Broadview Six\" misconduct accusations CBS News"
+          "title": "Duckworth, Colleagues Demand Restoration Of Canceled Energy Grants Before Permitting Vote",
+          "snippet": "Duckworth, Colleagues Demand Restoration Of Canceled Energy Grants Before Permitting Vote RiverBender.com"
         },
         {
-          "id": "2a90cd16cf6aa7523febcf5d",
+          "id": "9ded0d96e1d89cbfb7c329d2",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
-          "title": "Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’",
-          "snippet": "Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’ WTTW News"
+          "title": "Matthew Unglesbee accused of sending letters with white powder to Mike Quigley, Brad Schneider, Jan Schakowsky, Tammy Duckworth",
+          "snippet": "Matthew Unglesbee accused of sending letters with white powder to Mike Quigley, Brad Schneider, Jan Schakowsky, Tammy Duckworth ABC7 Chicago"
+        },
+        {
+          "id": "806a22b7d38c37fcc6ac2cc9",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth, Gillibrand, Schiff Press The FDA On Plan To Mitigate Estrogen Patch Shortage",
+          "snippet": "Duckworth, Gillibrand, Schiff Press The FDA On Plan To Mitigate Estrogen Patch Shortage RiverBender.com"
+        },
+        {
+          "id": "cd6724361339f4bd2c76e8d0",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Driscoll shuts down social media accounts after post celebrating Duckworth",
+          "snippet": "Driscoll shuts down social media accounts after post celebrating Duckworth The Hill"
         }
       ],
       "payload": {
@@ -197,7 +211,7 @@
           },
           {
             "role": "user",
-            "content": "[{\"id\": \"1f90b5bda6c85d28f7f07489\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth\", \"snippet\": \"Duckworth Pushes For Clarity And Due Process For Exemplary Military Officers Whose Promotions Are Blocked By Pete Hegseth RiverBender.com\"}, {\"id\": \"190fa4ac9cf24df0593ade15\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing\", \"snippet\": \"Sen. Duckworth heads to Japan to boost Illinois quantum, agriculture and housing Chicago Sun-Times\"}, {\"id\": \"d3b338ed7a7f677d6e4b70c7\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \\\"Broadview Six\\\" misconduct accusations\", \"snippet\": \"Senators Durbin, Duckworth, Congressman Garcia call for U.S. Attorney Andrew Boutros to resign after \\\"Broadview Six\\\" misconduct accusations CBS News\"}, {\"id\": \"2a90cd16cf6aa7523febcf5d\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’\", \"snippet\": \"Duckworth, Durbin Call on Andrew Boutros to Step Down as Chicago’s U.S. Attorney Amid ‘Chaos,’ ‘Dysfunction’ WTTW News\"}]"
+            "content": "[{\"id\": \"8d9f2fdd64538232c8564f4e\", \"member_name\": \"Dick Durbin\", \"title\": \"Illinois lawmakers celebrate Sen. Durbin as he wraps up 44-year career in Congress\", \"snippet\": \"Illinois lawmakers celebrate Sen. Durbin as he wraps up 44-year career in Congress WGLT\"}, {\"id\": \"b1f1d743eff857118514ffed\", \"member_name\": \"Dick Durbin\", \"title\": \"How the Supreme Court's voting rights decision could impact Illinois and explaining Dick Durbin's 'John Lewis Voting Rights Act'\", \"snippet\": \"How the Supreme Court's voting rights decision could impact Illinois and explaining Dick Durbin's 'John Lewis Voting Rights Act' IPM Newsroom\"}, {\"id\": \"707a4ece7d63671665146674\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Colleagues Demand Restoration Of Canceled Energy Grants Before Permitting Vote\", \"snippet\": \"Duckworth, Colleagues Demand Restoration Of Canceled Energy Grants Before Permitting Vote RiverBender.com\"}, {\"id\": \"9ded0d96e1d89cbfb7c329d2\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Matthew Unglesbee accused of sending letters with white powder to Mike Quigley, Brad Schneider, Jan Schakowsky, Tammy Duckworth\", \"snippet\": \"Matthew Unglesbee accused of sending letters with white powder to Mike Quigley, Brad Schneider, Jan Schakowsky, Tammy Duckworth ABC7 Chicago\"}, {\"id\": \"806a22b7d38c37fcc6ac2cc9\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Duckworth, Gillibrand, Schiff Press The FDA On Plan To Mitigate Estrogen Patch Shortage\", \"snippet\": \"Duckworth, Gillibrand, Schiff Press The FDA On Plan To Mitigate Estrogen Patch Shortage RiverBender.com\"}, {\"id\": \"cd6724361339f4bd2c76e8d0\", \"member_name\": \"Tammy Duckworth\", \"title\": \"Driscoll shuts down social media accounts after post celebrating Duckworth\", \"snippet\": \"Driscoll shuts down social media accounts after post celebrating Duckworth The Hill\"}]"
           }
         ],
         "response_format": {
@@ -216,10 +230,12 @@
                       "id": {
                         "type": "string",
                         "enum": [
-                          "1f90b5bda6c85d28f7f07489",
-                          "190fa4ac9cf24df0593ade15",
-                          "d3b338ed7a7f677d6e4b70c7",
-                          "2a90cd16cf6aa7523febcf5d"
+                          "8d9f2fdd64538232c8564f4e",
+                          "b1f1d743eff857118514ffed",
+                          "707a4ece7d63671665146674",
+                          "9ded0d96e1d89cbfb7c329d2",
+                          "806a22b7d38c37fcc6ac2cc9",
+                          "cd6724361339f4bd2c76e8d0"
                         ]
                       },
                       "relevant": {
@@ -254,18 +270,20 @@
   ],
   "decisions": {},
   "case_hashes": {
-    "2f470c018c123d5e8eb948e4": "5cadde1190b9b32199b3ad8a2a94d52ce7f07f87e7e197151619da73e499204f",
-    "0c0e45b1520ce7a0836025d6": "a83af3ac338cf4e4e469f5e60c2784ba9b7996cc3c488c7944347d01e7102aca",
-    "a33b37d20672af1d9c149cee": "3115bb13298a77e071e6d561520ca212799b10225dd6289d48b3265710257c61",
-    "19627fdf0a51c948ae97f488": "d41f25bf3d8abba043f799d1269230cfb125e3c1e6bbc0ea8adc070bcb9f5892",
-    "1186e20a27d72216a0bbb5a1": "399cf57f30695072da61b41fe5e95a1ff25d89fa66b88f66db48080bc65e4041",
-    "a3940b101f89f55b88ee2925": "c62172d0e1b34a19c135da4c31ca6f160a5f95c66d33d562da841d6607007706",
-    "915479414d6d144c62e10438": "6260290a401b1497fec6f8991d6b5d508688021f2353f196c733a8dd07d51b1c",
-    "bfbba49505ac6ed3e5229d0b": "6d056d09b4cb5358601da072c7dcb831084ee0ceee36644f51941fe9177d5521",
-    "1f90b5bda6c85d28f7f07489": "39711ab14f3a924c24c58e5696b77f6294713466a7c1ba6f51b86aa0a5e8662a",
-    "190fa4ac9cf24df0593ade15": "cee5fcd3adb84c971e154afe9aed7402e7bac3945ff3b07994ba04658b969bd3",
-    "d3b338ed7a7f677d6e4b70c7": "a22402781801f4f8e5a3fc1ce564f601eff5e512bd26c7740b5624ac0d651dea",
-    "2a90cd16cf6aa7523febcf5d": "b393fc29723dde362899779f2382ec43d680542d6976efc67dcca8e629d50bde"
+    "177c49ecab08e8fc892dadd9": "55df85439b54ef9ab99a56464c19225bd62576aa6da32c9c67865e71cd7e7058",
+    "1f8b63f84cecb5ff14c32721": "53da92bf298cb3d3a5cc24878f808bfc5f1dcabff3dc05e8f83a7166624b7b8f",
+    "2a887f37bc61ee6f4c1884ce": "32983c483f1045724796e4e15a3beb073dbac7fe2784a2fafd61266d9ffc61d2",
+    "92257d7ba9b72c57f66f2074": "bf6346ff6a5e5c8996dadd19c412178d4dba3049b5ba30c966f595586defccae",
+    "1c236a34d828d869343e05fe": "27a1751f4abbac71eedc928d9a9977498dbc7f36250df9d43d3dba147f55bfc2",
+    "04db1498c354636d5eba561a": "69c7996fc17a87d9625209bfed78299a9233a0ed941745010ed129cb051a90a9",
+    "c7643b2a2f90da17b647782a": "857069513b5ae61da651ae245cfe335caa1176f7ba4771a6fe9e2d0c94ee43f6",
+    "49ff51986d534ef884517f83": "ec6bf425c12dfd8d04295ea28c69665f07be8d959a50efb43913dac04be38f13",
+    "8d9f2fdd64538232c8564f4e": "3008bc01a8fd04eff20031300dd7632688b6c708312fbf8efe4b36395291be56",
+    "b1f1d743eff857118514ffed": "ac8ab2fdd44ecf2f57840ee2743c490f932e44cdac43d5102d221f172c649ea6",
+    "707a4ece7d63671665146674": "642b6c658c94c3f6d56aeb089c62e6d16c542025ca2f98884166e7cb96d689d2",
+    "9ded0d96e1d89cbfb7c329d2": "2ba9022af7bf584471a91e7570dfed75ed5cbd8c58b40f9e813a49ec4f22ca08",
+    "806a22b7d38c37fcc6ac2cc9": "2a68b1802c1f707edae774c1c2c3cbe9b38de20e8c2800093558fbeebc1b8c42",
+    "cd6724361339f4bd2c76e8d0": "c3e5f717cab1477a18b7bcf7a7417acb0aa979a961dfa1b6db9f8db0240fcf9c"
   },
   "deferred_ids": [],
   "errors": []

@@ -1,26 +1,11 @@
 {
-  "status": "complete",
-  "work_hash": "3905c72920f4af5d2f4bfbcc57818c2a1cdeb14c415a804a8b23423cb97c53e9",
-  "model_calls": 2,
+  "status": "prepared",
+  "work_hash": "4d7c915f1e01679a43830b837cc228ccab0e97faa7c629e8a4681fe90062d7b7",
+  "model_calls": 0,
   "costs": {
-    "charged_usd": "0.00023812",
-    "reserved_usd": "0.004",
-    "liability_usd": "0.00023812"
+    "reserved_usd": "0.004"
   },
-  "decisions": {
-    "2f470c018c123d5e8eb948e4": true,
-    "0c0e45b1520ce7a0836025d6": true,
-    "a33b37d20672af1d9c149cee": true,
-    "19627fdf0a51c948ae97f488": true,
-    "1186e20a27d72216a0bbb5a1": true,
-    "a3940b101f89f55b88ee2925": true,
-    "915479414d6d144c62e10438": true,
-    "bfbba49505ac6ed3e5229d0b": true,
-    "1f90b5bda6c85d28f7f07489": true,
-    "190fa4ac9cf24df0593ade15": true,
-    "d3b338ed7a7f677d6e4b70c7": true,
-    "2a90cd16cf6aa7523febcf5d": true
-  },
+  "decisions": {},
   "deferred_ids": [],
   "errors": []
 }
