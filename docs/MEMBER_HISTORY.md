@@ -49,10 +49,10 @@ are withheld and counted. Absence does not establish inactivity.
 ## Storage and publication
 
 The original ten-file artifact keeps its 650,000-byte budget. Generated member
-HTML has a separate 3,000,000-byte budget, for a combined maximum of 3,650,000.
+HTML has a separate 4,000,000-byte budget, for a combined maximum of 4,650,000.
 Each dated/undated member section is limited to 100 pages (2,500 entries); growth
 past page/byte limits fails the build rather than silently truncating data.
-This release currently adds about 2.3 MB of static HTML, downloaded page by page.
+The current accepted record set adds about 3.3 MB of static HTML, downloaded page by page.
 There is no additional browser JSON or raw evidence archive. Working JSON remains
 bounded at 20 MB. See [completion receipt](evidence/member-history.json) for
 measured counts, date ranges and sizes.
@@ -89,6 +89,6 @@ older coverage within 200 days. The dedicated news pages paginate the same
 screened cache, at most 100 metadata records/member. Homepage news remains three
 within 90 days. The five queries, 30 candidates, exact-case cache and paid-call
 bounds stay unchanged. No full article or complete archive is claimed; old
-90-day receipts keep their original window. The 3 MB member/news HTML and 650 KB
+90-day receipts keep their original window. The 4 MB member/news HTML and 650 KB
 base ceilings remain separate. See [NEWS_PAGINATION.md](NEWS_PAGINATION.md),
 [MEDIA_REPORTS.md](MEDIA_REPORTS.md) and [the earlier layout receipt](evidence/member-news.json).

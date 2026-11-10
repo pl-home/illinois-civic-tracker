@@ -88,7 +88,7 @@ snapshot's health and future opportunities, not reconstructed historical proof.
 
 Four allowlisted files (HTML, text, JSON, CSS) total at most 90,000 bytes inside
 the unchanged 650,000-byte base ceiling, now 14 files. Member/news HTML retains
-its separate 3,000,000-byte cap; combined publication remains at most 3,650,000
+its separate 4,000,000-byte cap; combined publication remains at most 4,650,000
 bytes. Select at most 20 revisions, six per section, eight hearings and six
 displayed agenda items per hearing; omissions and source links stay visible.
 No evidence, source history or financial ledger is deleted. The standalone

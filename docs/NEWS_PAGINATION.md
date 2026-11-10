@@ -47,8 +47,8 @@ The rolling display cache is capped at 1,000,000 bytes inside the existing
 leave this display cache; permanent legislative history, referenced evidence,
 screening receipts and financial ledgers are not deleted. Rendering writes only
 allowlisted static files. At most 20 news pages per member are possible (five
-reports per page). Member/news HTML stays within its existing 3,000,000-byte cap;
-the base artifact retains 650,000 bytes, or 3,650,000 combined. Size failures
+reports per page). Member/news HTML stays within its existing 4,000,000-byte cap;
+the base artifact retains 650,000 bytes, or 4,650,000 combined. Size failures
 stop publication instead of silently emitting a partial artifact. The original
 archive and all bill-pagination identities remain intact.
 
