@@ -68,8 +68,8 @@ trusted roots. Source access stays inside reviewed host/path/rate budgets.
 
 Canonical JSON <=20,000,000 bytes; change ledger <=10,000,000; journal <=96 KiB.
 The fourteen base public files include four digest files (<=90,000 combined)
-and total <=650,000. Member/news HTML has a separate <=3,000,000 cap; combined
-<=3,650,000. Members show 25 activities/page; news five/page up to 100 screened
+and total <=650,000. Member/news HTML has a separate <=4,000,000 cap; combined
+<=4,650,000. Members show 25 activities/page; news five/page up to 100 screened
 metadata records/member over 200 days. Homepage news uses 90 days/three items.
 Annual Git growth is not bounded by a live-file cap and still needs measurement.
 

@@ -262,7 +262,7 @@ The October 20 owner-requested member-history pages implement one bounded displa
 slice now, without moving M5 discovery/backfill forward. Accepted existing facts
 are paginated 25 per page, with a separate undated section and evidence/coverage
 labels. Base public files retain their 650,000-byte ceiling; generated member
-HTML has a separate 3,000,000-byte ceiling (3,650,000 combined), at most 100 pages
+HTML has a separate 4,000,000-byte ceiling (4,650,000 combined), at most 100 pages
 per member/section. Canonical working JSON stays at 20 MB. Size growth fails
 closed; no raw files, old evidence or financial/source ledgers are deleted.
 See [MEMBER_HISTORY.md](MEMBER_HISTORY.md) and its completion receipt. No workflow,

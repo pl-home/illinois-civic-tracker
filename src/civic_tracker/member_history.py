@@ -9,7 +9,10 @@ from .rules import ceremonial
 
 PAGE_SIZE = 25
 MAX_PAGES = 100  # Per member, per dated/undated section; fail closed on growth.
-MAX_HISTORY_BYTES = 3_000_000
+# Keep the complete paginated history available while leaving headroom for
+# the current multi-member record volume.  The separate base-artifact guard
+# still applies in browse.py.
+MAX_HISTORY_BYTES = 4_000_000
 KINDS = {'filing', 'sponsor-role', 'bill-action'}
 NEWS_PAGE_SIZE = 5
 MAX_NEWS_PAGES = 20

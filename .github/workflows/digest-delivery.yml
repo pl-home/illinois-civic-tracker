@@ -32,7 +32,10 @@ jobs:
           code=$?
           cat .local/delivery-reserve.json
           echo "code=$code" >> "$GITHUB_OUTPUT"
-          if [ "$code" -gt 1 ]; then exit "$code"; fi
+          # Exit 2 means the durable cadence says this run is not due.  That
+          # is a normal no-op, not a workflow failure; only unexpected codes
+          # above 2 should fail the job.
+          if [ "$code" -gt 2 ]; then exit "$code"; fi
       - name: Persist durable reservation
         if: steps.reserve.outputs.code == '0'
         run: |

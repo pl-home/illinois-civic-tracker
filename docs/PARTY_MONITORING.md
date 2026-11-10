@@ -87,7 +87,7 @@ source for contact details. HTML source strings are escaped when displayed.
   at most 360 characters in the common ledger. A hash is a comparison receipt,
   not a recoverable screenshot or proof of every word on a past page. No raw
   exceptional snapshot archive is introduced. The image itself is not retained.
-- Existing 650 KB base and 3 MB generated member/news HTML caps are unchanged.
+- Existing 650 KB base and 4 MB generated member/news HTML caps are unchanged.
 - Existing source/cost ledgers and old evidence are not deleted or reset.
 
 Capitol Fax gets one anonymous search feed per member and one for **Lee County**,

@@ -92,7 +92,7 @@ reactivated or independently reverified here.
 
 Canonical JSON: 20,000,000 bytes; shared ledger 10,000,000; error journal 96 KiB.
 Four digest files: 90,000 combined, inside fourteen base public files capped at
-650,000. Member/news HTML: 3,000,000 separately; combined site: 3,650,000.
+650,000. Member/news HTML: 4,000,000 separately; combined site: 4,650,000.
 The October 20 source-update build measured 546,175 base / 2,983,868 combined
 bytes. P05's 365-day synthetic report passes unchanged and realistic scenarios
 and identifies noisy-case pressure without pruning data. Dated test counts remain

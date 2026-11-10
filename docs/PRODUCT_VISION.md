@@ -168,8 +168,8 @@ evidence; avoid creating another large local mirror.
 
 Preserve the existing 20,000,000-byte working JSON limit and 650,000-byte base
 website-artifact bound. The owner-requested October 20 member-history extension
-adds a separately checked 3,000,000-byte allowance for generated, paginated HTML;
-the combined ceiling is 3,650,000 bytes. It adds no canonical stored index, raw
+adds a separately checked 4,000,000-byte allowance for generated, paginated HTML;
+the combined ceiling is 4,650,000 bytes. It adds no canonical stored index, raw
 mirror or inference. Each history page contains at most 25 entries; size/page
 growth fails closed rather than silently truncating history. Repository target
 remains at most 100 MB, with the earlier
