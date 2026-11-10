@@ -1,6 +1,6 @@
 # Current status and decision record
 
-Revision 17 — October 28, 2026, America/Chicago. This is the current status entry
+Revision 19 — November 10, 2026, America/Chicago. This is the current status entry
 point, not a claim that every live source was checked today. Read it before dated
 findings, checkpoints or trial instructions. [Documentation index](DOCUMENTATION_INDEX.md).
 
@@ -77,6 +77,10 @@ model calls, mail or diagnostics were dispatched for this documentation update.
 The former Codex/Windows schedules were previously stopped; they were not
 reactivated or independently reverified here.
 
+### November 10 run diagnosis
+
+The latest daily refresh, [run 42836202401](https://github.com/pl-home/illinois-civic-tracker/actions/runs/42836202401), failed before collection because the accepted member/news HTML exceeded the former 3,000,000-byte guard (measured at about 3.26 MB). The latest digest schedule, [run 42709590588](https://github.com/pl-home/illinois-civic-tracker/actions/runs/42709590588), reported the expected `not-due` exit code as a workflow failure. Both were corrected in [PR #4](https://github.com/pl-home/illinois-civic-tracker/pull/4): the member-history ceiling is now 4,000,000 bytes, and digest exit code 2 is a normal no-op. Post-merge verification [run 42847649811](https://github.com/pl-home/illinois-civic-tracker/actions/runs/42847649811) and publication [run 42847649974](https://github.com/pl-home/illinois-civic-tracker/actions/runs/42847649974) passed. The local UTF-8 suite reports 334 passing tests. This diagnosis did not rerun collectors or enable PDF work.
+
 ## Decisions that must survive a handoff
 
 - Preserve raw vote choices, motions, tally/date conflicts, original filing and sponsor/removal/other-chamber distinctions. Unknown is not absence or Nay.
@@ -100,8 +104,8 @@ attached to their receipts; Git growth is forecast separately in the report.
 
 Use [EXECUTION_GUIDE.md](EXECUTION_GUIDE.md) and one [work packet](WORK_PACKETS.md).
 The reconciliation passed 323 offline tests and privacy checks. The later P02/P03
-implementation passed 325 tests; P05 adds three offline tests for a current total
-of 332. The October 23 scheduled run completed two
+implementation passed 325 tests; P05 and subsequent coverage work now total 334
+offline tests. The October 23 scheduled run completed two
 bounded media model calls for USD 0.00020308 and published a partial but current
 dashboard. Model calls remain limited to public media relevance.
 The small offline handoff checker validates documentation, dependencies and
