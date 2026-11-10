@@ -75,7 +75,7 @@ live source health. [Commands with side effects](docs/EXECUTION_GUIDE.md).
 | `.github/workflows/` | Existing hosted collection/publication and restricted manual tools |
 
 Canonical JSON is capped at 20 MB, the shared ledger at 10 MB, base public files
-at 650 KB and member/news HTML at 3 MB separately. No raw HTML/PDF/ZIP/CSV archive,
+at 650 KB and member/news HTML at 4 MB separately. No raw HTML/PDF/ZIP/CSV archive,
 private vault, credential, address or machine profile path is published. Keep
 source/financial history and failed receipts intact; do not prune to make checks
 pass. Main ILGA requests are sequential with verified TLS and at least ten-second

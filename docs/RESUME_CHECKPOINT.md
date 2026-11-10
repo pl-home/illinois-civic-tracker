@@ -1,6 +1,6 @@
 # Resume checkpoint
 
-Superseded checkpoint reconciled October 23, 2026. This file is a stable pointer,
+Superseded checkpoint reconciled November 10, 2026. This file is a stable pointer,
 not another independently maintained status narrative.
 
 1. Read [CURRENT_STATUS.md](CURRENT_STATUS.md).
@@ -11,7 +11,8 @@ P01/P02 daily freshness, P03 communications diagnostics, P05 storage-growth
 simulation, and the P06 rollover review are complete. P04 waits for a genuine
 future notice/open form; successor identity migration needs its own packet.
 Stage D previews exist; owner review is complete. Owner-only email delivery is
-gated to one confirmed message every three days; the first hosted receipt is
-still pending. PDF work stays deferred.
+gated to one confirmed message every three days; an undelivered/not-due run is
+not itself a failure. Member/news HTML has a 4 MB bounded cap after the Nov. 10
+history-growth fix. PDF work stays deferred.
 Historical checkpoint text remains in Git history and the private planning archive.
 
