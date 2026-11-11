@@ -1,9 +1,35 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-29T12:56:05.611537+00:00",
+  "checked_at": "2026-11-11T14:12:19.781535+00:00",
   "sources": {
     "fritts-office": {
       "items": [
+        {
+          "id": "416219527d5086581e32ef6d",
+          "member_id": "fritts",
+          "title": "Veterans Crisis Line",
+          "url": "https://repfritts.com/2026/11/06/veterans-crisis-line/",
+          "published_at": "2026-11-06",
+          "date_precision": "day",
+          "source_id": "fritts-office",
+          "publisher": "Representative Bradley Fritts office",
+          "kind": "office",
+          "publisher_host": "repfritts.com",
+          "source_url": "https://repfritts.com/latest-news/"
+        },
+        {
+          "id": "8211fa9c51bb3a6f7361bf3c",
+          "member_id": "fritts",
+          "title": "E-News Updates from Rep. Fritts – November 2, 2026",
+          "url": "https://repfritts.com/2026/11/02/e-news-updates-from-rep-fritts-november-2-2026/",
+          "published_at": "2026-11-02",
+          "date_precision": "day",
+          "source_id": "fritts-office",
+          "publisher": "Representative Bradley Fritts office",
+          "kind": "office",
+          "publisher_host": "repfritts.com",
+          "source_url": "https://repfritts.com/latest-news/"
+        },
         {
           "id": "04f56d5a97a94c586bdd502d",
           "member_id": "fritts",
@@ -107,39 +133,13 @@
           "kind": "office",
           "publisher_host": "repfritts.com",
           "source_url": "https://repfritts.com/latest-news/"
-        },
-        {
-          "id": "14a9f91d1e6463f6b9d8a632",
-          "member_id": "fritts",
-          "title": "Farm Safety and Health Week",
-          "url": "https://repfritts.com/2026/09/22/farm-safety-and-health-week/",
-          "published_at": "2026-09-22",
-          "date_precision": "day",
-          "source_id": "fritts-office",
-          "publisher": "Representative Bradley Fritts office",
-          "kind": "office",
-          "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
-        },
-        {
-          "id": "fa967141accd33a09bd6969d",
-          "member_id": "fritts",
-          "title": "Truck Driver Appreciation Week",
-          "url": "https://repfritts.com/2026/09/17/truck-driver-appreciation-week/",
-          "published_at": "2026-09-17",
-          "date_precision": "day",
-          "source_id": "fritts-office",
-          "publisher": "Representative Bradley Fritts office",
-          "kind": "office",
-          "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
         }
       ],
       "entries_checked": 10,
       "rejected_entries": 0,
-      "latest_source_date": "2026-10-27",
+      "latest_source_date": "2026-11-06",
       "status": "ok",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Representative Bradley Fritts office",
       "kind": "office",
       "members": [
@@ -285,7 +285,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-21",
       "status": "ok",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Senator Li Arellano office",
       "kind": "office",
       "members": [
@@ -296,6 +296,32 @@
     },
     "lahood-office": {
       "items": [
+        {
+          "id": "20fbc7eb9cfbe132f0d462c7",
+          "member_id": "lahood",
+          "title": "LaHood Statement on the Election of Republican Leader Jim Jordan",
+          "url": "https://lahood.house.gov/2026/11/lahood-statement-on-the-election-of-republican-leader-jim-jordan",
+          "published_at": "2026-11-10",
+          "date_precision": "day",
+          "source_id": "lahood-office",
+          "publisher": "Representative Darin LaHood office",
+          "kind": "office",
+          "publisher_host": "lahood.house.gov",
+          "source_url": "https://lahood.house.gov/news"
+        },
+        {
+          "id": "72416e912bf64ec745b4979a",
+          "member_id": "lahood",
+          "title": "ICYMI: LaHood Secures Two DOT Awards for Grundy and Peoria County Projects",
+          "url": "https://lahood.house.gov/2026/10/icymi-lahood-secures-two-dot-awards-for-grundy-and-peoria-county-projects",
+          "published_at": "2026-10-30",
+          "date_precision": "day",
+          "source_id": "lahood-office",
+          "publisher": "Representative Darin LaHood office",
+          "kind": "office",
+          "publisher_host": "lahood.house.gov",
+          "source_url": "https://lahood.house.gov/news"
+        },
         {
           "id": "a71c6dbcd38963dd1744371d",
           "member_id": "lahood",
@@ -347,26 +373,13 @@
           "kind": "office",
           "publisher_host": "lahood.house.gov",
           "source_url": "https://lahood.house.gov/news"
-        },
-        {
-          "id": "3df439849ec88b789236541b",
-          "member_id": "lahood",
-          "title": "LaHood, Colleagues introduce Bipartisan Bill to Expand Access to Low-Interest Mortgages for First-Time Homebuyers",
-          "url": "https://lahood.house.gov/2026/8/lahood-colleagues-introduce-bipartisan-bill-to-expand-access-to-low-interest-mortgages-for-first-time-homebuyers",
-          "published_at": "2026-08-10",
-          "date_precision": "day",
-          "source_id": "lahood-office",
-          "publisher": "Representative Darin LaHood office",
-          "kind": "office",
-          "publisher_host": "lahood.house.gov",
-          "source_url": "https://lahood.house.gov/news"
         }
       ],
       "entries_checked": 10,
       "rejected_entries": 0,
-      "latest_source_date": "2026-10-28",
+      "latest_source_date": "2026-11-10",
       "status": "ok",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Representative Darin LaHood office",
       "kind": "office",
       "members": [
@@ -376,8 +389,163 @@
       "note": "HTML listing dates are used; the advertised RSS contained malformed dates and is not used."
     },
     "durbin-office": {
-      "status": "failed",
       "items": [
+        {
+          "id": "740679454025e510fe21f12e",
+          "member_id": "durbin",
+          "title": "Durbin Casts 17,000th Vote In Congress",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-casts-17000th-vote-in-congress",
+          "published_at": "2026-11-10",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "841da74217a9d8286c4882b9",
+          "member_id": "durbin",
+          "title": "Durbin Reflects On Last Codel Trip To The Balkans",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-reflects-on-last-codel-trip-to-the-balkans",
+          "published_at": "2026-11-10",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "6a5d8f92648e7ecf4caeff6e",
+          "member_id": "durbin",
+          "title": "Durbin Calls Out Trump Judicial Nominees For Their Inexperience In The Courtroom",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-calls-out-trump-judicial-nominees-for-their-inexperience-in-the-courtroom",
+          "published_at": "2026-11-10",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "6329b13b5d280373004fa94d",
+          "member_id": "durbin",
+          "title": "Durbin Slams Senate Judiciary Republicans For Attempting To Jam Through Extreme Judicial Nominees Before Democrats Take Senate Majority",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-slams-senate-judiciary-republicans-for-attempting-to-jam-through-extreme-judicial-nominees-before-democrats-take-senate-majority",
+          "published_at": "2026-11-10",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "c7e1329210495aa67e9a8932",
+          "member_id": "durbin",
+          "title": "Durbin Slams Judiciary Committee Republicans For Violating Committee Norms To Fast-Track Judicial Nominations",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-slams-judiciary-committee-republicans-for-violating-committee-norms-to-fast-track-judicial-nominations",
+          "published_at": "2026-11-10",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "88ea0408b23dd134c5a277d9",
+          "member_id": "durbin",
+          "title": "On The Senate Floor, Durbin Reflects On Historic 2026 Midterm Elections",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/on-the-senate-floor-durbin-reflects-on-historic-2026-midterm-elections",
+          "published_at": "2026-11-09",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "5837110b8ffeaf215ceca43c",
+          "member_id": "durbin",
+          "title": "Illinois And Midwestern Farmers Are Overcharged On Crop Insurance, Say Durbin, Duckworth, Budzinski, Sorensen, Call For USDA To Recalculate And Provide Refunds",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/illinois-and-midwestern-farmers-are-overcharged-on-crop-insurance-say-durbin-duckworth-budzinski-sorensen-call-for-usda-to-recalculate-and-provide-refunds",
+          "published_at": "2026-11-06",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "42824bbab2d7084cde6e719c",
+          "member_id": "durbin",
+          "title": "Durbin Welcomes 26 New Citizens At Springfield’s Old State Capitol",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-welcomes-26-new-citizens-at-springfields-old-state-capitol",
+          "published_at": "2026-11-06",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "06223d8b94d66a2d01dec0e1",
+          "member_id": "durbin",
+          "title": "Durbin Releases GAO Report Raising Alarms Over Changes In Inspections In ICE Immigration Detention Facilities",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-releases-gao-report-raising-alarms-over-changes-in-inspections-in-ice-immigration-detention-facilities",
+          "published_at": "2026-11-05",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "c6ccacf2c6bbe9670ab3e92e",
+          "member_id": "durbin",
+          "title": "Rock Island Arsenal Community Recognizes Durbin After Decades Of Service To Region’s Defense Manufacturing Industry",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/rock-island-arsenal-community-recognizes-durbin-after-decades-of-service-to-regions-defense-manufacturing-industry",
+          "published_at": "2026-10-29",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "74d2cf1ebfb6257b76730d96",
+          "member_id": "durbin",
+          "title": "Durbin, Blumenthal, Schiff, Raskin, McBath File Amicus Brief Urging The Supreme Court To Uphold Illinois & Connecticut Assault Weapon Bans",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-blumenthal-schiff-raskin-mcbath-file-amicus-brief-urging-the-supreme-court-to-uphold-illinois-and-connecticut-assault-weapon-bans",
+          "published_at": "2026-10-29",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
+        {
+          "id": "d05f0e97470269b0c92cb2f9",
+          "member_id": "durbin",
+          "title": "Durbin, Booker, Judiciary Democrats Send Letter Supporting Proposal To Allow Federal Defender Participation At The U.S. Sentencing Commission",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-booker-judiciary-democrats-send-letter-supporting-proposal-to-allow-federal-defender-participation-at-the-us-sentencing-commission",
+          "published_at": "2026-10-27",
+          "date_precision": "day",
+          "source_id": "durbin-office",
+          "publisher": "Senator Dick Durbin office",
+          "kind": "office",
+          "publisher_host": "durbin.senate.gov",
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
+        },
         {
           "id": "f51d1cdc64abfb2cb1abe06a",
           "member_id": "durbin",
@@ -389,8 +557,7 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
           "id": "649b9b3ed5ab62bd0d9e9dea",
@@ -403,8 +570,7 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
           "id": "6767d99d988654aa5d61ff7c",
@@ -417,8 +583,7 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
           "id": "473e44ad847683e6578e49ff",
@@ -431,8 +596,7 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
           "id": "986b4af71f25c9205046b237",
@@ -445,8 +609,7 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
           "id": "b2cb08fab0b626c7f5962eef",
@@ -459,8 +622,7 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
           "id": "0ddbfe3edc8510771de1e62f",
@@ -473,8 +635,7 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
           "id": "9f85b96c72dbdf76dcdf8045",
@@ -487,183 +648,14 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "d4e23c18dc9962f0d2f5171a",
-          "member_id": "durbin",
-          "title": "Durbin, Bipartisan Senators Call On Trump To Rescind Russian Diesel Deal & Implement Sanctions Authorized By Congress Last Month On Enablers Of Putin’s War Against Ukraine",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-bipartisan-senators-call-on-trump-to-rescind-russian-diesel-deal-and-implement-sanctions-authorized-by-congress-last-month-on-enablers-of-putins-war-against-ukraine",
-          "published_at": "2026-10-13",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "7004bcb66a43f8a6fe71592f",
-          "member_id": "durbin",
-          "title": "Durbin Releases Insights From Congressional Oversight Visit Of Immigration Detention At Guantánamo Bay",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-releases-insights-from-congressional-oversight-visit-of-immigration-detention-at-guantanamo-bay",
-          "published_at": "2026-10-09",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "ed412e9b0972c1de5630c328",
-          "member_id": "durbin",
-          "title": "Durbin Asks DOJ IG To Investigate FBI’s Decision To Modify Hiring Standards",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-asks-doj-ig-to-investigate-fbis-decision-to-modify-hiring-standards",
-          "published_at": "2026-10-09",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "06cf926db5b7c01271558b3d",
-          "member_id": "durbin",
-          "title": "Durbin, Judiciary Committee Democrats Demand Full Production Of Committee Records Following Jack Smith Hearing",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-judiciary-committee-democrats-demand-full-production-of-committee-records-following-jack-smith-hearing",
-          "published_at": "2026-10-08",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "c9f247b9c5f5a05a2487e285",
-          "member_id": "durbin",
-          "title": "Durbin Joins Shaheen For Final Codel To Western Balkans",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-joins-shaheen-for-final-codel-to-western-balkans",
-          "published_at": "2026-10-07",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "7c7ad2d8069ee63eeea3aa01",
-          "member_id": "durbin",
-          "title": "Durbin Receives Federal Bar Association Chicago Chapter’s Inaugural Lifetime Achievement Award",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-receives-federal-bar-association-chicago-chapters-inaugural-lifetime-achievement-award",
-          "published_at": "2026-10-06",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "3c9256f73c54a32717330adb",
-          "member_id": "durbin",
-          "title": "Durbin, Duckworth Announce $300,000 In Funding For Jersey Community Hospital District",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-duckworth-announce-300000-in-funding-for-jersey-community-hospital-district",
-          "published_at": "2026-10-02",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "217a7a0711f52e64d76b4cc6",
-          "member_id": "durbin",
-          "title": "Durbin Receives Distinguished Service Award From Illinois Health And Hospital Association",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-receives-distinguished-service-award-from-illinois-health-and-hospital-association",
-          "published_at": "2026-10-02",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "9b9bad5e84e55bd51ca4dfa9",
-          "member_id": "durbin",
-          "title": "Durbin, Duckworth Join Cortez Masto, Wyden To Demand Trump Administration Abandon Plan To Strip Tax Credits From 700,000 American Taxpayers",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-duckworth-join-cortez-masto-wyden-to-demand-trump-administration-abandon-plan-to-strip-tax-credits-from-700000-american-taxpayers",
-          "published_at": "2026-10-02",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "f2ede0cc8f1cc6c34297f79f",
-          "member_id": "durbin",
-          "title": "Durbin Joins Joint Statement On Bill Pulte Shutting Down FHFA Watchdog",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-joins-joint-statement-on-bill-pulte-shutting-down-fhfa-watchdog",
-          "published_at": "2026-10-01",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "2ae2c8278a67d3f0bba5c6c5",
-          "member_id": "durbin",
-          "title": "Durbin, Duckworth, Padilla, Schiff Introduce Legislation To Protect Regional National Archives Facilities From Closure",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-duckworth-padilla-schiff-introduce-legislation-to-protect-regional-national-archives-facilities-from-closure",
-          "published_at": "2026-09-30",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "0f201311218991ac04c15bd1",
-          "member_id": "durbin",
-          "title": "Durbin Questions Judicial Nominees About Protecting Americans’ Right To Vote During Senate Judiciary Committee Hearing",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-questions-judicial-nominees-about-protecting-americans-right-to-vote-during-senate-judiciary-committee-hearing",
-          "published_at": "2026-09-30",
-          "date_precision": "day",
-          "source_id": "durbin-office",
-          "publisher": "Senator Dick Durbin office",
-          "kind": "office",
-          "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         }
       ],
-      "error": "source-unavailable-or-listing-changed",
-      "error_category": "http",
-      "error_code": "HTTP_403",
-      "latest_source_date": "2026-10-22",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "entries_checked": 20,
+      "rejected_entries": 0,
+      "latest_source_date": "2026-11-10",
+      "status": "ok",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Senator Dick Durbin office",
       "kind": "office",
       "members": [
@@ -673,8 +665,124 @@
       "note": ""
     },
     "duckworth-office": {
-      "status": "failed",
       "items": [
+        {
+          "id": "54c9b474b938d40173821aa5",
+          "member_id": "duckworth",
+          "title": "Ahead of Veterans Day, Duckworth Leads Colleagues in Introducing Bill to Ensure Iran War Veterans Are Covered Under PACT Act",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/ahead-of-veterans-day-duckworth-leads-colleagues-in-introducing-bill-to-ensure-iran-war-veterans-are-covered-under-pact-act",
+          "published_at": "2026-11-10",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "01cc645fb936f69ec50665cf",
+          "member_id": "duckworth",
+          "title": "Duckworth to Vote Against Permitting Reform Bill",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-to-vote-against-permitting-reform-bill",
+          "published_at": "2026-11-09",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "07042b8fb1d8551e0d46f55f",
+          "member_id": "duckworth",
+          "title": "Duckworth, Sorensen Speak with New Tyson Foods CEO to Advocate for Joslin Community Impacted by Plant Closure",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-sorensen-speak-with-new-tyson-foods-ceo-to-advocate-for-joslin-community-impacted-by-plant-closure",
+          "published_at": "2026-11-05",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "25ba07117120b0548e0729ee",
+          "member_id": "duckworth",
+          "title": "Duckworth: “Americans Sent a Clear Message: They Are Sick of Donald Trump’s BS”",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-americans-sent-a-clear-message-they-are-sick-of-donald-trumps-bs",
+          "published_at": "2026-11-04",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "5f131ed2a1d3d1d6fc4c935e",
+          "member_id": "duckworth",
+          "title": "Duckworth Demands Answers on Trump’s Dangerously Low Halloween Flyover at the White House",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-demands-answers-on-trumps-dangerously-low-halloween-flyover-at-the-white-house",
+          "published_at": "2026-11-02",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "290367315eaf279009769b96",
+          "member_id": "duckworth",
+          "title": "Duckworth, Colleagues to Committee Leadership: Trump Must Begin Restoring Illegally Cancelled Energy Projects Before Critical Vote on Bipartisan Permitting Reform Bill",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-colleagues-to-committee-leadership-trump-must-begin-restoring-illegally-cancelled-energy-projects-before-critical-vote-on-bipartisan-permitting-reform-bill",
+          "published_at": "2026-10-27",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "2df7ca86156f478213a9be9c",
+          "member_id": "duckworth",
+          "title": "Duckworth, Durbin React to Latest News in Amtrak Facility Relocation, Reiterate Need for Community Input",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-react-to-latest-news-in-amtrak-facility-relocation-reiterate-need-for-community-input",
+          "published_at": "2026-10-26",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "d72a4a4561ff5312e4d6e142",
+          "member_id": "duckworth",
+          "title": "Duckworth, Gillibrand, Schiff Press the FDA on Plan to Mitigate Estrogen Patch Shortage",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-gillibrand-schiff-press-the-fda-on-plan-to-mitigate-estrogen-patch-shortage",
+          "published_at": "2026-10-23",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
+        {
+          "id": "5a68f5c677e835236bc7f0d9",
+          "member_id": "duckworth",
+          "title": "In Europe, Duckworth Builds on Her Efforts to Strengthen International Partnerships for National Security, Energy Security and Investments in Illinois",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/in-europe-duckworth-builds-on-her-efforts-to-strengthen-international-partnerships-for-national-security-energy-security-and-investments-in-illinois",
+          "published_at": "2026-10-22",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
         {
           "id": "83c3beb405557a865ea0157a",
           "member_id": "duckworth",
@@ -686,8 +794,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "ca44d9c7313e6bbb6bf43fea",
@@ -700,8 +807,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "cb1163fbaa55e144cb9b84b9",
@@ -714,8 +820,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "d550fc669043f205551a1af9",
@@ -728,8 +833,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "dde34db32bcf79b095d7f13b",
@@ -742,8 +846,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "405e453737813d88a42d9aa1",
@@ -756,8 +859,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "4e2f721e1efac27b98e17240",
@@ -770,8 +872,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "c26ec01e44c17db2eeceb0dd",
@@ -784,8 +885,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "097d2345147f6b85c4f91140",
@@ -798,8 +898,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "da7bfb91554202016a9832b5",
@@ -812,8 +911,7 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
           "id": "b737e158870fb6d7560383a0",
@@ -826,141 +924,14 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "cc62dca35ce320da83148f80",
-          "member_id": "duckworth",
-          "title": "Duckworth Join Colleagues in Pressing EPA, AI Companies on Rollback of Public Input Rules for Data Center Air Permits",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-join-colleagues-in-pressing-epa-ai-companies-on-rollback-of-public-input-rules-for-data-center-air-permits",
-          "published_at": "2026-10-05",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "19397fea3241a15108edf9e8",
-          "member_id": "duckworth",
-          "title": "Duckworth, Schumer, Matsui Lead Bipartisan Call Requiring FAA to Guarantee Every Emergency Medical Kit Aboard Flights Include Life-Saving Epinephrin",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-schumer-matsui-lead-bipartisan-call-requiring-faa-to-guarantee-every-emergency-medical-kit-aboard-flights-include-life-saving-epinephrin",
-          "published_at": "2026-10-05",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "8dea0ce2ceb50b2447294501",
-          "member_id": "duckworth",
-          "title": "Duckworth, Durbin Announce $300,000 in Funding for Jersey Community Hospital District",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-announce-300000-in-funding-for-jersey-community-hospital-district",
-          "published_at": "2026-10-02",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "881af77d540c7078c7ee32e5",
-          "member_id": "duckworth",
-          "title": "Duckworth, Durbin, Budzinski Call for Pause on 183rd Wing Deactivation, Push for Replacement Mission",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-budzinski-call-for-pause-on-183rd-wing-deactivation-push-for-replacement-mission",
-          "published_at": "2026-10-01",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "eed00f2570648063d44384f5",
-          "member_id": "duckworth",
-          "title": "Duckworth Calls for a Decisive U.S. Response to the PRC’s Weaponization of Air Travel to Help Protect Safety of Global Flying Public",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-calls-for-a-decisive-us-response-to-the-prcs-weaponization-of-air-travel-to-help-protect-safety-of-global-flying-public",
-          "published_at": "2026-10-01",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "13d1a9f18249d7ae5cad6ca8",
-          "member_id": "duckworth",
-          "title": "Duckworth Rips Trump’s Arch Project, Advocates for Veterans Over Vanity Alongside Activists",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-rips-trumps-arch-project-advocates-for-veterans-over-vanity-alongside-activists",
-          "published_at": "2026-10-01",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "eb478907ddc4149c67eae1d1",
-          "member_id": "duckworth",
-          "title": "Duckworth, Durbin, Padilla, Schiff Introduce Legislation To Protect Regional National Archives Facilities From Closure",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-padilla-schiff-introduce-legislation-to-protect-regional-national-archives-facilities-from-closure",
-          "published_at": "2026-09-30",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "ee247795fd7835fe9a06cd60",
-          "member_id": "duckworth",
-          "title": "As U.S. Forces Withdraw from Iraq, Duckworth Calls on Trump to End His Illegal War in Iran",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/as-us-forces-withdraw-from-iraq-duckworth-calls-on-trump-to-end-his-illegal-war-in-iran",
-          "published_at": "2026-09-30",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
-        },
-        {
-          "id": "8fb027ec07aa062b376c650b",
-          "member_id": "duckworth",
-          "title": "Duckworth Leads Senate Democrats in Renewed Push to Help Prevent Police-Involved Deaths and Provide Justice for Families",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-leads-senate-democrats-in-renewed-push-to-help-prevent-police-involved-deaths-and-provide-justice-for-families",
-          "published_at": "2026-09-29",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         }
       ],
-      "error": "source-unavailable-or-listing-changed",
-      "error_category": "http",
-      "error_code": "HTTP_403",
-      "latest_source_date": "2026-10-20",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "entries_checked": 20,
+      "rejected_entries": 0,
+      "latest_source_date": "2026-11-10",
+      "status": "ok",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Senator Tammy Duckworth office",
       "kind": "office",
       "members": [
@@ -975,7 +946,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2025-07-15",
       "status": "ok",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Fritts campaign",
       "kind": "campaign",
       "members": [
@@ -990,7 +961,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2024-11-05",
       "status": "ok",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "LaHood campaign",
       "kind": "campaign",
       "members": [
@@ -1003,7 +974,7 @@
       "status": "link-only",
       "items": [],
       "note": "Older campaign site describes his previous House race; current dated release feed not verified.",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Arellano campaign (older site)",
       "kind": "campaign",
       "members": [
@@ -1015,7 +986,7 @@
       "status": "link-only",
       "items": [],
       "note": "Campaign link verified previously; no dated public release feed verified for this collector.",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Durbin campaign",
       "kind": "campaign",
       "members": [
@@ -1027,7 +998,7 @@
       "status": "link-only",
       "items": [],
       "note": "No dated public release archive verified; campaign site link only.",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Duckworth campaign",
       "kind": "campaign",
       "members": [
@@ -1039,9 +1010,9 @@
       "items": [],
       "entries_checked": 10,
       "rejected_entries": 0,
-      "latest_source_date": "2026-10-26",
+      "latest_source_date": "2026-11-06",
       "status": "ok",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Illinois Senate Republican Caucus",
       "kind": "party",
       "members": [
@@ -1054,6 +1025,19 @@
     },
     "il-house-gop": {
       "items": [
+        {
+          "id": "6a20cbd68aa0eb27b1e5a020",
+          "member_id": "fritts",
+          "title": "House Democrats’ Scary Scandals Haunt Springfield",
+          "url": "https://www.thecaucusblog.com/2026/10/house-democrats-scary-scandals-haunt.html",
+          "published_at": "2026-10-30T13:30:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
+        },
         {
           "id": "673350a1339ed197727b3bc2",
           "member_id": "fritts",
@@ -1131,65 +1115,13 @@
           "kind": "party",
           "publisher_host": "thecaucusblog.com",
           "source_url": "https://www.thecaucusblog.com/"
-        },
-        {
-          "id": "80522933b0260226bd3b7539",
-          "member_id": "fritts",
-          "title": "Even Democrats Aren’t Buying Welch’s Working Group",
-          "url": "https://www.thecaucusblog.com/2026/08/even-democrats-arent-buying-welchs.html",
-          "published_at": "2026-08-12T16:36:01+00:00",
-          "date_precision": "timestamp",
-          "source_id": "il-house-gop",
-          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
-          "kind": "party",
-          "publisher_host": "thecaucusblog.com",
-          "source_url": "https://www.thecaucusblog.com/"
-        },
-        {
-          "id": "d00f122371640ab08c718233",
-          "member_id": "fritts",
-          "title": "Democrats' Working Group is a PR Stunt, Not Reform",
-          "url": "https://www.thecaucusblog.com/2026/08/democrats-working-group-is-pr-stunt-not.html",
-          "published_at": "2026-08-06T18:20:44+00:00",
-          "date_precision": "timestamp",
-          "source_id": "il-house-gop",
-          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
-          "kind": "party",
-          "publisher_host": "thecaucusblog.com",
-          "source_url": "https://www.thecaucusblog.com/"
-        },
-        {
-          "id": "3779cae11e3cc6296089f76d",
-          "member_id": "fritts",
-          "title": "Just More Excuses From Speaker Welch",
-          "url": "https://www.thecaucusblog.com/2026/08/just-more-excuses-from-speaker-welch.html",
-          "published_at": "2026-08-06T18:16:01+00:00",
-          "date_precision": "timestamp",
-          "source_id": "il-house-gop",
-          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
-          "kind": "party",
-          "publisher_host": "thecaucusblog.com",
-          "source_url": "https://www.thecaucusblog.com/"
-        },
-        {
-          "id": "b62367a157d0b46e8137e46a",
-          "member_id": "fritts",
-          "title": "Pritzker Turns a Blind Eye to Welch’s Mishandling of Sexual Harassment Allegations",
-          "url": "https://www.thecaucusblog.com/2026/08/pritzker-turns-blind-eye-to-welchs.html",
-          "published_at": "2026-08-05T20:00:00+00:00",
-          "date_precision": "timestamp",
-          "source_id": "il-house-gop",
-          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
-          "kind": "party",
-          "publisher_host": "thecaucusblog.com",
-          "source_url": "https://www.thecaucusblog.com/"
         }
       ],
       "entries_checked": 25,
       "rejected_entries": 0,
-      "latest_source_date": "2026-10-15",
+      "latest_source_date": "2026-10-30",
       "status": "ok",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "The Caucus Blog · Illinois House Republican Caucus",
       "kind": "party",
       "members": [
@@ -1199,13 +1131,12 @@
       "note": "Caucus-wide House Republican updates, shown for Fritts as a House member. Posts need not name him and do not establish his authorship or endorsement. This is a legislative caucus publication, not a campaign or independent newsroom."
     },
     "senate-democrats": {
-      "status": "failed",
       "items": [],
-      "error": "source-unavailable-or-listing-changed",
-      "error_category": "http",
-      "error_code": "HTTP_403",
-      "latest_source_date": "2026-10-17",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "entries_checked": 20,
+      "rejected_entries": 0,
+      "latest_source_date": "2026-11-10",
+      "status": "ok",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Senate Democratic Caucus",
       "kind": "party",
       "members": [
@@ -1221,7 +1152,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-08-18",
       "status": "ok",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Lee County Democrats",
       "kind": "party",
       "members": [
@@ -1238,7 +1169,7 @@
       "error_category": "parse",
       "error_code": "PARSE_ERROR",
       "latest_source_date": "2026-10-01",
-      "checked_at": "2026-10-29T12:56:05.611537+00:00",
+      "checked_at": "2026-11-11T14:12:19.781535+00:00",
       "label": "Lee County Republican Central Committee",
       "kind": "party",
       "members": [

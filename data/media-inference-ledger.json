@@ -620,6 +620,54 @@
       "charged_usd": null,
       "status": "reserved",
       "prepared_at": "2026-10-29T12:56:05.611537+00:00"
+    },
+    {
+      "batch_hash": "e7f3468b94859a3b5be5f85471e18df87d29c9a176d121c2aaca147cde37a989",
+      "day": "2026-11-11",
+      "case_hashes": [
+        "fec1a2eff2e0ce213fcb5359f270e90df5b3f644327f004f26356690dccef80f",
+        "1a1b6270712e56cf35b1e2a14ead0d9ea8ffd06970e13185aa7b0871db9431d9",
+        "24f9a13e1b1ff0df0701370993d0550314b29ee95a07a078d9d5ff1cc0858db2",
+        "162ef94351e80cdad19d1b6b2ce49e99b817d1078d06c472576bd808b63401c1",
+        "64da0396e636becad32ed7299eaaca63db616badf290bcbe2d80b1a3b237fe88",
+        "abdb5b16b8571811ff5d9d0299b123b45bac881c2478842d7e398e001b38d7fe",
+        "30014b3e996913505eb36468a28b8a228f803e276c34706faac68a010e30e0ca",
+        "6ef3e9d692e7edfc9b202728c613915cb05f411d558ea4a92d6022611b3af6ef"
+      ],
+      "ids": [
+        "5d598644e9d5b996b5321035",
+        "c69b51fad74e061e3cdb1a92",
+        "115f47e1368b3c0b9c7d3b1b",
+        "7c277dbabf9415b1bd564d6f",
+        "b3a6b5b3acd29b46e37deb3f",
+        "a5e7c8c5be77974dd761095e",
+        "4d92bf6c6a67f426bc438454",
+        "f2a66f32936891cb6dc429e6"
+      ],
+      "reserved_usd": "0.002",
+      "charged_usd": null,
+      "status": "reserved",
+      "prepared_at": "2026-11-11T14:12:19.781535+00:00"
+    },
+    {
+      "batch_hash": "269cbb753a747685b907fc46059a811eb5a73983ca225f202f390cd016926c52",
+      "day": "2026-11-11",
+      "case_hashes": [
+        "a9723f208e67b8a73eba92782ef4b060880a3ea163a71497e440ac002500815f",
+        "397e23f70822413224d03dae0bb30c28ce06118ff2e9acdc3e10e649e54c6e22",
+        "29f34d77a79aaf11309b6e55349bb515d93c12fd6a74cd9fdde5f9ae6d0dd035",
+        "242f57507a5081202e678c877ca8c7c07adaf69f7555f9bc25329c4ffa31a8e5"
+      ],
+      "ids": [
+        "aafb10659f98acfbc6b303ae",
+        "ba74197f1a19d400a40629bf",
+        "562c8cf70cf215620c3b6aa7",
+        "bf649dbbcdcdcffe4b72a6bd"
+      ],
+      "reserved_usd": "0.002",
+      "charged_usd": null,
+      "status": "reserved",
+      "prepared_at": "2026-11-11T14:12:19.781535+00:00"
     }
   ]
 }

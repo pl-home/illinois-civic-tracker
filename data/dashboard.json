@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-29",
-  "recent_start": "2026-09-30",
-  "calendar_end": "2026-11-29",
-  "generated_at": "2026-10-29T12:50:33.740928+00:00",
+  "as_of": "2026-11-11",
+  "recent_start": "2026-10-13",
+  "calendar_end": "2026-12-11",
+  "generated_at": "2026-11-11T14:05:46.371014+00:00",
   "automatic_refresh_enabled": true,
   "attendance_note": "A committee meeting is not evidence that a member will attend.",
   "members": [
@@ -36,13 +36,11 @@
           "title": "SPORTS WAGERING-FANTASY MKT",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5814&GAID=18&DocTypeID=HB&LegId=168901&SessionID=114",
-          "source_retrieved_at": "2026-10-29T12:55:31.719236+00:00",
+          "source_retrieved_at": "2026-10-15T17:16:53.369902+00:00",
           "measure": "HB5814",
           "role": "co-sponsor",
           "operation": "added-or-changed",
-          "source_sha256": "6b36ac4d200e5f3be5b7e15b95bd7c81f4dcc82dcfdb85883bac7e0218393eb7",
-          "verification_source_url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5814.xml",
-          "recent_source_verification": "confirmed"
+          "source_sha256": "6b36ac4d200e5f3be5b7e15b95bd7c81f4dcc82dcfdb85883bac7e0218393eb7"
         },
         {
           "id": "IL-104-HB5811-role-3428-0",
@@ -51,13 +49,11 @@
           "title": "SPORTS WAGERING-EXCHANGE TAX",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5811&GAID=18&DocTypeID=HB&LegId=168884&SessionID=114",
-          "source_retrieved_at": "2026-10-29T12:55:31.770521+00:00",
+          "source_retrieved_at": "2026-10-15T17:16:53.369902+00:00",
           "measure": "HB5811",
           "role": "co-sponsor",
           "operation": "added-or-changed",
-          "source_sha256": "ced20a203bd1014a7a11d82132784911331a7ccaed27778a5b8a5148c5da6154",
-          "verification_source_url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5811.xml",
-          "recent_source_verification": "confirmed"
+          "source_sha256": "ced20a203bd1014a7a11d82132784911331a7ccaed27778a5b8a5148c5da6154"
         },
         {
           "id": "IL-104-HB5807-role-3428-0",
@@ -66,13 +62,11 @@
           "title": "TARGETED AD TAX-REPEAL",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5807&GAID=18&DocTypeID=HB&LegId=168835&SessionID=114",
-          "source_retrieved_at": "2026-10-29T12:55:31.817142+00:00",
+          "source_retrieved_at": "2026-10-15T17:16:53.369902+00:00",
           "measure": "HB5807",
           "role": "co-sponsor",
           "operation": "added-or-changed",
-          "source_sha256": "fd67ec2841c4d7ee2d2f8b5125e8644cad4fe39a8f3875c64528cebc624bc957",
-          "verification_source_url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5807.xml",
-          "recent_source_verification": "confirmed"
+          "source_sha256": "fd67ec2841c4d7ee2d2f8b5125e8644cad4fe39a8f3875c64528cebc624bc957"
         },
         {
           "id": "IL-104-HB5806-role-3428-0",
@@ -81,13 +75,11 @@
           "title": "SOCIAL MEDIA TAX-REPEAL",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5806&GAID=18&DocTypeID=HB&LegId=168834&SessionID=114",
-          "source_retrieved_at": "2026-10-29T12:55:31.865545+00:00",
+          "source_retrieved_at": "2026-10-15T17:16:53.369902+00:00",
           "measure": "HB5806",
           "role": "co-sponsor",
           "operation": "added-or-changed",
-          "source_sha256": "6017c9c0b962f22eb000d4ad15908ff036ebf9df14cab96c839578a1a1b77811",
-          "verification_source_url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5806.xml",
-          "recent_source_verification": "confirmed"
+          "source_sha256": "6017c9c0b962f22eb000d4ad15908ff036ebf9df14cab96c839578a1a1b77811"
         },
         {
           "id": "IL-104-HB5798-role-3428-0",
@@ -96,13 +88,11 @@
           "title": "DIGITAL ASSET TAX ACT-REPEAL",
           "detail": "Added Co-Sponsor Rep. Bradley Fritts",
           "source_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5798&GAID=18&DocTypeID=HB&LegId=168767&SessionID=114",
-          "source_retrieved_at": "2026-10-29T12:55:31.913524+00:00",
+          "source_retrieved_at": "2026-10-17T15:03:50.042099+00:00",
           "measure": "HB5798",
           "role": "co-sponsor",
           "operation": "added-or-changed",
-          "source_sha256": "cb112afc883ddc0e3d1fe7897cdb7496262493bc34708dd24d9b05f3ced3b3da",
-          "verification_source_url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5798.xml",
-          "recent_source_verification": "confirmed"
+          "source_sha256": "1390f87ed962824497b76148a62f32523d4c8f83a10ab368e4af0c452f54bd61"
         },
         {
           "id": "IL-104-HB5814-status-3428",
@@ -170,6 +160,111 @@
           "source_sha256": "715c755a646b8405597c7f297314acd35eb7ffc1c2109cb038031d87f2886d62"
         },
         {
+          "id": "IL-104-CSV-fbbc5ab3224a55383ce2e2a7-3428",
+          "kind": "vote",
+          "date": "2026-06-01",
+          "title": "FY27 BUDGET IMPLEMENTATION",
+          "detail": "CONCUR IN SENATE AMENDMENTS NO. 1 & 3 / CONCURRED / THREE-FIFTHS VOTE REQUIRED",
+          "source_url": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "HB2949",
+          "choice": "no",
+          "raw_choice": "Nay",
+          "scope": "floor",
+          "bill_url": "https://ilga.gov/Legislation/BillStatus?DocNum=2949&GAID=18&DocTypeID=HB&LegId=161156&SessionID=114",
+          "totals": {
+            "no": 39
+          },
+          "pdf_date": null,
+          "date_verification": null,
+          "source_sha256": "b53314813bdfc2f1beadef69386db6d5646361c20482d22dedf33dfba59aadc4",
+          "attribution": "Official floor-vote CSV; individual roll-call PDF not linked for this record."
+        },
+        {
+          "id": "IL-104-CSV-f9604c0224b00c31cbf0e4ec-3428",
+          "kind": "vote",
+          "date": "2026-06-01",
+          "title": "CHICAGO LIFEGUARD AGE MINIMUM",
+          "detail": "CONCUR IN SENATE AMENDMENTS / CONCURRENCE / CONCURRED",
+          "source_url": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "HB1441",
+          "choice": "yes",
+          "raw_choice": "Yea",
+          "scope": "floor",
+          "bill_url": "https://ilga.gov/Legislation/BillStatus?DocNum=1441&GAID=18&DocTypeID=HB&LegId=157488&SessionID=114",
+          "totals": {
+            "no": 21
+          },
+          "pdf_date": null,
+          "date_verification": null,
+          "source_sha256": "b53314813bdfc2f1beadef69386db6d5646361c20482d22dedf33dfba59aadc4",
+          "attribution": "Official floor-vote CSV; individual roll-call PDF not linked for this record."
+        },
+        {
+          "id": "IL-104-CSV-ea741943d5497726caae58aa-3428",
+          "kind": "vote",
+          "date": "2026-06-01",
+          "title": "COURT OF CLAIMS-AWARDS",
+          "detail": "CONCUR IN SENATE AMENDMENTS NO. 2 & 3 / CONCURRED / THREE-FIFTHS VOTE REQUIRED",
+          "source_url": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "HB3663",
+          "choice": "yes",
+          "raw_choice": "Yea",
+          "scope": "floor",
+          "bill_url": "https://ilga.gov/Legislation/BillStatus?DocNum=3663&GAID=18&DocTypeID=HB&LegId=162444&SessionID=114",
+          "totals": {
+            "no": 0
+          },
+          "pdf_date": null,
+          "date_verification": null,
+          "source_sha256": "b53314813bdfc2f1beadef69386db6d5646361c20482d22dedf33dfba59aadc4",
+          "attribution": "Official floor-vote CSV; individual roll-call PDF not linked for this record."
+        },
+        {
+          "id": "IL-104-CSV-c768c9c1ad53dab57cfc0b78-3428",
+          "kind": "vote",
+          "date": "2026-06-01",
+          "title": "ADULT CHANGING STATIONS",
+          "detail": "CONCUR IN SENATE AMENDMENT NO. 3 / CONCURRED",
+          "source_url": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "HB4379",
+          "choice": "unknown:No Vote",
+          "raw_choice": "No Vote",
+          "scope": "floor",
+          "bill_url": "https://ilga.gov/Legislation/BillStatus?DocNum=4379&GAID=18&DocTypeID=HB&LegId=164952&SessionID=114",
+          "totals": {
+            "no": 22
+          },
+          "pdf_date": null,
+          "date_verification": null,
+          "source_sha256": "b53314813bdfc2f1beadef69386db6d5646361c20482d22dedf33dfba59aadc4",
+          "attribution": "Official floor-vote CSV; individual roll-call PDF not linked for this record."
+        },
+        {
+          "id": "IL-104-CSV-c1e10744f6d00381da006a59-3428",
+          "kind": "vote",
+          "date": "2026-06-01",
+          "title": "PRESCRIPTION HORMONE THERAPY",
+          "detail": "CONCUR IN SENATE AMENDMENT NO. 2 / CONCURRED",
+          "source_url": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "HB5492",
+          "choice": "no",
+          "raw_choice": "Nay",
+          "scope": "floor",
+          "bill_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5492&GAID=18&DocTypeID=HB&LegId=167447&SessionID=114",
+          "totals": {
+            "no": 39
+          },
+          "pdf_date": null,
+          "date_verification": null,
+          "source_sha256": "b53314813bdfc2f1beadef69386db6d5646361c20482d22dedf33dfba59aadc4",
+          "attribution": "Official floor-vote CSV; individual roll-call PDF not linked for this record."
+        },
+        {
           "id": "IL-104-HOUSE-COMMITTEE-10400SB3484HFA1_47443-3428",
           "kind": "vote",
           "date": "2026-05-31",
@@ -215,78 +310,6 @@
           "pdf_date": "2026-05-31",
           "date_verification": "agreement",
           "source_sha256": "ec133f8c3c8b3ae771db1b8d8f3520a7656cab7370d7e2934e2546d7f52ae264",
-          "attribution": null
-        },
-        {
-          "id": "IL-104-HOUSE-COMMITTEE-10400HB5487SFA2_47441-3428",
-          "kind": "vote",
-          "date": "2026-05-31",
-          "title": "LAW FIRM OWNERSHIP",
-          "detail": "HOUSE BILL NO. 5487 - SENATE FLOOR AMENDMENT NO. 2 / RECOMMENDS BE ADOPTED",
-          "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB5487SFA2_47441.pdf",
-          "source_retrieved_at": "2026-10-15T17:56:51.706147+00:00",
-          "measure": "HB5487",
-          "choice": "no",
-          "raw_choice": "N",
-          "scope": "committee",
-          "bill_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5487&GAID=18&DocTypeID=HB&LegId=167426&SessionID=114",
-          "totals": {
-            "yes": 13,
-            "no": 7,
-            "present": 0,
-            "not-voting": 0
-          },
-          "pdf_date": "2026-05-31",
-          "date_verification": "agreement",
-          "source_sha256": "c73554739c6c62d48462cfab7a7f63607b179e634d45c320c6387b862660d1d1",
-          "attribution": null
-        },
-        {
-          "id": "IL-104-HOUSE-COMMITTEE-10400HB5487SCA1_47440-3428",
-          "kind": "vote",
-          "date": "2026-05-31",
-          "title": "LAW FIRM OWNERSHIP",
-          "detail": "HOUSE BILL NO. 5487 - SENATE COMMITTEE AMENDMENT NO. 1 / RECOMMENDS BE ADOPTED",
-          "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB5487SCA1_47440.pdf",
-          "source_retrieved_at": "2026-10-15T17:56:51.706147+00:00",
-          "measure": "HB5487",
-          "choice": "no",
-          "raw_choice": "N",
-          "scope": "committee",
-          "bill_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5487&GAID=18&DocTypeID=HB&LegId=167426&SessionID=114",
-          "totals": {
-            "yes": 13,
-            "no": 7,
-            "present": 0,
-            "not-voting": 0
-          },
-          "pdf_date": "2026-05-31",
-          "date_verification": "agreement",
-          "source_sha256": "de1662fe3edcfe43f3bcfe734d56a33f2c255d37cf6da6f1dbc5a09d2ca4a716",
-          "attribution": null
-        },
-        {
-          "id": "IL-104-HOUSE-COMMITTEE-10400HB5228SFA2_47450-3428",
-          "kind": "vote",
-          "date": "2026-05-31",
-          "title": "WORK COMP-STATE LICENSURE",
-          "detail": "HOUSE BILL NO. 5228 - SENATE FLOOR AMENDMENT NO. 2 / RECOMMENDS BE ADOPTED",
-          "source_url": "https://ilga.gov/Documents/legislation/votehistory/104/house/committeevotes/10400HB5228SFA2_47450.pdf",
-          "source_retrieved_at": "2026-10-15T17:56:14.502722+00:00",
-          "measure": "HB5228",
-          "choice": "no",
-          "raw_choice": "N",
-          "scope": "committee",
-          "bill_url": "https://ilga.gov/Legislation/BillStatus?DocNum=5228&GAID=18&DocTypeID=HB&LegId=166905&SessionID=114",
-          "totals": {
-            "yes": 18,
-            "no": 10,
-            "present": 0,
-            "not-voting": 0
-          },
-          "pdf_date": "2026-05-31",
-          "date_verification": "agreement",
-          "source_sha256": "46db98366b28990e1e78ab678f40696c368f3837ee2d1bd43832507c5438df27",
           "attribution": null
         },
         {
@@ -345,15 +368,15 @@
           "source_sha256": "8d111ceefd7c4e1eec4c812a1562458c091b29b56050a040c8e46657f933f95e"
         }
       ],
-      "recent_total_in_import": 5,
+      "recent_total_in_import": 0,
       "recent_truncated": false,
       "latest_event_date": "2026-10-02",
-      "latest_vote_date": "2026-05-31",
+      "latest_vote_date": "2026-06-01",
       "sponsorship_listings": [],
       "meetings": [],
       "activity_source_checked_at": "2026-10-19T22:26:42.995673+00:00",
       "activity_coverage": "Daily FTP listing changes and official floor-vote CSV; committee votes retain historical PDF coverage. Source refresh is incomplete; prior verified records are retained.",
-      "calendar_checked_at": "2026-10-29T12:50:33.740928+00:00",
+      "calendar_checked_at": "2026-11-11T14:05:46.371014+00:00",
       "committees": [
         {
           "id": "3133",
@@ -364,8 +387,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3133",
-          "role_checked_at": "2026-10-29T12:50:51.533771+00:00",
-          "checked_at": "2026-10-29T12:51:01.533145+00:00",
+          "role_checked_at": "2026-11-11T14:05:59.321431+00:00",
+          "checked_at": "2026-11-11T14:06:09.300571+00:00",
           "health": "checked"
         },
         {
@@ -377,8 +400,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3096",
-          "role_checked_at": "2026-10-29T12:51:11.537272+00:00",
-          "checked_at": "2026-10-29T12:51:21.545032+00:00",
+          "role_checked_at": "2026-11-11T14:06:19.396113+00:00",
+          "checked_at": "2026-11-11T14:06:29.350577+00:00",
           "health": "checked"
         },
         {
@@ -390,8 +413,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3062",
-          "role_checked_at": "2026-10-29T12:51:31.519197+00:00",
-          "checked_at": "2026-10-29T12:51:41.532886+00:00",
+          "role_checked_at": "2026-11-11T14:06:39.305937+00:00",
+          "checked_at": "2026-11-11T14:06:49.332097+00:00",
           "health": "checked"
         },
         {
@@ -403,8 +426,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3063",
-          "role_checked_at": "2026-10-29T12:51:51.536626+00:00",
-          "checked_at": "2026-10-29T12:52:01.535706+00:00",
+          "role_checked_at": "2026-11-11T14:06:59.352716+00:00",
+          "checked_at": "2026-11-11T14:07:09.388789+00:00",
           "health": "checked"
         },
         {
@@ -416,8 +439,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3160",
-          "role_checked_at": "2026-10-29T12:52:11.505784+00:00",
-          "checked_at": "2026-10-29T12:52:21.510534+00:00",
+          "role_checked_at": "2026-11-11T14:07:19.285682+00:00",
+          "checked_at": "2026-11-11T14:07:29.294511+00:00",
           "health": "checked"
         },
         {
@@ -429,8 +452,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3093",
-          "role_checked_at": "2026-10-29T12:52:31.526963+00:00",
-          "checked_at": "2026-10-29T12:52:41.533122+00:00",
+          "role_checked_at": "2026-11-11T14:07:39.311907+00:00",
+          "checked_at": "2026-11-11T14:07:49.353080+00:00",
           "health": "checked"
         },
         {
@@ -442,8 +465,8 @@
           "chamber": "House",
           "role": "Member",
           "role_source_url": "https://ilga.gov/House/Committees/Members/3094",
-          "role_checked_at": "2026-10-29T12:52:51.524367+00:00",
-          "checked_at": "2026-10-29T12:53:01.531674+00:00",
+          "role_checked_at": "2026-11-11T14:07:59.281174+00:00",
+          "checked_at": "2026-11-11T14:08:09.422898+00:00",
           "health": "checked"
         }
       ],
@@ -479,7 +502,7 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-29T12:56:05.611537+00:00",
+        "checked_at": "2026-11-11T14:12:19.781535+00:00",
         "inference_status": "partial",
         "pending_candidates": 0,
         "withheld_candidates": 2,
@@ -490,10 +513,36 @@
         "query": "\"Bradley Fritts\" OR \"Brad Fritts\" when:200d",
         "search_url": "https://news.google.com/search?q=%22Bradley+Fritts%22+OR+%22Brad+Fritts%22+when%3A200d&hl=en-US&gl=US&ceid=US%3Aen",
         "feed_url": "https://news.google.com/rss/search?q=%22Bradley+Fritts%22+OR+%22Brad+Fritts%22+when%3A200d&hl=en-US&gl=US&ceid=US%3Aen",
-        "candidate_count": 6,
+        "candidate_count": 5,
         "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       },
       "communications": [
+        {
+          "id": "416219527d5086581e32ef6d",
+          "member_id": "fritts",
+          "title": "Veterans Crisis Line",
+          "url": "https://repfritts.com/2026/11/06/veterans-crisis-line/",
+          "published_at": "2026-11-06",
+          "date_precision": "day",
+          "source_id": "fritts-office",
+          "publisher": "Representative Bradley Fritts office",
+          "kind": "office",
+          "publisher_host": "repfritts.com",
+          "source_url": "https://repfritts.com/latest-news/"
+        },
+        {
+          "id": "8211fa9c51bb3a6f7361bf3c",
+          "member_id": "fritts",
+          "title": "E-News Updates from Rep. Fritts – November 2, 2026",
+          "url": "https://repfritts.com/2026/11/02/e-news-updates-from-rep-fritts-november-2-2026/",
+          "published_at": "2026-11-02",
+          "date_precision": "day",
+          "source_id": "fritts-office",
+          "publisher": "Representative Bradley Fritts office",
+          "kind": "office",
+          "publisher_host": "repfritts.com",
+          "source_url": "https://repfritts.com/latest-news/"
+        },
         {
           "id": "04f56d5a97a94c586bdd502d",
           "member_id": "fritts",
@@ -508,30 +557,17 @@
           "source_url": "https://repfritts.com/latest-news/"
         },
         {
-          "id": "d247b549a1d7f651a0015b99",
+          "id": "6a20cbd68aa0eb27b1e5a020",
           "member_id": "fritts",
-          "title": "Rep. Fritts Hosts Winter Clothing Drive",
-          "url": "https://repfritts.com/2026/10/26/rep-fritts-hosts-winter-clothing-drive/",
-          "published_at": "2026-10-26",
-          "date_precision": "day",
-          "source_id": "fritts-office",
-          "publisher": "Representative Bradley Fritts office",
-          "kind": "office",
-          "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
-        },
-        {
-          "id": "1add1a1dafc60b6cd8717389",
-          "member_id": "fritts",
-          "title": "Rep. Fritts Announces 2026 Educator of the Year Award Recipients",
-          "url": "https://repfritts.com/2026/10/22/rep-fritts-announces-2026-educator-of-the-year-award-recipients/",
-          "published_at": "2026-10-22",
-          "date_precision": "day",
-          "source_id": "fritts-office",
-          "publisher": "Representative Bradley Fritts office",
-          "kind": "office",
-          "publisher_host": "repfritts.com",
-          "source_url": "https://repfritts.com/latest-news/"
+          "title": "House Democrats’ Scary Scandals Haunt Springfield",
+          "url": "https://www.thecaucusblog.com/2026/10/house-democrats-scary-scandals-haunt.html",
+          "published_at": "2026-10-30T13:30:00+00:00",
+          "date_precision": "timestamp",
+          "source_id": "il-house-gop",
+          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
+          "kind": "party",
+          "publisher_host": "thecaucusblog.com",
+          "source_url": "https://www.thecaucusblog.com/"
         },
         {
           "id": "673350a1339ed197727b3bc2",
@@ -558,19 +594,6 @@
           "kind": "party",
           "publisher_host": "thecaucusblog.com",
           "source_url": "https://www.thecaucusblog.com/"
-        },
-        {
-          "id": "454774de5e275ede6ff377c5",
-          "member_id": "fritts",
-          "title": "On Crypto Tax, Who Could Have Seen This Coming?",
-          "url": "https://www.thecaucusblog.com/2026/10/on-crypto-tax-who-could-have-seen-this.html",
-          "published_at": "2026-10-09T13:30:00+00:00",
-          "date_precision": "timestamp",
-          "source_id": "il-house-gop",
-          "publisher": "The Caucus Blog · Illinois House Republican Caucus",
-          "kind": "party",
-          "publisher_host": "thecaucusblog.com",
-          "source_url": "https://www.thecaucusblog.com/"
         }
       ],
       "communication_sources": [
@@ -580,8 +603,8 @@
           "kind": "office",
           "url": "https://repfritts.com/latest-news/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-27",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-06",
           "error_category": null,
           "error_code": null,
           "note": ""
@@ -592,7 +615,7 @@
           "kind": "campaign",
           "url": "https://fritts4rep.com/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": "2025-07-15",
           "error_category": null,
           "error_code": null,
@@ -604,8 +627,8 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-26",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-06",
           "error_category": null,
           "error_code": null,
           "note": ""
@@ -616,8 +639,8 @@
           "kind": "party",
           "url": "https://www.thecaucusblog.com/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-15",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-10-30",
           "error_category": null,
           "error_code": null,
           "note": "Caucus-wide House Republican updates, shown for Fritts as a House member. Posts need not name him and do not establish his authorship or endorsement. This is a legislative caucus publication, not a campaign or independent newsroom."
@@ -628,14 +651,14 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "failed",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": "2026-10-01",
           "error_category": "parse",
           "error_code": "PARSE_ERROR",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-29T12:56:05.611537+00:00"
+      "communications_checked_at": "2026-11-11T14:12:19.781535+00:00"
     },
     {
       "id": "arellano",
@@ -994,7 +1017,7 @@
       "meetings": [],
       "activity_source_checked_at": "2026-10-19T22:26:42.995673+00:00",
       "activity_coverage": "Daily FTP listing changes and official floor-vote CSV; committee votes retain historical PDF coverage. Source refresh is incomplete; prior verified records are retained.",
-      "calendar_checked_at": "2026-10-29T12:50:33.740928+00:00",
+      "calendar_checked_at": "2026-11-11T14:05:46.371014+00:00",
       "committees": [
         {
           "id": "3121",
@@ -1005,8 +1028,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3121",
-          "role_checked_at": "2026-10-29T12:53:21.532871+00:00",
-          "checked_at": "2026-10-29T12:53:31.517354+00:00",
+          "role_checked_at": "2026-11-11T14:08:29.287202+00:00",
+          "checked_at": "2026-11-11T14:08:39.297808+00:00",
           "health": "checked"
         },
         {
@@ -1018,8 +1041,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3118",
-          "role_checked_at": "2026-10-29T12:53:41.538694+00:00",
-          "checked_at": "2026-10-29T12:53:51.538622+00:00",
+          "role_checked_at": "2026-11-11T14:08:49.288293+00:00",
+          "checked_at": "2026-11-11T14:08:59.306565+00:00",
           "health": "checked"
         },
         {
@@ -1031,8 +1054,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3076",
-          "role_checked_at": "2026-10-29T12:54:01.521123+00:00",
-          "checked_at": "2026-10-29T12:54:11.525524+00:00",
+          "role_checked_at": "2026-11-11T14:09:09.285388+00:00",
+          "checked_at": "2026-11-11T14:09:19.291475+00:00",
           "health": "checked"
         },
         {
@@ -1044,8 +1067,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3130",
-          "role_checked_at": "2026-10-29T12:54:21.534441+00:00",
-          "checked_at": "2026-10-29T12:54:31.534297+00:00",
+          "role_checked_at": "2026-11-11T14:09:29.294919+00:00",
+          "checked_at": "2026-11-11T14:09:39.298520+00:00",
           "health": "checked"
         },
         {
@@ -1057,8 +1080,8 @@
           "chamber": "Senate",
           "role": "Minority Spokesperson",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3119",
-          "role_checked_at": "2026-10-29T12:54:41.527730+00:00",
-          "checked_at": "2026-10-29T12:54:51.546375+00:00",
+          "role_checked_at": "2026-11-11T14:09:49.308671+00:00",
+          "checked_at": "2026-11-11T14:09:59.305946+00:00",
           "health": "checked"
         },
         {
@@ -1070,8 +1093,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3074",
-          "role_checked_at": "2026-10-29T12:55:01.516352+00:00",
-          "checked_at": "2026-10-29T12:55:11.542860+00:00",
+          "role_checked_at": "2026-11-11T14:10:09.310785+00:00",
+          "checked_at": "2026-11-11T14:10:19.380042+00:00",
           "health": "checked"
         },
         {
@@ -1083,8 +1106,8 @@
           "chamber": "Senate",
           "role": "Member",
           "role_source_url": "https://ilga.gov/Senate/Committees/Members/3099",
-          "role_checked_at": "2026-10-29T12:55:21.529517+00:00",
-          "checked_at": "2026-10-29T12:55:31.537089+00:00",
+          "role_checked_at": "2026-11-11T14:10:29.306668+00:00",
+          "checked_at": "2026-11-11T14:10:39.301163+00:00",
           "health": "checked"
         }
       ],
@@ -1112,7 +1135,7 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-29T12:56:05.611537+00:00",
+        "checked_at": "2026-11-11T14:12:19.781535+00:00",
         "inference_status": "partial",
         "pending_candidates": 0,
         "withheld_candidates": 1,
@@ -1174,7 +1197,7 @@
           "kind": "office",
           "url": "https://www.senatorli.com/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": "2026-10-21",
           "error_category": null,
           "error_code": null,
@@ -1186,7 +1209,7 @@
           "kind": "campaign",
           "url": "https://electarellano.com/",
           "status": "link-only",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": null,
           "error_category": null,
           "error_code": null,
@@ -1198,8 +1221,8 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-26",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-06",
           "error_category": null,
           "error_code": null,
           "note": ""
@@ -1210,14 +1233,14 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "failed",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": "2026-10-01",
           "error_category": "parse",
           "error_code": "PARSE_ERROR",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-29T12:56:05.611537+00:00"
+      "communications_checked_at": "2026-11-11T14:12:19.781535+00:00"
     },
     {
       "id": "lahood",
@@ -1268,6 +1291,116 @@
       },
       "events": [
         {
+          "id": "US-119-HOUSE-2-00319-L000585",
+          "kind": "vote",
+          "date": "2026-11-10",
+          "title": "Providing for consideration of the bill (H.R. 1013) to amend the Federal securities laws to enhance 403(b) plans, and for other purposes",
+          "detail": "On Agreeing to the Resolution",
+          "source_url": "https://clerk.house.gov/Votes/2026319",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H RES 1650",
+          "choice": "yes",
+          "raw_choice": "Aye",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 215,
+            "no": 209,
+            "present": 0,
+            "not-voting": 9
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-resolution/1650",
+          "source_sha256": "2fcd14d25916709f55ecb97371d386e63af2e6ee56b9039c165bb0b017789e3f"
+        },
+        {
+          "id": "US-119-HOUSE-2-00318-L000585",
+          "kind": "vote",
+          "date": "2026-11-10",
+          "title": "Providing for consideration of the bill (H.R. 1013) to amend the Federal securities laws to enhance 403(b) plans, and for other purposes",
+          "detail": "On Ordering the Previous Question",
+          "source_url": "https://clerk.house.gov/Votes/2026318",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H RES 1650",
+          "choice": "yes",
+          "raw_choice": "Yea",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 213,
+            "no": 207,
+            "present": 0,
+            "not-voting": 13
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-resolution/1650",
+          "source_sha256": "ae1b3933515c949e11a5af7176d48f39832e85499fa8cd8e618576fa9392ba81"
+        },
+        {
+          "id": "US-119-HOUSE-2-00317-L000585",
+          "kind": "vote",
+          "date": "2026-11-10",
+          "title": "Impeaching Peter Brian Hegseth, Secretary of Defense, for high crimes and misdemeanors",
+          "detail": "On Motion to Refer",
+          "source_url": "https://clerk.house.gov/Votes/2026317",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H RES 1655",
+          "choice": "yes",
+          "raw_choice": "Yea",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 211,
+            "no": 204,
+            "present": 0,
+            "not-voting": 18
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-resolution/1655",
+          "source_sha256": "8a27973128524c39d25f9151e9cae1f7fdf0d8b036d3c5149bc3eff4a71e9099"
+        },
+        {
+          "id": "US-119-HOUSE-2-00316-L000585",
+          "kind": "vote",
+          "date": "2026-11-09",
+          "title": "American Enrichment Deployment Act",
+          "detail": "On Motion to Suspend the Rules and Pass, as Amended",
+          "source_url": "https://clerk.house.gov/Votes/2026316",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H R 9612",
+          "choice": "yes",
+          "raw_choice": "Yea",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 394,
+            "no": 3,
+            "present": 0,
+            "not-voting": 36
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-bill/9612",
+          "source_sha256": "252f7542dfc0c6656fb2bff267b48805a7744b97a67d4ed83cc74dd87ea2700b"
+        },
+        {
+          "id": "US-119-HOUSE-2-00315-L000585",
+          "kind": "vote",
+          "date": "2026-11-09",
+          "title": "Nuclear REFUEL (Recycling Efficient Fuels Utilizing Expedited Licensing) Act",
+          "detail": "On Motion to Suspend the Rules and Pass, as Amended",
+          "source_url": "https://clerk.house.gov/Votes/2026315",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H R 3978",
+          "choice": "yes",
+          "raw_choice": "Yea",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 397,
+            "no": 2,
+            "present": 0,
+            "not-voting": 34
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-bill/3978",
+          "source_sha256": "4959e3f3073d4d00c3a5345ff301e1a053625c6b284906f9addc2c6ce4d32703"
+        },
+        {
           "id": "US-119-HR10499-introduced-L000585",
           "kind": "introduction",
           "date": "2026-09-17",
@@ -1276,116 +1409,6 @@
           "source_url": "https://www.congress.gov/bill/119/house-bill/10499",
           "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
           "measure": "HR10499"
-        },
-        {
-          "id": "US-119-HOUSE-2-00314-L000585",
-          "kind": "vote",
-          "date": "2026-09-16",
-          "title": "Retire through Ownership Act",
-          "detail": "On Motion to Suspend the Rules and Pass",
-          "source_url": "https://clerk.house.gov/Votes/2026314",
-          "source_retrieved_at": "2026-10-29T12:40:57.043259+00:00",
-          "measure": "S 2403",
-          "choice": "yes",
-          "raw_choice": "Yea",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 401,
-            "no": 14,
-            "present": 0,
-            "not-voting": 18
-          },
-          "bill_url": "https://www.congress.gov/bill/119/senate-bill/2403",
-          "source_sha256": "e33561005e3b233619290d829ba68408d2983c5624c0af4f4d7edf5c8eeb2b61"
-        },
-        {
-          "id": "US-119-HOUSE-2-00313-L000585",
-          "kind": "vote",
-          "date": "2026-09-16",
-          "title": "Water Resources Development Act",
-          "detail": "On Motion to Suspend the Rules and Pass, as Amended",
-          "source_url": "https://clerk.house.gov/Votes/2026313",
-          "source_retrieved_at": "2026-10-29T12:40:57.043259+00:00",
-          "measure": "H R 9497",
-          "choice": "yes",
-          "raw_choice": "Yea",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 415,
-            "no": 9,
-            "present": 0,
-            "not-voting": 9
-          },
-          "bill_url": "https://www.congress.gov/bill/119/house-bill/9497",
-          "source_sha256": "7a57b3534c2aacc0e8a25b3e7c1dba4f29e20ae3df491627013ce940645dc51d"
-        },
-        {
-          "id": "US-119-HOUSE-2-00312-L000585",
-          "kind": "vote",
-          "date": "2026-09-16",
-          "title": "Ratepayer Protection Act",
-          "detail": "On Motion to Suspend the Rules and Pass, as Amended",
-          "source_url": "https://clerk.house.gov/Votes/2026312",
-          "source_retrieved_at": "2026-10-29T12:40:57.043259+00:00",
-          "measure": "H R 9340",
-          "choice": "yes",
-          "raw_choice": "Yea",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 417,
-            "no": 3,
-            "present": 0,
-            "not-voting": 12
-          },
-          "bill_url": "https://www.congress.gov/bill/119/house-bill/9340",
-          "source_sha256": "46469a2f0bbdffe2010ca2fac51e28d01c40ef424a1f00d36e8b820930234f0c"
-        },
-        {
-          "id": "US-119-HOUSE-2-00311-L000585",
-          "kind": "vote",
-          "date": "2026-09-16",
-          "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule issued by the Environmental Protection Agency relating to the “California State Nonroad Engine Pollution Control Standards; Commercial Harbor Craft Regulations; Notice of Decision”",
-          "detail": "On Passage",
-          "source_url": "https://clerk.house.gov/Votes/2026311",
-          "source_retrieved_at": "2026-10-29T12:40:57.043259+00:00",
-          "measure": "H J RES 213",
-          "choice": "yes",
-          "raw_choice": "Yea",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 214,
-            "no": 208,
-            "present": 0,
-            "not-voting": 11
-          },
-          "bill_url": "https://www.congress.gov/bill/119/house-joint-resolution/213",
-          "source_sha256": "0bf25ccb37422612125f12d1a857010ce3e784e9cbf19f7eefc5c682d29087d8"
-        },
-        {
-          "id": "US-119-HOUSE-2-00310-L000585",
-          "kind": "vote",
-          "date": "2026-09-16",
-          "title": "PROOF Act",
-          "detail": "On Passage",
-          "source_url": "https://clerk.house.gov/Votes/2026310",
-          "source_retrieved_at": "2026-10-29T12:40:57.043259+00:00",
-          "measure": "H R 10326",
-          "choice": "yes",
-          "raw_choice": "Yea",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 217,
-            "no": 207,
-            "present": 0,
-            "not-voting": 9
-          },
-          "bill_url": "https://www.congress.gov/bill/119/house-bill/10326",
-          "source_sha256": "2de9a3d27362568686150e35a49cc0aa18bc34c756147f3536c12623f35927b7"
         },
         {
           "id": "US-119-HR10075-introduced-L000585",
@@ -1428,11 +1451,20 @@
           "measure": "HR9100"
         }
       ],
-      "recent_total_in_import": 0,
+      "recent_total_in_import": 5,
       "recent_truncated": false,
-      "latest_event_date": "2026-09-17",
-      "latest_vote_date": "2026-09-16",
+      "latest_event_date": "2026-11-10",
+      "latest_vote_date": "2026-11-10",
       "sponsorship_listings": [
+        {
+          "measure": "HR138",
+          "title": "Lowering Costs for Caregivers Act of 2025",
+          "role": "cosponsored",
+          "source_url": "https://www.congress.gov/bill/119/house-bill/138",
+          "bill_introduced_date": "2026-11-10",
+          "role_date": null,
+          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
+        },
         {
           "measure": "HRES1641",
           "title": "Honoring the contributions of Indian Americans and supporting the designation of July as \"Indian American Heritage Month\".",
@@ -1477,22 +1509,13 @@
           "bill_introduced_date": "2026-09-15",
           "role_date": null,
           "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
-        },
-        {
-          "measure": "HR7779",
-          "title": "HEALTHY BRAINS Act of 2026",
-          "role": "cosponsored",
-          "source_url": "https://www.congress.gov/bill/119/house-bill/7779",
-          "bill_introduced_date": "2026-09-14",
-          "role_date": null,
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
         }
       ],
       "meetings": [],
       "activity_source_checked_at": "2026-10-18T10:44:37.457073+00:00",
       "activity_coverage": "Daily Congress.gov sponsorship lists and official floor roll calls; unknown cosponsorship join dates remain undated. Source refresh is incomplete; prior verified records are retained.",
-      "calendar_checked_at": "2026-10-29T12:50:33.740928+00:00",
-      "calendar_health": "published_weeks_checked",
+      "calendar_checked_at": "2026-11-11T14:05:46.371014+00:00",
+      "calendar_health": "partial_or_failed",
       "media_reports": [
         {
           "id": "0c0e45b1520ce7a0836025d6",
@@ -1500,9 +1523,8 @@
           "publisher": "MyStateline",
           "publisher_host": "mystateline.com",
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOanVDMEtMTkR5N0FIYVl5MUZCdjlnUExpckJJcHIxRXgzUHRMbHhLZ252Q3htQlYtUWRCRVp2R0NKeDNqc0lMajMwajBBNktQSHg5c3p3LVZsYmNOUW1fWHRfUk55VHRKUXRtQnJ6ZWlORkJEV0JXcndkS0JTYXVmZmV4MUFpckl3eXfSAY8BQVVfeXFMT3MwWHRjdjhGZlNTdUtmNVVORGFnTExqZjY5ZDhXS3o3bkpLNFhETWJZQXBGTkRGMEdIQmdhbk50b3RkRlRmTk91VDQ3Z1ZGQU9hTUpBYkNheWJwYlhLYjNqbWtRSks0dUNqYy14NHJ3NTN1UGFkaHc3YVN0NlZOZE40dE1MQmplT05ORVBMMlU",
-          "published_at": "2026-10-24T18:27:25+00:00",
-          "link_route": "Google News",
-          "source_checked_at": "2026-10-25T11:23:36.218124+00:00"
+          "published_at": "2026-10-24T07:00:00+00:00",
+          "link_route": "Google News"
         },
         {
           "id": "31c5a234e8645c86ee6deeb9",
@@ -1521,14 +1543,15 @@
           "publisher_host": "shawlocal.com",
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcW9sS2hjVXVwNWxiMTlGYi04T01DYkdNczhyTXhsZ2VXX19GcF9VeGtzN1VseFFBenRQeHNQcXM0SFBoMTZKWFI3aEU3bXVhX1ZSVTVzZElVQVBqVXR6RkozMTZWSWZwbDJMQmk0R1pwQzJKR09CS2ttMmtVVFZjT0ZzcDRJaVE4dnV5cG4tMWxqZEtLS2tPd3U5VXpFcGphYmZPRGQweUhfRnNMcEc1R1JCUnVqN1U",
           "published_at": "2026-10-12T07:00:00+00:00",
-          "link_route": "Google News"
+          "link_route": "Google News",
+          "source_checked_at": "2026-10-29T12:56:05.611537+00:00"
         }
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-29T12:56:05.611537+00:00",
+        "checked_at": "2026-11-11T14:12:19.781535+00:00",
         "inference_status": "partial",
-        "pending_candidates": 6,
+        "pending_candidates": 9,
         "withheld_candidates": 4,
         "screened_history_count": 21,
         "lookback_days": 200
@@ -1537,42 +1560,42 @@
         "query": "\"Darin LaHood\" when:200d",
         "search_url": "https://news.google.com/search?q=%22Darin+LaHood%22+when%3A200d&hl=en-US&gl=US&ceid=US%3Aen",
         "feed_url": "https://news.google.com/rss/search?q=%22Darin+LaHood%22+when%3A200d&hl=en-US&gl=US&ceid=US%3Aen",
-        "candidate_count": 24,
+        "candidate_count": 22,
         "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       },
       "communications": [
+        {
+          "id": "20fbc7eb9cfbe132f0d462c7",
+          "member_id": "lahood",
+          "title": "LaHood Statement on the Election of Republican Leader Jim Jordan",
+          "url": "https://lahood.house.gov/2026/11/lahood-statement-on-the-election-of-republican-leader-jim-jordan",
+          "published_at": "2026-11-10",
+          "date_precision": "day",
+          "source_id": "lahood-office",
+          "publisher": "Representative Darin LaHood office",
+          "kind": "office",
+          "publisher_host": "lahood.house.gov",
+          "source_url": "https://lahood.house.gov/news"
+        },
+        {
+          "id": "72416e912bf64ec745b4979a",
+          "member_id": "lahood",
+          "title": "ICYMI: LaHood Secures Two DOT Awards for Grundy and Peoria County Projects",
+          "url": "https://lahood.house.gov/2026/10/icymi-lahood-secures-two-dot-awards-for-grundy-and-peoria-county-projects",
+          "published_at": "2026-10-30",
+          "date_precision": "day",
+          "source_id": "lahood-office",
+          "publisher": "Representative Darin LaHood office",
+          "kind": "office",
+          "publisher_host": "lahood.house.gov",
+          "source_url": "https://lahood.house.gov/news"
+        },
         {
           "id": "a71c6dbcd38963dd1744371d",
           "member_id": "lahood",
           "title": "LaHood Joins U.S. Secretary of Energy Wright and EDF Director Beard to Announce $5 Billion Investment in Nuclear Fleets and Lower Costs for Families",
           "url": "https://lahood.house.gov/2026/10/lahood-joins-u-s-secretary-of-energy-wright-and-edf-director-beard-to-announce-5-billion-investment-in-nuclear-fleets-and-lower-costs-for-families",
           "published_at": "2026-10-28",
-          "date_precision": "day",
-          "source_id": "lahood-office",
-          "publisher": "Representative Darin LaHood office",
-          "kind": "office",
-          "publisher_host": "lahood.house.gov",
-          "source_url": "https://lahood.house.gov/news"
-        },
-        {
-          "id": "347d0e7f7f9e3d8920cba94d",
-          "member_id": "lahood",
-          "title": "LaHood Urges President Trump to Issue Presidential Major Disaster Declaration for Continued Recovery Efforts from August Storms",
-          "url": "https://lahood.house.gov/2026/10/lahood-urges-president-trump-to-issue-presidential-major-disaster-declaration-for-continued-recovery-efforts-from-august-storms",
-          "published_at": "2026-10-07",
-          "date_precision": "day",
-          "source_id": "lahood-office",
-          "publisher": "Representative Darin LaHood office",
-          "kind": "office",
-          "publisher_host": "lahood.house.gov",
-          "source_url": "https://lahood.house.gov/news"
-        },
-        {
-          "id": "5e4cc40b25abde4cf733f12e",
-          "member_id": "lahood",
-          "title": "ICYMI: LaHood, DelBene introduce Bipartisan Meals for Communities Tax Credit Act to Encourage Charitable Prepared Meal Donations",
-          "url": "https://lahood.house.gov/2026/9/icymi-lahood-delbene-introduce-bipartisan-meals-for-communities-tax-credit-act-to-encourage-charitable-prepared-meal-donations",
-          "published_at": "2026-09-21",
           "date_precision": "day",
           "source_id": "lahood-office",
           "publisher": "Representative Darin LaHood office",
@@ -1588,8 +1611,8 @@
           "kind": "office",
           "url": "https://lahood.house.gov/news",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-28",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-10",
           "error_category": null,
           "error_code": null,
           "note": "HTML listing dates are used; the advertised RSS contained malformed dates and is not used."
@@ -1600,7 +1623,7 @@
           "kind": "campaign",
           "url": "https://lahoodforcongress.com/news/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": "2024-11-05",
           "error_category": null,
           "error_code": null,
@@ -1612,8 +1635,8 @@
           "kind": "party",
           "url": "https://ilsenategop.org/news/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-26",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-06",
           "error_category": null,
           "error_code": null,
           "note": ""
@@ -1624,14 +1647,14 @@
           "kind": "party",
           "url": "https://leecountyilgop.org/lee-county-il-republican-central-committee/",
           "status": "failed",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": "2026-10-01",
           "error_category": "parse",
           "error_code": "PARSE_ERROR",
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-29T12:56:05.611537+00:00"
+      "communications_checked_at": "2026-11-11T14:12:19.781535+00:00"
     },
     {
       "id": "durbin",
@@ -1682,13 +1705,67 @@
       },
       "events": [
         {
+          "id": "US-119-SENATE-2-00258-D000563",
+          "kind": "vote",
+          "date": "2026-11-10",
+          "title": "Motion to Proceed to H.R. 2347",
+          "detail": "On the Motion to Proceed H.R. 2347",
+          "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00258.htm",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H.R. 2347",
+          "choice": "no",
+          "raw_choice": "Nay",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 62,
+            "no": 21,
+            "present": 0,
+            "not-voting": 17
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-bill/2347",
+          "source_sha256": "7eaa7847b352d0c586fcc6c46314fb26030c49a3804d6c86bea0089bdca73d30"
+        },
+        {
+          "id": "US-119-S5714-introduced-D000563",
+          "kind": "introduction",
+          "date": "2026-11-10",
+          "title": "A bill to subject professional baseball clubs to the antitrust laws.",
+          "detail": "Introduction date of a sponsor-listed measure; not a cosponsorship join date.",
+          "source_url": "https://www.congress.gov/bill/119/senate-bill/5714",
+          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
+          "measure": "S5714"
+        },
+        {
+          "id": "US-119-SENATE-2-00257-D000563",
+          "kind": "vote",
+          "date": "2026-11-09",
+          "title": "Motion to Invoke Cloture: Motion to Proceed to H.R. 2347",
+          "detail": "On Cloture on the Motion to Proceed H.R. 2347",
+          "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00257.htm",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H.R. 2347",
+          "choice": "no",
+          "raw_choice": "Nay",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 73,
+            "no": 25,
+            "present": 0,
+            "not-voting": 2
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-bill/2347",
+          "source_sha256": "c71c3fc1bf81b877b4123024361c0a5a7fb5f38eda6cb0b683407ac1f18e7cb4"
+        },
+        {
           "id": "US-119-SENATE-2-00256-D000563",
           "kind": "vote",
           "date": "2026-09-30",
           "title": "Confirmation: Keith Sonderling, of F.L., to be Secretary of Labor",
           "detail": "On the Nomination PN1129",
           "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00256.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
           "measure": "PN1129",
           "choice": "not-voting",
           "raw_choice": "Not Voting",
@@ -1710,7 +1787,7 @@
           "title": "Motion to Invoke Cloture: Keith Sonderling to be Secretary of Labor",
           "detail": "On the Cloture Motion PN1129",
           "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00255.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
           "measure": "PN1129",
           "choice": "no",
           "raw_choice": "Nay",
@@ -1732,7 +1809,7 @@
           "title": "Motion to Invoke Cloture on the Motion to Proceed to H.R. 9340",
           "detail": "On Cloture on the Motion to Proceed H.R. 9340",
           "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00254.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
           "measure": "H.R. 9340",
           "choice": "no",
           "raw_choice": "Nay",
@@ -1748,28 +1825,6 @@
           "source_sha256": "fa67a09e83114c84593ee57def3229a777425ac5f81814553fadee26aa8913b8"
         },
         {
-          "id": "US-119-SENATE-2-00253-D000563",
-          "kind": "vote",
-          "date": "2026-09-30",
-          "title": "Motion to Invoke Cloture on the Motion to Proceed: H.R. 7008",
-          "detail": "On Cloture on the Motion to Proceed H.R. 7008",
-          "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00253.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
-          "measure": "H.R. 7008",
-          "choice": "no",
-          "raw_choice": "Nay",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 53,
-            "no": 47,
-            "present": 0,
-            "not-voting": 0
-          },
-          "bill_url": "https://www.congress.gov/bill/119/house-bill/7008",
-          "source_sha256": "774d39920ce2f42e86a9682811d1a2bd12a007925b9e77e51880a58654d3bf2a"
-        },
-        {
           "id": "US-119-S5632-introduced-D000563",
           "kind": "introduction",
           "date": "2026-09-30",
@@ -1778,28 +1833,6 @@
           "source_url": "https://www.congress.gov/bill/119/senate-bill/5632",
           "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
           "measure": "S5632"
-        },
-        {
-          "id": "US-119-SENATE-2-00252-D000563",
-          "kind": "vote",
-          "date": "2026-09-29",
-          "title": "Motion to Discharge S. Res. 852",
-          "detail": "On the Motion to Discharge S.Res. 852",
-          "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00252.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
-          "measure": "S.Res. 852",
-          "choice": "yes",
-          "raw_choice": "Yea",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 47,
-            "no": 51,
-            "present": 0,
-            "not-voting": 2
-          },
-          "bill_url": "https://www.congress.gov/bill/119/senate-resolution/852",
-          "source_sha256": "531f37edd7ec8a1d12abe8cb201c7a02dde5686e2ed565c0132f73f59b0b4396"
         },
         {
           "id": "US-119-S5560-introduced-D000563",
@@ -1830,23 +1863,22 @@
           "source_url": "https://www.congress.gov/bill/119/senate-bill/4213",
           "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
           "measure": "S4213"
-        },
-        {
-          "id": "US-119-S5455-introduced-D000563",
-          "kind": "introduction",
-          "date": "2026-09-22",
-          "title": "Lead-Safe Housing for Kids Act of 2026",
-          "detail": "Introduction date of a sponsor-listed measure; not a cosponsorship join date.",
-          "source_url": "https://www.congress.gov/bill/119/senate-bill/5455",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
-          "measure": "S5455"
         }
       ],
-      "recent_total_in_import": 5,
+      "recent_total_in_import": 3,
       "recent_truncated": false,
-      "latest_event_date": "2026-09-30",
-      "latest_vote_date": "2026-09-30",
+      "latest_event_date": "2026-11-10",
+      "latest_vote_date": "2026-11-10",
       "sponsorship_listings": [
+        {
+          "measure": "S5702",
+          "title": "A bill to improve maternal health policies in correctional facilities, and for other purposes.",
+          "role": "cosponsored",
+          "source_url": "https://www.congress.gov/bill/119/senate-bill/5702",
+          "bill_introduced_date": "2026-11-10",
+          "role_date": null,
+          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
+        },
         {
           "measure": "S3524",
           "title": "American Battlefield Protection Program Amendments Act of 2025",
@@ -1891,22 +1923,89 @@
           "bill_introduced_date": "2026-09-29",
           "role_date": null,
           "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
-        },
-        {
-          "measure": "SRES926",
-          "title": "A resolution designating September 2026 as \"National Literacy Month\".",
-          "role": "cosponsored",
-          "source_url": "https://www.congress.gov/bill/119/senate-resolution/926",
-          "bill_introduced_date": "2026-09-29",
-          "role_date": null,
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
         }
       ],
-      "meetings": [],
+      "meetings": [
+        {
+          "committee_name": "Judiciary",
+          "committee_code": "SSJU00",
+          "date_local": "2026-11-17",
+          "location": "SH-216",
+          "time_note": "09:00 AM",
+          "description": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Lee Philip Rudofsky, of Arkansas, to be United States Circuit Judge for the Eighth Circuit, Robert E. Long, Jr., to be United States District Judge for the Middle District of Florida, Peter M. Mansfield, to be United States District Judge for the Eastern District of Louisiana, Jesus A. Osete, to be United States District Judge for the Western District of Missouri, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma, Stephen Husk, of Virginia, to be a Commissioner of the United States Parole Commission, and Samuel King Lee, to be United States Attorney for the Eastern District of Tennessee,  Gretchen C.F. Shappert, of Virginia, to be United States Attorney for the District of Guam and concurrently United States Attorney for the District of the Northern Mariana Islands, Robert Troester, to be United States Attorney for the Western District of Oklahoma, Reid McAlister Creswell, to be United States Marshal for the District of South Carolina, James Christopher Edge, to be United States Marshal for the Western District of North Carolina, Christopher Walter Inabinett, to be United States Marshal for the Middle District of Alabama, and James Richard Jackson, of Texas, to be United States Marshal for the Eastern District of Texas, all of the Department of Justice; to be immediately followed by an open hearing in SH-216 to examine how competition and transparency lowers prescription drug costs.",
+          "timezone": "America/New_York",
+          "agenda_coverage": "not-collected",
+          "status": "scheduled",
+          "status_basis": "scheduled-listing",
+          "status_notice": null,
+          "timezone_basis": "jurisdiction assumption",
+          "source_url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+          "identity_ambiguous": false,
+          "identity_basis": "Unique committee and subject within checked Senate feed; no durable event ID",
+          "committee_url": "https://www.judiciary.senate.gov",
+          "items": [],
+          "hearing_key": "US-119-SENATE-585d2c5a3ed2621f3d2ed3c1",
+          "evidence": {
+            "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+            "sha256": "94dc89bc67580a73e9b5f8cf1edcac859439364e6d998c033e308518d300c87e",
+            "checked_at": "2026-11-11T14:05:47.493899+00:00"
+          }
+        },
+        {
+          "committee_name": "Judiciary",
+          "committee_code": "SSJU22",
+          "date_local": "2026-11-17",
+          "location": "SD-562",
+          "time_note": "02:30 PM",
+          "description": "Hearings to examine Roblox and online gaming, focusing on digital playgrounds endangering America's children.",
+          "timezone": "America/New_York",
+          "agenda_coverage": "not-collected",
+          "status": "scheduled",
+          "status_basis": "scheduled-listing",
+          "status_notice": null,
+          "timezone_basis": "jurisdiction assumption",
+          "source_url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+          "identity_ambiguous": false,
+          "identity_basis": "Unique committee and subject within checked Senate feed; no durable event ID",
+          "committee_url": "https://www.judiciary.senate.gov",
+          "items": [],
+          "hearing_key": "US-119-SENATE-f2f9afe2bba51786b894921d",
+          "evidence": {
+            "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+            "sha256": "94dc89bc67580a73e9b5f8cf1edcac859439364e6d998c033e308518d300c87e",
+            "checked_at": "2026-11-11T14:05:47.493899+00:00"
+          }
+        },
+        {
+          "committee_name": "Judiciary",
+          "committee_code": "SSJU00",
+          "date_local": "2026-11-18",
+          "location": "SD-G50",
+          "time_note": "11:00 AM",
+          "description": "Hearings to examine pending nominations.",
+          "timezone": "America/New_York",
+          "agenda_coverage": "not-collected",
+          "status": "scheduled",
+          "status_basis": "scheduled-listing",
+          "status_notice": null,
+          "timezone_basis": "jurisdiction assumption",
+          "source_url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+          "identity_ambiguous": false,
+          "identity_basis": "Unique committee and subject within checked Senate feed; no durable event ID",
+          "committee_url": "https://www.judiciary.senate.gov",
+          "items": [],
+          "hearing_key": "US-119-SENATE-f29d33e7b397e94812cf4adb",
+          "evidence": {
+            "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+            "sha256": "94dc89bc67580a73e9b5f8cf1edcac859439364e6d998c033e308518d300c87e",
+            "checked_at": "2026-11-11T14:05:47.493899+00:00"
+          }
+        }
+      ],
       "activity_source_checked_at": "2026-10-18T10:44:37.457073+00:00",
       "activity_coverage": "Daily Congress.gov sponsorship lists and official floor roll calls; unknown cosponsorship join dates remain undated. Source refresh is incomplete; prior verified records are retained.",
-      "calendar_checked_at": "2026-10-29T12:50:33.740928+00:00",
-      "calendar_health": "failed",
+      "calendar_checked_at": "2026-11-11T14:05:46.371014+00:00",
+      "calendar_health": "published_feed_checked",
       "media_reports": [
         {
           "id": "3e05f4eec226dab152db14a3",
@@ -1914,7 +2013,7 @@
           "publisher": "CBS News",
           "publisher_host": "cbsnews.com",
           "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQ2pOSUtKTFNWUTFmckxCYUwxWExGb094U1dfZTNsYWdibFV5WmxuTUJ5Q2FvTFpMSlMwcjlzUGhxMjR4a3Utc0tPMDlCSjk2b1k5dVM2YlM0T2swS3pJVGlQZTR0SDFyX2tKVDc0UWYwZVRJWjAwcFdQMnVnaVBLdEU0MDgxYXlmdE1PUGtwdW1Jc19uZTV0ZXJLMmhIejU5a2NVMlF3",
-          "published_at": "2026-10-22T23:15:00+00:00",
+          "published_at": "2026-10-22T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -1940,62 +2039,59 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-29T12:56:05.611537+00:00",
+        "checked_at": "2026-11-11T14:12:19.781535+00:00",
         "inference_status": "partial",
         "pending_candidates": 0,
-        "withheld_candidates": 3,
-        "screened_history_count": 20,
+        "withheld_candidates": 4,
+        "screened_history_count": 21,
         "lookback_days": 200
       },
       "media_search": {
         "query": "\"Dick Durbin\" when:200d",
         "search_url": "https://news.google.com/search?q=%22Dick+Durbin%22+when%3A200d&hl=en-US&gl=US&ceid=US%3Aen",
         "feed_url": "https://news.google.com/rss/search?q=%22Dick+Durbin%22+when%3A200d&hl=en-US&gl=US&ceid=US%3Aen",
-        "candidate_count": 17,
+        "candidate_count": 13,
         "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       },
       "communications": [
         {
-          "id": "f51d1cdc64abfb2cb1abe06a",
+          "id": "740679454025e510fe21f12e",
           "member_id": "durbin",
-          "title": "Durbin, Grassley Urge Defense Secretary Hegseth, Secretary Of State Rubio To Swiftly Obligate Congressionally Appropriated Baltic Security Initiative Funding",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-grassley-urge-defense-secretary-hegseth-secretary-of-state-rubio-to-swiftly-obligate-congressionally-appropriated-baltic-security-initiative-funding",
-          "published_at": "2026-10-22",
+          "title": "Durbin Casts 17,000th Vote In Congress",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-casts-17000th-vote-in-congress",
+          "published_at": "2026-11-10",
           "date_precision": "day",
           "source_id": "durbin-office",
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
-          "id": "649b9b3ed5ab62bd0d9e9dea",
+          "id": "841da74217a9d8286c4882b9",
           "member_id": "durbin",
-          "title": "Durbin Delivers Remarks Highlighting MxD’s Leadership In Technology And Manufacturing During Annual Member Summit",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-delivers-remarks-highlighting-mxds-leadership-in-technology-and-manufacturing-during-annual-member-summit",
-          "published_at": "2026-10-21",
+          "title": "Durbin Reflects On Last Codel Trip To The Balkans",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-reflects-on-last-codel-trip-to-the-balkans",
+          "published_at": "2026-11-10",
           "date_precision": "day",
           "source_id": "durbin-office",
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         },
         {
-          "id": "6767d99d988654aa5d61ff7c",
+          "id": "6a5d8f92648e7ecf4caeff6e",
           "member_id": "durbin",
-          "title": "Durbin Urges GAO To Investigate The Trump Administration’s Decision To Establish New, Hidden Immigration Courts",
-          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-urges-gao-to-investigate-the-trump-administrations-decision-to-establish-new-hidden-immigration-courts",
-          "published_at": "2026-10-21",
+          "title": "Durbin Calls Out Trump Judicial Nominees For Their Inexperience In The Courtroom",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-calls-out-trump-judicial-nominees-for-their-inexperience-in-the-courtroom",
+          "published_at": "2026-11-10",
           "date_precision": "day",
           "source_id": "durbin-office",
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "publisher_host": "durbin.senate.gov",
-          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.durbin.senate.gov/newsroom/press-releases"
         }
       ],
       "communication_sources": [
@@ -2004,11 +2100,11 @@
           "publisher": "Senator Dick Durbin office",
           "kind": "office",
           "url": "https://www.durbin.senate.gov/newsroom/press-releases",
-          "status": "failed",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-22",
-          "error_category": "http",
-          "error_code": "HTTP_403",
+          "status": "ok",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-10",
+          "error_category": null,
+          "error_code": null,
           "note": ""
         },
         {
@@ -2017,7 +2113,7 @@
           "kind": "campaign",
           "url": "https://www.durbinforsenate.com/",
           "status": "link-only",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": null,
           "error_category": null,
           "error_code": null,
@@ -2028,11 +2124,11 @@
           "publisher": "Senate Democratic Caucus",
           "kind": "party",
           "url": "https://www.democrats.senate.gov/newsroom/press-releases",
-          "status": "failed",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-17",
-          "error_category": "http",
-          "error_code": "HTTP_403",
+          "status": "ok",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-10",
+          "error_category": null,
+          "error_code": null,
           "note": ""
         },
         {
@@ -2041,14 +2137,14 @@
           "kind": "party",
           "url": "https://leecodemocrats.com/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": "2026-08-18",
           "error_category": null,
           "error_code": null,
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-29T12:56:05.611537+00:00"
+      "communications_checked_at": "2026-11-11T14:12:19.781535+00:00"
     },
     {
       "id": "duckworth",
@@ -2107,13 +2203,67 @@
       },
       "events": [
         {
+          "id": "US-119-SENATE-2-00258-D000622",
+          "kind": "vote",
+          "date": "2026-11-10",
+          "title": "Motion to Proceed to H.R. 2347",
+          "detail": "On the Motion to Proceed H.R. 2347",
+          "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00258.htm",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H.R. 2347",
+          "choice": "no",
+          "raw_choice": "Nay",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 62,
+            "no": 21,
+            "present": 0,
+            "not-voting": 17
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-bill/2347",
+          "source_sha256": "7eaa7847b352d0c586fcc6c46314fb26030c49a3804d6c86bea0089bdca73d30"
+        },
+        {
+          "id": "US-119-S5696-introduced-D000622",
+          "kind": "introduction",
+          "date": "2026-11-10",
+          "title": "A bill to amend title 38, United States Code, to improve presumptions of toxic exposure, and for other purposes.",
+          "detail": "Introduction date of a sponsor-listed measure; not a cosponsorship join date.",
+          "source_url": "https://www.congress.gov/bill/119/senate-bill/5696",
+          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
+          "measure": "S5696"
+        },
+        {
+          "id": "US-119-SENATE-2-00257-D000622",
+          "kind": "vote",
+          "date": "2026-11-09",
+          "title": "Motion to Invoke Cloture: Motion to Proceed to H.R. 2347",
+          "detail": "On Cloture on the Motion to Proceed H.R. 2347",
+          "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00257.htm",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
+          "measure": "H.R. 2347",
+          "choice": "no",
+          "raw_choice": "Nay",
+          "scope": "floor",
+          "result": null,
+          "totals": {
+            "yes": 73,
+            "no": 25,
+            "present": 0,
+            "not-voting": 2
+          },
+          "bill_url": "https://www.congress.gov/bill/119/house-bill/2347",
+          "source_sha256": "c71c3fc1bf81b877b4123024361c0a5a7fb5f38eda6cb0b683407ac1f18e7cb4"
+        },
+        {
           "id": "US-119-SENATE-2-00256-D000622",
           "kind": "vote",
           "date": "2026-09-30",
           "title": "Confirmation: Keith Sonderling, of F.L., to be Secretary of Labor",
           "detail": "On the Nomination PN1129",
           "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00256.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
           "measure": "PN1129",
           "choice": "no",
           "raw_choice": "Nay",
@@ -2135,7 +2285,7 @@
           "title": "Motion to Invoke Cloture: Keith Sonderling to be Secretary of Labor",
           "detail": "On the Cloture Motion PN1129",
           "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00255.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
           "measure": "PN1129",
           "choice": "no",
           "raw_choice": "Nay",
@@ -2157,7 +2307,7 @@
           "title": "Motion to Invoke Cloture on the Motion to Proceed to H.R. 9340",
           "detail": "On Cloture on the Motion to Proceed H.R. 9340",
           "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00254.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
+          "source_retrieved_at": "2026-11-11T13:54:42.101747+00:00",
           "measure": "H.R. 9340",
           "choice": "no",
           "raw_choice": "Nay",
@@ -2171,50 +2321,6 @@
           },
           "bill_url": "https://www.congress.gov/bill/119/house-bill/9340",
           "source_sha256": "fa67a09e83114c84593ee57def3229a777425ac5f81814553fadee26aa8913b8"
-        },
-        {
-          "id": "US-119-SENATE-2-00253-D000622",
-          "kind": "vote",
-          "date": "2026-09-30",
-          "title": "Motion to Invoke Cloture on the Motion to Proceed: H.R. 7008",
-          "detail": "On Cloture on the Motion to Proceed H.R. 7008",
-          "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00253.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
-          "measure": "H.R. 7008",
-          "choice": "no",
-          "raw_choice": "Nay",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 53,
-            "no": 47,
-            "present": 0,
-            "not-voting": 0
-          },
-          "bill_url": "https://www.congress.gov/bill/119/house-bill/7008",
-          "source_sha256": "774d39920ce2f42e86a9682811d1a2bd12a007925b9e77e51880a58654d3bf2a"
-        },
-        {
-          "id": "US-119-SENATE-2-00252-D000622",
-          "kind": "vote",
-          "date": "2026-09-29",
-          "title": "Motion to Discharge S. Res. 852",
-          "detail": "On the Motion to Discharge S.Res. 852",
-          "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00252.htm",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
-          "measure": "S.Res. 852",
-          "choice": "yes",
-          "raw_choice": "Yea",
-          "scope": "floor",
-          "result": null,
-          "totals": {
-            "yes": 47,
-            "no": 51,
-            "present": 0,
-            "not-voting": 2
-          },
-          "bill_url": "https://www.congress.gov/bill/119/senate-resolution/852",
-          "source_sha256": "531f37edd7ec8a1d12abe8cb201c7a02dde5686e2ed565c0132f73f59b0b4396"
         },
         {
           "id": "US-119-SRES901-introduced-D000622",
@@ -2255,23 +2361,40 @@
           "source_url": "https://www.congress.gov/bill/119/senate-bill/5416",
           "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
           "measure": "S5416"
-        },
-        {
-          "id": "US-119-S5300-introduced-D000622",
-          "kind": "introduction",
-          "date": "2026-08-06",
-          "title": "Honoring the Sacrifice of Troops in War Act of 2026",
-          "detail": "Introduction date of a sponsor-listed measure; not a cosponsorship join date.",
-          "source_url": "https://www.congress.gov/bill/119/senate-bill/5300",
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00",
-          "measure": "S5300"
         }
       ],
-      "recent_total_in_import": 4,
+      "recent_total_in_import": 3,
       "recent_truncated": false,
-      "latest_event_date": "2026-09-30",
-      "latest_vote_date": "2026-09-30",
+      "latest_event_date": "2026-11-10",
+      "latest_vote_date": "2026-11-10",
       "sponsorship_listings": [
+        {
+          "measure": "SAMDT6882",
+          "title": "US-119-SAMDT6882",
+          "role": "cosponsored",
+          "source_url": "https://www.congress.gov/amendment/119/senate-amendment/6882",
+          "bill_introduced_date": "2026-11-10",
+          "role_date": null,
+          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
+        },
+        {
+          "measure": "S5700",
+          "title": "A bill to amend title XVIII of the Social Security Act to provide for an option for any citizen or permanent resident of the United States age 50 to 64 to buy into Medicare.",
+          "role": "cosponsored",
+          "source_url": "https://www.congress.gov/bill/119/senate-bill/5700",
+          "bill_introduced_date": "2026-11-10",
+          "role_date": null,
+          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
+        },
+        {
+          "measure": "S4568",
+          "title": "Nursing is a Professional Degree Act",
+          "role": "cosponsored",
+          "source_url": "https://www.congress.gov/bill/119/senate-bill/4568",
+          "bill_introduced_date": "2026-11-09",
+          "role_date": null,
+          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
+        },
         {
           "measure": "S5632",
           "title": "National Archives Protection Act",
@@ -2298,40 +2421,89 @@
           "bill_introduced_date": "2026-09-30",
           "role_date": null,
           "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
-        },
-        {
-          "measure": "S5675",
-          "title": "Nutrition Continuity for Military Families Act of 2026",
-          "role": "cosponsored",
-          "source_url": "https://www.congress.gov/bill/119/senate-bill/5675",
-          "bill_introduced_date": "2026-09-30",
-          "role_date": null,
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
-        },
-        {
-          "measure": "SRES931",
-          "title": "A resolution recognizing the month of October 2026 as Filipino American History Month and celebrating the history and culture of Filipino Americans and their immense contributions to the United States.",
-          "role": "cosponsored",
-          "source_url": "https://www.congress.gov/bill/119/senate-resolution/931",
-          "bill_introduced_date": "2026-09-30",
-          "role_date": null,
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
-        },
-        {
-          "measure": "SRES923",
-          "title": "A resolution expressing support for the designation of October 4 through October 10, 2026, as \"National 4-H Week\".",
-          "role": "cosponsored",
-          "source_url": "https://www.congress.gov/bill/119/senate-resolution/923",
-          "bill_introduced_date": "2026-09-29",
-          "role_date": null,
-          "source_retrieved_at": "2026-10-18T10:44:37.457073+00:00"
         }
       ],
-      "meetings": [],
+      "meetings": [
+        {
+          "committee_name": "Armed Services",
+          "committee_code": "SSAS00",
+          "date_local": "2026-11-17",
+          "location": "SD-G50",
+          "time_note": "09:30 AM",
+          "description": "Hearings to examine the nomination of Hung Cao, of Virginia, to be Secretary of the Navy.",
+          "timezone": "America/New_York",
+          "agenda_coverage": "not-collected",
+          "status": "scheduled",
+          "status_basis": "scheduled-listing",
+          "status_notice": null,
+          "timezone_basis": "jurisdiction assumption",
+          "source_url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+          "identity_ambiguous": false,
+          "identity_basis": "Unique committee and subject within checked Senate feed; no durable event ID",
+          "committee_url": "https://www.armed-services.senate.gov",
+          "items": [],
+          "hearing_key": "US-119-SENATE-fd2621310962f210c6ebf1c0",
+          "evidence": {
+            "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+            "sha256": "94dc89bc67580a73e9b5f8cf1edcac859439364e6d998c033e308518d300c87e",
+            "checked_at": "2026-11-11T14:05:47.493899+00:00"
+          }
+        },
+        {
+          "committee_name": "Veterans' Affairs",
+          "committee_code": "SSVA00",
+          "date_local": "2026-11-18",
+          "location": "SD-106",
+          "time_note": "04:00 PM",
+          "description": "Hearings to examine VA accountability and transparency, focusing on examining the current and future path of VA's electronic health record modernization program.",
+          "timezone": "America/New_York",
+          "agenda_coverage": "not-collected",
+          "status": "scheduled",
+          "status_basis": "scheduled-listing",
+          "status_notice": null,
+          "timezone_basis": "jurisdiction assumption",
+          "source_url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+          "identity_ambiguous": false,
+          "identity_basis": "Unique committee and subject within checked Senate feed; no durable event ID",
+          "committee_url": "https://www.veterans.senate.gov",
+          "items": [],
+          "hearing_key": "US-119-SENATE-f7ab7f5c780e9512ae3181a1",
+          "evidence": {
+            "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+            "sha256": "94dc89bc67580a73e9b5f8cf1edcac859439364e6d998c033e308518d300c87e",
+            "checked_at": "2026-11-11T14:05:47.493899+00:00"
+          }
+        },
+        {
+          "committee_name": "Armed Services",
+          "committee_code": "SSAS00",
+          "date_local": "2026-11-19",
+          "location": "SD-G50",
+          "time_note": "09:45 AM",
+          "description": "Hearings to examine the nominations of William Toti, of Florida, to be Under Secretary of the Navy, and Richard Breckenridge, of New Hampshire, to be an Assistant Secretary of the Navy, both of the Department of Defense.",
+          "timezone": "America/New_York",
+          "agenda_coverage": "not-collected",
+          "status": "scheduled",
+          "status_basis": "scheduled-listing",
+          "status_notice": null,
+          "timezone_basis": "jurisdiction assumption",
+          "source_url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+          "identity_ambiguous": false,
+          "identity_basis": "Unique committee and subject within checked Senate feed; no durable event ID",
+          "committee_url": "https://www.armed-services.senate.gov",
+          "items": [],
+          "hearing_key": "US-119-SENATE-c01612cdcbc5b7a59faf3fb6",
+          "evidence": {
+            "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+            "sha256": "94dc89bc67580a73e9b5f8cf1edcac859439364e6d998c033e308518d300c87e",
+            "checked_at": "2026-11-11T14:05:47.493899+00:00"
+          }
+        }
+      ],
       "activity_source_checked_at": "2026-10-18T10:44:37.457073+00:00",
       "activity_coverage": "Daily Congress.gov sponsorship lists and official floor roll calls; unknown cosponsorship join dates remain undated. Source refresh is incomplete; prior verified records are retained.",
-      "calendar_checked_at": "2026-10-29T12:50:33.740928+00:00",
-      "calendar_health": "failed",
+      "calendar_checked_at": "2026-11-11T14:05:46.371014+00:00",
+      "calendar_health": "published_feed_checked",
       "media_reports": [
         {
           "id": "3a9a404488174a99554038d1",
@@ -2364,10 +2536,10 @@
       ],
       "media_health": {
         "source_status": "ok",
-        "checked_at": "2026-10-29T12:56:05.611537+00:00",
+        "checked_at": "2026-11-11T14:12:19.781535+00:00",
         "inference_status": "partial",
         "pending_candidates": 0,
-        "withheld_candidates": 4,
+        "withheld_candidates": 2,
         "screened_history_count": 19,
         "lookback_days": 200
       },
@@ -2375,51 +2547,48 @@
         "query": "\"Tammy Duckworth\" when:200d",
         "search_url": "https://news.google.com/search?q=%22Tammy+Duckworth%22+when%3A200d&hl=en-US&gl=US&ceid=US%3Aen",
         "feed_url": "https://news.google.com/rss/search?q=%22Tammy+Duckworth%22+when%3A200d&hl=en-US&gl=US&ceid=US%3Aen",
-        "candidate_count": 8,
+        "candidate_count": 6,
         "publisher_policy_url": "https://github.com/pl-home/illinois-civic-tracker/blob/main/config/media.json"
       },
       "communications": [
         {
-          "id": "83c3beb405557a865ea0157a",
+          "id": "54c9b474b938d40173821aa5",
           "member_id": "duckworth",
-          "title": "Duckworth, Durbin Announce More Than $12 Million In Funding For Southern Illinois Truck Parking Improvements",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-announce-more-than-12-million-in-funding-for-southern-illinois-truck-parking-improvements",
-          "published_at": "2026-10-20",
+          "title": "Ahead of Veterans Day, Duckworth Leads Colleagues in Introducing Bill to Ensure Iran War Veterans Are Covered Under PACT Act",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/ahead-of-veterans-day-duckworth-leads-colleagues-in-introducing-bill-to-ensure-iran-war-veterans-are-covered-under-pact-act",
+          "published_at": "2026-11-10",
           "date_precision": "day",
           "source_id": "duckworth-office",
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
-          "id": "ca44d9c7313e6bbb6bf43fea",
+          "id": "01cc645fb936f69ec50665cf",
           "member_id": "duckworth",
-          "title": "Duckworth, Senate Democrats Call on HHS Secretary to Reverse Plans for Trump Administration Lawyers to Represent Unaccompanied Children in Immigration Court",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-senate-democrats-call-on-hhs-secretary-to-reverse-plans-for-trump-administration-lawyers-to-represent-unaccompanied-children-in-immigration-court",
-          "published_at": "2026-10-19",
+          "title": "Duckworth to Vote Against Permitting Reform Bill",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-to-vote-against-permitting-reform-bill",
+          "published_at": "2026-11-09",
           "date_precision": "day",
           "source_id": "duckworth-office",
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         },
         {
-          "id": "cb1163fbaa55e144cb9b84b9",
+          "id": "07042b8fb1d8551e0d46f55f",
           "member_id": "duckworth",
-          "title": "Duckworth, Durbin Join Bicameral Coalition in Pressing Trump Administration on Illegal Reallocation of Funding for Minority Serving Institutions",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-join-bicameral-coalition-in-pressing-trump-administration-on-illegal-reallocation-of-funding-for-minority-serving-institutions",
-          "published_at": "2026-10-16",
+          "title": "Duckworth, Sorensen Speak with New Tyson Foods CEO to Advocate for Joslin Community Impacted by Plant Closure",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-sorensen-speak-with-new-tyson-foods-ceo-to-advocate-for-joslin-community-impacted-by-plant-closure",
+          "published_at": "2026-11-05",
           "date_precision": "day",
           "source_id": "duckworth-office",
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases",
-          "retained_after_failure": true
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         }
       ],
       "communication_sources": [
@@ -2428,11 +2597,11 @@
           "publisher": "Senator Tammy Duckworth office",
           "kind": "office",
           "url": "https://www.duckworth.senate.gov/news/press-releases",
-          "status": "failed",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-20",
-          "error_category": "http",
-          "error_code": "HTTP_403",
+          "status": "ok",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-10",
+          "error_category": null,
+          "error_code": null,
           "note": ""
         },
         {
@@ -2441,7 +2610,7 @@
           "kind": "campaign",
           "url": "https://tammyduckworth.com/",
           "status": "link-only",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": null,
           "error_category": null,
           "error_code": null,
@@ -2452,11 +2621,11 @@
           "publisher": "Senate Democratic Caucus",
           "kind": "party",
           "url": "https://www.democrats.senate.gov/newsroom/press-releases",
-          "status": "failed",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
-          "latest_source_date": "2026-10-17",
-          "error_category": "http",
-          "error_code": "HTTP_403",
+          "status": "ok",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
+          "latest_source_date": "2026-11-10",
+          "error_category": null,
+          "error_code": null,
           "note": ""
         },
         {
@@ -2465,46 +2634,26 @@
           "kind": "party",
           "url": "https://leecodemocrats.com/",
           "status": "ok",
-          "checked_at": "2026-10-29T12:56:05.611537+00:00",
+          "checked_at": "2026-11-11T14:12:19.781535+00:00",
           "latest_source_date": "2026-08-18",
           "error_category": null,
           "error_code": null,
           "note": ""
         }
       ],
-      "communications_checked_at": "2026-10-29T12:56:05.611537+00:00"
+      "communications_checked_at": "2026-11-11T14:12:19.781535+00:00"
     }
   ],
   "calendar_sources": [
     {
-      "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=10252026_10312026",
-      "sha256": "c3cc68c7594d8870b584a1ddb20572cf840fc42c75ca3abee70bfbcd4e1a294b",
-      "checked_at": "2026-10-29T12:50:35.895668+00:00"
-    },
-    {
-      "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=11012026_11072026",
-      "sha256": "71b58b6b7719a37dfbefd3aac51f202d3163ee2c197fad9a54a6b9b34ee2bce8",
-      "checked_at": "2026-10-29T12:50:36.979179+00:00"
+      "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "sha256": "94dc89bc67580a73e9b5f8cf1edcac859439364e6d998c033e308518d300c87e",
+      "checked_at": "2026-11-11T14:05:47.493899+00:00"
     },
     {
       "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=11082026_11142026",
-      "sha256": "7a74de42a1819a1eda9e0c776678fb43aa0cf9730fa3b5505d6fcb9ee1383d66",
-      "checked_at": "2026-10-29T12:50:38.054594+00:00"
-    },
-    {
-      "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=11152026_11212026",
-      "sha256": "aabccb6501cfec7677e0c0b5025a3719c499244f61a870e4865271c44aace71a",
-      "checked_at": "2026-10-29T12:50:39.188644+00:00"
-    },
-    {
-      "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=11222026_11282026",
-      "sha256": "15cc3373c031c858ef8d5958b67d51420473a2b2d48b59c4991e9c1f6ce2d733",
-      "checked_at": "2026-10-29T12:50:40.266297+00:00"
-    },
-    {
-      "url": "https://docs.house.gov/Committee/Calendar/ByWeek.aspx?WeekOf=11292026_12052026",
-      "sha256": "28a73217721065b2bca0572dd917e03daf2ccdb88583a29b716a0ac9308547a6",
-      "checked_at": "2026-10-29T12:50:41.340853+00:00"
+      "sha256": "a13d45471f9f0f82c54190f8f5e2ccfdac222e71c31072882efdcfd4f6760417",
+      "checked_at": "2026-11-11T14:05:48.942496+00:00"
     },
     {
       "url": "https://ilga.gov/House/Members/Details/3428",
@@ -2514,7 +2663,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:50:41.664059+00:00"
+      "checked_at": "2026-11-11T14:05:49.531871+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Members/3133",
@@ -2524,7 +2673,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:50:51.533771+00:00"
+      "checked_at": "2026-11-11T14:05:59.321431+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Hearings/3133",
@@ -2534,7 +2683,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:51:01.533145+00:00"
+      "checked_at": "2026-11-11T14:06:09.300571+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Members/3096",
@@ -2544,7 +2693,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:51:11.537272+00:00"
+      "checked_at": "2026-11-11T14:06:19.396113+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Hearings/3096",
@@ -2554,7 +2703,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:51:21.545032+00:00"
+      "checked_at": "2026-11-11T14:06:29.350577+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Members/3062",
@@ -2564,7 +2713,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:51:31.519197+00:00"
+      "checked_at": "2026-11-11T14:06:39.305937+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Hearings/3062",
@@ -2574,7 +2723,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:51:41.532886+00:00"
+      "checked_at": "2026-11-11T14:06:49.332097+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Members/3063",
@@ -2584,7 +2733,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:51:51.536626+00:00"
+      "checked_at": "2026-11-11T14:06:59.352716+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Hearings/3063",
@@ -2594,7 +2743,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:52:01.535706+00:00"
+      "checked_at": "2026-11-11T14:07:09.388789+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Members/3160",
@@ -2604,7 +2753,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:52:11.505784+00:00"
+      "checked_at": "2026-11-11T14:07:19.285682+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Hearings/3160",
@@ -2614,7 +2763,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:52:21.510534+00:00"
+      "checked_at": "2026-11-11T14:07:29.294511+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Members/3093",
@@ -2624,7 +2773,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:52:31.526963+00:00"
+      "checked_at": "2026-11-11T14:07:39.311907+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Hearings/3093",
@@ -2634,7 +2783,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:52:41.533122+00:00"
+      "checked_at": "2026-11-11T14:07:49.353080+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Members/3094",
@@ -2644,7 +2793,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:52:51.524367+00:00"
+      "checked_at": "2026-11-11T14:07:59.281174+00:00"
     },
     {
       "url": "https://ilga.gov/House/Committees/Hearings/3094",
@@ -2654,7 +2803,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:53:01.531674+00:00"
+      "checked_at": "2026-11-11T14:08:09.422898+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Members/Details/3383",
@@ -2664,7 +2813,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:53:11.769434+00:00"
+      "checked_at": "2026-11-11T14:08:19.626753+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Members/3121",
@@ -2674,7 +2823,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:53:21.532871+00:00"
+      "checked_at": "2026-11-11T14:08:29.287202+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Hearings/3121",
@@ -2684,7 +2833,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:53:31.517354+00:00"
+      "checked_at": "2026-11-11T14:08:39.297808+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Members/3118",
@@ -2694,7 +2843,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:53:41.538694+00:00"
+      "checked_at": "2026-11-11T14:08:49.288293+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Hearings/3118",
@@ -2704,7 +2853,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:53:51.538622+00:00"
+      "checked_at": "2026-11-11T14:08:59.306565+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Members/3076",
@@ -2714,7 +2863,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:54:01.521123+00:00"
+      "checked_at": "2026-11-11T14:09:09.285388+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Hearings/3076",
@@ -2724,7 +2873,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:54:11.525524+00:00"
+      "checked_at": "2026-11-11T14:09:19.291475+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Members/3130",
@@ -2734,7 +2883,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:54:21.534441+00:00"
+      "checked_at": "2026-11-11T14:09:29.294919+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Hearings/3130",
@@ -2744,7 +2893,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:54:31.534297+00:00"
+      "checked_at": "2026-11-11T14:09:39.298520+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Members/3119",
@@ -2754,7 +2903,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:54:41.527730+00:00"
+      "checked_at": "2026-11-11T14:09:49.308671+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Hearings/3119",
@@ -2764,7 +2913,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:54:51.546375+00:00"
+      "checked_at": "2026-11-11T14:09:59.305946+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Members/3074",
@@ -2774,7 +2923,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:01.516352+00:00"
+      "checked_at": "2026-11-11T14:10:09.310785+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Hearings/3074",
@@ -2784,7 +2933,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:11.542860+00:00"
+      "checked_at": "2026-11-11T14:10:19.380042+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Members/3099",
@@ -2794,7 +2943,7 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:21.529517+00:00"
+      "checked_at": "2026-11-11T14:10:29.306668+00:00"
     },
     {
       "url": "https://ilga.gov/Senate/Committees/Hearings/3099",
@@ -2804,13 +2953,13 @@
       "last_modified": null,
       "etag": null,
       "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:31.537089+00:00"
+      "checked_at": "2026-11-11T14:10:39.301163+00:00"
     }
   ],
   "errors": [
     {
-      "source": "Senate calendar",
-      "error": "HTTP_403"
+      "source": "House calendar",
+      "error": "ValueError"
     }
   ],
   "veto_session": {
@@ -2832,65 +2981,14 @@
     },
     "scope_note": "Published session dates are tracked separately from daily calendars, hearings and bill actions. No December date is inferred from the schedule heading."
   },
-  "activity_verifications": [
-    {
-      "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5814.xml",
-      "status": 200,
-      "bytes": 5059,
-      "sha256": "6b36ac4d200e5f3be5b7e15b95bd7c81f4dcc82dcfdb85883bac7e0218393eb7",
-      "last_modified": "Sat, 03 Oct 2026 04:20:36 GMT",
-      "etag": "\"42a188aee52dd1:0\"",
-      "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:31.719236+00:00"
-    },
-    {
-      "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5811.xml",
-      "status": 200,
-      "bytes": 3754,
-      "sha256": "ced20a203bd1014a7a11d82132784911331a7ccaed27778a5b8a5148c5da6154",
-      "last_modified": "Sat, 03 Oct 2026 04:20:36 GMT",
-      "etag": "\"45f0fd89ee52dd1:0\"",
-      "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:31.770521+00:00"
-    },
-    {
-      "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5807.xml",
-      "status": 200,
-      "bytes": 4044,
-      "sha256": "fd67ec2841c4d7ee2d2f8b5125e8644cad4fe39a8f3875c64528cebc624bc957",
-      "last_modified": "Sat, 03 Oct 2026 04:20:36 GMT",
-      "etag": "\"64b6e389ee52dd1:0\"",
-      "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:31.817142+00:00"
-    },
-    {
-      "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5806.xml",
-      "status": 200,
-      "bytes": 3890,
-      "sha256": "6017c9c0b962f22eb000d4ad15908ff036ebf9df14cab96c839578a1a1b77811",
-      "last_modified": "Sat, 03 Oct 2026 04:20:35 GMT",
-      "etag": "\"7d7cc989ee52dd1:0\"",
-      "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:31.865545+00:00"
-    },
-    {
-      "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/10400HB5798.xml",
-      "status": 200,
-      "bytes": 3794,
-      "sha256": "cb112afc883ddc0e3d1fe7897cdb7496262493bc34708dd24d9b05f3ced3b3da",
-      "last_modified": "Wed, 28 Oct 2026 04:20:37 GMT",
-      "etag": "\"f49d4ae9366dd1:0\"",
-      "request_attempts": 1,
-      "checked_at": "2026-10-29T12:55:31.913524+00:00"
-    }
-  ],
+  "activity_verifications": [],
   "daily_refresh": {
     "target_time": "01:00 America/Chicago",
-    "checked_at": "2026-10-29T12:40:57.043259+00:00",
+    "checked_at": "2026-11-11T13:54:42.101747+00:00",
     "status": "partial",
     "sources": {
       "Illinois": {
-        "checked_at": "2026-10-29T12:40:57.043259+00:00",
+        "checked_at": "2026-11-11T13:54:42.101747+00:00",
         "status": "partial",
         "errors": [
           {
@@ -2904,33 +3002,35 @@
         "listing": {
           "url": "https://ftp.ilga.gov/Legislation/104/BillStatus/XML/",
           "status": 200,
-          "bytes": 1472250,
-          "sha256": "73572e1d402b10d489129a50eb40303287412fde85d4863b82c0833d20e3b3c9",
+          "bytes": 1474530,
+          "sha256": "0d028c6a416630d111f315b4fbf68337f2451f66efcf1cfa8c6565bfd74e1180",
           "last_modified": null,
           "etag": null,
           "request_attempts": 1
         },
-        "changed_files": 4200,
+        "changed_files": 12171,
         "processed_files": 300,
         "floor_csv": {
           "url": "https://ilga.gov/documents/reports/static/104MemberVotes.csv",
           "status": 200,
-          "bytes": 26290024,
-          "sha256": "44aa276e569183f6e0f526a8c326949fc037ce513890f3e6213499cd831de319",
-          "last_modified": "Thu, 29 Oct 2026 03:45:47 GMT",
-          "etag": "\"87dfdfb5767dd1:0\"",
+          "bytes": 26314332,
+          "sha256": "b53314813bdfc2f1beadef69386db6d5646361c20482d22dedf33dfba59aadc4",
+          "last_modified": "Wed, 11 Nov 2026 04:45:46 GMT",
+          "etag": "\"966287849771dd1:0\"",
           "request_attempts": 1
         },
-        "floor_latest_vote_date": "2026-05-31",
-        "duration_seconds": 25.58
+        "floor_latest_vote_date": "2026-06-01",
+        "duration_seconds": 63.72
       },
       "Federal": {
         "status": "partial",
-        "checked_at": "2026-10-29T12:40:57.043259+00:00",
+        "checked_at": "2026-11-11T13:54:42.101747+00:00",
         "errors": [
           {
-            "source": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.xml",
-            "error": "HTTP_403"
+            "source": "Congress.gov API",
+            "error": "duplicate_legislation_record",
+            "member_role": "D000563:cosponsored",
+            "completed_pages": 21
           }
         ],
         "legislation_sources": [
@@ -2938,57 +3038,79 @@
             "source": "L000585:sponsored",
             "pages": 1,
             "complete": true,
-            "checked_at": "2026-10-29T12:40:57.043259+00:00"
+            "checked_at": "2026-11-11T13:54:42.101747+00:00"
           },
           {
             "source": "L000585:cosponsored",
             "pages": 5,
             "complete": true,
-            "checked_at": "2026-10-29T12:40:57.043259+00:00"
+            "checked_at": "2026-11-11T13:54:42.101747+00:00"
           },
           {
             "source": "D000563:sponsored",
             "pages": 9,
             "complete": true,
-            "checked_at": "2026-10-29T12:40:57.043259+00:00"
+            "checked_at": "2026-11-11T13:54:42.101747+00:00"
           },
           {
             "source": "D000563:cosponsored",
-            "pages": 43,
-            "complete": true,
-            "checked_at": "2026-10-29T12:40:57.043259+00:00"
+            "pages": 21,
+            "complete": false,
+            "checked_at": "2026-11-11T13:54:42.101747+00:00"
           },
           {
             "source": "D000622:sponsored",
             "pages": 3,
             "complete": true,
-            "checked_at": "2026-10-29T12:40:57.043259+00:00"
+            "checked_at": "2026-11-11T13:54:42.101747+00:00"
           },
           {
             "source": "D000622:cosponsored",
             "pages": 14,
             "complete": true,
-            "checked_at": "2026-10-29T12:40:57.043259+00:00"
+            "checked_at": "2026-11-11T13:54:42.101747+00:00"
           }
         ],
         "vote_sources": [
           {
             "source": "https://clerk.house.gov/Votes/MemberVotes",
             "complete": true,
-            "discovered": 314,
-            "selected": 5,
-            "checked_at": "2026-10-29T12:40:57.043259+00:00",
+            "discovered": 319,
+            "selected": 10,
+            "checked_at": "2026-11-11T13:54:42.101747+00:00",
             "pending": 0,
-            "processed": 5
+            "processed": 10
           },
           {
             "source": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.xml",
-            "complete": false,
-            "selected": 0
+            "complete": true,
+            "discovered": 258,
+            "selected": 7,
+            "checked_at": "2026-11-11T13:54:42.101747+00:00",
+            "pending": 0,
+            "processed": 7
           }
         ],
-        "unknown_records": [],
-        "recovered_requests": [],
+        "unknown_records": [
+          {
+            "source": "D000563:cosponsored",
+            "error": "duplicate_legislation_record",
+            "identity": [
+              98,
+              "HR",
+              4877
+            ],
+            "same_page": false,
+            "same_payload": true
+          }
+        ],
+        "recovered_requests": [
+          {
+            "source": "Congress.gov API",
+            "attempts": 2,
+            "error": "TimeoutError"
+          }
+        ],
         "duplicate_source_rows": [
           {
             "source": "D000622:sponsored",
@@ -3000,20 +3122,20 @@
             "page": 1
           }
         ],
-        "api_attempts": 75,
-        "vote_requests": 38,
-        "duration_seconds": 550.91
+        "api_attempts": 54,
+        "vote_requests": 50,
+        "duration_seconds": 600.29
       },
       "Calendars": {
         "status": "partial",
-        "checked_at": "2026-10-29T12:40:57.043259+00:00",
+        "checked_at": "2026-11-11T13:54:42.101747+00:00",
         "errors": [
           {
-            "source": "Senate calendar",
-            "error": "HTTP_403"
+            "source": "House calendar",
+            "error": "ValueError"
           }
         ],
-        "duration_seconds": 298.24
+        "duration_seconds": 293.06
       }
     }
   },
@@ -3042,20 +3164,20 @@
     },
     "lifetime": {
       "charged_usd": "0.00456596",
-      "reserved_usd": "0.009",
-      "liability_usd": "0.01356596",
-      "unsettled_requests": 3,
-      "media_reservations": 15,
+      "reserved_usd": "0.013",
+      "liability_usd": "0.01756596",
+      "unsettled_requests": 5,
+      "media_reservations": 17,
       "undated_entries": 0,
       "limit_usd": "20",
-      "remaining_usd": "19.98643404",
-      "used_percent": "0.06782980"
+      "remaining_usd": "19.98243404",
+      "used_percent": "0.08782980"
     },
-    "week_start": "2026-10-26",
-    "week_end": "2026-11-01",
+    "week_start": "2026-11-09",
+    "week_end": "2026-11-15",
     "schema_version": 1,
-    "as_of": "2026-10-29T12:56:05.611537+00:00",
-    "local_date": "2026-10-29",
+    "as_of": "2026-11-11T14:12:19.781535+00:00",
+    "local_date": "2026-11-11",
     "timezone": "America/Chicago",
     "week_definition": "Monday through Sunday",
     "scope": "Tracker inference only, including earlier evaluations; excludes unrelated OpenRouter account use."
