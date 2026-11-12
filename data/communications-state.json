@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-11T14:12:19.781535+00:00",
+  "checked_at": "2026-11-12T15:19:24.847540+00:00",
   "sources": {
     "fritts-office": {
       "items": [
@@ -139,7 +139,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-11-06",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Representative Bradley Fritts office",
       "kind": "office",
       "members": [
@@ -285,7 +285,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-21",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Senator Li Arellano office",
       "kind": "office",
       "members": [
@@ -379,7 +379,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-11-10",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Representative Darin LaHood office",
       "kind": "office",
       "members": [
@@ -655,7 +655,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-11-10",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Senator Dick Durbin office",
       "kind": "office",
       "members": [
@@ -666,6 +666,19 @@
     },
     "duckworth-office": {
       "items": [
+        {
+          "id": "ad9714a1245a7384e37f5dfe",
+          "member_id": "duckworth",
+          "title": "In Tribute to Veterans in Belleville, Duckworth Calls on Congress to Pass Her New Bill to Expand VA Care for Toxic-Exposed Veterans",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/in-tribute-to-veterans-in-belleville-duckworth-calls-on-congress-to-pass-her-new-bill-to-expand-va-care-for-toxic-exposed-veterans",
+          "published_at": "2026-11-11",
+          "date_precision": "day",
+          "source_id": "duckworth-office",
+          "publisher": "Senator Tammy Duckworth office",
+          "kind": "office",
+          "publisher_host": "duckworth.senate.gov",
+          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
+        },
         {
           "id": "54c9b474b938d40173821aa5",
           "member_id": "duckworth",
@@ -912,26 +925,13 @@
           "kind": "office",
           "publisher_host": "duckworth.senate.gov",
           "source_url": "https://www.duckworth.senate.gov/news/press-releases"
-        },
-        {
-          "id": "b737e158870fb6d7560383a0",
-          "member_id": "duckworth",
-          "title": "Duckworth Announces Illinois Native and Longtime Advisor Kelsey Becker as Chief of Staff",
-          "url": "https://www.duckworth.senate.gov/news/press-releases/-duckworth-announces-illinois-native-and-longtime-advisor-kels",
-          "published_at": "2026-10-05",
-          "date_precision": "day",
-          "source_id": "duckworth-office",
-          "publisher": "Senator Tammy Duckworth office",
-          "kind": "office",
-          "publisher_host": "duckworth.senate.gov",
-          "source_url": "https://www.duckworth.senate.gov/news/press-releases"
         }
       ],
       "entries_checked": 20,
       "rejected_entries": 0,
-      "latest_source_date": "2026-11-10",
+      "latest_source_date": "2026-11-11",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Senator Tammy Duckworth office",
       "kind": "office",
       "members": [
@@ -946,7 +946,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2025-07-15",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Fritts campaign",
       "kind": "campaign",
       "members": [
@@ -961,7 +961,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2024-11-05",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "LaHood campaign",
       "kind": "campaign",
       "members": [
@@ -974,7 +974,7 @@
       "status": "link-only",
       "items": [],
       "note": "Older campaign site describes his previous House race; current dated release feed not verified.",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Arellano campaign (older site)",
       "kind": "campaign",
       "members": [
@@ -986,7 +986,7 @@
       "status": "link-only",
       "items": [],
       "note": "Campaign link verified previously; no dated public release feed verified for this collector.",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Durbin campaign",
       "kind": "campaign",
       "members": [
@@ -998,7 +998,7 @@
       "status": "link-only",
       "items": [],
       "note": "No dated public release archive verified; campaign site link only.",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Duckworth campaign",
       "kind": "campaign",
       "members": [
@@ -1012,7 +1012,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-11-06",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Illinois Senate Republican Caucus",
       "kind": "party",
       "members": [
@@ -1121,7 +1121,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-10-30",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "The Caucus Blog · Illinois House Republican Caucus",
       "kind": "party",
       "members": [
@@ -1134,9 +1134,9 @@
       "items": [],
       "entries_checked": 20,
       "rejected_entries": 0,
-      "latest_source_date": "2026-11-10",
+      "latest_source_date": "2026-11-11",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Senate Democratic Caucus",
       "kind": "party",
       "members": [
@@ -1152,7 +1152,7 @@
       "rejected_entries": 0,
       "latest_source_date": "2026-08-18",
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Lee County Democrats",
       "kind": "party",
       "members": [
@@ -1169,7 +1169,7 @@
       "error_category": "parse",
       "error_code": "PARSE_ERROR",
       "latest_source_date": "2026-10-01",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "label": "Lee County Republican Central Committee",
       "kind": "party",
       "members": [

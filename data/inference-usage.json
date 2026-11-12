@@ -1,42 +1,42 @@
 {
   "day": {
     "charged_usd": "0",
-    "reserved_usd": "0.004",
-    "liability_usd": "0.004",
-    "unsettled_requests": 2,
-    "media_reservations": 2,
+    "reserved_usd": "0.002",
+    "liability_usd": "0.002",
+    "unsettled_requests": 1,
+    "media_reservations": 1,
     "undated_entries": 0,
     "limit_usd": "0.02",
-    "remaining_usd": "0.016",
-    "used_percent": "20.0"
+    "remaining_usd": "0.018",
+    "used_percent": "10.0"
   },
   "week": {
     "charged_usd": "0",
-    "reserved_usd": "0.004",
-    "liability_usd": "0.004",
-    "unsettled_requests": 2,
-    "media_reservations": 2,
+    "reserved_usd": "0.006",
+    "liability_usd": "0.006",
+    "unsettled_requests": 3,
+    "media_reservations": 3,
     "undated_entries": 0,
     "limit_usd": "0.20",
-    "remaining_usd": "0.196",
-    "used_percent": "2.0"
+    "remaining_usd": "0.194",
+    "used_percent": "3.0"
   },
   "lifetime": {
     "charged_usd": "0.00456596",
-    "reserved_usd": "0.013",
-    "liability_usd": "0.01756596",
-    "unsettled_requests": 5,
-    "media_reservations": 17,
+    "reserved_usd": "0.015",
+    "liability_usd": "0.01956596",
+    "unsettled_requests": 6,
+    "media_reservations": 18,
     "undated_entries": 0,
     "limit_usd": "20",
-    "remaining_usd": "19.98243404",
-    "used_percent": "0.08782980"
+    "remaining_usd": "19.98043404",
+    "used_percent": "0.09782980"
   },
   "week_start": "2026-11-09",
   "week_end": "2026-11-15",
   "schema_version": 1,
-  "as_of": "2026-11-11T14:12:19.781535+00:00",
-  "local_date": "2026-11-11",
+  "as_of": "2026-11-12T15:19:24.847540+00:00",
+  "local_date": "2026-11-12",
   "timezone": "America/Chicago",
   "week_definition": "Monday through Sunday",
   "scope": "Tracker inference only, including earlier evaluations; excludes unrelated OpenRouter account use."

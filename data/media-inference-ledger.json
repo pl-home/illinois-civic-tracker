@@ -668,6 +668,32 @@
       "charged_usd": null,
       "status": "reserved",
       "prepared_at": "2026-11-11T14:12:19.781535+00:00"
+    },
+    {
+      "batch_hash": "4b23c129c4b37ede5907781d4a14829819615037e86ff45069f33947babdeb09",
+      "day": "2026-11-12",
+      "case_hashes": [
+        "3aedc7d9e09aa24eac4873347e2892999a6edb5c1c5e9bdcce035c0ad3b8013b",
+        "7ac94b0b4ca281e3f1ffbdd7fc3a4c89a573e57717c14ce2532a04b799d68c1d",
+        "0957e46e7f91ceb8f8112564bca68f1e64f199c288ca83b73b48724e766fbcdc",
+        "880fb15ad18cd105806977e97e833cc79c943909e640207d8de9ec89b07ff171",
+        "0fc9c75ddf5fc3711b238350320b13cf5c3094d62dae05b0bc0fea1ea52aeebe",
+        "42c3933faf71bd7e3e244ae46e6d3c8fce7fa3e11d8504227a02c59aefbe7245",
+        "c792f4e8b658b613bc9065da7a21496cdc702d7a231230ccce755a0eac52d79b"
+      ],
+      "ids": [
+        "641cf30604a64180ed6eb767",
+        "334a2e7f602fc2865a7409ac",
+        "f57cf9acb6af425194a040b7",
+        "c9024bc7afc713f30a2826a6",
+        "caef8e92072931ab8eb5c627",
+        "e6374edc75b152e136fdfc2d",
+        "b49896aa6761b1578dc2bdb0"
+      ],
+      "reserved_usd": "0.002",
+      "charged_usd": null,
+      "status": "reserved",
+      "prepared_at": "2026-11-12T15:19:24.847540+00:00"
     }
   ]
 }

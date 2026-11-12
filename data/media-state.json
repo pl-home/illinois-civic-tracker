@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-11T14:12:19.781535+00:00",
+  "checked_at": "2026-11-12T15:19:24.847540+00:00",
   "members": {
     "fritts": {
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "candidates": [
         {
           "id": "5d598644e9d5b996b5321035",
@@ -15,19 +15,7 @@
           "publisher": "Shaw Local",
           "publisher_host": "shawlocal.com",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTk82WTRTNGNWLXdDUXFNYVUxYVFoc2Fwb0NoMHo5aHJmS1ozd244SnRDQkNSaV95b1VzdUlsM0RmM21oRndnUUhMeEc1Z3Q3dnQ0ZEZYbWlFZ2w2N3o4LS1hczl1UHFqdWtwazQwZVp0YVVqRUJRYlYxWTBRM1FXYzlJYnVTc202a0tyOVpaNk9XN0pnU0RCT3ZUQlZFUURlQ1Zvbw",
-          "published_at": "2026-11-04T05:35:51+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "177c49ecab08e8fc892dadd9",
-          "member_id": "fritts",
-          "member_name": "Bradley Fritts",
-          "title": "Fritts, ROE 47 to host winter clothing drive Nov. 2-15",
-          "snippet": "Fritts, ROE 47 to host winter clothing drive Nov. 2-15 Shaw Local",
-          "publisher": "Shaw Local",
-          "publisher_host": "shawlocal.com",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaHZuYldILUxlMzNTZmpPeGVHNjRSMHhuaUNKUEtjNmVRUjhQSGNOVkhLUE9WdUJyMVFwYS1fWThZZXN4NkdDeExOOE9vZWdKSzhGSE9kSFVhc1V4MHJMd2J0THY2bE4taE5LUmtvU3FQdHBfbUFoc3IzTkhWb21OU0JGUkl4d09vSjYzQXU4bmotWU5aRnpCSEw4clN2c1hhMDNvRA",
-          "published_at": "2026-10-27T07:00:00+00:00",
+          "published_at": "2026-11-03T08:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -69,11 +57,11 @@
       ],
       "query": "\"Bradley Fritts\" OR \"Brad Fritts\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-11-11T14:12:19.781535+00:00"
+      "last_successful_checked_at": "2026-11-12T15:19:24.847540+00:00"
     },
     "arellano": {
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "candidates": [
         {
           "id": "c69b51fad74e061e3cdb1a92",
@@ -102,11 +90,11 @@
       ],
       "query": "\"Li Arellano\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-11-11T14:12:19.781535+00:00"
+      "last_successful_checked_at": "2026-11-12T15:19:24.847540+00:00"
     },
     "lahood": {
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "candidates": [
         {
           "id": "115f47e1368b3c0b9c7d3b1b",
@@ -121,18 +109,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "7c277dbabf9415b1bd564d6f",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "U.S. Rep. LaHood beats Democratic challenger Paul Nolley in Illinois' 16th District",
-          "snippet": "U.S. Rep. LaHood beats Democratic challenger Paul Nolley in Illinois' 16th District WGLT",
-          "publisher": "WGLT",
-          "publisher_host": "wglt.org",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZGI1dnBuSENCNnNDbEdkQ1FFSWg3NmJMdHE1QWdIWFRCN3dJOEdyZWVvN04xZ2dNRUlpdWJfT2YxVFA4RExDaUdqVmJPZ3ZnX0t2dWttR2pyUzF1Y055LUU4UVRra2ROV3VLMTllNmNvcGk2LUxUMmZQRDR4UGNHdklsRklYQy15dUJQRXhBRWU5UklHVXVBb0pZdHNoamVqdXE2ZGptS2o1N1ZSSWVhRjBDaktSazY4NzhkREJfX24",
-          "published_at": "2026-11-04T11:28:47+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "b3a6b5b3acd29b46e37deb3f",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
@@ -142,18 +118,6 @@
           "publisher_host": "pjstar.com",
           "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPb2tNNmxNTVQwSDBJYXhhWkJLUDhSQS1ZRzhpX09OdWtSRGlld3ZfSkM5ZnZKZWZWbm91Y0tCUHpfLWtFNmxVTmM3MElyYXUweGtoNzlwc2ItczF0bG1XQ2QyZU50MER1Z1VKaFpYamk2Vl9QMDJZV3pMby1CUTl5QVJmeWJPRWVVUjNrUE1NOE9IbHlyYVROc19WVHJEYzVLbV83UHRrN0x4S1dpVEZRZ19vWVJsSjZtVEVkVGNZNE5wSHRr",
           "published_at": "2026-11-04T05:30:42+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "a5e7c8c5be77974dd761095e",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "Election 2026: LaHood appears to win race in 16th District",
-          "snippet": "Election 2026: LaHood appears to win race in 16th District Shaw Local",
-          "publisher": "Shaw Local",
-          "publisher_host": "shawlocal.com",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON2YtQWI2ZmVORkVDS1BVd3ZUMDFRMlRhSmlFU1RHWnpRZW8xVHVsRDJIZlYwZWlSZWZrWS1kdGpjSTUwdnBiRVZ4TzV1cFpYa3Q4YUlTVmVHUXBGTUNrX0hRaVZ1aENlNTlEdjIyemxNQ0RQVTFrXzI2bVhUU1FqOTA0RGFhbGJQTVZIZmRzUjRIanFVbklHeHhBS09WSUdnUXc",
-          "published_at": "2026-11-04T03:47:15+00:00",
           "link_route": "Google News"
         },
         {
@@ -177,7 +141,31 @@
           "publisher": "MyStateline",
           "publisher_host": "mystateline.com",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPN0JudHpWb2kzN3NRdGFNalltRFIyTFBfQjYxZEFyVUFLZ0MtT0x3eGF0b3oyaUJBM0l1N3FENGFYTEViMmIzNTFmV2hPaWFzNVBJd0hFWnVYY2Zna280bFFJdWcxQXNpNlNNeFJZaGRTeXhPQnprZjhVZVlVYUFYZ1lNUGY0UUpGZy1j0gGQAUFVX3lxTE1SNVRLdTdqZG5TUHladk9odWVBbXlzOWJZVmZxN05MZllhYXJubkpVZ2VYMXlpNVFFUjdpRGdwY0gtYUd5LV83bFJoSXBtMU9ZZGlCcS0zZjZTVTJZUUJRNVEta0UtcEw0cHVZVmZYS2x2d3c4cllHZ052RFltMjRrMHpKZXc3TlAxa3h6dU12Tw",
-          "published_at": "2026-11-04T03:03:01+00:00",
+          "published_at": "2026-11-03T08:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "7c277dbabf9415b1bd564d6f",
+          "member_id": "lahood",
+          "member_name": "Darin LaHood",
+          "title": "U.S. Rep. LaHood beats Democratic challenger Paul Nolley in Illinois' 16th District",
+          "snippet": "U.S. Rep. LaHood beats Democratic challenger Paul Nolley in Illinois' 16th District WGLT",
+          "publisher": "WGLT",
+          "publisher_host": "wglt.org",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZGI1dnBuSENCNnNDbEdkQ1FFSWg3NmJMdHE1QWdIWFRCN3dJOEdyZWVvN04xZ2dNRUlpdWJfT2YxVFA4RExDaUdqVmJPZ3ZnX0t2dWttR2pyUzF1Y055LUU4UVRra2ROV3VLMTllNmNvcGk2LUxUMmZQRDR4UGNHdklsRklYQy15dUJQRXhBRWU5UklHVXVBb0pZdHNoamVqdXE2ZGptS2o1N1ZSSWVhRjBDaktSazY4NzhkREJfX24",
+          "published_at": "2026-11-03T08:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "a5e7c8c5be77974dd761095e",
+          "member_id": "lahood",
+          "member_name": "Darin LaHood",
+          "title": "Election 2026: LaHood appears to win race in 16th District",
+          "snippet": "Election 2026: LaHood appears to win race in 16th District Shaw Local",
+          "publisher": "Shaw Local",
+          "publisher_host": "shawlocal.com",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxON2YtQWI2ZmVORkVDS1BVd3ZUMDFRMlRhSmlFU1RHWnpRZW8xVHVsRDJIZlYwZWlSZWZrWS1kdGpjSTUwdnBiRVZ4TzV1cFpYa3Q4YUlTVmVHUXBGTUNrX0hRaVZ1aENlNTlEdjIyemxNQ0RQVTFrXzI2bVhUU1FqOTA0RGFhbGJQTVZIZmRzUjRIanFVbklHeHhBS09WSUdnUXc",
+          "published_at": "2026-11-03T08:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -205,18 +193,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "88374dc227adb3e187942c3f",
-          "member_id": "lahood",
-          "member_name": "Darin LaHood",
-          "title": "Rep. Darin LaHood",
-          "snippet": "Rep. Darin LaHood WEEK | 25 News Now",
-          "publisher": "WEEK | 25 News Now",
-          "publisher_host": "25newsnow.com",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBQOE9hYVY1bnpNVm9TRWUtYVBOZHFlQUdGLUhReUViVnVlb3ZJRXVDTXBwdGl5YWJJaDJmUUZCekIySkl5NEJfMWRrOWE0Y1NPRmZLSTh3T3FvdnZXWjVxUTBlQkdfZmNpSlhqWQ",
-          "published_at": "2026-10-29T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "0c0e45b1520ce7a0836025d6",
           "member_id": "lahood",
           "member_name": "Darin LaHood",
@@ -226,6 +202,18 @@
           "publisher_host": "mystateline.com",
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOanVDMEtMTkR5N0FIYVl5MUZCdjlnUExpckJJcHIxRXgzUHRMbHhLZ252Q3htQlYtUWRCRVp2R0NKeDNqc0lMajMwajBBNktQSHg5c3p3LVZsYmNOUW1fWHRfUk55VHRKUXRtQnJ6ZWlORkJEV0JXcndkS0JTYXVmZmV4MUFpckl3eXfSAY8BQVVfeXFMT3MwWHRjdjhGZlNTdUtmNVVORGFnTExqZjY5ZDhXS3o3bkpLNFhETWJZQXBGTkRGMEdIQmdhbk50b3RkRlRmTk91VDQ3Z1ZGQU9hTUpBYkNheWJwYlhLYjNqbWtRSks0dUNqYy14NHJ3NTN1UGFkaHc3YVN0NlZOZE40dE1MQmplT05ORVBMMlU",
           "published_at": "2026-10-24T07:00:00+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "c7643b2a2f90da17b647782a",
+          "member_id": "lahood",
+          "member_name": "Darin LaHood",
+          "title": "Trump endorses Darin LaHood, other Illinois Republicans for midterms",
+          "snippet": "Trump endorses Darin LaHood, other Illinois Republicans for midterms Peoria Journal Star",
+          "publisher": "Peoria Journal Star",
+          "publisher_host": "pjstar.com",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOUy1YU1JWLU5mVTFGWU5WaVJhbHgwU2tGY0Rmemk2XzZwbWZ2c05CRUY3MVYwZXBzZmlnV1hTMmxyUGZ5WnlvVFkzU3puU0R6Ynp1SEtROXRyOFEzYkpFaGNQME12R1U4Yzg0Uk93VFNkT004STBOb3d1RFVDQ183RWRCMW1GNDBjbS0weVdGbS1YTG9GZ0E4cDNzbHpKeDFGYm5URUZQdlZfX3hIUVE4WE5Ud01yR3M3SGdxOHgtT3hudXVsUFpDcHR5RUIyREQ1SFZXbDZB",
+          "published_at": "2026-10-23T07:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -375,11 +363,11 @@
       ],
       "query": "\"Darin LaHood\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-11-11T14:12:19.781535+00:00"
+      "last_successful_checked_at": "2026-11-12T15:19:24.847540+00:00"
     },
     "durbin": {
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "candidates": [
         {
           "id": "4d92bf6c6a67f426bc438454",
@@ -402,19 +390,7 @@
           "publisher": "WTTW News",
           "publisher_host": "news.wttw.com",
           "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZ25CcV9LeFljWXVqSnpFb1RvRS14dW8yN2NTLWdibC11RVBvM3NXaHJzSGJrRnN6TmMyeGtFbzVNMy15NFVpS0J1WUVyWHZPUnBOUE93QWI3WVlqazlFX084QzFoVlNJbE9ndU1jVno1cmN4Z3RXLW85bXpXblpFSmtoM0hTdEFM",
-          "published_at": "2026-11-04T04:59:54+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "aafb10659f98acfbc6b303ae",
-          "member_id": "durbin",
-          "member_name": "Dick Durbin",
-          "title": "Democrat Juliana Stratton takes reins from Dick Durbin in decisive U.S. Senate victory",
-          "snippet": "Democrat Juliana Stratton takes reins from Dick Durbin in decisive U.S. Senate victory IPM Newsroom",
-          "publisher": "IPM Newsroom",
-          "publisher_host": "ipmnewsroom.org",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQzNXc0diRllBSXZrNWZCU3ZnVjduZVJmcmh2Y0dYZHJFRUZUQ1Z3LWVIZFNVSHFzeXFKM0hlUU82QUxYTlFyYVRveHFXMzRwQXA0eWRQVHQwQ2JIYTJRSDBLeGNwSWVobTRWZDk3eXVEWUxXN2xCUkJfeWNiWlFtMmJBVXdrcGxtWmRtMmRHZjRmaDR1TWRLNWhodGZZeTdBQml3aWNtNjU1aUFodU9Z",
-          "published_at": "2026-11-04T02:33:35+00:00",
+          "published_at": "2026-11-03T08:00:00+00:00",
           "link_route": "Google News"
         },
         {
@@ -478,18 +454,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "a4b0e98b47ee4052526b44b7",
-          "member_id": "durbin",
-          "member_name": "Dick Durbin",
-          "title": "Illinois US Senator Dick Durbin remembers South Carolina Sen. Lindsey Graham as 'fierce Republican,' but 'key bipartisan ally'",
-          "snippet": "Illinois US Senator Dick Durbin remembers South Carolina Sen. Lindsey Graham as 'fierce Republican,' but 'key bipartisan ally' ABC7 Chicago",
-          "publisher": "ABC7 Chicago",
-          "publisher_host": "abc7chicago.com",
-          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPbWNwMDFmNG9CbXZ3NkJRUGgxTTIzS29sNno1aHdMbWVJRTJHc3VrWXJfOU9qcUF2ZWx2emlUdEFiT3otZDVKczRqV3B2bThHY2NfQzdpay1kN2lNdWhNaTBvRWFsS0w0VElqS2VtemhGVVc2SEpDMjVjbmZzMXhxQ0V6UW1rRUtRYVdhN2hhbWtjc0t0d0w2WVRDeXBSaEZsaGhKaFdhTkl0djJvSWw1ZnRkQmpSMWRPcDM3TnRkbFJDS0JZbUxDQmg4bnVjcG54SmxMRWV6MUY4THhSSnB4bGpXbzFCZGPSAewBQVVfeXFMUGFLVkJpNlhGUWxCcnlaWDBtdnUxRno3UW9ZMXZZUVgyVU95M3MxV2dmcUVBRklzQnFhOGp4ZXlYV0JXMlRXRmxKU00ydnI5aHZONXE2RENTNllFZUo2OXNKTFNjWWh5dUItQUJoRFEyaldoQWpQclFfaGFaWUVYWkNOVmRVZGJoc0pXdDRFR1FLV29vYjhGdkFrakdBX1R6TEY3VlZaSXZDTGtMMnVpOFVDdXprdWFvUlpPVVVQVW5qcGJBX3d2WFlYdlhNVlFuOFY1ZGt2SUZNR3ZzczRvLS1qcWlMejhwU2FCdGo",
-          "published_at": "2026-07-13T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "d0789af82ab822d9a5a19d56",
           "member_id": "durbin",
           "member_name": "Dick Durbin",
@@ -540,12 +504,36 @@
       ],
       "query": "\"Dick Durbin\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-11-11T14:12:19.781535+00:00"
+      "last_successful_checked_at": "2026-11-12T15:19:24.847540+00:00"
     },
     "duckworth": {
       "status": "ok",
-      "checked_at": "2026-11-11T14:12:19.781535+00:00",
+      "checked_at": "2026-11-12T15:19:24.847540+00:00",
       "candidates": [
+        {
+          "id": "caef8e92072931ab8eb5c627",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth Urges Congress to Expand VA Care for Veterans Exposed to Toxic Hazards",
+          "snippet": "Duckworth Urges Congress to Expand VA Care for Veterans Exposed to Toxic Hazards RiverBender.com",
+          "publisher": "RiverBender.com",
+          "publisher_host": "riverbender.com",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOMmtWb3kwX28zT2JGMEZEekhacGpwOGhESHlQSXo0QXo3MXBsWDlDd3YzblZnU21rT0xxWjJNNG5QRVgzMGFENERBVEZvbHNKZzNEelZVZmJwTHJXeUU2NklRc1otMlhmcjUyOVlDbElaSEFnQXJiODd5Zjl5dDB5S0xWZU5EWUxXOVhnS3V2NjdvNHhvR0lkNUR0bGFtdkk1RTloTTdDRU9CYVVaS1JBQUdkOHV4Q0ZON0VuUzBiQUNYOURMTzlINndDTQ",
+          "published_at": "2026-11-11T20:58:50+00:00",
+          "link_route": "Google News"
+        },
+        {
+          "id": "e6374edc75b152e136fdfc2d",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Duckworth pitches PACT Act expansion at Belleville ceremony (Video)",
+          "snippet": "Duckworth pitches PACT Act expansion at Belleville ceremony (Video) Belleville News-Democrat",
+          "publisher": "Belleville News-Democrat",
+          "publisher_host": "bnd.com",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8tVngwcDlRbkZXM1hjZWlVZHJwSGtISEJ0V1FEbVhielVCdkp4Q3dhV05YVXVDVEhVVDhGV2ZIZHR3U0FKeTVUZ25LMUpLdGZaY2MwZVZocWM4Unhkd3ZWR2hHV3F0NHlVMUszYXpmakpDLWhx",
+          "published_at": "2026-11-11T19:57:13+00:00",
+          "link_route": "Google News"
+        },
         {
           "id": "562c8cf70cf215620c3b6aa7",
           "member_id": "duckworth",
@@ -571,30 +559,6 @@
           "link_route": "Google News"
         },
         {
-          "id": "a36cc1df94e1c4feb31a91e0",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "On Laquan McDonald’s Birthday, Duckworth Reintroduces Bill Aiming to Prevent Police-Involved Deaths",
-          "snippet": "On Laquan McDonald’s Birthday, Duckworth Reintroduces Bill Aiming to Prevent Police-Involved Deaths WTTW News",
-          "publisher": "WTTW News",
-          "publisher_host": "news.wttw.com",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ0JyQlFKOHRpMjI4d1p1SWRQSXhLRHN1SENPbC04YXRnZnM2MkxrZDRRVGZyTkZhVFZ6T1ppQTB2QnZWMzc0Q3Vxc0Q2Ni1qRDVZdFZ3cjRBOTJKZGRKWDg4ZUhsdDIxZHFhV1BWclNBNlBtUG1wLWw5UEJ0Umo2bjlHcG9CWGFjaGNZRDJzQVJESkVuUlNIeW1jZEJteFkyTEsyeFdYSmdXZktXOElIUGZpbjA0QjFYWUE",
-          "published_at": "2026-09-25T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
-          "id": "decd949131a3f7505bd06a59",
-          "member_id": "duckworth",
-          "member_name": "Tammy Duckworth",
-          "title": "Duckworth calls on Pentagon, FAA to reject Trump’s DC arch plans",
-          "snippet": "Duckworth calls on Pentagon, FAA to reject Trump’s DC arch plans The Hill",
-          "publisher": "The Hill",
-          "publisher_host": "thehill.com",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVWp3dkV0dHdDVXc1YVp6LVJXamg4aDhzcEk0eHJaTlZyWGRGbFhfeDFhY3pkdFpzTUU4TEdURGRaUUIzcThRNDBYd0tPamJwNGhiMzlVcnI1cEdzNXVJTXpBNUNyb3JsMEl1c3hIR2xHdUZuTkdmMldIRVRqQzlxVF84dU5nS0s10gGOAUFVX3lxTE1qd1ZnQjA1aXpkTEhNaWxTMHVYOUo3U0lhYS00ZjBWY3RhZ0JaaTJoeE1lZ2QyVFJ6amlYN2xjakZSZk5MQ0M1dFR0OXZ6N3JmVkc1dFZWc1ZrdU5oVXVFLVJfaXJ2YUhZZEJham1wTkc0dF9NQ0VSUVM4YkFGUmFNejVGemMwbV9wY2Rkc0E",
-          "published_at": "2026-09-25T07:00:00+00:00",
-          "link_route": "Google News"
-        },
-        {
           "id": "95f8e8374823cbbb2b064553",
           "member_id": "duckworth",
           "member_name": "Tammy Duckworth",
@@ -617,11 +581,23 @@
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5FRTVwV21NQzcwNklGbE9rMWZGN0x1Zkp5SkEzR25RTjk2YXZSMUpmWV9VOWJaNnN1WHhzU21zUFRPQzFxWDFST2xhbVUwU3E5UUpRV3dKMF81Z3dxV1VqU0tMSUozWllsVDc2V3d3M3hjWXBtSTRLY2hHV2l6am_SAYQBQVVfeXFMT0RLbzdTNXVuYUtBc21IXzd1Szl6NHVreG9JcW9BMlB4MXY4X0JPME1PdWlXa3pKZnhrQ1QxYjNmNlBqOEl6cUltWUtmNmRWX2Q0X0kyS2wxNHhhSlZzVTdGVE5hUUIyNmZUYkxVWWd4SlduMmJEcnJwNWotU2pMT0lLRUYw",
           "published_at": "2026-07-10T07:00:00+00:00",
           "link_route": "Google News"
+        },
+        {
+          "id": "b49896aa6761b1578dc2bdb0",
+          "member_id": "duckworth",
+          "member_name": "Tammy Duckworth",
+          "title": "Illinois’ U.S. Sen. Tammy Duckworth says Congress must curtail war in Iran",
+          "snippet": "Illinois’ U.S. Sen. Tammy Duckworth says Congress must curtail war in Iran IPM Newsroom",
+          "publisher": "IPM Newsroom",
+          "publisher_host": "ipmnewsroom.org",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPa0swYjBUNG9xSjFNNkpzdUlXZVZjWDNMdjZObjE0aHlZeUFaV3R0T3dna3FPR2Q4MVZBZ0pzMkYzWVd3VnRRcFNPVlNiWGJLbHVBZDJ2cWpEamI3ekpKWkg1aUtPNDdTZ1k0c2c1aWtET1psNUVOTkxuN0ZjTmxkVDg3cVBXRURXQ1JOUU91UnpUMXk4Sjk5T042ZmE",
+          "published_at": "2026-05-20T07:00:00+00:00",
+          "link_route": "Google News"
         }
       ],
       "query": "\"Tammy Duckworth\" when:200d",
       "lookback_days": 200,
-      "last_successful_checked_at": "2026-11-11T14:12:19.781535+00:00"
+      "last_successful_checked_at": "2026-11-12T15:19:24.847540+00:00"
     }
   }
 }
